@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalVariables>
+  <Name value="globalVariables" />
+  <Children>
+    <Attribute>
+      <Name value="isExpandedCollapsibleStickyPnl" />
+      <Caption value="Is expanded collapsible sticky pnl" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="serverConfig" />
+      <Caption value="Server config" />
+      <Children>
+        <Attribute>
+          <Name value="TPendDate" />
+          <Caption value="T pend date" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Attribute>
+      <Name value="busyIndicatorIsRunning" />
+      <Caption value="Busy indicator is running" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</GlobalVariables>

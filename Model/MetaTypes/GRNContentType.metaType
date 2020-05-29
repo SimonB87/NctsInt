@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="GRNContentType" />
+  <Caption value="GRNContentType" />
+  <Description value="Used by 20/85 messages: CC013C, CC015C, CC026C, CC029C, CC034C, CC037C, CC055C, CC224C, CC225C, CC228C, &#xA;CC229C, CC231C, CD150C, CD151C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C" />
+  <MtsImportOptions.MTS.ID value="GRNContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="24" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

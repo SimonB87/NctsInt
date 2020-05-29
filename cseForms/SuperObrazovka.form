@@ -1,0 +1,1121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="SuperObrazovka" />
+  <Caption value="NCTS client" />
+  <Content>
+    <Panel>
+      <Name value="SuperObrazovkaPnl" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="NCTSRole" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="CUDEP" />
+              <Title value="Customs office of Departure" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="CUDES" />
+              <Title value="Customs office of Destination" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="CUTRA" />
+              <Title value="Customs office of Transit" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="CUDCU" />
+              <Title value="Requested Customs office" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="QueryMovementInformation" />
+              <Title value="Query movement information" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="RoleCUDEP" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Registrovano" />
+              <Title value="Registered" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Prijato" />
+              <Title value="Accepted" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_HPropusteno" />
+              <Title value="Fallback" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Rozpracovane" />
+              <Title value="Clearance interrupted" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_KontrolaDEP" />
+              <Title value="Under control" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Propusteno" />
+              <Title value="Released" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Nepropusteno" />
+              <Title value="Not released" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Doruceno" />
+              <Title value="Delivered to Office of Destination" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Patrani" />
+              <Title value="Enquiry" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VyberCD_CUO" />
+              <Title value="Recovery" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Doreseni" />
+              <Title value="Solving discrepancies" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Vyrizeno" />
+              <Title value="Written of" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VseDEP" />
+              <Title value="All" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <Panel>
+          <Name value="Pan_CUDEP_Buttons" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Pan_CUDEP_Buttons_Left" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="V01_Nove" />
+                  <Caption value="New TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V02_NoveTIR" />
+                  <Caption value="New TIR TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V08A_PouzijDataProNoveTCP" />
+                  <Caption value="New TCD as a copy of existing TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V37_Opravit" />
+                  <Caption value="Amend TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V03_KeKontroleCUO" />
+                  <Caption value="To control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V04_Zrusit" />
+                  <Caption value="Cancel TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V05_Propustit" />
+                  <Caption value="Release" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V10_PapiroveVyridit" />
+                  <Caption value="Manually discharge" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V09_HavarZapisVyslKontCUO" />
+                  <Caption value="Fallback registration of control’s result" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V17_Pokracovat" />
+                  <Caption value="Continue filling" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V19_OpravitVysledek" />
+                  <Caption value="Amend results of control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V20_ZahajPat" />
+                  <Caption value="Start enquiry at Office of Destination" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V22_OveritData" />
+                  <Caption value="Validate data of the fallback TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V23_NoveFTCP" />
+                  <Caption value="New fallback TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V24_VysledkyS_HP" />
+                  <Caption value="Enquiry results by Principal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V26_ZahajitS_CU" />
+                  <Caption value="Start enquiry at Office of Destination" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V27_StornoS" />
+                  <Caption value="Cancel the ongoing enquiry" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V28_PoslatDinfo" />
+                  <Caption value="Send additional information to CO" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V29_PoveritVCD" />
+                  <Caption value="Authorise CO for Recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V30_PotvrditKompVCD" />
+                  <Caption value="Confirm the recovery at CO of Recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V31_ZahajVCD_CUO" />
+                  <Caption value="Start Recovery at CO of Departure" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V32_CDVybran" />
+                  <Caption value="Recovery ended" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V33_VysledkyS_CU" />
+                  <Caption value="Register results of enquiry" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V35_CDVybranCUU" />
+                  <Caption value="CD collected (DES)" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V36_PoslatDinfoCD" />
+                  <Caption value="Send additional information to CO" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V08_PosouditDuplicitu" />
+                  <Caption value="Decide the duplicity" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V12_Zpracovat" />
+                  <Caption value="Accept TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V47_ZrusitReg" />
+                  <Caption value="Not accept TCD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V03A_DoresitZjisteneNesrovnalosti" />
+                  <Caption value="Solve discrepancies" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V11B_Archivovat" />
+                  <Caption value="Archive" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Pan_CUDEP_Buttons_Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="RoleCUDES" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_CekaNaPrijezdDES" />
+              <Title value="Waiting" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_OdbavovanoDES" />
+              <Title value="Presented" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Vykladka" />
+              <Title value="Unloading of Goods" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_KontrolaDES" />
+              <Title value="Under control" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_CekaNaVyreseni" />
+              <Title value="Solving discrepancies" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VyberCD" />
+              <Title value="Recovery" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Ukonceno" />
+              <Title value="Transit ended" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_RegistraceDokladu" />
+              <Title value="Documents registration" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_OdklonenoDES" />
+              <Title value="Diverted" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VseDES" />
+              <Title value="All" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <Panel>
+          <Name value="Pan_CUDES_Buttons" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Pan_CUDES_Buttons_Left" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="V41_PrijeloNaCUU" />
+                  <Caption value="Arrival at COoDes" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V55_PoriditFMRN" />
+                  <Caption value="Register transit in fallback procedure" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V42_Ukoncit" />
+                  <Caption value="Ending of transit" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V43_KeKontroleCUU" />
+                  <Caption value="To control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V44_PovolitVykladku" />
+                  <Caption value="Permit unloading" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V45_RegistraceVracTDD" />
+                  <Caption value="Register returned TAD" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V46_PrerusitZJPSP" />
+                  <Caption value="Break usage of SP/AC-e" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V48_HavarZapisVyslKontCUU" />
+                  <Caption value="Fallback registration of control’s result" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V54_OpravitVysledek" />
+                  <Caption value="Amend results of control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V09B_Archivovat" />
+                  <Caption value="Archive" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V10B_ResolveUnloading" />
+                  <Caption value="Resolve unloading" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Pan_CUDES_Buttons_Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="RoleCUTRA" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_CekaNaPrijezdTRA" />
+              <Title value="Waiting" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_OdbavovanoTRA" />
+              <Title value="Presented" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_KontrolaTRA" />
+              <Title value="Under control" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VstoupiloDoCR" />
+              <Title value="Crossing border" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_OdklonenoTRA" />
+              <Title value="Diverted" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_ZamitnutoTRA" />
+              <Title value="Rejected" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VseTRA" />
+              <Title value="All" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <Panel>
+          <Name value="Pan_CUTRA_Buttons" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Pan_CUTRA_Buttons_Left" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="V71_PrijeloNaCUt" />
+                  <Caption value="Registration of arrival" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V72_Odbavit" />
+                  <Caption value="Registration of crossing frontier" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V73_KeKontroleCUt" />
+                  <Caption value="To control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V74_HavarZapisVyslKontCUt" />
+                  <Caption value="Fallback registration of control’s result" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V01C_OpravitVysledek" />
+                  <Caption value="Amend results of control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Pan_CUTRA_Buttons_Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="RoleCUDCU" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VPatrani" />
+              <Title value="Under enquiry" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_PatraniUkonceno" />
+              <Title value="Enquiry ended" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_VyberCD_DCU" />
+              <Title value="Recovery" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="NCTS_Vse_DCU" />
+              <Title value="All" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <Panel>
+          <Name value="Pan_CUDCU_Buttons" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Pan_CUDCU_Buttons_Left" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="V92_ZadostDinfo" />
+                  <Caption value="Request for additional information" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V93_ZaznamDinfo" />
+                  <Caption value="Register additional information" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V94_VysledkyS" />
+                  <Caption value="Enquiry results" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V95_PozadatKomp_VCD" />
+                  <Caption value="Request for competency for recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V96_PotvrditKomp_DCU" />
+                  <Caption value="Confirmation of competency for recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V97_CDVybran_DCU" />
+                  <Caption value="Recovery ended" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V99_ZapsatKompCUO" />
+                  <Caption value="Register competency for recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="V88_VyberDCNoveMRN" />
+                  <Caption value="New request for competency for recovery" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Pan_CUDCU_Buttons_Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <TabControl identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+          <Name value="RoleQuery" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="SelectedTab" Expression="globals.selectedTabIndex" />
+          </Bindings>
+          <Tabs>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="QueryMovementInformation_SentIE27" />
+              <Title value="Request for MRN to a foreign customs office" />
+            </tab>
+            <tab identity="TabControl.060fd7850ded45d3aceb7bf1f53aebb6">
+              <Name value="QueryMovementInformation_ReceivedIE27" />
+              <Title value="Response to IE27 with a text request" />
+            </tab>
+          </Tabs>
+        </TabControl>
+        <Panel>
+          <Name value="Panel_QueryMovementInformation_Buttons" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Panel_QueryMovementInformation_Buttons_Left" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="MQI001_NewQuery" />
+                  <Caption value="New query" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="MQI002_ShowMovementInformation" />
+                  <Caption value="Show movement information" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="MQI003_WriteTextResponse" />
+                  <Caption value="Write text response" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

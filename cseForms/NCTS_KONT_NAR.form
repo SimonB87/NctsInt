@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="NCTS_KONT_NAR" />
+  <Caption value="Decide to control" />
+  <Content>
+    <Panel>
+      <Name value="NCTS_KONT_NARPnl" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="label1" />
+          <Data value="Decide to control" />
+          <Heading value="h3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="panelTop" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="70%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <ReferenceCombo>
+              <Name value="Regime" />
+              <Caption value="Regime" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="Description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="30%" />
+              <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecombo" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceCombo>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="PanelMiddle" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <ReferenceCombo>
+              <Name value="Type" />
+              <Caption value="Type" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="Description" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+                <Binding SourceProperty="Caption" Expression="globals.prototypeReference.caption()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecombo" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceCombo>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="PanelMiddle2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="Reason" />
+              <Caption value="Reason" />
+              <CaptionPosition value="Top" />
+              <InputType value="Multiline" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <DataTable>
+          <Name value="CheckUp_Table" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="DataItems" Expression="" />
+          </Bindings>
+          <Columns>
+            <DataColumn>
+              <Name value="KindCol" />
+              <Caption value="Inspection kind" />
+              <Content>
+                <ReferenceCombo>
+                  <Name value="Kind" />
+                  <CaptionPosition value="Hide" />
+                  <DisplayMember value="Description" />
+                  <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+                    <Binding SourceProperty="Caption" Expression="globals.prototypeReference.caption()" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-referencecombo" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </ReferenceCombo>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="DescriptionCol" />
+              <Caption value="Description" />
+              <Content>
+                <TextBox>
+                  <Name value="Description" />
+                  <CaptionPosition value="Hide" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="ItemNumberCol" />
+              <Caption value="Item number" />
+              <Content>
+                <TextBox>
+                  <Name value="ItemNumber" />
+                  <CaptionPosition value="Hide" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+          </Columns>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-datatable" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </DataTable>
+        <Panel>
+          <Name value="PanelButtons" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panelButtonsLeft" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Button>
+                  <Name value="TL_Kontrola" />
+                  <Caption value="To control" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panelButtonsRight" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Button>
+                  <Name value="TL_Close" />
+                  <Caption value="Close" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

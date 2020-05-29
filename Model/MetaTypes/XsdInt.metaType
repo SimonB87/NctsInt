@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="XsdInt" />
+  <Caption value="XsdInt" />
+  <MtsImportOptions.MTS.ID value="XsdInt" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Integer" />
+      <IntMax value="2147483647" />
+      <IntMin value="-2147483648" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

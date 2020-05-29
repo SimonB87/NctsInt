@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf" />
+  <Items>
+    <PackageItem Src="PagingRepeater.componentManifest" />
+    <ResourceItem ResourceName="pagingRepeater.js" LinkerAction="Script" OutputFileName="pagingRepeater.js" Src="pagingRepeater.js" />
+    <ResourceItem ResourceName="pagingRepeater.css" LinkerAction="Css" OutputFileName="pagingRepeater.css" Src="pagingRepeater.css" />
+    <ResourceItem ResourceName="pagingRepeater.png" Action="None" OutputFileName="pagingRepeater.png" Src="pagingRepeater.png" />
+  </Items>
+</Package>

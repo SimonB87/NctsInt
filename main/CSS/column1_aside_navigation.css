@@ -1,0 +1,95 @@
+.column1_aside_navigation{
+  padding-top: 0;
+  padding-bottom: 50px !important;
+  /*height: calc(100vh - 6rem);*/
+  /*min-height: 42rem;*/
+  background: #4390df;
+  overflow: hidden;
+  transition: all .2s;
+  background: #fff;
+  border-radius: .35rem;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+}
+
+.column1_aside_navigation a{
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all .25s ease-in .25s;
+  color: #6c757d;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  padding: 0 1.25rem 0;
+  margin: 0;
+  display: block;
+}
+
+.column1_aside_navigation h3{
+  padding: 5px 10px 0px 20px;
+}
+
+.column1_aside_navigation .component.label{
+  padding: 1.5rem;
+  border-bottom: rgba(0,0,0,0.04) solid 1px;
+  background: rgba(0,0,0,0.01);
+}
+
+.column1_aside_navigation .m8-hyperlink:hover{
+  color: #da624a;
+  background: #fcf1ef;
+}
+
+.breadCrumbs_pnl{
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: .35rem;
+  background: #fff;
+  padding: 6px !important;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+}
+
+.breadCrumbs_pnl sffw-breadcrumbs.component{
+  padding: 0;
+}
+
+.content_pnl{
+  margin-left: 0.5rem;
+}
+
+.heading-bg{
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #a0a0a0;  
+}
+
+div.content_pnl {
+  min-height: 39.25rem;
+} 
+
+/* subMenu item - start */
+.subMenuItem > a {
+    position: absolute;
+    transform: translate(20px, -15px);
+}
+
+.subMenuItem > a:after {
+    position: absolute;
+    left: 0;
+    /*fast forward*/
+    content: "\00bb ";
+    font-size: 1.5rem;
+    top: -1px;
+    /*go next */
+    content: "\232A ";
+    font-size: 0.8rem;
+}
+
+.subMenuItem{
+	padding-bottom: 19px !important;
+}
+
+/*.subMenuItem > a:before {
+    position: absolute;
+    left: -21px;
+    top: -7px;
+    content: "\230A";
+    font-size: 1rem;
+}*/

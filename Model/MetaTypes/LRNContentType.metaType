@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="LRNContentType" />
+  <Caption value="LRNContentType" />
+  <Description value="Used by 13/85 messages: CC004C, CC009C, CC013C, CC014C, CC015C, CC028C, CC029C, CC056C, CC060C, CC170C, &#xA;CC190C, CC191C, CC928C" />
+  <MtsImportOptions.MTS.ID value="LRNContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="22" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

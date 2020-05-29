@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="SequenceNumberContentType" />
+  <Caption value="SequenceNumberContentType" />
+  <Description value="Used by 49/85 messages: CC007C, CC013C, CC015C, CC017C, CC022C, CC025C, CC029C, CC034C, CC037C, CC042C, &#xA;CC043C, CC044C, CC048C, CC055C, CC170C, CC182C, CC190C, CC191C, CC224C, CC225C, &#xA;CC228C, CD001C, CD003C, CD010C, CD012C, CD018C, CD024C, CD038C, CD050C, CD063C, &#xA;CD070C, CD071C, CD115C, CD144C, CD145C, CD150C, CD151C, CD160C, CD165C, CD180C, &#xA;CD181C, CD200C, CD201C, CD203C, CD204C, CD205C, CD209C, CD411D, CD971C" />
+  <MtsImportOptions.MTS.ID value="SequenceNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Integer" />
+      <IntMax value="99999" />
+      <IntMin value="1" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

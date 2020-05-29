@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ProjectRoot>
+  <CreatedOn value="2020-04-06T12:16:19.6344316+02:00" />
+  <Language value="en" />
+  <ProjectName value="NctsInt" />
+  <StartupForm reference="/(main.77cebdf47cc044589efeab8ab5a8ac2b)+UiParts.Master" />
+  <MainForm>
+    <ProjectMainFormOptions MaxPageWidth="700px" MinPageWidth="1170px" />
+  </MainForm>
+  <MTS.ImportOptions>
+    <MtsImportOptions>
+      <DomainCode value="ScreenFactory" />
+      <LastFileName value="C:\Temp\mts-export-test.xml" />
+      <ProjectCode value="NCTSMEInt_SF" />
+      <Revision value="2027" />
+    </MtsImportOptions>
+  </MTS.ImportOptions>
+  <Options>
+    <ProjectOptions>
+      <LocalizationEnabled value="True" />
+      <ManageFolderContent value="False" />
+      <DataToForm>
+        <DataToFormConfiguration BoolEditor="Sf.LibraryOne.CheckBox" CollectionEditor="Repeater" ComputedText="Sf.LibraryOne.Label" DateEditor="Sf.LibraryOne.DatePicker" DateTimeEditor="Sf.LibraryOne.DatePicker" DecimalEditor="ScreenFactory.Data.Model.Ui.TextBox" EnumEditor="ScreenFactory.Data.Model.Ui.EnumCombo" IntegerEditor="ScreenFactory.Data.Model.Ui.TextBox" ReferenceEditor="Sf.LibraryOne.ReferenceCombo" StringEditor="ScreenFactory.Data.Model.Ui.TextBox" />
+      </DataToForm>
+      <Theme>
+        <ProjectTheme>
+          <ThemeName value="smx" />
+        </ProjectTheme>
+      </Theme>
+    </ProjectOptions>
+  </Options>
+  <Languages>
+    <ProjectLanguageItem Language="en" />
+  </Languages>
+  <PackageReferences>
+    <PackageReference Alias="CorePackage" IsComponentLib="True" IsReadOnly="True" IsSystem="True" Origin="system://CorePackage/CorePackage.package">
+      <ReferencedIdentity value="CorePackage.5f000000000045f00000000000000000" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="main" Origin="main\main.package">
+      <ReferencedIdentity value="main.77cebdf47cc044589efeab8ab5a8ac2b" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="busyIndicator" IsComponentLib="True" Origin="Sffw\BusyIndicator\BusyIndicator.package">
+      <ReferencedIdentity value="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e" />
+      <ReferencedVersion value="2.0.1" />
+    </PackageReference>
+    <PackageReference Alias="FontAwesome" IsComponentLib="True" Origin="Sffw\FontAwesome\FontAwesome.package">
+      <ReferencedIdentity value="FontAwesome.066b7c6e13eb4981b99803c8b3a51aae" />
+      <ReferencedVersion value="0.1.0" />
+    </PackageReference>
+    <PackageReference Alias="jQueryPackage" IsComponentLib="True" Origin="Sffw\jQueryPackage\jQueryPackage.package">
+      <ReferencedIdentity value="jQueryPackage.969dfbfe76454b4187e210594a2a988b" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="labeledText" IsComponentLib="True" Origin="Sffw\LabeledText\LabeledText.package">
+      <ReferencedIdentity value="labeledText.a92a691d6915448ebf9f0b804ce6a733" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="List" IsComponentLib="True" Origin="Sffw\List\List.package">
+      <ReferencedIdentity value="List.a6f439c3b8e944f383863f66ff1261c8" />
+      <ReferencedVersion value="4.2.10" />
+    </PackageReference>
+    <PackageReference Alias="Page" IsComponentLib="True" Origin="Sffw\Page\Page.package">
+      <ReferencedIdentity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
+      <ReferencedVersion value="1.7.0" />
+    </PackageReference>
+    <PackageReference Alias="ListCtrl" IsComponentLib="True" Origin="Sffw\ListCtrl\ListCtrl.package">
+      <ReferencedIdentity value="ListCtrl.459ff3780ab145df985191cfc1336ce1" />
+      <ReferencedVersion value="2.15.1" />
+    </PackageReference>
+    <PackageReference Alias="referenceLookup" IsComponentLib="True" Origin="Sffw\ReferenceLookup\ReferenceLookup.package">
+      <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
+      <ReferencedVersion value="3.1.5" />
+    </PackageReference>
+    <PackageReference Alias="ServerConnection" IsComponentLib="True" Origin="Sffw\ServerConnection\ServerConnection.package">
+      <ReferencedIdentity value="ServerConnection.db7b3eef075548988df768923691922c" />
+      <ReferencedVersion value="4.1.0" />
+    </PackageReference>
+    <PackageReference Alias="Codelist" IsComponentLib="True" Origin="Sffw\Codelist\Codelist.package">
+      <ReferencedIdentity value="Codelist.2fd2d7af4a6d445bad8a58610632f8e0" />
+      <ReferencedVersion value="3.13.3" />
+    </PackageReference>
+    <PackageReference Alias="UrlRouter" IsComponentLib="True" Origin="Sffw\UrlRouter\UrlRouter.package">
+      <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
+      <ReferencedVersion value="3.0.3" />
+    </PackageReference>
+    <PackageReference Alias="collapsibleGroupBox" IsComponentLib="True" Origin="Sffw\CollapsibleGroupbox\CollapsibleGroupBox.package">
+      <ReferencedIdentity value="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7" />
+      <ReferencedVersion value="2.2.2" />
+    </PackageReference>
+    <PackageReference Alias="TabControl" IsComponentLib="True" Origin="Sffw\TabControl\TabControl.package">
+      <ReferencedIdentity value="TabControl.060fd7850ded45d3aceb7bf1f53aebb6" />
+      <ReferencedVersion value="1.3.1" />
+    </PackageReference>
+    <PackageReference Alias="pagingRepeater" IsComponentLib="True" Origin="Sffw\PagingRepeater\PagingRepeater.package">
+      <ReferencedIdentity value="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="PagingRepeaterCtrl" IsComponentLib="True" Origin="Sffw\PagingRepeaterCtrl\PagingRepeaterCtrl.package">
+      <ReferencedIdentity value="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4" />
+      <ReferencedVersion value="1.1.6" />
+    </PackageReference>
+    <PackageReference Alias="cseForms" Origin="cseForms\cseForms.package">
+      <ReferencedIdentity value="cseForms.5d31dd4bc1bf40728a5d72d18c4f8091" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="CollapsibleStickyPanel" IsComponentLib="True" Origin="Sffw\CollapsibleStickyPanel\CollapsibleStickyPanel.package">
+      <ReferencedIdentity value="CollapsibleStickyPanel.4b45f89dd6ca43ecb980574e5dacae09" />
+      <ReferencedVersion value="1.1.4" />
+    </PackageReference>
+    <PackageReference Alias="Model" Origin="Model\Model.package">
+      <ReferencedIdentity value="Model.1119011d69cd45d181eaad70856a363f" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+    <PackageReference Alias="Breadcrumbs" IsComponentLib="True" Origin="Sffw\Breadcrumbs\Breadcrumbs.package">
+      <ReferencedIdentity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
+      <ReferencedVersion value="1.0.4" />
+    </PackageReference>
+    <PackageReference Alias="NctsIntApi" IsComponentLib="True" Origin="NctsIntApi\NctsIntApi.package">
+      <ReferencedIdentity value="NctsIntApi.51961823ccb342e682a52f33780cf33f" />
+      <ReferencedVersion value="0.0.0" />
+    </PackageReference>
+  </PackageReferences>
+</ProjectRoot>

@@ -1,0 +1,27 @@
+.sffw-paging-repeater-ctrl {
+	width: 100%;
+}
+
+.sffw-paging-repeater-ctrl-left, .sffw-paging-repeater-ctrl-right, .sffw-paging-repeater-ctrl-add, .sffw-paging-repeater-ctrl-remove {
+    display: inline-block;
+}
+
+.sffw-paging-repeater-ctrl-left, .sffw-paging-repeater-ctrl-right, .sffw-paging-repeater-ctrl-add, .sffw-paging-repeater-ctrl-remove {
+    padding: 2px;
+    margin: 3px;
+}
+
+.sffw-paging-repeater-ctrl-title {
+	padding-left: 0px;
+	display: table-cell;
+}
+
+.sffw-paging-repeater-ctrl-index-input {
+	width: 2em;
+    margin-left: 1em;
+    text-align: right;
+}
+
+.sffw-paging-repeater-ctrl-error {
+    color: red;
+}

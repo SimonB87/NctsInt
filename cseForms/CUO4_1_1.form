@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="CUO4_1_1" />
+  <Caption value="Manually discharge" />
+  <Content>
+    <Panel>
+      <Name value="CUO4_1_1Pnl" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="label1" />
+          <Data value="Manually discharge" />
+          <Heading value="h3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="PanelTop" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="30%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <ReferenceCombo>
+              <Name value="Regime" />
+              <Caption value="Regime" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="Description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="15%" />
+              <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecombo" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceCombo>
+            <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+              <Name value="StateFromCD905Dest" />
+              <Caption value="Status" />
+              <CaptionPosition value="Top" />
+              <DataApiObject reference="+GlobalApiObjects.prototypeCodelist" />
+              <DisplayMember value="Description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="15%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencelookup" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceLookup>
+            <TextBox>
+              <Name value="StateFromCD905Dest_Popis" />
+              <Caption value="from the CO of dest. (IE905)" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="20%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+              <Name value="COD_ReferenceNumber" />
+              <Caption value="53 Reference number of CO dest." />
+              <CaptionPosition value="Top" />
+              <DataApiObject reference="+GlobalApiObjects.prototypeCodelist" />
+              <DisplayMember value="Description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="20%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencelookup" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceLookup>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="Panel_Top2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="Panel_Top2Left" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="40%" />
+              <Children>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="GRP_ArrivalRegistrationDEP" />
+                  <caption value="Arrival registration (at departure)" />
+                  <collapsedIconClass value="fa fa-plus-square-o" />
+                  <nonCollapsedIconClass value="fa fa-minus-square-o" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Panel>
+                      <Name value="GRP_ArrivalRegistrationDEPPnl" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <DatePicker>
+                          <Name value="DeliveryDate" />
+                          <Caption value="Date of delivery" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-datepicker" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </DatePicker>
+                        <TextBox>
+                          <Name value="AdministrativeNumber" />
+                          <Caption value="Administrative number of deviation of TCD" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                        <TextBox>
+                          <Name value="Description" />
+                          <Caption value="Description" />
+                          <CaptionPosition value="Top" />
+                          <InputType value="Multiline" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-collapsiblegroupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Panel_Top2Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="60%" />
+              <Children>
+                <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                  <Name value="GRP_QUKO" />
+                  <caption value="Confirmed TAD / TSAD or TIR carnet voucher No. 2 assessment" />
+                  <collapsedIconClass value="fa fa-plus-square-o" />
+                  <nonCollapsedIconClass value="fa fa-minus-square-o" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Content>
+                    <Panel>
+                      <Name value="GRP_QUKOPnl" />
+                      <Orientation value="Vertical" />
+                      <Children>
+                        <EnumRadioGroup>
+                          <Name value="ControlResultCode" />
+                          <Caption value="Control result code" />
+                          <CaptionPosition value="Top" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-enumradiogroup" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </EnumRadioGroup>
+                        <Panel>
+                          <Name value="panel3" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <DatePicker>
+                              <Name value="QDOR_Date" />
+                              <Caption value="Arrival date" />
+                              <CaptionPosition value="Top" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-datepicker" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </DatePicker>
+                            <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                              <Name value="QDOR_CustomsOffice" />
+                              <Caption value="Reference number or CO of presentation" />
+                              <CaptionPosition value="Top" />
+                              <DataApiObject reference="+GlobalApiObjects.prototypeCodelist" />
+                              <DisplayMember value="Description" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-referencelookup" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </ReferenceLookup>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="panel2" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <DatePicker>
+                              <Name value="ControlDate" />
+                              <Caption value="Date of control" />
+                              <CaptionPosition value="Top" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-datepicker" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </DatePicker>
+                            <ReferenceCombo>
+                              <Name value="SealsState" />
+                              <Caption value="State of seals OK" />
+                              <CaptionPosition value="Top" />
+                              <DisplayMember value="Description" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-referencecombo" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </ReferenceCombo>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="panel1" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <Button>
+                              <Name value="Tl_Udalosti" />
+                              <Caption value="En route events" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="50%" />
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="Tl_RozdilyTCP" />
+                              <Caption value="Differences" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="50%" />
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Content>
+                  <conditionalCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-collapsiblegroupbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </conditionalCssClass>
+                </CollapsibleGroupBox>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <DataTable>
+          <Name value="Table_Difference" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Columns>
+            <DataColumn>
+              <Name value="PointerCol" />
+              <Caption value="Pointer" />
+              <Content>
+                <TextBox>
+                  <Name value="Pointer" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="DifferenceTypeCol" />
+              <Caption value="Difference type" />
+              <Content>
+                <TextBox>
+                  <Name value="DifferenceType" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="DifferenceType_POPISCol" />
+              <Caption value="Difference type - description" />
+              <Content>
+                <TextBox>
+                  <Name value="DifferenceType_POPIS" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="NewValueCol" />
+              <Caption value="New value" />
+              <Content>
+                <TextBox>
+                  <Name value="NewValue" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="OldValueCol" />
+              <Caption value="Old value" />
+              <Content>
+                <TextBox>
+                  <Name value="OldValue" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="GoodsItemNumberCol" />
+              <Caption value="Goods item number" />
+              <Content>
+                <TextBox>
+                  <Name value="GoodsItemNumber" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+          </Columns>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-datatable" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </DataTable>
+        <DataTable>
+          <Name value="Table_QKS" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Columns>
+            <DataColumn>
+              <Name value="QKS01Col" />
+              <Caption value="Element" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS01" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS01_PopisCol" />
+              <Caption value="Name" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS01_Popis" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS01_NewValueCol" />
+              <Caption value="New value" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS01_NewValue" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS03Col" />
+              <Caption value="Old value" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS03" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS02Col" />
+              <Caption value="Difference type" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS02" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS02_POPISCol" />
+              <Caption value="Difference type" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS02_POPIS" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+            <DataColumn>
+              <Name value="QKS04Col" />
+              <Caption value="Description" />
+              <Content>
+                <TextBox>
+                  <Name value="QKS04" />
+                  <CaptionPosition value="Hide" />
+                  <IsEnabled value="False" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-textbox" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </TextBox>
+              </Content>
+              <HeaderCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datacolumn" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </HeaderCssClass>
+            </DataColumn>
+          </Columns>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-datatable" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </DataTable>
+        <Panel>
+          <Name value="PanelButtons" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panelButtonsLeft" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="Tl_Vyridit" />
+                  <Caption value="Write off" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panelButtonsRight" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="Tl_Close" />
+                  <Caption value="Close" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="TL_ZobrazitDetailTCP" />
+                  <Caption value="Detail TCP" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="flright" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

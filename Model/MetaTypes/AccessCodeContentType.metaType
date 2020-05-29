@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="AccessCodeContentType" />
+  <Caption value="AccessCodeContentType" />
+  <Description value="Used by 7/85 messages: CC013C, CC015C, CC029C, CC034C, CC224C, CD200C, CD203C" />
+  <MtsImportOptions.MTS.ID value="AccessCodeContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="4" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

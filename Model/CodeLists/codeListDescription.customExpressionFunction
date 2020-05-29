@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<CustomExpressionFunction>
+  <Name value="codeListDescription" />
+  <Script><![CDATA[if (code && description) return code + ' - ' + description;
+if (code) return code;
+if (description) return description;
+return null;]]></Script>
+  <ResultType BaseType="String" />
+  <Arguments>
+    <Argument>
+      <Name value="code" />
+      <ArgumentType BaseType="String" />
+    </Argument>
+    <Argument>
+      <Name value="description" />
+      <ArgumentType BaseType="String" />
+    </Argument>
+  </Arguments>
+</CustomExpressionFunction>

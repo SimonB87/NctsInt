@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="TIRHolderIdentificationNumberContentType" />
+  <Caption value="TIRHolderIdentificationNumberContentType" />
+  <Description value="Used by 26/85 messages: CC004C, CC009C, CC013C, CC014C, CC015C, CC017C, CC019C, CC022C, CC023C, CC028C, &#xA;CC029C, CC035C, CC043C, CC045C, CC051C, CC054C, CC056C, CC060C, CC140C, CC141C, &#xA;CC170C, CC928C, CD001C, CD003C, CD012C, CD038C" />
+  <MtsImportOptions.MTS.ID value="TIRHolderIdentificationNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="17" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

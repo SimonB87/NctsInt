@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="SupplementaryUnitsContentType" />
+  <Caption value="SupplementaryUnitsContentType" />
+  <Description value="Used by 3/85 messages: CC013C, CC015C, CC190C" />
+  <MtsImportOptions.MTS.ID value="SupplementaryUnitsContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Decimal" />
+      <DecimalMax value="9999999999.999999" />
+      <DecimalMin value="-9999999999.999999" />
+      <DecimalPrecision value="6" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

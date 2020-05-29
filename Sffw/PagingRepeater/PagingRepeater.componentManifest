@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="PagingRepeater" />
+  <Generator value="&lt;sffw-paging-repeater&gt;" />
+  <Type value="ContentObject" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="pagingRepeater.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Index" />
+      <Bindable value="Always" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

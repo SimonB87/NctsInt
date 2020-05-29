@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="AdditionalIdentifierContentType" />
+  <Caption value="AdditionalIdentifierContentType" />
+  <Description value="Used by 6/85 messages: CC007C, CC013C, CC015C, CC029C, CC170C, CC190C" />
+  <MtsImportOptions.MTS.ID value="AdditionalIdentifierContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="4" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

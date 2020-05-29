@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="NCTS_TCPHistorie" />
+  <Caption value="List of data versions with their decisions" />
+  <Content>
+    <Panel>
+      <Name value="NCTS_TCPHistoriePnl" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="label4" />
+          <Data value="List of data versions with their decisions (NCTS_TCPHistorie.form)" />
+          <Heading value="h3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="Panel_TCPHistorie" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <DataTable>
+              <Name value="Table_HeaderVersion" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Columns>
+                <DataColumn>
+                  <Name value="HeaderVersion_ReasonCol" />
+                  <Caption value="Reason" />
+                  <Content>
+                    <TextBox>
+                      <Name value="HeaderVersion_Reason" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+                <DataColumn>
+                  <Name value="HeaderVersion_GUIDCol" />
+                  <Caption value="GUID" />
+                  <Content>
+                    <TextBox>
+                      <Name value="HeaderVersion_GUID" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+              </Columns>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datatable" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </DataTable>
+            <DataTable>
+              <Name value="Table_Decision" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Columns>
+                <DataColumn>
+                  <Name value="Decision_TypeCol" />
+                  <Caption value="Type" />
+                  <Content>
+                    <TextBox>
+                      <Name value="Decision_Type" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+                <DataColumn>
+                  <Name value="Decision_DescriptionCol" />
+                  <Caption value="Description" />
+                  <Content>
+                    <TextBox>
+                      <Name value="Decision_Description" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+                <DataColumn>
+                  <Name value="Decision_CustomsOfficeCol" />
+                  <Caption value="Customs office" />
+                  <Content>
+                    <TextBox>
+                      <Name value="Decision_CustomsOffice" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+                <DataColumn>
+                  <Name value="Decision_UserCol" />
+                  <Caption value="User" />
+                  <Content>
+                    <TextBox>
+                      <Name value="Decision_User" />
+                      <CaptionPosition value="Hide" />
+                      <IsEnabled value="False" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Content>
+                  <HeaderCssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datacolumn" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </HeaderCssClass>
+                </DataColumn>
+              </Columns>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-datatable" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </DataTable>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="Panel_Tlacitka" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="FlowPanel_Left" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="FlowPanel_Right" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="TL_Zavrit" />
+                  <Caption value="Close" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

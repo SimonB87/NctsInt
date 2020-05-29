@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Codelist_SpecificCircumstanceIndicatorCode" />
+  <Caption value="Codelist_SpecificCircumstanceIndicatorCode" />
+  <MtsImportOptions.MTS.ID value="Codelist_SpecificCircumstanceIndicatorCode" />
+  <MtsImportOptions.MTS.Type value="codelist" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="SloupecCiselniku" />
+      <MtsImportOptions.MTS.ID value="Codelist_SpecificCircumstanceIndicatorCode/Code" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

@@ -1,0 +1,152 @@
+.fullWidth{
+  width: 100%;
+}
+
+.displayFlex div.panel-row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.bottomAlign{
+  display: flex;
+  align-items: flex-end;
+}
+
+/* collapsibleStickyPanel - styles * start */
+sffw-collapsible-sticky-panel .component.panel[data-name=collapsibleStickyPnl_parent]{
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.whiteBackground{
+  background-color: #fff;
+}
+
+html .m8-datatable table{
+  clear: both;
+  margin-top: .75rem !important;
+  margin-bottom: .75rem !important;
+  max-width: none !important;
+  border:0;
+  border-collapse: collapse !important;
+  border-radius: .35rem;
+  table-layout: fixed;
+  empty-cells: show;
+  background: #fff;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+}
+
+html .m8-datatable tr:hover{
+    background-color: #f7dfda !important;
+}
+
+html .m8-datatable thead tr:hover{
+    background-color: transparent !important;
+}
+
+
+html .m8-datatable td{
+	border: 1px solid #e9ecef;	
+}
+
+html .m8-datatable table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+html .m8-datatable table tr th .datatable-column-caption-wrap {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding: 7px;
+}
+
+.sffw-csp-marker-menuStyle::after {
+  content: "M";
+  height: 1.25rem;
+  width: 1.25rem;
+  padding: 0.25rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.component.panel[data-name=collapsibleStickyPnl_parent] a{
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+  transition: all .25s ease-in .25s;
+}
+
+.component.panel[data-name=collapsibleStickyPnl_parent] a:hover{
+  border-bottom: 1px solid #fff;
+/*  font-weight: 500; */
+}
+/* collapsibleStickyPanel - styles * end */
+.redTestText{
+  color: salmon;
+}
+
+.sizeH3{
+	font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    font-size: 1.5rem;
+    letter-spacing: 0.01em;
+    margin: 0px;
+} 
+
+html .m8-datepicker input,
+html .m8-textbox input,
+html .m8-textbox textarea,
+html .m8-referencecombo select{
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+
+html .m8-datepicker input:disabled,
+html .m8-textbox input:disabled,
+html .m8-textbox textarea:disabled,
+html .m8-referencecombo select:disabled{
+	background-color:#cbcbcb;
+}
+
+html .groupbox > fieldset > legend, .cgb.cgb-default fieldset legend{
+    border-radius: .35rem;
+    background: #fff;
+	padding-left: 1em;
+    padding-right: 1em;
+}
+
+html .cgb > fieldset > legend > div > span:nth-of-type(2) {
+    padding-right: .6em;
+}
+
+html .cgb-default > fieldset > legend > div > span:first-of-type {
+    padding-left: .4em;
+}
+
+html fieldset {
+	border:0;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+    border-radius: .35rem;
+    background: #fff;
+}
+
+html fieldset fieldset{
+	box-shadow: none;
+	border: rgba(0,0,0,0.3) solid 1px;
+}

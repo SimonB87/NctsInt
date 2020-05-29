@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package>
+  <Identity value="Model.1119011d69cd45d181eaad70856a363f" />
+  <Items>
+    <PackageFolder Name="Messages">
+      <Items>
+        <PackageItem Src="Messages\DeclarationHeader.dataEntity" />
+        <PackageItem Src="Messages\HouseConsignment.dataEntity" />
+        <PackageItem Src="Messages\ConsignmentItem.dataEntity" />
+        <PackageItem Src="Messages\ErrorReport.dataEntity" />
+      </Items>
+    </PackageFolder>
+    <PackageFolder Name="CodeLists">
+      <Items>
+        <PackageItem Src="CodeLists\codeListDescription.customExpressionFunction" />
+        <PackageItem Src="CodeLists\DeclarationTypeItemLevel.dataEntity" />
+        <PackageItem Src="CodeLists\CountryCodesFullList.dataEntity" />
+        <PackageItem Src="CodeLists\CountryCodesWithAddress.dataEntity" />
+        <PackageItem Src="CodeLists\AdditionalSupplyChainActorRoleCode.dataEntity" />
+        <PackageItem Src="CodeLists\CUSCode.dataEntity" />
+        <PackageItem Src="CodeLists\HScode.dataEntity" />
+        <PackageItem Src="CodeLists\UnDangerousGoodsCode.dataEntity" />
+        <PackageItem Src="CodeLists\KindOfPackages.dataEntity" />
+        <PackageItem Src="CodeLists\PreviousDocumentType.dataEntity" />
+        <PackageItem Src="CodeLists\Unit.dataEntity" />
+        <PackageItem Src="CodeLists\SupportingDocumentType.dataEntity" />
+        <PackageItem Src="CodeLists\AdditionalReference.dataEntity" />
+        <PackageItem Src="CodeLists\AdditionalInformation.dataEntity" />
+        <PackageItem Src="CodeLists\TransportChargesMethodOfPayment.dataEntity" />
+        <PackageItem Src="CodeLists\DeclarationType.dataEntity" />
+        <PackageItem Src="CodeLists\DeclarationTypeAdditional.dataEntity" />
+        <PackageItem Src="CodeLists\DeclarationTypeSecurity.dataEntity" />
+        <PackageItem Src="CodeLists\SpecificCircumstanceIndicatorCode.dataEntity" />
+        <PackageItem Src="CodeLists\LanguageByCustoms.dataEntity" />
+        <PackageItem Src="CodeLists\AuthorisationTypeDeparture.dataEntity" />
+        <PackageItem Src="CodeLists\CustomsOfficeDeparture.dataEntity" />
+        <PackageItem Src="CodeLists\CustomsOfficeDestination.dataEntity" />
+        <PackageItem Src="CodeLists\CustomsOfficeTransit.dataEntity" />
+        <PackageItem Src="CodeLists\CustomsOfficeTransitExit.dataEntity" />
+        <PackageItem Src="CodeLists\RepresentativeStatusCode.dataEntity" />
+        <PackageItem Src="CodeLists\GuaranteeType.dataEntity" />
+        <PackageItem Src="CodeLists\CurrencyCodes.dataEntity" />
+        <PackageItem Src="CodeLists\TransportModeUCC.dataEntity" />
+        <PackageItem Src="CodeLists\TypeOfLocation.dataEntity" />
+        <PackageItem Src="CodeLists\QualifierOfTheIdentification.dataEntity" />
+        <PackageItem Src="CodeLists\UnLocodeExtended.dataEntity" />
+        <PackageItem Src="CodeLists\CountryCodesCommonTransit.dataEntity" />
+        <PackageItem Src="CodeLists\CountryAddressPostcodeBased.dataEntity" />
+        <PackageItem Src="CodeLists\TypeOfIdentificationOfMeansOfTransport.dataEntity" />
+        <PackageItem Src="CodeLists\TransportDocumentType.dataEntity" />
+      </Items>
+    </PackageFolder>
+    <PackageFolder Name="MetaTypes">
+      <Items>
+        <PackageItem Src="MetaTypes\CSRD2CodelistDescription.metaType" />
+        <PackageItem Src="MetaTypes\IdentificationNumberContentType01.metaType" />
+        <PackageItem Src="MetaTypes\NameContentType.metaType" />
+        <PackageItem Src="MetaTypes\StreetAndNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\DescriptionOfGoodsContentType.metaType" />
+        <PackageItem Src="MetaTypes\GrossMassContentType.metaType" />
+        <PackageItem Src="MetaTypes\NetMassContentType.metaType" />
+        <PackageItem Src="MetaTypes\SupplementaryUnitsContentType.metaType" />
+        <PackageItem Src="MetaTypes\ShippingMarksContentType.metaType" />
+        <PackageItem Src="MetaTypes\ReferenceNumberContentType03.metaType" />
+        <PackageItem Src="MetaTypes\QuantityContentType.metaType" />
+        <PackageItem Src="MetaTypes\ComplementOfInformationContentType.metaType" />
+        <PackageItem Src="MetaTypes\TextContentType.metaType" />
+        <PackageItem Src="MetaTypes\LRNContentType.metaType" />
+        <PackageItem Src="MetaTypes\MRN.metaType" />
+        <PackageItem Src="MetaTypes\ReferenceNumberContentType02.metaType" />
+        <PackageItem Src="MetaTypes\TIRHolderIdentificationNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\PhoneNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\OtherGuaranteeReferenceContentType.metaType" />
+        <PackageItem Src="MetaTypes\GRNContentType.metaType" />
+        <PackageItem Src="MetaTypes\AccessCodeContentType.metaType" />
+        <PackageItem Src="MetaTypes\AmountToBeCoveredContentType.metaType" />
+        <PackageItem Src="MetaTypes\IdentifierContentType.metaType" />
+        <PackageItem Src="MetaTypes\AuthorisationNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\AdditionalIdentifierContentType.metaType" />
+        <PackageItem Src="MetaTypes\HouseNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\IdentificationNumberContentType02.metaType" />
+        <PackageItem Src="MetaTypes\LocationContentType.metaType" />
+        <PackageItem Src="MetaTypes\XsdInt.metaType" />
+        <PackageItem Src="MetaTypes\GoodsItemNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\DeclarationGoodsItemNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\SequenceNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\NumberOfPackagesContentType.metaType" />
+        <PackageItem Src="MetaTypes\DocumentLineItemNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\NumberOfSealsContentType.metaType" />
+      </Items>
+    </PackageFolder>
+    <ResourceItem ResourceName="mtsimport.ini" Action="None" OutputFileName="mtsimport.ini" Src="mtsimport.ini" />
+  </Items>
+</Package>

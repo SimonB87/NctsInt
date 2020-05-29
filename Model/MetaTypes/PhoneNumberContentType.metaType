@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="PhoneNumberContentType" />
+  <Caption value="PhoneNumberContentType" />
+  <Description value="Used by 15/85 messages: CC007C, CC013C, CC015C, CC029C, CC037C, CC051C, CC170C, CC190C, CD142C, CD143C, &#xA;CD144C, CD145C, CD150C, CD151C, CD152C" />
+  <MtsImportOptions.MTS.ID value="PhoneNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

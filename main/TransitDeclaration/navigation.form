@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="navigation" />
+  <Caption value="Navigation" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="column1_aside" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <HyperLink>
+              <Name value="header" />
+              <Data value="Header" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="entities" />
+              <Data value="Entities" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="goodsItem" />
+              <Data value="Goods item" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="guarantee" />
+              <Data value="Guarantee" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="security" />
+              <Data value="Security" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <Label>
+              <Name value="label_otherItems" />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <HyperLink>
+              <Name value="coDeparture" />
+              <Data value="Header" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="coTransit" />
+              <Data value="CO of Transit" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="coDestination" />
+              <Data value="Customs office of destination" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="coControl" />
+              <Data value="Customs office of Control" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enRouteRvent" />
+              <Data value="En route event" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="cancellation" />
+              <Data value="Cancellation" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="unloading" />
+              <Data value="Unloading" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="rejectionCO" />
+              <Data value="Rejection at CO of destination" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enquiryTrader" />
+              <Data value="Enquiry at trader principal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enquiryCustoms" />
+              <Data value="Enquiry at customs office" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="recovery" />
+              <Data value="Recovery" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="fallbackProcedure" />
+              <Data value="Fallback procedure" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="column2_content" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="breadCrumbs_pnl" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+                  <Name value="breadcrumbs1" />
+                  <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+                  <cssClass value="breadcrumb breadcrumb-default-modified" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                </Breadcrumbs>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="content_pnl" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Label>
+                  <Name value="Content" />
+                  <Data value="Content" />
+                  <Heading value="h2" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_navigation_OnActivate" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_navigation_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.init("main::_breadcrumbsCtrlStruct")
+
+if apiobjects.breadcrumbsCtrl.count() = 0 then
+	//apiobjects.breadcrumbsCtrl.addBreadcrumb("Header", "headerTitle", defaultString(), defaultString(), defaultBool())
+	//apiobjects.breadcrumbsCtrl.addBreadcrumb("HouseConsignment", "houseConsignment", "", defaultString(), true)
+	apiobjects.breadcrumbsCtrl.addBreadcrumb("House Consignment", "houseConsignment", defaultString(), defaultString(), defaultBool())
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

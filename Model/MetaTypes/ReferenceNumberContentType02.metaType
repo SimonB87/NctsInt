@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="ReferenceNumberContentType02" />
+  <Caption value="ReferenceNumberContentType02" />
+  <Description value="Used by 4/85 messages: CC007C, CC013C, CC015C, CC029C" />
+  <MtsImportOptions.MTS.ID value="ReferenceNumberContentType02" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

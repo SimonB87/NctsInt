@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="String" />
+  <Caption value="String" />
+  <Description value="metatyp String" />
+  <MtsImportOptions.MTS.ID value="String" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType />
+  </TypeSpec>
+</MetaType>

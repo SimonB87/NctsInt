@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="LocationContentType" />
+  <Caption value="LocationContentType" />
+  <Description value="Used by 11/85 messages: CC013C, CC015C, CC017C, CC029C, CD001C, CD003C, CD038C, CD050C, CD115C, CD160C, &#xA;CD165C" />
+  <MtsImportOptions.MTS.ID value="LocationContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

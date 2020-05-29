@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="CUO8_6" />
+  <Caption value="Authorise CO for recovery" />
+  <Content>
+    <Panel>
+      <Name value="CUO8_6Pnl" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="label1" />
+          <Data value="Authorise CO for recovery (CUO8_6)" />
+          <Heading value="h3" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <Panel>
+          <Name value="Panel_Top" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <TextBox>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <CaptionPosition value="Top" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="60%" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-textbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </TextBox>
+            <ReferenceCombo>
+              <Name value="Regime" />
+              <Caption value="Regime" />
+              <CaptionPosition value="Top" />
+              <DisplayMember value="Description" />
+              <IsEnabled value="False" />
+              <Panel.Height value="#" />
+              <Panel.Width value="40%" />
+              <ReferenceList reference="+GlobalApiObjects.prototypeCodelist" />
+              <Bindings>
+                <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                <Binding SourceProperty="IsRequiredMarkVisible" Expression="globals.prototypeReference.isRequired()" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-referencecombo" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </ReferenceCombo>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="Panel_Recovery" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+              <Name value="GRP_VCD" />
+              <caption value="Recovery" />
+              <collapsedIconClass value="fa fa-plus-square-o" />
+              <nonCollapsedIconClass value="fa fa-minus-square-o" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Content>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Horizontal" />
+                  <Children>
+                    <Panel>
+                      <Name value="GRP_VCDPnl" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="panel2" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <Panel>
+                              <Name value="Panel_VCD_Top_Top" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                                  <Name value="VCD_RequestedCO" />
+                                  <Caption value="Reference number of requested customs office" />
+                                  <CaptionPosition value="Top" />
+                                  <DataApiObject reference="+GlobalApiObjects.prototypeCodelist" />
+                                  <DisplayMember value="Description" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="50%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-referencelookup" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </ReferenceLookup>
+                                <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                                  <Name value="VCD_ReferenceNumberDestination" />
+                                  <Caption value="Competent authority of recovery at destination" />
+                                  <CaptionPosition value="Top" />
+                                  <DataApiObject reference="+GlobalApiObjects.prototypeCodelist" />
+                                  <DisplayMember value="Description" />
+                                  <IsEnabled value="False" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="50%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="globals.prototypeReference" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-referencelookup" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </ReferenceLookup>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="panel1" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <TextBox>
+                              <Name value="VCD_ContactPerson" />
+                              <Caption value="Contact person details" />
+                              <CaptionPosition value="Top" />
+                              <InputType value="Multiline" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Rows value="2" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="Panel_VCD_Top" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="100%" />
+                          <Children>
+                            <TextBox>
+                              <Name value="VCD_InformationText" />
+                              <Caption value="Information text" />
+                              <CaptionPosition value="Top" />
+                              <InputType value="Multiline" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="50%" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-textbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </TextBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                          <Name value="GRP_Guarantee" />
+                          <caption value="Guarantee" />
+                          <collapsedIconClass value="fa fa-plus-square-o" />
+                          <nonCollapsedIconClass value="fa fa-minus-square-o" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Content>
+                            <Panel>
+                              <Name value="GRP_GuaranteePnl" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                  <Name value="RPT_GuaranteeReferenceCtr" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="globals.prototypeCollection" />
+                                    <Binding SourceProperty="Index" Expression="globals.prototypeRptIndex" />
+                                  </Bindings>
+                                </PagingRepeaterCtrl>
+                                <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                  <Name value="RPT_GuaranteeReference" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Content>
+                                    <Panel>
+                                      <Name value="RPT_GuaranteeReferencePnl" />
+                                      <Orientation value="Vertical" />
+                                      <Children>
+                                        <Panel>
+                                          <Name value="Panel_GuaranteeReference" />
+                                          <Orientation value="Vertical" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="*" />
+                                          <Children>
+                                            <Panel>
+                                              <Name value="Panel_GuaranteeReference_GRN" />
+                                              <Orientation value="Vertical" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Children>
+                                                <TextBox>
+                                                  <Name value="GRN" />
+                                                  <Caption value="Guarantee reference number (GRN)" />
+                                                  <CaptionPosition value="Top" />
+                                                  <IsEnabled value="False" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.Width value="*" />
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Data" Expression="" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-textbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </TextBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                            <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
+                                              <Name value="GRP_Guarantor" />
+                                              <caption value="Guarantor" />
+                                              <collapsedIconClass value="fa fa-plus-square-o" />
+                                              <nonCollapsedIconClass value="fa fa-minus-square-o" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Content>
+                                                <Panel>
+                                                  <Name value="GRP_GuarantorPnl" />
+                                                  <Orientation value="Vertical" />
+                                                  <Children>
+                                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                                      <Name value="RPT_GURCtr" />
+                                                      <Panel.Height value="#" />
+                                                      <Panel.Width value="*" />
+                                                      <Bindings>
+                                                        <Binding SourceProperty="Data" Expression="globals.prototypeCollection" />
+                                                        <Binding SourceProperty="Index" Expression="globals.prototypeRptIndex" />
+                                                      </Bindings>
+                                                    </PagingRepeaterCtrl>
+                                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                                      <Name value="RPT_GUR" />
+                                                      <Panel.Height value="#" />
+                                                      <Panel.Width value="*" />
+                                                      <Content>
+                                                        <Panel>
+                                                          <Name value="RPT_GURPnl" />
+                                                          <Orientation value="Vertical" />
+                                                          <Children>
+                                                            <Panel>
+                                                              <Name value="Panel_GUR" />
+                                                              <Orientation value="Vertical" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.Width value="*" />
+                                                              <Children>
+                                                                <Panel>
+                                                                  <Name value="Panel_GUR_Adresa" />
+                                                                  <Orientation value="Horizontal" />
+                                                                  <Panel.Height value="#" />
+                                                                  <Panel.Width value="*" />
+                                                                  <Children>
+                                                                    <TextBox>
+                                                                      <Name value="GUR_TIN" />
+                                                                      <Caption value="EORI" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <IsEnabled value="False" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.Width value="*" />
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <TextBox>
+                                                                      <Name value="GUR_Name" />
+                                                                      <Caption value="Name" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <IsEnabled value="False" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.Width value="*" />
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <TextBox>
+                                                                      <Name value="GUR_StreetNumber" />
+                                                                      <Caption value="Street and number" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <IsEnabled value="False" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.Width value="*" />
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <TextBox>
+                                                                      <Name value="GUR_City" />
+                                                                      <Caption value="City" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <IsEnabled value="False" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.Width value="*" />
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <TextBox>
+                                                                      <Name value="GUR_PostalCode" />
+                                                                      <Caption value="Postcode" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <IsEnabled value="False" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.Width value="*" />
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                  </Children>
+                                                                  <CssClass>
+                                                                    <CssClassConditional>
+                                                                      <ClassName value="{theme}-panel" />
+                                                                      <IsThemedStyle value="True" />
+                                                                    </CssClassConditional>
+                                                                  </CssClass>
+                                                                </Panel>
+                                                                <DataTable>
+                                                                  <Name value="Table_OtherAdresses" />
+                                                                  <Panel.Height value="#" />
+                                                                  <Panel.Width value="*" />
+                                                                  <Columns>
+                                                                    <DataColumn>
+                                                                      <Name value="GURAD_ContactDetailsCol" />
+                                                                      <Caption value="Contact address" />
+                                                                      <Content>
+                                                                        <TextBox>
+                                                                          <Name value="GURAD_ContactDetails" />
+                                                                          <CaptionPosition value="Hide" />
+                                                                          <IsEnabled value="False" />
+                                                                          <CssClass>
+                                                                            <CssClassConditional>
+                                                                              <ClassName value="{theme}-textbox" />
+                                                                              <IsThemedStyle value="True" />
+                                                                            </CssClassConditional>
+                                                                          </CssClass>
+                                                                        </TextBox>
+                                                                      </Content>
+                                                                      <HeaderCssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-datacolumn" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </HeaderCssClass>
+                                                                    </DataColumn>
+                                                                  </Columns>
+                                                                  <CssClass>
+                                                                    <CssClassConditional>
+                                                                      <ClassName value="{theme}-datatable" />
+                                                                      <IsThemedStyle value="True" />
+                                                                    </CssClassConditional>
+                                                                  </CssClass>
+                                                                </DataTable>
+                                                              </Children>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-panel" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </Panel>
+                                                          </Children>
+                                                          <CssClass>
+                                                            <CssClassConditional>
+                                                              <ClassName value="{theme}-panel" />
+                                                              <IsThemedStyle value="True" />
+                                                            </CssClassConditional>
+                                                          </CssClass>
+                                                        </Panel>
+                                                      </Content>
+                                                      <Bindings>
+                                                        <Binding SourceProperty="Data" Expression="globals.prototypeCollection" />
+                                                        <Binding SourceProperty="Index" Expression="globals.prototypeRptIndex" />
+                                                      </Bindings>
+                                                    </PagingRepeater>
+                                                  </Children>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-panel" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </Panel>
+                                              </Content>
+                                              <conditionalCssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-collapsiblegroupbox" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </conditionalCssClass>
+                                            </CollapsibleGroupBox>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                  </Content>
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="globals.prototypeCollection" />
+                                    <Binding SourceProperty="Index" Expression="globals.prototypeRptIndex" />
+                                  </Bindings>
+                                </PagingRepeater>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <conditionalCssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-collapsiblegroupbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </conditionalCssClass>
+                        </CollapsibleGroupBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Content>
+              <conditionalCssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-collapsiblegroupbox" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </conditionalCssClass>
+            </CollapsibleGroupBox>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="PanelButtons" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panelButtonsLeft" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Button>
+                  <Name value="Tl_Send" />
+                  <Caption value="Send" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panelButtonsRight" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+              <Children>
+                <Button>
+                  <Name value="Tl_Close" />
+                  <Caption value="Close" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="150px" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext />
+  </DataContext>
+</Form>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="DateTime" />
+  <Caption value="DateTime" />
+  <Description value="metatyp DateTime" />
+  <MtsImportOptions.MTS.ID value="DateTime" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="DateTime" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

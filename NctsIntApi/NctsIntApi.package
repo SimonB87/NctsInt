@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="NctsIntApi.51961823ccb342e682a52f33780cf33f" />
+  <Items>
+    <ResourceItem ResourceName="TransitDeclaration.js" Action="None" OutputFileName="TransitDeclaration.js" Src="TransitDeclaration.js" />
+    <PackageItem Src="TransitDeclaration.apiObjectManifest" />
+  </Items>
+</Package>

@@ -1,0 +1,181 @@
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* breadcrumb-default-modified */
+
+/* list style - <ol> element */
+.breadcrumb-default-modified {
+  padding: 0.5rem 0.5rem;
+  margin-bottom: 0;
+  background-color: #e6e6e6;
+  border: 1px solid #a0a0a0;
+}
+
+/* item style for 2nd and next items - <li> element */
+.breadcrumb-default-modified > li + li:before {
+  padding: 0 5px;
+  color: #101010;
+  content: ">>\00a0";
+}
+
+/* style for clickable item content - <a> element */
+.breadcrumb-default-modified > li > a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* hover and focus styles for clickable item content - <a> element */
+.breadcrumb-default-modified > li > a:hover,
+.breadcrumb-default-modified > li > a:focus {
+  color: #23527c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 'active' style for clickable item content - <a> element */
+.breadcrumb-default-modified > li > a.active {
+  color: #777;
+}
+
+/* style for non-clickable item content - <span> element */
+.breadcrumb-default > li > span {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* 'active' style for non-clickable item content - <span> element */
+.breadcrumb-default > li > span.active {
+  color: #777;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* breadcrumb-arrows */
+
+/* list style - <ol> element */
+.breadcrumb-arrows {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+/* item style <li> element */
+.breadcrumb-arrows > li {
+    background: none repeat scroll 0 0 #f6f6f6;
+    display: block;
+    float: left;
+    padding: 5px 0 5px 30px;
+    position: relative;
+    border: 1px solid #dddddd;
+}
+
+.breadcrumb-arrows > li:first-child {
+    padding: 5px 0 5px 12px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.breadcrumb-arrows > li:last-child {
+    padding: 5px 12px 5px 30px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;}
+
+/* arrows by :before and :after pseudoelement */
+.breadcrumb-arrows > li:not(:last-child):before {
+    border-bottom: 15px solid transparent;
+    border-left: 20px solid #dddddd;
+    border-top: 15px solid transparent;
+    content:" ";
+    height: 0;
+    left: 100%;
+    margin-left: 1px;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 1;
+}
+.breadcrumb-arrows > li:not(:last-child):after {
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #f6f6f6;
+    border-top: 15px solid transparent;
+    content:" ";
+    height: 0;
+    left: 100%;
+    margin-top: -15px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+/* style for clickable item content - <a> element */
+.breadcrumb-arrows > li > a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* hover and focus styles for clickable item content - <a> element */
+.breadcrumb-arrows > li > a:hover,
+.breadcrumb-arrows > li > a:focus {
+  color: #23527c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* 'active' style for clickable item content - <a> element */
+.breadcrumb-arrows > li > a.active {
+  color: #777;
+}
+
+/* style for non-clickable item content - <span> element */
+.breadcrumb-arrows > li > span {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+/* 'active' style for non-clickable item content - <span> element */
+.breadcrumb-arrows > li > span.active {
+  color: #777;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvv */
+/* breadcrumb-custom */
+
+.breadcrumb-custom {
+  list-style: disc inside;
+  margin: 0;
+  padding: 2px 3px;
+  margin-bottom: 0;
+  background-color: #fffa90;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.breadcrumb-custom > li {
+  display: list-item;
+  color: #ec0060;
+}
+
+.breadcrumb-custom > li > a {
+  color: #ec0060;
+  text-decoration: none;
+}
+
+.breadcrumb-custom > li > a:hover,
+.breadcrumb-custom > li > a:focus {
+  color: #560425;
+  text-decoration: overline;
+  cursor: pointer;
+}
+
+.breadcrumb-custom > li > a.active {
+  color: #a57a7a;
+}
+
+.breadcrumb-custom > li > span {
+  color: #ec0060;
+  text-decoration: none;
+}
+
+.breadcrumb-custom > li > span.active {
+  color: #a57a7a;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */

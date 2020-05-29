@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="ErrorReport" />
+  <Caption value="ErrorReport" />
+  <MtsImportOptions.MTS.ID value="/ErrorReport" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Complex>
+      <Name value="Error" />
+      <Caption value="Error" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/ErrorReport/Error" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="TimeStamp" />
+          <Caption value="Date and time of error ocurrence" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/TimeStamp" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="AppName" />
+          <Caption value="Application name" />
+          <Description value="Name of application/component where error ocurred" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/AppName" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="999" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="MessageGUID" />
+          <Caption value="GUID of rejected message" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageGUID" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="ObjectGUID" />
+          <Caption value="GUID of processed object" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/ObjectGUID" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="MessageCheckError" />
+          <Caption value="Error in message check" />
+          <Description value="XSD schema, codelists, rules/conditions,.." />
+          <MaxCount value="99999" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <Children>
+            <Attribute>
+              <Name value="ErrorType" />
+              <Caption value="Error type" />
+              <Description value="Message out of sequence / Not in codelist / Too high values / ...." />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/ErrorType" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ErrorDescription" />
+              <Caption value="Description of error" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/ErrorDescription" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer to error element (XPATH)" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/Pointer" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="9999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Reason" />
+              <Caption value="Reason of error" />
+              <Description value="Code of broken rule/condition, code of codelist, ..." />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/Reason" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="9999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="RejectedValue" />
+              <Caption value="Value that was rejected" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/RejectedValue" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Help" />
+              <Caption value="Help (for end user)" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError/Help" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="99999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="InternalError" />
+          <Caption value="Error from runtime application" />
+          <Description value="exceptions, communication failures, database failures, timeouts,..." />
+          <MaxCount value="99999" />
+          <MtsImportOptions.MTS.ID value="/ErrorReport/Error/InternalError" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <Children>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/InternalError/Description" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="99999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="DebugInfo" />
+              <Caption value="Debug info" />
+              <Description value="More detailed information relevant to the error" />
+              <MtsImportOptions.MTS.ID value="/ErrorReport/Error/InternalError/DebugInfo" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="99999" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

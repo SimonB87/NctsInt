@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="UnLocodeExtended" />
+  <Caption value="UnLocodeExtended" />
+  <MtsImportOptions.MTS.ID value="UnLocodeExtended" />
+  <MtsImportOptions.MTS.Type value="codelist" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="UnLocodeExtendedCode" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Code" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="5" />
+          <StrMinLength value="5" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Name" />
+      <Caption value="Name" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Name" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="140" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Change" />
+      <Caption value="Change" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Change" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="1" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Subdivision" />
+      <Caption value="Subdivision" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Subdivision" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="3" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Function" />
+      <Caption value="Function" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Function" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="8" />
+          <StrMinLength value="8" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Status" />
+      <Caption value="Status" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Status" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Date_" />
+      <Caption value="Date" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Date_" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Decimal" />
+          <IntMax value="9999" />
+          <IntMin value="0" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Coordinates" />
+      <Caption value="Coordinates" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Coordinates" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="12" />
+          <StrMinLength value="12" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Comment_" />
+      <Caption value="Comment" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Comment_" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="512" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <MetaType reference="+MetaTypes.CSRD2CodelistDescription" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/Description" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="ValidFrom" />
+      <Caption value="Valid from" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/ValidFrom" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidTo" />
+      <Caption value="Valid to" />
+      <MtsImportOptions.MTS.ID value="UnLocodeExtended/ValidTo" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Computed>
+      <Name value="_description" />
+      <Caption value="_ description" />
+      <Expression IsValid="True">
+        <ExpressionText><![CDATA[functions.codeListDescription(Code,Description)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </Expression>
+    </Computed>
+  </Children>
+</DataEntity>

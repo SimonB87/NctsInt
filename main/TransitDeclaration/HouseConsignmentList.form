@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="HouseConsignmentList" />
+  <Caption value="House Consignment List" />
+  <Content>
+    <Panel>
+      <Name value="pnl_body" />
+      <Orientation value="Horizontal" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="column1_aside" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="250px" />
+          <Children>
+            <Label>
+              <Name value="label_navigation" />
+              <Data value="Navigation" />
+              <Heading value="h3" />
+              <Panel.Height value="#" />
+              <Panel.Width value="250px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
+            <HyperLink>
+              <Name value="header" />
+              <Data value="Header" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_header_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="mainEntities_link" />
+              <Data value="Main Entities" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="guarantee_link" />
+              <Data value="Guarantee" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="customsOffice_link" />
+              <Data value="Customs office" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="recovery_link" />
+              <Data value="Recovery" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="unloading_link" />
+              <Data value="Unloading" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enquiryAtTrader_link" />
+              <Data value="Enquiry at Trader Principal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enquiryAtCO_link" />
+              <Data value="Enquiry at CO" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="enrouteEvent_link" />
+              <Data value="Enroute event" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="houseConsignment_link" />
+              <Data value="House Consignments" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_HouseConsignment_link_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-nav" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="pnlBody" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="breadCrumbs_pnl" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+                  <Name value="breadcrumbs1" />
+                  <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+                  <cssClass value="breadcrumb breadcrumb-default-modified" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                </Breadcrumbs>
+                <Button>
+                  <Name value="cancel_btn" />
+                  <Caption value="Cancel" />
+                  <Panel.Height value="42px" />
+                  <Panel.Width value="120px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_cancel_btn_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="newStyle" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="btn-secondary" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="disabled" />
+                      <Condition value="False" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-breadcrumbs" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="content_pnl" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <DataTable>
+                  <Name value="HouseConsignmentList_table" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <OnRowActivate>
+                    <ActionEvent ReferencedAction="~handler_dataTable1_OnRowActivate" />
+                  </OnRowActivate>
+                  <Bindings>
+                    <Binding SourceProperty="DataItems" Expression="form.houseConsignmentRowList" />
+                  </Bindings>
+                  <Columns>
+                    <DataColumn>
+                      <Name value="dataColumn1" />
+                      <Caption value="Sequence number" />
+                      <Content>
+                        <Label>
+                          <Name value="goodsItemNumber_label" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="this.sequenceNumber" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="declarationGoodsItemNumber" />
+                      <Caption value="Grossmass" />
+                      <Content>
+                        <Label>
+                          <Name value="declarationGoodsItemNumber_label" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="this.grossMass" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dataColumn2" />
+                      <Caption value="Consignment Items Count" />
+                      <Content>
+                        <Label>
+                          <Name value="label1" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="this.comp_consigIemCount" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dataColumn3" />
+                      <Caption value="Reference Number UCR" />
+                      <Content>
+                        <Label>
+                          <Name value="label2" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="this.referenceNumberUCR" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dataColumn4" />
+                      <Caption value="Consignor Name" />
+                      <Content>
+                        <Label>
+                          <Name value="label3" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="this.consignorName" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-label" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Label>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                    <DataColumn>
+                      <Name value="dataColumn5" />
+                      <Caption value="Item Action" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel1" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Button>
+                              <Name value="delete_btn" />
+                              <Caption value="Delete item" />
+                              <Panel.Height value="42px" />
+                              <Panel.Width value="120px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_delete_btn_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="newStyle" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="btn-danger" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="disabled" />
+                                  <Condition value="False" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <HeaderCssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datacolumn" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </HeaderCssClass>
+                    </DataColumn>
+                  </Columns>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datatable" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </DataTable>
+                <Button>
+                  <Name value="add_btn" />
+                  <Caption value="Add item" />
+                  <Panel.Height value="42px" />
+                  <Panel.Width value="120px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~addHouseConsigItem" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="newStyle" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="btn-success" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="disabled" />
+                      <Condition value="False" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="content_pnl" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="guid" />
+          <Caption value="Guid" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="mode" />
+          <Caption value="Mode" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <MetaType reference="+MetaTypes.declarationFormMode" />
+        </Attribute>
+        <Collection>
+          <Name value="houseConsignmentRowList" />
+          <Caption value="House consignment row list" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.houseConsignmentRow" />
+            </Include>
+            <Computed>
+              <Name value="comp_consigIemCount" />
+              <Caption value="Comp _ consig iem count" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[consignmentItemsCount.hasValue() ? consignmentItemsCount : 0]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+form.actions.setUrlDeepLink()
+
+form.actions.setBreadcrumbs()
+
+// if apiobjects.transitDeclaration.isEmpty() then
+// ... např. načtení dat ze serveru nebo aspoň založení prázdné deklarace v případě create
+
+var rowsJson = apiobjects.transitDeclaration.getHouseConsignmentList()
+
+form.houseConsignmentRowList.fromJson(rowsJson)
+
+// Need response from server
+globals.busyIndicatorIsRunning = false
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_dataTable1_OnRowActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// uložíme data do transitDeclaration
+// transitDeclaration.setHeader(form.toJson())
+
+if form.guid.hasValue() then
+	navigation.main.HouseConsignment.withGuid(form.guid).go(form.mode, params.data.sequenceNumber)
+else
+	navigation.main.HouseConsignment.go(form.mode, params.data.sequenceNumber)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_HouseConsignment_link_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// uložíme data do transitDeclaration
+// transitDeclaration.setHeader(form.toJson())
+
+if form.guid.hasValue() then
+	navigation.main.HouseConsignmentList.withGuid(form.guid).go(form.mode)
+else
+	navigation.main.HouseConsignmentList.go(form.mode)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUrlDeepLink" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//edit url to form
+var url = apiobjects.urlRouter.findFormUrl(navigation.main.HouseConsignmentList.fullName)
+
+if (form.mode.hasValue()) then
+	url.addString("mode", form.mode.enumValue())
+endif
+
+if (form.guid.hasValue()) then
+	url.addString("guid", form.guid)
+endif
+
+url.updatePageUrl()
+
+// zkontrolovat kombinaci vstupních parametrů, např. pokud by mode byl edit a mrn prázdné, asi si někdo hrál s URL a přišel sem přímo;
+// pokud nesedí kombinace vstupních parametrů, automaticky hodíme uživatele na začátek, tj. domovskou stránku
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setBreadcrumbs" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.breadcrumbsCtrl.init("main::_breadcrumbsCtrlStruct")
+apiobjects.breadcrumbsCtrl.removeAll()
+apiobjects.breadcrumbsCtrl.addBreadcrumb("houseConsignments", "House Consignments", defaultString(), defaultString(), defaultBool())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="addHouseConsigItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// TODO - POSTUP PRÁCE
+
+// 1 navigace na detail
+
+// 2 ale zde v tuto chvíli ještě nebude sequence number
+
+// 3 uživatel vyplní informace a pak ULOŽÍ PŘES funkci : apiobjects.transitDeclaration.appendNewHouseConsignment()
+// V PŘÍPADĚ EDTACE EXISTUJÍCÍHO SE PRACUJE PŘES setNewHouseConsignment()
+
+//navigation to the newly added item
+
+var newItemSequenceNumber = form.houseConsignmentRowList.count() + 1
+apiobjects.transitDeclaration.appendNewHouseConsignment("{}")
+
+if form.guid.hasValue() then
+	navigation.main.HouseConsignment.withGuid(form.guid).go(form.mode, newItemSequenceNumber)
+else
+	navigation.main.HouseConsignment.go(form.mode, newItemSequenceNumber)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_delete_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//Get index of item in collection
+var getItemNumber = params.data.sequenceNumber
+
+//Ask user for event confirmation (delete CZ Annex)
+var confirmFileDelete = apiobjects.pageApi.confirm("Do you want to delete item n. " + toString(getItemNumber) )
+
+if confirmFileDelete = True then
+  apiobjects.transitDeclaration.removeHouseConsignment(getItemNumber)
+endIf
+
+globals.busyIndicatorIsRunning = True
+
+form.houseConsignmentRowList.clear()
+
+// refresh HouseConsignementList data
+var rowsJson = apiobjects.transitDeclaration.getHouseConsignmentList()
+form.houseConsignmentRowList.fromJson(rowsJson)
+
+globals.busyIndicatorIsRunning = False]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_header_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.Header.withGuid(form.guid).go(form.mode)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_cancel_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.transitDeclaration.clear()
+navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

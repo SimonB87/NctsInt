@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="StreetAndNumberContentType" />
+  <Caption value="StreetAndNumberContentType" />
+  <Description value="Used by 40/85 messages: CC004C, CC007C, CC009C, CC013C, CC015C, CC017C, CC019C, CC023C, CC028C, CC029C, &#xA;CC035C, CC037C, CC043C, CC045C, CC054C, CC055C, CC056C, CC060C, CC140C, CC141C, &#xA;CC170C, CC182C, CC190C, CC224C, CC228C, CC229C, CC928C, CD001C, CD003C, CD012C, &#xA;CD038C, CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD180C, CD181C" />
+  <MtsImportOptions.MTS.ID value="StreetAndNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="70" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

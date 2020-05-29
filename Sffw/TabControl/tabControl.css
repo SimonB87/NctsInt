@@ -1,0 +1,38 @@
+/* IDE-SKIP */
+.sffw-tabs {
+    padding: 0;
+}
+.sffw-tabs>ul {
+    display: table;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 6px;
+}
+
+.sffw-tabs>ul>li.sffw-tab {
+    float: left;
+    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    background-color: #e6e6e6;
+    margin-right: 1px;
+    line-height: 1.5rem;
+}
+
+.sffw-tabs>ul>li.sffw-tab>a {
+    font-family: "Segoe UI Light", "Open Sans", "Helvetica Neue Light", "HelveticaNeue-Light", sans-serif;
+    font-size: 0.8rem;
+    color: #000;
+    text-decoration: none;
+    word-wrap: break-word;
+    display: block;
+    padding: 2px;
+}
+
+.sffw-tabs>ul>li.sffw-tab:hover {
+    background-color: #fff;
+}
+
+.sffw-tabs>ul>li.sffw-tab-selected {
+    background-color: #fff;
+}

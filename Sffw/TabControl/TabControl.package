@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="TabControl.060fd7850ded45d3aceb7bf1f53aebb6" />
+  <Version value="1.3.1" />
+  <Items>
+    <PackageItem Src="tab.componentManifest" />
+    <PackageItem Src="TabControl.componentManifest" />
+    <ResourceItem ResourceName="tabControlGenerator.js" Action="None" OutputFileName="tabControlGenerator.js" Src="tabControlGenerator.js" />
+    <ResourceItem ResourceName="tabControl.css" LinkerAction="Css" OutputFileName="tabControl.css" Src="tabControl.css" />
+    <ResourceItem ResourceName="tabControl.js" LinkerAction="Script" OutputFileName="tabControl.js" Src="tabControl.js" />
+    <ResourceItem ResourceName="tabControl.png" Action="None" OutputFileName="tabControl.png" Src="tabControl.png" />
+  </Items>
+</Package>

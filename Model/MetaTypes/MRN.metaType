@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="MRN" />
+  <Caption value="MRN" />
+  <Description value="Movement Reference Number&#xA;Jedinečný identifikátor jedné celní operace. Je přidělován celním systémem.&#xA;&#xA;U českých MRN lze poznat režim dané celní operace podle jedenáctého místa:&#xA; - pokud &quot;2&quot;, pak se jedná o vývoz&#xA; - pokud &quot;9&quot;, pak se jedná o tranzit (včetně TIR)&#xA; - pokud &quot;M&quot; , pak OTS TIR&#xA; - ... atd. (existuje na to samostatný dokument - lze získat u Martina Podveského&#xA;(pozor: u tranzitních MRN byl zpočátku znak &quot;9&quot; uváděn v MRN na 9. a nikoli 11. místě!)&#xA;&#xA;Poslední znak MRN je kontrolní číslice 0-9 (podle ISO 6346?). Znak &quot;F&quot; se používá místo kontrolní číslice u havarijních MRN v e-vývozu a v tranzitu." />
+  <MtsImportOptions.MTS.ID value="MRN" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="18" />
+      <StrMinLength value="18" />
+    </AttributeType>
+  </TypeSpec>
+  <Validators>
+    <Validator Name="regex">
+      <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{13}[0-9F]" />
+      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+      <ErrorMessage IsValid="True">
+        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </ErrorMessage>
+      <IsValid IsValid="True">
+        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{13}[0-9F]$") : true)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="Bool" />
+        </ResultType>
+      </IsValid>
+    </Validator>
+  </Validators>
+</MetaType>

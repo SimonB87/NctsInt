@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="PagingRepeaterCtrl" />
+  <Generator value="&lt;sffw-paging-repeater-ctrl&gt;" />
+  <Type value="Control" />
+  <UiCaption value="PagingRepeater control" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="pagingRepeaterCtrl.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemAdd" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="newItem" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnItemRemove" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="removedItem" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Index" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="integer" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Data" />
+      <Bindable value="Always" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CaptionAtt" />
+      <UiCaption value="Caption attribute" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowAdd" />
+      <Bindable value="True" />
+      <Default value="False" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AllowRemove" />
+      <Bindable value="True" />
+      <Default value="False" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="UseFontAwesome" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconLeftClass" />
+      <Default value="fa-caret-left" />
+      <Type value="string" />
+      <UiCaption value="Icon :Left: class (Font Awesome)" />
+      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconRightClass" />
+      <Default value="fa-caret-right" />
+      <Type value="string" />
+      <UiCaption value="Icon :Right: class (Font Awesome)" />
+      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconAddClass" />
+      <Default value="fa-plus" />
+      <Type value="string" />
+      <UiCaption value="Icon :Add: class (Font Awesome)" />
+      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconRemoveClass" />
+      <Default value="fa-minus" />
+      <Type value="string" />
+      <UiCaption value="Icon :Remove: class (Font Awesome)" />
+      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconSizeClass" />
+      <Default value="fa-lg" />
+      <Type value="string" />
+      <UiCaption value="Icon size class (Font Awesome)" />
+      <UiDescription value="Possible values: fa-lg, fa-2x, fa-3x, fa-4x, fa-5x. See http://fontawesome.io/examples" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IconsFixedWidth" />
+      <Default value="True" />
+      <Type value="bool" />
+      <UiCaption value="Icons with fixed width (Font Awesome)" />
+      <UiDescription value="Use Font Awesome icons at a fixed width." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="CheckItemIsValidBeforeIndexChange" />
+      <Bindable value="OneWay" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

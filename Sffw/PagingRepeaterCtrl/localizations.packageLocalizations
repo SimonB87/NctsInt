@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="isNotValidMessage">
+      <Values>
+        <LocaleValue Lang="en" Value="Please remove all validation errors on current item to continue." />
+        <LocaleValue Lang="cs" Value="Chcete-li pokračovat, odstraňte chyby na aktuálním záznamu." />
+        <LocaleValue Lang="sv" Value="Ta bort alla valideringsfel på den aktuella artikeln för att fortsätta." />
+        <LocaleValue Lang="fi" Value="Jatka poistamalla kaikki nykyisen kohteen oikeellisuus tarkistus virheet." />
+        <LocaleValue Lang="sr" Value="Da biste nastavili, uklonite sve greške u proveri valjanosti ove stavke." />
+        <LocaleValue Lang="me" Value="Da biste nastavili, uklonite sve greške u proveri valjanosti ove stavke." />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

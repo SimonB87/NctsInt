@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="OtherGuaranteeReferenceContentType" />
+  <Caption value="OtherGuaranteeReferenceContentType" />
+  <Description value="Used by 3/85 messages: CC013C, CC015C, CC029C" />
+  <MtsImportOptions.MTS.ID value="OtherGuaranteeReferenceContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

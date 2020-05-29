@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="IdentificationNumberContentType01" />
+  <Caption value="IdentificationNumberContentType01" />
+  <Description value="Used by 51/85 messages: CC004C, CC007C, CC009C, CC013C, CC014C, CC015C, CC017C, CC019C, CC022C, CC023C, &#xA;CC025C, CC026C, CC028C, CC029C, CC034C, CC035C, CC037C, CC043C, CC044C, CC045C, &#xA;CC051C, CC054C, CC055C, CC056C, CC057C, CC060C, CC140C, CC141C, CC170C, CC190C, &#xA;CC224C, CC225C, CC228C, CC229C, CC231C, CC928C, CD001C, CD003C, CD012C, CD038C, &#xA;CD050C, CD115C, CD142C, CD150C, CD151C, CD160C, CD165C, CD200C, CD201C, CD203C, &#xA;CD205C" />
+  <MtsImportOptions.MTS.ID value="IdentificationNumberContentType01" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="17" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

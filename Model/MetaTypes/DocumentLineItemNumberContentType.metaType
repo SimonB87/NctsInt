@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="DocumentLineItemNumberContentType" />
+  <Caption value="DocumentLineItemNumberContentType" />
+  <Description value="Used by 11/85 messages: CC013C, CC015C, CC029C, CD001C, CD003C, CD012C, CD038C, CD050C, CD115C, CD160C, &#xA;CD165C" />
+  <MtsImportOptions.MTS.ID value="DocumentLineItemNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Integer" />
+      <IntMax value="99999" />
+      <IntMin value="0" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

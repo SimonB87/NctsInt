@@ -1,0 +1,42 @@
+/* icon span */
+.cgb > fieldset > legend > div > span:first-of-type {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* legend span */
+.cgb > fieldset > legend > div > span:nth-of-type(2) {
+    cursor: pointer;
+    text-decoration: inherit;
+    padding-right: 0.1em;
+    padding-left: 0.1em;
+    line-height: inherit;
+}
+
+/* collapsed cgb class */
+.cgb > fieldset.cgb-collapsed {
+    border: none;
+    border-image: initial;
+}
+
+/* content div */
+.cgb > fieldset > div {
+    padding: 10px;
+}
+
+
+/* icon span */
+.cgb-default > fieldset > legend > div > span:first-of-type {
+    font-size: 1.3em;
+}
+
+/* legend span */
+.cgb-default > fieldset > legend > div > span:nth-of-type(2) {
+    font-size: 1.1em;
+}
+
+/* collapsed cgb class */
+.cgb-default > fieldset.cgb-collapsed {
+    border-top: 2px groove threedface;
+}
+

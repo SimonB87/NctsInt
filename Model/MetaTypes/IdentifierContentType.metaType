@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="IdentifierContentType" />
+  <Caption value="IdentifierContentType" />
+  <Description value="Used by 20/85 messages: CC007C, CC013C, CC015C, CC017C, CC029C, CC043C, CC044C, CC170C, CC182C, CD001C, &#xA;CD003C, CD012C, CD018C, CD038C, CD050C, CD115C, CD160C, CD165C, CD180C, CD181C" />
+  <MtsImportOptions.MTS.ID value="IdentifierContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="20" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

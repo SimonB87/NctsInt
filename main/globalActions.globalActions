@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalActions>
+  <Name value="globalActions" />
+  <Actions>
+    <ActionBlock>
+      <Name value="consignementNavigationBreadcrumbs" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var guidValue = _guid.hasValue() 
+
+if _selectedBreadCrumbsId = "houseConsignments" then
+	if guidValue then
+		navigation.main.HouseConsignmentList.withGuid(_guid).go(_mode)
+	else
+		navigation.main.HouseConsignmentList.go(_mode)
+	endif
+endif
+
+if _selectedBreadCrumbsId = "houseConsignmentItem" then
+	if guidValue then
+		navigation.main.HouseConsignment.withGuid(_guid).go(_mode, _sequenceNumber)
+	else
+		navigation.main.HouseConsignment.go(_mode, _sequenceNumber)
+	endif
+endif
+
+if _selectedBreadCrumbsId ="consignmentItems" then
+	if guidValue then
+		navigation.main.ConsignmentList.withGuid(_guid).go(_mode, _sequenceNumber)
+	else
+		navigation.main.ConsignmentList.go(_mode, _sequenceNumber)
+	endif
+endif
+
+if _selectedBreadCrumbsId = "consignmentItem" then
+	if guidValue then
+		navigation.main.ConsignmentItem.withGuid(_guid).withGoodsItemNumber(_goodsItemNumber).go(_mode,_sequenceNumber)
+	else
+		navigation.main.ConsignmentItem.withGoodsItemNumber(_goodsItemNumber).go(_mode, _sequenceNumber)
+	endif
+endif	]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="_selectedBreadCrumbsId" />
+              <Caption value="_ selected bread crumbs id" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_mode" />
+              <Caption value="_ mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="_sequenceNumber" />
+              <Caption value="_ sequence number" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_goodsItemNumber" />
+              <Caption value="_ goods item number" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_guid" />
+              <Caption value="_ guid" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</GlobalActions>

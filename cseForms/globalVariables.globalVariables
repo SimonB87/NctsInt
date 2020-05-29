@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalVariables>
+  <Name value="globalVariables" />
+  <Children>
+    <Reference>
+      <Name value="prototypeReference" />
+      <Caption value="prototypeReference" />
+      <Children>
+        <Attribute>
+          <Name value="Key" />
+          <Caption value="Key" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="Description" />
+          <Caption value="Description" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Reference>
+    <Attribute>
+      <Name value="selectedTabIndex" />
+      <Caption value="Selected tab index" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Collection>
+      <Name value="prototypeCollection" />
+      <Caption value="Prototype collection" />
+    </Collection>
+    <Attribute>
+      <Name value="prototypeRptIndex" />
+      <Caption value="Prototype rpt index" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</GlobalVariables>

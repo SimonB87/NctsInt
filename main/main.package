@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package>
+  <Identity value="main.77cebdf47cc044589efeab8ab5a8ac2b" />
+  <Items>
+    <PackageItem Src="Master.form" />
+    <PackageItem Src="Home.form" />
+    <PackageItem Src="globalApiObjects.globalApiObjects" />
+    <PackageItem Src="globalVariables.globalVariables" />
+    <PackageFolder Name="CSS">
+      <Items>
+        <ResourceItem ResourceName="main.css" LinkerAction="Css" OutputFileName="main.css" Src="CSS\main.css" />
+      </Items>
+    </PackageFolder>
+    <PackageFolder Name="TransitDeclaration">
+      <Items>
+        <PackageItem Src="TransitDeclaration\Header.form" />
+        <PackageItem Src="TransitDeclaration\HouseConsignmentList.form" />
+        <PackageItem Src="TransitDeclaration\HouseConsignment.form" />
+        <PackageItem Src="TransitDeclaration\ConsignmentList.form" />
+        <PackageItem Src="TransitDeclaration\ConsignmentItem.form" />
+        <PackageItem Src="TransitDeclaration\declarationFormMode.metaType" />
+        <PackageItem Src="TransitDeclaration\houseConsignmentRow.dataEntity" />
+      </Items>
+    </PackageFolder>
+    <PackageItem Src="globalActions.globalActions" />
+  </Items>
+</Package>

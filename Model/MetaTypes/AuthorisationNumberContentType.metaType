@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="AuthorisationNumberContentType" />
+  <Caption value="AuthorisationNumberContentType" />
+  <Description value="Used by 6/85 messages: CC007C, CC013C, CC015C, CC029C, CC170C, CC190C" />
+  <MtsImportOptions.MTS.ID value="AuthorisationNumberContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

@@ -1,0 +1,233 @@
+html.scrolled body{
+	padding-top: 130px;
+}
+
+html.scrolled .column1_aside_navigation{
+	position: fixed;
+	top: 0;
+}
+
+html.scrolled .breadCrumbs_pnl{
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	width: 905px;
+}
+
+h5{
+	font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+}
+
+body{
+    background: #f5f5f5;
+    padding-top: 70px;
+}
+
+.blue-background *{
+	background-color: #4390df !important;
+	color: #fff !important;
+}
+
+.shadow-top {
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+.sffw-csp{
+	left: 0;
+}
+
+.component.panel{
+	width: 100%;
+}
+
+.flright{
+	float:right;
+}
+
+.flright .panel-cell{
+	float: right;
+}
+
+.csp-default ul > li > a{
+	text-decoration: none;
+	margin-bottom: 2px;
+	font-size: 1rem;
+}
+
+.sffw-csp-marker{
+	display: none;
+}
+
+.sffw-csp .component.panel {
+    width: 100% !important;
+}
+
+.sffw-collapsible-sticky-panel > div > ul {
+	border-bottom: 1px solid #aaa;
+}
+
+html .breadcrumb-default-modified{
+	background-color: transparent;
+	border: 0;
+}
+
+html div[data-name="pnlBody"]{
+	padding-left: 15px !important;
+}
+
+
+html .cgb-default > fieldset.cgb-collapsed{
+	border-top: 0;
+}
+
+.header{
+    background: rgba(0,0,0,0.001);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+    padding: 10px !important;
+}
+
+.header > div{
+	max-width: 1170px;
+	margin: 0 auto;
+	display: block;
+}
+
+.header .panel-row{
+	width: 100%;
+}
+
+
+
+
+/* 2020 New design buttons - start */
+
+.newStyle button {
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.btn-success.newStyle button {
+    background-color: #3ac47d;
+    border-color: #3ac47d;
+}
+
+.btn-success.newStyle button:hover{
+    background-color: #31a66a;
+    border-color: #2e9d64;
+    box-shadow: 0 0.125rem 0.625rem rgba(58,196,125,0.4), 0 0.0625rem 0.125rem rgba(58,196,125,0.5);
+}
+
+.btn-success.newStyle button:hover:after{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.btn-success.newStyle:not(:disabled):not(.disabled) button:active{
+    background-color: #2e9d64;
+    border-color: #2b935e;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.btn-danger.newStyle button {
+    background-color: #d92550;
+    border-color: #d92550;
+}
+
+.btn-danger.newStyle button:hover {
+	background-color: #b81f44;
+    border-color: #ad1e40;
+	box-shadow: 0 0.125rem 0.625rem rgba(217,37,80,0.4), 0 0.0625rem 0.125rem rgba(217,37,80,0.5);
+}
+
+.btn-danger.newStyle button:hover:after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.btn-danger.newStyle:not(:disabled):not(.disabled) button:active {
+	background-color: #ad1e40;
+    border-color: #a31c3c;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.btn-secondary.newStyle button {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary.newStyle button:hover {
+	background-color: #5a6268;
+    border-color: #545b62;
+	box-shadow: 0 0.125rem 0.625rem rgba(108,117,125,0.4), 0 0.0625rem 0.125rem rgba(108,117,125,0.5);
+}
+
+.btn-secondary.newStyle button:hover:after {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.btn-secondary.newStyle:not(:disabled):not(.disabled) button:active {
+	background-color: #545b62;
+    border-color: #4e555b;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.newStyle.disabled button{
+	cursor: not-allowed;
+}
+
+/* 2020 New design buttons - end */
+
+html .cgb-default > fieldset.cgb-collapsed{
+	border-top: 0;
+}
+
+.header{
+    background: rgba(0,0,0,0.001);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
+    padding: 10px !important;
+}
+
+.header > div{
+	max-width: 1170px;
+	margin: 0 auto;
+	display: block;
+}
+
+.header .panel-row{
+	width: 100%;
+}

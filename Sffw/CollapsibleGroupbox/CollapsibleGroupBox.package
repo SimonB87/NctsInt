@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7" />
+  <Version value="2.2.2" />
+  <Items>
+    <ResourceItem ResourceName="CollapsibleGroupBox.png" Action="None" OutputFileName="CollapsibleGroupBox.png" Src="CollapsibleGroupBox.png" />
+    <PackageItem Src="CollapsibleGroupBox.componentManifest" />
+    <ResourceItem ResourceName="collapsibleGroupBoxGenerator.js" Action="None" OutputFileName="collapsibleGroupBoxGenerator.js" Src="collapsibleGroupBoxGenerator.js" />
+    <ResourceItem ResourceName="collapsibleGroupBox.js" LinkerAction="Script" OutputFileName="collapsibleGroupBox.js" Src="collapsibleGroupBox.js" />
+    <ResourceItem ResourceName="collapsibleGroupBox.css" LinkerAction="Css" OutputFileName="collapsibleGroupBox.css" Src="collapsibleGroupBox.css" />
+  </Items>
+</Package>

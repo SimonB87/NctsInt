@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<GlobalApiObjects>
+  <Name value="globalApiObjects" />
+  <ApiObjects>
+    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+      <Name value="breadcrumbsCtrl" />
+    </BreadcrumbsCtrl>
+    <UrlRouter identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+      <Name value="urlRouter" />
+      <routes>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.HouseConsignment" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,sequenceNumber,guid?" />
+          <url value="HouseConsignment" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.ConsignmentList" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,sequenceNumber,guid?" />
+          <url value="ConsignmentList" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.ConsignmentItem" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,sequenceNumber,goodsItemNumber,guid?" />
+          <url value="ConsignmentItem" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.HouseConsignmentList" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,guid?" />
+          <url value="HouseConsignmentList" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.Header" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,guid?" />
+          <url value="Header" />
+        </UrlRouteCfg>
+      </routes>
+    </UrlRouter>
+    <TransitDeclaration identity="NctsIntApi.51961823ccb342e682a52f33780cf33f">
+      <Name value="transitDeclaration" />
+    </TransitDeclaration>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="pageApi" />
+    </Page>
+  </ApiObjects>
+</GlobalApiObjects>

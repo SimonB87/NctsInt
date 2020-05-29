@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="CollapsibleGroupBox" />
+  <Generator value="collapsibleGroupBoxGenerator.js" />
+  <Type value="ContentObject" />
+  <UiCaption value="Collapsible GroupBox" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="CollapsibleGroupBox.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnCollapseClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="caption" />
+      <Bindable value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isExpanded" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="collapsedIconClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="nonCollapsedIconClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="cssClass" />
+      <Default value="cgb cgb-default" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="conditionalCssClass" />
+      <Type value="collection-CssClassConditional" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>
