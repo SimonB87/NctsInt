@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="imageButtonContentPart" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <IsInstantiable value="False" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="FAIconName" />
+      <Configurable value="True" />
+      <Type value="string" />
+      <UiCaption value="FontAwesome Icon name" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

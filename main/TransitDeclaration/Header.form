@@ -20,14 +20,14 @@
               <Name value="pnNavigation" />
               <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="250px" />
+              <Panel.Width value="263px" />
               <Children>
                 <Label>
                   <Name value="label_navigation" />
                   <Data value="Navigation" />
                   <Heading value="h3" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="250px" />
+                  <Panel.Width value="*" />
                   <CssClass>
                     <CssClassConditional>
                       <ClassName value="{theme}-label" />
@@ -99,7 +99,7 @@
                     </HyperLink>
                     <HyperLink>
                       <Name value="customsOffice_subLink" />
-                      <Data value="Customs office" />
+                      <Data value="Customs Office" />
                       <Margin value="12, 12, 12, 12 px" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
@@ -201,36 +201,6 @@
                   </CssClass>
                 </HyperLink>
                 <HyperLink>
-                  <Name value="guarantee_link" />
-                  <Data value="Guarantee" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="*" />
-                  <OnClick>
-                    <ActionEvent ReferencedAction="~saveHeaderdata" />
-                  </OnClick>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-hyperlink" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </HyperLink>
-                <HyperLink>
-                  <Name value="customsOffice_link" />
-                  <Data value="Customs office" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="*" />
-                  <OnClick>
-                    <ActionEvent ReferencedAction="~saveHeaderdata" />
-                  </OnClick>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-hyperlink" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </HyperLink>
-                <HyperLink>
                   <Name value="recovery_link" />
                   <Data value="Recovery" />
                   <Panel.Height value="#" />
@@ -277,7 +247,7 @@
                 </HyperLink>
                 <HyperLink>
                   <Name value="enquiryAtCO_link" />
-                  <Data value="Enquiry at CO" />
+                  <Data value="Enquiry at Customs Office" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <OnClick>
@@ -292,7 +262,7 @@
                 </HyperLink>
                 <HyperLink>
                   <Name value="enrouteEvent_link" />
-                  <Data value="Enroute event" />
+                  <Data value="Enroute Event" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <OnClick>
@@ -340,68 +310,161 @@
               <Panel.Width value="*" />
               <Children>
                 <Panel>
-                  <Name value="breadCrumbs_pnl" />
+                  <Name value="ControlPnl" />
                   <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <Children>
-                    <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
-                      <Name value="breadcrumbs1" />
-                      <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
-                      <cssClass value="breadcrumb breadcrumb-default-modified" />
+                    <Panel>
+                      <Name value="ControlPnlHolder" />
+                      <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
-                    </Breadcrumbs>
-                    <Button>
-                      <Name value="save_btn" />
-                      <Caption value="Save" />
-                      <Panel.Height value="42px" />
-                      <Panel.Width value="120px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~saveHeaderdata" />
-                      </OnClick>
+                      <Children>
+                        <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+                          <Name value="breadcrumbs1" />
+                          <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+                          <cssClass value="breadcrumb breadcrumb-default-modified" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                        </Breadcrumbs>
+                        <Button>
+                          <Name value="save_btn" />
+                          <Caption value="Save" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~saveHeaderDataAndSubmit" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-success" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="disabled" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="cancel_btn" />
+                          <Caption value="Cancel" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_cancel_btn_OnClick" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-secondary" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="disabled" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Panel>
+                          <Name value="panel_test" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="450px" />
+                          <Children>
+                            <Button>
+                              <Name value="testButton_transiDeclarationPrnt" />
+                              <Caption value="Transit Declaration Print" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~debug_printTransitToConsole" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="testTutton_LoadAllJson" />
+                              <Caption value="Load JSON" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_testTutton_LoadAllJson_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="button_dataRequest" />
+                              <Caption value="FBDataRequest" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_button_dataRequest_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Children>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-button" />
+                          <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                         <CssClassConditional>
-                          <ClassName value="newStyle" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="btn-success" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="disabled" />
-                          <Condition value="False" />
+                          <ClassName value="{theme}-nav-bar-controls" />
+                          <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </Button>
-                    <Button>
-                      <Name value="cancel_btn" />
-                      <Caption value="Cancel" />
-                      <Panel.Height value="42px" />
-                      <Panel.Width value="120px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~handler_cancel_btn_OnClick" />
-                      </OnClick>
+                    </Panel>
+                    <Panel>
+                      <Name value="ControlPnlSpace" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-button" />
+                          <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                         <CssClassConditional>
-                          <ClassName value="newStyle" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="btn-secondary" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="disabled" />
-                          <Condition value="False" />
+                          <ClassName value="{theme}-nav-bar-space" />
+                          <IsThemedStyle value="True" />
                         </CssClassConditional>
                       </CssClass>
-                    </Button>
+                    </Panel>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -409,7 +472,7 @@
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                     <CssClassConditional>
-                      <ClassName value="{theme}-breadcrumbs" />
+                      <ClassName value="{theme}-nav-bar" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
@@ -543,7 +606,7 @@
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="50%" />
-                                          <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                          <ReferenceList reference="+GlobalApiObjects.declarationType" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.TransitOperation.declarationType" />
                                             <Binding SourceProperty="Caption" Expression="Model.TransitOperation.declarationType.caption()" />
@@ -562,7 +625,7 @@
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="50%" />
-                                          <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                          <ReferenceList reference="+GlobalApiObjects.DeclarationTypeAdditional" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.TransitOperation.additionalDeclarationType" />
                                             <Binding SourceProperty="Caption" Expression="Model.TransitOperation.additionalDeclarationType.caption()" />
@@ -644,7 +707,7 @@
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="33%" />
-                                          <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                          <ReferenceList reference="+GlobalApiObjects.DeclarationTypeSecurity" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.TransitOperation.security" />
                                             <Binding SourceProperty="Caption" Expression="Model.TransitOperation.security.caption()" />
@@ -995,7 +1058,7 @@
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="300px" />
-                                      <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                      <ReferenceList reference="+GlobalApiObjects.CustomsOfficeDeparture" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.CustomsOfficeOfDeparture.referenceNumber" />
                                         <Binding SourceProperty="Caption" Expression="Model.CustomsOfficeOfDeparture.referenceNumber.caption()" />
@@ -1039,7 +1102,7 @@
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="300px" />
-                                      <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                      <ReferenceList reference="+GlobalApiObjects.CustomsOfficeDestination" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.CustomsOfficeOfDestinationDeclared.referenceNumber" />
                                         <Binding SourceProperty="Caption" Expression="Model.CustomsOfficeOfDestinationDeclared.referenceNumber.caption()" />
@@ -1070,7 +1133,7 @@
                             </GroupBox>
                             <GroupBox>
                               <Name value="customsOfficeOfTransitGrp" />
-                              <Caption value="Customs office of transit" />
+                              <Caption value="Customs office of transit declared" />
                               <Panel.Height value="#" />
                               <Panel.Width value="*" />
                               <Content>
@@ -1128,7 +1191,7 @@
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
                                                   <Panel.Width value="33%" />
-                                                  <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                                  <ReferenceList reference="+GlobalApiObjects.CustomsOfficeTransitExit" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="referenceNumber" />
                                                     <Binding SourceProperty="Caption" Expression="referenceNumber.caption()" />
@@ -1392,7 +1455,7 @@
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
                                               <Panel.Width value="33%" />
-                                              <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                              <ReferenceList reference="+GlobalApiObjects.GuaranteeType" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="guaranteeType" />
                                                 <Binding SourceProperty="Caption" Expression="guaranteeType.caption()" />
@@ -1559,7 +1622,7 @@
                                                               <DisplayMember value="_description" />
                                                               <Panel.Height value="#" />
                                                               <Panel.Width value="50%" />
-                                                              <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                                              <ReferenceList reference="+GlobalApiObjects.CurrencyCodes" />
                                                               <Bindings>
                                                                 <Binding SourceProperty="Data" Expression="currency" />
                                                                 <Binding SourceProperty="Caption" Expression="currency.caption()" />
@@ -3486,7 +3549,7 @@
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
                                                   <Panel.Width value="50%" />
-                                                  <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                                  <ReferenceList reference="+GlobalApiObjects.CountryCodesFullList" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="country" />
                                                     <Binding SourceProperty="Caption" Expression="country.caption()" />
@@ -4228,7 +4291,7 @@
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
                                               <Panel.Width value="33%" />
-                                              <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                              <ReferenceList reference="+GlobalApiObjects.TransportDocumentType" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="type" />
                                                 <Binding SourceProperty="Caption" Expression="type.caption()" />
@@ -4694,7 +4757,7 @@
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="25%" />
-                                      <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                      <ReferenceList reference="+GlobalApiObjects.CountryCodesWithAddress" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.Address.country" />
                                         <Binding SourceProperty="Caption" Expression="Model.HolderOfTheTransitProcedure.Address.country.caption()" />
@@ -6583,10 +6646,10 @@ this.numberOfSeals = this.Seal.max(current.sequenceNumber)
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.actions.setUrlDeepLink()
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+var goToHomeFormResult = form.actions.tryLoadingData() // navigation still relies on mock DATA!!!
 
-globals.busyIndicatorIsRunning = true
-form.actions.loadData() // navigation still relies on mock DATA!!!
+form.actions.setUrlDeepLink()
 
 //hide sticky bottom menu on master.form
 globals.isExpandedCollapsibleStickyPnl = false
@@ -6604,7 +6667,12 @@ form.actions.setBreadcrumbs()
 form.Model._decisiveDate = getDateTime()	
 
 globals.busyIndicatorIsRunning = false
-]]></Script>
+
+if goToHomeFormResult then
+	form.actions.clearUrlGoToHomeForm()
+endIf
+
+actions.initCodeLists()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -6751,48 +6819,60 @@ url.updatePageUrl()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="loadData" />
+      <Name value="tryLoadingData" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if apiobjects.transitDeclaration.isEmpty2() then
+        <Script><![CDATA[result = False
+
+var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
+
+if apiobjects.transitDeclaration.isEmpty2() then
 	
 	// navigation still relies on mock DATA!!!
 	if form.mode = enums.declarationFormMode.create then
-		// vyrábíme prázdný formulář
-		// TODO: lepší iniciace apiobjektu
-		apiobjects.transitDeclaration.create()
-		
-		//apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-		// TODO: Udělat pořádně
+		form.actions.emptyTDthenInitNewEmptyTD()
+		form.actions.setUpdefaultVariables()
 	else
 		if form.mode = enums.declarationFormMode.edit then
-			// načteme data ze serveru a jdeme editovat
+			result = form.actions.emptyTDthenInitiateExistingTD()
+		else
+			result = True
 		
-			apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-			// TODO: Udělat pořádně
-			var data = apiobjects.transitDeclaration.getHeader()
-			form.Model.fromJson(data)
-			
-			//test
-			system.console(data)//test
-			
 		endif
+		
 	endif
 	
 else
 	
-	if ((form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) ) then
-		// TODO: lepší iniciace apiobjektu
+	if (form.mode = enums.declarationFormMode.create) and form.guid.isEmpty() then
+		form.actions.fullTDthenGetDatafromTD()
+	else 
+		if ((form.mode = enums.declarationFormMode.edit) and (form.guid = mockGuid)) then
+			form.actions.fullTDthenGetDatafromTD()
+		else
+			//FIX ME - Scenario form.mode has false enum value
+			apiobjects.transitDeclaration.clear()
+			result = True
+		endIf
 		
-		// TODO: Udělat pořádně load dat ze serveru
-		var data = apiobjects.transitDeclaration.getHeader()
-		form.Model.fromJson(data)
-
 	endIf
 	
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
-        <ActionDataContext />
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
@@ -6858,6 +6938,180 @@ endif]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.transitDeclaration.clear()
 navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="emptyTDthenInitNewEmptyTD" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// vyrábíme prázdný formulář
+// TODO: lepší iniciace apiobjektu
+apiobjects.transitDeclaration.create()
+
+//apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
+// TODO: Udělat pořádně]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="emptyTDthenInitiateExistingTD" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = False
+// TODO: Udělat pořádně, pro komunikaci se serverem
+var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
+
+if form.guid = mockGuid then
+	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
+	
+	var data = apiobjects.transitDeclaration.getHeader()
+	form.Model.fromJson(data)
+else
+		
+	apiobjects.transitDeclaration.clear()
+	result = True
+	
+endIf
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="fullTDthenGetDatafromTD" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// TODO: lepší iniciace apiobjektu
+
+// TODO: Udělat pořádně load dat ze serveru
+var data = apiobjects.transitDeclaration.getHeader()
+form.Model.fromJson(data)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearUrlGoToHomeForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.urlRouter.clearUrl()
+navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUpdefaultVariables" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var transitOps = form.Model.TransitOperation
+
+transitOps.fallbackProcedure = False
+TransitOps.reducedDatasetIndicator = False
+transitOps.bindingItinerary = False]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="saveHeaderDataAndSubmit" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+apiobjects.transitDeclaration.setHeader(form.Model.toJson())
+
+system.console("Will send message.")
+
+var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+if response.isError() then
+	system.console(response.getErrorMessage())
+else
+
+	//test
+	system.console("OK - message sent and is good")
+	system.console(response.getJsonString())
+	//test
+	
+	var receivedGuid = response.getJsonString()
+	
+	form.Model.fromJson(receivedGuid)
+	
+	//test
+	system.console("form.Model.GUID ::" + form.Model.GUID)
+	//test
+endIf
+
+// Need response from server
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_testTutton_LoadAllJson_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var data = "{\"Consignment\":{\"DepartureTransportMeans\":[{\"sequenceNumber\":1}],\"grossMass\":\"1002\",\"CountryOfRoutingOfConsignment\":[{\"sequenceNumber\":1,\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}}],\"TransportDocument\":[{\"sequenceNumber\":1,\"type\":{\"Code\":\"N722\",\"Description\":\"Road list - SMGS\",\"_description\":\"N722 - Road list - SMGS\"},\"referenceNumber\":\"1\"}],\"HouseConsignment\":[{\"sequenceNumber\":1,\"grossMass\":\"369\",\"TransportCharges\":{\"methodOfPayment\":{\"Code\":\"C\",\"Description\":\"Payment by cheque\",\"_description\":\"C - Payment by cheque\"}},\"_decisiveDate\":\"2020-06-09T15:32:11.601\",\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"ConsignmentItem\":[{\"Packaging\":[{\"sequenceNumber\":1199,\"typeOfPackages\":{\"Code\":\"ZA\",\"Description\":\"Intermediate bulk container, paper, multi-wall\",\"_description\":\"ZA - Intermediate bulk container, paper, multi-wall\"}}],\"Commodity\":{\"descriptionOfGoods\":\"Something cool\",\"CommodityCode\":{\"harmonisedSystemSubHeadingCode\":{\"Code\":\"988050\",\"Description\":\"See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\",\"_description\":\"988050 - See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\"}}},\"goodsItemNumber\":1,\"declarationGoodsItemNumber\":109,\"_declarationTypeRequired\":false,\"_declarationTypePresent\":true,\"_countryOfDestinationRequired\":false,\"_itemPriceEnabled\":false,\"_complementOfInformationRequired\":true,\"_decisiveDate\":\"2020-06-08T17:50:05.689\",\"_countryOfDispatchEnabled\":true,\"_goodsMeasureRequired\":false}]}]},\"Guarantee\":[{\"GuaranteeReference\":[{\"currency\":{\"Code\":\"EUR\",\"Description\":\"Euro\",\"_description\":\"EUR - Euro\"},\"sequenceNumber\":1,\"GRN\":\"20ME123450C100103\",\"accessCode\":\"2222\",\"amountToBeCovered\":\"100\"}],\"guaranteeType\":{\"Code\":\"1\",\"Description\":\"Comprehensive guarantee\",\"_description\":\"1 - Comprehensive guarantee\"},\"sequenceNumber\":1,\"otherGuaranteeReference\":\"19RS025003N000020\"}],\"HolderOfTheTransitProcedure\":{\"Address\":{\"streetAndNumber\":\"Ulice\",\"city\":\"Praha\",\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}},\"identificationNumber\":\"543\",\"TIRHolderIdentificationNumber\":\"9876\",\"ContactPerson\":{\"name\":\"Simon Super Trader\",\"phoneNumber\":\"123456\"}},\"CustomsOfficeOfTransitDeclared\":[{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"},\"sequenceNumber\":111}],\"TransitOperation\":{\"declarationType\":{\"Code\":\"T1\",\"Description\":\"Goods not having the customs status of Union goods, which are placed under the common transit procedure.\",\"_description\":\"T1 - Goods not having the customs status of Union goods, which are placed under the common transit procedure.\"},\"LRN\":\"1001\",\"fallbackProcedure\":false,\"additionalDeclarationType\":{\"Code\":\"A\",\"Description\":\"for a standard customs declaration (under Article 162 of the Code)\",\"_description\":\"A - for a standard customs declaration (under Article 162 of the Code)\"},\"TIRvalidityDate\":\"2020-07-01\",\"security\":{\"Code\":\"0\",\"Description\":\"Not used for safety and security purposes\",\"_description\":\"0 - Not used for safety and security purposes\"},\"reducedDatasetIndicator\":false,\"bindingItinerary\":false},\"CustomsOfficeOfDeparture\":{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"}},\"CustomsOfficeOfDestinationDeclared\":{\"referenceNumber\":{\"Code\":\"CZ540201\",\"_description\":\"CZ540201\"}},\"_decisiveDate\":\"2020-06-09T14:35:32.066\",\"_TIRValidityDateRequired\":false,\"_FallbackProcedureEnabled\":false,\"_TIRCarnetNumberRequired\":false,\"_reducedDatasetIndicatorNull\":false,\"_TotalValueOfGoodsEnabled\":false,\"_limitDateRequired\":false,\"_TIRHolderIdentificationNumberRequired\":false,\"_additionalDeclarationTypeRequired\":false,\"_inlandModeOfTransportOptional\":false,\"_amountToBeCoveredRequired\":false,\"_additionalIdentifierRequired\":false,\"_ActiveBorderTransportMeansRequired\":false,\"_modeOfTransportAtTheBorderRequired\":false,\"_conveyanceReferenceNumberRequired\":false,\"_complementOfInformationOptional\":false,\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"_countyOfDispatchPresent\":false,\"_logAddressRequired\":false,\"_logAuthorisationNumberRequired\":false,\"_logUNLocodeRequired\":false,\"_logCustomsOfficeRequired\":false,\"_logGNSSRequired\":false,\"_logEconomicOperatorRequired\":false,\"_logAdrdessTRequired\":true,\"_typeOfIdentificationRequired\":false,\"_identificationNumberRequired\":false}"
+
+apiobjects.transitDeclaration.fromJson(data)
+
+var declaration = apiobjects.transitDeclaration.getHeader()
+form.Model.fromJson(declaration)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="debug_printTransitToConsole" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var data = apiobjects.transitDeclaration.toJson()
+
+system.console("Whole Transit Declaration :: ")
+system.console(data)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_dataRequest_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//var demoGuid = "{\"GUID\":\"{9f68aafb-7798-40c9-877b-ca1c6550b4b7}\"}"
+var demoGuid = "9f68aafb-7798-40c9-877b-ca1c6550b4b7"
+
+var response = apiobjects.CIC.postAsync("FBDataRequest", demoGuid)
+
+if response.isError() then
+	system.console(response.getErrorMessage())
+else
+
+	//test
+	system.console("OK - message sent and is good")
+	system.console(response.getJsonString())
+	//test
+
+endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

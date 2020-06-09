@@ -14,14 +14,14 @@
           <Name value="column1_aside" />
           <Orientation value="Vertical" />
           <Panel.Height value="#" />
-          <Panel.Width value="250px" />
+          <Panel.Width value="263px" />
           <Children>
             <Label>
               <Name value="label_navigation" />
               <Data value="Navigation" />
               <Heading value="h3" />
               <Panel.Height value="#" />
-              <Panel.Width value="250px" />
+              <Panel.Width value="*" />
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-label" />
@@ -48,36 +48,6 @@
             <HyperLink>
               <Name value="mainEntities_link" />
               <Data value="Main Entities" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~saveHouseConsignment" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="guarantee_link" />
-              <Data value="Guarantee" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~saveHouseConsignment" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="customsOffice_link" />
-              <Data value="Customs office" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <OnClick>
@@ -137,7 +107,7 @@
             </HyperLink>
             <HyperLink>
               <Name value="enquiryAtCO_link" />
-              <Data value="Enquiry at CO" />
+              <Data value="Enquiry at Customs Office" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <OnClick>
@@ -152,7 +122,7 @@
             </HyperLink>
             <HyperLink>
               <Name value="enrouteEvent_link" />
-              <Data value="Enroute event" />
+              <Data value="Enroute Event" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <OnClick>
@@ -200,71 +170,105 @@
           <Panel.Width value="*" />
           <Children>
             <Panel>
-              <Name value="breadCrumbs_pnl" />
+              <Name value="ControlPnl" />
               <Orientation value="Horizontal" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Children>
-                <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
-                  <Name value="breadcrumbs1" />
-                  <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
-                  <cssClass value="breadcrumb breadcrumb-default-modified" />
+                <Panel>
+                  <Name value="ControlPnlHolder" />
+                  <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
-                  <OnItemClick>
-                    <ActionEvent ReferencedAction="~handler_breadcrumbs1_OnItemClick" />
-                  </OnItemClick>
-                </Breadcrumbs>
-                <Button>
-                  <Name value="save_btn" />
-                  <Caption value="Save" />
-                  <Panel.Height value="42px" />
-                  <Panel.Width value="120px" />
-                  <OnClick>
-                    <ActionEvent ReferencedAction="~saveHouseConsignment" />
-                  </OnClick>
+                  <Children>
+                    <Breadcrumbs identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
+                      <Name value="breadcrumbs1" />
+                      <controller reference="+GlobalApiObjects.breadcrumbsCtrl" />
+                      <cssClass value="breadcrumb breadcrumb-default-modified" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnItemClick>
+                        <ActionEvent ReferencedAction="~handler_breadcrumbs1_OnItemClick" />
+                      </OnItemClick>
+                    </Breadcrumbs>
+                    <Button>
+                      <Name value="save_btn" />
+                      <Caption value="Save" />
+                      <Panel.Height value="42px" />
+                      <Panel.Width value="120px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~saveHouseConsignmentAndSubmitData" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="newStyle" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="disabled" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="cancel_btn" />
+                      <Caption value="Cancel" />
+                      <Panel.Height value="42px" />
+                      <Panel.Width value="120px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_cancel_btn_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="newStyle" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-secondary" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="disabled" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-button" />
+                      <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                     <CssClassConditional>
-                      <ClassName value="newStyle" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="btn-success" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="disabled" />
-                      <Condition value="False" />
+                      <ClassName value="{theme}-nav-bar-controls" />
+                      <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </Button>
-                <Button>
-                  <Name value="cancel_btn" />
-                  <Caption value="Cancel" />
-                  <Panel.Height value="42px" />
-                  <Panel.Width value="120px" />
-                  <OnClick>
-                    <ActionEvent ReferencedAction="~handler_cancel_btn_OnClick" />
-                  </OnClick>
+                </Panel>
+                <Panel>
+                  <Name value="ControlPnlSpace" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-button" />
+                      <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                     <CssClassConditional>
-                      <ClassName value="newStyle" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="btn-secondary" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="disabled" />
-                      <Condition value="False" />
+                      <ClassName value="{theme}-nav-bar-space" />
+                      <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </Button>
+                </Panel>
               </Children>
               <CssClass>
                 <CssClassConditional>
@@ -272,7 +276,7 @@
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="{theme}-breadcrumbs" />
+                  <ClassName value="{theme}-nav-bar" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
@@ -329,7 +333,7 @@
                                   <DisplayMember value="Description" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="50%" />
-                                  <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
+                                  <ReferenceList reference="+GlobalApiObjects.TransportChargesMethodOfPayment" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="form.Model.TransportCharges.methodOfPayment" />
                                     <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.Model.TransportCharges.methodOfPayment.isRequired()" />
@@ -1697,18 +1701,20 @@
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
 
+var goToHomeFormResult = form.actions.tryLoadingData()
+
 form.actions.setUrlDeepLink()
 
 form.actions.setBreadcrumbs()
-
-// load data
-var json = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
-form.Model.fromJson(json)
 
 // TODO: based on mode this will be either current datetime or some date from transit
 form.Model._decisiveDate = getDateTime()
 
 globals.busyIndicatorIsRunning = false
+
+if goToHomeFormResult then
+	form.actions.clearUrlGoToHomeForm()
+endIf
 ]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1832,6 +1838,176 @@ navigation.main.Header.withGuid(form.guid).go(form.mode)]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.transitDeclaration.clear()
 navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="tryLoadingData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = False
+
+if apiobjects.transitDeclaration.isEmpty2() then
+	
+	// navigation still relies on mock DATA!!!
+	if form.mode = enums.declarationFormMode.create then
+		result = True
+	else
+		if form.mode = enums.declarationFormMode.edit then
+			//load existing transit declaration
+			result = form.actions.tryLoadingDataOfExistingTD()
+		else
+			//go to main
+			result = True
+		
+		endif
+		
+	endif
+
+else
+
+	if (form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) then
+	
+		form.actions.loadingExistingData()
+
+	else
+		//FIX ME - case of not known mode enum value
+		//go to main
+		result = True
+		apiobjects.transitDeclaration.clear()
+	endIf
+	
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="tryLoadingDataOfExistingTD" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = False
+
+var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
+
+if form.guid = mockGuid then
+	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
+		
+	var dataInTransitDeclarationHasInput = form.actions.doesSequenceNumberExist()
+	
+	if form.sequenceNumber.hasValue() and dataInTransitDeclarationHasInput then
+		form.actions.loadingExistingData()
+	
+	else
+		//not valid sequnce number withing the given declaration
+		result = True
+	
+	endIf
+	
+else
+	//FIX ME - scenario - mode.edit + form.guid has OTHER value
+	result = True
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearUrlGoToHomeForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.urlRouter.clearUrl()
+navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="doesSequenceNumberExist" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var dataInTransitDeclaration = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
+	
+if dataInTransitDeclaration = defaultString() then
+	result = False
+else
+	result = True		
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadingExistingData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var dataHouseConsig = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
+form.Model.fromJson(dataHouseConsig)
+
+var dataHeader = apiobjects.transitDeclaration.getHeader()
+form.Header.fromJson(dataHeader)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="saveHouseConsignmentAndSubmitData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+apiobjects.transitDeclaration.setHouseConsignment(form.Model.toJson())
+
+var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+if response.isError() then
+	system.console(response.getErrorMessage())
+else
+	system.console("OK :-)")
+	system.console(response.getJsonString())
+endIf
+
+// Need response from server
+globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

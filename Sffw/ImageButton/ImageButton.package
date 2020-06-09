@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ImageButton.d5705fac3ef94ff185b0260525af877a" />
+  <Version value="2.0.2" />
+  <Items>
+    <PackageItem Src="ImageButton.componentManifest" />
+    <ResourceItem ResourceName="imageButton.js" LinkerAction="Script" OutputFileName="imageButton.js" Src="imageButton.js" />
+    <ResourceItem ResourceName="imageButton.css" LinkerAction="Css" OutputFileName="imageButton.css" Src="imageButton.css" />
+    <ResourceItem ResourceName="imageButton.png" Action="None" OutputFileName="imageButton.png" Src="imageButton.png" />
+  </Items>
+</Package>

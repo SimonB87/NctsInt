@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="contentPart" />
+  <Generator value="*" />
+  <Type value="ScreenFactory.Data.Core.MetaObject" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="faIconName" />
+      <Type value="string" />
+      <UiCaption value="FontAwesome Icon" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

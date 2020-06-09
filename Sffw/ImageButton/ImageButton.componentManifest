@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ImageButton" />
+  <Generator value="&lt;sffw-imagebutton&gt;" />
+  <Type value="VisualControl" />
+  <UiCaption value="Image button" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="imageButton.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="Caption" />
+      <Bindable value="True" />
+      <UiCaption value="Caption" />
+      <UiCategory value="Common" />
+      <UiDescription value="in the text you can use {fa-refresh} to render refresh icon from Font-Awesome (or any other icon by using different name)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="Tooltip" />
+      <Bindable value="True" />
+      <Type value="string" />
+      <UiCategory value="ImageButton" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IsEnabled" />
+      <Bindable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCaption value="Is enabled" />
+      <UiCategory value="Behaviour" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

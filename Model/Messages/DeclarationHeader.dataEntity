@@ -2537,7 +2537,9 @@ THEN Guarantee type "5" can be used ELSE Guarantee type "5" cannot be used */]]>
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE NR221 IF Declaration type="ATA" THEN Guarantee type shall be equal "C" ELSE Guarantee type shall not be equal "C". */]]></ExpressionText>
+                <ExpressionText><![CDATA[isTrue(
+(this.owner().TransitOperation.declarationType.Code = "ATA") and (this.guaranteeType.Code = "C") ? True : ( (not (this.guaranteeType.Code = "C")) ? True : False) 
+) /* IMPORTED RULE NR221 IF Declaration type="ATA" THEN Guarantee type shall be equal "C" ELSE Guarantee type shall not be equal "C". */]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -2839,7 +2841,7 @@ THEN /CD038C/Consignment/Incident/Endorsement/place= "R" */]]></ExpressionText>
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE NR005 Only EUR is valid vaule */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.currency.Code = "EUR" ? True : False) /* IMPORTED RULE NR005 Only EUR is valid vaule */]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="DecList" />
+  <Caption value="Dec list" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Label>
+          <Name value="label" />
+          <Data value="DecList" />
+          <Heading value="h1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="300px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-label" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Label>
+        <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
+          <Name value="decList" />
+          <controller reference="~listCtrl" />
+          <listName value="Dataset_DEP" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Bindings>
+            <Binding SourceProperty="selectedRow" Expression="form.decListReferenceRow" />
+          </Bindings>
+          <columns>
+            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+              <Name value="listColumn_LRN" />
+              <Caption value="LRN" />
+              <ColumnName value="LRN" />
+            </listColumn>
+          </columns>
+        </List>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Reference>
+          <Name value="decListReferenceRow" />
+          <Caption value="Dec list reference row" />
+          <Children>
+            <Attribute>
+              <Name value="LRN" />
+              <Caption value="LRN" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.listCtrl.setReady(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
+      <Name value="listCtrl" />
+      <server reference="+GlobalApiObjects.CIC" />
+    </ListCtrl>
+  </ApiObjects>
+</Form>

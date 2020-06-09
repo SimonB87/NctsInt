@@ -5,6 +5,7 @@
   <Items>
     <PackageItem Src="Master.form" />
     <PackageItem Src="Home.form" />
+    <PackageItem Src="DecList.form" />
     <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="globalVariables.globalVariables" />
     <PackageFolder Name="CSS">

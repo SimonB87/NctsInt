@@ -91,5 +91,39 @@ endif	]]></Script>
         </ActionDataContext>
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="initCodeLists" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//This codelist is not dependent on date
+apiobjects.declarationType.startLoadingData(getDateTime())
+
+apiobjects.DeclarationTypeAdditional.startLoadingData(getDateTime())
+
+apiobjects.DeclarationTypeSecurity.startLoadingData(getDateTime())
+
+apiobjects.TransportChargesMethodOfPayment.startLoadingData(getDateTime())
+
+apiobjects.HScode.startLoadingData(getDateTime())
+
+apiobjects.KindOfPackages.startLoadingData(getDateTime())
+
+apiobjects.CustomsOfficeDeparture.startLoadingData(getDateTime())
+apiobjects.CustomsOfficeDestination.startLoadingData(getDateTime())
+
+apiobjects.CountryCodesWithAddress.startLoadingData(getDateTime())
+
+apiobjects.GuaranteeType.startLoadingData(getDateTime())
+
+apiobjects.CurrencyCodes.startLoadingData(getDateTime())
+apiobjects.CustomsOfficeTransitExit.startLoadingData(getDateTime())
+
+apiobjects.CountryCodesFullList.startLoadingData(getDateTime())
+
+apiobjects.TransportDocumentType.startLoadingData(getDateTime())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
 </GlobalActions>

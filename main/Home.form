@@ -101,6 +101,25 @@
                 </CssClassConditional>
               </CssClass>
             </HyperLink>
+            <HyperLink>
+              <Name value="declist_hyperLink" />
+              <Data value="Declist" />
+              <Panel.Height value="#" />
+              <Panel.Width value="450px" />
+              <Target value="_self" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_declist_hyperLink_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="sizeH3" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -115,10 +134,23 @@
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
+            <Label>
+              <Name value="placeHolder_label1" />
+              <Data value=" " />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
             <Button>
-              <Name value="button1" />
+              <Name value="showOldMenuItem_btn" />
               <Caption value="Show Old Sticky Menu Content" />
               <Panel.Height value="42px" />
+              <Panel.HorizontalAlignment value="Center" />
               <Panel.Width value="250px" />
               <OnClick>
                 <ActionEvent ReferencedAction="~handler_button1_OnClick" />
@@ -130,6 +162,18 @@
                 </CssClassConditional>
               </CssClass>
             </Button>
+            <Label>
+              <Name value="placeHolder_label2" />
+              <Data value=" " />
+              <Panel.Height value="#" />
+              <Panel.Width value="300px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-label" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Label>
             <Panel>
               <Name value="panel3" />
               <Orientation value="Horizontal" />
@@ -1450,18 +1494,110 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Complex>
+          <Name value="loginResponse" />
+          <Caption value="Login response" />
+          <Children>
+            <Complex>
+              <Name value="UserIdentity" />
+              <Caption value="User identity" />
+              <Children>
+                <Attribute>
+                  <Name value="UserName" />
+                  <Caption value="User name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Collection>
+                  <Name value="UserRole" />
+                  <Caption value="User role" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Name" />
+                      <Caption value="Name" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Collection>
+                      <Name value="Organization" />
+                      <Caption value="Organization" />
+                      <Children>
+                        <Attribute>
+                          <Name value="Value" />
+                          <Caption value="Value" />
+                          <DeclaredType>
+                            <AttributeType />
+                          </DeclaredType>
+                        </Attribute>
+                      </Children>
+                    </Collection>
+                  </Children>
+                </Collection>
+                <Collection>
+                  <Name value="Organization" />
+                  <Caption value="Organization" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Value" />
+                      <Caption value="Value" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+              </Children>
+            </Complex>
+            <Complex>
+              <Name value="Environment" />
+              <Caption value="Environment" />
+              <Children>
+                <Attribute>
+                  <Name value="ProjectDisplayName" />
+                  <Caption value="Project display name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ProjectName" />
+                  <Caption value="Project name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
       </Children>
     </DataContext>
   </DataContext>
   <OnCreate>
-    <ActionEvent ReferencedAction="~init_clearUrl" />
+    <ActionEvent ReferencedAction="~init" />
   </OnCreate>
   <Actions>
     <ActionBlock>
-      <Name value="init_clearUrl" />
+      <Name value="init" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.urlRouter.clearUrl()
-globals.isExpandedCollapsibleStickyPnl = false]]></Script>
+globals.isExpandedCollapsibleStickyPnl = false
+
+//AUTENTIFIKACE
+var response = apiobjects.CIC.postAsync("login", defaultString())
+
+system.console("autentifikace")
+
+if response.isError() then
+	system.console("KO - CIC connection LOST.")
+	system.console(response.getJsonString())	
+else
+		
+	form.loginResponse.fromJson(response.getJsonString())
+	system.console(form.loginResponse.toJson())
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -2190,6 +2326,16 @@ navigation.cseForms.QMI_ZobrazDotazNaMRN.go()]]></Script>
 else
 	form.isOldStickyMenuContentPanelVISIBLE = True
 endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_declist_hyperLink_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

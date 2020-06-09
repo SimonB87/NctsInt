@@ -17,25 +17,22 @@
           <Panel.Width value="*" />
           <Children>
             <Panel>
+              <Name value="_BlankPnl" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="270px" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
               <Name value="LeftPnl" />
               <Orientation value="Horizontal" />
               <Panel.Height value="#" />
-              <Panel.Width value="62%" />
-              <Children>
-                <Label>
-                  <Name value="label1" />
-                  <Data value="NCTS Internal klient - Montenegro" />
-                  <Heading value="h2" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="*" />
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-label" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Label>
-              </Children>
+              <Panel.Width value="20%" />
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-panel" />
@@ -45,16 +42,38 @@
             </Panel>
             <Panel>
               <Name value="MiddlePnl" />
-              <Orientation value="Horizontal" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="25%" />
+              <Panel.Width value="50%" />
               <Children>
                 <Label>
-                  <Name value="label2" />
-                  <Data value="not authentificated" />
-                  <Heading value="h5" />
+                  <Name value="label1" />
+                  <Data value="NCTS Internal klient - Montenegro" />
+                  <Heading value="h2" />
                   <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
                   <Panel.Width value="*" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_label1_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="clickable" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="appVersion" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="50%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="form.appVersion" />
+                  </Bindings>
                   <CssClass>
                     <CssClassConditional>
                       <ClassName value="{theme}-label" />
@@ -72,24 +91,63 @@
             </Panel>
             <Panel>
               <Name value="RightPnl" />
-              <Orientation value="Horizontal" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="25%" />
+              <Panel.Width value="30%" />
               <Children>
+                <Panel>
+                  <Name value="label2_parent" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label4" />
+                      <Data value="CO: ME123456" />
+                      <Heading value="h5" />
+                      <Margin value="2, 6, 2, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="40%" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label22" />
+                      <Data value="not authentificated" />
+                      <Heading value="h5" />
+                      <Margin value="2, 6, 2, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="60%" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
                 <Label>
-                  <Name value="label3" />
-                  <Data value="Version: Pre-Alpha" />
+                  <Name value="label32" />
+                  <Data value="Role: Read, Files, Write, Reactivation" />
                   <Heading value="h5" />
+                  <Margin value="2, 6, 2, 6 px" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <CssClass>
                     <CssClassConditional>
                       <ClassName value="{theme}-label" />
                       <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="flright" />
-                      <Condition value="False" />
                     </CssClassConditional>
                   </CssClass>
                 </Label>
@@ -164,11 +222,25 @@
           <ClassName value="{theme}-panel" />
           <IsThemedStyle value="True" />
         </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="{theme}-padding-right" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
       </CssClass>
     </Panel>
   </Content>
   <DataContext>
-    <DataContext />
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="appVersion" />
+          <Caption value="App version" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
   </DataContext>
   <OnActivate>
     <ActionEvent ReferencedAction="~scrollMenu" />
@@ -185,7 +257,25 @@
 globals.isExpandedCollapsibleStickyPnl = false
 
 // TODO: Replace with data from server once we have it
-globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())]]></Script>
+globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())
+
+form.appVersion = apiobjects.appVersion.get()
+
+
+//TODO - nahradit za naši správnou verzi, jakmile to CIC podporovat!
+//apiobjects.CIC.setVersion("1.00.00" ) 
+//apiobjects.CIC.setVersion("1.00.05" )//Verze 1.00.05 je podle DušanaM.
+apiobjects.CIC.setVersion("0.0.0") // Diddy v centru očekává
+
+//TODO - dosadit vybraný CO
+var selectedCo = "ME123456"
+apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
+
+//Customs office of ME in db :
+//ME123456    Carinarnica Podgorica		Capital Town
+//ME123450    Aerodromi Podgorica		Capital Town - Airport
+//ME123457    Carinarnica Kotor			Sea Port
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -206,13 +296,23 @@ globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())]]></Script>
       <Script><![CDATA[window.onscroll = function() {setStickyMenu()};
 
 function setStickyMenu() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
     document.getElementsByTagName("html")[0].className = "scrolled";
   }else{
     document.getElementsByTagName("html")[0].className = "";
   }
 }]]></Script>
       <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_label1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.Home.go()]]></Script>
+      </ActionLangBody>
       <DataContext>
         <ActionDataContext />
       </DataContext>
