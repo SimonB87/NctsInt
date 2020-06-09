@@ -329,6 +329,51 @@
                           <Panel.Width value="*" />
                         </Breadcrumbs>
                         <Button>
+                          <Name value="testButton_transiDeclarationPrnt" />
+                          <Caption value="Transit Declaration Print" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~debug_printTransitToConsole" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="testTutton_LoadAllJson" />
+                          <Caption value="Load JSON" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_testTutton_LoadAllJson_OnClick" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_dataRequest" />
+                          <Caption value="FBDataRequest" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_dataRequest_OnClick" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
                           <Name value="save_btn" />
                           <Caption value="Save" />
                           <Panel.Height value="42px" />
@@ -378,65 +423,6 @@
                             </CssClassConditional>
                           </CssClass>
                         </Button>
-                        <Panel>
-                          <Name value="panel_test" />
-                          <Orientation value="Horizontal" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="450px" />
-                          <Children>
-                            <Button>
-                              <Name value="testButton_transiDeclarationPrnt" />
-                              <Caption value="Transit Declaration Print" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="150px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~debug_printTransitToConsole" />
-                              </OnClick>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Button>
-                            <Button>
-                              <Name value="testTutton_LoadAllJson" />
-                              <Caption value="Load JSON" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="150px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~handler_testTutton_LoadAllJson_OnClick" />
-                              </OnClick>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Button>
-                            <Button>
-                              <Name value="button_dataRequest" />
-                              <Caption value="FBDataRequest" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="150px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~handler_button_dataRequest_OnClick" />
-                              </OnClick>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Button>
-                          </Children>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
                       </Children>
                       <CssClass>
                         <CssClassConditional>

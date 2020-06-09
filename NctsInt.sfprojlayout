@@ -17,7 +17,7 @@
     </AutoHideTabStrip>
   </AutoHideHost>
   <Content xsi:type="SplitContainer" AutoHideSize="1894.4,1064.8" DockedSize="2022.4,1016.8" DocumentSize="1894.4,1064.8" FloatingSize="1894.4,1064.8" Size="2022.4,1016.8" Orientation="Horizontal">
-    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,300" DockedSize="544.398190683193,1016.8" DocumentSize="300,300" FloatingSize="300,300" Size="544.398190683193,1016.8" SelectedWindowUniqueId="8c1c020b-f267-4a51-8329-a6ef5b6e4bec">
+    <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,300" DockedSize="544.398190683193,1016.8" DocumentSize="300,300" FloatingSize="300,300" Size="544.398190683193,1016.8" SelectedWindowUniqueId="31016229-1c02-424d-981f-f5a85f705d8b">
       <UIElement xsi:type="ToolWindowRef" UniqueId="31016229-1c02-424d-981f-f5a85f705d8b" />
       <UIElement xsi:type="ToolWindowRef" UniqueId="8c1c020b-f267-4a51-8329-a6ef5b6e4bec" />
     </UIElement>
@@ -26,7 +26,7 @@
         <UIElement xsi:type="ToolWindowContainer" AutoHideSize="220,200" DockedSize="220,200" DocumentSize="220,200" FloatingSize="220,200" Size="220,200" />
         <UIElement xsi:type="Workspace" AutoHideSize="1003.4,1064.8" DockedSize="1003.4,1064.8" DocumentSize="940.666666666666,826.4" FloatingSize="1003.4,1064.8" Size="940.666666666666,826.4">
           <Content xsi:type="TabbedMdiHost">
-            <Content xsi:type="TabbedMdiContainer" AutoHideSize="1003.4,1064.8" DockedSize="1003.4,1064.8" DocumentSize="940.666666666666,826.4" FloatingSize="1003.4,1064.8" Size="940.666666666666,826.4" SelectedWindowUniqueId="e0f24aaf-f0cd-40ca-90aa-09e5a6c04579">
+            <Content xsi:type="TabbedMdiContainer" AutoHideSize="1003.4,1064.8" DockedSize="1003.4,1064.8" DocumentSize="940.666666666666,826.4" FloatingSize="1003.4,1064.8" Size="940.666666666666,826.4" SelectedWindowUniqueId="4337ef79-d1c1-4e2f-a8cd-474fd4e4573e">
               <UIElement xsi:type="Track" UniqueId="60005d8b-57a9-4ece-84fd-9d3b89d2a92a" />
               <UIElement xsi:type="Track" UniqueId="cd505f6e-4fd9-4bbf-8bf8-8075f8107f83" />
               <UIElement xsi:type="Track" UniqueId="4ad7ed01-8690-496a-b0ec-60ba9f52012c" />
@@ -201,7 +201,126 @@
               </State>
             </ToolsStates>
             <FormTree>
-              <TreeState DefaultExpanded="true" />
+              <TreeState DefaultExpanded="true">
+                <SavedPathStates>
+                  <Item>Header/panel1/panel2/pnNavigation</Item>
+                  <Item>Header/panel1/panel2/pnNavigation/subNavigationHeader_pnl</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlTransitOperationHeader</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlGuarantee</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlEntities</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation/AuthorisationGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation/AuthorisationGrp/panel751</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation/AuthorisationGrp/panel751/AuthorisationRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation/AuthorisationGrp/panel751/AuthorisationRpt/panel761</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlAuthorisation/AuthorisationGrp/panel751/AuthorisationRpt/panel761/panel771</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfDepartureGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfDestinationGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfTransitGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfExitTransitGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfDepartureGrp/panel54</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfDestinationGrp/panel55</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfTransitGrp/panel72</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfTransitGrp/panel72/customsOfficeOfTransitRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfTransitGrp/panel72/customsOfficeOfTransitRpt/panel68</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfTransitGrp/panel72/customsOfficeOfTransitRpt/panel68/panel70</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfExitTransitGrp/panel73</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt/panel74</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlCustomsOffice/panel9/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt/panel74/panel69</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignmentGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/carrierGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consigneeGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalSupplyChainActorGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/departureTransportGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/countryOfRoutingOfConsignmentGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/activeBorderTransportMeansGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfLoadingGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfUnloadingGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/previousDocumentGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalReferenceGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalInformationGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignmentGrp/panel16</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignmentGrp/panel16/panel51</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignmentGrp/panel16/panel53</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/carrierGrp/panel56</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorAddressGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorContactPersonGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorGrp/panel15</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorAddressGrp/panel17</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consignorPnl/consignorContactPersonGrp/panel18</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consigneeGrp/panel8</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consigneeGrp/panel8/panel57</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/consigneeGrp/panel8/panel19</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalSupplyChainActorGrp/panel42</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalSupplyChainActorGrp/panel42/additionalSupplyChainActorRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalSupplyChainActorGrp/panel42/additionalSupplyChainActorRpt/panel21</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel22</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/sealGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/goodsReferenceGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/sealGrp/panel86</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/sealGrp/panel86/sealRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/sealGrp/panel86/sealRpt/panel23</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/goodsReferenceGrp/panel88</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/goodsReferenceGrp/panel88/goodsReferenceRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/transportEquipmentGrp/panel43/transportEquipmentRpt/panel59/panel60/goodsReferenceGrp/panel88/goodsReferenceRpt/panel24</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel61</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel62</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel26</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel27</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel28</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel29</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel30</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/locationOfGoodsGrp/panel25/panel31</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/departureTransportGrp/panel44</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/departureTransportGrp/panel44/DepartureTransportMeansRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/departureTransportGrp/panel44/DepartureTransportMeansRpt/panel32</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/countryOfRoutingOfConsignmentGrp/panel45</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/countryOfRoutingOfConsignmentGrp/panel45/CountryOfRoutingOfConsignmentRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/countryOfRoutingOfConsignmentGrp/panel45/CountryOfRoutingOfConsignmentRpt/panel33</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/countryOfRoutingOfConsignmentGrp/panel45/CountryOfRoutingOfConsignmentRpt/panel33/panel67</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/activeBorderTransportMeansGrp/panel63</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/activeBorderTransportMeansGrp/panel63/panel34</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfLoadingGrp/panel64</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfLoadingGrp/panel64/panel35</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfUnloadingGrp/panel65</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/placeOfUnloadingGrp/panel65/panel36</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/previousDocumentGrp/panel46</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/previousDocumentGrp/panel46/PreviousDocumentRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13/panel37</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp/panel47</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp/panel47/SupportingDocumentRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp/panel47/SupportingDocumentRpt/panel66</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp/panel47/SupportingDocumentRpt/panel66/panel38</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/supportingDocumentGrp/panel47/SupportingDocumentRpt/panel66/panel111</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalReferenceGrp/panel49</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalReferenceGrp/panel49/additionalReferenceRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalReferenceGrp/panel49/additionalReferenceRpt/panel40</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalInformationGrp/panel50</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalInformationGrp/panel50/additionalInformationRpt</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlConsignment/panel12/additionalInformationGrp/panel50/additionalInformationRpt/panel41</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlEntities/representativeGrp</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlEntities/representativeGrp/panel81</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlEntities/representativeGrp/panel81/panel82</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/pnlEntities/representativeGrp/panel81/panel83</Item>
+                </SavedPathStates>
+                <SelectedPaths>
+                  <Item>Header/panel1/panel2/pnlBody/ControlPnl/ControlPnlHolder/testButton_transiDeclarationPrnt</Item>
+                </SelectedPaths>
+              </TreeState>
               <Headers>
                 <Header Width="592" Caption="Component" />
                 <Header Width="107" Caption="Type" />
@@ -648,10 +767,18 @@
           <State>
             <ToolsStates>
               <State Tool="ScreenFactory.Client.ApiObjectsDesigner.ApiObjectsTool">
-                <State DefaultExpanded="true" />
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>/form API objects (Header)</Item>
+                  </SelectedPaths>
+                </State>
               </State>
               <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.ActionsTool">
-                <State DefaultExpanded="true" />
+                <State DefaultExpanded="true">
+                  <SelectedPaths>
+                    <Item>/form actions (Header)</Item>
+                  </SelectedPaths>
+                </State>
               </State>
               <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
                 <Variables>
