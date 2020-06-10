@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="NotificationPanelStatusIcon" />
+  <Generator value="&lt;sffw-notification-panel-status-icon&gt;" />
+  <Type value="Control" />
+  <UiCaption value="NotificationPanelStatusIcon" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="NotificationPanelStatusIcon.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/INotificationsCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClass" />
+      <Default value="fa fa-bell" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;bell&quot; icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;bell&quot; icon from some icon font file." />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

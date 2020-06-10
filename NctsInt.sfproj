@@ -122,5 +122,9 @@
       <ReferencedIdentity value="NctsIntApi.51961823ccb342e682a52f33780cf33f" />
       <ReferencedVersion value="0.0.0" />
     </PackageReference>
+    <PackageReference Alias="Notifications" IsComponentLib="True" Origin="Sffw\Notifications\Notifications.package">
+      <ReferencedIdentity value="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc" />
+      <ReferencedVersion value="1.2.1" />
+    </PackageReference>
   </PackageReferences>
 </ProjectRoot>

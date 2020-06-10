@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="close">
+      <Values>
+        <LocaleValue Lang="en" Value="Close" />
+        <LocaleValue Lang="sv" Value="Stäng" />
+        <LocaleValue Lang="cs" Value="Zavřít" />
+        <LocaleValue Lang="fi" Value="Sulje" />
+        <LocaleValue Lang="sr" Value="Zatvori" />
+        <LocaleValue Lang="me" Value="Zatvori" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="clearAll">
+      <Values>
+        <LocaleValue Lang="en" Value="Clear all notifications" />
+        <LocaleValue Lang="cs" Value="Vymazat všechna upozornění" />
+        <LocaleValue Lang="fi" Value="Tyhjennä kaikki ilmoitukset" />
+        <LocaleValue Lang="sv" Value="Rensa alla aviseringar" />
+        <LocaleValue Lang="sr" Value="Obriši sva obaveštenja" />
+        <LocaleValue Lang="me" Value="Obriši sva obaveštenja" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="togglePanel">
+      <Values>
+        <LocaleValue Lang="en" Value="Open/close notifications panel" />
+        <LocaleValue Lang="cs" Value="Otevřít/zavřít oznamovací panel" />
+        <LocaleValue Lang="fi" Value="Avaa/sulje Ilmoitukset-paneeli" />
+        <LocaleValue Lang="sv" Value="Öppna/Stäng aviseringspanelen" />
+        <LocaleValue Lang="sr" Value="Tabla &quot;otvaranje/zatvaranje obaveštenja&quot;" />
+        <LocaleValue Lang="me" Value="Tabla &quot;otvaranje/zatvaranje obaveštenja&quot;" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="numberOfNotifications">
+      <Values>
+        <LocaleValue Lang="en" Value="Number of notifications" />
+        <LocaleValue Lang="cs" Value="Počet oznámení" />
+        <LocaleValue Lang="fi" Value="Ilmoitusten määrä" />
+        <LocaleValue Lang="sv" Value="Antal anmälningar" />
+        <LocaleValue Lang="sr" Value="Broj obaveštenja" />
+        <LocaleValue Lang="me" Value="Broj obaveštenja" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="turnGrowlsOn">
+      <Values>
+        <LocaleValue Lang="en" Value="Popup notifications are turned off, click to turn on" />
+        <LocaleValue Lang="cs" Value="Automaticky otevíraná oznámení jsou vypnutá, kliknutím zapnete" />
+        <LocaleValue Lang="fi" Value="Ponnahdusilmoitukset on poistettu käytöstä, ota käyttöön napsauttamalla" />
+        <LocaleValue Lang="sv" Value="Popup-meddelanden är inaktiverade, klicka för att aktivera" />
+        <LocaleValue Lang="sr" Value="Obaveštenja iskačućeg menija su isključena, kliknite da biste uključili" />
+        <LocaleValue Lang="me" Value="Obaveštenja iskačućeg menija su isključena, kliknite da biste uključili" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="turnGrowlsOff">
+      <Values>
+        <LocaleValue Lang="en" Value="Popup notifications are turned on, click to turn off" />
+        <LocaleValue Lang="cs" Value="Automaticky otevíraná oznámení jsou zapnutá, kliknutím vypnete" />
+        <LocaleValue Lang="fi" Value="Ponnahdusilmoitukset ovat käytössä, poista käytöstä napsauttamalla" />
+        <LocaleValue Lang="sv" Value="Popup-meddelanden är aktiverade, klicka för att stänga av" />
+        <LocaleValue Lang="sr" Value="Obaveštenja iskačućeg menija su uključena, kliknite da biste isključili" />
+        <LocaleValue Lang="me" Value="Obaveštenja iskačućeg menija su uključena, kliknite da biste isključili" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc" />
+  <Version value="1.2.1" />
+  <Items>
+    <PackageItem Src="NotificationsCtrl.apiObjectManifest" />
+    <PackageItem Src="GrowlNotification.componentManifest" />
+    <ResourceItem ResourceName="notificationsCtrl.js" OutputFileName="notificationsCtrl.js" Src="notificationsCtrl.js" />
+    <ResourceItem ResourceName="notifications.css" LinkerAction="Css" OutputFileName="notifications.css" Src="notifications.css" />
+    <ResourceItem ResourceName="notifications.js" LinkerAction="Script" OutputFileName="notifications.js" Src="notifications.js" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <PackageItem Src="NotificationPanel.componentManifest" />
+    <PackageItem Src="NotificationPanelStatusIcon.componentManifest" />
+    <ResourceItem ResourceName="GrowlNotification.png" Action="None" OutputFileName="GrowlNotification.png" Src="GrowlNotification.png" />
+    <ResourceItem ResourceName="NotificationPanel.png" Action="None" OutputFileName="NotificationPanel.png" Src="NotificationPanel.png" />
+    <ResourceItem ResourceName="NotificationPanelStatusIcon.png" Action="None" OutputFileName="NotificationPanelStatusIcon.png" Src="NotificationPanelStatusIcon.png" />
+  </Items>
+</Package>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="NotificationsCtrl" />
+  <Generator value="notificationsCtrl.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="INotificationsCtrl" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="addInfo" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="addSuccess" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="addWarning" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="addError" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="message" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCount" />
+      <ReturnType>
+        <BaseType value="Integer" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="removeAll" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setGrowlNotificationsOn" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="isOn" />
+          <BaseType value="Bool" />
+          <UiDescription value="By default, growl notifications are turned on until setGrowlNotificationsOn(false) is called." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="ordering" />
+      <Default value="LastTop" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiEditor value="list/LastTop|FirstTop" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

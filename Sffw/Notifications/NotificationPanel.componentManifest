@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="NotificationPanel" />
+  <Generator value="&lt;sffw-notification-panel&gt;" />
+  <Type value="Control" />
+  <UiCaption value="NotificationPanel" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="NotificationPanel.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiCategory value="Common" />
+      <UiEditor value="contract/INotificationsCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassInfo" />
+      <Default value="icon icon-tulli-info" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;info&quot; message icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;info&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassSuccess" />
+      <Default value="icon icon-tulli-checkmark" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;success&quot; message icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;success&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassWarning" />
+      <Default value="icon icon-tulli-attention" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;warning&quot; message icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;warning&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassError" />
+      <Default value="icon icon-tulli-attention" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;error&quot; message icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;error&quot; icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassClose" />
+      <Default value="icon icon-tulli-close" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;close&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;close&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassClear" />
+      <Default value="fa fa-bell-slash-o" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;clear all notifications&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;clear all notifications&quot; button icon from some icon font file." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconClassDisplayGrowlNotifications" />
+      <Default value="icon icon-tulli-eye" />
+      <IsRequired value="True" />
+      <Type value="string" />
+      <UiCaption value="Css class of &quot;display growl notifications&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;display growl notifications&quot; button icon from some icon font file." />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

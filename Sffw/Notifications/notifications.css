@@ -1,0 +1,335 @@
+﻿.notification {
+    border: 2px solid #4c628c;
+}
+
+.notification .row {
+    padding: 20px;
+    min-height: 1px;
+}
+
+/* growl notification */
+.notification.growl {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.notification.growl .row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.notification .row:before, .notification .row:after {
+    content: " ";
+    display: table;
+}
+
+.notification .row:after {
+    clear: both;
+}
+
+.growl-icon {
+    float: left;
+    width: 8.33333%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.growl-icon .icon {
+    font-size: 200%;
+}
+
+.growl-message {
+    float: left;
+    width: 75%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.growl-button {
+    float: left;
+    width: 16.66667%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.notification .row .growl-icon span.icon {
+    margin: 5px 20px 5px 0;
+    float: left !important;
+}
+
+.notification .row .growl-message span p {
+    margin-top: 9px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.44;
+}
+
+.notification .growl-button-close {
+    margin-bottom: 0;
+    margin-right: 0;
+    float: right !important;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: #00205b;
+    font-weight: normal;
+    border-radius: 0;
+    vertical-align: top;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 1.44;
+}
+
+.notification .growl-button-close:focus {
+    box-shadow: 0 0 10px 2px #00205b !important;
+}
+
+
+.notification .growl-button-close .icon {
+    font-size: 120%;
+}
+
+.notification .growl-button-close .icon {
+    position: relative;
+    top: 2px;
+}
+
+.notification-success {
+    background-color: #fff;
+    border-color: #257d6d;
+    color: #00205b;
+}
+
+.notification-success span.icon {
+    color: #257d6d;
+}
+
+.notification-success.growl {
+    border-color: #257d6d;
+}
+
+.notification-info {
+    background-color: #fff;
+    border-color: #4c628c;
+    color: #00205b;
+}
+
+.notification-info span.icon {
+    color: #4c628c;
+}
+
+.notification-info.growl {
+    border-color: #4c628c;
+}
+
+.notification-warning {
+    background-color: #fef6e6;
+    border-color: #b88400;
+    color: #00205b;
+}
+
+.notification-warning span.icon {
+    color: #b88400;
+}
+
+.notification-warning.growl {
+    border-color: #b88400;
+}
+
+.notification-error {
+    background-color: #fce8eb;
+    border-color: #c71530;
+    color: #c71530;
+}
+
+.notification-error span.icon {
+    color: #c71530;
+}
+
+.notification-error.growl {
+    border-color: #c71530;
+}
+
+.notification.notification-position-absolute {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    max-width: 450px;
+    width: 100%;
+    z-index: 99999;
+}
+
+.notification.growl .growl-button .icon {
+    color: #00205b;
+}
+
+/* notification status icon */
+sffw-notification-panel-status-icon {
+    padding: 0 !important;
+}
+
+.notifications-status-icon {
+    position: fixed;
+    top: 2px;
+    right: 2px;
+}
+
+.notification-trigger {
+    position: relative;
+    text-decoration: none;
+    float: right;
+    margin: 12px 30px 0 0;
+    font-size: 20px;
+    color: #333;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.notification-trigger .notification-num {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 16px;
+    display: block;
+    background: #d9232b;
+    color: #fff;
+    top: -4px;
+    right: -11px;
+    font-size: 10px;
+}
+
+/* notification panel */
+.notification-panel {
+    padding: 2px;
+    position: fixed;
+    top: 45px;
+    right: 2px;
+    height: calc(100vh - 45px);
+    width: 35vw;
+    background-color: #454545;
+    overflow-y: auto;
+    z-index: 99998;
+}
+
+ul.notifications {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.notification-panel-header {
+    padding: 5px;
+}
+
+.notification-panel-header-button {
+    position: relative;
+    text-decoration: none;
+    margin: 12px 30px 0 0;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.button-toggle-growls {
+    margin-left: 4px;
+    font-size: 25px;
+    vertical-align: sub;
+}
+
+.button-toggle-growls > i {
+    font-weight: bolder;
+}
+
+.button-toggle-growls > i.turned-on {
+    background-color: #4fd213 !important;
+}
+
+.notification-icon {
+    float: left;
+    width: 8.33333%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.notification-icon .icon {
+    font-size: 200%;
+}
+
+.notification-message {
+    float: left;
+    width: 75%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.notification-button {
+    float: left;
+    width: 16.66667%;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.notification .row .notification-icon span.icon {
+    margin: 5px 20px 5px 0;
+    float: left !important;
+}
+
+.notification .row .notification-message span p {
+    margin-top: 9px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.44;
+}
+
+.notification .notification-button-close {
+    margin-bottom: 0;
+    margin-right: 0;
+    float: right !important;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: #00205b;
+    font-weight: normal;
+    border-radius: 0;
+    vertical-align: top;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    line-height: 1.44;
+}
+
+.notification .notification-button-close:focus {
+    box-shadow: 0 0 10px 2px #00205b !important;
+}
+
+
+.notification .notification-button-close .icon {
+    font-size: 120%;
+}
+
+.notification .notification-button-close .icon {
+    position: relative;
+    top: 2px;
+}
+
+.notification .notification-button .icon {
+    color: #00205b;
+}
