@@ -25,6 +25,13 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Attribute>
+          <Name value="communicationLanguageAtDeparture" />
+          <Caption value="Communication language at departure" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
       </Children>
     </Complex>
     <Attribute>

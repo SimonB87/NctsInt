@@ -255,6 +255,14 @@ font-family: $font-family .panel-cell,
 .smx-padding-right {
   padding-right: 16px !important;
 }
+@media screen and (max-width: 1365px) {
+  .smx-panel-main > .panel-table > .panel-row > .panel-cell {
+    display: block !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
 html.scrolled .smx-nav-bar-controls {
   position: fixed;
   left: 273px;
@@ -573,13 +581,13 @@ html .sffw-paging-repeater-ctrl-left,
 html .sffw-paging-repeater-ctrl-right,
 html .sffw-paging-repeater-ctrl-add,
 html .sffw-paging-repeater-ctrl-remove {
-  padding: 13px 21px;
+  padding: 8px 16px;
   border: 1px solid #ced4da;
   outline: none;
   background: #fff;
   border-radius: 0.35rem;
   transition: 0.3s all;
-  cursor: hand;
+  cursor: pointer;
 }
 html .sffw-paging-repeater-ctrl-left:hover,
 html .sffw-paging-repeater-ctrl-right:hover,
@@ -593,7 +601,7 @@ html .sffw-paging-repeater-ctrl-remove:before {
 }
 html .sffw-paging-repeater-ctrl-index-input {
   width: 3em;
-  padding: 7px 11px !important;
+  padding: 2px 8px !important;
   margin-left: 1em;
   text-align: center;
 }
@@ -2086,6 +2094,7 @@ span.flatpickr-weekday {
   top: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
   overflow-y: auto;
 }
 .smx-nav a {
@@ -2097,6 +2106,7 @@ span.flatpickr-weekday {
   line-height: 2rem;
   padding: 0 1.25rem 0;
   margin: 0;
+  width: 100%;
   display: block;
 }
 .smx-nav h3 {
@@ -2282,6 +2292,7 @@ span.flatpickr-weekday {
 .smx-groupbox fieldset .component,
 .smx-collapsiblegroupbox fieldset .component {
   width: 100%;
+  padding: 0;
 }
 .smx-groupbox fieldset legend,
 .smx-collapsiblegroupbox fieldset legend {

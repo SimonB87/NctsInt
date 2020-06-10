@@ -258,6 +258,7 @@ globals.isExpandedCollapsibleStickyPnl = false
 
 // TODO: Replace with data from server once we have it
 globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())
+globals.serverConfig.communicationLanguageAtDeparture = "Montenegro"
 
 form.appVersion = apiobjects.appVersion.get()
 

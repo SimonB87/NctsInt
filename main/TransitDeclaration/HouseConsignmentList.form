@@ -698,8 +698,8 @@ navigation.main.Home.go()]]></Script>
       <Name value="tryLoadingData" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[result = False
-if apiobjects.transitDeclaration.isEmpty2() then
-	
+if apiobjects.transitDeclaration.isEmpty() then
+
 	// navigation still relies on mock DATA!!!
 	if form.mode = enums.declarationFormMode.create then
 		apiobjects.urlRouter.clearUrl()
@@ -711,13 +711,13 @@ if apiobjects.transitDeclaration.isEmpty2() then
 		else
 			//go to main
 			result = True
-		
+
 		endif
-		
+
 	endif
 
 else
-	
+
 	if (form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) then
 
 		var rowsJson = apiobjects.transitDeclaration.getHouseConsignmentList()
@@ -726,9 +726,9 @@ else
 		//FIX ME - case of not known mode enum value
 		apiobjects.transitDeclaration.clear()
 		result = True
-	
+
 	endIf
-	
+
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -756,7 +756,7 @@ var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
 if form.guid = mockGuid then
 	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-	
+
 	var data = apiobjects.transitDeclaration.getHouseConsignmentList()
 	form.houseConsignmentRowList.fromJson(data)
 

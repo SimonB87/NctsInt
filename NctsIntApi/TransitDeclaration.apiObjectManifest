@@ -5,7 +5,7 @@
   <Generator value="TransitDeclaration.js" />
   <Methods>
     <MethodManifest>
-      <Name value="isEmpty2" />
+      <Name value="isEmpty" />
       <Description value="Returns true if the API holds no declaration" />
       <ReturnType>
         <BaseType value="Bool" />

@@ -2858,7 +2858,7 @@ url.updatePageUrl()]]></Script>
 apiobjects.breadcrumbsCtrl.removeAll()
 
 apiobjects.breadcrumbsCtrl.addBreadcrumb("houseConsignments", "House Consignments", defaultString(), defaultString(), true)
-	
+
 var houseConsignItemNum = "House Consignment #" + toString(form.sequenceNumber)
 apiobjects.breadcrumbsCtrl.addBreadcrumb("houseConsignmentItem", houseConsignItemNum, "", defaultString(), true)
 
@@ -2901,7 +2901,7 @@ globals.busyIndicatorIsRunning = false]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.actions.saveConsignmentItem()
-navigation.main.Header.withGuid(form.guid).go(form.mode)]]></Script>
+navigation.main.Header.withGuid(form.guid).go(form.mode) ]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -2933,8 +2933,8 @@ navigation.main.Home.go()]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[result = False
 
-if apiobjects.transitDeclaration.isEmpty2() then
-	
+if apiobjects.transitDeclaration.isEmpty() then
+
 	// navigation still relies on mock DATA!!!
 	if form.mode = enums.declarationFormMode.create then
 		result = True
@@ -2946,9 +2946,9 @@ if apiobjects.transitDeclaration.isEmpty2() then
 			//FIX ME - case of not known mode enum value
 			//go to main
 			result = True
-		
+
 		endif
-		
+
 	endif
 
 else
@@ -2961,7 +2961,7 @@ else
 		apiobjects.transitDeclaration.clear()
 		result = True
 	endIf
-	
+
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -2989,23 +2989,23 @@ var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
 if form.guid = mockGuid then
 	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-	
+
 	var sequenceNumberIsValidInTransitDeclaration = form.actions.doesSequenceNumberExist()
 	var goodsItemNumberIsValidInTransitDeclaration = defaultBool()
-	
+
 	if sequenceNumberIsValidInTransitDeclaration then
 		goodsItemNumberIsValidInTransitDeclaration = form.actions.doesGoodsItemNumberExist()
-		
+
 		if goodsItemNumberIsValidInTransitDeclaration then
 			form.actions.loadExistingData()
 		else
 			result = True
 		endIf
-		
+
 	else
 		result = True
 	endIf
-	
+
 else
 	result = True
 endIf]]></Script>
@@ -3031,11 +3031,11 @@ endIf]]></Script>
       <Name value="doesSequenceNumberExist" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var dataInTransitDeclaration = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
-	
+
 if dataInTransitDeclaration = defaultString() then
   result = False
 else
-  result = True		
+  result = True
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -3059,11 +3059,11 @@ endIf]]></Script>
       <Name value="doesGoodsItemNumberExist" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var dataInTransitDeclaration = apiobjects.transitDeclaration.getConsignmentItem(form.sequenceNumber, form.goodsItemNumber)
-	
+
 if dataInTransitDeclaration = defaultString() then
   result = False
 else
-  result = True		
+  result = True
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -3113,6 +3113,9 @@ else
 endIf
 
 // Need response from server
+
+apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
+
 globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
       <DataContext>

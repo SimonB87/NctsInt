@@ -1754,7 +1754,7 @@ url.updatePageUrl()]]></Script>
 apiobjects.breadcrumbsCtrl.removeAll()
 
 apiobjects.breadcrumbsCtrl.addBreadcrumb("houseConsignments", "House Consignments", defaultString(), defaultString(), true)
-	
+
 var houseConsignItemNum = "House Consignment #" + toString(form.sequenceNumber)
 apiobjects.breadcrumbsCtrl.addBreadcrumb("houseConsignmentItem", houseConsignItemNum, "", defaultString(), defaultBool())]]></Script>
       </ActionLangBody>
@@ -1848,8 +1848,8 @@ navigation.main.Home.go()]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[result = False
 
-if apiobjects.transitDeclaration.isEmpty2() then
-	
+if apiobjects.transitDeclaration.isEmpty() then
+
 	// navigation still relies on mock DATA!!!
 	if form.mode = enums.declarationFormMode.create then
 		result = True
@@ -1860,15 +1860,15 @@ if apiobjects.transitDeclaration.isEmpty2() then
 		else
 			//go to main
 			result = True
-		
+
 		endif
-		
+
 	endif
 
 else
 
 	if (form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) then
-	
+
 		form.actions.loadingExistingData()
 
 	else
@@ -1877,7 +1877,7 @@ else
 		result = True
 		apiobjects.transitDeclaration.clear()
 	endIf
-	
+
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1906,18 +1906,18 @@ var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
 if form.guid = mockGuid then
 	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-		
+
 	var dataInTransitDeclarationHasInput = form.actions.doesSequenceNumberExist()
-	
+
 	if form.sequenceNumber.hasValue() and dataInTransitDeclarationHasInput then
 		form.actions.loadingExistingData()
-	
+
 	else
 		//not valid sequnce number withing the given declaration
 		result = True
-	
+
 	endIf
-	
+
 else
 	//FIX ME - scenario - mode.edit + form.guid has OTHER value
 	result = True
@@ -1954,11 +1954,11 @@ navigation.main.Home.go()]]></Script>
       <Name value="doesSequenceNumberExist" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var dataInTransitDeclaration = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
-	
+
 if dataInTransitDeclaration = defaultString() then
 	result = False
 else
-	result = True		
+	result = True
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
