@@ -208,6 +208,33 @@
                 </CssClassConditional>
               </CssClass>
             </Panel>
+            <Panel>
+              <Name value="panel1" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <GrowlNotification identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                  <Name value="growlNotification" />
+                  <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                  <displayTime value="6000" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                </GrowlNotification>
+                <NotificationPanel identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                  <Name value="notificationPanel" />
+                  <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                </NotificationPanel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>

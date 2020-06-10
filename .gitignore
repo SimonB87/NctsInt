@@ -1,0 +1,4 @@
+*.sfprojlayout
+*.sfuser
+node_modules/
+tempDist/

@@ -6935,8 +6935,9 @@ var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaratio
 
 if response.isError() then
 	system.console(response.getErrorMessage())
+	apiobjects.notificationsCtrl.addError("Your request has failed.")
 else
-
+	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
 	//test
 	system.console("OK - message sent and is good")
 	system.console(response.getJsonString())

@@ -279,5 +279,8 @@
         </CodelistColumn>
       </columns>
     </Codelist>
+    <NotificationsCtrl identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+      <Name value="notificationsCtrl" />
+    </NotificationsCtrl>
   </ApiObjects>
 </GlobalApiObjects>
