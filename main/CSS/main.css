@@ -523,8 +523,6 @@ textarea,
 select {
   display: block;
   width: 100%;
-  height: calc(2.25rem + 2px);
-  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -534,6 +532,16 @@ select {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  height: 1.75rem;
+  padding: 0.375rem 0.45rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  input,
+  textarea,
+  select {
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+  }
 }
 input:disabled,
 textarea:disabled,
@@ -913,7 +921,7 @@ html .sffw-paging-repeater-ctrl-index-input {
 }
 .smx-datatable table tr:hover {
   background-color: #f7dfda !important;
-  tarnsition: 0.3s;
+  transition: 0.3s;
   box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
 }
 .smx-datatable table tr:last-child td {
@@ -956,6 +964,28 @@ td {
   border: 1px solid #e9ecef;
   pointer-events: inherit;
   overflow: hidden;
+/* Little hack to fullfill td whole field 
+				a
+					display: block;
+					margin: -10em;
+					padding: 10em !important;
+					height: 100%;
+					width: 100%;
+					white-space: nowrap;
+				 -------------------------------------- */
+}
+td .fa-search:after {
+  content: " Detail";
+  font-size: 14px;
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+}
+td button {
+  display: none !important;
+  padding: 8px;
+  border-radius: 0.35rem;
+}
+td button:hover {
+  box-shadow: 0 0.46875rem 2.1875rem rgba(31,10,6,0.03), 0 0.9375rem 1.40625rem rgba(31,10,6,0.03), 0 0.25rem 0.53125rem rgba(31,10,6,0.05), 0 0.125rem 0.1875rem rgba(31,10,6,0.03);
 }
 tbody tr:nth-child(odd) {
   background-color: rgba(0,0,0,0.03);
@@ -969,8 +999,15 @@ tbody tr:nth-child(odd) {
   display: inline-block;
   margin-left: 20px;
 }
-.clickable-rows tbody tr:hover {
-  background: rgba(0,0,0,0.3);
+.sffw-listgrid-selected-row {
+  background-color: #f7dfda !important;
+}
+.sffw-listgrid-selected-row button {
+  display: block !important;
+}
+.clickable-rows tbody tr:hover,
+.clickable-rows tbody tr.sffw-listgrid-selected-row {
+  background-color: #f7dfda !important;
 }
 .clickable-rows tbody tr td {
   cursor: pointer;
