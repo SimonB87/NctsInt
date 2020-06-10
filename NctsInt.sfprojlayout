@@ -131,9 +131,7 @@
               <UIElement xsi:type="DocumentWindowRef" UniqueId="13b5b0b9-787f-4fa5-baba-9b5566027fd4" />
               <UIElement xsi:type="DocumentWindowRef" UniqueId="be7149ea-49cf-4a7f-8432-af1973bcf423" />
               <UIElement xsi:type="DocumentWindowRef" UniqueId="1852ee42-5856-4248-a060-c269c9d22250" />
-              <UIElement xsi:type="DocumentWindowRef" UniqueId="1bc5054c-c7e6-43bd-a7a0-c88ef982c2ef" />
               <UIElement xsi:type="DocumentWindowRef" UniqueId="18519b61-bbd7-4b87-b807-0335ec7ed7cb" />
-              <UIElement xsi:type="DocumentWindowRef" UniqueId="e0f24aaf-f0cd-40ca-90aa-09e5a6c04579" />
               <UIElement xsi:type="DocumentWindowRef" UniqueId="14e9427f-520b-4308-9693-3ba75ed5f374" />
               <UIElement xsi:type="DocumentWindowRef" UniqueId="8351c90d-e1c4-4521-8b2a-66c67deeece9" />
             </Content>
@@ -148,10 +146,10 @@
       </UIElement>
     </UIElement>
     <UIElement xsi:type="SplitContainer" AutoHideSize="300,788.404353393086" DockedSize="510.135142650141,1016.8" DocumentSize="300,788.404353393086" FloatingSize="300,788.404353393086" Size="510.135142650141,1016.8" Orientation="Vertical">
-      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,788.404353393086" DockedSize="510.135142650141,425.741429248025" DocumentSize="300,788.404353393086" FloatingSize="300,788.404353393086" Size="510.135142650141,425.741429248025" SelectedWindowUniqueId="b9c17f3a-0466-40c3-a496-78e667757946">
+      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="300,788.404353393086" DockedSize="510.135142650141,652.741429248025" DocumentSize="300,788.404353393086" FloatingSize="300,788.404353393086" Size="510.135142650141,652.741429248025" SelectedWindowUniqueId="b9c17f3a-0466-40c3-a496-78e667757946">
         <UIElement xsi:type="ToolWindowRef" UniqueId="b9c17f3a-0466-40c3-a496-78e667757946" />
       </UIElement>
-      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="0,200" DockedSize="510.135142650141,586.058570751975" DocumentSize="0,200" FloatingSize="0,200" Size="510.135142650141,586.058570751975" SelectedWindowUniqueId="5748b556-a3f0-432f-b4be-c6ef5f9f382c">
+      <UIElement xsi:type="ToolWindowContainer" AutoHideSize="0,200" DockedSize="510.135142650141,359.058570751975" DocumentSize="0,200" FloatingSize="0,200" Size="510.135142650141,359.058570751975" SelectedWindowUniqueId="5748b556-a3f0-432f-b4be-c6ef5f9f382c">
         <UIElement xsi:type="ToolWindowRef" UniqueId="167a1577-2e2e-48a9-8e29-5ac82c7aeecb" />
         <UIElement xsi:type="ToolWindowRef" UniqueId="5748b556-a3f0-432f-b4be-c6ef5f9f382c" />
       </UIElement>
@@ -173,6 +171,9 @@
                 <Variables>
                   <State IsEditMode="true" DefaultExpanded="false">
                     <SavedPathStates>
+                      <Item>Form variables</Item>
+                      <Item>Global variables</Item>
+                      <Item>Global variables (cseForms)</Item>
                       <Item>Form variables/Model/(include)/TransitOperation/(Locally added)</Item>
                       <Item>Form variables/Model/(include)/Authorisation/(Locally added)</Item>
                       <Item>Form variables/Model/(include)/CustomsOfficeOfTransitDeclared/(Locally added)</Item>
@@ -205,29 +206,6 @@
             <FormTree>
               <TreeState DefaultExpanded="true">
                 <SavedPathStates>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss/Row11</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss/Row12</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss/Row13</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss/Row14</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHLeftPnl/TransitOperationGrp/panel4/LeftPnlsss/Row15</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/departureTransportGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/countryOfRoutingOfConsignmentGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/activeBorderTransportMeansGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/departureTransportGrp/panel44</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/departureTransportGrp/panel44/DepartureTransportMeansRpt</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/departureTransportGrp/panel44/DepartureTransportMeansRpt/panel32</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/countryOfRoutingOfConsignmentGrp/panel45</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/countryOfRoutingOfConsignmentGrp/panel45/CountryOfRoutingOfConsignmentRpt</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/countryOfRoutingOfConsignmentGrp/panel45/CountryOfRoutingOfConsignmentRpt/panel33</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/activeBorderTransportMeansGrp/panel63</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlTransitOperationHeader/OHRightPnl/activeBorderTransportMeansGrp/panel63/panel34</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/COLeftPnl</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/CORightPnl</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/COLeftPnl/customsOfficeOfDepartureGrp</Item>
@@ -244,12 +222,6 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/CORightPnl/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/CORightPnl/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt/panel74</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlCustomsOffice/CORightPnl/customsOfficeOfExitTransitGrp/panel73/customsOfficeOfExitTransitRpt/panel74/panel69</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/representativeGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow11</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow12</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow13</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow14</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow14/AuthorisationGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow14/AuthorisationGrp/panel9</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow14/AuthorisationGrp/panel9/AuthorisationRpt</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/holderOfTheTransitGrp/panel71/HolderRow14/AuthorisationGrp/panel9/AuthorisationRpt/panel761</Item>
@@ -257,10 +229,6 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/representativeGrp/panel81</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/representativeGrp/panel81/RepresentativeRow11</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENLeftPnl/representativeGrp/panel81/RepresentativeRow12</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consignorGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consigneeGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/carrierGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/additionalSupplyChainActorGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consignorGrp/panel5</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consignorGrp/panel5/ConsignorRow11</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consignorGrp/panel5/ConsignorRow12</Item>
@@ -268,10 +236,6 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consigneeGrp/panel8</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consigneeGrp/panel8/panel57</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/consigneeGrp/panel8/panel19</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/carrierGrp/panel56</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/additionalSupplyChainActorGrp/panel42</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/additionalSupplyChainActorGrp/panel42/additionalSupplyChainActorRpt</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlEntities/ENRightPnl/additionalSupplyChainActorGrp/panel42/additionalSupplyChainActorRpt/panel21</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee/guaranteeGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee/guaranteeGrp/panel14</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee/guaranteeGrp/panel14/guaranteeRpt</Item>
@@ -285,7 +249,6 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee/guaranteeGrp/panel14/guaranteeRpt/panel52/GULeftPnl/guaranteeReferenceGrp/panel84/guaranteeReferenceRpt/panel87/panel85</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlGuarantee/guaranteeGrp/panel14/guaranteeRpt/panel52/GULeftPnl/guaranteeReferenceGrp/panel84/guaranteeReferenceRpt/panel87/panel110</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl/transportEquipmentGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl/locationOfGoodsGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl/transportEquipmentGrp/panel43</Item>
@@ -311,7 +274,6 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl/locationOfGoodsGrp/panel25/panel31</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNLeftPnl/locationOfGoodsGrp/panel25/GNSSGrp/panel27</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/additionalInformationGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp/placeOfLoadingGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp/placeOfUnloadingGrp</Item>
@@ -319,15 +281,8 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp/placeOfLoadingGrp/panel64/panel35</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp/placeOfUnloadingGrp/panel65</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/placeGrp/placeOfUnloadingGrp/panel65/panel36</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel12</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/supportingDocumentGrp</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46/PreviousDocumentRpt</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13</Item>
-                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13/panel37</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13/panel3</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/supportingDocumentGrp/panel47</Item>
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/supportingDocumentGrp/panel47/SupportingDocumentRpt</Item>
@@ -347,7 +302,7 @@
                   <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/additionalInformationGrp/panel50/additionalInformationRpt/panel41</Item>
                 </SavedPathStates>
                 <SelectedPaths>
-                  <Item>Header/panel1/panel2/pnlBody/ControlPnl/ControlPnlHolder/button_dataRequest</Item>
+                  <Item>Header/panel1/panel2/pnlBody/content_pnl/panel11/pnlConsignment/CNRightPnl/documentsPnl/panel7/panel6/previousDocumentGrp/panel46/PreviousDocumentRpt/panel13/panel37/textBox57</Item>
                 </SelectedPaths>
               </TreeState>
               <Headers>
@@ -719,46 +674,6 @@
         </Data>
       </Tag>
     </DocumentWindow>
-    <DocumentWindow UniqueId="1bc5054c-c7e6-43bd-a7a0-c88ef982c2ef" AutoHideSize="938.666666666666,826.4" DockedSize="938.666666666666,826.4" DocumentSize="1194.66666666667,877.6" FloatingSize="938.666666666666,826.4" Size="1194.66666666667,877.6" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
-      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/!main.77cebdf47cc044589efeab8ab5a8ac2b/#UiParts[3]/Header/debug_printTransitToConsole">
-        <Data>
-          <State>
-            <ToolsStates>
-              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.ApiObjectsTool">
-                <State DefaultExpanded="true">
-                  <SelectedPaths>
-                    <Item>/form API objects (Header)</Item>
-                  </SelectedPaths>
-                </State>
-              </State>
-              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.ActionsTool">
-                <State DefaultExpanded="true">
-                  <SelectedPaths>
-                    <Item>/form actions (Header)</Item>
-                  </SelectedPaths>
-                </State>
-              </State>
-              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
-                <Variables>
-                  <State IsEditMode="false" DefaultExpanded="false">
-                    <SavedPathStates>
-                      <Item>Form variables</Item>
-                      <Item>Global variables</Item>
-                      <Item>Global variables (cseForms)</Item>
-                    </SavedPathStates>
-                  </State>
-                  <Headers>
-                    <Header Width="300" Caption="Name" />
-                    <Header Width="159" Caption="Type" />
-                    <Header Width="120" Caption="Behavior" />
-                  </Headers>
-                </Variables>
-              </State>
-            </ToolsStates>
-          </State>
-        </Data>
-      </Tag>
-    </DocumentWindow>
     <DocumentWindow UniqueId="18519b61-bbd7-4b87-b807-0335ec7ed7cb" AutoHideSize="940.666666666666,826.4" DockedSize="940.666666666666,826.4" DocumentSize="1194.66666666667,877.6" FloatingSize="940.666666666666,826.4" Size="1194.66666666667,877.6" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.FormDesigner.FormDocumentEditor" ObjectId="/!main.77cebdf47cc044589efeab8ab5a8ac2b/#UiParts[2]/DecList">
         <Data>
@@ -790,47 +705,6 @@
                 <Header Width="60" Caption="# children" />
               </Headers>
             </FormTree>
-          </State>
-        </Data>
-      </Tag>
-    </DocumentWindow>
-    <DocumentWindow UniqueId="e0f24aaf-f0cd-40ca-90aa-09e5a6c04579" AutoHideSize="940.666666666666,826.4" DockedSize="940.666666666666,826.4" DocumentSize="1194.66666666667,877.6" FloatingSize="940.666666666666,826.4" Size="1194.66666666667,877.6" IsOpen="true" LastState="Document" StandardMdiBounds="0,0,300,200" State="Document">
-      <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionScriptDesigner.ActionScriptEditorControl" ObjectId="/!main.77cebdf47cc044589efeab8ab5a8ac2b/#UiParts[3]/Header/handler_button_dataRequest_OnClick">
-        <Data>
-          <State>
-            <ToolsStates>
-              <State Tool="ScreenFactory.Client.ApiObjectsDesigner.ApiObjectsTool">
-                <State DefaultExpanded="true">
-                  <SelectedPaths>
-                    <Item>/form API objects (Header)</Item>
-                  </SelectedPaths>
-                </State>
-              </State>
-              <State Tool="ScreenFactory.Client.Designers.ActionsDesigner.ActionsTool">
-                <State DefaultExpanded="true">
-                  <SelectedPaths>
-                    <Item>/form actions (Header)</Item>
-                  </SelectedPaths>
-                </State>
-              </State>
-              <State Tool="ScreenFactory.Client.DataContextDesigner.VariablesTool">
-                <Variables>
-                  <State IsEditMode="false" DefaultExpanded="false">
-                    <SavedPathStates>
-                      <Item>Action variables</Item>
-                      <Item>Form variables</Item>
-                      <Item>Global variables</Item>
-                      <Item>Global variables (cseForms)</Item>
-                    </SavedPathStates>
-                  </State>
-                  <Headers>
-                    <Header Width="300" Caption="Name" />
-                    <Header Width="159" Caption="Type" />
-                    <Header Width="120" Caption="Behavior" />
-                  </Headers>
-                </Variables>
-              </State>
-            </ToolsStates>
           </State>
         </Data>
       </Tag>
@@ -1197,6 +1071,7 @@
                 <Source Name="DispatchUpdaterVariablesTool" Show="false" />
                 <Source Name="ProjectUpgrader" Show="true" />
                 <Source Name="VariablesTool" Show="true" />
+                <Source Name="Exception" Show="true" />
                 <Source Name="TemplateLoader" Show="true" />
                 <Source Name="UpdateTreeNodesRec" Show="true" />
                 <Source Name="VisualDesignerControl" Show="true" />
@@ -1222,7 +1097,6 @@
                 <Source Name="AppBuilderNodeJs" Show="true" />
                 <Source Name="NamingStrategy" Show="true" />
                 <Source Name="BindingPropertyEditor" Show="true" />
-                <Source Name="Exception" Show="true" />
                 <Source Name="HtmlDocumentControl" Show="true" />
                 <Source Name="AncestingModifierVisitor" Show="true" />
                 <Source Name="ResourceFactory" Show="true" />
@@ -1327,10 +1201,10 @@
         </Data>
       </Tag>
     </ToolWindow>
-    <ToolWindow UniqueId="b9c17f3a-0466-40c3-a496-78e667757946" AutoHideSize="300,788.404353393086" DockedSize="364.135142650141,425.741429248025" DocumentSize="300,788.404353393086" FloatingSize="300,788.404353393086" Size="364.135142650141,425.741429248025" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_PropertyGridTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="b9c17f3a-0466-40c3-a496-78e667757946" AutoHideSize="300,788.404353393086" DockedSize="510.135142650141,652.741429248025" DocumentSize="300,788.404353393086" FloatingSize="300,788.404353393086" Size="510.135142650141,652.741429248025" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_PropertyGridTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.PropertyGridTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="31016229-1c02-424d-981f-f5a85f705d8b" AutoHideSize="300,300" DockedSize="307.598190683193,726.8" DocumentSize="300,300" FloatingSize="300,300" Size="307.598190683193,726.8" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ProjectDesigner_ProjectDesignerControl" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="31016229-1c02-424d-981f-f5a85f705d8b" AutoHideSize="300,300" DockedSize="307.598190683193,1016.8" DocumentSize="300,300" FloatingSize="300,300" Size="307.598190683193,1016.8" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ProjectDesigner_ProjectDesignerControl" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ProjectDesigner.ProjectDesignerControl">
         <Data>
           <State DefaultExpanded="true">
@@ -1348,23 +1222,23 @@
     <ToolWindow UniqueId="d33b3a4e-770f-4a77-b722-37ac1ce1bfa6" AutoHideSize="150,0" DockedSize="300,300" DocumentSize="150,0" FloatingSize="150,0" Size="150,0" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_ToolboxControl" StandardMdiBounds="0,0,300,200" State="AutoHide">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ToolboxControl" />
     </ToolWindow>
-    <ToolWindow UniqueId="5748b556-a3f0-432f-b4be-c6ef5f9f382c" AutoHideSize="300,271.395646606914" DockedSize="364.135142650141,586.058570751975" DocumentSize="300,271.395646606914" FloatingSize="300,271.395646606914" Size="364.135142650141,586.058570751975" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ApiObjectsDesigner_ApiObjectsTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="5748b556-a3f0-432f-b4be-c6ef5f9f382c" AutoHideSize="300,271.395646606914" DockedSize="510.135142650141,359.058570751975" DocumentSize="300,271.395646606914" FloatingSize="300,271.395646606914" Size="510.135142650141,359.058570751975" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ApiObjectsDesigner_ApiObjectsTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ApiObjectsDesigner.ApiObjectsTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="167a1577-2e2e-48a9-8e29-5ac82c7aeecb" AutoHideSize="0,200" DockedSize="364.135142650141,586.058570751975" DocumentSize="0,200" FloatingSize="0,200" Size="364.135142650141,586.058570751975" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_Designers_ActionsDesigner_ActionsTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="167a1577-2e2e-48a9-8e29-5ac82c7aeecb" AutoHideSize="0,200" DockedSize="510.135142650141,359.058570751975" DocumentSize="0,200" FloatingSize="0,200" Size="510.135142650141,359.058570751975" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_Designers_ActionsDesigner_ActionsTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.Designers.ActionsDesigner.ActionsTool">
         <Data>
           <Options ShowEvents="true" />
         </Data>
       </Tag>
     </ToolWindow>
-    <ToolWindow UniqueId="8c1c020b-f267-4a51-8329-a6ef5b6e4bec" AutoHideSize="300,300" DockedSize="307.598190683193,726.8" DocumentSize="300,300" FloatingSize="300,300" Size="307.598190683193,726.8" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_DataContextDesigner_VariablesTool" RaftingLocation="-9,141" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="8c1c020b-f267-4a51-8329-a6ef5b6e4bec" AutoHideSize="300,300" DockedSize="307.598190683193,1016.8" DocumentSize="300,300" FloatingSize="300,300" Size="307.598190683193,1016.8" IsOpen="true" LastState="Floating" Name="ScreenFactory_Client_DataContextDesigner_VariablesTool" RaftingLocation="-9,141" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.DataContextDesigner.VariablesTool" />
     </ToolWindow>
     <ToolWindow UniqueId="63567363-f345-477b-a858-f6ed417527a5" AutoHideSize="300,391" DockedSize="573.2,210.525454681507" DocumentSize="300,168" FloatingSize="1416,168" Size="300,391" IsOpen="true" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_ValidationTool" RaftingLocation="310,854" StandardMdiBounds="0,0,300,200" State="AutoHide">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ValidationTool" />
     </ToolWindow>
-    <ToolWindow UniqueId="13b9ab56-8959-4c14-b2db-65cfe6beef14" AutoHideSize="300,300" DockedSize="825.066666666666,134.2" DocumentSize="300,300" FloatingSize="300,300" Size="825.066666666666,134.2" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ListResultsTool" StandardMdiBounds="0,0,300,200" State="Docked">
+    <ToolWindow UniqueId="13b9ab56-8959-4c14-b2db-65cfe6beef14" AutoHideSize="300,300" DockedSize="1194.66666666667,134.2" DocumentSize="300,300" FloatingSize="300,300" Size="1194.66666666667,134.2" IsOpen="true" LastState="AutoHide" Name="ScreenFactory_Client_ToolWindows_ListResultsTool" StandardMdiBounds="0,0,300,200" State="Docked">
       <Tag xsi:type="LayoutData" ToolType="ScreenFactory.Client.ToolWindows.ListResultsTool" />
     </ToolWindow>
     <ToolWindow UniqueId="cc00436d-fe3f-4fa5-b142-07dfd684e627" AutoHideSize="300,300" DockedSize="300,300" DocumentSize="300,300" FloatingSize="300,300" Size="300,300" IsOpen="false" LastState="Docked" Name="ScreenFactory_Client_ToolWindows_AsyncTasksTool" StandardMdiBounds="0,0,300,200" State="AutoHide">

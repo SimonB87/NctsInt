@@ -619,6 +619,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.LRN" />
@@ -637,6 +638,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.MRN" />
@@ -655,6 +657,7 @@
                                                   <Name value="checkBox2" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.FallbackProcedure" />
@@ -672,6 +675,7 @@
                                                   <Name value="datePicker3" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.releaseDate" />
@@ -705,6 +709,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="+GlobalApiObjects.declarationType" />
                                                   <Bindings>
@@ -724,6 +729,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="+GlobalApiObjects.DeclarationTypeAdditional" />
                                                   <Bindings>
@@ -743,6 +749,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.TIRCarnetNumber" />
@@ -760,6 +767,7 @@
                                                   <Name value="datePicker4" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.TIRValidityDate" />
@@ -792,6 +800,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <ReferenceList reference="+GlobalApiObjects.DeclarationTypeSecurity" />
                                                   <Bindings>
@@ -811,6 +820,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="Code" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -829,6 +839,7 @@
                                                   <Name value="checkBox4" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.containerIndicator" />
@@ -846,6 +857,7 @@
                                                   <Name value="checkBox1" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.reducedDatasetIndicator" />
@@ -863,6 +875,7 @@
                                                   <Name value="checkBox3" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.bindingItinerary" />
@@ -895,6 +908,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -914,6 +928,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -933,6 +948,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -952,6 +968,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -986,6 +1003,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.TotalValueOfGoods" />
@@ -1005,6 +1023,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.grossMass" />
@@ -1023,6 +1042,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.referenceNumberUCR" />
@@ -1040,6 +1060,7 @@
                                                   <Name value="datePicker5" />
                                                   <CaptionPosition value="Top" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.TransitOperation.limitDate" />
@@ -1134,6 +1155,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -1153,6 +1175,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="identificationNumber" />
@@ -1171,6 +1194,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -1250,6 +1274,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="100%" />
                                                   <ReferenceList reference="+GlobalApiObjects.CountryCodesFullList" />
                                                   <Bindings>
@@ -1315,6 +1340,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -1334,6 +1360,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.ActiveBorderTransportMeans.identificationNumber" />
@@ -1352,6 +1379,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -1371,6 +1399,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.ActiveBorderTransportMeans.conveyanceReferenceNumber" />
@@ -1804,6 +1833,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.identificationNumber" />
@@ -1822,6 +1852,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.name" />
@@ -1840,6 +1871,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.TIRHolderIdentificationNumber" />
@@ -1872,6 +1904,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.Address.streetAndNumber" />
@@ -1890,6 +1923,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.Address.postcode" />
@@ -1908,6 +1942,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.Address.city" />
@@ -1960,6 +1995,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.ContactPerson.name" />
@@ -1977,6 +2013,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.ContactPerson.phoneNumber" />
@@ -1995,6 +2032,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.HolderOfTheTransitProcedure.ContactPerson.eMailAddress" />
@@ -2082,6 +2120,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -2178,6 +2217,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Representative.identificationNumber" />
@@ -2230,6 +2270,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Representative.ContactPerson.name" />
@@ -2247,6 +2288,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Representative.ContactPerson.phoneNumber" />
@@ -2265,6 +2307,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Representative.ContactPerson.eMailAddress" />
@@ -2337,6 +2380,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.identificationNumber" />
@@ -2355,6 +2399,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.name" />
@@ -2387,6 +2432,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.Address.streetAndNumber" />
@@ -2405,6 +2451,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.Address.postcode" />
@@ -2423,6 +2470,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.Address.city" />
@@ -2475,6 +2523,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.ContactPerson.name" />
@@ -2492,6 +2541,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.ContactPerson.phoneNumber" />
@@ -2510,6 +2560,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignor.ContactPerson.eMailAddress" />
@@ -2568,6 +2619,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignee.identificationNumber" />
@@ -2586,6 +2638,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignee.name" />
@@ -2618,6 +2671,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignee.Address.streetAndNumber" />
@@ -2636,6 +2690,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignee.Address.postcode" />
@@ -2654,6 +2709,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.Consignee.Address.city" />
@@ -2725,6 +2781,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.Consignment.Carrier.identificationNumber" />
@@ -2743,6 +2800,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.Consignment.Carrier.ContactPerson.name" />
@@ -2761,6 +2819,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.Consignment.Carrier.ContactPerson.eMailAddress" />
@@ -2779,6 +2838,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.Consignment.Carrier.ContactPerson.phoneNumber" />
@@ -2862,6 +2922,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="identificationNumber" />
@@ -2994,6 +3055,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="otherGuaranteeReference" />
@@ -3062,6 +3124,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <CaptionVAlign value="Middle" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="50%" />
                                                                       <Bindings>
                                                                         <Binding SourceProperty="Data" Expression="GRN" />
@@ -3080,6 +3143,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <CaptionVAlign value="Middle" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="50%" />
                                                                       <Bindings>
                                                                         <Binding SourceProperty="Data" Expression="accessCode" />
@@ -3112,6 +3176,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <CaptionVAlign value="Middle" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="50%" />
                                                                       <Bindings>
                                                                         <Binding SourceProperty="Data" Expression="amountToBeCovered" />
@@ -3294,6 +3359,7 @@
                                                       <CaptionPosition value="Top" />
                                                       <CaptionVAlign value="Middle" />
                                                       <Panel.Height value="#" />
+                                                      <Panel.VerticalAlignment value="Bottom" />
                                                       <Panel.Width value="50%" />
                                                       <Bindings>
                                                         <Binding SourceProperty="Data" Expression="containerIdentificationNumber" />
@@ -3311,6 +3377,7 @@
                                                       <CaptionPosition value="Top" />
                                                       <CaptionVAlign value="Middle" />
                                                       <Panel.Height value="#" />
+                                                      <Panel.VerticalAlignment value="Bottom" />
                                                       <Panel.Width value="50%" />
                                                       <Bindings>
                                                         <Binding SourceProperty="Data" Expression="numberOfSeals" />
@@ -3371,6 +3438,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <CaptionVAlign value="Middle" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="100%" />
                                                                       <Bindings>
                                                                         <Binding SourceProperty="Data" Expression="identifier" />
@@ -3449,6 +3517,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <CaptionVAlign value="Middle" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="100%" />
                                                                       <Bindings>
                                                                         <Binding SourceProperty="Data" Expression="declarationGoodsItemNumber" />
@@ -3589,6 +3658,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.authorisationNumber" />
@@ -3607,6 +3677,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.additionalIdentifier" />
@@ -3694,6 +3765,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.GNSS.latitude" />
@@ -3712,6 +3784,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.GNSS.longitude" />
@@ -3751,6 +3824,7 @@
                                               <Name value="textBox40" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="300px" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.EconomicOperator.identificationNumber" />
@@ -3783,6 +3857,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.Address.streetAndNumber" />
@@ -3801,6 +3876,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.Address.postcode" />
@@ -3819,6 +3895,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.Address.city" />
@@ -3870,6 +3947,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.AddressT.houseNumber" />
@@ -3888,6 +3966,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.AddressT.postcode" />
@@ -3939,6 +4018,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.ContactPerson.name" />
@@ -3957,6 +4037,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.ContactPerson.phoneNumber" />
@@ -3975,6 +4056,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignment.LocationOfGoods.ContactPerson.eMailAddress" />
@@ -4090,6 +4172,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.PlaceOfLoading.location" />
@@ -4185,6 +4268,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="Model.Consignment.PlaceOfUnloading.location" />
@@ -4307,6 +4391,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -4339,6 +4424,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="100%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="complementOfInformation" />
@@ -4450,6 +4536,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -4482,6 +4569,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="documentLineItemNumber" />
@@ -4500,6 +4588,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <CaptionVAlign value="Middle" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <Bindings>
                                                                     <Binding SourceProperty="Data" Expression="complementOfInformation" />
@@ -4619,6 +4708,7 @@
                                                               <CaptionPosition value="Top" />
                                                               <CaptionVAlign value="Middle" />
                                                               <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
                                                               <Panel.Width value="50%" />
                                                               <Bindings>
                                                                 <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -4716,6 +4806,7 @@
                                                               <CaptionPosition value="Top" />
                                                               <CaptionVAlign value="Middle" />
                                                               <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
                                                               <Panel.Width value="50%" />
                                                               <Bindings>
                                                                 <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -4837,6 +4928,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <CaptionVAlign value="Middle" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <Bindings>
                                                     <Binding SourceProperty="Data" Expression="text" />
@@ -6963,7 +7055,7 @@ globals.busyIndicatorIsRunning = false]]></Script>
       <Name value="handler_testTutton_LoadAllJson_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var data = "{\"Consignment\":{\"DepartureTransportMeans\":[{\"sequenceNumber\":1}],\"grossMass\":\"1002\",\"CountryOfRoutingOfConsignment\":[{\"sequenceNumber\":1,\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}}],\"TransportDocument\":[{\"sequenceNumber\":1,\"type\":{\"Code\":\"N722\",\"Description\":\"Road list - SMGS\",\"_description\":\"N722 - Road list - SMGS\"},\"referenceNumber\":\"1\"}],\"HouseConsignment\":[{\"sequenceNumber\":1,\"grossMass\":\"369\",\"TransportCharges\":{\"methodOfPayment\":{\"Code\":\"C\",\"Description\":\"Payment by cheque\",\"_description\":\"C - Payment by cheque\"}},\"_decisiveDate\":\"2020-06-09T15:32:11.601\",\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"ConsignmentItem\":[{\"Packaging\":[{\"sequenceNumber\":1199,\"typeOfPackages\":{\"Code\":\"ZA\",\"Description\":\"Intermediate bulk container, paper, multi-wall\",\"_description\":\"ZA - Intermediate bulk container, paper, multi-wall\"}}],\"Commodity\":{\"descriptionOfGoods\":\"Something cool\",\"CommodityCode\":{\"harmonisedSystemSubHeadingCode\":{\"Code\":\"988050\",\"Description\":\"See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\",\"_description\":\"988050 - See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\"}}},\"goodsItemNumber\":1,\"declarationGoodsItemNumber\":109,\"_declarationTypeRequired\":false,\"_declarationTypePresent\":true,\"_countryOfDestinationRequired\":false,\"_itemPriceEnabled\":false,\"_complementOfInformationRequired\":true,\"_decisiveDate\":\"2020-06-08T17:50:05.689\",\"_countryOfDispatchEnabled\":true,\"_goodsMeasureRequired\":false}]}]},\"Guarantee\":[{\"GuaranteeReference\":[{\"currency\":{\"Code\":\"EUR\",\"Description\":\"Euro\",\"_description\":\"EUR - Euro\"},\"sequenceNumber\":1,\"GRN\":\"20ME123450C100103\",\"accessCode\":\"2222\",\"amountToBeCovered\":\"100\"}],\"guaranteeType\":{\"Code\":\"1\",\"Description\":\"Comprehensive guarantee\",\"_description\":\"1 - Comprehensive guarantee\"},\"sequenceNumber\":1,\"otherGuaranteeReference\":\"19RS025003N000020\"}],\"HolderOfTheTransitProcedure\":{\"Address\":{\"streetAndNumber\":\"Ulice\",\"city\":\"Praha\",\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}},\"identificationNumber\":\"543\",\"ContactPerson\":{\"name\":\"Simon Super Trader\",\"phoneNumber\":\"123456\"}},\"CustomsOfficeOfTransitDeclared\":[{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"},\"sequenceNumber\":111}],\"TransitOperation\":{\"declarationType\":{\"Code\":\"T1\",\"Description\":\"Goods not having the customs status of Union goods, which are placed under the common transit procedure.\",\"_description\":\"T1 - Goods not having the customs status of Union goods, which are placed under the common transit procedure.\"},\"LRN\":\"1001\",\"fallbackProcedure\":false,\"additionalDeclarationType\":{\"Code\":\"A\",\"Description\":\"for a standard customs declaration (under Article 162 of the Code)\",\"_description\":\"A - for a standard customs declaration (under Article 162 of the Code)\"},\"security\":{\"Code\":\"0\",\"Description\":\"Not used for safety and security purposes\",\"_description\":\"0 - Not used for safety and security purposes\"},\"reducedDatasetIndicator\":false,\"bindingItinerary\":false},\"CustomsOfficeOfDeparture\":{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"}},\"CustomsOfficeOfDestinationDeclared\":{\"referenceNumber\":{\"Code\":\"CZ540201\",\"_description\":\"CZ540201\"}},\"_decisiveDate\":\"2020-06-09T14:35:32.066\",\"_TIRValidityDateRequired\":false,\"_FallbackProcedureEnabled\":false,\"_TIRCarnetNumberRequired\":false,\"_reducedDatasetIndicatorNull\":false,\"_TotalValueOfGoodsEnabled\":false,\"_limitDateRequired\":false,\"_TIRHolderIdentificationNumberRequired\":false,\"_additionalDeclarationTypeRequired\":false,\"_inlandModeOfTransportOptional\":false,\"_amountToBeCoveredRequired\":false,\"_additionalIdentifierRequired\":false,\"_ActiveBorderTransportMeansRequired\":false,\"_modeOfTransportAtTheBorderRequired\":false,\"_conveyanceReferenceNumberRequired\":false,\"_complementOfInformationOptional\":false,\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"_countyOfDispatchPresent\":false,\"_logAddressRequired\":false,\"_logAuthorisationNumberRequired\":false,\"_logUNLocodeRequired\":false,\"_logCustomsOfficeRequired\":false,\"_logGNSSRequired\":false,\"_logEconomicOperatorRequired\":false,\"_logAdrdessTRequired\":true,\"_typeOfIdentificationRequired\":false,\"_identificationNumberRequired\":false}"
+        <Script><![CDATA[var data = "{\"Consignment\":{\"DepartureTransportMeans\":[{\"sequenceNumber\":1}],\"grossMass\":\"1002\",\"CountryOfRoutingOfConsignment\":[{\"sequenceNumber\":1,\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}}],\"TransportDocument\":[{\"sequenceNumber\":1,\"type\":{\"Code\":\"N722\",\"Description\":\"Road list - SMGS\",\"_description\":\"N722 - Road list - SMGS\"},\"referenceNumber\":\"1\"}],\"HouseConsignment\":[{\"sequenceNumber\":1,\"grossMass\":\"369\",\"TransportCharges\":{\"methodOfPayment\":{\"Code\":\"C\",\"Description\":\"Payment by cheque\",\"_description\":\"C - Payment by cheque\"}},\"_decisiveDate\":\"2020-06-09T15:31:08.821\",\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"ConsignmentItem\":[{\"Packaging\":[{\"sequenceNumber\":1199,\"typeOfPackages\":{\"Code\":\"ZA\",\"Description\":\"Intermediate bulk container, paper, multi-wall\",\"_description\":\"ZA - Intermediate bulk container, paper, multi-wall\"}}],\"Commodity\":{\"descriptionOfGoods\":\"Something cool\",\"CommodityCode\":{\"harmonisedSystemSubHeadingCode\":{\"Code\":\"988050\",\"Description\":\"See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\",\"_description\":\"988050 - See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988050\"}}},\"goodsItemNumber\":1,\"declarationGoodsItemNumber\":109,\"_declarationTypeRequired\":false,\"_declarationTypePresent\":true,\"_countryOfDestinationRequired\":false,\"_itemPriceEnabled\":false,\"_complementOfInformationRequired\":true,\"_decisiveDate\":\"2020-06-08T17:50:05.689\",\"_countryOfDispatchEnabled\":true,\"_goodsMeasureRequired\":false}]}]},\"Guarantee\":[{\"GuaranteeReference\":[{\"currency\":{\"Code\":\"EUR\",\"Description\":\"Euro\",\"_description\":\"EUR - Euro\"},\"sequenceNumber\":1,\"GRN\":\"20ME123450C100103\",\"accessCode\":\"2222\",\"amountToBeCovered\":\"100\"}],\"guaranteeType\":{\"Code\":\"1\",\"Description\":\"Comprehensive guarantee\",\"_description\":\"1 - Comprehensive guarantee\"},\"sequenceNumber\":1,\"otherGuaranteeReference\":\"19RS025003N000020\"}],\"HolderOfTheTransitProcedure\":{\"Address\":{\"streetAndNumber\":\"Ulice\",\"city\":\"Praha\",\"country\":{\"Code\":\"CZ\",\"Description\":\"Czechia\",\"_description\":\"CZ - Czechia\"}},\"identificationNumber\":\"543\",\"TIRHolderIdentificationNumber\":\"9876\",\"ContactPerson\":{\"name\":\"Simon Super Trader\",\"phoneNumber\":\"123456\"}},\"CustomsOfficeOfTransitDeclared\":[{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"},\"sequenceNumber\":111}],\"TransitOperation\":{\"declarationType\":{\"Code\":\"T1\",\"Description\":\"Goods not having the customs status of Union goods, which are placed under the common transit procedure.\",\"_description\":\"T1 - Goods not having the customs status of Union goods, which are placed under the common transit procedure.\"},\"LRN\":\"1001\",\"fallbackProcedure\":false,\"additionalDeclarationType\":{\"Code\":\"A\",\"Description\":\"for a standard customs declaration (under Article 162 of the Code)\",\"_description\":\"A - for a standard customs declaration (under Article 162 of the Code)\"},\"TIRvalidityDate\":\"2020-07-01\",\"security\":{\"Code\":0,\"Description\":\"Not used for safety and security purposes\",\"_description\":\"0 - Not used for safety and security purposes\"},\"reducedDatasetIndicator\":false,\"bindingItinerary\":false},\"CustomsOfficeOfDeparture\":{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"_description\":\"ME123456 - Carinarnica Podgorica\"}},\"CustomsOfficeOfDestinationDeclared\":{\"referenceNumber\":{\"Code\":\"CZ510201\",\"_description\":\"CZ510201\"}},\"_decisiveDate\":\"2020-06-10T12:44:37.975\",\"_TIRValidityDateRequired\":false,\"_FallbackProcedureEnabled\":false,\"_TIRCarnetNumberRequired\":false,\"_reducedDatasetIndicatorNull\":false,\"_TotalValueOfGoodsEnabled\":false,\"_limitDateRequired\":false,\"_TIRHolderIdentificationNumberRequired\":false,\"_additionalDeclarationTypeRequired\":false,\"_inlandModeOfTransportOptional\":false,\"_amountToBeCoveredRequired\":false,\"_additionalIdentifierRequired\":false,\"_ActiveBorderTransportMeansRequired\":false,\"_modeOfTransportAtTheBorderRequired\":false,\"_conveyanceReferenceNumberRequired\":false,\"_complementOfInformationOptional\":false,\"_E1602Enabled\":false,\"_countryOfDispatchEnabled\":false,\"_countyOfDispatchPresent\":false,\"_logAddressRequired\":false,\"_logAuthorisationNumberRequired\":false,\"_logUNLocodeRequired\":false,\"_logCustomsOfficeRequired\":false,\"_logGNSSRequired\":false,\"_logEconomicOperatorRequired\":false,\"_logAdrdessTRequired\":true,\"_typeOfIdentificationRequired\":false,\"_identificationNumberRequired\":false}"
 
 apiobjects.transitDeclaration.fromJson(data)
 
