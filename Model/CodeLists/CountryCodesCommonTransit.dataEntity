@@ -47,7 +47,7 @@
       <MtsImportOptions.MTS.Type value="codelist-item" />
       <DeclaredType>
         <AttributeType>
-          <BaseType value="Decimal" />
+          <BaseType value="Integer" />
           <IntMax value="999" />
           <IntMin value="0" />
         </AttributeType>
