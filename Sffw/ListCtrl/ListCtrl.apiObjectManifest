@@ -329,6 +329,34 @@
       <Description value="Clears filters on all invisible columns" />
       <ReturnType />
     </MethodManifest>
+    <MethodManifest>
+      <Name value="getDataExportUrl" />
+      <Description value="Gets URL for data export download hyperlink" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="format" />
+          <BaseType value="String" />
+          <UiDescription value="Format name (&quot;xlsx&quot; etc...depends on backend support). If not provided, &quot;undefined&quot; will be set." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getODataFilterQueryParam" />
+      <Description value="Returns current filtering expression in OData format, f.e. &quot;$filter=Name eq 'John'&quot;" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getODataOrderByQueryParam" />
+      <Description value="Returns current sorting expression in OData format, f.e. &quot;$orderby=Name desc&quot;" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
   </Methods>
   <Properties>
     <PropertyManifest>

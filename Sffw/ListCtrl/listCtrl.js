@@ -215,6 +215,15 @@ var sffw;
                 ListCtrlApi.prototype.clearState = function () {
                     this.listCtrlCore.clearState();
                 };
+                ListCtrlApi.prototype.getDataExportUrl = function (args) {
+                    return this.listCtrlCore.getDataExportUrl(args.format || 'undefined');
+                };
+                ListCtrlApi.prototype.getODataFilterQueryParam = function () {
+                    return this.listCtrlCore.getODataFilterQueryParam();
+                };
+                ListCtrlApi.prototype.getODataOrderByQueryParam = function () {
+                    return this.listCtrlCore.getODataOrderByQueryParam();
+                };
                 ListCtrlApi.prototype.dispose = function () {
                     this.listCtrlCore.dispose();
                     this.listCtrlCore = null;
@@ -286,83 +295,7 @@ var sffw;
                             oDataParams.push(orderByParam);
                         }
                         // filtering
-                        _.each(columnFilters, function (colFilter) {
-                            var column = _.find(columns, function (colDef) {
-                                return colDef.Name === colFilter.name;
-                            });
-                            if (column) {
-                                if (colFilter instanceof listCtrl.TextColumnFilter) {
-                                    var filterVal = colFilter.getValue();
-                                    if (filterVal) {
-                                        var filterArray_1 = [];
-                                        _.forEach(colFilter.getValue().split(','), function (value) {
-                                            switch (column.DataType) {
-                                                case 'string':
-                                                    var uriEncodedValue = sffw.replaceUriParamSpecialChars(value);
-                                                    switch (column.FilterOperatorType) {
-                                                        case 'eq':
-                                                            filterArray_1.push("(" + colFilter.name + " eq '" + uriEncodedValue + "')");
-                                                            break;
-                                                        case 'substring':
-                                                            filterArray_1.push("contains(" + colFilter.name + ", '" + uriEncodedValue + "')");
-                                                            break;
-                                                        default:
-                                                            filterArray_1.push("startswith(" + colFilter.name + ", '" + uriEncodedValue + "')");
-                                                            break;
-                                                    }
-                                                    break;
-                                                case 'integer':
-                                                    var intValue = +value;
-                                                    if (!isNaN(intValue)) {
-                                                        filterArray_1.push("(" + colFilter.name + " eq " + intValue + ")");
-                                                    }
-                                                    else {
-                                                        console.log("ignoring invalid " + column.DataType + " filter value(" + value + ") on column " + colFilter.name);
-                                                    }
-                                                    break;
-                                                case 'decimal':
-                                                    var decValue = +value;
-                                                    if (!isNaN(decValue)) {
-                                                        // 'm' as suffix means OData decimal; if it should be double, it would be 'd'
-                                                        filterArray_1.push("(" + colFilter.name + " eq " + decValue + "m)");
-                                                    }
-                                                    else {
-                                                        console.log("ignoring invalid " + column.DataType + " filter value(" + value + ") on column " + colFilter.name);
-                                                    }
-                                                    break;
-                                                default:
-                                                    console.log("ignoring text filter value on column " + colFilter.name + "(" + column.DataType + ")");
-                                                    break;
-                                            }
-                                        });
-                                        if (filterArray_1.length > 0) {
-                                            oDataQueryFilter.push("( " + filterArray_1.join(' or ') + " )");
-                                        }
-                                    }
-                                }
-                                else if (colFilter instanceof listCtrl.BoolColumnFilter) {
-                                    if (colFilter.getValue() != null) {
-                                        oDataQueryFilter.push("(" + colFilter.name + " eq " + colFilter.getValue() + ")");
-                                    }
-                                }
-                                else if (colFilter instanceof listCtrl.DateRangeColumnFilter) {
-                                    if (colFilter.getStart()) {
-                                        var from = moment(colFilter.getStart()).format('YYYY-MM-DD') + 'T00:00:00';
-                                        oDataQueryFilter.push("(" + colFilter.name + " ge datetime'" + from + "')");
-                                    }
-                                    if (colFilter.getEnd()) {
-                                        var to = moment(colFilter.getEnd()).format('YYYY-MM-DD') + 'T23:59:59';
-                                        oDataQueryFilter.push("(" + colFilter.name + " le datetime'" + to + "')");
-                                    }
-                                }
-                                else {
-                                    console.log("ignoring nonimplemented type of filter on column " + colFilter.name);
-                                }
-                            }
-                            else {
-                                console.log("ignoring filter on unknown column " + colFilter.name);
-                            }
-                        });
+                        oDataQueryFilter = oDataQueryFilter.concat(_this.getColumnsFilter(columnFilters, columns));
                         if (oDataFilter) {
                             if (typeof (oDataFilter) === 'string') {
                                 oDataQueryFilter.push("(" + oDataFilter + ")");
@@ -397,6 +330,157 @@ var sffw;
                             }
                         }).catch(reject);
                     });
+                };
+                ListDataProvider.prototype.getColumnsFilter = function (columnFilters, columns) {
+                    var oDataQueryFilter = [];
+                    _.each(columnFilters, function (colFilter) {
+                        var column = _.find(columns, function (colDef) {
+                            return colDef.Name === colFilter.name;
+                        });
+                        if (column) {
+                            if (colFilter instanceof listCtrl.TextColumnFilter) {
+                                var filterVal = colFilter.getValue();
+                                if (filterVal) {
+                                    var filterArray_1 = [];
+                                    _.forEach(colFilter.getValue().split(','), function (value) {
+                                        switch (column.DataType) {
+                                            case 'string':
+                                                var uriEncodedValue = sffw.replaceUriParamSpecialChars(value);
+                                                switch (column.FilterOperatorType) {
+                                                    case 'eq':
+                                                        filterArray_1.push("(" + colFilter.name + " eq '" + uriEncodedValue + "')");
+                                                        break;
+                                                    case 'substring':
+                                                        filterArray_1.push("contains(" + colFilter.name + ", '" + uriEncodedValue + "')");
+                                                        break;
+                                                    default:
+                                                        filterArray_1.push("startswith(" + colFilter.name + ", '" + uriEncodedValue + "')");
+                                                        break;
+                                                }
+                                                break;
+                                            case 'integer':
+                                                var intValue = +value;
+                                                if (!isNaN(intValue)) {
+                                                    filterArray_1.push("(" + colFilter.name + " eq " + intValue + ")");
+                                                }
+                                                else {
+                                                    console.log("ignoring invalid " + column.DataType + " filter value(" + value + ") on column " + colFilter.name);
+                                                }
+                                                break;
+                                            case 'decimal':
+                                                var decValue = +value;
+                                                if (!isNaN(decValue)) {
+                                                    // 'm' as suffix means OData decimal; if it should be double, it would be 'd'
+                                                    filterArray_1.push("(" + colFilter.name + " eq " + decValue + "m)");
+                                                }
+                                                else {
+                                                    console.log("ignoring invalid " + column.DataType + " filter value(" + value + ") on column " + colFilter.name);
+                                                }
+                                                break;
+                                            default:
+                                                console.log("ignoring text filter value on column " + colFilter.name + "(" + column.DataType + ")");
+                                                break;
+                                        }
+                                    });
+                                    if (filterArray_1.length > 0) {
+                                        oDataQueryFilter.push("( " + filterArray_1.join(' or ') + " )");
+                                    }
+                                }
+                            }
+                            else if (colFilter instanceof listCtrl.BoolColumnFilter) {
+                                if (colFilter.getValue() != null) {
+                                    oDataQueryFilter.push("(" + colFilter.name + " eq " + colFilter.getValue() + ")");
+                                }
+                            }
+                            else if (colFilter instanceof listCtrl.DateRangeColumnFilter) {
+                                if (colFilter.getStart()) {
+                                    var from = moment(colFilter.getStart()).format('YYYY-MM-DD') + 'T00:00:00';
+                                    oDataQueryFilter.push("(" + colFilter.name + " ge datetime'" + from + "')");
+                                }
+                                if (colFilter.getEnd()) {
+                                    var to = moment(colFilter.getEnd()).format('YYYY-MM-DD') + 'T23:59:59';
+                                    oDataQueryFilter.push("(" + colFilter.name + " le datetime'" + to + "')");
+                                }
+                            }
+                            else {
+                                console.log("ignoring nonimplemented type of filter on column " + colFilter.name);
+                            }
+                        }
+                        else {
+                            console.log("ignoring filter on unknown column " + colFilter.name);
+                        }
+                    });
+                    return oDataQueryFilter;
+                };
+                ListDataProvider.prototype.getDataExportUrl = function (listName, columns, sortColumn, columnFilters, oDataFilter, format) {
+                    var baseUrl = (this.server.listsUrl || '') + listName;
+                    var oDataParams = [];
+                    var oDataQueryFilter = [];
+                    // columns
+                    oDataParams.push('$select=' + _.map(columns, 'Name').join(','));
+                    // sorting
+                    if (sortColumn) {
+                        var orderByParam = '$orderby=' + sortColumn.name;
+                        if (sortColumn.sortOrder) {
+                            orderByParam += " " + sortColumn.sortOrder;
+                        }
+                        oDataParams.push(orderByParam);
+                    }
+                    // filtering
+                    oDataQueryFilter = oDataQueryFilter.concat(this.getColumnsFilter(columnFilters, columns));
+                    if (oDataFilter) {
+                        if (typeof (oDataFilter) === 'string') {
+                            oDataQueryFilter.push("(" + oDataFilter + ")");
+                        }
+                        else if (_.isFunction(oDataFilter)) {
+                            if (oDataFilter != null && oDataFilter !== '') {
+                                oDataQueryFilter.push(oDataFilter);
+                            }
+                        }
+                        else {
+                            console.error("Ignoring additionalFilter when generating data export URL for decllist " + listName + " as its type was not recognized");
+                        }
+                    }
+                    if (oDataQueryFilter.length > 0) {
+                        oDataParams.push('$filter=' + oDataQueryFilter.join(' and '));
+                    }
+                    // format
+                    oDataParams.push("$format=" + format);
+                    return baseUrl + '?' + oDataParams.join('&');
+                };
+                ListDataProvider.prototype.getODataFilterQueryParam = function (columns, columnFilters, oDataFilter) {
+                    var oDataQueryFilter = this.getColumnsFilter(columnFilters, columns);
+                    if (oDataFilter) {
+                        if (typeof (oDataFilter) === 'string') {
+                            oDataQueryFilter.push("(" + oDataFilter + ")");
+                        }
+                        else if (_.isFunction(oDataFilter)) {
+                            if (oDataFilter != null && oDataFilter !== '') {
+                                oDataQueryFilter.push(oDataFilter);
+                            }
+                        }
+                        else {
+                            console.error("Ignoring additionalFilter when generating filter query param as its type was not recognized");
+                        }
+                    }
+                    if (oDataQueryFilter.length > 0) {
+                        return '$filter=' + oDataQueryFilter.join(' and ');
+                    }
+                    else {
+                        return "";
+                    }
+                };
+                ListDataProvider.prototype.getODataOrderByQueryParam = function (sortColumn) {
+                    if (sortColumn) {
+                        var orderByParam = '$orderby=' + sortColumn.name;
+                        if (sortColumn.sortOrder) {
+                            orderByParam += " " + sortColumn.sortOrder;
+                        }
+                        return orderByParam;
+                    }
+                    else {
+                        return "";
+                    }
                 };
                 return ListDataProvider;
             }());
@@ -1099,6 +1183,15 @@ var sffw;
                             }
                         }
                     });
+                };
+                ListCtrlCore.prototype.getDataExportUrl = function (format) {
+                    return this.dataProvider.getDataExportUrl(this.listName, this.columns, this.sortColumn(), this.columnFilters(), this.oDataFilter(), format);
+                };
+                ListCtrlCore.prototype.getODataFilterQueryParam = function () {
+                    return this.dataProvider.getODataFilterQueryParam(this.columns, this.columnFilters(), this.oDataFilter());
+                };
+                ListCtrlCore.prototype.getODataOrderByQueryParam = function () {
+                    return this.dataProvider.getODataOrderByQueryParam(this.sortColumn());
                 };
                 // #endregion
                 ListCtrlCore.prototype.getVisibleColumnsCore = function (allUnremovableFirst) {
