@@ -125,5 +125,73 @@ apiobjects.TransportDocumentType.startLoadingData(getDateTime())]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="goToForm" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if errorSourceForm.hasValue() then
+	system.console("goToForm::navigationTreeNode=" + navigationTreeNode)
+	if errorSourceForm = "Header" then
+	//	navigation.main.Header.withErrorSourceComponent
+	//	(errorSourceComponent).withErrorPointer(pointer).go()
+	endif
+else
+	navigation.main.home.go()
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="errorSourceForm" />
+              <Caption value="Error source form" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="errorSourceComponent" />
+              <Caption value="Error source component" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="navigationTreeNode" />
+              <Caption value="Navigation tree node" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="authentication" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//AUTENTIFIKACE
+var response = apiobjects.CIC.postAsync("login", defaultString())
+
+if response.isError() then
+	apiobjects.notificationsCtrl.addError("Your authentication request has failed.")
+	system.console(response.getJsonString())	
+else
+		
+	globals.loginResponse.fromJson(response.getJsonString())
+	system.console(globals.loginResponse.toJson())
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
 </GlobalActions>

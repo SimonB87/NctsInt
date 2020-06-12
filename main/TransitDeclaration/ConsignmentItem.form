@@ -309,6 +309,7 @@
                               <Name value="textBox6" />
                               <CaptionPosition value="Top" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.declarationGoodsItemNumber" />
@@ -327,6 +328,7 @@
                               <CaptionPosition value="Top" />
                               <DisplayMember value="_description" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                               <Bindings>
@@ -372,6 +374,7 @@
                               <CaptionPosition value="Top" />
                               <DisplayMember value="_description" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                               <Bindings>
@@ -392,6 +395,7 @@
                               <CaptionPosition value="Top" />
                               <DisplayMember value="_description" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                               <Bindings>
@@ -425,6 +429,7 @@
                               <Name value="textBox7" />
                               <CaptionPosition value="Top" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.referenceNumberUCR" />
@@ -442,6 +447,7 @@
                               <Name value="textBox9" />
                               <CaptionPosition value="Top" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.ItemPriceEUR" />
@@ -542,6 +548,7 @@
                                   <CaptionPosition value="Top" />
                                   <CaptionVAlign value="Middle" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="50%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="Model.Consignee.identificationNumber" />
@@ -560,6 +567,7 @@
                                   <CaptionPosition value="Top" />
                                   <CaptionVAlign value="Middle" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="50%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="Model.Consignee.name" />
@@ -592,6 +600,7 @@
                                   <CaptionPosition value="Top" />
                                   <CaptionVAlign value="Middle" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="25%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="Model.Consignee.Address.streetAndNumber" />
@@ -610,6 +619,7 @@
                                   <CaptionPosition value="Top" />
                                   <CaptionVAlign value="Middle" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="25%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="Model.Consignee.Address.postcode" />
@@ -628,6 +638,7 @@
                                   <CaptionPosition value="Top" />
                                   <CaptionVAlign value="Middle" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="25%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="Model.Consignee.Address.city" />
@@ -646,6 +657,7 @@
                                   <CaptionPosition value="Top" />
                                   <DisplayMember value="_description" />
                                   <Panel.Height value="#" />
+                                  <Panel.VerticalAlignment value="Bottom" />
                                   <Panel.Width value="25%" />
                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                   <Bindings>
@@ -735,6 +747,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -753,6 +766,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -772,6 +786,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="identificationNumber" />
@@ -846,6 +861,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.descriptionOfGoods" />
@@ -864,6 +880,7 @@
                               <CaptionPosition value="Top" />
                               <DisplayMember value="_description" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="50%" />
                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                               <Bindings>
@@ -897,6 +914,7 @@
                               <CaptionPosition value="Top" />
                               <DisplayMember value="_description" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="25%" />
                               <ReferenceList reference="+GlobalApiObjects.HScode" />
                               <Bindings>
@@ -916,6 +934,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="25%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.CommodityCode.combinedNomenclatureCode" />
@@ -934,6 +953,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="25%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.CommodityCode.NacionalCode" />
@@ -952,6 +972,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="25%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.CommodityCode.ExciseGoodsQuantity" />
@@ -1014,6 +1035,7 @@
                                               <CaptionPosition value="Top" />
                                               <CaptionVAlign value="Middle" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1032,6 +1054,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -1095,6 +1118,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="33%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.GoodsMeasure.grossMass" />
@@ -1113,6 +1137,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="33%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.GoodsMeasure.netMass" />
@@ -1131,6 +1156,7 @@
                               <CaptionPosition value="Top" />
                               <CaptionVAlign value="Middle" />
                               <Panel.Height value="#" />
+                              <Panel.VerticalAlignment value="Bottom" />
                               <Panel.Width value="33%" />
                               <Bindings>
                                 <Binding SourceProperty="Data" Expression="Model.Commodity.GoodsMeasure.supplementaryUnits" />
@@ -1217,6 +1243,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1235,6 +1262,7 @@
                                           <CaptionPosition value="Top" />
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <ReferenceList reference="+GlobalApiObjects.KindOfPackages" />
                                           <Bindings>
@@ -1254,6 +1282,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="numberOfPackages" />
@@ -1272,6 +1301,7 @@
                                           <CaptionPosition value="Top" />
                                           <CaptionVAlign value="Middle" />
                                           <Panel.Height value="#" />
+                                          <Panel.VerticalAlignment value="Bottom" />
                                           <Panel.Width value="25%" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="shippingMarks" />
@@ -1374,6 +1404,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="25%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1392,6 +1423,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="25%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -1410,6 +1442,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="25%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="goodsItemNumber" />
@@ -1428,6 +1461,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="25%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="numberOfPackages" />
@@ -1460,6 +1494,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="50%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1480,6 +1515,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="50%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1513,6 +1549,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="complementOfInformation" />
@@ -1532,6 +1569,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="quantity" />
@@ -1550,6 +1588,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1644,6 +1683,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1662,6 +1702,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1681,6 +1722,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -1713,6 +1755,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="50%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="documentLineItemNumber" />
@@ -1731,6 +1774,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="50%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="complementOfInformation" />
@@ -1825,6 +1869,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1843,6 +1888,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1862,6 +1908,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -1956,6 +2003,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="sequenceNumber" />
@@ -1974,6 +2022,7 @@
                                       <CaptionPosition value="Top" />
                                       <DisplayMember value="_description" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                       <Bindings>
@@ -1993,6 +2042,7 @@
                                       <CaptionPosition value="Top" />
                                       <CaptionVAlign value="Middle" />
                                       <Panel.Height value="#" />
+                                      <Panel.VerticalAlignment value="Bottom" />
                                       <Panel.Width value="33%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="text" />

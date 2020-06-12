@@ -196,7 +196,7 @@
               <Children>
                 <FormPlaceholder>
                   <Name value="formPlaceholder" />
-                  <InitialForm reference="+UiParts.Home" />
+                  <InitialForm reference="+UiParts.DecList" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                 </FormPlaceholder>
@@ -218,12 +218,23 @@
                   <Name value="growlNotification" />
                   <controller reference="+GlobalApiObjects.notificationsCtrl" />
                   <displayTime value="6000" />
+                  <iconClassClose value="fa fa-times" />
+                  <iconClassError value="fa fa-exclamation" />
+                  <iconClassInfo value="fa fa-info-circle" />
+                  <iconClassSuccess value="fa fa-check-circle" />
+                  <iconClassWarning value="fa fa-exclamation-triangle" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                 </GrowlNotification>
                 <NotificationPanel identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
                   <Name value="notificationPanel" />
                   <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                  <iconClassClose value="fa fa-times" />
+                  <iconClassDisplayGrowlNotifications value="fa fa-eye" />
+                  <iconClassError value="fa fa-exclamation" />
+                  <iconClassInfo value="fa fa-info-circle" />
+                  <iconClassSuccess value="fa fa-check-circle" />
+                  <iconClassWarning value="fa fa-exclamation-triangle" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                 </NotificationPanel>
@@ -302,8 +313,7 @@ apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
 //Customs office of ME in db :
 //ME123456    Carinarnica Podgorica		Capital Town
 //ME123450    Aerodromi Podgorica		Capital Town - Airport
-//ME123457    Carinarnica Kotor			Sea Port
-]]></Script>
+//ME123457    Carinarnica Kotor			Sea Port]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

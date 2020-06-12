@@ -393,6 +393,22 @@
                     </CssClassConditional>
                   </CssClass>
                 </HyperLink>
+                <HyperLink>
+                  <Name value="validationSummary_link" />
+                  <Data value="Validation summary" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Target value="_self" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~action6" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-hyperlink" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </HyperLink>
               </Children>
               <CssClass>
                 <CssClassConditional>
@@ -446,12 +462,12 @@
                           </CssClass>
                         </Button>
                         <Button>
-                          <Name value="testTutton_LoadAllJson" />
-                          <Caption value="Test: Load Dummy Data" />
+                          <Name value="testButton_dataRequest" />
+                          <Caption value="Test: Send FBDataRequest" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_testTutton_LoadAllJson_OnClick" />
+                            <ActionEvent ReferencedAction="~handler_button_dataRequest_OnClick" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -461,12 +477,12 @@
                           </CssClass>
                         </Button>
                         <Button>
-                          <Name value="button_dataRequest" />
-                          <Caption value="Test: Send FBDataRequest" />
+                          <Name value="testButton_LoadAllJson" />
+                          <Caption value="Test: Load Dummy Data" />
                           <Panel.Height value="#" />
                           <Panel.Width value="150px" />
                           <OnClick>
-                            <ActionEvent ReferencedAction="~handler_button_dataRequest_OnClick" />
+                            <ActionEvent ReferencedAction="~handler_testTutton_LoadAllJson_OnClick" />
                           </OnClick>
                           <CssClass>
                             <CssClassConditional>
@@ -567,10 +583,135 @@
                 </Panel>
                 <Panel>
                   <Name value="content_pnl" />
-                  <Orientation value="Horizontal" />
+                  <Orientation value="Vertical" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                   <Children>
+                    <Panel>
+                      <Name value="panel311" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <GroupBox>
+                          <Name value="clientValidationsGrp" />
+                          <Caption value="Client validations summary" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="50%" />
+                          <Content>
+                            <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="clientValidationSummary1" />
+                              <OnItemClick>
+                                <ActionEvent ReferencedAction="~handler_clientValidationSummary1_OnItemClick" />
+                              </OnItemClick>
+                              <Bindings>
+                                <Binding SourceProperty="validationErrors" Expression="form.clientValidationErrors" />
+                                <Binding SourceProperty="validationRoot" Expression="form.Model" />
+                              </Bindings>
+                              <columns>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn1" />
+                                  <columnCaption value="Message" />
+                                  <propertyName value="Message" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn2" />
+                                  <columnCaption value="Type" />
+                                  <propertyName value="Type" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn3" />
+                                  <columnCaption value="Pointer" />
+                                  <columnRole value="pointer" />
+                                  <propertyName value="Pointer" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn4" />
+                                  <columnCaption value="Focuses to" />
+                                  <propertyName value="FocusTo" />
+                                </validationSummaryColumn>
+                              </columns>
+                            </ClientValidationSummary>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.panelsVisibility.IsClientValidationsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-groupbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-datatable" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </GroupBox>
+                        <GroupBox>
+                          <Name value="serverValidationsGrp" />
+                          <Caption value="Server validations summary" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="50%" />
+                          <Content>
+                            <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="serverValidationSummary1" />
+                              <OnItemClick>
+                                <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
+                              </OnItemClick>
+                              <Bindings>
+                                <Binding SourceProperty="validationErrors" Expression="form.serverValidationErrors" />
+                              </Bindings>
+                              <columns>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn5" />
+                                  <columnCaption value="Code" />
+                                  <propertyName value="Code" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn6" />
+                                  <columnCaption value="Description" />
+                                  <propertyName value="Description" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn7" />
+                                  <columnCaption value="Pointer" />
+                                  <columnRole value="pointer" />
+                                  <propertyName value="Pointer" />
+                                </validationSummaryColumn>
+                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="validationSummaryColumn8" />
+                                  <columnCaption value="Focuses to" />
+                                  <propertyName value="FocusTo" />
+                                </validationSummaryColumn>
+                              </columns>
+                            </ServerValidationSummary>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.panelsVisibility.IsServerValidationsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-groupbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-datatable" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </GroupBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel-main" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
                     <Panel>
                       <Name value="panel11" />
                       <Orientation value="Vertical" />
@@ -709,6 +850,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="+GlobalApiObjects.declarationType" />
                                                   <Bindings>
@@ -728,6 +870,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="+GlobalApiObjects.DeclarationTypeAdditional" />
                                                   <Bindings>
@@ -798,6 +941,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <ReferenceList reference="+GlobalApiObjects.DeclarationTypeSecurity" />
                                                   <Bindings>
@@ -817,6 +961,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="Code" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="20%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -904,6 +1049,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -923,6 +1069,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -942,6 +1089,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -961,6 +1109,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="25%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -1147,6 +1296,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -1265,6 +1415,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="100%" />
                                                   <ReferenceList reference="+GlobalApiObjects.CountryCodesFullList" />
                                                   <Bindings>
@@ -1330,6 +1481,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -1368,6 +1520,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -1472,9 +1625,11 @@
                                       <Children>
                                         <ReferenceCombo>
                                           <Name value="referenceCombo2" />
+                                          <CaptionPosition value="Top" />
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
-                                          <Panel.Width value="100%" />
+                                          <Panel.VerticalAlignment value="Bottom" />
+                                          <Panel.Width value="50%" />
                                           <ReferenceList reference="+GlobalApiObjects.CustomsOfficeDeparture" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.CustomsOfficeOfDeparture.referenceNumber" />
@@ -1516,9 +1671,11 @@
                                       <Children>
                                         <ReferenceCombo>
                                           <Name value="referenceCombo5" />
+                                          <CaptionPosition value="Top" />
                                           <DisplayMember value="_description" />
                                           <Panel.Height value="#" />
-                                          <Panel.Width value="100%" />
+                                          <Panel.VerticalAlignment value="Bottom" />
+                                          <Panel.Width value="50%" />
                                           <ReferenceList reference="+GlobalApiObjects.CustomsOfficeDestination" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="Model.CustomsOfficeOfDestinationDeclared.referenceNumber" />
@@ -1603,6 +1760,7 @@
                                                       <CaptionPosition value="Top" />
                                                       <DisplayMember value="_description" />
                                                       <Panel.Height value="#" />
+                                                      <Panel.VerticalAlignment value="Bottom" />
                                                       <Panel.Width value="50%" />
                                                       <ReferenceList reference="+GlobalApiObjects.CustomsOfficeTransitExit" />
                                                       <Bindings>
@@ -1621,6 +1779,7 @@
                                                       <Name value="datePicker2" />
                                                       <CaptionPosition value="Top" />
                                                       <Panel.Height value="#" />
+                                                      <Panel.VerticalAlignment value="Bottom" />
                                                       <Panel.Width value="50%" />
                                                       <Bindings>
                                                         <Binding SourceProperty="Data" Expression="arrivalDateAndTimeEstimated" />
@@ -1713,7 +1872,8 @@
                                                       <CaptionPosition value="Top" />
                                                       <DisplayMember value="_description" />
                                                       <Panel.Height value="#" />
-                                                      <Panel.Width value="100%" />
+                                                      <Panel.VerticalAlignment value="Bottom" />
+                                                      <Panel.Width value="50%" />
                                                       <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                       <Bindings>
                                                         <Binding SourceProperty="Data" Expression="referenceNumber" />
@@ -1949,6 +2109,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="+GlobalApiObjects.CountryCodesWithAddress" />
                                               <Bindings>
@@ -2089,6 +2250,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <DisplayMember value="_description" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                                   <Bindings>
@@ -2224,6 +2386,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -2477,6 +2640,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -2716,6 +2880,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -2891,6 +3056,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -3024,6 +3190,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <ReferenceList reference="+GlobalApiObjects.GuaranteeType" />
                                                   <Bindings>
@@ -3183,6 +3350,7 @@
                                                                       <CaptionPosition value="Top" />
                                                                       <DisplayMember value="_description" />
                                                                       <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
                                                                       <Panel.Width value="50%" />
                                                                       <ReferenceList reference="+GlobalApiObjects.CurrencyCodes" />
                                                                       <Bindings>
@@ -3608,6 +3776,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -3627,6 +3796,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -3697,6 +3867,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -3716,6 +3887,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="50%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -3902,6 +4074,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="25%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -3973,6 +4146,7 @@
                                               <CaptionPosition value="Top" />
                                               <DisplayMember value="_description" />
                                               <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
                                               <Panel.Width value="33%" />
                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                               <Bindings>
@@ -4123,6 +4297,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -4141,6 +4316,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -4219,6 +4395,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -4237,6 +4414,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="33%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -4359,6 +4537,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <DisplayMember value="_description" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                                   <Bindings>
@@ -4401,7 +4580,7 @@
                                                               </CssClass>
                                                             </Panel>
                                                             <Panel>
-                                                              <Name value="panel3" />
+                                                              <Name value="panel310" />
                                                               <Orientation value="Horizontal" />
                                                               <Panel.Height value="#" />
                                                               <Panel.Width value="*" />
@@ -4505,6 +4684,7 @@
                                                                   <CaptionPosition value="Top" />
                                                                   <DisplayMember value="_description" />
                                                                   <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
                                                                   <Panel.Width value="50%" />
                                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                                   <Bindings>
@@ -4677,6 +4857,7 @@
                                                               <CaptionPosition value="Top" />
                                                               <DisplayMember value="_description" />
                                                               <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
                                                               <Panel.Width value="50%" />
                                                               <ReferenceList reference="+GlobalApiObjects.TransportDocumentType" />
                                                               <Bindings>
@@ -4775,6 +4956,7 @@
                                                               <CaptionPosition value="Top" />
                                                               <DisplayMember value="_description" />
                                                               <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
                                                               <Panel.Width value="50%" />
                                                               <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                               <Bindings>
@@ -4897,6 +5079,7 @@
                                                   <CaptionPosition value="Top" />
                                                   <DisplayMember value="_description" />
                                                   <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
                                                   <Panel.Width value="50%" />
                                                   <ReferenceList reference="/(cseForms.5d31dd4bc1bf40728a5d72d18c4f8091)+GlobalApiObjects.prototypeCodelist" />
                                                   <Bindings>
@@ -5409,6 +5592,24 @@ isTrue(
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Attribute>
+              <Name value="isClientValidationsVisible" />
+              <Caption value="Is client validations visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="IsServerValidationsVisible" />
+              <Caption value="Is server validations visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
           </Children>
         </Complex>
         <Complex>
@@ -5561,6 +5762,94 @@ isTrue(
             </Attribute>
           </Children>
         </Complex>
+        <Attribute>
+          <Name value="errorSourceComponent" />
+          <Caption value="Error source component" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="errorPointer" />
+          <Caption value="Error pointer" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="serverValidationErrors" />
+          <Caption value="Server validation errors" />
+          <Children>
+            <Attribute>
+              <Name value="Code" />
+              <Caption value="Code" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="clientValidationErrors" />
+          <Caption value="Client validation errors" />
+          <Children>
+            <Attribute>
+              <Name value="Message" />
+              <Caption value="Message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Type" />
+              <Caption value="Type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
       </Children>
       <Modifiers>
         <Modifier>
@@ -6616,6 +6905,9 @@ this.numberOfSeals = this.Seal.max(current.sequenceNumber)
       </Modifiers>
     </DataContext>
   </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_Header_OnActivate" />
+  </OnActivate>
   <OnCreate>
     <ActionEvent ReferencedAction="~init" />
   </OnCreate>
@@ -6906,7 +7198,8 @@ endif]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.transitDeclaration.clear()
-navigation.main.Home.go()]]></Script>
+apiobjects.urlRouter.clearUrl()
+navigation.main.DecList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -6938,11 +7231,15 @@ if form.guid = mockGuid then
 
 	var data = apiobjects.transitDeclaration.getHeader()
 	form.Model.fromJson(data)
+
 else
-
-	apiobjects.transitDeclaration.clear()
-	result = True
-
+	//original demo
+	//apiobjects.transitDeclaration.clear()
+	//result = True
+	
+	//get data from server
+	form.actions.getDataFromCic()
+	
 endIf
 
 ]]></Script>
@@ -7005,13 +7302,12 @@ transitOps.bindingItinerary = False]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
 apiobjects.transitDeclaration.setHeader(form.Model.toJson())
-//test
-system.console("Will send message.")
-//test
 
 apiobjects.transitDeclaration.setHeader(form.Model.toJson())
 
 var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+form.serverValidationErrors.fromJson(response.getJsonString())
 
 if response.isError() then
 	system.console(response.getErrorMessage())
@@ -7020,7 +7316,6 @@ else
 	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
 	//test
 	system.console("OK - message sent and is good")
-	system.console(response.getJsonString())
 	//test
 	
 	var receivedGuid = response.getJsonString()
@@ -7030,6 +7325,11 @@ else
 	//test
 	system.console("form.Model.GUID ::" + form.Model.GUID)
 	//test
+	
+	//go to DecList
+	apiobjects.urlRouter.clearUrl()
+	navigation.main.DecList.go()
+	
 endIf
 
 // Need response from server
@@ -7158,5 +7458,108 @@ form.actions.setBreadcrumbs()]]></Script>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="action6" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[/* Validators panels display toggler */
+var isServerValidatorVisible = form.panelsVisibility.IsServerValidationsVisible
+var isClientValidatorVisible = form.panelsVisibility.isClientValidationsVisible
+
+/* Server side panel */
+if(isServerValidatorVisible = true) then
+	form.panelsVisibility.IsServerValidationsVisible = false
+else
+	form.panelsVisibility.IsServerValidationsVisible = true
+endif
+
+/* Client side panel */
+if(isClientValidatorVisible = true) then
+	form.panelsVisibility.isClientValidationsVisible = false
+else
+	form.panelsVisibility.isClientValidationsVisible = true	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_Header_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.errorSourceComponent.hasValue() then
+	page.focusControl(form.errorSourceComponent, form.errorPointer)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_serverValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	//actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_clientValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	//actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getDataFromCic" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var requestJsonString = "{\"GUID\":\""+ form.guid +"\"}"
+	
+var response = apiobjects.CIC.postAsync("FBDataRequest", requestJsonString)
+	
+if response.isError() then
+		system.console(response.getErrorMessage())
+		apiobjects.notificationsCtrl.addError("Failed to load data.")
+else
+		var dataReceived = response.getJsonString()
+		//test
+		system.console("OK - message sent and is good")
+		system.console(dataReceived)
+		//test
+		form.Model.fromJson(dataReceived)
+		apiobjects.notificationsCtrl.addSuccess("Successfuly received data.")
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
   </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+  </ApiObjects>
 </Form>

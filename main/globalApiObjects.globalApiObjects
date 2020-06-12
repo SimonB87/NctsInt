@@ -55,6 +55,11 @@
           <params value="mode,guid?" />
           <url value="Header" />
         </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.Home" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="Home" />
+        </UrlRouteCfg>
       </routes>
     </UrlRouter>
     <TransitDeclaration identity="NctsIntApi.51961823ccb342e682a52f33780cf33f">
@@ -282,5 +287,8 @@
     <NotificationsCtrl identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
       <Name value="notificationsCtrl" />
     </NotificationsCtrl>
+    <ValidatorsFilter identity="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f">
+      <Name value="validatorsFilter1" />
+    </ValidatorsFilter>
   </ApiObjects>
 </GlobalApiObjects>

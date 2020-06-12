@@ -43,5 +43,83 @@
         </AttributeType>
       </DeclaredType>
     </Attribute>
+    <Complex>
+      <Name value="loginResponse" />
+      <Caption value="Login response" />
+      <Children>
+        <Complex>
+          <Name value="Environment" />
+          <Caption value="Environment" />
+          <Children>
+            <Attribute>
+              <Name value="ProjectDisplayName" />
+              <Caption value="Project display name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ProjectName" />
+              <Caption value="Project name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="UserIdentity" />
+          <Caption value="User identity" />
+          <Children>
+            <Attribute>
+              <Name value="UserName" />
+              <Caption value="User name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="UserRole" />
+              <Caption value="User role" />
+              <Children>
+                <Attribute>
+                  <Name value="Name" />
+                  <Caption value="Name" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Collection>
+                  <Name value="Organization" />
+                  <Caption value="Organization" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Value" />
+                      <Caption value="Value" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+              </Children>
+            </Collection>
+            <Collection>
+              <Name value="Organization" />
+              <Caption value="Organization" />
+              <Children>
+                <Attribute>
+                  <Name value="Value" />
+                  <Caption value="Value" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+      </Children>
+    </Complex>
   </Children>
 </GlobalVariables>
