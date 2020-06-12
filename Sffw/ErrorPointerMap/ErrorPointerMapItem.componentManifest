@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ErrorPointerMapItem" />
+  <Generator value="*" />
+  <Type value="Object" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="pointerPath" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="captionMask" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorSourceForm" />
+      <Type value="string" />
+      <UiCategory value="Navigation" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorSourceComponent" />
+      <Type value="string" />
+      <UiCategory value="Navigation" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="navigationTreeNode" />
+      <Type value="string" />
+      <UiCategory value="Navigation" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ErrorPointerMap.69320151074d4125908af3869d7556e1" />
+  <Version value="1.3.0" />
+  <Items>
+    <PackageItem Src="ErrorPointerMapItem.componentManifest" />
+    <PackageItem Src="ErrorPointerMap.apiObjectManifest" />
+    <ResourceItem ResourceName="errorPointerMap.js" Action="None" OutputFileName="errorPointerMap.js" Src="errorPointerMap.js" />
+  </Items>
+</Package>

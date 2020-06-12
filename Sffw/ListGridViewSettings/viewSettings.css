@@ -1,0 +1,162 @@
+﻿.sffw-viewsettings {
+    position: fixed;
+    right: 2px;
+    top: 2px;
+    margin: 0;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 2px solid darkblue;
+    min-height: 50vh;
+    min-width: 22em;
+    background-color: white;
+    opacity: 0.95;
+    z-index: 9999;
+}
+
+.sffw-viewsettings-inner-wrap {
+    min-height: inherit;
+    position: relative;
+}
+
+.sffw-viewsettings-caption {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #00205b;
+    font-size: 16px;
+    padding: 1em 1em 0 1em;
+}
+
+.sffw-viewsettings-columns {
+    margin-top: 5px;
+    overflow: auto;
+    max-height: 50vh;
+    padding: 1em 1em 0 1em;
+}
+
+.sffw-viewsettings-column-stack {
+    padding: 1em 1em 0 1em;
+}
+.sffw-viewsettings-column-stack > select {
+    width: 100%;
+    height: 30px;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+.sffw-viewsettings-footer {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.sffw-viewsettings ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+}
+
+.sffw-viewsettings ul > li {
+    border: none;
+    background-color: white;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1.5rem;
+    text-align: left;
+    display: table-row;
+}
+
+.sffw-viewsettings ul > li > span {
+    display: table-cell;
+}
+
+.sffw-viewsettings-column-buttons-updown, .sffw-viewsettings-column-buttons {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.sffw-viewsettings-column-buttons {
+    padding-left: 1em;
+}
+
+.sffw-viewsettings-column-buttons-updown {
+    padding-right: 1em;
+}
+
+.sffw-viewsettings-column-buttons-updown > button, .sffw-viewsettings-column-buttons > button {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 1em;
+    background: transparent;
+    cursor: pointer;
+}
+
+.sffw-viewsettings-column-buttons > span {
+    display: block;
+    text-align: center;
+    border: 0;
+    padding-top: 0.5em;
+    width: 1em;
+    height: 2em;
+    background: transparent;
+}
+
+.sffw-viewsettings-column-buttons-updown > button {
+    height: 1em;
+}
+
+.sffw-viewsettings-column-buttons > button {
+    height: 2em;
+}
+
+.sffw-viewsettings-button {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: top;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #00205b;
+    background-color: #fff;
+    border-color: #00205b;
+    width: 45%;
+}
+
+.sffw-viewsettings-button:hover, .sffw-viewsettings-button:focus {
+    color: #334d7c;
+    background-color: #eeeff2;
+    border-color: #19366b;
+}
+
+.sffw-viewsettings-button:focus, .sffw-viewsettings-button:active {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.sffw-viewsettings hr {
+    margin-block-start: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}

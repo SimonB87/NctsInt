@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="ValidatorsFilter.apiObjectManifest" />
+    <ResourceItem ResourceName="validatorsFilter.js" Action="None" OutputFileName="validatorsFilter.js" Src="validatorsFilter.js" />
+  </Items>
+</Package>

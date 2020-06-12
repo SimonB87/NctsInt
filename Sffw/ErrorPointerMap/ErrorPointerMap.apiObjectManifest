@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ErrorPointerMap" />
+  <Generator value="errorPointerMap.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IErrorPointerMap" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="getPointerCaption" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getComponentForm" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="component" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getComponentTreeNode" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="component" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="items" />
+      <Type value="collection-ErrorPointerMapItem" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="allowWrapIn" />
+      <Type value="string" />
+      <UiDescription value="List of allowed wrapper element names (for ex. name1|name2|name3)" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

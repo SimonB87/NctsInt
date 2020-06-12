@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.300"?>
+<ComponentManifest>
+  <Name value="Item" />
+  <Generator value="*" />
+  <Type value="Object" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="pointerPath" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="captionMask" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

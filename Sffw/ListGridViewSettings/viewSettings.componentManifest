@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="viewSettings" />
+  <Generator value="&lt;sffw-viewsettings&gt;" />
+  <Type value="Control" />
+  <UiCaption value="ListGrid2 - view settings" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="viewSettings.png" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconUpClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconDownClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconLockClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="iconTrashClass" />
+      <Type value="string" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

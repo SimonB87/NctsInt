@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="validationSummary" />
+  <Caption value="Validation summary" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <HyperLink>
+          <Name value="back" />
+          <Data value="back" />
+          <Panel.Height value="#" />
+          <Panel.Width value="150px" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-hyperlink" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </HyperLink>
+        <Panel>
+          <Name value="panel2" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="panel3" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+              <Name value="serverValidationSummary1" />
+              <errorPointerMap reference="~errorPointerMap" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <OnItemClick>
+                <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
+              </OnItemClick>
+              <Bindings>
+                <Binding SourceProperty="validationErrors" Expression="serverValidationErrors" />
+              </Bindings>
+              <columns>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn5" />
+                  <columnCaption value="Code" />
+                  <propertyName value="Code" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn6" />
+                  <columnCaption value="Description" />
+                  <propertyName value="Description" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn7" />
+                  <columnCaption value="Pointer" />
+                  <columnRole value="pointer" />
+                  <propertyName value="Pointer" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn8" />
+                  <columnCaption value="Focuses to" />
+                  <propertyName value="FocusTo" />
+                </validationSummaryColumn>
+              </columns>
+            </ServerValidationSummary>
+            <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+              <Name value="clientValidationSummary1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <OnItemClick>
+                <ActionEvent ReferencedAction="~handler_clientValidationSummary1_OnItemClick" />
+              </OnItemClick>
+              <Bindings>
+                <Binding SourceProperty="validationErrors" Expression="clientValidationErrors" />
+                <Binding SourceProperty="validationRoot" Expression="clientValidationRoot" />
+              </Bindings>
+              <columns>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn1" />
+                  <columnCaption value="Message" />
+                  <propertyName value="Message" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn2" />
+                  <columnCaption value="Type" />
+                  <propertyName value="Type" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn3" />
+                  <columnCaption value="Pointer" />
+                  <columnRole value="pointer" />
+                  <propertyName value="Pointer" />
+                </validationSummaryColumn>
+                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                  <Name value="validationSummaryColumn4" />
+                  <columnCaption value="Focuses to" />
+                  <propertyName value="FocusTo" />
+                </validationSummaryColumn>
+              </columns>
+            </ClientValidationSummary>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="clientValidationRoot" />
+          <Caption value="Client validation root" />
+          <Children>
+            <Attribute>
+              <Name value="a" />
+              <Caption value="a" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Complex>
+              <Name value="grpX" />
+              <Caption value="Grp X" />
+              <Children>
+                <Attribute>
+                  <Name value="b" />
+                  <Caption value="b" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="collection1" />
+              <Caption value="Collection 1" />
+              <Children>
+                <Complex>
+                  <Name value="grpY" />
+                  <Caption value="Grp Y" />
+                  <Children>
+                    <Attribute>
+                      <Name value="c" />
+                      <Caption value="c" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+                <Complex>
+                  <Name value="grpZ" />
+                  <Caption value="Grp Z" />
+                  <Children>
+                    <Attribute>
+                      <Name value="d" />
+                      <Caption value="d" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="serverValidationErrors" />
+          <Caption value="Server validation errors" />
+          <Children>
+            <Attribute>
+              <Name value="Code" />
+              <Caption value="Code" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="clientValidationErrors" />
+          <Caption value="Client validation errors" />
+          <Children>
+            <Attribute>
+              <Name value="Message" />
+              <Caption value="Message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Type" />
+              <Caption value="Type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Attribute>
+          <Name value="isVisible" />
+          <Caption value="Is visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="a" />
+          <Caption value="a" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~handler_validationSummary_OnActivate" />
+  </OnActivate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_clientValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	//actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_serverValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	//actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="formActivate" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.serverValidationErrors.fromJson("[{\"Code\": \"001\", \"Description\": \"Description 001\"}, {\"Code\": \"002\", \"Description\": \"Description 002\"}, {\"Code\": \"003\", \"Description\": \"Description 003\", \"Pointer\": \"a\"}]")
+
+form.clientValidationRoot.grpX.b = "abc"
+var item1 = form.clientValidationRoot.collection1.addItem()
+item1.grpY.c = "xyz"
+
+var item2 = form.clientValidationRoot.collection1.addItem()
+item2.grpY.c = "xyz2"
+
+form.isVisible = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_validationSummary_OnActivate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.actions.formActivate()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <ErrorPointerMap identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+      <Name value="errorPointerMap" />
+      <items>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_main$$eleA}" />
+          <errorSourceComponent value="textBox1" />
+          <pointerPath value="a" />
+        </ErrorPointerMapItem>
+      </items>
+    </ErrorPointerMap>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+  </ApiObjects>
+</Form>

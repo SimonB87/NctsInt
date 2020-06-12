@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="btnApply">
+      <Values>
+        <LocaleValue Lang="en" Value="Apply" />
+        <LocaleValue Lang="fi" Value="Soveltaa" />
+        <LocaleValue Lang="sr" Value="Primenite" />
+        <LocaleValue Lang="sv" Value="Tillämpa" />
+        <LocaleValue Lang="cs" Value="Použít" />
+        <LocaleValue Lang="me" Value="Primenite" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="btnCancel">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel" />
+        <LocaleValue Lang="fi" Value="Peruuta" />
+        <LocaleValue Lang="sr" Value="Otkaži" />
+        <LocaleValue Lang="sv" Value="Avbryt" />
+        <LocaleValue Lang="cs" Value="Zrušit" />
+        <LocaleValue Lang="me" Value="Otkaži" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="btnReset">
+      <Values>
+        <LocaleValue Lang="en" Value="Reset" />
+        <LocaleValue Lang="fi" Value="Palauttaa" />
+        <LocaleValue Lang="sr" Value="Poništi" />
+        <LocaleValue Lang="sv" Value="Återställa" />
+        <LocaleValue Lang="cs" Value="Obnovit" />
+        <LocaleValue Lang="me" Value="Poništi" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveUp">
+      <Values>
+        <LocaleValue Lang="en" Value="Move up" />
+        <LocaleValue Lang="cs" Value="Přesunout nahoru" />
+        <LocaleValue Lang="sv" Value="Flytta upp" />
+        <LocaleValue Lang="fi" Value="Siirrä ylös" />
+        <LocaleValue Lang="sr" Value="Premeštanje nagore" />
+        <LocaleValue Lang="me" Value="Premeštanje nagore" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveDown">
+      <Values>
+        <LocaleValue Lang="en" Value="Move down" />
+        <LocaleValue Lang="cs" Value="Přesunout dolů" />
+        <LocaleValue Lang="sv" Value="Flytta ned" />
+        <LocaleValue Lang="fi" Value="Siirrä alas" />
+        <LocaleValue Lang="sr" Value="Spusti se" />
+        <LocaleValue Lang="me" Value="Spusti se" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeColumn">
+      <Values>
+        <LocaleValue Lang="en" Value="Remove column" />
+        <LocaleValue Lang="cs" Value="Odstranit sloupec" />
+        <LocaleValue Lang="fi" Value="Poista sarake" />
+        <LocaleValue Lang="sv" Value="Ta bort kolumn" />
+        <LocaleValue Lang="sr" Value="Uklanjanje kolone" />
+        <LocaleValue Lang="me" Value="Uklanjanje kolone" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="addColumn">
+      <Values>
+        <LocaleValue Lang="en" Value="Add column" />
+        <LocaleValue Lang="cs" Value="Přidat sloupec" />
+        <LocaleValue Lang="fi" Value="Lisää sarake" />
+        <LocaleValue Lang="sv" Value="Lägg till kolumn" />
+        <LocaleValue Lang="sr" Value="Dodavanje kolone" />
+        <LocaleValue Lang="me" Value="Dodavanje kolone" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="mainCaption">
+      <Values>
+        <LocaleValue Lang="en" Value="View settings" />
+        <LocaleValue Lang="cs" Value="Nastavení zobrazení" />
+        <LocaleValue Lang="fi" Value="Näytä asetukset" />
+        <LocaleValue Lang="sv" Value="Visa inställningar" />
+        <LocaleValue Lang="sr" Value="Postavke prikaza" />
+        <LocaleValue Lang="me" Value="Postavke prikaza" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="btnClose">
+      <Values>
+        <LocaleValue Lang="en" Value="Close" />
+        <LocaleValue Lang="cs" Value="Zavřít" />
+        <LocaleValue Lang="fi" Value="Sulje" />
+        <LocaleValue Lang="sv" Value="Stäng" />
+        <LocaleValue Lang="sr" Value="Zatvori" />
+        <LocaleValue Lang="me" Value="Zatvori" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="removeDisabled">
+      <Values>
+        <LocaleValue Lang="en" Value="Column cannot be removed" />
+        <LocaleValue Lang="cs" Value="Sloupec nelze odebrat." />
+        <LocaleValue Lang="fi" Value="Saraketta ei voi poistaa" />
+        <LocaleValue Lang="sv" Value="Det går inte att ta bort kolumnen" />
+        <LocaleValue Lang="sr" Value="Nije moguće ukloniti kolonu" />
+        <LocaleValue Lang="me" Value="Nije moguće ukloniti kolonu" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>
