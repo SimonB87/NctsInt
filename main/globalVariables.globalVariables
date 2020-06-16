@@ -121,5 +121,18 @@
         </Complex>
       </Children>
     </Complex>
+    <Complex>
+      <Name value="globalUiState" />
+      <Caption value="Global ui state" />
+      <Children>
+        <Attribute>
+          <Name value="userModeLabel" />
+          <Caption value="User mode label" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Complex>
   </Children>
 </GlobalVariables>
