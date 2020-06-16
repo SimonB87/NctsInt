@@ -5219,8 +5219,8 @@
           <MetaType reference="+MetaTypes.declarationFormMode" />
         </Attribute>
         <Attribute>
-          <Name value="guid" />
-          <Caption value="Guid" />
+          <Name value="GUID" />
+          <Caption value="GUID" />
           <DataContextParameter.IsInput value="True" />
           <DeclaredType>
             <AttributeType />
@@ -6916,6 +6916,11 @@ this.numberOfSeals = this.Seal.max(current.sequenceNumber)
       <Name value="init" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+if globals.loginResponse.isEmpty() then
+	actions.authentication()
+endIf
+
 var goToHomeFormResult = form.actions.tryLoadingData() // navigation still relies on mock DATA!!!
 
 form.actions.setUrlDeepLink()
@@ -6929,6 +6934,8 @@ form.panelsVisibility.isGuaranteeVisible = false
 form.panelsVisibility.isConsignmentVisible = false
 form.panelsVisibility.isEntitiesVisible = false
 form.panelsVisibility.isTransitOperationHeaderVisible = true
+
+form.actions.setUserModeInGui()
 
 form.actions.setBreadcrumbs()
 
@@ -6972,8 +6979,8 @@ form.actions.setBreadcrumbs()]]></Script>
 form.actions.saveHeaderdata()
 // transitDeclaration.setHeader(form.toJson())
 
-if form.guid.hasValue() then
-	navigation.main.HouseConsignmentList.withGuid(form.guid).go(form.mode)
+if form.GUID.hasValue() then
+	navigation.main.HouseConsignmentList.withGuid(form.GUID).go(form.mode)
 else
 	navigation.main.HouseConsignmentList.go(form.mode)
 endif]]></Script>
@@ -7060,8 +7067,8 @@ if (form.mode.hasValue()) then
 	url.addString("mode", form.mode.enumValue())
 endif
 
-if (form.guid.hasValue()) then
-	url.addString("guid", form.guid)
+if (form.GUID.hasValue()) then
+	url.addString("GUID", form.GUID)
 endif
 
 url.updatePageUrl()]]></Script>
@@ -7095,15 +7102,24 @@ if apiobjects.transitDeclaration.isEmpty() then
 
 else
 
-	if (form.mode = enums.declarationFormMode.create) and form.guid.isEmpty() then
+	if (form.mode = enums.declarationFormMode.create) and form.GUID.isEmpty() then
 		form.actions.fullTDthenGetDatafromTD()
 	else
-		if ((form.mode = enums.declarationFormMode.edit) and (form.guid = mockGuid)) then
+		if ((form.mode = enums.declarationFormMode.edit) and (form.GUID = mockGuid)) then
 			form.actions.fullTDthenGetDatafromTD()
 		else
-			//FIX ME - Scenario form.mode has false enum value
-			apiobjects.transitDeclaration.clear()
-			result = True
+		
+			if ((form.mode = enums.declarationFormMode.edit) and (form.GUID.hasValue() )) then
+				
+				form.Model.fromJson(apiobjects.transitDeclaration.getHeader())
+				
+			else
+			
+				//FIX ME - Scenario form.mode has false enum value
+				apiobjects.transitDeclaration.clear()
+				result = True
+			
+			endIf
 		endIf
 
 	endIf
@@ -7226,7 +7242,7 @@ apiobjects.transitDeclaration.create()
 // TODO: Udělat pořádně, pro komunikaci se serverem
 var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
-if form.guid = mockGuid then
+if form.GUID = mockGuid then
 	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
 
 	var data = apiobjects.transitDeclaration.getHeader()
@@ -7301,36 +7317,19 @@ transitOps.bindingItinerary = False]]></Script>
       <Name value="saveHeaderDataAndSubmit" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
-apiobjects.transitDeclaration.setHeader(form.Model.toJson())
 
 apiobjects.transitDeclaration.setHeader(form.Model.toJson())
 
-var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+if form.mode = enums.declarationFormMode.create then
+	
+	form.actions.submitNewTransit()	
+else if form.mode = enums.declarationFormMode.edit then	
 
-form.serverValidationErrors.fromJson(response.getJsonString())
-
-if response.isError() then
-	system.console(response.getErrorMessage())
-	apiobjects.notificationsCtrl.addError("Your request has failed.")
-else
-	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
 	//test
-	system.console("OK - message sent and is good")
-	//test
-	
-	var receivedGuid = response.getJsonString()
-	
-	form.Model.fromJson(receivedGuid)
-	
-	//test
-	system.console("form.Model.GUID ::" + form.Model.GUID)
-	//test
-	
-	//go to DecList
-	apiobjects.urlRouter.clearUrl()
-	navigation.main.DecList.go()
-	
-endIf
+	system.console("MODE EDIT// Here we will be sinding amended data. ")
+	system.console(apiobjects.transitDeclaration.toJson())//test
+	form.actions.submitAmendedTransit()
+endIf endIf
 
 // Need response from server
 globals.busyIndicatorIsRunning = false]]></Script>
@@ -7535,7 +7534,7 @@ endif
     <ActionBlock>
       <Name value="getDataFromCic" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var requestJsonString = "{\"GUID\":\""+ form.guid +"\"}"
+        <Script><![CDATA[var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
 	
 var response = apiobjects.CIC.postAsync("FBDataRequest", requestJsonString)
 	
@@ -7544,13 +7543,78 @@ if response.isError() then
 		apiobjects.notificationsCtrl.addError("Failed to load data.")
 else
 		var dataReceived = response.getJsonString()
-		//test
-		system.console("OK - message sent and is good")
-		system.console(dataReceived)
-		//test
+		//store data to transitDeclaration apiObject
+		apiobjects.transitDeclaration.fromJson(dataReceived)
+		
 		form.Model.fromJson(dataReceived)
 		apiobjects.notificationsCtrl.addSuccess("Successfuly received data.")
 endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="submitNewTransit" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+form.serverValidationErrors.fromJson(response.getJsonString())
+
+if response.isError() then
+	system.console(response.getErrorMessage())
+	apiobjects.notificationsCtrl.addError("Your request has failed.")
+else
+	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
+	
+	var receivedGuid = response.getJsonString()
+	
+	form.Model.fromJson(receivedGuid)
+		
+	//go to DecList
+	apiobjects.urlRouter.clearUrl()
+	navigation.main.DecList.go()
+	
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="submitAmendedTransit" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var response = apiobjects.CIC.postAsync("FBAmend", apiobjects.transitDeclaration.toJson())
+
+form.serverValidationErrors.fromJson(response.getJsonString())
+
+if response.isError() then
+	system.console(response.getErrorMessage())
+	apiobjects.notificationsCtrl.addError("Declaration has failed to be saved.")
+else
+	apiobjects.notificationsCtrl.addSuccess("Declaration was saved successfuly.")
+	//test
+	system.console("OK - message sent and is good")
+	//test
+
+	//go to DecList
+	apiobjects.urlRouter.clearUrl()
+	navigation.main.DecList.go()
+	
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUserModeInGui" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.mode = enums.declarationFormMode.create then
+	globals.globalUiState.userModeLabel = "Mode: Create"
+else if form.mode = enums.declarationFormMode.edit then
+	globals.globalUiState.userModeLabel = "Mode: Edit"
+endIf endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

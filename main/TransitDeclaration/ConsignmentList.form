@@ -46,8 +46,25 @@
               </CssClass>
             </HyperLink>
             <HyperLink>
+              <Name value="houseConsignment_link" />
+              <Data value="House Consignments" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Target value="_self" />
+              <OnClick>
+                <ActionEvent ReferencedAction="~handler_HouseConsignment_link_OnClick" />
+              </OnClick>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
               <Name value="mainEntities_link" />
               <Data value="Main Entities" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <CssClass>
@@ -60,6 +77,7 @@
             <HyperLink>
               <Name value="recovery_link" />
               <Data value="Recovery" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <CssClass>
@@ -72,6 +90,7 @@
             <HyperLink>
               <Name value="unloading_link" />
               <Data value="Unloading" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <CssClass>
@@ -84,6 +103,7 @@
             <HyperLink>
               <Name value="enquiryAtTrader_link" />
               <Data value="Enquiry at Trader Principal" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <CssClass>
@@ -96,6 +116,7 @@
             <HyperLink>
               <Name value="enquiryAtCO_link" />
               <Data value="Enquiry at Customs Office" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <CssClass>
@@ -108,24 +129,9 @@
             <HyperLink>
               <Name value="enrouteEvent_link" />
               <Data value="Enroute Event" />
+              <IsVisible value="False" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="houseConsignment_link" />
-              <Data value="House Consignments" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_HouseConsignment_link_OnClick" />
-              </OnClick>
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-hyperlink" />
@@ -511,8 +517,8 @@
           </Children>
         </Collection>
         <Attribute>
-          <Name value="guid" />
-          <Caption value="Guid" />
+          <Name value="GUID" />
+          <Caption value="GUID" />
           <DataContextParameter.IsInput value="True" />
           <DeclaredType>
             <AttributeType />
@@ -553,11 +559,17 @@
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
 
+if globals.loginResponse.isEmpty() then
+	actions.authentication()
+endIf
+
 var goToHomeFormResult = form.actions.tryLoadingData()
 
 form.actions.setUrlDeepLink()
 
 form.actions.setBreadCrumbs()
+
+form.actions.setUserModeInGui()
 
 // Need response from server
 globals.busyIndicatorIsRunning = false
@@ -580,8 +592,8 @@ if (form.mode.hasValue()) then
 	url.addString("mode", form.mode.enumValue())
 endif
 
-if (form.guid.hasValue()) then
-	url.addString("guid", form.guid)
+if (form.GUID.hasValue()) then
+	url.addString("GUID", form.GUID)
 endif
 
 if (form.sequenceNumber.hasValue()) then
@@ -598,8 +610,8 @@ url.updatePageUrl()]]></Script>
       <Name value="handler_GoodsItem_Table_OnRowActivate" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if form.guid.hasValue() then
-	navigation.main.ConsignmentItem.withGuid(form.guid).withGoodsItemNumber(params.data.goodsItemNumber).go(form.mode, form.sequenceNumber)
+        <Script><![CDATA[if form.GUID.hasValue() then
+	navigation.main.ConsignmentItem.withGuid(form.GUID).withGoodsItemNumber(params.data.goodsItemNumber).go(form.mode, form.sequenceNumber)
 else
 	navigation.main.ConsignmentItem.withGoodsItemNumber(params.data.goodsItemNumber).go(form.mode, form.sequenceNumber)
 endif]]></Script>
@@ -631,7 +643,7 @@ apiobjects.breadcrumbsCtrl.addBreadcrumb("consignmentItems", "Consignment Items"
       <Name value="handler_breadcrumbs1_OnItemClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[actions.consignementNavigationBreadcrumbs(params.id, form.mode, form.sequenceNumber, defaultInt(), form.guid)]]></Script>
+        <Script><![CDATA[actions.consignementNavigationBreadcrumbs(params.id, form.mode, form.sequenceNumber, defaultInt(), form.GUID)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -685,8 +697,8 @@ var newItemGoodsItemNumber = form.ConsignmentCollection.count() + 1
 
 apiobjects.transitDeclaration.appendNewConsignmentItem(form.sequenceNumber, "{}")
 
-if form.guid.hasValue() then
-	navigation.main.ConsignmentItem.withGuid(form.guid).withGoodsItemNumber(newItemGoodsItemNumber).go(form.mode, form.sequenceNumber)
+if form.GUID.hasValue() then
+	navigation.main.ConsignmentItem.withGuid(form.GUID).withGoodsItemNumber(newItemGoodsItemNumber).go(form.mode, form.sequenceNumber)
 else
 	navigation.main.ConsignmentItem.withGoodsItemNumber(newItemGoodsItemNumber).go(form.mode, form.sequenceNumber)
 endif]]></Script>
@@ -699,8 +711,8 @@ endif]]></Script>
       <Name value="handler_HouseConsignment_link_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if form.guid.hasValue() then
-  navigation.main.HouseConsignmentList.withGuid(form.guid).go(form.mode)
+        <Script><![CDATA[if form.GUID.hasValue() then
+  navigation.main.HouseConsignmentList.withGuid(form.GUID).go(form.mode)
 else
   navigation.main.HouseConsignmentList.go(form.mode)
 endif]]></Script>
@@ -713,7 +725,7 @@ endif]]></Script>
       <Name value="handler_header_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.Header.withGuid(form.guid).go(form.mode)]]></Script>
+        <Script><![CDATA[navigation.main.Header.withGuid(form.GUID).go(form.mode)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -724,7 +736,8 @@ endif]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.transitDeclaration.clear()
-navigation.main.Home.go()]]></Script>
+apiobjects.urlRouter.clearUrl()
+navigation.main.DecList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -794,7 +807,7 @@ navigation.main.Home.go()]]></Script>
         <Script><![CDATA[result = False
 var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
-if form.guid = mockGuid then
+if form.GUID = mockGuid then
 	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
 
 	var sequenceNumberIsValidInTransitDeclaration = form.actions.doesSequenceNumberExist()
@@ -864,6 +877,19 @@ endIf]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var dataHouseConsig = apiobjects.transitDeclaration.getConsignmentItemList(form.sequenceNumber)
 form.ConsignmentCollection.fromJson(dataHouseConsig)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUserModeInGui" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.mode = enums.declarationFormMode.create then
+	globals.globalUiState.userModeLabel = "Mode: Create"
+else if form.mode = enums.declarationFormMode.edit then
+	globals.globalUiState.userModeLabel = "Mode: Edit"
+endIf endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
