@@ -116,12 +116,13 @@
                       </CssClass>
                     </Label>
                     <Label>
-                      <Name value="label22" />
-                      <Data value="not authentificated" />
-                      <Heading value="h5" />
-                      <Margin value="2, 6, 2, 6 px" />
+                      <Name value="label_authentificatedText" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="60%" />
+                      <Panel.Width value="150px" />
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="globals.loginResponse.hasValue()" />
+                        <Binding SourceProperty="Data" Expression="form.uiState.authentificatedLabel" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-label" />
@@ -137,20 +138,48 @@
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
-                <Label>
-                  <Name value="label32" />
-                  <Data value="Role: Read, Files, Write, Reactivation" />
-                  <Heading value="h5" />
-                  <Margin value="2, 6, 2, 6 px" />
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label32" />
+                      <Data value="Role: Read, Files, Write, Reactivation" />
+                      <Heading value="h5" />
+                      <Margin value="2, 6, 2, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label_mode" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="globals.globalUiState.userModeLabel" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
                   <CssClass>
                     <CssClassConditional>
-                      <ClassName value="{theme}-label" />
+                      <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
-                </Label>
+                </Panel>
               </Children>
               <CssClass>
                 <CssClassConditional>
@@ -277,6 +306,22 @@
             <AttributeType />
           </DeclaredType>
         </Attribute>
+        <Complex>
+          <Name value="uiState" />
+          <Caption value="Ui state" />
+          <Children>
+            <Computed>
+              <Name value="authentificatedLabel" />
+              <Caption value="Authentificated label" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[globals.loginResponse.hasValue() ? "Authentificated" : "Not authentificated"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Complex>
       </Children>
     </DataContext>
   </DataContext>
@@ -349,7 +394,7 @@ function setStickyMenu() {
       <Name value="handler_label1_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.Home.go()]]></Script>
+        <Script><![CDATA[navigation.main.Declist.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
