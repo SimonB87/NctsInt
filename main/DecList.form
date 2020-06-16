@@ -5,207 +5,431 @@
   <Caption value="Dec list" />
   <Content>
     <Panel>
-      <Name value="panel1" />
-      <Orientation value="Vertical" />
+      <Name value="MainFormPnl" />
+      <Orientation value="Horizontal" />
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
         <Panel>
-          <Name value="pnl_ctrl" />
-          <Orientation value="Horizontal" />
+          <Name value="navigation_pnl" />
+          <Orientation value="Vertical" />
           <Panel.Height value="#" />
-          <Panel.Width value="*" />
+          <Panel.Width value="150px" />
           <Children>
-            <Label>
-              <Name value="label" />
-              <Data value="Declaration List" />
-              <Heading value="h1" />
+            <HyperLink>
+              <Name value="hyperLink_all" />
+              <Data value="All" />
               <Panel.Height value="#" />
-              <Panel.Width value="33%" />
+              <Panel.Width value="*" />
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-label" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Label>
-            <Label>
-              <Name value="label_placeholder" />
-              <Data value=" " />
-              <Panel.Height value="#" />
-              <Panel.Width value="67%" />
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-label" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Label>
-            <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
-              <Name value="imageButton1" />
-              <Caption value="{fa-home}" />
-              <Panel.Height value="#" />
-              <Panel.Width value="42px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_imageButton1_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-imagebutton" />
+                  <ClassName value="{theme}-hyperlink" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="btn-secondary" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="disabled" />
-                  <Condition value="False" />
+                  <ClassName value="active" />
                 </CssClassConditional>
               </CssClass>
-            </ImageButton>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_Waiting" />
+              <Data value="Waiting" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_Presented" />
+              <Data value="Presented" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_UnderControl" />
+              <Data value="Under Control" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_CrossingBorder" />
+              <Data value="Crossing Border" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_Diverted" />
+              <Data value="Diverted" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
+            <HyperLink>
+              <Name value="hyperLink_Rejected" />
+              <Data value="Rejected" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-hyperlink" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </HyperLink>
           </Children>
           <CssClass>
             <CssClassConditional>
               <ClassName value="{theme}-panel" />
               <IsThemedStyle value="True" />
             </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-nav" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
           </CssClass>
         </Panel>
-        <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
-          <Name value="decList" />
-          <controller reference="~listCtrl" />
-          <listName value="Dataset_DEP" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <OnRowClicked>
-            <ActionEvent ReferencedAction="~handler_decList_OnRowClicked" />
-          </OnRowClicked>
-          <Bindings>
-            <Binding SourceProperty="selectedRow" Expression="form.decListReferenceRow" />
-          </Bindings>
-          <columns>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_principalName" />
-              <Caption value="Principal Name" />
-              <ColumnName value="principalName" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_LRN" />
-              <Caption value="LRN" />
-              <ColumnName value="LRN" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_MRN" />
-              <Caption value="MRN" />
-              <ColumnName value="MRN" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_principalTIN" />
-              <Caption value="Principal TIN" />
-              <ColumnName value="principalTIN" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_declarationType" />
-              <Caption value="Declaration Type" />
-              <ColumnName value="declarationType" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_CO" />
-              <Caption value="Customs Offfice" />
-              <ColumnName value="CO" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_RoleCO" />
-              <Caption value="Role CUstoms Office" />
-              <ColumnName value="RoleCO" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_fallbackProcedure" />
-              <Caption value="Fallback Procedure" />
-              <ColumnName value="fallbackProcedure" />
-              <DataType value="bool" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_arrivalDate" />
-              <Caption value="Arrival Date" />
-              <ColumnName value="arrivalDate" />
-              <DataType value="date" />
-            </listColumn>
-            <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
-              <Name value="listColumn_GUID" />
-              <Caption value="Hidden_GUID" />
-              <ColumnName value="GUID" />
-              <IsVisible value="False" />
-            </listColumn>
-          </columns>
-        </List>
         <Panel>
-          <Name value="pnl_bottom" />
-          <Orientation value="Horizontal" />
+          <Name value="BodyPnl" />
+          <Orientation value="Vertical" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
-            <Button>
-              <Name value="button_loadDetail" />
-              <Caption value="Load detail" />
+            <Panel>
+              <Name value="ControlPnlHolder" />
+              <Orientation value="Horizontal" />
               <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~goToDetailButton" />
-              </OnClick>
+              <Panel.Width value="*" />
+              <Children>
+                <Panel>
+                  <Name value="ui_btns" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                      <Name value="imageButton2" />
+                      <Caption value="{fa-arrow-circle-o-up }" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="80px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_imageButton2_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-imagebutton" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="flleft" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="toTop" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </ImageButton>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="search_pnl" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox_search" />
+                      <Caption value="Vyhledat povoleni" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="control_btns" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="button_showDetail" />
+                      <Caption value="Show Detail" />
+                      <Panel.Height value="42px" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~goToDetailButton" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="button_newTransit" />
+                      <Caption value="New Registration" />
+                      <Panel.Height value="42px" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_button_newTransit_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <TextBox>
+                      <Name value="textBox1" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="300px" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="uiState.numberOfItemsPerPage" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="uiState.numberOfItemsPerPage.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="uiState.numberOfItemsPerPage.caption()" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                    <Button>
+                      <Name value="button_setListItemCount" />
+                      <Caption value="Set list item count" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~setNumberOfItemsPerPageInList" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-secondary" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-newBtns" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="flright" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="new_btns" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-newBtns" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-button" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="btn-success" />
+                  <ClassName value="flright" />
                 </CssClassConditional>
               </CssClass>
-            </Button>
-            <Label>
-              <Name value="label_placeholder2" />
-              <Data value=" " />
+            </Panel>
+            <Panel>
+              <Name value="ControlPnlSpace" />
+              <Orientation value="Horizontal" />
               <Panel.Height value="#" />
-              <Panel.Width value="50%" />
+              <Panel.Width value="*" />
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-label" />
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-nav-bar-space" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
-            </Label>
-            <TextBox>
-              <Name value="textBox1" />
+            </Panel>
+            <Panel>
+              <Name value="ContentPnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
-              <Panel.Width value="300px" />
-              <Bindings>
-                <Binding SourceProperty="Data" Expression="uiState.numberOfItemsPerPage" />
-                <Binding SourceProperty="IsRequiredMarkVisible" Expression="uiState.numberOfItemsPerPage.isRequired()" />
-                <Binding SourceProperty="Caption" Expression="uiState.numberOfItemsPerPage.caption()" />
-              </Bindings>
+              <Panel.Width value="*" />
+              <Children>
+                <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                  <Name value="decList" />
+                  <controller reference="~listCtrl" />
+                  <listName value="Dataset_DEP" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <OnRowClicked>
+                    <ActionEvent ReferencedAction="~handler_decList_OnRowClicked" />
+                  </OnRowClicked>
+                  <Bindings>
+                    <Binding SourceProperty="selectedRow" Expression="form.decListReferenceRow" />
+                  </Bindings>
+                  <columns>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_LRN" />
+                      <Caption value="LRN" />
+                      <ColumnName value="LRN" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_MRN" />
+                      <Caption value="MRN" />
+                      <ColumnName value="MRN" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_CO" />
+                      <Caption value="Customs Offfice" />
+                      <ColumnName value="CO" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_principalName" />
+                      <Caption value="Principal Name" />
+                      <ColumnName value="principalName" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_principalTIN" />
+                      <Caption value="Principal TIN" />
+                      <ColumnName value="principalTIN" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_declarationType" />
+                      <Caption value="Declaration Type" />
+                      <ColumnName value="declarationType" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_identificationDepartureTransportMeans" />
+                      <Caption value="Departure Transport Means" />
+                      <ColumnName value="identificationDepartureTransportMeans" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_totalGrossMass" />
+                      <Caption value="Total Gross Mass" />
+                      <ColumnName value="totalGrossMass" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_arrivalDate" />
+                      <Caption value="Arrival Date" />
+                      <ColumnName value="arrivalDate" />
+                      <DataType value="date" />
+                    </listColumn>
+                    <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="listColumn_GUID" />
+                      <Caption value="Hidden_GUID" />
+                      <ColumnName value="GUID" />
+                      <IsVisible value="False" />
+                    </listColumn>
+                  </columns>
+                </List>
+                <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                  <Name value="imageButton_goHome" />
+                  <Caption value="Developer`s {fa-home}" />
+                  <Panel.Height value="42px" />
+                  <Panel.HorizontalAlignment value="Right" />
+                  <Panel.Width value="120px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_imageButton1_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-imagebutton" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="btn-secondary" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="disabled" />
+                      <Condition value="False" />
+                    </CssClassConditional>
+                  </CssClass>
+                </ImageButton>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-textbox" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
-            </TextBox>
-            <Button>
-              <Name value="button_setListItemCount" />
-              <Caption value="Set list item count" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~setNumberOfItemsPerPageInList" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-button" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Button>
+            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -333,6 +557,8 @@
 
 apiobjects.urlRouter.clearUrl()
 
+globals.globalUiState.userModeLabel = ""
+
 form.apiobjects.listCtrl.setReady(true)]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -378,6 +604,28 @@ endif]]></Script>
 	form.apiobjects.listCtrl.setPageSize(form.uiState.numberOfItemsPerPage)
 	form.apiobjects.listCtrl.setReady(true)
 endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_imageButton2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.pageApi.scrollToTop()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_newTransit_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.transitDeclaration.clear()
+navigation.main.Header.go(enums.declarationFormMode.create)
+globals.isExpandedCollapsibleStickyPnl = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
