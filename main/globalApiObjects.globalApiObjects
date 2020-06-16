@@ -28,31 +28,31 @@
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignment" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,guid?" />
+          <params value="mode,sequenceNumber,GUID?" />
           <url value="HouseConsignment" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.ConsignmentList" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,guid?" />
+          <params value="mode,sequenceNumber,GUID?" />
           <url value="ConsignmentList" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.ConsignmentItem" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,goodsItemNumber,guid?" />
+          <params value="mode,sequenceNumber,goodsItemNumber,GUID?" />
           <url value="ConsignmentItem" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignmentList" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,guid?" />
+          <params value="mode,GUID?" />
           <url value="HouseConsignmentList" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.Header" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,guid?" />
+          <params value="mode,GUID?" />
           <url value="Header" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
@@ -74,7 +74,7 @@
     </ServerConnection>
     <ConfigValue>
       <Name value="appVersion" />
-      <Value value="1.0.0" />
+      <Value value="0.1.3" />
     </ConfigValue>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="DeclarationTypeAdditional" />
