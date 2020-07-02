@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="AuthorityContentType" />
+  <Caption value="AuthorityContentType" />
+  <Description value="Used by 9/85 messages: CC007C, CC043C, CC182C, CD003C, CD038C, CD115C, CD165C, CD180C, CD181C" />
+  <MtsImportOptions.MTS.ID value="AuthorityContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="35" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBDataRequest" />
+  <Caption value="FBDataRequest" />
+  <MtsImportOptions.MTS.ID value="/FBDataRequest" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Attribute>
+      <Name value="GUID" />
+      <Caption value="GUID of declaration" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBDataRequest/GUID" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

@@ -19,9 +19,6 @@
         </CodelistColumn>
       </columns>
     </Codelist>
-    <BreadcrumbsCtrl identity="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb">
-      <Name value="breadcrumbsCtrl" />
-    </BreadcrumbsCtrl>
     <UrlRouter identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
       <Name value="urlRouter" />
       <routes>
@@ -62,7 +59,7 @@
         </UrlRouteCfg>
       </routes>
     </UrlRouter>
-    <TransitDeclaration identity="NctsIntApi.51961823ccb342e682a52f33780cf33f">
+    <TransitDeclaration identity="NctsApi.51961823ccb342e682a52f33780cf33f">
       <Name value="transitDeclaration" />
     </TransitDeclaration>
     <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
@@ -74,7 +71,7 @@
     </ServerConnection>
     <ConfigValue>
       <Name value="appVersion" />
-      <Value value="0.1.3" />
+      <Value value="0.2.1" />
     </ConfigValue>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="DeclarationTypeAdditional" />
@@ -170,6 +167,16 @@
           <columnName value="Description" />
           <columnRole value="Description" />
         </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
       </columns>
     </Codelist>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
@@ -185,6 +192,16 @@
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
           <columnName value="Description" />
           <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
         </CodelistColumn>
       </columns>
     </Codelist>
@@ -290,5 +307,552 @@
     <ValidatorsFilter identity="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f">
       <Name value="validatorsFilter1" />
     </ValidatorsFilter>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="SpecificCircumstanceIndicatorCode" />
+      <autoLoad value="False" />
+      <name value="SpecificCircumstanceIndicatorCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="TransportModeUCC" />
+      <autoLoad value="False" />
+      <name value="TransportModeUCC" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="TypeOfIdentificationOfMeansOfTransport" />
+      <autoLoad value="False" />
+      <name value="TypeOfIdentificationOfMeansOfTransport" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CustomsOfficeTransit" />
+      <autoLoad value="False" />
+      <name value="CustomsOfficeTransitExit" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AuthorisationTypeDeparture" />
+      <autoLoad value="False" />
+      <name value="AuthorisationTypeDeparture" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RepresentativeStatusCode" />
+      <autoLoad value="False" />
+      <name value="RepresentativeStatusCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="TypeOfLocation" />
+      <autoLoad value="False" />
+      <name value="TypeOfLocation" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AdditionalSupplyChainActorRoleCode" />
+      <autoLoad value="False" />
+      <name value="AdditionalSupplyChainActorRoleCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryCodesCommonTransit" />
+      <autoLoad value="False" />
+      <name value="CountryCodesCommonTransit" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryAddressPostcodeBased" />
+      <autoLoad value="False" />
+      <name value="CountryAddressPostcodeBased" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="QualifierOfTheIdentification" />
+      <autoLoad value="False" />
+      <name value="QualifierOfTheIdentification" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="MSCountry_CL553" />
+      <autoLoad value="False" />
+      <name value="MSCountry" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryCodesCTC_CL112" />
+      <autoLoad value="False" />
+      <name value="CountryCodesCTC" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryCustomsSecurityAgreementArea_CL147" />
+      <autoLoad value="False" />
+      <name value="CountryCustomsSecurityAgreementArea" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryWithoutZip_CL505" />
+      <autoLoad value="False" />
+      <name value="CountryWithoutZip" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="GuaranteeTypeEUNonTIR_CL230" />
+      <autoLoad value="False" />
+      <name value="GuaranteeTypeEUNonTIR" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="GuaranteeTypeCTC_CL229" />
+      <autoLoad value="False" />
+      <name value="GuaranteeTypeCTC" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="GuaranteeTypeWithGRN_CL286" />
+      <autoLoad value="False" />
+      <name value="GuaranteeTypeWithGRN" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryAddressPostcodeOnly_CL198" />
+      <autoLoad value="False" />
+      <name value="CountryAddressPostcodeOnly" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="PreviousDocumentUnionGoods_CL178" />
+      <autoLoad value="False" />
+      <name value="PreviousDocumentUnionGoods" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="UnLocodeExtended" />
+      <autoLoad value="False" />
+      <name value="UnLocodeExtended" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="PreviousDocumentType" />
+      <autoLoad value="False" />
+      <name value="PreviousDocumentType" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="SupportingDocumentType" />
+      <autoLoad value="False" />
+      <name value="SupportingDocumentType" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AdditionalReference" />
+      <autoLoad value="False" />
+      <name value="AdditionalReference" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AdditionalInformation" />
+      <autoLoad value="False" />
+      <name value="AdditionalInformation" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Unit" />
+      <autoLoad value="False" />
+      <name value="Unit" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryCodesCommunity_CL010" />
+      <autoLoad value="False" />
+      <name value="CountryCodesCommunity" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="DeclarationTypeItemLevel" />
+      <name value="DeclarationTypeItemLevel" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CUSCode" />
+      <autoLoad value="False" />
+      <name value="CUSCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="UnDangerousGoodsCode" />
+      <autoLoad value="False" />
+      <name value="UnDangerousGoodsCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+          <dataType value="datetime" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="KindOfPackagesBulk_CL181" />
+      <autoLoad value="False" />
+      <name value="KindOfPackagesBulk" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="KindOfPackagesUnpacked_CL182" />
+      <autoLoad value="False" />
+      <name value="KindOfPackagesUnpacked" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
   </ApiObjects>
 </GlobalApiObjects>

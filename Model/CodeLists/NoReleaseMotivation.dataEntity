@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="NoReleaseMotivation" />
+  <Caption value="NoReleaseMotivation" />
+  <MtsImportOptions.MTS.ID value="NoReleaseMotivation" />
+  <MtsImportOptions.MTS.Type value="codelist" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="NoReleaseMotivationCode" />
+      <MtsImportOptions.MTS.ID value="NoReleaseMotivation/Code" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <MetaType reference="+MetaTypes.CSRD2CodelistDescription" />
+      <MtsImportOptions.MTS.ID value="NoReleaseMotivation/Description" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="ValidFrom" />
+      <Caption value="Valid from" />
+      <MtsImportOptions.MTS.ID value="NoReleaseMotivation/ValidFrom" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidTo" />
+      <Caption value="Valid to" />
+      <MtsImportOptions.MTS.ID value="NoReleaseMotivation/ValidTo" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Computed>
+      <Name value="_description" />
+      <Caption value="_ description" />
+      <Expression IsValid="True">
+        <ExpressionText><![CDATA[functions.codeListDescription(Code,Description)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </Expression>
+    </Computed>
+  </Children>
+</DataEntity>

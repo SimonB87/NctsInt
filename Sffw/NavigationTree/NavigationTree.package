@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="NavigationTree.b87dd9f990504f86a481d689d499f644" />
+  <Version value="4.1.2" />
+  <Items>
+    <PackageItem Src="NavigationTree.componentManifest" />
+    <ResourceItem ResourceName="navigationTree.js" LinkerAction="Script" OutputFileName="navigationTree.js" Src="navigationTree.js" />
+    <ResourceItem ResourceName="navigationTree.css" LinkerAction="Css" OutputFileName="navigationTree.css" Src="navigationTree.css" />
+    <PackageItem Src="NavigationTreeController.apiObjectManifest" />
+    <ResourceItem ResourceName="navigationTreeCtrl.js" Action="None" OutputFileName="navigationTreeCtrl.js" Src="navigationTreeCtrl.js" />
+    <PackageItem Src="NavigationTreeNode.apiObjectManifest" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <ResourceItem ResourceName="navigationTree.png" Action="None" OutputFileName="navigationTree.png" Src="navigationTree.png" />
+  </Items>
+</Package>

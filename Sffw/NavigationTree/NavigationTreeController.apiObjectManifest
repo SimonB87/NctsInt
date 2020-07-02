@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="NavigationTreeController" />
+  <Generator value="navigationTreeCtrl.js" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="INavigationTreeCtrl" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Methods>
+    <MethodManifest>
+      <Name value="showErrors" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="showErrors" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="addNode" />
+      <ReturnType>
+        <ObjectType reference="+Components.NavigationTreeNode" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="name" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="captionOrCaptionPath" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="beginSetup" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="controlStruct" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="dataStructPackageName" />
+          <BaseType value="String" />
+          <UiDescription value="If declaration data etc. is in globals of different package than the package of controlStruct, pass the name of the package, otherwise defaultString." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="finishSetup" />
+      <ReturnType />
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="focusNode" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setNodeVisibility" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="visible" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getNodeVisibility" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="expandAlways" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="expanded" />
+          <BaseType value="Bool" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="resetFinishedSetup" />
+      <Description value="Resets controller to its initial state and then beginSetup, finishSetup can be called again to init controller. Reinitialization must be done before navigation to form containing target NavigationTree component, or visibility of NavigationTree must be set off and on to apply changes." />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="autoRefocus" />
+      <Default value="True" />
+      <Type value="bool" />
+      <UiDescription value="Automatically focus different node when active one gets removed from collection" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

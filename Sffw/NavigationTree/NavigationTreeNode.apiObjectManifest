@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="NavigationTreeNode" />
+  <CanBeFormLocal value="False" />
+  <CanBeGlobal value="False" />
+  <Generator value="*" />
+  <Methods>
+    <MethodManifest>
+      <Name value="addNode" />
+      <ReturnType>
+        <ObjectType reference="+Components.NavigationTreeNode" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="name" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="captionOrCaptionPath" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="showErrorsFrom" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="connectToCollection" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="captionAttName" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="limitSubnodesAroundSelected" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="numberOfSuroundingNodes" />
+          <BaseType value="Integer" />
+          <UiDescription value="Number of nodes that will be visible before and after selected item" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="showItemErrorsFrom" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="path" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+  </Methods>
+</ApiObjectManifest>

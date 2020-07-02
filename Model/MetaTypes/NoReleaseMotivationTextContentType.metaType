@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="NoReleaseMotivationTextContentType" />
+  <Caption value="NoReleaseMotivationTextContentType" />
+  <Description value="Used by 1/85 messages: CC051C" />
+  <MtsImportOptions.MTS.ID value="NoReleaseMotivationTextContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="512" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

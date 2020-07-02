@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="navTreeExperiment" />
+  <Caption value="Nav tree experiment" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="navigationTree1_parent" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <NavigationTree identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
+              <Name value="navigationTree1" />
+              <controller reference="~navigationTreeController1" />
+              <Panel.Height value="#" />
+              <Panel.Width value="50%" />
+            </NavigationTree>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="navTree" />
+          <Caption value="Nav tree" />
+          <Children>
+            <Computed>
+              <Name value="customsOfficesErrCount" />
+              <Caption value="Customs offices err count" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[form.Model.CustomsOfficeOfDeparture.validationErrorsCount() + form.Model.CustomsOfficeOfDestinationDeclared.validationErrorsCount()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Collection>
+              <Name value="HouseConsignment" />
+              <Caption value="House consignment" />
+              <Children>
+                <Attribute>
+                  <Name value="hcIndex" />
+                  <Caption value="Hc index" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Integer" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Collection>
+                  <Name value="ConsignmentItem" />
+                  <Caption value="Consignment item" />
+                  <Children>
+                    <Attribute>
+                      <Name value="ciIndex" />
+                      <Caption value="Ci index" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <BaseType value="Integer" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                    <Computed>
+                      <Name value="_caption" />
+                      <Caption value="_ caption" />
+                      <Expression IsValid="True">
+                        <ExpressionText><![CDATA["Item " + tostring(ciIndex)]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </Expression>
+                    </Computed>
+                  </Children>
+                </Collection>
+                <Computed>
+                  <Name value="_caption" />
+                  <Caption value="_ caption" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA["House consignment " + tostring(hcIndex)]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+            <Attribute>
+              <Name value="isTransitOperationActive" />
+              <Caption value="Is transit operation active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isCustomsOfficesActive" />
+              <Caption value="Is customs offices active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isTradersActive" />
+              <Caption value="Is traders active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGuaranteeActive" />
+              <Caption value="Is guarantee active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isConsignmentActive" />
+              <Caption value="Is consignment active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isHouseConsignmentsActive" />
+              <Caption value="Is house consignments active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isHouseConsignmentsItemActive" />
+              <Caption value="Is house consignments item active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isConsignmentItemsActive" />
+              <Caption value="Is consignment items active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isConsignmentItemsItemActive" />
+              <Caption value="Is consignment items item active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="indexHouseConsignments" />
+              <Caption value="Index house consignments" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="indexConsignmentItems" />
+              <Caption value="Index consignment items" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="Model" />
+          <Caption value="Model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.DeclarationHeader" />
+            </Include>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.transitDeclaration.fromMock()
+var navTreeJson = transitDeclaration.getDataForNavTree()
+form.navTree.HouseConsignment.fromJson(navTreeJson)
+
+form.apiobjects.navigationTreeController1.beginSetup("navTree", defaultString())
+
+form.apiobjects.navigationTreeController1.addNode("TransitOperation", "Transit operation")
+
+var offices = form.apiobjects.navigationTreeController1.addNode("CustomsOffices", "Customs offices")
+// pokud potřebujeme posbírat chyby z více komplexů či kolekcí, je potřeba si udělat computed, která vrací počet chyb, a nasměrovat to na ni
+offices.showErrorsFrom("navTree/customsOfficesErrCount")
+
+form.apiobjects.navigationTreeController1.addNode("Traders", "Traders")
+
+var guarantee = form.apiobjects.navigationTreeController1.addNode("Guarantee", "Guarantee")
+// pokud můžeme zobrazit chyby přímo z určitého komplexu či kolekce, nastavíme to takhle
+guarantee.showErrorsFrom("Model/Guarantee")
+
+
+form.apiobjects.navigationTreeController1.addNode("Consignment", "Consignment")
+
+var hc = form.apiobjects.navigationTreeController1.addNode("HouseConsignments", "House Consignments")
+hc.connectToCollection("navTree/HouseConsignment", "_caption")
+hc.limitSubnodesAroundSelected(3)
+
+
+var ci = hc.addNode("ConsignmentItems", "Consignment items")
+ci.connectToCollection("ConsignmentItem", "_caption")
+ci.limitSubnodesAroundSelected(3)
+
+form.apiobjects.navigationTreeController1.finishSetup()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <NavigationTreeController identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
+      <Name value="navigationTreeController1" />
+    </NavigationTreeController>
+  </ApiObjects>
+</Form>

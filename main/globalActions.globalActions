@@ -4,122 +4,62 @@
   <Name value="globalActions" />
   <Actions>
     <ActionBlock>
-      <Name value="consignementNavigationBreadcrumbs" />
+      <Name value="setCodeListDate" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var guidValue = _guid.hasValue() 
-
-if _selectedBreadCrumbsId = "houseConsignments" then
-	if guidValue then
-		navigation.main.HouseConsignmentList.withGuid(_guid).go(_mode)
-	else
-		navigation.main.HouseConsignmentList.go(_mode)
-	endif
-endif
-
-if _selectedBreadCrumbsId = "houseConsignmentItem" then
-	if guidValue then
-		navigation.main.HouseConsignment.withGuid(_guid).go(_mode, _sequenceNumber)
-	else
-		navigation.main.HouseConsignment.go(_mode, _sequenceNumber)
-	endif
-endif
-
-if _selectedBreadCrumbsId ="consignmentItems" then
-	if guidValue then
-		navigation.main.ConsignmentList.withGuid(_guid).go(_mode, _sequenceNumber)
-	else
-		navigation.main.ConsignmentList.go(_mode, _sequenceNumber)
-	endif
-endif
-
-if _selectedBreadCrumbsId = "consignmentItem" then
-	if guidValue then
-		navigation.main.ConsignmentItem.withGuid(_guid).withGoodsItemNumber(_goodsItemNumber).go(_mode,_sequenceNumber)
-	else
-		navigation.main.ConsignmentItem.withGoodsItemNumber(_goodsItemNumber).go(_mode, _sequenceNumber)
-	endif
-endif	]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext>
-          <Children>
-            <Attribute>
-              <Name value="_selectedBreadCrumbsId" />
-              <Caption value="_ selected bread crumbs id" />
-              <DataContextParameter.IsInput value="True" />
-              <DataContextParameter.IsInputRequired value="True" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="_mode" />
-              <Caption value="_ mode" />
-              <DataContextParameter.IsInput value="True" />
-              <DataContextParameter.IsInputRequired value="True" />
-              <MetaType reference="+MetaTypes.declarationFormMode" />
-            </Attribute>
-            <Attribute>
-              <Name value="_sequenceNumber" />
-              <Caption value="_ sequence number" />
-              <DataContextParameter.IsInput value="True" />
-              <DeclaredType>
-                <AttributeType>
-                  <BaseType value="Integer" />
-                </AttributeType>
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="_goodsItemNumber" />
-              <Caption value="_ goods item number" />
-              <DataContextParameter.IsInput value="True" />
-              <DeclaredType>
-                <AttributeType>
-                  <BaseType value="Integer" />
-                </AttributeType>
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="_guid" />
-              <Caption value="_ guid" />
-              <DataContextParameter.IsInput value="True" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-          </Children>
-        </ActionDataContext>
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="initCodeLists" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//This codelist is not dependent on date
+        <Script><![CDATA[//Codelists used on app elements
 apiobjects.declarationType.startLoadingData(getDateTime())
-
 apiobjects.DeclarationTypeAdditional.startLoadingData(getDateTime())
-
 apiobjects.DeclarationTypeSecurity.startLoadingData(getDateTime())
-
 apiobjects.TransportChargesMethodOfPayment.startLoadingData(getDateTime())
-
 apiobjects.HScode.startLoadingData(getDateTime())
-
 apiobjects.KindOfPackages.startLoadingData(getDateTime())
-
 apiobjects.CustomsOfficeDeparture.startLoadingData(getDateTime())
 apiobjects.CustomsOfficeDestination.startLoadingData(getDateTime())
-
 apiobjects.CountryCodesWithAddress.startLoadingData(getDateTime())
-
 apiobjects.GuaranteeType.startLoadingData(getDateTime())
-
 apiobjects.CurrencyCodes.startLoadingData(getDateTime())
+apiobjects.CustomsOfficeTransit.startLoadingData(getDateTime())
 apiobjects.CustomsOfficeTransitExit.startLoadingData(getDateTime())
-
 apiobjects.CountryCodesFullList.startLoadingData(getDateTime())
+apiobjects.TransportDocumentType.startLoadingData(getDateTime())
+apiobjects.SpecificCircumstanceIndicatorCode.startLoadingData(getDateTime())
+apiobjects.TransportModeUCC.startLoadingData(getDateTime())
+apiobjects.TypeOfIdentificationOfMeansOfTransport.startLoadingData(getDateTime())
+apiobjects.AuthorisationTypeDeparture.startLoadingData(getDateTime())
+apiobjects.RepresentativeStatusCode.startLoadingData(getDateTime())
+apiobjects.TypeOfLocation.startLoadingData(getDateTime())
+apiobjects.AdditionalSupplyChainActorRoleCode.startLoadingData(getDateTime())
+apiobjects.CountryCodesCommonTransit.startLoadingData(getDateTime())
+apiobjects.CountryAddressPostcodeBased.startLoadingData(getDateTime())
+apiobjects.QualifierOfTheIdentification.startLoadingData(getDateTime())
+apiobjects.PreviousDocumentType.startLoadingData(getDateTime())
+apiobjects.SupportingDocumentType.startLoadingData(getDateTime())
+apiobjects.AdditionalSupplyChainActorRoleCode.startLoadingData(getDateTime())
+apiobjects.DeclarationTypeItemLevel.startLoadingData(getDateTime())
+apiobjects.CUSCode.startLoadingData(getDateTime())
+apiobjects.Unit.startLoadingData(getDateTime())
+apiobjects.AdditionalInformation.startLoadingData(getDateTime())
 
-apiobjects.TransportDocumentType.startLoadingData(getDateTime())]]></Script>
+apiobjects.AdditionalReference.setDateTime(getDateTime())
+apiobjects.AdditionalInformation.setDateTime(getDateTime())
+apiobjects.UnLocodeExtended.setDateTime(getDateTime())
+apiobjects.UnDangerousGoodsCode.setDateTime(getDateTime())
+
+
+//CodeLists for validations:
+apiobjects.MSCountry_CL553.setDateTime(getDateTime())
+apiobjects.CountryCodesCTC_CL112.setDateTime(getDateTime())
+apiobjects.CountryCustomsSecurityAgreementArea_CL147.setDateTime(getDateTime())
+apiobjects.CountryWithoutZip_CL505.setDateTime(getDateTime())
+apiobjects.GuaranteeTypeEUNonTIR_CL230.setDateTime(getDateTime())
+apiobjects.GuaranteeTypeCTC_CL229.setDateTime(getDateTime())
+apiobjects.GuaranteeTypeWithGRN_CL286.setDateTime(getDateTime())
+apiobjects.CountryAddressPostcodeOnly_CL198.setDateTime(getDateTime())
+apiobjects.PreviousDocumentUnionGoods_CL178.setDateTime(getDateTime())
+apiobjects.CountryCodesCommunity_CL010.setDateTime(getDateTime())
+apiobjects.KindOfPackagesBulk_CL181.setDateTime(getDateTime())
+apiobjects.KindOfPackagesUnpacked_CL182.setDateTime(getDateTime())
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -191,6 +131,31 @@ endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setUserModeInGui" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if inputMode = enums.declarationFormMode.create.enumValue() then
+	globals.globalUiState.userModeLabel = "New Declaration"
+else if inputMode = enums.declarationFormMode.edit.enumValue() then
+	globals.globalUiState.userModeLabel = "Amend Declaration"
+endIf endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="inputMode" />
+              <Caption value="Input mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
       </DataContext>
     </ActionBlock>
   </Actions>

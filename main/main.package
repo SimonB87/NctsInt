@@ -22,6 +22,7 @@
         <PackageItem Src="TransitDeclaration\ConsignmentItem.form" />
         <PackageItem Src="TransitDeclaration\declarationFormMode.metaType" />
         <PackageItem Src="TransitDeclaration\houseConsignmentRow.dataEntity" />
+        <PackageItem Src="TransitDeclaration\navTreeExperiment.form" />
       </Items>
     </PackageFolder>
     <PackageItem Src="globalActions.globalActions" />

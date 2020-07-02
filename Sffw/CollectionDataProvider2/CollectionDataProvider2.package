@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c" />
+  <Version value="1.4.0" />
+  <Items>
+    <PackageItem Src="CollectionDataProvider2.apiObjectManifest" />
+    <ResourceItem ResourceName="collectionDataProvider2.js" Action="None" OutputFileName="collectionDataProvider2.js" Src="collectionDataProvider2.js" />
+  </Items>
+</Package>

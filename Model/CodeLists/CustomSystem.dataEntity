@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="CustomSystem" />
+  <Caption value="CustomSystem" />
+  <MtsImportOptions.MTS.ID value="CustomSystem" />
+  <MtsImportOptions.MTS.Type value="codelist" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="CustomSystem" />
+      <MtsImportOptions.MTS.ID value="CustomSystem/Code" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Integer" />
+          <IntMax value="99" />
+          <IntMin value="0" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <MetaType reference="+MetaTypes.CSRD2CodelistDescription" />
+      <MtsImportOptions.MTS.ID value="CustomSystem/Description" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="ValidFrom" />
+      <Caption value="Valid from" />
+      <MtsImportOptions.MTS.ID value="CustomSystem/ValidFrom" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidTo" />
+      <Caption value="Valid to" />
+      <MtsImportOptions.MTS.ID value="CustomSystem/ValidTo" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Computed>
+      <Name value="_description" />
+      <Caption value="_ description" />
+      <Expression IsValid="True">
+        <ExpressionText><![CDATA[functions.codeListDescription(ToString(Code),Description)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </Expression>
+    </Computed>
+  </Children>
+</DataEntity>

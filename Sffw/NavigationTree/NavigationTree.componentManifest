@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="NavigationTree" />
+  <Generator value="&lt;sffw-navigation-tree&gt;" />
+  <Type value="Control" />
+  <UiCaption value="Navigation tree" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="navigationTree.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnNodeActivated" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="id" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="activatedByUser" />
+          <BaseType value="Bool" />
+          <ParamType value="BaseType" />
+          <UiDescription value="Indicates that node was activated by user, ie. click or keyboard event on some node in the tree" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/INavigationTreeCtrl" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="generateAriaCurrent" />
+      <Type value="string" />
+      <UiCategory value="Accessibility" />
+      <UiDescription value="The aria-current attribute helps to indicate, that current active node of Navigation tree represents the current page in navigation (=page) or process step f.e. when used as some wizard etc...(=step)." />
+      <UiEditor value="list/page|step" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

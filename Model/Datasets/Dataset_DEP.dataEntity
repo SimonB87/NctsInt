@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Dataset_DEP" />
+  <Caption value="Dataset DEP" />
+  <MtsImportOptions.MTS.ID value="Dataset_DEP" />
+  <MtsImportOptions.MTS.Type value="client-dataset" />
+  <Children>
+    <Attribute>
+      <Name value="GUID" />
+      <Caption value="GUID" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/GUID" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="RoleCO" />
+      <Caption value="Role of CO" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/RoleCO" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="16" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="CO" />
+      <Caption value="Customs Office" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/CO" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="8" />
+          <StrMinLength value="8" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="MRN" />
+      <Caption value="MRN" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/MRN" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="18" />
+          <StrMinLength value="18" />
+        </AttributeType>
+      </DeclaredType>
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+    <Attribute>
+      <Name value="LRN" />
+      <Caption value="LRN" />
+      <IsRequired value="True" />
+      <MetaType reference="+MetaTypes.LRNContentType" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/LRN" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="submitTimestamp" />
+      <Caption value="Submit Timestamp" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/submitTimestamp" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="acceptanceDateTime" />
+      <Caption value="Acceptance date and time" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/acceptanceDateTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="principalName" />
+      <Caption value="Principal name" />
+      <MetaType reference="+MetaTypes.NameContentType" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/principalName" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="principalTIN" />
+      <Caption value="Principal TIN" />
+      <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/principalTIN" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="totalGrossMass" />
+      <Caption value="Total Gross Mass" />
+      <MetaType reference="+MetaTypes.GrossMassContentType" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/totalGrossMass" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="identificationDepartureTransportMeans" />
+      <Caption value="Identity of means of transport at departure" />
+      <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/identificationDepartureTransportMeans" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="State" />
+      <Caption value="State" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/State" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="50" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="stateDescription" />
+      <Caption value="State description" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/stateDescription" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="50" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="releaseDateTime" />
+      <Caption value="Release date and time" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/releaseDateTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="WriteOfDate" />
+      <Caption value="Write of date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/WriteOfDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Date" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="arrivalDate" />
+      <Caption value="Arrival Date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/arrivalDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Date" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="IsEDIDeparture" />
+      <Caption value="Is EDI at departure?" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/IsEDIDeparture" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="declarationType" />
+      <Caption value="Declaration Type" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/declarationType" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="5" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="controlResultCode" />
+      <Caption value="Control result code" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/controlResultCode" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="simplifiedProcedureDeparture" />
+      <Caption value="Simplified procedure at departure" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/simplifiedProcedureDeparture" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="CommunicationDate" />
+      <Caption value="Recovery communication date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/CommunicationDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Date" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="fallbackProcedure" />
+      <Caption value="Fallback Procedure" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/fallbackProcedure" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

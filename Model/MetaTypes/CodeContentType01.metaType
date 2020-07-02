@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="CodeContentType01" />
+  <Caption value="CodeContentType01" />
+  <Description value="Used by 7/85 messages: CD001C, CD003C, CD038C, CD050C, CD115C, CD160C, CD165C" />
+  <MtsImportOptions.MTS.ID value="CodeContentType01" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="17" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

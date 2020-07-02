@@ -11,9 +11,9 @@
   <MTS.ImportOptions>
     <MtsImportOptions>
       <DomainCode value="ScreenFactory" />
-      <LastFileName value="C:\Temp\mts-export-test.xml" />
+      <LastFileName value="C:\Users\simon.buryan\Desktop\NCTS_ME\exportMetaSystem\NCTSMEInt_SF.xml" />
       <ProjectCode value="NCTSMEInt_SF" />
-      <Revision value="2027" />
+      <Revision value="2504" />
     </MtsImportOptions>
   </MTS.ImportOptions>
   <Options>
@@ -102,10 +102,6 @@
       <ReferencedIdentity value="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4" />
       <ReferencedVersion value="1.1.6" />
     </PackageReference>
-    <PackageReference Alias="cseForms" Origin="cseForms\cseForms.package">
-      <ReferencedIdentity value="cseForms.5d31dd4bc1bf40728a5d72d18c4f8091" />
-      <ReferencedVersion value="0.0.0" />
-    </PackageReference>
     <PackageReference Alias="CollapsibleStickyPanel" IsComponentLib="True" Origin="Sffw\CollapsibleStickyPanel\CollapsibleStickyPanel.package">
       <ReferencedIdentity value="CollapsibleStickyPanel.4b45f89dd6ca43ecb980574e5dacae09" />
       <ReferencedVersion value="1.1.4" />
@@ -118,8 +114,8 @@
       <ReferencedIdentity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
       <ReferencedVersion value="1.0.4" />
     </PackageReference>
-    <PackageReference Alias="NctsIntApi" IsComponentLib="True" Origin="NctsIntApi\NctsIntApi.package">
-      <ReferencedIdentity value="NctsIntApi.51961823ccb342e682a52f33780cf33f" />
+    <PackageReference Alias="NctsApi" IsComponentLib="True" Origin="NctsApi\NctsApi.package">
+      <ReferencedIdentity value="NctsApi.51961823ccb342e682a52f33780cf33f" />
       <ReferencedVersion value="0.0.0" />
     </PackageReference>
     <PackageReference Alias="Notifications" IsComponentLib="True" Origin="Sffw\Notifications\Notifications.package">
@@ -149,6 +145,14 @@
     <PackageReference Alias="ListGridViewSettings" IsComponentLib="True" Origin="Sffw\ListGridViewSettings\ListGridViewSettings.package">
       <ReferencedIdentity value="ListGridViewSettings.13c6ca769c344553aaa727b591042920" />
       <ReferencedVersion value="1.3.4" />
+    </PackageReference>
+    <PackageReference Alias="NavigationTree" IsComponentLib="True" Origin="Sffw\NavigationTree\NavigationTree.package">
+      <ReferencedIdentity value="NavigationTree.b87dd9f990504f86a481d689d499f644" />
+      <ReferencedVersion value="4.1.2" />
+    </PackageReference>
+    <PackageReference Alias="CollectionDataProvider2" IsComponentLib="True" Origin="Sffw\CollectionDataProvider2\CollectionDataProvider2.package">
+      <ReferencedIdentity value="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c" />
+      <ReferencedVersion value="1.4.0" />
     </PackageReference>
   </PackageReferences>
 </ProjectRoot>

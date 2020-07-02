@@ -158,20 +158,6 @@
                         </CssClassConditional>
                       </CssClass>
                     </Label>
-                    <Label>
-                      <Name value="label_mode" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="globals.globalUiState.userModeLabel" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-label" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Label>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -291,6 +277,7 @@
         </CssClassConditional>
         <CssClassConditional>
           <ClassName value="{theme}-padding-right" />
+          <Condition value="False" />
           <IsThemedStyle value="True" />
         </CssClassConditional>
       </CssClass>
@@ -335,9 +322,7 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[packages.cseForms.apiobjects.prototypeCodelist.fillFromJson("[{\"Key\": \"A\", \"Description\": \"prototype item\"}]")
-
-globals.isExpandedCollapsibleStickyPnl = false
+        <Script><![CDATA[globals.isExpandedCollapsibleStickyPnl = false
 
 // TODO: Replace with data from server once we have it
 globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())

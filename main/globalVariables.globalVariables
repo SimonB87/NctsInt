@@ -134,5 +134,12 @@
         </Attribute>
       </Children>
     </Complex>
+    <Attribute>
+      <Name value="activePanel" />
+      <Caption value="Active panel" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
   </Children>
 </GlobalVariables>

@@ -1,0 +1,81 @@
+.sffw-navigation-tree-node {
+	background-color: #00205b;
+    border-left: 10px solid #fff;
+    color: #fff;
+    padding: 15px 5px 10px 12px;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 10px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sffw-navigation-tree-node:focus {
+	background-color: black;
+}
+
+.sffw-navigation-tree-any-child-node-active {
+	background-color: blueviolet;
+}
+
+.sffw-navigation-tree-node-indent-1 {
+    margin-left: 1em;
+}
+
+.sffw-navigation-tree-node-indent-2 {
+    margin-left: 2em;
+}
+
+.sffw-navigation-tree-node-indent-3 {
+    margin-left: 3em;
+}
+
+.sffw-navigation-tree-node-indent-4 {
+    margin-left: 4em;
+}
+
+.sffw-navigation-tree-node-indent-5 {
+    margin-left: 5em;
+}
+
+.sffw-navigation-tree-node-indent-6 {
+    margin-left: 6em;
+}
+
+.sffw-navigation-tree-node-indent-7 {
+    margin-left: 7em;
+}
+
+.sffw-navigation-tree-node-selected {
+    font-weight: bold;
+    border-left: 10px solid #F2A900;
+    opacity: 1;
+}
+
+.sffw-navigation-tree-node-error {
+    color: red;
+}
+
+sffw-navigation-tree-node > div {
+	position: relative;
+}
+
+.sffw-navigation-tree-node-marker, .sffw-navigation-tree-node-marker-text {
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	width: 28px;
+	height: 28px;
+	background-color: white;
+	color: #00205b;
+	padding-top: 4px;
+	border-radius: 30px;
+	text-align: center;
+	z-index: 0;
+}
+
+.sffw-navigation-tree-node-marker-exclamation-mark:after {
+    content: "\f12a";
+    font-family: FontAwesome;
+}

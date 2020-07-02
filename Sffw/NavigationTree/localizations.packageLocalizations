@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="Next">
+      <Values>
+        <LocaleValue Lang="en" Value="next" />
+        <LocaleValue Lang="cs" Value="následující" />
+        <LocaleValue Lang="fi" Value="seuraava" />
+        <LocaleValue Lang="sv" Value="nästa" />
+        <LocaleValue Lang="sr" Value="sledeća" />
+        <LocaleValue Lang="me" Value="sledeća" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Previous">
+      <Values>
+        <LocaleValue Lang="en" Value="previous" />
+        <LocaleValue Lang="fi" Value="edellinen" />
+        <LocaleValue Lang="sv" Value="föregående" />
+        <LocaleValue Lang="sr" Value="prethodna" />
+        <LocaleValue Lang="cs" Value="předchozí" />
+        <LocaleValue Lang="me" Value="prethodna" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AriaNavigation">
+      <Values>
+        <LocaleValue Lang="en" Value="navigation" />
+        <LocaleValue Lang="fi" Value="navigointi" />
+        <LocaleValue Lang="sv" Value="navigering" />
+        <LocaleValue Lang="sr" Value="za navigaciju" />
+        <LocaleValue Lang="cs" Value="navigace" />
+        <LocaleValue Lang="me" Value="za navigaciju" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>
