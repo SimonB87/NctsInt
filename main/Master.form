@@ -79,6 +79,9 @@
                       <ClassName value="{theme}-label" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
                   </CssClass>
                 </Label>
               </Children>
@@ -312,9 +315,6 @@
       </Children>
     </DataContext>
   </DataContext>
-  <OnActivate>
-    <ActionEvent ReferencedAction="~scrollMenu" />
-  </OnActivate>
   <OnCreate>
     <ActionEvent ReferencedAction="~init" />
   </OnCreate>
@@ -322,14 +322,19 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.isExpandedCollapsibleStickyPnl = false
+        <Script><![CDATA[apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
+
+globals.isLimitedWidth = true
+
+globals.isExpandedCollapsibleStickyPnl = false
 
 // TODO: Replace with data from server once we have it
+//globals.serverConfig.TPendDate = toDate("2019-12-31", defaultDate())
 globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())
 globals.serverConfig.communicationLanguageAtDeparture = "Montenegro"
 
 form.appVersion = apiobjects.appVersion.get()
-
 
 //TODO - nahradit za naši správnou verzi, jakmile to CIC podporovat!
 //apiobjects.CIC.setVersion("1.00.00" ) 
@@ -359,27 +364,16 @@ apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="scrollMenu" />
-      <IsJavascript value="True" />
-      <Script><![CDATA[window.onscroll = function() {setStickyMenu()};
-
-function setStickyMenu() {
-  if (document.body.scrollTop > 95 || document.documentElement.scrollTop > 95) {
-    document.getElementsByTagName("html")[0].className = "scrolled";
-  }else{
-    document.getElementsByTagName("html")[0].className = "";
-  }
-}]]></Script>
-      <ActionLangBody IsValid="True" />
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="handler_label1_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.Declist.go()]]></Script>
+        <Script><![CDATA[if globals.DataChanged then
+	if system.confirm("Data has been changed. You might lose it when you go away") then
+		navigation.main.Declist.go()
+	endif
+else
+	navigation.main.DecList.go()
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

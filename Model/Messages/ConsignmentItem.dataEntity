@@ -13,24 +13,6 @@
       <MetaType reference="+MetaTypes.GoodsItemNumberContentType" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/goodsItemNumber" />
       <MtsImportOptions.MTS.Type value="element" />
-      <Validators>
-        <Validator Name="R0988">
-          <MtsImportOptions.MTS.ID value="R0988" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["R0988"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE R0988 Each < Goods item number> is unique for the Data Group it belongs to. The Goods item number shall be sequential, starting from '1' for the first iteration of the Data Group and increasing by '1' for each iteration. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Attribute>
     <Attribute>
       <Name value="declarationGoodsItemNumber" />
@@ -39,24 +21,6 @@
       <MetaType reference="+MetaTypes.DeclarationGoodsItemNumberContentType" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/declarationGoodsItemNumber" />
       <MtsImportOptions.MTS.Type value="element" />
-      <Validators>
-        <Validator Name="R0007">
-          <MtsImportOptions.MTS.ID value="R0007" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["R0007"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE R0007 Each / * /Consignment/HouseConsignment/ConsignmentItem/declarationGoodsItemNumber is unique throughout the declaration. The items shall be numbered in a sequential fashion, starting from '1' for the first item and increment the numbering by '1' for each following item. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Attribute>
     <Reference>
       <Name value="declarationType" />
@@ -68,40 +32,6 @@
           <Include reference="+DataEntities.DeclarationTypeItemLevel" />
         </Include>
       </Children>
-      <Validators>
-        <Validator Name="R0909_Dec_CI">
-          <MtsImportOptions.MTS.ID value="R0909_Dec_CI" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["R0909_Dec_CI"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE R0909_Dec_CI IF the 2 first digits of / * /CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'
-    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
-                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
-                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
-             ELSE IF the 2 first digits of <CUSTOMS OFFICE OF DEPARTURE.Reference number> is in
-set CL010 AND NOT EQUAL to 'IT'
-                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
-                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};
-
-IF the 2 first digits of / * /CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'
-    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
-                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
-                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
-             ELSE IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is in
-set CL010 AND NOT EQUAL to "IT'
-                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
-                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Reference>
     <Reference>
       <Name value="countryOfDispatch" />
@@ -201,27 +131,6 @@ this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
           <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/identificationNumber" />
           <MtsImportOptions.MTS.Type value="element" />
-          <Validators>
-            <Validator Name="R0850">
-              <MtsImportOptions.MTS.ID value="R0850" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0850"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0850 IF sender is in EU (CL010)
-THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),
-ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).
-The EORI/TCUIN values should comply with the following pattern: <xs:pattern value=" [A-Z]{2}[\x21-\x7E]{1,15}"/> */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Attribute>
         <Attribute>
           <Name value="name" />
@@ -335,77 +244,6 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
         </Complex>
       </Children>
       <Validators>
-        <Validator Name="G0062">
-          <MtsImportOptions.MTS.ID value="G0062" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0062"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0062 It is the sole responsibility of the sender to ensure that all the Data Groups (at House Consignment level or Consignment Item level) do not have the same value in the
-various D.G. present. The recipient will not verify this part of the condition. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="S1022">
-          <MtsImportOptions.MTS.ID value="S1022" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["S1022"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE S1022 The validation of particular Data Group/Item shall be performed in the following sequence: C0001 > C0488 */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="C0001">
-          <MtsImportOptions.MTS.ID value="C0001" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["C0001"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE C0001 IF / * /Consignment/countryOfDestination is in SET CL009 (CountryCodesCommonTransit) THEN
-           IF / * /Consignment/Consignee is present THEN
-                      / * /Consignment/HouseConsignment/Consignee = "N" AND
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"
-           ELSE IF / * /Consignment/HouseConsignment/Consignee is present THEN
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N" AND
-                      / * /Consignment/HouseConsignment/Consignee cannot have the same value for all / * /Consignment/HouseConsignment/Consignee
-           ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "R" AND
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee cannot have the same value for all                       
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee
-ELSE IF / * / Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is in SET CL009 (CountryCodesCommonTransit) THEN
-               THIS / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "R" AND
-               / * /Consignment/HouseConsignment/ConsignmentItem/Consignee cannot have the same value for all            
-               / * /Consignment/HouseConsignment/ConsignmentItem/Consignee
-ELSE IF / * /Consignment/countryOfDestination is NOT in SET CL009 (CountryCodesCommonTransit)  AND / * / Consignment/HouseConsignment/ConsignmentItem/countryOfDestination is NOT in SET CL009 THEN
-           IF / * /Consignment/Consignee is present THEN
-                      / * /Consignment/HouseConsignment/Consignee = "N" AND
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"
-           ELSE IF / * /Consignment/HouseConsignment/Consignee is present C0215
-                      / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N" AND
-                      / * /Consignment/HouseConsignment/Consignee. cannot have the same value for all / * /Consignment/HouseConsignment/Consignee
-           ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "O" AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee 
-           cannot have the same value for all  / * /Consignment/HouseConsignment/ConsignmentItem/Consignee */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
         <Validator Name="C0488">
           <MtsImportOptions.MTS.ID value="C0488" />
           <MtsImportOptions.MTS.Type value="condition-constraint" />
@@ -512,40 +350,6 @@ ELSE IF / * /Consignment/countryOfDestination is NOT in SET CL009 (CountryCodesC
                   <Include reference="+DataEntities.HScode" />
                 </Include>
               </Children>
-              <Validators>
-                <Validator Name="CLEXCISE">
-                  <MtsImportOptions.MTS.ID value="CLEXCISE" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["CLEXCISE"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE CLEXCISE {ClientBehavior,Description} */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-                <Validator Name="CLSENSITIVE">
-                  <MtsImportOptions.MTS.ID value="CLSENSITIVE" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["CLSENSITIVE"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE CLSENSITIVE {ClientBehavior,Description} */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </Validators>
             </Reference>
             <Attribute>
               <Name value="combinedNomenclatureCode" />
@@ -589,24 +393,6 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
                   <StrMinLength value="2" />
                 </AttributeType>
               </DeclaredType>
-              <Validators>
-                <Validator Name="NC006">
-                  <MtsImportOptions.MTS.ID value="NC006" />
-                  <MtsImportOptions.MTS.Type value="condition-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["NC006"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE NC006 D.I. (Data Item) must be used when is declared Excise goods (CLEXCISE)  */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </Validators>
             </Attribute>
             <Attribute>
               <Name value="exciseGoodsQuantity" />
@@ -623,45 +409,6 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
               </DeclaredType>
             </Attribute>
           </Children>
-          <Validators>
-            <Validator Name="B1834">
-              <MtsImportOptions.MTS.ID value="B1834" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["B1834"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE B1834 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
-THEN C0153 attached to
-/ * /Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode
-shall be disabled and the D.G. will become optional. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="C0153">
-              <MtsImportOptions.MTS.ID value="C0153" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0153"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0153 IF / * /TransitOperation/TIRCarnetNumber is PRESENT
-THEN / * /Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "O"
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode = "R" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Complex>
         <Collection>
           <Name value="DangerousGoods" />
@@ -677,24 +424,6 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode =
               <MetaType reference="+MetaTypes.SequenceNumberContentType" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/DangerousGoods/sequenceNumber" />
               <MtsImportOptions.MTS.Type value="element" />
-              <Validators>
-                <Validator Name="R0987">
-                  <MtsImportOptions.MTS.ID value="R0987" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["R0987"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE R0987 Each <Sequence number> is unique for the Data Group it belongs to. The sequence numbers shall be sequential, starting from '1' for the first iteration of the Data Group and increasing by '1' for each iteration. */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </Validators>
             </Attribute>
             <Reference>
               <Name value="UNNumber" />
@@ -709,47 +438,6 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Commodity/CommodityCode =
               </Children>
             </Reference>
           </Children>
-          <ItemValidators>
-            <Validator Name="E1406">
-              <MtsImportOptions.MTS.ID value="E1406" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["E1406"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE E1406 IF <Decisive Date> is LESS than or EQUAL to <TPendDate> 
-THEN
-/ * /Consignment/DepartureTransportMeans AND
-/ * /Consignment/HouseConsignment AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/Commodity/DangerousGoods AND
-/ * /RiskAnalysisIdentification/RiskAnalysis/RiskAnalysisResult 
-
-multiplicity shall be set to '1x' */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="G0300">
-              <MtsImportOptions.MTS.ID value="G0300" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0300"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0300 The UN Number must be present if the commodity includes dangerous goods that are listed in the United Nations Dangerous Goods Code (UNDG). */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </ItemValidators>
         </Collection>
         <Complex>
           <Name value="GoodsMeasure" />
@@ -863,24 +551,6 @@ THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Docume
           <MetaType reference="+MetaTypes.ReferenceNumberContentType03" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/referenceNumber" />
           <MtsImportOptions.MTS.Type value="element" />
-          <Validators>
-            <Validator Name="R0021">
-              <MtsImportOptions.MTS.ID value="R0021" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0021"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0021 A zero '0' is to be considered as a valid number in this field. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Attribute>
         <Attribute>
           <Name value="goodsItemNumber" />
@@ -953,109 +623,6 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
-      <ItemValidators>
-        <Validator Name="B1000">
-          <MtsImportOptions.MTS.ID value="B1000" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["B1000"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE B1000 IF <Decisive Date> is LESS than or EQUAL to <TPendDate> THEN
-This D.G. can be also used 
-         - in case of Export followed by transit (maximum one MRN included per one Consignment item)
-     AND
-         - if the <TRANSIT OPERATION.Additional Declaration Type> is EQUAL to 'A'. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="E1401">
-          <MtsImportOptions.MTS.ID value="E1401" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["E1401"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE E1401 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
-THEN
- / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument AND
- / * /Consignment/HouseConsignment/PreviousDocument 
-
-multiplicity shall be set to '9x' */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="E1602">
-          <MtsImportOptions.MTS.ID value="E1602" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["E1602"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE E1602 IF <Decisive Date> is LESS than or EQUAL to <TPendDate> 
-THEN
-/ * /Consignment/PreviousDocument AND
-/ * /Consignment/AdditionalInformation AND
-/ * /Consignment/AdditionalReference AND
-/ * /Consignment/SupportingDocument AND
-/ * /Consignment/HouseConsignment/Consignee AND
-/ * /Consignment/HouseConsignment/Consignor AND
-/ * /Consignment/HouseConsignment/AdditionalSupplyChainActor AND
-/ * /Consignment/HouseConsignment/countryOfDispatch AND
-/ * /Consignment/HouseConsignment/DepartureTransportMeans AND
-/ * /Consignment/HouseConsignment/AdditionalReference AND
-/ * /Consignment/HouseConsignment/TransportDocument AND
-/ * /Consignment/HouseConsignment/referenceNumberUCR
-
-shall not be used */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="G0825">
-          <MtsImportOptions.MTS.ID value="G0825" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0825"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0825 - Consignment related information shall be recorded under
-<CONSIGNMENT-PREVIOUS DOCUMENT> 
-<CONSIGNMENT-ADDITIONAL INFORMATION> 
-<CONSIGNMENT-SUPPORTING DOCUMENT>
-<CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- House Consignment related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- Goods item related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL INFORMATION>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE> */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </ItemValidators>
     </Collection>
     <Collection>
       <Name value="SupportingDocument" />
@@ -1071,24 +638,6 @@ shall not be used */]]></ExpressionText>
           <MetaType reference="+MetaTypes.SequenceNumberContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/sequenceNumber" />
           <MtsImportOptions.MTS.Type value="element" />
-          <Validators>
-            <Validator Name="R0987">
-              <MtsImportOptions.MTS.ID value="R0987" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0987"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0987 Each <Sequence number> is unique for the Data Group it belongs to. The sequence numbers shall be sequential, starting from '1' for the first iteration of the Data Group and increasing by '1' for each iteration. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Attribute>
         <Reference>
           <Name value="type" />
@@ -1125,37 +674,6 @@ shall not be used */]]></ExpressionText>
           <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
-      <ItemValidators>
-        <Validator Name="G0825">
-          <MtsImportOptions.MTS.ID value="G0825" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0825"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0825 - Consignment related information shall be recorded under
-<CONSIGNMENT-PREVIOUS DOCUMENT> 
-<CONSIGNMENT-ADDITIONAL INFORMATION> 
-<CONSIGNMENT-SUPPORTING DOCUMENT>
-<CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- House Consignment related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- Goods item related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL INFORMATION>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE> */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </ItemValidators>
     </Collection>
     <Collection>
       <Name value="AdditionalReference" />
@@ -1184,37 +702,6 @@ shall not be used */]]></ExpressionText>
           <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
-      <ItemValidators>
-        <Validator Name="G0825">
-          <MtsImportOptions.MTS.ID value="G0825" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0825"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0825 - Consignment related information shall be recorded under
-<CONSIGNMENT-PREVIOUS DOCUMENT> 
-<CONSIGNMENT-ADDITIONAL INFORMATION> 
-<CONSIGNMENT-SUPPORTING DOCUMENT>
-<CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- House Consignment related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- Goods item related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL INFORMATION>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE> */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </ItemValidators>
     </Collection>
     <Collection>
       <Name value="AdditionalInformation" />
@@ -1243,37 +730,6 @@ shall not be used */]]></ExpressionText>
           <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
-      <ItemValidators>
-        <Validator Name="G0825">
-          <MtsImportOptions.MTS.ID value="G0825" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0825"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0825 - Consignment related information shall be recorded under
-<CONSIGNMENT-PREVIOUS DOCUMENT> 
-<CONSIGNMENT-ADDITIONAL INFORMATION> 
-<CONSIGNMENT-SUPPORTING DOCUMENT>
-<CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- House Consignment related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-ADDITIONAL REFERENCE>
-
-- Goods item related information shall be recorded under
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-PREVIOUS DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL INFORMATION>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-SUPPORTING DOCUMENT>
-<CONSIGNMENT-HOUSE CONSIGNMENT-CONSIGNMENT ITEM-ADDITIONAL REFERENCE> */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </ItemValidators>
     </Collection>
     <Complex>
       <Name value="TransportCharges" />
@@ -1294,67 +750,6 @@ shall not be used */]]></ExpressionText>
           </Children>
         </Reference>
       </Children>
-      <Validators>
-        <Validator Name="G0062">
-          <MtsImportOptions.MTS.ID value="G0062" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0062"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0062 It is the sole responsibility of the sender to ensure that all the Data Groups (at House Consignment level or Consignment Item level) do not have the same value in the
-various D.G. present. The recipient will not verify this part of the condition. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="C0186">
-          <MtsImportOptions.MTS.ID value="C0186" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["C0186"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE C0186 IF / * /TransitOperation/security is EQUAL to '0'
-THEN / * /Consignment/Carrier = "N"
- AND / * /Consignment/HouseConsignment/TransportCharges = "N"
- AND / * /Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"
-ELSE / * /Consignment/Carrier = "O"
- AND / * /Consignment/HouseConsignment/TransportCharges = "O"
- AND / * /Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O" */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="C0337">
-          <MtsImportOptions.MTS.ID value="C0337" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["C0337"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE C0337 IF / * /Consignment/HouseConsignment/TransportCharges is PRESENT 
-THEN 
-/ * /Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "N"
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/TransportCharges = "O"
-AND / * /Consignment/HouseConsignment/ConsignmentItem/TransportCharges cannot have the same value for all / * /Consignment/HouseConsignment/ConsignmentItem */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Complex>
     <Reference>
       <Name value="releaseType" />

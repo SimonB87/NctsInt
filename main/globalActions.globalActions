@@ -118,6 +118,9 @@ endif
       <Name value="authentication" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[//AUTENTIFIKACE
+var selectedCo = "ME123456"
+apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
+
 var response = apiobjects.CIC.postAsync("login", defaultString())
 
 if response.isError() then
@@ -138,9 +141,15 @@ endif]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if inputMode = enums.declarationFormMode.create.enumValue() then
 	globals.globalUiState.userModeLabel = "New Declaration"
-else if inputMode = enums.declarationFormMode.edit.enumValue() then
-	globals.globalUiState.userModeLabel = "Amend Declaration"
-endIf endIf]]></Script>
+else 
+	if inputMode = enums.declarationFormMode.edit.enumValue() then
+		globals.globalUiState.userModeLabel = "Amend Declaration"
+	else
+		if inputMode = enums.declarationFormMode.arrival.enumValue() then
+			globals.globalUIState.userModeLabel = "Arrived Declaration"
+		endif
+	endIf 
+endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -156,6 +165,253 @@ endIf endIf]]></Script>
             </Attribute>
           </Children>
         </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToHeaderFromLists" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(navigationID = "TransitOperation") then
+	globals.activePanel = "transitOperation"
+else
+	if isTrue(navigationID = "CustomsOffices") then
+		globals.activePanel = "customsOffice"
+	else
+		if isTrue(navigationID = "Traders") then
+			globals.activePanel = "traders"
+		else
+			if isTrue(navigationID = "Guarantee") then
+				globals.activePanel = "guarantee"
+			else
+				if isTrue(navigationID = "Consignment") then
+					globals.activePanel = "consignment"
+				endif
+			endif
+		endif
+	endif
+endif
+
+if GUID.hasValue() then
+	navigation.main.Header.withGuid(GUID).go(mode)
+else
+	navigation.main.Header.go(mode)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="navigationID" />
+              <Caption value="Navigation ID" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="mode" />
+              <Caption value="Mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToConsignmentItem" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if GUID.hasValue() then
+	navigation.main.ConsignmentItem.withGUID(GUID).go(mode, sequenceNumber, itemNumber)
+else
+	navigation.main.ConsignmentItem.go(mode, sequenceNumber, itemNumber)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="mode" />
+              <Caption value="Mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="itemNumber" />
+              <Caption value="Item number" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToConsignmentItemList" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if GUID.hasValue() then
+	navigation.main.ConsignmentList.withGUID(GUID).go(mode, sequenceNumber)
+else
+	navigation.main.ConsignmentList.go(mode, sequenceNumber)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="mode" />
+              <Caption value="Mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToHouseConsignment" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if GUID.hasValue() then
+	navigation.main.HouseConsignment.withGuid(GUID).go(mode, sequenceNumber)
+else
+	navigation.main.HouseConsignment.go(mode, sequenceNumber)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="mode" />
+              <Caption value="Mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToHouseConsignmentList" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if GUID.hasValue() then
+	navigation.main.HouseConsignmentList.withGuid(GUID).go(mode)
+else
+	navigation.main.HouseConsignmentList.go(mode)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="mode" />
+              <Caption value="Mode" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <MetaType reference="+MetaTypes.declarationFormMode" />
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="errors" />
+              <Caption value="Errors" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setDataChangedToFalse" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.DataChanged = false
+apiobjects.urlRouter.setDataHasChanged(false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
       </DataContext>
     </ActionBlock>
   </Actions>

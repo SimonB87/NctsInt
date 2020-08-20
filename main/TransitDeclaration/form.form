@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?data-format version="0.400"?>
 <Form>
-  <Name value="navTreeExperiment" />
-  <Caption value="Nav tree experiment" />
+  <Name value="form" />
+  <Caption value="Form" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -20,9 +20,4 @@
   <DataContext>
     <DataContext />
   </DataContext>
-  <ApiObjects>
-    <NavigationTreeController identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
-      <Name value="navigationTreeController1" />
-    </NavigationTreeController>
-  </ApiObjects>
 </Form>

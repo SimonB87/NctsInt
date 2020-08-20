@@ -3,6 +3,120 @@
 <GlobalVariables>
   <Name value="globalVariables" />
   <Children>
+    <Complex>
+      <Name value="Errors" />
+      <Caption value="Errors" />
+      <Children>
+        <Collection>
+          <Name value="serverValidationErrors" />
+          <Caption value="Server validation errors" />
+          <DataContextParameter.IsInput value="True" />
+          <Children>
+            <Attribute>
+              <Name value="Reason" />
+              <Caption value="Reason" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ErrorType" />
+              <Caption value="Error type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+        <Complex>
+          <Name value="serverValidationComplex" />
+          <Caption value="Server validation complex" />
+          <Children>
+            <Collection>
+              <Name value="MessageCheckError" />
+              <Caption value="Message check error" />
+              <Children>
+                <Attribute>
+                  <Name value="ErrorType" />
+                  <Caption value="Error type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Pointer" />
+                  <Caption value="Pointer" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Reason" />
+                  <Caption value="Reason" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Collection>
+          <Name value="clientValidationErrors" />
+          <Caption value="Client validation errors" />
+          <Children>
+            <Attribute>
+              <Name value="Message" />
+              <Caption value="Message" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Pointer" />
+              <Caption value="Pointer" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Type" />
+              <Caption value="Type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="FocusTo" />
+              <Caption value="Focus to" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Collection>
+      </Children>
+    </Complex>
     <Attribute>
       <Name value="isExpandedCollapsibleStickyPnl" />
       <Caption value="Is expanded collapsible sticky pnl" />
@@ -132,6 +246,67 @@
             <AttributeType />
           </DeclaredType>
         </Attribute>
+        <Attribute>
+          <Name value="lastSelectedOffices" />
+          <Caption value="Last selected offices" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isCustomsOfficeOfDepartureActive" />
+          <Caption value="Is customs office of departure active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isCustomsOfficeOfDestinationActive" />
+          <Caption value="Is customs office of destination active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isCustomsOfficeOfTransitActive" />
+          <Caption value="Is customs office of transit active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isRequestedCustomsOfficeActive" />
+          <Caption value="Is requested customs office active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isQueryMovementInformationActive" />
+          <Caption value="Is query movement information active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isValidationsVisible" />
+          <Caption value="Is validations visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </Complex>
     <Attribute>
@@ -139,6 +314,24 @@
       <Caption value="Active panel" />
       <DeclaredType>
         <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="DataChanged" />
+      <Caption value="Data changed" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="isLimitedWidth" />
+      <Caption value="Is limited width" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
       </DeclaredType>
     </Attribute>
   </Children>

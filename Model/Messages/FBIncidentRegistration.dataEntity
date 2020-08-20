@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBIncidentRegistration" />
+  <Caption value="FB Incident Registration" />
+  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="TRANSIT OPERATION" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="18" />
+              <StrMinLength value="18" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="Consignment" />
+      <Caption value="CONSIGNMENT" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Collection>
+          <Name value="Incident" />
+          <Caption value="INCIDENT" />
+          <MaxCount value="9" />
+          <MinCount value="1" />
+          <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <Children>
+            <Reference>
+              <Name value="code" />
+              <Caption value="Code" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/code" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.IncidentCode" />
+                </Include>
+              </Children>
+            </Reference>
+            <Attribute>
+              <Name value="text" />
+              <Caption value="Text" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.TextContentType" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/text" />
+              <MtsImportOptions.MTS.Type value="element" />
+            </Attribute>
+            <Complex>
+              <Name value="Endorsement" />
+              <Caption value="ENDORSEMENT" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <Children>
+                <Attribute>
+                  <Name value="date" />
+                  <Caption value="Date" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/date" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Date" />
+                    </AttributeType>
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="authority" />
+                  <Caption value="Authority" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.AuthorityContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/authority" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                </Attribute>
+                <Attribute>
+                  <Name value="place" />
+                  <Caption value="Place" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.PlaceContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/place" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                </Attribute>
+                <Reference>
+                  <Name value="country" />
+                  <Caption value="Country" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/country" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.CountryCodesCommonTransit" />
+                    </Include>
+                  </Children>
+                </Reference>
+              </Children>
+            </Complex>
+            <Complex>
+              <Name value="Location" />
+              <Caption value="LOCATION" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <Children>
+                <Reference>
+                  <Name value="qualifierOfIdentification" />
+                  <Caption value="Qualifier of identification" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/qualifierOfIdentification" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.QualifierOfIdentificationIncident" />
+                    </Include>
+                  </Children>
+                </Reference>
+                <Reference>
+                  <Name value="UNLocode" />
+                  <Caption value="UN LOCODE" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/UNLocode" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.UnLocodeExtended" />
+                    </Include>
+                  </Children>
+                </Reference>
+                <Reference>
+                  <Name value="country" />
+                  <Caption value="Country" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/country" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.CountryCodesCommonTransit" />
+                    </Include>
+                  </Children>
+                </Reference>
+                <Complex>
+                  <Name value="GNSS" />
+                  <Caption value="GNSS" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/GNSS" />
+                  <MtsImportOptions.MTS.Type value="group" />
+                  <Children>
+                    <Attribute>
+                      <Name value="latitude" />
+                      <Caption value="Latitude" />
+                      <IsRequired value="True" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/GNSS/latitude" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMaxLength value="17" />
+                        </AttributeType>
+                      </DeclaredType>
+                      <Validators>
+                        <Validator Name="regex">
+                          <MtsImportOptions.MTS.Regex value="[+-]?([0-8]?[0-9]\.[0-9]{5,7}|90.000000?0?)" />
+                          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+                          <ErrorMessage IsValid="True">
+                            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </ErrorMessage>
+                          <IsValid IsValid="True">
+                            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[+-]?([0-8]?[0-9]\\.[0-9]{5,7}|90.000000?0?)$") : true)]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="Bool" />
+                            </ResultType>
+                          </IsValid>
+                        </Validator>
+                      </Validators>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="longitude" />
+                      <Caption value="Longitude" />
+                      <IsRequired value="True" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/GNSS/longitude" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMaxLength value="17" />
+                        </AttributeType>
+                      </DeclaredType>
+                      <Validators>
+                        <Validator Name="regex">
+                          <MtsImportOptions.MTS.Regex value="[+-]?((0?[0-9]?|1[0-7])[0-9]\.[0-9]{5,7}|180.000000?0?)" />
+                          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+                          <ErrorMessage IsValid="True">
+                            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </ErrorMessage>
+                          <IsValid IsValid="True">
+                            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[+-]?((0?[0-9]?|1[0-7])[0-9]\\.[0-9]{5,7}|180.000000?0?)$") : true)]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="Bool" />
+                            </ResultType>
+                          </IsValid>
+                        </Validator>
+                      </Validators>
+                    </Attribute>
+                  </Children>
+                </Complex>
+                <Complex>
+                  <Name value="Address" />
+                  <Caption value="ADDRESS" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address" />
+                  <MtsImportOptions.MTS.Type value="group" />
+                  <Children>
+                    <Attribute>
+                      <Name value="streetAndNumber" />
+                      <Caption value="Street and number" />
+                      <IsRequired value="True" />
+                      <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address/streetAndNumber" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                    </Attribute>
+                    <Attribute>
+                      <Name value="postcode" />
+                      <Caption value="Postcode" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address/postcode" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMaxLength value="17" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="city" />
+                      <Caption value="City" />
+                      <IsRequired value="True" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address/city" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <DeclaredType>
+                        <AttributeType>
+                          <StrMaxLength value="35" />
+                        </AttributeType>
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Complex>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="TransportEquipment" />
+              <Caption value="TRANSPORT EQUIPMENT" />
+              <MaxCount value="9999" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <Children>
+                <Attribute>
+                  <Name value="containerIdentificationNumber" />
+                  <Caption value="Container identification number" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/containerIdentificationNumber" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <StrMaxLength value="17" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <Validators>
+                    <Validator Name="C0820">
+                      <MtsImportOptions.MTS.ID value="C0820" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0820"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().Transhipment.containerIndicator) ? this.containerIdentificationNumber.hasValue() : true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                    <Validator Name="regex">
+                      <MtsImportOptions.MTS.Regex value="[ -~]{1,17}" />
+                      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[ -~]{1,17}$") : true)]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Attribute>
+                <Attribute>
+                  <Name value="numberOfSeals" />
+                  <Caption value="Number of seals" />
+                  <MetaType reference="+MetaTypes.NumberOfSealsContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/numberOfSeals" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <Validators>
+                    <Validator Name="R0106">
+                      <MtsImportOptions.MTS.ID value="R0106" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["R0106"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[this.numberOfSeals.hasValue() ? this.numberOfSeals = this.Seal.count() : this.Seal.isEmpty()]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                    <Validator Name="R0448">
+                      <MtsImportOptions.MTS.ID value="R0448" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["R0448"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[this.containerIdentificationNumber.isEmpty() ?
+(this.numberOfSeals > 0)
+:
+true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                    <Validator Name="C0396">
+                      <MtsImportOptions.MTS.ID value="C0396" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0396"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().code.Code = 2) ? this.numberOfSeals.hasValue() : true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Attribute>
+                <Collection>
+                  <Name value="Seal" />
+                  <Caption value="SEAL" />
+                  <MaxCount value="99" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/Seal" />
+                  <MtsImportOptions.MTS.Type value="group" />
+                  <Children>
+                    <Attribute>
+                      <Name value="identifier" />
+                      <Caption value="Identifier" />
+                      <IsRequired value="True" />
+                      <MetaType reference="+MetaTypes.IdentifierContentType" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/Seal/identifier" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <Validators>
+                        <Validator Name="R0107">
+                          <MtsImportOptions.MTS.ID value="R0107" />
+                          <MtsImportOptions.MTS.Type value="rule-constraint" />
+                          <ErrorMessage IsValid="True">
+                            <ExpressionText><![CDATA["R0107"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </ErrorMessage>
+                          <IsValid IsValid="True">
+                            <ExpressionText><![CDATA[this.collection().where(current.identifier=this.identifier).count() < 2]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="Bool" />
+                            </ResultType>
+                          </IsValid>
+                        </Validator>
+                      </Validators>
+                    </Attribute>
+                  </Children>
+                  <CollectionValidators>
+                    <Validator Name="C0569">
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0569"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.numberOfSeals > 0) ? this.Seal.hasValue() : this.Seal.isEmpty()]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </CollectionValidators>
+                </Collection>
+                <Collection>
+                  <Name value="GoodsReference" />
+                  <Caption value="GOODS REFERENCE" />
+                  <MaxCount value="9999" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/GoodsReference" />
+                  <MtsImportOptions.MTS.Type value="group" />
+                  <Children>
+                    <Attribute>
+                      <Name value="declarationGoodsItemNumber" />
+                      <Caption value="Declaration goods item number" />
+                      <IsRequired value="True" />
+                      <MetaType reference="+MetaTypes.DeclarationGoodsItemNumberContentType" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/GoodsReference/declarationGoodsItemNumber" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <Validators>
+                        <Validator Name="G0006">
+                          <MtsImportOptions.MTS.ID value="G0006" />
+                          <MtsImportOptions.MTS.Type value="rule-constraint" />
+                          <ErrorMessage IsValid="True">
+                            <ExpressionText><![CDATA["G0006"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </ErrorMessage>
+                          <IsValid IsValid="True">
+                            <ExpressionText><![CDATA[true /* IMPORTED RULE G0006 <TRANSPORT EQUIPMENT-GOODS REFERENCE.Declaration goods item number> is filled in with the item number of the goods concerned as provided in Declaration goods item number. */]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="Bool" />
+                            </ResultType>
+                          </IsValid>
+                        </Validator>
+                      </Validators>
+                    </Attribute>
+                  </Children>
+                  <ItemValidators>
+                    <Validator Name="G0670">
+                      <MtsImportOptions.MTS.ID value="G0670" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["G0670"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0670 If all goods items are related a single container, the data group can be omitted.
+Otherwise all the goods items related to this container (if present) must be declared.
+All the non-containerised goods items related to this seals information (if present) must be declared as well. */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </ItemValidators>
+                </Collection>
+              </Children>
+              <CollectionValidators>
+                <Validator Name="C0240">
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.code.Code = 2) ? this.TransportEquipment.hasValue() : true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </CollectionValidators>
+            </Collection>
+            <Complex>
+              <Name value="Transhipment" />
+              <Caption value="TRANSHIPMENT" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <Children>
+                <Attribute>
+                  <Name value="containerIndicator" />
+                  <Caption value="Container indicator" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/containerIndicator" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <BaseType value="Bool" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <Validators>
+                    <Validator Name="G0029">
+                      <MtsImportOptions.MTS.ID value="G0029" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["G0029"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0029 The D.I. will be filled in with new value amending initial declaration in case of incident. In case the initial container is replaced by another container then <CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator> is equal to '1' else <CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator> is equal to '0'. */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Attribute>
+                <Complex>
+                  <Name value="TransportMeans" />
+                  <Caption value="TRANSPORT MEANS" />
+                  <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans" />
+                  <MtsImportOptions.MTS.Type value="group" />
+                  <Children>
+                    <Reference>
+                      <Name value="typeOfIdentification" />
+                      <Caption value="Type of identification" />
+                      <IsRequired value="True" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/typeOfIdentification" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <Children>
+                        <Include>
+                          <Include reference="+DataEntities.TypeOfIdentificationOfMeansOfTransport" />
+                        </Include>
+                      </Children>
+                    </Reference>
+                    <Attribute>
+                      <Name value="identificationNumber" />
+                      <Caption value="Identification number" />
+                      <IsRequired value="True" />
+                      <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/identificationNumber" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                    </Attribute>
+                    <Reference>
+                      <Name value="nationality" />
+                      <Caption value="Nationality" />
+                      <IsRequired value="True" />
+                      <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/nationality" />
+                      <MtsImportOptions.MTS.Type value="element" />
+                      <Children>
+                        <Include>
+                          <Include reference="+DataEntities.CountryCodesFullList" />
+                        </Include>
+                      </Children>
+                    </Reference>
+                  </Children>
+                  <Validators>
+                    <Validator Name="C0397">
+                      <MtsImportOptions.MTS.ID value="C0397" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0397"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().code.Code in [3,6]) ? this.TransportMeans.hasValue() : true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Complex>
+              </Children>
+              <Validators>
+                <Validator Name="C0240">
+                  <MtsImportOptions.MTS.ID value="C0240" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.code.Code in [3,6]) ?
+	this.Transhipment.hasValue()
+: true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Complex>
+          </Children>
+        </Collection>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

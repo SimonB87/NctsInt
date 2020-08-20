@@ -2858,3 +2858,87 @@ html .sffw-navigation-tree-node-indent-3.sffw-navigation-tree-node-selected {
 			for (var cl in links) { var link = links[cl]; if (link.rel === "stylesheet") link.href += ""; }});
 
 / ----------------------------------------------------------------------------------------------------------------------------- */
+#dialog {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.15);
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  opacity: 0;
+  visibility: hidden;
+}
+.dialog_state {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.dialog_state:checked + #dialog,
+#dialog.dialog_open {
+  transition-delay: 0s;
+  opacity: 1;
+  visibility: visible;
+}
+#dlg-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+.dialog_state:checked + #dialog #dlg-wrap {
+  max-height: 24rem;
+  opacity: 1;
+  padding: 2rem;
+}
+#dlg-wrap {
+  position: relative;
+  z-index: 1;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 640px;
+  padding: 2rem;
+  border-radius: 0.25rem;
+/*border: 1px solid #969696;*/
+  background: #fff;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+#dlg-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+h2#dlg-header {
+  font: 200 2em/1em Raleway, Open Sans, Arial, Sans-Serif;
+  text-transform: initial;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem;
+}
+#dlg-content {
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.015em;
+}
+#dlg-prompt .button {
+  margin: 1rem 0.5rem;
+  border-radius: 1.5rem;
+}

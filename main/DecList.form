@@ -64,286 +64,2090 @@
                 </CssClassConditional>
               </CssClass>
             </Panel>
-            <HyperLink>
-              <Name value="hyperLink_all" />
-              <Data value="All" />
+            <Panel>
+              <Name value="customsOfficeOfDeparturePnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_all_OnClick" />
-              </OnClick>
+              <Children>
+                <Panel>
+                  <Name value="customsOfficeOfDepartureDt" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink3" />
+                      <Data value="Customs office of Departure" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink3_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dt" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="customsOfficeOfDepartureDd" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink_all1" />
+                      <Data value="All" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~allDepOnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCustomsOfficeOfDepartureAllActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Submitted1" />
+                      <Data value="Submitted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Submitted_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isSubmittedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_PreLodged1" />
+                      <Data value="PreLodged" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_PreLodged_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isPrelodgedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperlink_AcceptedSimpl1" />
+                      <Data value="Accepted Simplified" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~acceptedSimplOnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isAcceptedSimplifiedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_ClearInterupt1" />
+                      <Data value="Clearance interrupted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~clearInterruptOnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isClearanceInteruptedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_underControl1" />
+                      <Data value="Under control" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_underControl_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Cancelled1" />
+                      <Data value="Cancelled (rejected)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Rejected_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCancelledActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Invalidated1" />
+                      <Data value="Invalidated" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Invalidated_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_releaseRequest1" />
+                      <Data value="Under release request" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_releaseRequest_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderReleaseActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Registered1" />
+                      <Data value="Movement released  (registered)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Registered_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isMovementReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Released" />
+                      <Data value="Released" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Released_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_notReleased1" />
+                      <Data value="Not released for transit" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~notReleasedOnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isNotReleasedForTransitActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeReg1" />
+                      <Data value="Guarantee under registration" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeReg_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeRegistrationActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeAmend1" />
+                      <Data value="Guarantee under amendment" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeAmend_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeAmendmentActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dd" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="rolled" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfDepartureActive" />
+                      </Bindings>
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-accordition-panel-content" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isAllActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_Submitted" />
-              <Data value="Submitted" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_Submitted_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-accordition-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
+                  <ClassName value="rolled" />
                   <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isSubmittedActive" />
+                    <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfDepartureActive" />
                   </Bindings>
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="active" />
+                  <Condition value="False" />
+                </CssClassConditional>
               </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_PreLodged" />
-              <Data value="PreLodged" />
+            </Panel>
+            <Panel>
+              <Name value="customsOfficeOfDestinationPnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_PreLodged_OnClick" />
-              </OnClick>
+              <Children>
+                <Panel>
+                  <Name value="customsOfficeOfDestinationDt" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink4" />
+                      <Data value="Customs office of Destination" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink4_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dt" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="customsOfficeOfDestinationDd" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink_all2" />
+                      <Data value="All" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~allDesOnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCustomsOfficeOfDestinationAllActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_AarCreated" />
+                      <Data value="Waiting for presentation" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_AarCreated_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isAARCreatedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GoodsPresented" />
+                      <Data value="Goods presented" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_ArrivalAcceped_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGoodsPresentedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Unloading" />
+                      <Data value="Unloading" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Unloading_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnloadingActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_underControl" />
+                      <Data value="Under Control" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action1" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlDESActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_WaitingForDiscrepancies" />
+                      <Data value="Waiting for discrepancies resolution " />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_WaitingForDiscrepancies_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isWaitingForDiscrepanciesActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_UnderRecovery" />
+                      <Data value="Under recovery" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_UnderRecovery_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderRecoveryActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GoodsReleased" />
+                      <Data value="Goods Released" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action2" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGoodsReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_DocumentsRegistration" />
+                      <Data value="Documents Registration" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action6" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isDocumentsRegistrationActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Arrived2" />
+                      <Data value="Arrived" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action7" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isArrivedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Invalidated" />
+                      <Data value="Invalidated" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action9" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedDESActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_DiversionRejected" />
+                      <Data value="Diversion Rejected" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action8" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isDiversionRejectedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dd" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="rolled" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfDestinationActive" />
+                      </Bindings>
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-accordition-panel-content" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isPrelodgedActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperlink_AcceptedSimpl" />
-              <Data value="Accepted Simplified" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_AcceptedSimpl_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-accordition-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
+                  <ClassName value="rolled" />
                   <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isAcceptedSimplifiedActive" />
+                    <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfDestinationActive" />
                   </Bindings>
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="active" />
+                  <Condition value="False" />
+                </CssClassConditional>
               </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_ClearInterupt" />
-              <Data value="Clearance interrupted *" />
+            </Panel>
+            <Panel>
+              <Name value="customsOfficeOfTransitPnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_ClearInterupt_OnClick" />
-              </OnClick>
+              <Children>
+                <Panel>
+                  <Name value="customsOfficeOfTransitDt" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink5" />
+                      <Data value="Customs office of Transit" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink5_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dt" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="customsOfficeOfTransitDd" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink_all3" />
+                      <Data value="All" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action3" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeAmend3" />
+                      <Data value="Guarantee under amendment" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeAmend_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeAmendmentActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeReg3" />
+                      <Data value="Guarantee under registration" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeReg_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeRegistrationActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_notReleased3" />
+                      <Data value="Not released for transit" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isNotReleasedForTransitActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Registered3" />
+                      <Data value="Movement released  (registered)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Registered_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isMovementReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_releaseRequest3" />
+                      <Data value="Under release request" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_releaseRequest_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderReleaseActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Invalidated3" />
+                      <Data value="Invalidated" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Invalidated_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Cancelled3" />
+                      <Data value="Cancelled (rejected)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Rejected_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCancelledActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_underControl3" />
+                      <Data value="Under control" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_underControl_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_ClearInterupt3" />
+                      <Data value="Clearance interrupted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isClearanceInteruptedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperlink_AcceptedSimpl3" />
+                      <Data value="Accepted Simplified" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isAcceptedSimplifiedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_PreLodged3" />
+                      <Data value="PreLodged" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_PreLodged_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isPrelodgedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Submitted3" />
+                      <Data value="Submitted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Submitted3_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isSubmittedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dd" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="rolled" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfTransitActive" />
+                      </Bindings>
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-accordition-panel-content" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isClearanceInteruptedActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_underControl" />
-              <Data value="Under control *" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_underControl_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-accordition-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
+                  <ClassName value="rolled" />
                   <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlActive" />
+                    <Binding SourceProperty="Condition" Expression="globals.globalUiState.isCustomsOfficeOfTransitActive" />
                   </Bindings>
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="active" />
+                  <Condition value="False" />
+                </CssClassConditional>
               </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_Cancelled" />
-              <Data value="Cancelled (rejected)" />
+            </Panel>
+            <Panel>
+              <Name value="requestedCustomsOfficePnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_Rejected_OnClick" />
-              </OnClick>
+              <Children>
+                <Panel>
+                  <Name value="requestedCustomsOfficeDt" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink6" />
+                      <Data value="Requested Customs office" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink6_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dt" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="requestedCustomsOfficeDd" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink1" />
+                      <Data value="All" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action4" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeAmend4" />
+                      <Data value="Guarantee under amendment" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeAmend_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeAmendmentActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeReg4" />
+                      <Data value="Guarantee under registration" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeReg_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeRegistrationActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_notReleased4" />
+                      <Data value="Not released for transit" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isNotReleasedForTransitActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Registered4" />
+                      <Data value="Movement released  (registered)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Registered_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isMovementReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_releaseRequest4" />
+                      <Data value="Under release request" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_releaseRequest_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderReleaseActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Invalidated4" />
+                      <Data value="Invalidated" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Invalidated_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Cancelled4" />
+                      <Data value="Cancelled (rejected)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Rejected_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCancelledActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_underControl4" />
+                      <Data value="Under control" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_underControl_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_ClearInterupt4" />
+                      <Data value="Clearance interrupted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isClearanceInteruptedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperlink_AcceptedSimpl4" />
+                      <Data value="Accepted Simplified" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isAcceptedSimplifiedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_PreLodged4" />
+                      <Data value="PreLodged" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_PreLodged_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isPrelodgedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Submitted4" />
+                      <Data value="Submitted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Submitted4_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isSubmittedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dd" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="rolled" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.globalUiState.isRequestedCustomsOfficeActive" />
+                      </Bindings>
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-accordition-panel-content" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isCancelledActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_Invalidated" />
-              <Data value="Invalidated *" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_Invalidated_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-accordition-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
+                  <ClassName value="rolled" />
                   <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedActive" />
+                    <Binding SourceProperty="Condition" Expression="globals.globalUiState.isRequestedCustomsOfficeActive" />
                   </Bindings>
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="active" />
+                  <Condition value="False" />
+                </CssClassConditional>
               </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_releaseRequest" />
-              <Data value="Under release request *" />
+            </Panel>
+            <Panel>
+              <Name value="queryMovementInformationPnl" />
+              <Orientation value="Vertical" />
               <Panel.Height value="#" />
               <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_releaseRequest_OnClick" />
-              </OnClick>
+              <Children>
+                <Panel>
+                  <Name value="queryMovementInformationDt" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink7" />
+                      <Data value="Query movement information" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink7_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dt" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="queryMovementInformationDd" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <HyperLink>
+                      <Name value="hyperLink2" />
+                      <Data value="All" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~action5" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeAmend5" />
+                      <Data value="Guarantee under amendment" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeAmend_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeAmendmentActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_GuaranteeReg5" />
+                      <Data value="Guarantee under registration" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeReg_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeRegistrationActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_notReleased5" />
+                      <Data value="Not released for transit" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isNotReleasedForTransitActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Registered5" />
+                      <Data value="Movement released  (registered)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Registered_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isMovementReleasedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_releaseRequest5" />
+                      <Data value="Under release request" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_releaseRequest_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderReleaseActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Invalidated5" />
+                      <Data value="Invalidated" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Invalidated_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isInvalidatedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Cancelled5" />
+                      <Data value="Cancelled (rejected)" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_Rejected_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isCancelledActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_underControl5" />
+                      <Data value="Under control" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_underControl_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isUnderControlActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_ClearInterupt5" />
+                      <Data value="Clearance interrupted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Target value="_self" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isClearanceInteruptedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperlink_AcceptedSimpl5" />
+                      <Data value="Accepted Simplified" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isAcceptedSimplifiedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_PreLodged5" />
+                      <Data value="PreLodged" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_hyperLink_PreLodged_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isPrelodgedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                    <HyperLink>
+                      <Name value="hyperLink_Submitted5" />
+                      <Data value="Submitted" />
+                      <Margin value="12, 12, 12, 12 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-hyperlink" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="active" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.navTree.isSubmittedActive" />
+                          </Bindings>
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="subMenuItem" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </HyperLink>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="dd" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="rolled" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.globalUiState.isQueryMovementInformationActive" />
+                      </Bindings>
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-accordition-panel-content" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isUnderReleaseActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_Registered" />
-              <Data value="Movement released  (registered)" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_Registered_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
+                  <ClassName value="{theme}-accordition-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
-                  <ClassName value="active" />
+                  <ClassName value="rolled" />
                   <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isMovementReleasedActive" />
+                    <Binding SourceProperty="Condition" Expression="globals.globalUiState.isQueryMovementInformationActive" />
                   </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_notReleased" />
-              <Data value="Not released for transit *" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_notReleased_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
                 </CssClassConditional>
                 <CssClassConditional>
                   <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isNotReleasedForTransitActive" />
-                  </Bindings>
+                  <Condition value="False" />
                 </CssClassConditional>
               </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_GuaranteeReg" />
-              <Data value="Guarantee under registration*" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeReg_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeRegistrationActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
-            <HyperLink>
-              <Name value="hyperLink_GuaranteeAmend" />
-              <Data value="Guarantee under amendment*" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Target value="_self" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_hyperLink_GuaranteeAmend_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="active" />
-                  <Bindings>
-                    <Binding SourceProperty="Condition" Expression="form.navTree.isGuaranteeAmendmentActive" />
-                  </Bindings>
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
+            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -352,6 +2156,10 @@
             </CssClassConditional>
             <CssClassConditional>
               <ClassName value="{theme}-nav" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-accordition" />
               <IsThemedStyle value="True" />
             </CssClassConditional>
           </CssClass>
@@ -378,7 +2186,7 @@
                       <Name value="ui_btns" />
                       <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="10%" />
                       <Children>
                         <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
                           <Name value="imageButton2" />
@@ -405,36 +2213,6 @@
                             </CssClassConditional>
                           </CssClass>
                         </ImageButton>
-                        <Panel>
-                          <Name value="search_pnl" />
-                          <IsVisible value="False" />
-                          <Orientation value="Horizontal" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="*" />
-                          <Children>
-                            <TextBox>
-                              <Name value="textBox_search" />
-                              <Caption value="Vyhledat povoleni" />
-                              <Panel.Height value="#" />
-                              <Panel.Width value="300px" />
-                              <Bindings>
-                                <Binding SourceProperty="Data" Expression="" />
-                              </Bindings>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-textbox" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </TextBox>
-                          </Children>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
                       </Children>
                       <CssClass>
                         <CssClassConditional>
@@ -447,23 +2225,24 @@
                       <Name value="control_btns" />
                       <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="90%" />
                       <Children>
-                        <Button>
-                          <Name value="button_showDetail" />
-                          <Caption value="Show Detail" />
-                          <Panel.Height value="42px" />
-                          <Panel.Width value="150px" />
-                          <OnClick>
-                            <ActionEvent ReferencedAction="~goToDetailButton" />
-                          </OnClick>
+                        <Label>
+                          <Name value="label1" />
+                          <Heading value="h4" />
+                          <IsVisible value="False" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="100%" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="globals.globalUiState.lastSelectedOffices" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
-                              <ClassName value="{theme}-button" />
+                              <ClassName value="{theme}-label" />
                               <IsThemedStyle value="True" />
                             </CssClassConditional>
                           </CssClass>
-                        </Button>
+                        </Label>
                         <Button>
                           <Name value="button_newTransit" />
                           <Caption value="New Registration" />
@@ -479,6 +2258,222 @@
                             </CssClassConditional>
                             <CssClassConditional>
                               <ClassName value="btn-success" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_showDetail" />
+                          <Caption value="Show Detail" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~goToDetailButton" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.uiState.isItemSelected" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_incidentRegistration" />
+                          <Caption value="Incident registration" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_incidentRegistration_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="buttonsVisibility.isIncidentRegVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_fallbackCOodes" />
+                          <Caption value="Fallback arrival" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_fallbackCOodes_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="buttonsVisibility.isFallbackVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_arrCoodes" />
+                          <Caption value="Arrival at COoDes" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_arrCoodes_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isArrivalAtCOoDesVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_continueFilling" />
+                          <Caption value="Continue filling" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_continueFilling_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="buttonsVisibility.isContinueFillingVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_notAccept" />
+                          <Caption value="Not Accept" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_notAccept_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="buttonsVisibility.isAcceptVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_accept" />
+                          <Caption value="Accept TCD" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_accept_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="buttonsVisibility.isAcceptVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_controlGoods" />
+                          <Caption value="Control Goods" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isControlGoodsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_permitUnloading" />
+                          <Caption value="Permit Unloading" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isPermitUnloading" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_breakUsage" />
+                          <Caption value="Break usage of SP/AC" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isBreakUsage" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_resolveUnloading" />
+                          <Caption value="Resolve unloading interruption" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isResolveUnloading" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
                             </CssClassConditional>
                           </CssClass>
                         </Button>
@@ -549,13 +2544,16 @@
               <Panel.Width value="*" />
               <Children>
                 <Panel>
-                  <Name value="decList_parent" />
+                  <Name value="decDEPList_parent" />
                   <Orientation value="Vertical" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="NOT form.IsDESlistVisible" />
+                  </Bindings>
                   <Children>
                     <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
-                      <Name value="decList" />
+                      <Name value="decList_DEP" />
                       <controller reference="~listCtrl" />
                       <listName value="Dataset_DEP" />
                       <Panel.Height value="#" />
@@ -623,6 +2621,72 @@
                         <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
                           <Name value="listColumn_GUID" />
                           <Caption value="Hidden_GUID" />
+                          <ColumnName value="GUID" />
+                          <IsVisible value="False" />
+                        </listColumn>
+                      </columns>
+                    </List>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-datatable" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="decDESList_parent" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="form.IsDESlistVisible" />
+                  </Bindings>
+                  <Children>
+                    <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                      <Name value="decList_DES" />
+                      <controller reference="~listCtrlDES" />
+                      <listName value="Dataset_DES" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnRowClicked>
+                        <ActionEvent ReferencedAction="~handler_decList_DES_OnRowClicked" />
+                      </OnRowClicked>
+                      <Bindings>
+                        <Binding SourceProperty="selectedRow" Expression="form.decListDESReferenceRow" />
+                      </Bindings>
+                      <columns>
+                        <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                          <Name value="listDESColumn_MRN" />
+                          <Caption value="MRN" />
+                          <ColumnName value="MRN" />
+                          <ColumnWidth value="10%" />
+                        </listColumn>
+                        <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                          <Name value="listDESColumn_CO" />
+                          <Caption value="Customs Offfice" />
+                          <ColumnName value="CustomsOffice" />
+                          <ColumnWidth value="10%" />
+                        </listColumn>
+                        <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                          <Name value="listDESColumn_declarationType" />
+                          <Caption value="Declaration Type" />
+                          <ColumnName value="DeclarationType" />
+                          <ColumnWidth value="10%" />
+                        </listColumn>
+                        <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                          <Name value="listDESColumn_State" />
+                          <Caption value="State" />
+                          <ColumnName value="ClientState" />
+                          <ColumnWidth value="10%" />
+                        </listColumn>
+                        <listColumn identity="List.a6f439c3b8e944f383863f66ff1261c8">
+                          <Name value="listDESColumn_GUID" />
+                          <Caption value="GUID" />
                           <ColumnName value="GUID" />
                           <IsVisible value="False" />
                         </listColumn>
@@ -839,6 +2903,47 @@
             </Attribute>
           </Children>
         </Reference>
+        <Reference>
+          <Name value="decListDESReferenceRow" />
+          <Caption value="Dec list DES reference row" />
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="CustomsOffice" />
+              <Caption value="Customs Office" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="declarationType" />
+              <Caption value="Declaration type" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="ClientState" />
+              <Caption value="Client state" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
         <Complex>
           <Name value="uiState" />
           <Caption value="Ui state" />
@@ -852,6 +2957,16 @@
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Computed>
+              <Name value="isItemSelected" />
+              <Caption value="Is item selected" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[form.decListReferenceRow.hasValue() OR form.decListDESReferenceRow.hasValue()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
           </Children>
         </Complex>
         <Complex>
@@ -859,8 +2974,44 @@
           <Caption value="Nav tree" />
           <Children>
             <Attribute>
-              <Name value="isAllActive" />
-              <Caption value="Is all active" />
+              <Name value="isCustomsOfficeOfDepartureAllActive" />
+              <Caption value="Is customs office of departure all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isCustomsOfficeOfDestinationAllActive" />
+              <Caption value="Is customs office of destination all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isCustomsOfficeOfTransitAllActive" />
+              <Caption value="Is customs office of transit all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isRequestedCustomsOfficeAllActive" />
+              <Caption value="Is requested customs office all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isQueryMovementInformationAllActive" />
+              <Caption value="Is query movement information all active" />
               <DeclaredType>
                 <AttributeType>
                   <BaseType value="Bool" />
@@ -949,6 +3100,15 @@
               </DeclaredType>
             </Attribute>
             <Attribute>
+              <Name value="isReleasedActive" />
+              <Caption value="Is released active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
               <Name value="isNotReleasedForTransitActive" />
               <Caption value="Is not released for transit active" />
               <DeclaredType>
@@ -975,11 +3135,220 @@
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Attribute>
+              <Name value="isAARCreatedActive" />
+              <Caption value="Is AAR created active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsPresentedActive" />
+              <Caption value="Is goods presented active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnloadingActive" />
+              <Caption value="Is unloading active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderControlDESActive" />
+              <Caption value="Is under control DES active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isWaitingForDiscrepanciesActive" />
+              <Caption value="Is waiting for discrepancies active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderRecoveryActive" />
+              <Caption value="Is under recovery active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsReleasedActive" />
+              <Caption value="Is goods released active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isDocumentsRegistrationActive" />
+              <Caption value="Is documents registration active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isArrivedActive" />
+              <Caption value="Is arrived active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isInvalidatedDESActive" />
+              <Caption value="Is invalidated DES active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isDiversionRejectedActive" />
+              <Caption value="Is diversion rejected active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
           </Children>
         </Complex>
+        <Attribute>
+          <Name value="inputNavTree" />
+          <Caption value="Input nav tree" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="buttonsVisibility" />
+          <Caption value="Buttons visibility" />
+          <Children>
+            <Attribute>
+              <Name value="isContinueFillingVisible" />
+              <Caption value="Is continue filling visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isAcceptVisible" />
+              <Caption value="Is accept visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isControlGoodsVisible" />
+              <Caption value="Is control goods visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isPermitUnloading" />
+              <Caption value="Is permit unloading" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isBreakUsage" />
+              <Caption value="Is break usage" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Computed>
+              <Name value="isIncidentRegVisible" />
+              <Caption value="Is incident reg visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination")]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="isArrivalAtCOoDesVisible" />
+              <Caption value="Is arrival at C oo des visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[form.navTree.isAARCreatedActive]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="isFallbackVisible" />
+              <Caption value="Is fallback visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[form.navTree.isAARCreatedActive]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="isResolveUnloading" />
+              <Caption value="Is resolve unloading" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="IsDESlistVisible" />
+          <Caption value="Is DES list visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </DataContext>
   </DataContext>
+  <OnActivate>
+    <ActionEvent ReferencedAction="~showActivePanel" />
+  </OnActivate>
   <OnCreate>
     <ActionEvent ReferencedAction="~init" />
   </OnCreate>
@@ -989,14 +3358,42 @@
       <ActionLangBody IsValid="True">
         <Script><![CDATA[actions.authentication()
 
+apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
+
 apiobjects.urlRouter.clearUrl()
 
 globals.globalUiState.userModeLabel = ""
+globals.Errors.clear()
 
 form.uiState.numberOfItemsPerPage = 18
+
+if isTrue(form.inputNavTree = "isClearanceInteruptedActive") then
+	form.actions.clearInterruptOnClick()
+else
+	if isTrue(form.inputNavTree = "isAcceptedActive") then
+		form.actions.acceptedSimplOnClick()
+	else
+		if isTrue(form.inputNavTree = "isNotReleasedActive") then
+			form.actions.notReleasedOnClick()
+		else
+			if isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture") then
+				form.actions.allDepOnClick()
+			else
+				if isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination") then
+					form.actions.allDesOnClick()
+				endif
+			endif
+		endif
+	endif
+endif
+
+form.IsDESlistVisible = false
+
 form.apiobjects.listCtrl.setPageSize(form.uiState.numberOfItemsPerPage)
 form.apiobjects.listCtrl.setReady(true)
-form.navTree.isAllActive = true]]></Script>
+form.apiobjects.listCtrlDES.setPageSize(form.uiState.numberOfItemsPerPage)
+form.apiobjects.listCtrlDES.setReady(true)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1026,7 +3423,16 @@ form.navTree.isAllActive = true]]></Script>
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if isTrueOrDefault(params.columnName = "MRN") then
-  navigation.main.Header.withGuid(form.decListReferenceRow.GUID).go(enums.declarationFormMode.edit)
+	navigation.main.Header.withGuid(form.decListReferenceRow.GUID).go(enums.declarationFormMode.edit)
+else
+	form.actions.clearButtonsVisibility()
+	if isTrue(form.decListReferenceRow.State = "Dep_Interrupted") then
+		form.buttonsVisibility.isContinueFillingVisible = true
+	else
+		if (isTrue(form.decListReferenceRow.State = "Dep_Submitted")) OR (isTrue(form.decListReferenceRow.State = "Dep_PreLodged") ) then
+			form.buttonsVisibility.isAcceptVisible = true
+		endif
+	endif
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1069,96 +3475,9 @@ globals.isExpandedCollapsibleStickyPnl = false]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_hyperLink_all_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.clearState()
-form.actions.clearActiveMenus()
-form.navTree.isAllActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_PreLodged_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_PreLodged')")
-form.actions.clearActiveMenus()
-form.navTree.isPrelodgedActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_AcceptedSimpl_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_AcceptedSimpl')")
-form.actions.clearActiveMenus()
-form.navTree.isAcceptedSimplifiedActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_Rejected_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Rejected')")
-form.actions.clearActiveMenus()
-form.navTree.isCancelledActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_Registered_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.busyIndicatorIsRunning = true
-form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
-form.actions.clearActiveMenus()
-form.navTree.isMovementReleasedActive = true
-form.apiobjects.listCtrl.setReady(true)
-globals.busyIndicatorIsRunning = false
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_Submitted_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
-form.actions.clearActiveMenus()
-form.navTree.isSubmittedActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="clearActiveMenus" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.navTree.isAllActive = false
+        <Script><![CDATA[form.navTree.isCustomsOfficeOfDepartureAllActive = false
 form.navTree.isSubmittedActive = false
 form.navTree.isPrelodgedActive = false
 form.navTree.isAcceptedSimplifiedActive = false
@@ -1168,37 +3487,24 @@ form.navTree.isCancelledActive = false
 form.navTree.isInvalidatedActive = false
 form.navTree.isUnderReleaseActive =  false
 form.navTree.isMovementReleasedActive = false
+form.navTree.isReleasedActive = false
 form.navTree.isNotReleasedForTransitActive = false
 form.navTree.isGuaranteeRegistrationActive = false
-form.navTree.isGuaranteeAmendmentActive = false]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_ClearInterupt_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
-form.actions.clearActiveMenus()
-form.navTree.isClearanceInteruptedActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_hyperLink_underControl_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
-form.actions.clearActiveMenus()
-form.navTree.isUnderControlActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
+form.navTree.isGuaranteeAmendmentActive = false
+
+//for DES
+form.navTree.isCustomsOfficeOfDestinationAllActive = false
+form.navTree.isAARCreatedActive = false
+form.navTree.isGoodsPresentedActive = false
+form.navTree.isUnloadingActive = false
+form.navTree.isUnderControlDESActive = false
+form.navTree.isWaitingForDiscrepanciesActive = false
+form.navTree.isUnderRecoveryActive = false
+form.navTree.isGoodsReleasedActive = false
+form.navTree.isDocumentsRegistrationActive = false
+form.navTree.isArrivedActive = false
+form.navTree.isInvalidatedDESActive = false
+form.navTree.isDiversionRejectedActive = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1208,24 +3514,29 @@ form.apiobjects.listCtrl.setReady(true)]]></Script>
       <Name value="handler_hyperLink_Invalidated_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
 form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
 form.actions.clearActiveMenus()
 form.navTree.isInvalidatedActive = true
-form.apiobjects.listCtrl.setReady(true)]]></Script>
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_hyperLink_releaseRequest_OnClick" />
+      <Name value="action3" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.apiobjects.listCtrl.clearState()
 form.actions.clearActiveMenus()
-form.navTree.isUnderReleaseActive = true
+form.navTree.isCustomsOfficeOfDepartureAllActive = true
 form.apiobjects.listCtrl.setReady(true)]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1233,16 +3544,106 @@ form.apiobjects.listCtrl.setReady(true)]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_hyperLink_notReleased_OnClick" />
+      <Name value="action4" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.busyIndicatorIsRunning = true
-form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.clearState()
 form.actions.clearActiveMenus()
-form.navTree.isNotReleasedForTransitActive = true
-form.apiobjects.listCtrl.setReady(true)
-globals.busyIndicatorIsRunning = false
+form.navTree.isCustomsOfficeOfDepartureAllActive = true
+form.apiobjects.listCtrl.setReady(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action5" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.clearState()
+form.actions.clearActiveMenus()
+form.navTree.isCustomsOfficeOfDepartureAllActive = true
+form.apiobjects.listCtrl.setReady(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink3_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.globalUiState.isCustomsOfficeOfDestinationActive = false
+globals.globalUiState.isCustomsOfficeOfTransitActive = false
+globals.globalUiState.isRequestedCustomsOfficeActive = false
+globals.globalUiState.isQueryMovementInformationActive  = false
+
+globals.globalUiState.isCustomsOfficeOfDepartureActive = true
+
+form.IsDESlistVisible = false
+form.actions.clearActiveMenus()
+form.actions.clearButtonsVisibility()
+form.apiobjects.listCtrlDES.clearState()
+form.decListDESReferenceRow.clear()
+form.navTree.isCustomsOfficeOfDepartureAllActive = true
+
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink4_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.globalUiState.isCustomsOfficeOfDepartureActive = false
+globals.globalUiState.isCustomsOfficeOfTransitActive = false
+globals.globalUiState.isRequestedCustomsOfficeActive = false
+globals.globalUiState.isQueryMovementInformationActive  = false
+
+globals.globalUiState.isCustomsOfficeOfDestinationActive = true
+
+form.IsDESlistVisible = true
+form.actions.clearActiveMenus()
+form.actions.clearButtonsVisibility()
+form.apiobjects.listCtrl.clearState()
+form.decListReferenceRow.clear()
+form.navTree.isCustomsOfficeOfDestinationAllActive = true
+
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink5_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.globalUiState.isCustomsOfficeOfDepartureActive = false
+globals.globalUiState.isCustomsOfficeOfDestinationActive = false
+globals.globalUiState.isRequestedCustomsOfficeActive = false
+globals.globalUiState.isQueryMovementInformationActive  = false
+
+globals.globalUiState.isCustomsOfficeOfTransitActive = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink6_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.globalUiState.isCustomsOfficeOfDepartureActive = false
+globals.globalUiState.isCustomsOfficeOfDestinationActive = false
+globals.globalUiState.isQueryMovementInformationActive  = false
+globals.globalUiState.isCustomsOfficeOfTransitActive = false
+
+globals.globalUiState.isRequestedCustomsOfficeActive = true
 ]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1250,17 +3651,73 @@ globals.busyIndicatorIsRunning = false
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_hyperLink_GuaranteeReg_OnClick" />
+      <Name value="handler_hyperLink7_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.globalUiState.isCustomsOfficeOfDepartureActive = false
+globals.globalUiState.isCustomsOfficeOfDestinationActive = false
+globals.globalUiState.isCustomsOfficeOfTransitActive = false
+globals.globalUiState.isRequestedCustomsOfficeActive = false
+
+globals.globalUiState.isQueryMovementInformationActive  = true
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Rejected_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
 form.apiobjects.listCtrl.setReady(false)
-form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Rejected')")
 form.actions.clearActiveMenus()
-form.navTree.isGuaranteeRegistrationActive = true
+form.navTree.isCancelledActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
 form.apiobjects.listCtrl.setReady(true)
-globals.busyIndicatorIsRunning = false
-]]></Script>
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_underControl_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_UnderControl')")
+form.actions.clearActiveMenus()
+form.navTree.isUnderControlActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_PreLodged_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_PreLodged')")
+form.actions.clearActiveMenus()
+form.navTree.isPrelodgedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1275,9 +3732,557 @@ form.apiobjects.listCtrl.setReady(false)
 form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
 form.actions.clearActiveMenus()
 form.navTree.isGuaranteeAmendmentActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
 form.apiobjects.listCtrl.setReady(true)
-globals.busyIndicatorIsRunning = false
-]]></Script>
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_GuaranteeReg_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isGuaranteeRegistrationActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Registered_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isMovementReleasedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_releaseRequest_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isUnderReleaseActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Submitted_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isSubmittedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="showActivePanel" />
+      <IsJavascript value="True" />
+      <Script><![CDATA[accordition.prepare()]]></Script>
+      <ActionLangBody IsValid="True" />
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_arrCoodes_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.Arrival.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Submitted3_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isSubmittedActive = true
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Submitted4_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Submitted')")
+form.actions.clearActiveMenus()
+form.navTree.isSubmittedActive = true
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_fallbackCOodes_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.CheckFallback.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearInterruptOnClick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Interrupted')")
+form.actions.clearActiveMenus()
+form.navTree.isClearanceInteruptedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_continueFilling_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListReferenceRow.GUID.hasValue() then
+	navigation.main.Header.withGUID(form.decListReferenceRow.GUID).go(enums.declarationFormMode.continueFilling)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearButtonsVisibility" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.buttonsVisibility.isContinueFillingVisible = false
+form.buttonsVisibility.isAcceptVisible = false
+form.buttonsVisibility.isControlGoodsVisible = false
+form.buttonsVisibility.isPermitUnloading = false
+form.buttonsVisibility.isBreakUsage = false
+form.buttonsVisibility.isResolveUnloading = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_accept_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListReferenceRow.GUID.hasValue() then
+	navigation.main.Accept.go(enums.accept.accept, form.decListReferenceRow.GUID)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_notAccept_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListReferenceRow.GUID.hasValue() then
+	navigation.main.Accept.go(enums.accept.notAccept, form.decListReferenceRow.GUID)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="acceptedSimplOnClick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_AcceptedSimpl')")
+form.actions.clearActiveMenus()
+form.navTree.isAcceptedSimplifiedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="notReleasedOnClick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_NotReleased')")
+form.actions.clearActiveMenus()
+form.navTree.isNotReleasedForTransitActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_AarCreated_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_AarCreated')")
+form.actions.clearActiveMenus()
+form.navTree.isAARCreatedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_decList_DES_OnRowClicked" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrueOrDefault(params.columnName = "MRN") then
+	navigation.main.Header.withGuid(form.decListReferenceRow.GUID).go(enums.declarationFormMode.edit)
+	
+else
+
+	form.actions.clearButtonsVisibility()
+	
+	if isTrue(form.decListDESReferenceRow.ClientState = "Des_GoodsPresentedSimplProcBreak") then
+		form.buttonsVisibility.isControlGoodsVisible = true
+		form.buttonsVisibility.isPermitUnloading = true
+	else
+		if isTrue(form.decListDESReferenceRow.ClientState = "Des_Unloading") then
+			form.buttonsVisibility.isBreakUsage = true
+	else if isTrue(form.decListDESReferenceRow.ClientState = "Des_UnloadingRemarks") then
+			form.buttonsVisibility.isResolveUnloading = true
+		endif
+		endif
+	endif
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="allDepOnClick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.clearState()
+form.actions.clearActiveMenus()
+form.navTree.isCustomsOfficeOfDepartureAllActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="allDesOnClick" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.clearState()
+form.actions.clearActiveMenus()
+form.navTree.isCustomsOfficeOfDestinationAllActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_incidentRegistration_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.IncidentCheck.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Released_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrl.setReady(false)
+form.apiobjects.listCtrl.setInvisibleODataFilter("(State eq 'Dep_Released')")
+form.actions.clearActiveMenus()
+form.navTree.isReleasedActive = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture"
+form.IsDESlistVisible = false
+form.apiobjects.listCtrl.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_ArrivalAcceped_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_GoodsPresented' or ClientState eq 'Des_GoodsPresentedSimplProc' or ClientState eq 'Des_GoodsPresentedSimplProcBreak')")
+form.actions.clearActiveMenus()
+form.navTree.isGoodsPresentedActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_Unloading_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_Unloading')")
+form.actions.clearActiveMenus()
+form.navTree.isUnloadingActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action1" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_UnderControl' or ClientState eq 'Des_UnloadingRemarks')")
+form.actions.clearActiveMenus()
+form.navTree.isUnderControlDESActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_WaitingForDiscrepancies_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_SolvingDiscrepancies')")
+form.actions.clearActiveMenus()
+form.navTree.isWaitingForDiscrepanciesActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_hyperLink_UnderRecovery_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_Recovery')")
+form.actions.clearActiveMenus()
+form.navTree.isUnderRecoveryActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_GoodsReleased')")
+form.actions.clearActiveMenus()
+form.navTree.isGoodsReleasedActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action6" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_DocsRegistration')")
+form.actions.clearActiveMenus()
+form.navTree.isDocumentsRegistrationActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action7" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_Arrived')")
+form.actions.clearActiveMenus()
+form.navTree.isArrivedActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action8" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_DiversionRejected')")
+form.actions.clearActiveMenus()
+form.navTree.isDiversionRejectedActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action9" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.listCtrlDES.setReady(false)
+form.apiobjects.listCtrlDES.setInvisibleODataFilter("(ClientState eq 'Des_Invalidated')")
+form.actions.clearActiveMenus()
+form.navTree.isInvalidatedDESActive  = true
+form.actions.clearButtonsVisibility()
+globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
+form.IsDESlistVisible = true
+form.apiobjects.listCtrlDES.setReady(true)
+globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1287,6 +4292,10 @@ globals.busyIndicatorIsRunning = false
   <ApiObjects>
     <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
       <Name value="listCtrl" />
+      <server reference="+GlobalApiObjects.CIC" />
+    </ListCtrl>
+    <ListCtrl identity="ListCtrl.459ff3780ab145df985191cfc1336ce1">
+      <Name value="listCtrlDES" />
       <server reference="+GlobalApiObjects.CIC" />
     </ListCtrl>
   </ApiObjects>

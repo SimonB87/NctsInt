@@ -134,6 +134,31 @@
                             </CssClassConditional>
                           </CssClass>
                         </ImageButton>
+                        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                          <Name value="validate_btn" />
+                          <Caption value="{fa-exclamation-circle}" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="80px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_validate_btn_OnClick" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-imagebutton" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="flleft" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="toTop" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </ImageButton>
                       </Children>
                       <CssClass>
                         <CssClassConditional>
@@ -148,6 +173,89 @@
                       <Panel.Height value="#" />
                       <Panel.Width value="50%" />
                       <Children>
+                        <Button>
+                          <Name value="acceptArrival_btn" />
+                          <Caption value="Accept Arrival" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_acceptArrival_btn_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form._isArrivalMode" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="incidentRegistration_btn" />
+                          <Caption value="Incident Registration" />
+                          <IsEnabled value="False" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form._isArrivalMode" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="save_btn" />
+                          <Caption value="Save" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~saveDeclarationAndSubmitData" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form._isSaveButtonsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-success" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="savePartially_btn" />
+                          <Caption value="Save incomplete data" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="160px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_savePartially_btn_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form._isSaveButtonsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
                         <Button>
                           <Name value="cancel_btn" />
                           <Caption value="Cancel" />
@@ -230,6 +338,124 @@
               <Panel.Height value="#" />
               <Panel.Width value="*" />
               <Children>
+                <Panel>
+                  <Name value="panel311" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <GroupBox>
+                      <Name value="validationsGrp" />
+                      <Caption value="Validations summary" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="100%" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel10" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Panel>
+                              <Name value="panel5" />
+                              <Orientation value="Vertical" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="cliValidations" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <OnItemClick>
+                                    <ActionEvent ReferencedAction="~action2" />
+                                  </OnItemClick>
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                    <Binding SourceProperty="validationRoot" Expression="form.Header" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="cliPointerCol" />
+                                      <columnCaption value="Pointer" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="cliMessageCol" />
+                                      <columnCaption value="Message" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Message" />
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ClientValidationSummary>
+                                <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="srvValidations" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <OnItemClick>
+                                    <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
+                                  </OnItemClick>
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvPointerCol" />
+                                      <columnCaption value="Pointer" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvMessageCol" />
+                                      <columnCaption value="Message" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Reason" />
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ServerValidationSummary>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="globals.globalUiState.isValidationsVisible" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datatable" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel-main" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
                 <List identity="List.a6f439c3b8e944f383863f66ff1261c8">
                   <Name value="list_selectedGoodsItem" />
                   <controller reference="~collectionGoodsItems" />
@@ -571,6 +797,15 @@
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Attribute>
+              <Name value="isEventHistoryActive" />
+              <Caption value="Is event history active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
             <Collection>
               <Name value="HouseConsignment" />
               <Caption value="House consignment" />
@@ -646,6 +881,157 @@
             </Attribute>
           </Children>
         </Complex>
+        <Computed>
+          <Name value="_isTPendDateGreaterThanDecisive" />
+          <Caption value="_ is T pend date greater than decisive" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[globals.serverConfig.TPendDate > form._decisiveDate]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="_decisiveDate" />
+          <Caption value="_ decisive date" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="_isArrivalMode" />
+          <Caption value="_ is arrival mode" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[form.mode = enums.declarationFormMode.arrival]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="_isCreateOrEditMode" />
+          <Caption value="_ is create or edit mode" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[(form.mode = enums.declarationFormMode.create) OR (form.mode = enums.declarationFormMode.edit)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="_isSaveButtonsVisible" />
+          <Caption value="_ is save buttons visible" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[(form.mode = enums.declarationFormMode.create) OR (form.mode = enums.declarationFormMode.edit) OR (form.mode = enums.declarationFormMode.continueFilling)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Complex>
+          <Name value="Errors" />
+          <Caption value="Errors" />
+          <Children>
+            <Collection>
+              <Name value="clientValidationErrors" />
+              <Caption value="Client validation errors" />
+              <Children>
+                <Attribute>
+                  <Name value="Message" />
+                  <Caption value="Message" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Pointer" />
+                  <Caption value="Pointer" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Type" />
+                  <Caption value="Type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+            <Complex>
+              <Name value="serverValidationComplex" />
+              <Caption value="Server validation complex" />
+              <Children>
+                <Collection>
+                  <Name value="MessageCheckError" />
+                  <Caption value="Message check error" />
+                  <Children>
+                    <Attribute>
+                      <Name value="ErrorType" />
+                      <Caption value="Error type" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="Pointer" />
+                      <Caption value="Pointer" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="Reason" />
+                      <Caption value="Reason" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="serverValidationErrors" />
+              <Caption value="Server validation errors" />
+              <Children>
+                <Attribute>
+                  <Name value="Reason" />
+                  <Caption value="Reason" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="ErrorType" />
+                  <Caption value="Error type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Pointer" />
+                  <Caption value="Pointer" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="incompleteModel" />
+          <Caption value="Incomplete model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBSaveIncomplete" />
+            </Include>
+          </Children>
+        </Complex>
       </Children>
     </DataContext>
   </DataContext>
@@ -662,11 +1048,15 @@ if globals.loginResponse.isEmpty() then
 	actions.authentication()
 endIf
 
+actions.setCodeListDate()
+
 var goToHomeFormResult = form.actions.tryLoadingData()
 
 if goToHomeFormResult then
 	form.actions.clearUrlGoToHomeForm()
 else
+	form._decisiveDate = getDate()
+
 	form.actions.setUrlDeepLink()
 	
 	actions.setUserModeInGui(form.mode.enumValue())
@@ -711,26 +1101,6 @@ url.updatePageUrl()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="handler_GoodsItem_Table_OnRowActivate" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//usused]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_delete_btn_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//unused]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="addConsigItem" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[// TODO - POSTUP PRÁCE
@@ -748,11 +1118,7 @@ var newItemGoodsItemNumber = form.ConsignmentCollection.count() + 1
 
 apiobjects.transitDeclaration.appendNewConsignmentItem(form.sequenceNumber, "{}")
 
-if form.GUID.hasValue() then
-	navigation.main.ConsignmentItem.withGuid(form.GUID).go(form.mode, form.sequenceNumber, newItemGoodsItemNumber)
-else
-	navigation.main.ConsignmentItem.go(form.mode, form.sequenceNumber, newItemGoodsItemNumber)
-endif]]></Script>
+actions.navigationToConsignmentItem(form.mode, form.sequenceNumber, newItemGoodsItemNumber, form.GUID)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -781,17 +1147,27 @@ if apiobjects.transitDeclaration.isEmpty() then
 	if form.mode = enums.declarationFormMode.create then
 		result = True
 	else
-		if form.mode = enums.declarationFormMode.edit then
+		if 	(form.mode = enums.declarationFormMode.edit) OR 
+			(form.mode = enums.declarationFormMode.arrival) then
 			result = form.actions.tryLoadingDataOfExistingTD()
 		else
-			//go to main
-			result = True
+		
+			if form.mode = enums.declarationFormMode.continueFilling then
+				result = form.actions.emptyTDthenInitiateExistingIncomplteTD()
+			else
+				//go to main
+				result = True
+			endif	
+			
 		endif
 	endif
 
 else
 
-	if (form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) then
+	if 	(form.mode = enums.declarationFormMode.create) OR 
+		(form.mode = enums.declarationFormMode.edit) OR 
+		(form.mode = enums.declarationFormMode.arrival) OR
+		(form.mode = enums.declarationFormMode.continueFilling) then
 		form.actions.loadData()
 	else
 		//go to main
@@ -832,29 +1208,11 @@ navigation.main.DecList.go()]]></Script>
       <Name value="tryLoadingDataOfExistingTD" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[result = False
-var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
-if form.GUID = mockGuid then
-	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-
-	var sequenceNumberIsValidInTransitDeclaration = form.actions.doesSequenceNumberExist()
-
-	if form.sequenceNumber.hasValue() and sequenceNumberIsValidInTransitDeclaration then
-
-		form.actions.loadData()
-
-	else
-		//not valid sequnce number withing the given declaration
-		result = True
-
-	endIf
-
+if form.GUID.hasValue() then
+	result = form.actions.getDataFromCic()
 else
-	if form.GUID.hasValue() then
-		result = form.actions.getDataFromCic()
-	else
-		result = true
-	endIf
+	result = true
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -905,12 +1263,14 @@ endIf]]></Script>
     <ActionBlock>
       <Name value="loadData" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var dataHouseConsig = apiobjects.transitDeclaration.getConsignmentItemList(form.sequenceNumber)
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+var dataHouseConsig = apiobjects.transitDeclaration.getConsignmentItemList(form.sequenceNumber)
 form.ConsignmentCollection.fromJson(dataHouseConsig)
 
 // Load actual MRN
 var headerJson = apiobjects.transitDeclaration.getHeader()
 form.Header.fromJson(headerJson)
+globals.busyIndicatorIsRunning = false
 ]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -931,7 +1291,7 @@ form.Header.fromJson(headerJson)
       <Name value="handler_list_selectedGoodsItem_OnRowClicked" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+        <Script><![CDATA[
 
   var sequenceNumber = form.sequenceNumber
   var goodsItemNumber = form.selectedGoodsItem.goodsItemNumber
@@ -942,8 +1302,11 @@ if isTrueOrDefault(params.columnName = "cmp_deleteAction") then
   var confirmFileDelete = apiobjects.pageApi.confirm("Do you want to delete item n. " + toString(goodsItemNumber) )
   
 	if confirmFileDelete = True then
+		globals.busyIndicatorIsRunning = true
 		apiobjects.transitDeclaration.removeConsignmentItem(sequenceNumber, goodsItemNumber)
-	
+		var navTreeJson = transitDeclaration.getDataForNavTree()
+		form.navTree.HouseConsignment.fromJson(navTreeJson)
+		form.actions.initNavTreeFocus()
 		form.ConsignmentCollection.clear()
 		// TO DO - refresh HouseConsignementList data
 		// doda load stejný na initu pro load dat
@@ -955,9 +1318,6 @@ if isTrueOrDefault(params.columnName = "cmp_deleteAction") then
 		
 		form.apiobjects.collectionGoodsItems.setReady(false)
 	    form.apiobjects.collectionGoodsItems.setReady(true)
-	    form.apiobjects.navigationTreeController.resetFinishedSetup()
-	    navigation.main.ConsignmentList.withGUID(form.GUID).go(form.mode, form.sequenceNumber)
-	    form.actions.initNavigationTree()
 	endIf
   
 else
@@ -1029,7 +1389,9 @@ else
 	var ci = hc.addNode("ConsignmentItems", "Consignment items")
 	ci.connectToCollection("ConsignmentItem", "_caption")
 	ci.limitSubnodesAroundSelected(3)
-	
+
+	form.apiobjects.navigationTreeController.addNode("EventHistory", "Event history")
+
 	form.apiobjects.navigationTreeController.finishSetup()
 	form.actions.initNavTreeFocus()
 endIf]]></Script>
@@ -1042,52 +1404,15 @@ endIf]]></Script>
       <Name value="handler_navigationTree_OnNodeActivated" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if isTrue(params.id = "TransitOperation") then
-	globals.activePanel = "transitOperation"
-	navigation.main.Header.withGuid(form.guid).go(form.mode)
-else 
-	if isTrue(params.id = "CustomsOffices") then
-		globals.activePanel = "customsOffice"
-		navigation.main.Header.withGuid(form.guid).go(form.mode)
+        <Script><![CDATA[if isTrue(params.id = "ConsignmentItems") then
+	if form.navTree.isConsignmentItemsItemActive then
+		actions.navigationToConsignmentItem(form.mode, form.sequenceNumber, form.navTree.indexConsignmentItems, form.GUID)
+	endif
+else
+	if isTrue(params.id = "HouseConsignments") then
+		form.actions.navigationForHouseConsignments()
 	else
-		if isTrue(params.id = "Traders") then
-			globals.activePanel = "traders"
-			navigation.main.Header.withGuid(form.guid).go(form.mode)
-		else
-			if isTrue(params.id = "Guarantee") then
-				globals.activePanel = "guarantee"
-				navigation.main.Header.withGuid(form.guid).go(form.mode)
-			else
-				if isTrue(params.id = "Consignment") then
-					globals.activePanel = "consignment"
-					navigation.main.Header.withGuid(form.guid).go(form.mode)
-				else
-					if (isTrue(params.id = "HouseConsignments") AND form.navTree.isHouseConsignmentsActive) then
-						navigation.main.HouseConsignmentList.withGUID(form.GUID).go(form.mode)
-					else
-						if (isTrue(params.id = "HouseConsignments") AND form.navTree.isHouseConsignmentsItemActive) then
-							if form.GUID.hasValue() then
-								navigation.main.HouseConsignment.withGUID(form.GUID).go(form.mode, form.navTree.indexHouseConsignments)
-							else
-								navigation.main.HouseConsignment.go(form.mode, form.navTree.indexHouseConsignments)
-							endif
-						else
-							if (isTrue(params.id = "ConsignmentItems") AND form.navTree.isConsignmentItemsActive) then
-								//nothing should happen
-							else
-								if (isTrue(params.id = "ConsignmentItems") AND form.navTree.isConsignmentItemsItemActive) then
-									if form.GUID.hasValue() then
-										navigation.main.ConsignmentItem.withGUID(form.GUID).go(form.mode, form.sequenceNumber, form.navTree.indexConsignmentItems)
-									else
-										navigation.main.ConsignmentItem.go(form.mode, form.sequenceNumber, form.navTree.indexConsignmentItems)
-									endif
-								endif
-							endif
-						endif
-					endif					
-				endif
-			endif
-		endif
+		actions.navigationToHeaderFromLists(params.id, form.mode, form.GUID)
 	endif
 endif]]></Script>
       </ActionLangBody>
@@ -1098,8 +1423,7 @@ endif]]></Script>
     <ActionBlock>
       <Name value="initNavTreeFocus" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[system.console("HouseConsignments[" + toString(form.sequenceNumber) +"]/ConsignmentItems")
-form.apiobjects.navigationTreeController.focusNode("HouseConsignments[" + toString(form.sequenceNumber) +"]/ConsignmentItems")]]></Script>
+        <Script><![CDATA[form.apiobjects.navigationTreeController.focusNode("HouseConsignments[" + toString(form.sequenceNumber) +"]/ConsignmentItems")]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1143,6 +1467,270 @@ else
 			result = true
 		endIf
 		
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_acceptArrival_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var transitOp = "{\"TransitOperation\":"+ form.Header.TransitOperation.toJson(true) +"}"
+var response = apiobjects.CIC.postAsync("FBArrivalConfirmation", transitOp)
+
+if response.isError() then
+//neco se stane
+else
+	if isTrue(response.getMessageType() = "BFArrivalAccepted") then
+		apiobjects.notificationsCtrl.addSuccess("Arrival successfuly confirmed.")
+		navigation.main.DecList.go()
+	else
+		apiobjects.notificationsCtrl.addError("Failed to confirm arrival.")
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationForHouseConsignments" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.navTree.isHouseConsignmentsActive then
+	actions.navigationToHouseConsignmentList(form.mode, form.GUID)
+else
+	if form.navTree.isHouseConsignmentsItemActive then
+		actions.navigationToHouseConsignment(form.mode, form.navTree.indexHouseConsignments, form.GUID)
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_validate_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
+
+/* Validators panels display toggler */
+var isValidatorVisible = globals.globalUiState.isValidationsVisible
+
+if(isValidatorVisible = true) then
+	globals.globalUiState.isValidationsVisible = false
+else
+	globals.globalUiState.isValidationsVisible = true	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// Nice to have pointer to element]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_serverValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// Nice to have pointer to element	]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="saveDeclarationAndSubmitData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+if(form.Header.validationErrorsCount() = 0) then
+
+	var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+	if response.isError() then
+	
+		globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
+		globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
+
+		// Show error panels
+		globals.globalUiState.isValidationsVisible = true
+	
+		// Inform user about errors
+		var errorMessage = defaultString()
+		var errorCount = defaultInt()
+
+		errorCount = form.Header.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+		// Handling plural message
+		if (errorCount > 1) then 
+			errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+		else
+			errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+		endif	
+		
+		apiobjects.notificationsCtrl.addError(errorMessage)
+	
+	else
+	
+		apiobjects.notificationsCtrl.addSuccess("Declaration was saved successfuly.")
+	
+		//go to DecList
+		apiobjects.urlRouter.clearUrl()
+		navigation.main.DecList.go()
+		
+	endif
+
+else
+
+	// Show validation error field
+	globals.globalUiState.isValidationsVisible = true
+	
+	// Inform user about errors
+	var errorMessage = defaultString()
+	var errorCount = defaultInt()
+
+	errorCount = form.Header.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+	if (errorCount > 1) then 
+		errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+	else
+		errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+	endif
+	
+	apiobjects.notificationsCtrl.addError(errorMessage)
+
+endif
+
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_savePartially_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+form.actions.submitNewIncompleteData()	
+
+// Save changed event into var
+apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
+
+// Need response from server
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="submitNewIncompleteData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.GUID.hasValue() then
+	form.incompleteModel.GUID = form.GUID
+endif
+
+form.incompleteModel.fromJson(apiobjects.transitDeclaration.toJson())
+form.incompleteModel.IncompleteData.data = toString(apiobjects.transitDeclaration.toJson())
+
+var response = apiobjects.CIC.postAsync("FBSaveIncomplete", form.incompleteModel.toJson())
+
+globals.Errors.serverValidationErrors.fromJson(response.getJsonString())
+
+if response.isError() then
+
+	globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
+	globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
+	globals.globalUiState.isValidationsVisible = true
+
+	// Inform user about errors
+	var errorMessage = defaultString()
+
+	if (globals.Errors.serverValidationErrors.count() > 1) then 
+		errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
+	else
+		errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
+	endif	
+
+	apiobjects.notificationsCtrl.addError(errorMessage)
+else
+	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
+		
+	//go to DecList
+	apiobjects.urlRouter.clearUrl()
+	apiobjects.transitDeclaration.clear()
+	navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="emptyTDthenInitiateExistingIncomplteTD" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = defaultBool()
+
+var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
+
+var response = apiobjects.CIC.postAsync("FBDataIncompleteRequest", requestJsonString)
+
+if response.isError() then
+		system.console(response.getErrorMessage())
+		apiobjects.notificationsCtrl.addError("Failed to load data.")
+		result = true
+else
+		var dataReceived = response.getJsonString()
+		form.incompleteModel.fromJson(dataReceived)
+		//store data to transitDeclaration apiObject
+		apiobjects.transitDeclaration.fromJson(form.incompleteModel.IncompleteData.data)
+		
+		//get transit data and fill them to local form variables
+		form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
+		//check if we have data for selected sequenceNumber
+		if form.modelState.supportingTransitJson.hasValue() then
+		
+			form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getConsignmentItemList(form.sequenceNumber)
+			form.ConsignmentCollection.fromJson(form.modelState.supportingTransitJson)
+			
+			form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getHeader()		
+			form.Header.fromJson(form.modelState.supportingTransitJson)
+			
+			apiobjects.notificationsCtrl.addSuccess("Successfuly received data.")
+			result = false
+		else
+			apiobjects.notificationsCtrl.addError("Failed to load data. Submission has wrong House Consignment number.")
+			result = true
+		endIf
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>

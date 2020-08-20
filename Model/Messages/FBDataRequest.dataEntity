@@ -16,5 +16,34 @@
         <AttributeType />
       </DeclaredType>
     </Attribute>
+    <Attribute>
+      <Name value="GUIDVersion" />
+      <Caption value="GUID of requested version" />
+      <MtsImportOptions.MTS.ID value="/FBDataRequest/GUIDVersion" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="CompareWithPreviousVersion" />
+      <Caption value="Compare with previous version and return differences?" />
+      <MtsImportOptions.MTS.ID value="/FBDataRequest/CompareWithPreviousVersion" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ComparedVersionGUID" />
+      <Caption value="GUID of version being compared" />
+      <MtsImportOptions.MTS.ID value="/FBDataRequest/ComparedVersionGUID" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
   </Children>
 </DataEntity>

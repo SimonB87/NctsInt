@@ -120,20 +120,6 @@
                 </CssClassConditional>
               </CssClass>
             </HyperLink>
-            <HyperLink>
-              <Name value="Experiment_NavTree" />
-              <Panel.Height value="#" />
-              <Panel.Width value="150px" />
-              <OnClick>
-                <ActionEvent ReferencedAction="~handler_Experiment_NavTree_OnClick" />
-              </OnClick>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-hyperlink" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </HyperLink>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -173,7 +159,10 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.actions.setUrl()
+        <Script><![CDATA[apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
+
+form.actions.setUrl()
 
 actions.authentication()]]></Script>
       </ActionLangBody>
@@ -253,16 +242,6 @@ else
 	globals.loginResponse.fromJson(response.getJsonString())
 	//system.console(globals.loginResponse.toJson())
 endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_Experiment_NavTree_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.navTreeExperiment.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

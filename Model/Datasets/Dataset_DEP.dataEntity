@@ -2,7 +2,7 @@
 <?data-format version="0.400"?>
 <DataEntity>
   <Name value="Dataset_DEP" />
-  <Caption value="Dataset DEP" />
+  <Caption value="NCTS declaration for CO Departure" />
   <MtsImportOptions.MTS.ID value="Dataset_DEP" />
   <MtsImportOptions.MTS.Type value="client-dataset" />
   <Children>
@@ -74,7 +74,6 @@
     <Attribute>
       <Name value="LRN" />
       <Caption value="LRN" />
-      <IsRequired value="True" />
       <MetaType reference="+MetaTypes.LRNContentType" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/LRN" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
@@ -252,6 +251,24 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="incompleteDataTimestamp" />
+      <Caption value="Incomplete Data Timestamp" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/incompleteDataTimestamp" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="incompleteDataUser" />
+      <Caption value="Incomplete Data User" />
+      <MetaType reference="+MetaTypes.Pracovnik" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/incompleteDataUser" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
     </Attribute>
   </Children>
 </DataEntity>

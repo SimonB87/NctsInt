@@ -17,6 +17,16 @@
           <Caption value="Edit" />
           <Value value="edit" />
         </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="arrival" />
+          <Caption value="Arrival" />
+          <Value value="arrival" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="continueFilling" />
+          <Caption value="Continue filling" />
+          <Value value="continueFilling" />
+        </AttributeEnumValue>
       </EnumValues>
     </AttributeType>
   </TypeSpec>

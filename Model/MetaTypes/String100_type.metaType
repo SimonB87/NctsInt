@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="String100_type" />
+  <Caption value="String 100" />
+  <MtsImportOptions.MTS.ID value="String100_type" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="100" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

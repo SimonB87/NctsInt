@@ -10,6 +10,16 @@
         <PackageItem Src="Messages\ConsignmentItem.dataEntity" />
         <PackageItem Src="Messages\ErrorReport.dataEntity" />
         <PackageItem Src="Messages\FBDataRequest.dataEntity" />
+        <PackageItem Src="Messages\FBFallbackRegistration.dataEntity" />
+        <PackageItem Src="Messages\FBSaveIncomplete.dataEntity" />
+        <PackageItem Src="Messages\FBAccept.dataEntity" />
+        <PackageItem Src="Messages\FBNotAccept.dataEntity" />
+        <PackageItem Src="Messages\FBIncidentRegistration.dataEntity" />
+        <PackageItem Src="Messages\FBCancel.dataEntity" />
+        <PackageItem Src="Messages\FBDocumentsRegistration.dataEntity" />
+        <PackageItem Src="Messages\FBSimplifiedProcedureBreak.dataEntity" />
+        <PackageItem Src="Messages\FBSimplifiedProcedureContinue.dataEntity" />
+        <PackageItem Src="Messages\FBUnloadingInterruptionResolution.dataEntity" />
       </Items>
     </PackageFolder>
     <PackageFolder Name="CodeLists">
@@ -129,12 +139,18 @@
         <PackageItem Src="MetaTypes\CodeContentType01.metaType" />
         <PackageItem Src="MetaTypes\AuthorityContentType.metaType" />
         <PackageItem Src="MetaTypes\PlaceContentType.metaType" />
+        <PackageItem Src="MetaTypes\TIRCarnetNumberContentType.metaType" />
+        <PackageItem Src="MetaTypes\RoleCO.metaType" />
+        <PackageItem Src="MetaTypes\Pracovnik.metaType" />
+        <PackageItem Src="MetaTypes\String100_type.metaType" />
+        <PackageItem Src="MetaTypes\NonWhiteSpacedString.metaType" />
       </Items>
     </PackageFolder>
     <ResourceItem ResourceName="mtsimport.ini" Action="None" OutputFileName="mtsimport.ini" Src="mtsimport.ini" />
     <PackageFolder Name="Datasets">
       <Items>
         <PackageItem Src="Datasets\Dataset_DEP.dataEntity" />
+        <PackageItem Src="Datasets\Dataset_DES.dataEntity" />
       </Items>
     </PackageFolder>
   </Items>

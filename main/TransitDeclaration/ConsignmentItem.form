@@ -107,7 +107,7 @@
                       <Name value="panel40" />
                       <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="20%" />
                       <Children>
                         <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
                           <Name value="toTop_btn" />
@@ -171,8 +171,42 @@
                       <Name value="panel43" />
                       <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
+                      <Panel.Width value="80%" />
                       <Children>
+                        <Button>
+                          <Name value="acceptArrival_btn" />
+                          <Caption value="Accept Arrival" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_acceptArrival_btn_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="Model._isArrivalMode" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="incidentRegistration_btn" />
+                          <Caption value="Incident Registration" />
+                          <IsEnabled value="False" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="Model._isArrivalMode" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
                         <Button>
                           <Name value="save_btn" />
                           <Caption value="Save" />
@@ -181,6 +215,9 @@
                           <OnClick>
                             <ActionEvent ReferencedAction="~saveConsignmentItemAndSubmitData" />
                           </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.Model._isSaveButtonsVisible" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
                               <ClassName value="{theme}-button" />
@@ -195,6 +232,31 @@
                             <CssClassConditional>
                               <ClassName value="disabled" />
                               <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="savePartially_btn" />
+                          <Caption value="Save incomplete data" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="160px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_savePartially_btn_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.Model._isSaveButtonsVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
                             </CssClassConditional>
                           </CssClass>
                         </Button>
@@ -286,7 +348,7 @@
                   <Panel.Height value="#" />
                   <Panel.Width value="100%" />
                   <Bindings>
-                    <Binding SourceProperty="IsVisible" Expression="form.panelsVisibility.IsClientValidationsVisible" />
+                    <Binding SourceProperty="IsVisible" Expression="globals.globalUiState.isValidationsVisible" />
                   </Bindings>
                   <Children>
                     <GroupBox>
@@ -297,74 +359,58 @@
                       <Content>
                         <Panel>
                           <Name value="panel41" />
-                          <Orientation value="Horizontal" />
+                          <Orientation value="Vertical" />
                           <Children>
                             <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                              <Name value="clientValidationSummary1" />
+                              <Name value="cliValidations" />
                               <Panel.Height value="#" />
                               <Panel.Width value="*" />
                               <OnItemClick>
                                 <ActionEvent ReferencedAction="~handler_clientValidationSummary1_OnItemClick" />
                               </OnItemClick>
                               <Bindings>
-                                <Binding SourceProperty="validationErrors" Expression="form.clientValidationErrors" />
-                                <Binding SourceProperty="validationRoot" Expression="form.Model" />
+                                <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                <Binding SourceProperty="validationRoot" Expression="form.Header" />
                               </Bindings>
                               <columns>
                                 <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn1" />
-                                  <columnCaption value="Message" />
-                                  <propertyName value="Message" />
-                                </validationSummaryColumn>
-                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn2" />
-                                  <columnCaption value="Type" />
-                                  <propertyName value="Type" />
-                                </validationSummaryColumn>
-                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn3" />
+                                  <Name value="cliPointerCol" />
                                   <columnCaption value="Pointer" />
                                   <columnRole value="pointer" />
+                                  <columnWidth value="30%" />
                                   <propertyName value="Pointer" />
                                 </validationSummaryColumn>
                                 <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn4" />
-                                  <columnCaption value="Focuses to" />
-                                  <propertyName value="FocusTo" />
+                                  <Name value="cliMessageCol" />
+                                  <columnCaption value="Message" />
+                                  <columnWidth value="70%" />
+                                  <propertyName value="Message" />
                                 </validationSummaryColumn>
                               </columns>
                             </ClientValidationSummary>
                             <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                              <Name value="serverValidationSummary1" />
+                              <Name value="srvValidations" />
                               <Panel.Height value="#" />
                               <Panel.Width value="*" />
                               <OnItemClick>
                                 <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
                               </OnItemClick>
                               <Bindings>
-                                <Binding SourceProperty="validationErrors" Expression="form.serverValidationErrors" />
+                                <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
                               </Bindings>
                               <columns>
                                 <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn5" />
-                                  <columnCaption value="Code" />
-                                  <propertyName value="Code" />
-                                </validationSummaryColumn>
-                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn6" />
-                                  <columnCaption value="Description" />
-                                  <propertyName value="Description" />
-                                </validationSummaryColumn>
-                                <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn7" />
+                                  <Name value="srvPointerCol" />
                                   <columnCaption value="Pointer" />
                                   <columnRole value="pointer" />
+                                  <columnWidth value="30%" />
                                   <propertyName value="Pointer" />
                                 </validationSummaryColumn>
                                 <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                                  <Name value="validationSummaryColumn8" />
-                                  <columnCaption value="Focuses to" />
-                                  <propertyName value="FocusTo" />
+                                  <Name value="srvMessageCol" />
+                                  <columnCaption value="Message" />
+                                  <columnWidth value="70%" />
+                                  <propertyName value="Reason" />
                                 </validationSummaryColumn>
                               </columns>
                             </ServerValidationSummary>
@@ -564,7 +610,7 @@
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.TransportCharges.methodOfPayment" />
                                         <Binding SourceProperty="Caption" Expression="Model.TransportCharges.methodOfPayment.caption()" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.TransportCharges.methodOfPayment.isRequired()" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.TransportCharges.hasValue()" />
                                       </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
@@ -642,7 +688,7 @@
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.Commodity.CommodityCode.harmonisedSystemSubHeadingCode" />
                                         <Binding SourceProperty="Caption" Expression="Model.Commodity.CommodityCode.harmonisedSystemSubHeadingCode.caption()" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Commodity.CommodityCode.harmonisedSystemSubHeadingCode.isRequired()" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Commodity.CommodityCode.hasValue()" />
                                       </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
@@ -732,7 +778,7 @@
                                       <Panel.Width value="50%" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="Model.Commodity.descriptionOfGoods" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Commodity.descriptionOfGoods.isRequired()" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Commodity.hasValue()" />
                                         <Binding SourceProperty="Caption" Expression="Model.Commodity.descriptionOfGoods.caption()" />
                                       </Bindings>
                                       <CssClass>
@@ -1146,7 +1192,7 @@
                                               <Panel.Width value="25%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignee.identificationNumber" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.identificationNumber.isRequired()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.hasValue()" />
                                                 <Binding SourceProperty="Caption" Expression="Model.Consignee.identificationNumber.caption()" />
                                               </Bindings>
                                               <CssClass>
@@ -1198,7 +1244,7 @@
                                               <Panel.Width value="35%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignee.Address.streetAndNumber" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.streetAndNumber.isRequired()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.hasValue()" />
                                                 <Binding SourceProperty="Caption" Expression="Model.Consignee.Address.streetAndNumber.caption()" />
                                               </Bindings>
                                               <CssClass>
@@ -1236,7 +1282,7 @@
                                               <Panel.Width value="35%" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignee.Address.city" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.city.isRequired()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.hasValue()" />
                                                 <Binding SourceProperty="Caption" Expression="Model.Consignee.Address.city.caption()" />
                                               </Bindings>
                                               <CssClass>
@@ -1257,7 +1303,7 @@
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="Model.Consignee.Address.country" />
                                                 <Binding SourceProperty="Caption" Expression="Model.Consignee.Address.country.caption()" />
-                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.country.isRequired()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignee.Address.hasValue()" />
                                               </Bindings>
                                               <CssClass>
                                                 <CssClassConditional>
@@ -2268,6 +2314,9 @@
         <Complex>
           <Name value="Model" />
           <Caption value="Model" />
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_Model_OnUserChange" />
+          </OnUserChange>
           <Children>
             <Include>
               <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.ConsignmentItem" />
@@ -2342,15 +2391,6 @@
                 </ResultType>
               </Expression>
             </Computed>
-            <Attribute>
-              <Name value="_isPostcodeBased" />
-              <Caption value="_ is postcode based" />
-              <DeclaredType>
-                <AttributeType>
-                  <BaseType value="Bool" />
-                </AttributeType>
-              </DeclaredType>
-            </Attribute>
             <Attribute>
               <Name value="_isConsigneePostcodeBased" />
               <Caption value="_ is consignee postcode based" />
@@ -2427,6 +2467,56 @@ isTrue(form.Model._isTypePackagingInCL181) ? false : true
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Computed>
+              <Name value="_isTPendDateGreaterThanDecisive" />
+              <Caption value="_ is T pend date greater than decisive" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[globals.serverConfig.TPendDate > form.Model._decisiveDate]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="_isTPendDateGreaterOrEqualToDecisive" />
+              <Caption value="_ is T pend date greater or equal to decisive" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[globals.serverConfig.TPendDate >= form.Model._decisiveDate]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="_isArrivalMode" />
+              <Caption value="arrival buttons visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[form.mode = enums.declarationFormMode.arrival]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="_isCreateOrEditMode" />
+              <Caption value="_ is create or edit mode" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[(form.mode = enums.declarationFormMode.create) OR (form.mode = enums.declarationFormMode.edit) ]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Computed>
+              <Name value="_isSaveButtonsVisible" />
+              <Caption value="_ is save buttons visible" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[(form.mode = enums.declarationFormMode.create) OR  (form.mode = enums.declarationFormMode.edit) OR (form.mode = enums.declarationFormMode.continueFilling)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </Expression>
+            </Computed>
           </Children>
         </Complex>
         <Attribute>
@@ -2542,43 +2632,6 @@ isTrue(form.Model._isTypePackagingInCL181) ? false : true
             </AttributeType>
           </DeclaredType>
         </Attribute>
-        <Collection>
-          <Name value="clientValidationErrors" />
-          <Caption value="Client validation errors" />
-          <Children>
-            <Attribute>
-              <Name value="Message" />
-              <Caption value="Message" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="Pointer" />
-              <Caption value="Pointer" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="Type" />
-              <Caption value="Type" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Computed>
-              <Name value="FocusTo" />
-              <Caption value="Focus to" />
-              <Expression IsValid="True">
-                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </Expression>
-            </Computed>
-          </Children>
-        </Collection>
         <Complex>
           <Name value="panelsVisibility" />
           <Caption value="Panels visibility" />
@@ -2594,43 +2647,6 @@ isTrue(form.Model._isTypePackagingInCL181) ? false : true
             </Attribute>
           </Children>
         </Complex>
-        <Collection>
-          <Name value="serverValidationErrors" />
-          <Caption value="Server validation errors" />
-          <Children>
-            <Computed>
-              <Name value="FocusTo" />
-              <Caption value="Focus to" />
-              <Expression IsValid="True">
-                <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </Expression>
-            </Computed>
-            <Attribute>
-              <Name value="Pointer" />
-              <Caption value="Pointer" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="Description" />
-              <Caption value="Description" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="Code" />
-              <Caption value="Code" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-          </Children>
-        </Collection>
         <Complex>
           <Name value="navTree" />
           <Caption value="Nav tree" />
@@ -2734,6 +2750,15 @@ isTrue(form.Model._isTypePackagingInCL181) ? false : true
                 </AttributeType>
               </DeclaredType>
             </Attribute>
+            <Attribute>
+              <Name value="isEventHistoryActive" />
+              <Caption value="Is event history active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
             <Collection>
               <Name value="HouseConsignment" />
               <Caption value="House consignment" />
@@ -2796,15 +2821,137 @@ isTrue(form.Model._isTypePackagingInCL181) ? false : true
             </Computed>
           </Children>
         </Complex>
+        <Complex>
+          <Name value="Errors" />
+          <Caption value="Errors" />
+          <Children>
+            <Collection>
+              <Name value="clientValidationErrors" />
+              <Caption value="Client validation errors" />
+              <Children>
+                <Attribute>
+                  <Name value="Message" />
+                  <Caption value="Message" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Pointer" />
+                  <Caption value="Pointer" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Type" />
+                  <Caption value="Type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="FocusTo" />
+                  <Caption value="Focus to" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Collection>
+            <Complex>
+              <Name value="serverValidationComplex" />
+              <Caption value="Server validation complex" />
+              <Children>
+                <Collection>
+                  <Name value="MessageCheckError" />
+                  <Caption value="Message check error" />
+                  <Children>
+                    <Attribute>
+                      <Name value="Reason" />
+                      <Caption value="Reason" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="ErrorType" />
+                      <Caption value="Error type" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                    <Attribute>
+                      <Name value="Pointer" />
+                      <Caption value="Pointer" />
+                      <DeclaredType>
+                        <AttributeType />
+                      </DeclaredType>
+                    </Attribute>
+                  </Children>
+                </Collection>
+              </Children>
+            </Complex>
+            <Collection>
+              <Name value="serverValidationErrors" />
+              <Caption value="Server validation errors" />
+              <Children>
+                <Computed>
+                  <Name value="FocusTo" />
+                  <Caption value="Focus to" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[Pointer = "a" ? "textBox1" : defaultString()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+                <Attribute>
+                  <Name value="Pointer" />
+                  <Caption value="Pointer" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Description" />
+                  <Caption value="Description" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="Code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="incompleteModel" />
+          <Caption value="Incomplete model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBSaveIncomplete" />
+            </Include>
+          </Children>
+        </Complex>
       </Children>
       <Modifiers>
         <Modifier>
           <Name value="modifier_E9AD4195_declarationType" />
           <ShowAsChanges value="True" />
           <SourcePath value="Model.declarationType" />
-          <OnChange>
-            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_E9AD4195_declarationType_OnChange" />
-          </OnChange>
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_E9AD4195_declarationType_OnUserChange" />
+          </OnUserChange>
           <Validators>
             <Validator Name="C0045">
               <ErrorMessage IsValid="True">
@@ -3203,10 +3350,8 @@ ValidateAgainstRegularExpression(toUpper(this.postcode), "^[A-Z0-9]{0,9}$")
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[isTrue(
-(form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-(length(toString(this.numberOfPackages)) < 6)
-)]]></ExpressionText>
+                <ExpressionText><![CDATA[form.Model._isTPendDateGreaterOrEqualToDecisive AND
+(length(toString(this.numberOfPackages)) < 6)]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -3220,8 +3365,15 @@ ValidateAgainstRegularExpression(toUpper(this.postcode), "^[A-Z0-9]{0,9}$")
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[isTrue(form.Model._isTypePackagingInCL181) ? this.numberOfPackages.isEmpty() :
-isTrue(form.Model._isTypePackagingInCL182) ? this.numberOfPackages.hasValue() : true]]></ExpressionText>
+                <ExpressionText><![CDATA[form.Model._isTypePackagingInCL181.hasValue() ?
+	form.Model._isTypePackagingInCL181 ? 
+		this.numberOfPackages.isEmpty() 
+		: form.Model._isTypePackagingInCL182.hasValue() ? 
+			form.Model._isTypePackagingInCL182 ? 
+				this.numberOfPackages.hasValue() 
+				: true 
+			: true
+	: true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -3242,10 +3394,10 @@ isTrue(form.Model._isTypePackagingInCL182) ? this.numberOfPackages.hasValue() : 
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[isTrue(
-(form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
+                <ExpressionText><![CDATA[form.Model._isTPendDateGreaterOrEqualToDecisive ?
 ValidateAgainstRegularExpression(toUpper(this.shippingMarks), "^[A-Z0-9]{0,42}$")
-)
+: true
+
 ]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -3261,8 +3413,12 @@ ValidateAgainstRegularExpression(toUpper(this.shippingMarks), "^[A-Z0-9]{0,42}$"
               </ErrorMessage>
               <IsValid IsValid="True">
                 <ExpressionText><![CDATA[(form.Model._decisiveDate <= globals.serverConfig.TPendDate) ?
-isTrue(form.Model._isTypePackagingInCL181) ? this.shippingMarks.isEmpty() : this.shippingMarks.hasValue()
-: isTrue(form.Model._isTypePackagingInCL181) ? this.shippingMarks.isEmpty() : true]]></ExpressionText>
+	form.Model._isTypePackagingInCL181.hasValue() ? 
+		form.Model._isTypePackagingInCL181 ? this.shippingMarks.isEmpty() : this.shippingMarks.hasValue() 
+		: true
+: form.Model._isTypePackagingInCL181.hasValue() ?
+	form.Model._isTypePackagingInCL181 ? this.shippingMarks.isEmpty() : true
+	: true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -3346,7 +3502,9 @@ ValidateAgainstRegularExpression(toUpper(this.complementOfInformation), "^[A-Z0-
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[form.Model._countryOfDispatchEnabled = form.Header.TransitOperation.declarationType.Code.hasValue()]]></ExpressionText>
+                <ExpressionText><![CDATA[form.Model._countryOfDispatchEnabled.hasValue() ?
+form.Model._countryOfDispatchEnabled = form.Header.TransitOperation.declarationType.Code.hasValue()
+: true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -3358,9 +3516,9 @@ ValidateAgainstRegularExpression(toUpper(this.complementOfInformation), "^[A-Z0-
           <Name value="modifier_FDCA2014_country" />
           <ShowAsChanges value="True" />
           <SourcePath value="Model.Consignee.Address.country" />
-          <OnChange>
-            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_FDCA2014_country_OnChange" />
-          </OnChange>
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_FDCA2014_country_OnUserChange" />
+          </OnUserChange>
         </Modifier>
         <Modifier>
           <Name value="modifier_A9470561_AdditionalSupplyChainActor" />
@@ -3491,7 +3649,8 @@ ValidateAgainstRegularExpression(toUpper(this.complementOfInformation), "^[A-Z0-
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[isFalse(form.Model._CombinedNonclatureCodeCantBeUsed)]]></ExpressionText>
+                <ExpressionText><![CDATA[form.Model._CombinedNonclatureCodeCantBeUsed.hasValue() ?
+isFalse(form.Model._CombinedNonclatureCodeCantBeUsed) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -3503,9 +3662,9 @@ ValidateAgainstRegularExpression(toUpper(this.complementOfInformation), "^[A-Z0-
           <Name value="modifier_BCD789FC_CustomsOfficeOfDeparture" />
           <ShowAsChanges value="True" />
           <SourcePath value="Header.CustomsOfficeOfDeparture" />
-          <OnChange>
-            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_BCD789FC_CustomsOfficeOfDeparture_OnChange" />
-          </OnChange>
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.ConsignmentItem.handler_modifier_BCD789FC_CustomsOfficeOfDeparture_OnUserChange" />
+          </OnUserChange>
         </Modifier>
         <Modifier>
           <Name value="modifier_B2713588_typeOfPackages" />
@@ -3560,6 +3719,8 @@ form.Model.AdditionalSupplyChainActor.count() = 0 : true]]></ExpressionText>
 if globals.loginResponse.isEmpty() then
 	actions.authentication()
 endIf
+
+actions.setCodeListDate()
 
 if form.Model.goodsItemNumber.hasValue() then
 else
@@ -3625,8 +3786,8 @@ url.updatePageUrl()]]></Script>
       <Name value="saveConsignmentItem" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
-apiobjects.transitDeclaration.setConsignmentItem(form.sequenceNumber, form.Model.toJson())
-
+apiobjects.transitDeclaration.setConsignmentItem(form.sequenceNumber, form.Model.toJson(true))
+actions.setDataChangedToFalse()
 // Need response from server
 globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
@@ -3667,13 +3828,19 @@ if apiobjects.transitDeclaration.isEmpty() then
 	if form.mode = enums.declarationFormMode.create then
 		result = True
 	else
-		if form.mode = enums.declarationFormMode.edit then
+		if 	(form.mode = enums.declarationFormMode.edit) OR
+			(form.mode = enums.declarationFormMode.arrival) then
 			//load existing transit declaration
 			result = form.actions.tryLoadingDataOfExistingTD()
 		else
-			//FIX ME - case of not known mode enum value
-			//go to main
-			result = True
+			if form.mode = enums.declarationFormMode.continueFilling then
+			
+			else
+			
+				//FIX ME - case of not known mode enum value
+				//go to main
+				result = True
+			endif
 
 		endif
 
@@ -3681,7 +3848,10 @@ if apiobjects.transitDeclaration.isEmpty() then
 
 else
 
-	if (form.mode = enums.declarationFormMode.create) or (form.mode = enums.declarationFormMode.edit) then
+	if 	(form.mode = enums.declarationFormMode.create) OR
+		(form.mode = enums.declarationFormMode.edit) OR 
+		(form.mode = enums.declarationFormMode.arrival) OR
+		(form.mode = enums.declarationFormMode.continueFilling) then
 		form.actions.loadExistingData()
 	else
 		//FIX ME - case of not known mode enum value
@@ -3711,35 +3881,13 @@ endIf]]></Script>
     </ActionBlock>
     <ActionBlock>
       <Name value="tryLoadingDataOfExistingTD" />
-      <ActionLangBody>
+      <ActionLangBody IsValid="True">
         <Script><![CDATA[result = False
-var mockGuid = "33107a15-395e-4205-849e-1b5bde10035f"
 
-if form.GUID = mockGuid then
-	apiobjects.transitDeclaration.fromMock() // navigation still relies on mock DATA!!!
-
-	var sequenceNumberIsValidInTransitDeclaration = form.actions.doesSequenceNumberExist()
-	var goodsItemNumberIsValidInTransitDeclaration = defaultBool()
-
-	if sequenceNumberIsValidInTransitDeclaration then
-		goodsItemNumberIsValidInTransitDeclaration = form.actions.doesGoodsItemNumberExist()
-
-		if goodsItemNumberIsValidInTransitDeclaration then
-			form.actions.loadExistingData()
-		else
-			result = True
-		endIf
-
-	else
-		result = True
-	endIf
-
+if form.GUID.hasValue() then
+	result = form.actions.getDataFromCic()
 else
-	if form.GUID.hasValue() then
-		result = form.actions.getDataFromCic()
-	else
-		result = true
-	endIf
+	result = true
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -3833,21 +3981,70 @@ form.Header.fromJson(dataHeader)]]></Script>
       <Name value="saveConsignmentItemAndSubmitData" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
-apiobjects.transitDeclaration.setConsignmentItem(form.sequenceNumber, form.Model.toJson())
 
-var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+if(form.Header.validationErrorsCount() = 0) then
 
-if response.isError() then
-	system.console(response.getErrorMessage())
-	form.serverValidationErrors.fromJson(response.getErrorMessage())
+	apiobjects.transitDeclaration.setConsignmentItem(form.sequenceNumber, form.Model.toJson(true))
+	
+	var response = apiobjects.CIC.postAsync("FBSubmit", apiobjects.transitDeclaration.toJson())
+
+	if response.isError() then
+		// Show error panels
+		globals.globalUiState.isValidationsVisible = true
+	
+		// Inform user about errors
+		var errorMessage = defaultString()
+		var errorCount = defaultInt()	
+
+		errorCount = form.Header.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+		// Handling plural message
+		if (errorCount > 1) then 
+			errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+		else
+			errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+		endif	
+		
+		apiobjects.notificationsCtrl.addError(errorMessage)
+	
+	else
+	
+		apiobjects.notificationsCtrl.addSuccess("Declaration was saved successfuly.")
+	
+		//go to DecList
+		apiobjects.urlRouter.clearUrl()
+		navigation.main.DecList.go()
+		
+	endif
+
 else
-	system.console("OK :-)")
-	system.console(response.getJsonString())
-endIf
+
+	// Show validation error field
+	globals.globalUiState.isValidationsVisible = true
+	
+	// Inform user about errors
+	var errorMessage = defaultString()
+	var errorCount = defaultInt()	
+
+	errorCount = form.Header.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+	if (errorCount > 1) then 
+		errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+	else
+		errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+	endif
+	
+	apiobjects.notificationsCtrl.addError(errorMessage)
+
+endif
+
 
 // Need response from server
 
 apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
+
+apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
 
 globals.busyIndicatorIsRunning = false]]></Script>
       </ActionLangBody>
@@ -3898,12 +4095,12 @@ endif
         <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
 
 /* Validators panels display toggler */
-var isClientValidatorVisible = form.panelsVisibility.isClientValidationsVisible
+var isClientValidatorVisible = globals.globalUiState.isValidationsVisible
 
 if(isClientValidatorVisible = true) then
-	form.panelsVisibility.isClientValidationsVisible = false
+	globals.globalUiState.isValidationsVisible = false
 else
-	form.panelsVisibility.isClientValidationsVisible = true	
+	globals.globalUiState.isValidationsVisible = true	
 endif
 
 ]]></Script>
@@ -3917,93 +4114,6 @@ endif
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_modifier_FDCA2014_country_OnChange" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[var country = form.Model.Consignee.Address.country.Code
-
-form.Model._isConsigneePostcodeBased = false
-
-if(hasValue(country)) then
-	var countrycodeswithadress = CountryWithoutZip_CL505.getItemByStringColumnAsync("Code", country, defaultDate(), true)
-
-	if(countrycodeswithadress.isFound()) then
-		form.Model._isConsigneePostcodeBased = false
-	else
-		form.Model._isConsigneePostcodeBased = true
-	endif
-endif
-
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_modifier_BCD789FC_CustomsOfficeOfDeparture_OnChange" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[var countryCodeCTC = CountryCodesCTC_CL112.getItemByStringColumnAsync("Code", substring(params.data.referenceNumber.Code,1,2), defaultDate(), true)
-
-if countryCodeCTC.isFound() then
-	form.Model._CombinedNonclatureCodeCantBeUsed = true
-else
-	form.Model._CombinedNonclatureCodeCantBeUsed = false
-endif
-
-var isCountrySM = substring(params.data.referenceNumber.Code,1,2) 
-
-if isTrue(isCountrySM = "SM") then 
-
-	var isCountryCL010 = CountryCodesCommunity_CL010.getItemByStringColumnAsync("Code", substring(params.data.owner().CustomsOfficeOfDestinationDeclared.referenceNumber.Code,1,2), defaultDate(), true)
-	
-	if isCountryCL010.isFound() then
-		form.Model._declarationTypeR0911 = true
-	else
-		form.Model._declarationTypeR0911 = false
-	endif
-	
-endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="handler_modifier_E9AD4195_declarationType_OnChange" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[if isTrue(substring(form.Header.CustomsOfficeOfDestinationDeclared .referenceNumber.Code,1,2) = "SM") then
-	if isTrue(substring(form.Header.CustomsOfficeOfDeparture.referenceNumber.Code,1,2) = "IT") then		
-		if isTrue(form.Header.TransitOperation.declarationType.Code = "T2SM") AND params.data.declarationType.isEmpty() then	
-			form.Model._isR0909Valid = true
-		else
-			form.Model._isR0909Valid = false
-		endif
-	else
-		var depCountry = substring(form.Header.CustomsOfficeOfDeparture.referenceNumber.Code,1,2)
-		var country010 = CountryCodesCommunity_CL010.getItemByStringColumnAsync("Code", depCountry, defaultDate(), true)
-		
-		if (country010.isFound()) and (depCountry <> "IT") then 
-			if isTrue(form.Header.TransitOperation.declarationType.Code in ["T2","T2F"]) OR isTrue(params.data.declarationType.Code in ["T2","T2F"]) then
-				form.Model._isR0909Valid = true
-			else
-				form.Model._isR0909Valid = false
-			endif
-		else
-			form.Model._isR0909Valid = true
-		endif
-	endif
-else
-	form.Model._isR0909Valid = true
-endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -4085,6 +4195,8 @@ else
 	ci.connectToCollection("ConsignmentItem", "_caption")
 	ci.limitSubnodesAroundSelected(3)
 	
+	form.apiobjects.navigationTreeController.addNode("EventHistory", "Event history")
+	
 	form.apiobjects.navigationTreeController.finishSetup()
 	form.actions.initNavTreeFocus()
 	//form.apiobjects.navigationTreeController.expandAlways("HouseConsignments", true)
@@ -4129,66 +4241,16 @@ endif]]></Script>
       <Name value="handler_navigationTree_OnNodeActivated" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if isTrue(params.id = "TransitOperation") then
-	form.actions.saveConsignmentItem()
-	globals.activePanel = "transitOperation"
-	navigation.main.Header.withGuid(form.guid).go(form.mode)
-else 
-	if isTrue(params.id = "CustomsOffices") then
-		form.actions.saveConsignmentItem()
-		globals.activePanel = "customsOffice"
-		navigation.main.Header.withGuid(form.guid).go(form.mode)
+        <Script><![CDATA[if isTrue(params.id = "ConsignmentItems") then
+	form.actions.navigationForConsignmentItems()
+else
+	if isTrue(params.id = "HouseConsignments") then
+		form.actions.navigationForHouseConsignments()
 	else
-		if isTrue(params.id = "Traders") then
+		if globals.DataChanged then
 			form.actions.saveConsignmentItem()
-			globals.activePanel = "traders"
-			navigation.main.Header.withGuid(form.guid).go(form.mode)
-		else
-			if isTrue(params.id = "Guarantee") then
-				form.actions.saveConsignmentItem()
-				globals.activePanel = "guarantee"
-				navigation.main.Header.withGuid(form.guid).go(form.mode)
-			else
-				if isTrue(params.id = "Consignment") then
-					form.actions.saveConsignmentItem()
-					globals.activePanel = "consignment"
-					navigation.main.Header.withGuid(form.guid).go(form.mode)
-				else
-					if (isTrue(params.id = "HouseConsignments") AND form.navTree.isHouseConsignmentsActive) then
-						form.actions.saveConsignmentItem()
-						navigation.main.HouseConsignmentList.withGUID(form.GUID).go(form.mode)
-					else
-						if (isTrue(params.id = "HouseConsignments") AND form.navTree.isHouseConsignmentsItemActive) then
-							form.actions.saveConsignmentItem()
-							if form.GUID.hasValue() then
-								navigation.main.HouseConsignment.withGUID(form.GUID).go(form.mode, form.navTree.indexHouseConsignments)
-							else
-								navigation.main.HouseConsignment.go(form.mode, form.sequenceNumber)
-							endif
-						else
-							if (isTrue(params.id = "ConsignmentItems") AND form.navTree.isConsignmentItemsActive) then
-								form.actions.saveConsignmentItem()
-								if form.GUID.hasValue() then
-									navigation.main.ConsignmentList.withGUID(form.GUID).go(form.mode, form.sequenceNumber)
-								else	
-									navigation.main.ConsignmentList.go(form.mode, form.sequenceNumber)
-								endif
-							else
-								if (isTrue(params.id = "ConsignmentItems") AND form.navTree.isConsignmentItemsItemActive) then
-									
-									if form.goodsItemNumber <> form.navTree.indexConsignmentItems then
-										form.actions.saveConsignmentItem()
-										navigation.main.ConsignmentItem.withGUID(form.GUID).go(form.mode, form.sequenceNumber, form.navTree.indexConsignmentItems)
-									else
-										//nothing should happen
-									endif
-								endif
-							endif
-						endif
-					endif					
-				endif
-			endif
 		endif
+		actions.navigationToHeaderFromLists(params.id, form.mode, form.GUID)
 	endif
 endif]]></Script>
       </ActionLangBody>
@@ -4243,6 +4305,342 @@ else
 			result = true
 		endIf
 		
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_Model_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.urlRouter.setDataHasChanged(true)
+globals.DataChanged = true]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_acceptArrival_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var response = apiobjects.CIC.postAsync("FBArrivalConfirmation", form.Header.TransitOperation.toJson(true))
+
+if response.isError() then
+//neco se stane
+else
+	form.Model.fromJson(response.getJsonString())
+	
+	if form.Header.RiskAnalysisIdentification.hasValue() then
+		form.Header.TransitOperation.status.Code = "A15" 
+	else
+		form.Header.TransitOperation.status.Code = "A13"
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationForConsignmentItems" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.navTree.isConsignmentItemsActive then
+	if globals.DataChanged then
+		form.actions.saveConsignmentItem()
+	endif
+	actions.navigationToConsignmentItemList(form.mode, form.navTree.indexHouseConsignments, form.GUID)
+else
+	if form.navTree.isConsignmentItemsItemActive then
+		if form.goodsItemNumber <> form.navTree.indexConsignmentItems then
+			if globals.DataChanged then
+				form.actions.saveConsignmentItem()
+			endif										
+			actions.navigationToConsignmentItem(form.mode, form.navTree.indexHouseConsignments, form.navTree.indexConsignmentItems, form.GUID)
+		endif						
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationForHouseConsignments" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.navTree.isHouseConsignmentsActive then
+	form.actions.navigationToHouseConsignmentList()
+else
+	if form.navTree.isHouseConsignmentsItemActive then
+		form.actions.navigationToChosenHouseConsignment()
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToHouseConsignmentList" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if globals.DataChanged then
+	form.actions.saveConsignmentItem()
+endif
+
+actions.navigationToHouseConsignmentList(form.mode, form.GUID)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToChosenHouseConsignment" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if globals.DataChanged then
+	form.actions.saveConsignmentItem()
+endif
+
+actions.navigationToHouseConsignment(form.mode, form.navTree.indexHouseConsignments, form.GUID)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="navigationToHouseConsignmentNo1" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if globals.DataChanged then
+	if system.confirm("Data has been changed. You might lose it when you go away") then
+		actions.navigationToHouseConsignment(form.mode, 1, form.GUID)
+	endif
+else
+	actions.navigationToHouseConsignment(form.mode, 1, form.GUID)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_modifier_FDCA2014_country_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var country = form.Model.Consignee.Address.country.Code
+
+form.Model._isConsigneePostcodeBased = false
+
+if(hasValue(country)) then
+	var countrycodeswithadress = CountryWithoutZip_CL505.getItemByStringColumnAsync("Code", country, defaultDate(), true)
+
+	if(countrycodeswithadress.isFound()) then
+		form.Model._isConsigneePostcodeBased = false
+	else
+		form.Model._isConsigneePostcodeBased = true
+	endif
+else
+	form.Model._isConsigneePostcodeBased = false
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_modifier_BCD789FC_CustomsOfficeOfDeparture_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var countryCodeCTC = CountryCodesCTC_CL112.getItemByStringColumnAsync("Code", substring(params.data.referenceNumber.Code,1,2), defaultDate(), true)
+
+if countryCodeCTC.isFound() then
+	form.Model._CombinedNonclatureCodeCantBeUsed = true
+else
+	form.Model._CombinedNonclatureCodeCantBeUsed = false
+endif
+
+var isCountrySM = substring(params.data.referenceNumber.Code,1,2) 
+
+if isTrue(isCountrySM = "SM") then 
+
+	var isCountryCL010 = CountryCodesCommunity_CL010.getItemByStringColumnAsync("Code", substring(params.data.owner().CustomsOfficeOfDestinationDeclared.referenceNumber.Code,1,2), defaultDate(), true)
+	
+	if isCountryCL010.isFound() then
+		form.Model._declarationTypeR0911 = true
+	else
+		form.Model._declarationTypeR0911 = false
+	endif
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_modifier_E9AD4195_declarationType_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(substring(form.Header.CustomsOfficeOfDestinationDeclared .referenceNumber.Code,1,2) = "SM") then
+	if isTrue(substring(form.Header.CustomsOfficeOfDeparture.referenceNumber.Code,1,2) = "IT") then		
+		if isTrue(form.Header.TransitOperation.declarationType.Code = "T2SM") AND params.data.declarationType.isEmpty() then	
+			form.Model._isR0909Valid = true
+		else
+			form.Model._isR0909Valid = false
+		endif
+	else
+		var depCountry = substring(form.Header.CustomsOfficeOfDeparture.referenceNumber.Code,1,2)
+		var country010 = CountryCodesCommunity_CL010.getItemByStringColumnAsync("Code", depCountry, defaultDate(), true)
+		
+		if (country010.isFound()) and (depCountry <> "IT") then 
+			if isTrue(form.Header.TransitOperation.declarationType.Code in ["T2","T2F"]) OR isTrue(params.data.declarationType.Code in ["T2","T2F"]) then
+				form.Model._isR0909Valid = true
+			else
+				form.Model._isR0909Valid = false
+			endif
+		else
+			form.Model._isR0909Valid = true
+		endif
+	endif
+else
+	form.Model._isR0909Valid = true
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_savePartially_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+apiobjects.transitDeclaration.setConsignmentItem(form.sequenceNumber, form.Model.toJson(true))
+
+form.actions.submitNewIncompleteData()	
+
+// Save changed event into var
+apiobjects.urlRouter.setDataHasChanged(false)
+globals.DataChanged = false
+
+// Need response from server
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="submitNewIncompleteData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.GUID.hasValue() then
+	form.incompleteModel.GUID = form.GUID
+endif
+
+form.incompleteModel.fromJson(apiobjects.transitDeclaration.toJson())
+form.incompleteModel.IncompleteData.data = toString(apiobjects.transitDeclaration.toJson())
+
+var response = apiobjects.CIC.postAsync("FBSaveIncomplete", form.incompleteModel.toJson())
+
+globals.Errors.serverValidationErrors.fromJson(response.getJsonString())
+
+if response.isError() then
+
+	globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
+	globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
+	globals.globalUiState.isValidationsVisible = true
+
+	// Inform user about errors
+	var errorMessage = defaultString()
+
+	if (globals.Errors.serverValidationErrors.count() > 1) then 
+		errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
+	else
+		errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
+	endif	
+
+	apiobjects.notificationsCtrl.addError(errorMessage)
+else
+	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
+	
+	//go to DecList
+	apiobjects.urlRouter.clearUrl()
+	apiobjects.transitDeclaration.clear()
+	navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="tryLoadingDataOfExistingIncompleteData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = False
+
+if form.GUID.hasValue() then
+	
+	var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
+	
+	var response = apiobjects.CIC.postAsync("FBDataIncompleteRequest", requestJsonString)
+	
+	if response.isError() then
+		system.console(response.getErrorMessage())
+		apiobjects.notificationsCtrl.addError("Failed to load data.")
+		result = true	
+	else
+		var dataReceived = response.getJsonString()
+		form.incompleteModel.fromJson(dataReceived)
+		//store data to transitDeclaration apiObject
+		apiobjects.transitDeclaration.fromJson(form.incompleteModel.IncompleteData.data)
+		
+		//get transit data and fill them to local form variables
+		form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
+		//check if we have data for selected sequenceNumber
+		if form.modelState.supportingTransitJson.hasValue() then
+		
+			form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getConsignmentItem(form.sequenceNumber, form.goodsItemNumber)
+			
+			if form.modelState.supportingTransitJson.hasValue() then
+			
+				form.Model.fromJson(form.modelState.supportingTransitJson)
+				
+				form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getHouseConsignment(form.sequenceNumber)
+				form.House.fromJson(form.modelState.supportingTransitJson)
+				
+				form.modelState.supportingTransitJson = apiobjects.transitDeclaration.getHeader()
+				form.Header.fromJson(form.modelState.supportingTransitJson)				
+			
+				apiobjects.notificationsCtrl.addSuccess("Successfuly received data")
+				result = false
+			else
+			    apiobjects.notificationsCtrl.addError("Failed to load data. Submission has wrong Consignment Item number.")
+				result = true
+			endIf
+				
+		else
+			apiobjects.notificationsCtrl.addError("Failed to load data. Submission has wrong House Consignment number.")
+			result = true
+		endIf
+		
+	endIf
+	
+else
+	result = true
 endIf]]></Script>
       </ActionLangBody>
       <DataContext>

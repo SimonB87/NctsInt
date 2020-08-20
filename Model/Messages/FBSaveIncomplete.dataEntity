@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBSaveIncomplete" />
+  <Caption value="Save incomplete data before submit" />
+  <MtsImportOptions.MTS.ID value="/FBSaveIncomplete" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Attribute>
+      <Name value="GUID" />
+      <Caption value="GUID of declaration" />
+      <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/GUID" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="TRANSIT OPERATION" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="declarationType" />
+          <Caption value="Declaration type" />
+          <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/TransitOperation/declarationType" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.DeclarationType" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="R0601">
+              <MtsImportOptions.MTS.ID value="R0601" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0601"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0601 IF / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/type> is EQUAL to 'C651'
+ΤΗΕΝ IF / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is PRESENT 
+THEN 
+/ * /Consignment/HouseConsignment/ConsignmentItem/declarationType is EQUAL to ‘T1’ 
+AND / * /TransitOperation/declarationType is EQUAL to ‘T’
+ELSE / * /TransitOperation/declarationType is EQUAL to ‘T1’ */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="R0909">
+              <MtsImportOptions.MTS.ID value="R0909" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0909"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0909 IF the 2 first digits of / * /CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'
+    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
+                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
+             ELSE IF the 2 first digits of <CUSTOMS OFFICE OF DEPARTURE.Reference number> is in
+set CL010 AND NOT EQUAL to 'IT'
+                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};
+
+IF the 2 first digits of / * /CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'
+    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
+                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
+             ELSE IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is in
+set CL010 AND NOT EQUAL to "IT'
+                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="R0911">
+              <MtsImportOptions.MTS.ID value="R0911" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0911"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0911 IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND the 2
+first digits of / * /CustomsOfficeOfDestinationDeclared/reference is in SET CL010
+THEN
+/ * /TransitOperation/declarationType is in SET {T2, T2F} AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N";
+
+IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'SM' AND the 2
+first digits of / * /CustomsOfficeOfDestinationActual/reference is in SET CL010
+THEN
+/ * /TransitOperation/declarationType is in SET {T2, T2F} AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="NR190">
+              <MtsImportOptions.MTS.ID value="NR190" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["NR190"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE NR190 For SAD initiated in Montenegro  „Declaration type "T2SM" cannot be used. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="IncompleteData" />
+      <Caption value="INCOMPLETE DATA" />
+      <Description value="Data of incompletely filled declaration" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/IncompleteData" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="data" />
+          <Caption value="data" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/IncompleteData/data" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="999999" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="CustomsOfficeOfDeparture" />
+      <Caption value="CUSTOMS OFFICE OF DEPARTURE" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/CustomsOfficeOfDeparture" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="referenceNumber" />
+          <Caption value="Reference number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/CustomsOfficeOfDeparture/referenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CustomsOfficeDeparture" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="R0901">
+              <MtsImportOptions.MTS.ID value="R0901" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0901"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0901 IF / * /TransitOperation/declarationType is EQUAL to 'TIR'
+THEN the country code (first two digits) in the / * /CustomsOfficeOfDestinationDeclared AND
+/ * /CustomsOfficeOfDeparture is in SET CL010 */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="NR104">
+              <MtsImportOptions.MTS.ID value="NR104" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["NR104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE NR104 Only Montenegrin  customs office is acceptable with this item */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="HolderOfTheTransitProcedure" />
+      <Caption value="HOLDER OF THE TRANSIT PROCEDURE" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/HolderOfTheTransitProcedure" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="identificationNumber" />
+          <Caption value="Identification number" />
+          <Description value="včetně TIRHolderIdentificationNumber" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+          <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/HolderOfTheTransitProcedure/identificationNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="G0002">
+              <MtsImportOptions.MTS.ID value="G0002" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["G0002"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="R0850">
+              <MtsImportOptions.MTS.ID value="R0850" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0850"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0850 IF sender is in EU (CL010)
+THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),
+ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).
+The EORI/TCUIN values should comply with the following pattern: <xs:pattern value=" [A-Z]{2}[\x21-\x7E]{1,15}"/> */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="name" />
+          <Caption value="Name" />
+          <MetaType reference="+MetaTypes.NameContentType" />
+          <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/HolderOfTheTransitProcedure/name" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="E1104">
+              <MtsImportOptions.MTS.ID value="E1104" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE E1104 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
+THEN
+/ * /HolderOfTheTransitProcedure/name AND
+/ * / HolderOfTheTransitProcedure/Address/streetAndNumber AND
+/ * /Consignment/Consignor/name AND
+/ * /Consignment/Consignor/Address/streetAndNumber AND
+/ * /Consignment/Consignee/name AND
+/ * /Consignment/Consignee/Address/streetAndNumber AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/streetAndNumber AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/referenceNumber AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/referenceNumber AND
+/ * /Consignment/ActiveBorderTransportmeans/conveyanceReferenceNumber AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber AND
+/ * /Consignment/LocationOfGoods/Address/streetAndNumber AND
+/ * /Consignment/GuaranteeReference/Guarantor/Address/streetAndNumber AND
+/ * /Consignment/GuaranteeReference/Guarantor/name AND
+/ * / Consignment/TransportDocument/referenceNumber
+
+format shall be set to an..35 */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0250">
+              <MtsImportOptions.MTS.ID value="C0250" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0250"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0250 IF / * /HolderOfTheTransitProcedure/identificationNumber is PRESENT 
+AND / * /HolderOfTheTransitProcedure/identificationNumber is EOS OR in the DB of the CTC country receiving this message 
+THEN / * /HolderOfTheTransitProcedure/name="N" AND / * /HolderOfTheTransitProcedure/Address="N"
+ELSE / * /HolderOfTheTransitProcedure/name="R" AND / * /HolderOfTheTransitProcedure/Address="R";
+
+IF / * /Consignment/Consignor/identificationNumber is PRESENT 
+AND / * /Consignment/Consignor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Consignment/Consignor/name="N" AND / * /Consignment/Consignor/Address="N"
+ELSE / * /Consignment/Consignor/name="R" AND / * /Consignment/Consignor/Address="R";
+
+IF / * /Consignment/Consignee/identificationNumber is PRESENT
+AND / * /Consignment/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Consignment/Consignee/name="N" AND / * /Consignment/Consignee/Address="N"
+ELSE / * /Consignment/Consignee/name="R" AND / * /Consignment/Consignee/Address="R";
+
+IF / * /Consignment/HouseConsignment/Consignor/identificationNumber is PRESENT 
+AND / * /Consignment/HouseConsignment/Consignor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Consignment/HouseConsignment/Consignor/name="N" AND / * /Consignment/HouseConsignment/Consignor/Address="N"
+ELSE / * /Consignment/HouseConsignment/Consignee/name="R" AND / * /Consignment/HouseConsignment/Consignee/Address="R";
+
+IF / * /Consignment/HouseConsignment/Consignee/identificationNumber is PRESENT 
+AND / * /Consignment/HouseConsignment/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Consignment/HouseConsignment/Consignee/name="N" AND / * /Consignment/HouseConsignment/Consignee/Address="N"
+ELSE / * /Consignment/HouseConsignment/Consignee/name="R" AND / * /Consignment/HouseConsignment/Consignee/Address="R";
+
+IF / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is PRESENT 
+AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name="N" AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="N" 
+ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name="R" AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="R";
+
+IF / * /Guarantor/identificationNumber is PRESENT
+AND / * /Guarantor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
+THEN / * /Guarantor/name="N" AND / * /Guarantor/Address="N"
+ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

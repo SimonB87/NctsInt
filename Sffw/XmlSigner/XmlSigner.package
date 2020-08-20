@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="XmlSigner.42a93ef298b64fb68abcd2dc89426101" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="XmlSigner.apiObjectManifest" />
+    <PackageItem Src="XmlSignResult.apiObjectManifest" />
+    <ResourceItem ResourceName="xmlSigner.js" Action="None" OutputFileName="xmlSigner.js" Src="xmlSigner.js" />
+  </Items>
+</Package>

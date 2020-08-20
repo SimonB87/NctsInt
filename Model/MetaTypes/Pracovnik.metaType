@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="Pracovnik" />
+  <Caption value="Číslo pracovníka" />
+  <Description value="Standardní AQMetaMan formát je an..50 ." />
+  <MtsImportOptions.MTS.ID value="Pracovnik" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="255" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

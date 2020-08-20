@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBNotAccept" />
+  <Caption value="FB Not Accept" />
+  <MtsImportOptions.MTS.ID value="/FBNotAccept" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Attribute>
+      <Name value="GUID" />
+      <Caption value="GUID of declaration" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBNotAccept/GUID" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="Invalidation" />
+      <Caption value="INVALIDATION" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="requestDateAndTime" />
+          <Caption value="Request date and time" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/requestDateAndTime" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="G0002">
+              <MtsImportOptions.MTS.ID value="G0002" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["G0002"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0129">
+              <MtsImportOptions.MTS.ID value="C0129" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0129"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0129 IF / * /Invalidation/initiatedByCustoms is EQUAL to ‘1’
+THEN / * /Invalidation/requestDateAndTime = "N"
+ELSE / * /Invalidation/requestDateAndTime = "R" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="decisionDateAndTime" />
+          <Caption value="Decision date and time" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/decisionDateAndTime" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="G0002">
+              <MtsImportOptions.MTS.ID value="G0002" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["G0002"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="decision" />
+          <Caption value="Decision" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/decision" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="R0102">
+              <MtsImportOptions.MTS.ID value="R0102" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0102"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE R0102 Data item / * /Invalidation.decision can contain 2 valid values:  
+ - ‘0’ = ‘No’: Invalidation refused by Customs: Decision  
+ - ‘1’ = ‘Yes’: Invalidation accepted by Customs: Decision */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0128">
+              <MtsImportOptions.MTS.ID value="C0128" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0128"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0128 IF / * /Invalidation/initiatedByCustoms is EQUAL to ‘1’ 
+THEN / * /Invalidation/decision = "N"
+ELSE / * /Invalidation/decision = "R" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="initiatedByCustoms" />
+          <Caption value="Initiated by customs" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/initiatedByCustoms" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="G0101">
+              <MtsImportOptions.MTS.ID value="G0101" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["G0101"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE G0101 The value of the Data Item <INVALIDATION.Initiated by customs> is 
+ ‘0’ ('No') when the request to invalidate is initiated by the trader;
+The value of the Data Item <INVALIDATION.Initiated by customs> is 
+ ‘1’ ('Yes') when the request to invalidate is initiated by the customs. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="justification" />
+          <Caption value="Justification" />
+          <MetaType reference="+MetaTypes.JustificationContentType" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/justification" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="C0137">
+              <MtsImportOptions.MTS.ID value="C0137" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0137"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0137 IF (/ * /Invalidation/initiatedByCustoms is EQUAL to '0’ AND / * /Invalidation/decision is EQUAL to ‘0’) OR / * /Invalidation/initiatedByCustoms is EQUAL to ‘1’ 
+THEN / * /Invalidation/justification = "R"
+ELSE / * /Invalidation/justification = "O" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="customsOfficer" />
+          <Caption value="Customs Officer" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotAccept/Invalidation/customsOfficer" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="10" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

@@ -6,14 +6,14 @@
   <ProjectName value="NctsInt" />
   <StartupForm reference="/(main.77cebdf47cc044589efeab8ab5a8ac2b)+UiParts.Master" />
   <MainForm>
-    <ProjectMainFormOptions MaxPageWidth="700px" MinPageWidth="1170px" />
+    <ProjectMainFormOptions MaxPageWidth="1170px" MinPageWidth="700px" />
   </MainForm>
   <MTS.ImportOptions>
     <MtsImportOptions>
       <DomainCode value="ScreenFactory" />
-      <LastFileName value="C:\Users\simon.buryan\Desktop\NCTS_ME\exportMetaSystem\NCTSMEInt_SF.xml" />
+      <LastFileName value="C:\Users\vit.nikl\Desktop\NCTSMEInt_SF.xml" />
       <ProjectCode value="NCTSMEInt_SF" />
-      <Revision value="2504" />
+      <Revision value="2627" />
     </MtsImportOptions>
   </MTS.ImportOptions>
   <Options>
@@ -109,10 +109,6 @@
     <PackageReference Alias="Model" Origin="Model\Model.package">
       <ReferencedIdentity value="Model.1119011d69cd45d181eaad70856a363f" />
       <ReferencedVersion value="0.0.0" />
-    </PackageReference>
-    <PackageReference Alias="Breadcrumbs" IsComponentLib="True" Origin="Sffw\Breadcrumbs\Breadcrumbs.package">
-      <ReferencedIdentity value="Breadcrumbs.4d3eeadca3c54f1caa1d677db7e07acb" />
-      <ReferencedVersion value="1.0.4" />
     </PackageReference>
     <PackageReference Alias="NctsApi" IsComponentLib="True" Origin="NctsApi\NctsApi.package">
       <ReferencedIdentity value="NctsApi.51961823ccb342e682a52f33780cf33f" />

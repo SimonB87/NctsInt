@@ -1,0 +1,1732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="Accept" />
+  <Caption value="Accept" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="panel6" />
+          <Orientation value="Horizontal" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="pnl_Navigation" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="263px" />
+              <Children>
+                <Panel>
+                  <Name value="pnl_Headings" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="lbl_headings" />
+                      <Data value="Accept" />
+                      <Heading value="h3" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-headings" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <HyperLink>
+                  <Name value="return_btn" />
+                  <Data value="Go back" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_return_btn_OnClick" />
+                  </OnClick>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-hyperlink" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </HyperLink>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-nav" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="Body_pnl_parent" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Panel>
+                  <Name value="Control_pnl" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Panel>
+                      <Name value="ControlPnlHolder" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="panel83" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="20%" />
+                          <Children>
+                            <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                              <Name value="toTop_btn" />
+                              <Caption value="{fa-arrow-circle-o-up}" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="80px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_toTop_btn_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-imagebutton" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="toTop" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="flleft" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </ImageButton>
+                            <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                              <Name value="limitWidth_btn" />
+                              <Caption value="{fa-window-maximize}" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="80px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~action3" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-imagebutton" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="flleft" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="toTop" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="active" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Condition" Expression="globals.isLimitedWidth" />
+                                  </Bindings>
+                                </CssClassConditional>
+                              </CssClass>
+                            </ImageButton>
+                            <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                              <Name value="validate_btn" />
+                              <Caption value="{fa-exclamation-circle}" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="80px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~action2" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-imagebutton" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="flleft" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="toTop" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="active" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Condition" Expression="globals.globalUIState.isValidationsVisible" />
+                                  </Bindings>
+                                </CssClassConditional>
+                              </CssClass>
+                            </ImageButton>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="panel89" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="80%" />
+                          <Children>
+                            <Button>
+                              <Name value="btn_accept" />
+                              <Caption value="Accept" />
+                              <Panel.Height value="42px" />
+                              <Panel.Width value="120px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_btn_accept_OnClick" />
+                              </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="IsVisible" Expression="form.isAccept" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="newStyle" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="btn-success" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="btn_notAccept" />
+                              <Caption value="Not accept" />
+                              <Panel.Height value="42px" />
+                              <Panel.Width value="120px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_btn_notAccept_OnClick" />
+                              </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="IsVisible" Expression="NOT form.isAccept" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="newStyle" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="btn-secondary" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="btn_cancel" />
+                              <Caption value="Cancel" />
+                              <Panel.Height value="42px" />
+                              <Panel.Width value="120px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_btn_cancel_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="flright" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-nav-bar-controls" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <Panel>
+                      <Name value="ControlPnlSpace" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-nav-bar-space" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-nav-bar" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="Body_pnl" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <GroupBox>
+                      <Name value="validationsGrp" />
+                      <Caption value="Validations summary" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="100%" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel9" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Panel>
+                              <Name value="panel17" />
+                              <Orientation value="Vertical" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="clientValidationSummary2" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                    <Binding SourceProperty="validationRoot" Expression="form.modelAccept" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="validationSummaryColumn1" />
+                                      <columnCaption value="Pointer" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="validationSummaryColumn3" />
+                                      <columnCaption value="Message" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Message" />
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ClientValidationSummary>
+                                <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="clientValidationSummary3" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                    <Binding SourceProperty="validationRoot" Expression="form.modelNotAccept" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="validationSummaryColumn2" />
+                                      <columnCaption value="Pointer" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="validationSummaryColumn4" />
+                                      <columnCaption value="Message" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Message" />
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ClientValidationSummary>
+                                <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="serverValidationSummary1" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <OnItemClick>
+                                    <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
+                                  </OnItemClick>
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvPointerCol" />
+                                      <columnCaption value="Pointer" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvMessageCol" />
+                                      <columnCaption value="Message" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Reason" />
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ServerValidationSummary>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="globals.globalUiState.isValidationsVisible" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datatable" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                    <GroupBox>
+                      <Name value="pnl_accept_parent" />
+                      <Caption value="Accept" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="pnl_accept" />
+                          <Orientation value="Vertical" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.isAccept" />
+                          </Bindings>
+                          <Children>
+                            <Panel>
+                              <Name value="panel3" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <CheckBox>
+                                  <Name value="checkBox1" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="25%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelAccept.TransitOperation.reducedDatasetIndicator" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.TransitOperation.reducedDatasetIndicator.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelAccept.TransitOperation.reducedDatasetIndicator.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-checkbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </CheckBox>
+                                <CheckBox>
+                                  <Name value="checkBox2" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="25%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelAccept.Consignment.containerIndicator" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.containerIndicator.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.containerIndicator.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-checkbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </CheckBox>
+                                <DatePicker>
+                                  <Name value="datePicker1" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="25%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelAccept.TransitOperation.limitDate" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.TransitOperation.limitDate.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelAccept.TransitOperation.limitDate.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-datepicker" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </DatePicker>
+                                <ReferenceCombo>
+                                  <Name value="referenceCombo1" />
+                                  <CaptionPosition value="Top" />
+                                  <DisplayMember value="_description" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="25%" />
+                                  <ReferenceList reference="+GlobalApiObjects.TransportModeUCC" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelAccept.Consignment.inlandModeOfTransport" />
+                                    <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.inlandModeOfTransport.caption()" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.inlandModeOfTransport.isRequired()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-referencecombo" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </ReferenceCombo>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                            <Panel>
+                              <Name value="textBox2_parent" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="100%" />
+                              <Children>
+                                <TextBox>
+                                  <Name value="textBox2" />
+                                  <CaptionPosition value="Top" />
+                                  <CaptionVAlign value="Middle" />
+                                  <InputType value="Multiline" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="100%" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelAccept.TransitOperation.AcceptanceDecision" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.TransitOperation.AcceptanceDecision.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelAccept.TransitOperation.AcceptanceDecision.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                            <GroupBox>
+                              <Name value="groupBox1" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Repeater>
+                                  <Name value="repeater1" />
+                                  <Content>
+                                    <Panel>
+                                      <Name value="panel5" />
+                                      <Orientation value="Horizontal" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox3" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="50%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="sequenceNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="sequenceNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="sequenceNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox4" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="50%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="containerIdentificationNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="containerIdentificationNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="containerIdentificationNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                  </Content>
+                                  <Bindings>
+                                    <Binding SourceProperty="DataItems" Expression="modelAccept.Consignment.TransportEquipment" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-repeater" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Repeater>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.TransportEquipment.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="locationOfGoods_grp" />
+                              <Caption value="Location of goods" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel7" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <Panel>
+                                      <Name value="panel2" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox6" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.additionalIdentifier" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.additionalIdentifier.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.additionalIdentifier.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo4" />
+                                          <CaptionPosition value="Top" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <ReferenceList reference="+GlobalApiObjects.UnLocodeExtended" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.UNLocode" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.UNLocode.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.UNLocode.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                        <ReferenceLookup identity="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e">
+                                          <Name value="referenceLookup1" />
+                                          <CaptionPosition value="Top" />
+                                          <DataApiObject reference="+GlobalApiObjects.CustomsOfficeDeparture" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.CustomsOffice.referenceNumber" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.CustomsOffice.referenceNumber.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.CustomsOffice.referenceNumber.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencelookup" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceLookup>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel15" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo2" />
+                                          <CaptionLength value="1px" />
+                                          <CaptionPosition value="Top" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <ReferenceList reference="+GlobalApiObjects.TypeOfLocation" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.typeOfLocation" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.typeOfLocation.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.typeOfLocation.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo3" />
+                                          <CaptionPosition value="Top" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <ReferenceList reference="+GlobalApiObjects.QualifierOfTheIdentification" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.qualifierOfIdentification" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.qualifierOfIdentification.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.qualifierOfIdentification.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                        <TextBox>
+                                          <Name value="textBox5" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.authorisationNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.authorisationNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.authorisationNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel8" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox7" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.latitude" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.latitude.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.latitude.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox8" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.longitude" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.longitude.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.GNSS.longitude.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox9" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.EconomicOperator.identificationNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.EconomicOperator.identificationNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.EconomicOperator.identificationNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel12" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox15" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.name" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.name.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.name.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox16" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.phoneNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.phoneNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.phoneNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox17" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="33%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.eMailAddress" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.eMailAddress.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.ContactPerson.eMailAddress.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel10" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox10" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="30%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.Address.streetAndNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.Address.streetAndNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.Address.streetAndNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox11" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="20%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.Address.postcode" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.Address.postcode.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.Address.postcode.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox12" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="25%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.Address.city" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.Address.city.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.Address.city.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo6" />
+                                          <CaptionPosition value="Top" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="25%" />
+                                          <ReferenceList reference="+GlobalApiObjects.CountryCodesCommonTransit" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.Address.country" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.Address.country.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.Address.country.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                    <Panel>
+                                      <Name value="panel11" />
+                                      <Orientation value="Horizontal" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <TextBox>
+                                          <Name value="textBox13" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="20%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.houseNumber" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.houseNumber.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.houseNumber.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <TextBox>
+                                          <Name value="textBox14" />
+                                          <CaptionPosition value="Top" />
+                                          <CaptionVAlign value="Middle" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="20%" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.postcode" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.postcode.isRequired()" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.postcode.caption()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-textbox" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </TextBox>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo7" />
+                                          <CaptionPosition value="Top" />
+                                          <DisplayMember value="_description" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="60%" />
+                                          <ReferenceList reference="+GlobalApiObjects.CountryAddressPostcodeBased" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Data" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.country" />
+                                            <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.country.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.LocationOfGoods.AddressT.country.isRequired()" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="panel13_parent" />
+                              <Caption value="Decision" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel13" />
+                                  <Orientation value="Horizontal" />
+                                  <Children>
+                                    <TextBox>
+                                      <Name value="textBox18" />
+                                      <CaptionPosition value="Top" />
+                                      <CaptionVAlign value="Middle" />
+                                      <InputType value="Multiline" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="50%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="modelAccept.ClearanceOutsidePremises.Description" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.ClearanceOutsidePremises.Description.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="modelAccept.ClearanceOutsidePremises.Description.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                    <TextBox>
+                                      <Name value="textBox19" />
+                                      <CaptionPosition value="Top" />
+                                      <CaptionVAlign value="Middle" />
+                                      <InputType value="Multiline" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="50%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="modelAccept.ClearanceOutsidePremises.DecisionAdministrativeNumber" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.ClearanceOutsidePremises.DecisionAdministrativeNumber.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="modelAccept.ClearanceOutsidePremises.DecisionAdministrativeNumber.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="isAccept" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                    <GroupBox>
+                      <Name value="pnl_notAccept_parent" />
+                      <Caption value="Not accept" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <Panel>
+                          <Name value="pnl_notAccept" />
+                          <Orientation value="Vertical" />
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="NOT form.isAccept" />
+                          </Bindings>
+                          <Children>
+                            <Panel>
+                              <Name value="panel14" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <DatePicker>
+                                  <Name value="datePicker2" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.requestDateAndTime" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.requestDateAndTime.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.requestDateAndTime.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-datepicker" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </DatePicker>
+                                <CheckBox>
+                                  <Name value="checkBox4" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.initiatedByCustoms" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.initiatedByCustoms.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.initiatedByCustoms.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-checkbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </CheckBox>
+                                <CheckBox>
+                                  <Name value="checkBox3" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.decision" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.decision.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.decision.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-checkbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </CheckBox>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                            <Panel>
+                              <Name value="panel16" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <DatePicker>
+                                  <Name value="datePicker31" />
+                                  <CaptionPosition value="Top" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.decisionDateAndTime" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.decisionDateAndTime.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.decisionDateAndTime.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-datepicker" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </DatePicker>
+                                <TextBox>
+                                  <Name value="textBox211" />
+                                  <CaptionPosition value="Top" />
+                                  <CaptionVAlign value="Middle" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.justification" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.justification.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.justification.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                                <TextBox>
+                                  <Name value="textBox221" />
+                                  <CaptionPosition value="Top" />
+                                  <CaptionVAlign value="Middle" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="300px" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Data" Expression="modelNotAccept.Invalidation.customsOfficer" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelNotAccept.Invalidation.customsOfficer.isRequired()" />
+                                    <Binding SourceProperty="Caption" Expression="modelNotAccept.Invalidation.customsOfficer.caption()" />
+                                  </Bindings>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-textbox" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </TextBox>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="not isAccept" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel-limited" />
+                      <IsThemedStyle value="True" />
+                      <Bindings>
+                        <Binding SourceProperty="Condition" Expression="globals.isLimitedWidth" />
+                      </Bindings>
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="modelAccept" />
+          <Caption value="Model accept" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBAccept" />
+            </Include>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="modelNotAccept" />
+          <Caption value="Model not accept" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBNotAccept" />
+            </Include>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="mode" />
+          <Caption value="Mode" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <MetaType reference="+MetaTypes.accept" />
+        </Attribute>
+        <Attribute>
+          <Name value="GUID" />
+          <Caption value="GUID" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="isAccept" />
+          <Caption value="Is accept" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[form.mode = enums.accept.accept]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+//form.GUID = "{618b9eff-0f7e-4933-8a8a-3cd0162c46c4}"
+
+form.actions.setURLDeepLink()
+system.console(toString(form.mode))
+if form.GUID.hasValue() then
+	
+	if form.mode.isEmpty() then
+	
+		//TODO - what should happen if accept is empty
+		system.console("VSECHNO")
+	
+	else
+		form.actions.loadCodelists()
+		
+		if globals.loginResponse.isEmpty() then
+			actions.authentication()
+		endIf
+		
+		var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
+		
+		var response = apiobjects.CIC.postAsync("FBDataRequest", requestJsonString)
+	
+		if response.isError() then
+			apiobjects.notificationsCtrl.addError("There is no declaration with such an ID.")
+		else
+		
+			if form.isAccept then 
+				apiobjects.notificationsCtrl.addSuccess("Load was successful.")
+				form.modelAccept.fromJson(response.getJsonString())
+			else
+				apiobjects.notificationsCtrl.addSuccess("Load was successful.")
+				form.modelNotAccept.fromJson(response.getJsonString())
+			endif
+			
+		endif
+	
+	endif
+	
+else
+
+	//TODO - what should happen if GUID is empty
+
+endif
+
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_accept_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var requestJsonString = form.modelAccept.toJson(true)
+var response = apiobjects.CIC.postAsync("FBAccept", requestJsonString)
+
+if(form.modelAccept.validationErrorsCount() = 0) then
+
+	if response.isError() then
+	// Show error panels
+		globals.globalUiState.isValidationsVisible = true
+	
+		// Inform user about errors
+		var errorMessage = defaultString()
+		var errorCount = defaultInt()	
+
+		errorCount = form.modelAccept.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+		// Handling plural message
+		if (errorCount > 1) then 
+			errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+		else
+
+			if (errorCount <> 0) then 
+				errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+			else
+				errorMessage = "There are some errors, but i cand find where! FIX ME!"	
+			endif
+
+		endif	
+		
+		apiobjects.notificationsCtrl.addError(errorMessage)
+	
+	else
+	
+		apiobjects.notificationsCtrl.addSuccess("Incident was saved")
+		system.console("No error received")
+//		navigation.main.DecList.go()
+		navigation.main.DecList.withInputNavTree("isAcceptedActive").go()
+
+
+	endif
+
+
+else
+
+	// Show validation error field
+	globals.globalUiState.isValidationsVisible = true
+	
+	// Inform user about errors
+	var errorMessage = defaultString()
+	var errorCount = defaultInt()	
+
+	errorCount = form.modelAccept.validationErrorsCount() + globals.Errors.serverValidationErrors.count()
+
+	if (errorCount > 1) then 
+		errorMessage = "There are " + toString(errorCount) + " errors in the message, please fix them to continue."
+	else
+		errorMessage = "There is " + toString(errorCount) + " error in the message, please fix it to continue."
+	endif
+	
+	apiobjects.notificationsCtrl.addError(errorMessage)
+
+endif ]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_notAccept_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var requestJsonString = form.modelAccept.toJson(true)
+var response = apiobjects.CIC.postAsync("FBNotAccept", requestJsonString)
+
+if response.isError() then
+	apiobjects.notificationsCtrl.addError("Your request was unsuccessful.")
+else
+	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
+	navigation.main.DecList.withInputNavTree("isNotReleasedActive").go()
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadCodelists" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.isAccept then
+	apiobjects.TransportModeUCC.startLoadingData(getDateTime())
+	apiobjects.TypeOfLocation.startLoadingData(getDateTime())
+	apiobjects.QualifierOfTheIdentification.startLoadingData(getDateTime())
+	apiobjects.UnLocodeExtended.startLoadingData(getDateTime())
+	apiobjects.CustomsOfficeDeparture.startLoadingData(getDateTime())
+	apiobjects.CountryCodesCommonTransit.startLoadingData(getDateTime())
+	apiobjects.CountryAddressPostcodeBased.startLoadingData(getDateTime())
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_cancel_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.urlRouter.clearUrl()
+navigation.main.DecList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setURLDeepLink" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[// edit URL
+var url = apiobjects.urlRouter.findFormUrl(navigation.main.Accept.fullName)
+
+if form.mode.hasValue() then
+	url.addString("mode", form.mode.enumValue())
+endif
+
+if form.GUID.hasValue() then
+	url.addString("GUID", form.GUID)
+endif
+
+url.updatePageUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_toTop_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action3" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[/* Toggle limited width of edit forms */
+var isLimitedWitdh = globals.isLimitedWidth
+
+if(isLimitedWitdh = true) then
+	globals.isLimitedWidth = false
+else
+	globals.isLimitedWidth = true	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
+
+/* Validators panels display toggler */
+var isValidatorVisible = globals.globalUiState.isValidationsVisible
+
+if(isValidatorVisible = true) then
+	globals.globalUiState.isValidationsVisible = false
+else
+	globals.globalUiState.isValidationsVisible = true	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_return_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_serverValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if length(params.errorSourceForm) > 0 then
+	//actions.goToForm(params.errorSourceForm, params.errorSourceComponent, params.pointer, params.navigationTreeNode)
+	else if length(params.errorSourceComponent) > 0 then
+		page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Page identity="Page.f7aa0c151c64407daef13910dcf7b72a">
+      <Name value="page" />
+    </Page>
+  </ApiObjects>
+</Form>

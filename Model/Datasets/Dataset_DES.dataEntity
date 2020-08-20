@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="Dataset_DES" />
+  <Caption value="NCTS declaration for CO Destination" />
+  <MtsImportOptions.MTS.ID value="Dataset_DES" />
+  <MtsImportOptions.MTS.Type value="client-dataset" />
+  <Children>
+    <Attribute>
+      <Name value="GUID" />
+      <Caption value="GUID of declaration" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/GUID" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="RoleCO" />
+      <Caption value="Customs office role" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/RoleCO" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="16" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="CustomsOffice" />
+      <Caption value="Customs office" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/CustomsOffice" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="8" />
+          <StrMinLength value="8" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="MRN" />
+      <Caption value="MRN" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/MRN" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="18" />
+          <StrMinLength value="18" />
+        </AttributeType>
+      </DeclaredType>
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+    <Attribute>
+      <Name value="LimitDate" />
+      <Caption value="Limit date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/LimitDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Date" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ConsigneeIdNumber" />
+      <Caption value="Consignee identification number" />
+      <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ConsigneeIdNumber" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="CODeparture" />
+      <Caption value="Customs office of departure" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/CODeparture" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="8" />
+          <StrMinLength value="8" />
+        </AttributeType>
+      </DeclaredType>
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="[A-Z]{2}[A-Z0-9]{6}" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[A-Z]{2}[A-Z0-9]{6}$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+    <Attribute>
+      <Name value="ConsignorIdNumber" />
+      <Caption value="Consginor identification number" />
+      <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ConsignorIdNumber" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="ClientState" />
+      <Caption value="Client state" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ClientState" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="50" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="StateDesc" />
+      <Caption value="State description" />
+      <MetaType reference="+MetaTypes.String100_type" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/StateDesc" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="ReleaseDateAndTime" />
+      <Caption value="Release date and time" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ReleaseDateAndTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ArrivalDateAndTime" />
+      <Caption value="Arrival date and time" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ArrivalDateAndTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="DiscrepanciesResolved" />
+      <Caption value="Discrepancies resolved" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/DiscrepanciesResolved" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="1" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="TraderAtDestinationIdNumber" />
+      <Caption value="Trader at destination identification number" />
+      <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/TraderAtDestinationIdNumber" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="SimplifiedProcedureDes" />
+      <Caption value="Simplified procedure at destination" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/SimplifiedProcedureDes" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="DeclarationType" />
+      <Caption value="Declaration type" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/DeclarationType" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="5" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ControlResultCode" />
+      <Caption value="Control result code" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/ControlResultCode" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="TIRCarnetNumber" />
+      <Caption value="TIR carnet number" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/TIRCarnetNumber" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="12" />
+        </AttributeType>
+      </DeclaredType>
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="([1-9][0-9]{0,6}|(1[0-9]|2[0-4])[0-9]{0,6}|25000000|(X[A-Z]|[A-Z]X)(2[5-9]|[3-9][0-9]|[1-9][0-9][0-9])[0-9]{6})" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^([1-9][0-9]{0,6}|(1[0-9]|2[0-4])[0-9]{0,6}|25000000|(X[A-Z]|[A-Z]X)(2[5-9]|[3-9][0-9]|[1-9][0-9][0-9])[0-9]{6})$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+    <Attribute>
+      <Name value="FallbackProcedureDes" />
+      <Caption value="Fallback procedure at destination" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/FallbackProcedureDes" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="RecoveryCommunicationDate" />
+      <Caption value="Recovery communication date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/RecoveryCommunicationDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Date" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="OriginalDocument" />
+      <Caption value="Original documet at fallback procedure" />
+      <IsRequired value="True" />
+      <MetaType reference="+MetaTypes.NonWhiteSpacedString" />
+      <MtsImportOptions.MTS.ID value="Dataset_DES/OriginalDocument" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="\S((([\n\r\t])|(.))*\S)?" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^\\S((([\\n\\r\\t])|(.))*\\S)?$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+  </Children>
+</DataEntity>

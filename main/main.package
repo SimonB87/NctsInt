@@ -13,6 +13,12 @@
         <ResourceItem ResourceName="main.css" LinkerAction="Css" OutputFileName="main.css" Src="CSS\main.css" />
       </Items>
     </PackageFolder>
+    <PackageFolder Name="JS">
+      <Items>
+        <ResourceItem ResourceName="ScrollFromTop.js" LinkerAction="Script" OutputFileName="ScrollFromTop.js" Src="JS\ScrollFromTop.js" />
+        <ResourceItem ResourceName="AccorditionNav.js" LinkerAction="Script" OutputFileName="AccorditionNav.js" Src="JS\AccorditionNav.js" />
+      </Items>
+    </PackageFolder>
     <PackageFolder Name="TransitDeclaration">
       <Items>
         <PackageItem Src="TransitDeclaration\Header.form" />
@@ -22,7 +28,13 @@
         <PackageItem Src="TransitDeclaration\ConsignmentItem.form" />
         <PackageItem Src="TransitDeclaration\declarationFormMode.metaType" />
         <PackageItem Src="TransitDeclaration\houseConsignmentRow.dataEntity" />
-        <PackageItem Src="TransitDeclaration\navTreeExperiment.form" />
+        <PackageItem Src="TransitDeclaration\Arrival.form" />
+        <PackageItem Src="TransitDeclaration\CheckFallback.form" />
+        <PackageItem Src="TransitDeclaration\FallbackRegistration.form" />
+        <PackageItem Src="TransitDeclaration\Accept.form" />
+        <PackageItem Src="TransitDeclaration\accept.metaType" />
+        <PackageItem Src="TransitDeclaration\IncidentCheck.form" />
+        <PackageItem Src="TransitDeclaration\IncidentRegistration.form" />
       </Items>
     </PackageFolder>
     <PackageItem Src="globalActions.globalActions" />

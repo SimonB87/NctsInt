@@ -21,6 +21,7 @@
     </Codelist>
     <UrlRouter identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
       <Name value="urlRouter" />
+      <registerBeforeUnloadConfirm value="True" />
       <routes>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignment" />
@@ -43,7 +44,7 @@
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignmentList" />
           <masterPage reference="+UiParts.Master" />
-          <params value="mode,GUID?" />
+          <params value="mode,errors?,GUID?" />
           <url value="HouseConsignmentList" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
@@ -56,6 +57,37 @@
           <form reference="+UiParts.Home" />
           <masterPage reference="+UiParts.Master" />
           <url value="Home" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.Accept" />
+          <masterPage reference="+UiParts.Master" />
+          <params value="mode,GUID" />
+          <url value="Accept" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.Arrival" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="Arrival" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.FallbackRegistration" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="FallbackRegistration" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.CheckFallback" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="CheckFallback" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.IncidentCheck" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="IncidentCheck" />
+        </UrlRouteCfg>
+        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
+          <form reference="+UiParts.IncidentRegistration" />
+          <masterPage reference="+UiParts.Master" />
+          <url value="IncidentRegistration" />
         </UrlRouteCfg>
       </routes>
     </UrlRouter>
@@ -71,7 +103,7 @@
     </ServerConnection>
     <ConfigValue>
       <Name value="appVersion" />
-      <Value value="0.2.1" />
+      <Value value="0.4.0" />
     </ConfigValue>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="DeclarationTypeAdditional" />
@@ -828,6 +860,7 @@
       <Name value="KindOfPackagesBulk_CL181" />
       <autoLoad value="False" />
       <name value="KindOfPackagesBulk" />
+      <server reference="~CIC" />
       <columns>
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
           <columnName value="Code" />
@@ -843,6 +876,7 @@
       <Name value="KindOfPackagesUnpacked_CL182" />
       <autoLoad value="False" />
       <name value="KindOfPackagesUnpacked" />
+      <server reference="~CIC" />
       <columns>
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
           <columnName value="Code" />

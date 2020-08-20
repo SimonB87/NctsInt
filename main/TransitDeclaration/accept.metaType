@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="accept" />
+  <Caption value="Accept" />
+  <TypeSpec>
+    <AttributeType>
+      <BaseType value="Enum" />
+      <EnumValues>
+        <AttributeEnumValue>
+          <Name value="accept" />
+          <Caption value="Accept" />
+          <Value value="accept" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="notAccept" />
+          <Caption value="Not accept" />
+          <Value value="notAccept" />
+        </AttributeEnumValue>
+      </EnumValues>
+    </AttributeType>
+  </TypeSpec>
+</MetaType>
