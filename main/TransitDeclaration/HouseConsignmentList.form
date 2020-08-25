@@ -1622,10 +1622,10 @@ if checkIncompleteDataValidity then
 		globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
 		globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
 		globals.globalUiState.isValidationsVisible = true
-
+	
 		// Inform user about errors
 		var errorMessage = defaultString()
-
+	
 		if (globals.Errors.serverValidationErrors.count() > 1) then 
 			errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
 		else
@@ -1641,7 +1641,7 @@ if checkIncompleteDataValidity then
 		apiobjects.transitDeclaration.clear()
 		navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
 	endIf
-	
+
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1678,22 +1678,18 @@ endIf
         <Script><![CDATA[result = false
 
 if form.Header.CustomsOfficeOfDeparture.referenceNumber.hasValue() then
-
+		
 	if form.Header.HolderOfTheTransitProcedure.identificationNumber.hasValue() then
 		//required elements are present, we can continue		
 		result = true
-
 	else
 		//HolderOfTheTransitProcedure isn't set
 		notificationsCtrl.addError("Holder of the transit procedure must have an identification number.")
-
 	endif
 		
 else
-
 	//COoDep isn't set
 	notificationsCtrl.addError("Customs Office of Departure must have a value.")
-
 endif]]></Script>
       </ActionLangBody>
       <DataContext>

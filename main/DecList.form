@@ -2429,7 +2429,7 @@
                           <Panel.Height value="42px" />
                           <Panel.Width value="150px" />
                           <Bindings>
-                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isPermitUnloading" />
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isPermitUnloadingVisible" />
                           </Bindings>
                           <CssClass>
                             <CssClassConditional>
@@ -2446,8 +2446,11 @@
                           <Caption value="Break usage of SP/AC" />
                           <Panel.Height value="42px" />
                           <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_breakUsage_OnClick" />
+                          </OnClick>
                           <Bindings>
-                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isBreakUsage" />
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isBreakUsageVisible" />
                           </Bindings>
                           <CssClass>
                             <CssClassConditional>
@@ -2464,8 +2467,32 @@
                           <Caption value="Resolve unloading interruption" />
                           <Panel.Height value="42px" />
                           <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_resolveUnloading_OnClick" />
+                          </OnClick>
                           <Bindings>
                             <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isResolveUnloading" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="button_registrationReturnedTAD" />
+                          <Caption value="Registration returned TAD" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="150px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button_registrationReturnedTAD_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.buttonsVisibility.isRegistrationReturnedTADVisible" />
                           </Bindings>
                           <CssClass>
                             <CssClassConditional>
@@ -3276,8 +3303,8 @@
               </DeclaredType>
             </Attribute>
             <Attribute>
-              <Name value="isPermitUnloading" />
-              <Caption value="Is permit unloading" />
+              <Name value="isPermitUnloadingVisible" />
+              <Caption value="Is permit unloading visible" />
               <DeclaredType>
                 <AttributeType>
                   <BaseType value="Bool" />
@@ -3285,8 +3312,17 @@
               </DeclaredType>
             </Attribute>
             <Attribute>
-              <Name value="isBreakUsage" />
-              <Caption value="Is break usage" />
+              <Name value="isBreakUsageVisible" />
+              <Caption value="Is break usage visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isRegistrationReturnedTADVisible" />
+              <Caption value="Is registration returned TAD visible" />
               <DeclaredType>
                 <AttributeType>
                   <BaseType value="Bool" />
@@ -3343,6 +3379,15 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Complex>
+          <Name value="RegistrationReturnedTAD" />
+          <Caption value="Registration returned TAD" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBDocumentsRegistration" />
+            </Include>
+          </Children>
+        </Complex>
       </Children>
     </DataContext>
   </DataContext>
@@ -3917,9 +3962,10 @@ endif]]></Script>
         <Script><![CDATA[form.buttonsVisibility.isContinueFillingVisible = false
 form.buttonsVisibility.isAcceptVisible = false
 form.buttonsVisibility.isControlGoodsVisible = false
-form.buttonsVisibility.isPermitUnloading = false
-form.buttonsVisibility.isBreakUsage = false
-form.buttonsVisibility.isResolveUnloading = false]]></Script>
+form.buttonsVisibility.isPermitUnloadingVisible = false
+form.buttonsVisibility.isBreakUsageVisible = false
+form.buttonsVisibility.isResolveUnloading = false
+form.buttonsVisibility.isRegistrationReturnedTADVisible = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -4017,10 +4063,11 @@ else
 	
 	if isTrue(form.decListDESReferenceRow.ClientState = "Des_GoodsPresentedSimplProcBreak") then
 		form.buttonsVisibility.isControlGoodsVisible = true
-		form.buttonsVisibility.isPermitUnloading = true
+		form.buttonsVisibility.isPermitUnloadingVisible = true
 	else
 		if isTrue(form.decListDESReferenceRow.ClientState = "Des_Unloading") then
-			form.buttonsVisibility.isBreakUsage = true
+			form.buttonsVisibility.isBreakUsageVisible = true
+			form.buttonsVisibility.isRegistrationReturnedTADVisible = true
 	else if isTrue(form.decListDESReferenceRow.ClientState = "Des_UnloadingRemarks") then
 			form.buttonsVisibility.isResolveUnloading = true
 		endif
@@ -4283,6 +4330,60 @@ globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination"
 form.IsDESlistVisible = true
 form.apiobjects.listCtrlDES.setReady(true)
 globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_registrationReturnedTAD_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListDESReferenceRow.MRN.hasValue() then
+	
+	if system.confirm("Do you want to register documents?") then
+	
+		form.RegistrationReturnedTAD.TransitOperation.MRN = form.decListDESReferenceRow.MRN
+		var requestJSON = form.RegistrationReturnedTAD.toJson()
+		var response = apiobjects.CIC.postAsync("FBDocumentsRegistration", requestJSON)
+		
+		if response.isError() then
+			apiobjects.notificationsCtrl.addError("Server responded with an error.")
+		endif
+		
+	endif
+	
+else
+	apiobjects.notificationsCtrl.addError("MRN is missing.")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_resolveUnloading_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListDESReferenceRow.GUID.hasValue() then
+	navigation.main.UnloadingInterruption.go(form.decListDESReferenceRow.GUID)
+else
+	apiobjects.notificationsCtrl.addError("This declaration isn't for CO of Destination")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button_breakUsage_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.decListDESReferenceRow.GUID.hasValue() then
+	navigation.main.SimplifiedProcedureBreak.go(form.decListDESReferenceRow.GUID)
+else
+	apiobjects.notificationsCtrl.addError("This declaration isn't for CO of Destination")
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

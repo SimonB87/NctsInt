@@ -184,6 +184,10 @@ else
 			else
 				if isTrue(navigationID = "Consignment") then
 					globals.activePanel = "consignment"
+				else
+					if isTrue(navigationID = "EventHistory") then
+						globals.activePanel = "history"
+					endif
 				endif
 			endif
 		endif

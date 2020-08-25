@@ -291,6 +291,36 @@
                                 </CssClassConditional>
                               </CssClass>
                             </Button>
+                            <Button>
+                              <Name value="btnMockSubmitted" />
+                              <Caption value="Mock (Submitted)" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="btnMockPrelodged" />
+                              <Caption value="Btn mock prelodged" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="150px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_btnMockPrelodged_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
                           </Children>
                           <CssClass>
                             <CssClassConditional>
@@ -5938,16 +5968,19 @@
                               <Columns>
                                 <DataColumn>
                                   <Name value="GUIDVersion_col" />
-                                  <Caption value="GUID version _ col" />
+                                  <Caption value="GUID version" />
+                                  <IsVisible value="False" />
                                   <Content>
                                     <Label>
                                       <Name value="label1" />
+                                      <IsVisible value="False" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="GUIDVersion" />
                                       </Bindings>
                                       <CssClass>
                                         <CssClassConditional>
                                           <ClassName value="{theme}-label" />
+                                          <Condition value="False" />
                                           <IsThemedStyle value="True" />
                                         </CssClassConditional>
                                       </CssClass>
@@ -5962,7 +5995,7 @@
                                 </DataColumn>
                                 <DataColumn>
                                   <Name value="versionReason_col" />
-                                  <Caption value="Version reason _ col" />
+                                  <Caption value="Version reason" />
                                   <Content>
                                     <Label>
                                       <Name value="label2" />
@@ -5986,7 +6019,7 @@
                                 </DataColumn>
                                 <DataColumn>
                                   <Name value="versionTimestamp_col" />
-                                  <Caption value="Version timestamp _ col" />
+                                  <Caption value="Version timestamp" />
                                   <Content>
                                     <Label>
                                       <Name value="label3" />
@@ -6010,14 +6043,14 @@
                                 </DataColumn>
                                 <DataColumn>
                                   <Name value="ctrl_col" />
-                                  <Caption value="Ctrl _ col" />
+                                  <Caption value="Show version" />
                                   <Content>
                                     <Panel>
                                       <Name value="panel91" />
                                       <Orientation value="Horizontal" />
                                       <Children>
                                         <Button>
-                                          <Name value="button1" />
+                                          <Name value="buttonDetailEvent" />
                                           <Caption value="Detail" />
                                           <Panel.Height value="#" />
                                           <Panel.Width value="150px" />
@@ -7172,7 +7205,9 @@ true : false
                   <Name value="versionTimestamp" />
                   <Caption value="Version timestamp" />
                   <DeclaredType>
-                    <AttributeType />
+                    <AttributeType>
+                      <BaseType value="DateTime" />
+                    </AttributeType>
                   </DeclaredType>
                 </Attribute>
               </Children>
@@ -7325,7 +7360,7 @@ ValidateAgainstRegularExpression(toUpper(toString(this.grossMass)), "^[A-Z0-9]{0
                 <ExpressionText><![CDATA[form.Model.HolderOfTheTransitProcedure.name.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.name), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.name), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7349,7 +7384,7 @@ ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.
               <IsValid IsValid="True">
                 <ExpressionText><![CDATA[form.Model.HolderOfTheTransitProcedure.Address.streetAndNumber.hasValue() ?
 isTrue((form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.Address.streetAndNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.Address.streetAndNumber), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7374,7 +7409,7 @@ ValidateAgainstRegularExpression(toUpper(form.Model.HolderOfTheTransitProcedure.
                 <ExpressionText><![CDATA[form.Model.Consignment.Consignor.Address.streetAndNumber.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.Address.streetAndNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.Address.streetAndNumber), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7399,7 +7434,7 @@ ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.Addres
                 <ExpressionText><![CDATA[form.Model.Consignment.Consignor.Address.streetAndNumber.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.Address.streetAndNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.Address.streetAndNumber), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7624,7 +7659,7 @@ this.amountToBeCovered.hasValue() : true]]></ExpressionText>
                 <ExpressionText><![CDATA[form.Model.Consignment.LocationOfGoods.Address.streetAndNumber.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.LocationOfGoods.Address.streetAndNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.LocationOfGoods.Address.streetAndNumber), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7794,7 +7829,7 @@ ValidateAgainstRegularExpression(toUpper(this.conveyanceReferenceNumber), "^[A-Z
                 <ExpressionText><![CDATA[form.Model.Consignment.ActiveBorderTransportMeans.conveyanceReferenceNumber.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.ActiveBorderTransportMeans.conveyanceReferenceNumber), "^[A-Z0-9]{0,17}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.ActiveBorderTransportMeans.conveyanceReferenceNumber), "^[A-Z0-9 ]{0,17}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7966,7 +8001,7 @@ this.owner().modeOfTransportAtTheBorder.Code in [5,7] ? false : true]]></Express
                 <ExpressionText><![CDATA[form.Model.Consignment.Consignor.name.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.name), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.name), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -7991,7 +8026,7 @@ ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignor.name),
                 <ExpressionText><![CDATA[form.Model.Consignment.Consignee.name.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignee.name), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignee.name), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -8016,7 +8051,7 @@ ValidateAgainstRegularExpression(toUpper(form.Model.Consignment.Consignee.name),
                 <ExpressionText><![CDATA[form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => x.Guarantor.Address.streetAndNumber.hasValue())) ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateAgainstRegularExpression(toUpper(x.Guarantor.Address.streetAndNumber), "^[A-Z0-9]{0,35}$"))))
+form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateAgainstRegularExpression(toUpper(x.Guarantor.Address.streetAndNumber), "^[A-Z0-9 ]{0,35}$"))))
 : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -8041,7 +8076,7 @@ form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateA
                 <ExpressionText><![CDATA[form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => x.Guarantor.name.hasValue())) ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateAgainstRegularExpression(toUpper(x.Guarantor.name), "^[A-Z0-9]{0,35}$"))))
+form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateAgainstRegularExpression(toUpper(x.Guarantor.name), "^[A-Z0-9 ]{0,35}$"))))
 : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -8066,7 +8101,7 @@ form.Model.Guarantee.exists(current.GuaranteeReference.exists(var x => ValidateA
                 <ExpressionText><![CDATA[form.Model.Consignment.TransportDocument.exists(current.referenceNumber.hasValue())? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-form.Model.Consignment.TransportDocument.exists(ValidateAgainstRegularExpression(toUpper(Current.referenceNumber), "^[A-Z0-9]{0,35}$")))
+form.Model.Consignment.TransportDocument.exists(ValidateAgainstRegularExpression(toUpper(Current.referenceNumber), "^[A-Z0-9 ]{0,35}$")))
 : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -8895,7 +8930,6 @@ else
 	if ((form.mode = enums.declarationFormMode.create) and form.GUID.isEmpty()) OR
 	   ((form.mode = enums.declarationFormMode.edit) and (form.GUID = mockGuid)) then
 		form.actions.fullTDthenGetDatafromTD()
-		form.Model._isSavePartiallyVisible = true
 	else
 		if ((form.mode = enums.declarationFormMode.edit) and (form.GUID.hasValue())) OR
 		   ((form.mode = enums.declarationFormMode.arrival) and (form.GUID.hasValue())) OR
@@ -8915,6 +8949,7 @@ else
 			// ADDED FOR GUID null BUG - SIMON SHOULD CHECK IT
 			form.Model.fromJson(apiobjects.transitDeclaration.getHeader())	
 			form.Model._isSavePartiallyVisible = true
+
 			
 		endif
 	endIf
@@ -8941,6 +8976,9 @@ endIf]]></Script>
       <Name value="saveHeaderdata" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.busyIndicatorIsRunning = true
+if form.GUID.hasValue() then
+	form.Model.GUID = form.GUID
+endIf
 apiobjects.transitDeclaration.setHeader(form.Model.toJson(true))
 actions.setDataChangedToFalse()
 globals.busyIndicatorIsRunning = false]]></Script>
@@ -8966,29 +9004,7 @@ navigation.main.DecList.go()]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[// vyrábíme prázdný formulář
 // TODO: lepší iniciace apiobjektu
-apiobjects.transitDeclaration.create()
-
-
-/*
-//dummy data, at to projde
-form.Model.TransitOperation.LRN = "LRN18"
-form.Model.TransitOperation.fallbackProcedure = false
-form.Model.TransitOperation.bindingItinerary = false
-form.Model.TransitOperation.reducedDatasetIndicator = false
-form.Model.Consignment.containerIndicator = true
-form.Model.Consignment.grossMass = 1000000
-form.Model.TransitOperation.totalValueOfGoods = 1000000
-form.Model.CustomsOfficeOfDeparture.referenceNumber.Code = "ME123456"
-form.Model.CustomsOfficeOfDestinationDeclared.referenceNumber.Code = "ME123450"
-form.Model.CustomsOfficeOfTransitDeclared.addItem()
-form.Model.CustomsOfficeOfTransitDeclared.addItem()
-form.Model.HolderOfTheTransitProcedure.identificationNumber = "ME222222"
-form.Model.Guarantee.addItem()
-form.Model.Consignment.LocationOfGoods.UNLocode.Code = "REANN"
-//GRN 20ME123450C100081
-//access code 9999
-//amount 1000000
-*/]]></Script>
+apiobjects.transitDeclaration.create()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -9079,6 +9095,10 @@ form.Model._isSavePartiallyVisible = true]]></Script>
 
 //docasne nastavuju amendmentTypeFlag na False, abych otestoval pruchod FB Submitu, pak probrat s Pavlem, co a jak
 form.Model.TransitOperation.amendmentTypeFlag = false
+
+if form.GUID.hasValue() then
+	form.Model.GUID = form.GUID
+endIf
 
 apiobjects.transitDeclaration.setHeader(form.Model.toJson(true))
 
@@ -9479,6 +9499,13 @@ if(globals.activePanel = "transitOperation") then
 else
 	form.panelsVisibility.isTransitOperationHeaderVisible = false
 endif
+
+if(globals.activePanel = "history") then
+	form.panelsVisibility.isEventHistoryVisible = true
+else
+	form.panelsVisibility.isEventHistoryVisible = false
+endif
+
 
 if((form.panelsVisibility.isTransitOperationHeaderVisible = false AND
 form.panelsVisibility.isCustomsOfficeVisible = false AND
@@ -10179,6 +10206,7 @@ else
 					else
 						if isTrue(params.id = "EventHistory") then
 							form.panelsVisibility.isEventHistoryVisible = true
+							form.actions.loadHistoryVersions()
 						endif
 					endif
 				endif
@@ -10633,30 +10661,30 @@ if checkIncompleteDataValidity then
 	globals.Errors.serverValidationErrors.fromJson(response.getJsonString())
 
 	if response.isError() then
-
+	
 		globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
 		globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
 		globals.globalUiState.isValidationsVisible = true
-
+	
 		// Inform user about errors
 		var errorMessage = defaultString()
-
+	
 		if (globals.Errors.serverValidationErrors.count() > 1) then 
 			errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
 		else
 			errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
 		endif	
-
+	
 		apiobjects.notificationsCtrl.addError(errorMessage)
 	else
 		apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
-	
+		
 		//go to DecList
 		apiobjects.urlRouter.clearUrl()
 		apiobjects.transitDeclaration.clear()
 		navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
 	endIf
-
+	
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -10721,9 +10749,35 @@ form.Model._isSavePartiallyVisible = true]]></Script>
       <Name value="handler_button1_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//navigation.main.Header.withGUID(params.data.)
+        <Script><![CDATA[navigation.main.Header.withGUID(params.data.GUIDVersion).go(enums.declarationFormMode.edit)
 
 //navigation.cseForms.SP_EditForm.withGuid(params.data.owner().GUID).withEventGUID(params.data.guid).go(enums.mode.Detail, defaultString())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadHistoryVersions" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if(form.Model.TransitOperation.MRN.hasValue()) then
+//	var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
+//	var response = apiobjects.CIC.postAsync("FBHistoryRequest", requestJsonString)
+	
+	var response = apiobjects.CIC.postAsync("FBHistoryRequest", form.model.toJson(true))
+
+	if response.isError() then
+		system.console(response.getErrorMessage())
+		apiobjects.notificationsCtrl.addError("Failed to load data.")
+
+	else
+
+		form.historyVersions.fromJson(response.getJsonString())
+		var dataReceived = response.getJsonString()
+		system.console(response.getJsonString())
+	
+	endif
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -10766,88 +10820,30 @@ endif]]></Script>
         </ActionDataContext>
       </DataContext>
     </ActionBlock>
-    <ActionBlock>      <Name value="loadHistoryVersions" />
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if(form.Model.TransitOperation.MRN.hasValue()) then
-//	var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
-//	var response = apiobjects.CIC.postAsync("FBHistoryRequest", requestJsonString)
-	
-	var response = apiobjects.CIC.postAsync("FBHistoryRequest", form.model.toJson(true))
+        <Script><![CDATA[var mockData = "{\"Consignment\":{\"LocationOfGoods\":{\"typeOfLocation\":{\"Code\":\"D\",\"Description\":\"Other\"},\"qualifierOfIdentification\":{\"Code\":\"U\",\"Description\":\"UN/LOCODE\"},\"UNLocode\":{\"Code\":\"REANN\"}},\"containerIndicator\":true,\"grossMass\":\"1000000\",\"HouseConsignment\":[{\"sequenceNumber\":1,\"grossMass\":\"1000000\",\"ConsignmentItem\":[{\"Packaging\":[{\"sequenceNumber\":1,\"typeOfPackages\":{\"Code\":\"1G\",\"Description\":\"Drum, fibre\"},\"numberOfPackages\":1,\"shippingMarks\":\"1\"}],\"Commodity\":{\"CommodityCode\":{\"harmonisedSystemSubHeadingCode\":{\"Code\":\"988051\",\"Description\":\"See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988051\"}},\"descriptionOfGoods\":\"asd\"},\"goodsItemNumber\":1,\"declarationGoodsItemNumber\":1,\"itemPriceEUR\":\"1000000\"}]}]},\"Guarantee\":[{\"GuaranteeReference\":[{\"sequenceNumber\":1,\"GRN\":\"20ME123450C100081\",\"accessCode\":\"9999\",\"amountToBeCovered\":\"1000000\",\"currency\":{\"Code\":\"EUR\",\"Description\":\"Euro\"}}],\"guaranteeType\":{\"Code\":\"1\",\"Description\":\"Comprehensive guarantee\"},\"sequenceNumber\":1}],\"HolderOfTheTransitProcedure\":{\"identificationNumber\":\"ME222222\",\"name\":\"Test4\"},\"CustomsOfficeOfTransitDeclared\":[{\"referenceNumber\":{\"Code\":\"DE002102\"},\"sequenceNumber\":1},{\"referenceNumber\":{\"Code\":\"ME123457\",\"Description\":\"Carinarnica Kotor\"},\"sequenceNumber\":2}],\"CustomsOfficeOfDestinationDeclared\":{\"referenceNumber\":{\"Code\":\"ME123450\",\"Description\":\"Aerodromi Podgorica\",\"ValidFrom\":\"2019-01-01T00:00:00.000\",\"ValidTo\":\"2099-12-31T00:00:00.000\"}},\"CustomsOfficeOfDeparture\":{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"ValidFrom\":\"2019-01-01T00:00:00.000\",\"ValidTo\":\"2099-12-31T00:00:00.000\"}},\"TransitOperation\":{\"declarationType\":{\"Code\":\"T\",\"Description\":\"Mixed consignments comprising both goods to be placed under external Union transit procedure and goods which are to be placed under the internal Union transit procedure.\"},\"LRN\":\"LRN18\",\"fallbackProcedure\":false,\"additionalDeclarationType\":{\"Code\":\"A\",\"Description\":\"for a standard customs declaration (under Article 162 of the Code)\"},\"security\":{\"Code\":0,\"Description\":\"Not used for safety and security purposes\"},\"reducedDatasetIndicator\":false,\"totalValueOfGoods\":\"1000000\",\"bindingItinerary\":false,\"amendmentTypeFlag\":false}}"
 
-	if response.isError() then
-		system.console(response.getErrorMessage())
-		apiobjects.notificationsCtrl.addError("Failed to load data.")
-
-	else
-
-		form.historyVersions.fromJson(response.getJsonString())
-		var dataReceived = response.getJsonString()
-		system.console(response.getJsonString())
-	
-	endif
-endif]]></Script>
+apiobjects.transitDeclaration.fromJson(mockData)
+form.Model.fromJson(apiobjects.transitDeclaration.getHeader())]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btnMockPrelodged_OnClick" />
+      <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if(form.Model.TransitOperation.MRN.hasValue()) then
-//	var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
-//	var response = apiobjects.CIC.postAsync("FBHistoryRequest", requestJsonString)
-	
-	var response = apiobjects.CIC.postAsync("FBHistoryRequest", form.model.toJson(true))
+        <Script><![CDATA[var mockData = "{\"Consignment\":{\"LocationOfGoods\":{\"typeOfLocation\":{\"Code\":\"D\",\"Description\":\"Other\"},\"qualifierOfIdentification\":{\"Code\":\"U\",\"Description\":\"UN/LOCODE\"},\"UNLocode\":{\"Code\":\"REANN\"}},\"containerIndicator\":true,\"grossMass\":\"1000000\",\"HouseConsignment\":[{\"sequenceNumber\":1,\"grossMass\":\"1000000\",\"ConsignmentItem\":[{\"Packaging\":[{\"sequenceNumber\":1,\"typeOfPackages\":{\"Code\":\"1G\",\"Description\":\"Drum, fibre\"},\"numberOfPackages\":1,\"shippingMarks\":\"1\"}],\"Commodity\":{\"CommodityCode\":{\"harmonisedSystemSubHeadingCode\":{\"Code\":\"988051\",\"Description\":\"See http://ec.europa.eu/taxation_customs/dds2/taric/measures.jsp?Lang=en&Taric=988051\"}},\"descriptionOfGoods\":\"asd\"},\"goodsItemNumber\":1,\"declarationGoodsItemNumber\":1,\"itemPriceEUR\":\"1000000\"}]}]},\"Guarantee\":[{\"GuaranteeReference\":[{\"sequenceNumber\":1,\"GRN\":\"20ME123450C100081\",\"accessCode\":\"9999\",\"amountToBeCovered\":\"1000000\",\"currency\":{\"Code\":\"EUR\",\"Description\":\"Euro\"}}],\"guaranteeType\":{\"Code\":\"1\",\"Description\":\"Comprehensive guarantee\"},\"sequenceNumber\":1}],\"HolderOfTheTransitProcedure\":{\"identificationNumber\":\"ME222222\",\"name\":\"Test4\"},\"CustomsOfficeOfTransitDeclared\":[{\"referenceNumber\":{\"Code\":\"DE002102\"},\"sequenceNumber\":1},{\"referenceNumber\":{\"Code\":\"ME123457\",\"Description\":\"Carinarnica Kotor\"},\"sequenceNumber\":2}],\"CustomsOfficeOfDestinationDeclared\":{\"referenceNumber\":{\"Code\":\"ME123450\",\"Description\":\"Aerodromi Podgorica\",\"ValidFrom\":\"2019-01-01T00:00:00.000\",\"ValidTo\":\"2099-12-31T00:00:00.000\"}},\"CustomsOfficeOfDeparture\":{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"ValidFrom\":\"2019-01-01T00:00:00.000\",\"ValidTo\":\"2099-12-31T00:00:00.000\"}},\"TransitOperation\":{\"declarationType\":{\"Code\":\"T\",\"Description\":\"Mixed consignments comprising both goods to be placed under external Union transit procedure and goods which are to be placed under the internal Union transit procedure.\"},\"LRN\":\"LRN18\",\"fallbackProcedure\":false,\"additionalDeclarationType\":{\"Code\":\"D\",\"Description\":\"For lodging a standard customs declaration (such as referred to under code A) in accordance with Article 171 of the Code.\"},\"security\":{\"Code\":0,\"Description\":\"Not used for safety and security purposes\"},\"reducedDatasetIndicator\":false,\"totalValueOfGoods\":\"1000000\",\"bindingItinerary\":false,\"amendmentTypeFlag\":false}}"
 
-	if response.isError() then
-		system.console(response.getErrorMessage())
-		apiobjects.notificationsCtrl.addError("Failed to load data.")
-
-	else
-
-		form.historyVersions.fromJson(response.getJsonString())
-		var dataReceived = response.getJsonString()
-		system.console(response.getJsonString())
-	
-	endif
-endif]]></Script>
+apiobjects.transitDeclaration.fromJson(mockData)
+form.Model.fromJson(apiobjects.transitDeclaration.getHeader())]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[result = false
-
-if form.Model.CustomsOfficeOfDeparture.referenceNumber.hasValue() then
-		
-	if form.Model.HolderOfTheTransitProcedure.identificationNumber.hasValue() then
-		//required elements are present, we can continue		
-		result = true
-	else
-		//HolderOfTheTransitProcedure isn't set
-		notificationsCtrl.addError("Holder of the transit procedure must have an identification number.")
-	endif
-		
-else
-	//COoDep isn't set
-	notificationsCtrl.addError("Customs Office of Departure must have a value.")
-endif]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext>
-          <Children>
-            <Attribute>
-              <Name value="result" />
-              <Caption value="Result" />
-              <DataContextParameter.IsResult value="True" />
-              <DeclaredType>
-                <AttributeType>
-                  <BaseType value="Bool" />
-                </AttributeType>
-              </DeclaredType>
-            </Attribute>
-          </Children>
-        </ActionDataContext>
       </DataContext>
     </ActionBlock>
   </Actions>

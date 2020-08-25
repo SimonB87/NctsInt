@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="UserID_type" />
+  <Caption value="User ID for NCTS_RS project" />
+  <MtsImportOptions.MTS.ID value="UserID_type" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="255" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

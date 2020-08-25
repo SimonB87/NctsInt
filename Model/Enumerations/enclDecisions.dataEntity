@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="enclDecisions" />
+  <Caption value="enclDecisions" />
+  <MtsImportOptions.MTS.ID value="enclDecisions" />
+  <MtsImportOptions.MTS.Type value="enumeration" />
+  <Children>
+    <Attribute>
+      <Name value="Key" />
+      <Caption value="Key" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

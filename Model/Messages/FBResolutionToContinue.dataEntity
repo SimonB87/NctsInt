@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?data-format version="0.400"?>
 <DataEntity>
-  <Name value="FBSimplifiedProcedureBreak" />
-  <Caption value="FBSimplifiedProcedureBreak" />
-  <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak" />
+  <Name value="FBResolutionToContinue" />
+  <Caption value="FBResolutionToContinue" />
+  <MtsImportOptions.MTS.ID value="/FBResolutionToContinue" />
   <MtsImportOptions.MTS.Type value="message" />
   <Children>
     <Complex>
       <Name value="TransitOperation" />
       <Caption value="TRANSIT OPERATION" />
       <IsRequired value="True" />
-      <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/TransitOperation" />
+      <MtsImportOptions.MTS.ID value="/FBResolutionToContinue/TransitOperation" />
       <MtsImportOptions.MTS.Type value="group" />
       <Children>
         <Attribute>
           <Name value="MRN" />
           <Caption value="MRN" />
           <IsRequired value="True" />
-          <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.ID value="/FBResolutionToContinue/TransitOperation/MRN" />
           <MtsImportOptions.MTS.Type value="element" />
           <DeclaredType>
             <AttributeType>
@@ -134,57 +134,10 @@ ELSE IF / * /TransitOperation/security (the transit declaration includes EXS dat
       </Children>
     </Complex>
     <Complex>
-      <Name value="SimplifiedProcedureBreak" />
-      <Caption value="Simplified procedure break" />
-      <IsRequired value="True" />
-      <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/SimplifiedProcedureBreak" />
-      <MtsImportOptions.MTS.Type value="group" />
-      <Children>
-        <Attribute>
-          <Name value="date" />
-          <Caption value="Date" />
-          <IsRequired value="True" />
-          <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/SimplifiedProcedureBreak/date" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <BaseType value="Date" />
-            </AttributeType>
-          </DeclaredType>
-        </Attribute>
-        <Attribute>
-          <Name value="description" />
-          <Caption value="Description" />
-          <IsRequired value="True" />
-          <MetaType reference="+MetaTypes.NonWhiteSpacedString" />
-          <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/SimplifiedProcedureBreak/description" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <Validators>
-            <Validator Name="regex">
-              <MtsImportOptions.MTS.Regex value="\S((([\n\r\t])|(.))*\S)?" />
-              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^\\S((([\\n\\r\\t])|(.))*\\S)?$") : true)]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
-        </Attribute>
-      </Children>
-    </Complex>
-    <Complex>
       <Name value="Decision" />
       <Caption value="Decision" />
       <IsRequired value="True" />
-      <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/Decision" />
+      <MtsImportOptions.MTS.ID value="/FBResolutionToContinue/Decision" />
       <MtsImportOptions.MTS.Type value="group" />
       <Children>
         <Attribute>
@@ -192,7 +145,7 @@ ELSE IF / * /TransitOperation/security (the transit declaration includes EXS dat
           <Caption value="Description of decision" />
           <IsRequired value="True" />
           <MetaType reference="+MetaTypes.String_512" />
-          <MtsImportOptions.MTS.ID value="/FBSimplifiedProcedureBreak/Decision/description" />
+          <MtsImportOptions.MTS.ID value="/FBResolutionToContinue/Decision/description" />
           <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>

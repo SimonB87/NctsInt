@@ -489,8 +489,8 @@
                                   <Panel.Width value="25%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="modelAccept.Consignment.containerIndicator" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.Consignment.containerIndicator.isRequired()" />
                                     <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.containerIndicator.caption()" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.auxiliaryVariables.isContainerIndicatorRequired" />
                                   </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
@@ -506,7 +506,7 @@
                                   <Panel.Width value="25%" />
                                   <Bindings>
                                     <Binding SourceProperty="Data" Expression="modelAccept.TransitOperation.limitDate" />
-                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="modelAccept.TransitOperation.limitDate.isRequired()" />
+                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.auxiliaryVariables.isLimitDateRequired" />
                                     <Binding SourceProperty="Caption" Expression="modelAccept.TransitOperation.limitDate.caption()" />
                                   </Bindings>
                                   <CssClass>
@@ -581,37 +581,28 @@
                               <Panel.Height value="#" />
                               <Panel.Width value="*" />
                               <Content>
-                                <Repeater>
-                                  <Name value="repeater1" />
-                                  <Content>
-                                    <Panel>
-                                      <Name value="panel5" />
-                                      <Orientation value="Horizontal" />
-                                      <Children>
+                                <Panel>
+                                  <Name value="panel4" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="pagingRepeaterCtrl1" />
+                                      <AllowAdd value="True" />
+                                      <AllowRemove value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.modelAccept.Consignment.TransportEquipment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_transportEquipment" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="pagingRepeater1" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
                                         <TextBox>
-                                          <Name value="textBox3" />
-                                          <CaptionPosition value="Top" />
-                                          <CaptionVAlign value="Middle" />
-                                          <Panel.Height value="#" />
-                                          <Panel.Width value="50%" />
-                                          <Bindings>
-                                            <Binding SourceProperty="Data" Expression="sequenceNumber" />
-                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="sequenceNumber.isRequired()" />
-                                            <Binding SourceProperty="Caption" Expression="sequenceNumber.caption()" />
-                                          </Bindings>
-                                          <CssClass>
-                                            <CssClassConditional>
-                                              <ClassName value="{theme}-textbox" />
-                                              <IsThemedStyle value="True" />
-                                            </CssClassConditional>
-                                          </CssClass>
-                                        </TextBox>
-                                        <TextBox>
-                                          <Name value="textBox4" />
-                                          <CaptionPosition value="Top" />
-                                          <CaptionVAlign value="Middle" />
-                                          <Panel.Height value="#" />
-                                          <Panel.Width value="50%" />
+                                          <Name value="textBox1" />
                                           <Bindings>
                                             <Binding SourceProperty="Data" Expression="containerIdentificationNumber" />
                                             <Binding SourceProperty="IsRequiredMarkVisible" Expression="containerIdentificationNumber.isRequired()" />
@@ -624,25 +615,20 @@
                                             </CssClassConditional>
                                           </CssClass>
                                         </TextBox>
-                                      </Children>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-panel" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </Panel>
-                                  </Content>
-                                  <Bindings>
-                                    <Binding SourceProperty="DataItems" Expression="modelAccept.Consignment.TransportEquipment" />
-                                  </Bindings>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.modelAccept.Consignment.TransportEquipment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_transportEquipment" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-repeater" />
+                                      <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </Repeater>
+                                </Panel>
                               </Content>
                               <Bindings>
                                 <Binding SourceProperty="Caption" Expression="modelAccept.Consignment.TransportEquipment.caption()" />
@@ -1410,6 +1396,21 @@
             <Include>
               <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBAccept" />
             </Include>
+            <Collection>
+              <Name value="Authorisation" />
+              <Caption value="Authorisation" />
+              <Children>
+                <Reference>
+                  <Name value="type" />
+                  <Caption value="Type" />
+                  <Children>
+                    <Include>
+                      <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.AuthorisationTypeDeparture" />
+                    </Include>
+                  </Children>
+                </Reference>
+              </Children>
+            </Collection>
           </Children>
         </Complex>
         <Complex>
@@ -1447,7 +1448,181 @@
             </ResultType>
           </Expression>
         </Computed>
+        <Complex>
+          <Name value="auxiliaryVariables" />
+          <Caption value="Auxiliary variables" />
+          <Children>
+            <Attribute>
+              <Name value="isLimitDateRequired" />
+              <Caption value="Is limit date required" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isContainerIndicatorRequired" />
+              <Caption value="Is container indicator required" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="modelState" />
+          <Caption value="Model state" />
+          <Children>
+            <Attribute>
+              <Name value="_index_transportEquipment" />
+              <Caption value="_ index _ transport equipment" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
       </Children>
+      <Modifiers>
+        <Modifier>
+          <Name value="modifier_1A9ABB2E_limitDate" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="modelAccept.TransitOperation.limitDate" />
+          <Validators>
+            <Validator Name="C0840">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0840"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.auxiliaryVariables.isLimitDateRequired ? this.limitDate.hasValue() : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_AB6DC6EB_TransitOperation" />
+          <SourcePath value="modelAccept.TransitOperation" />
+          <Children>
+            <Reference>
+              <Name value="additionalDeclarationType" />
+              <Caption value="Additional declaration type" />
+              <Children>
+                <Include>
+                  <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.DeclarationTypeAdditional" />
+                </Include>
+              </Children>
+            </Reference>
+          </Children>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_F9D91012_containerIndicator" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="modelAccept.Consignment.containerIndicator" />
+          <Validators>
+            <Validator Name="C0822">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0822"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.auxiliaryVariables.isContainerIndicatorRequired ? this.containerIndicator.hasValue() : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_6D6E3BA1_TransportEquipment" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="modelAccept.Consignment.TransportEquipment" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="C0872">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0872"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.modelAccept.Consignment.containerIndicator ? form.modelAccept.Consignment.TransportEquipment.count() > 0 : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0823">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0823"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.modelAccept.Consignment.containerIndicator.hasValue() ?
+
+form.modelAccept.Consignment.containerIndicator ? form.modelAccept.Consignment.TransportEquipment.count() > 0 : true
+
+: form.modelAccept.Consignment.TransportEquipment.count() = 0
+]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_1E5C84D5_containerIdentificationNumber" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="modelAccept.Consignment.TransportEquipment.containerIdentificationNumber" />
+          <Validators>
+            <Validator Name="C0055">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0055"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isFalse(form.modelAccept.Consignment.containerIndicator) ?
+NOT form.modelAccept.Consignment.TransportEquipment.exists(current.containerIdentificationNumber.hasValue())
+: 
+form.modelAccept.Consignment.TransportEquipment.exists(current.containerIdentificationNumber.hasValue())]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+      </Modifiers>
     </DataContext>
   </DataContext>
   <OnCreate>
@@ -1462,13 +1637,12 @@
 //form.GUID = "{618b9eff-0f7e-4933-8a8a-3cd0162c46c4}"
 
 form.actions.setURLDeepLink()
-system.console(toString(form.mode))
+
 if form.GUID.hasValue() then
 	
 	if form.mode.isEmpty() then
 	
 		//TODO - what should happen if accept is empty
-		system.console("VSECHNO")
 	
 	else
 		form.actions.loadCodelists()
@@ -1488,6 +1662,8 @@ if form.GUID.hasValue() then
 			if form.isAccept then 
 				apiobjects.notificationsCtrl.addSuccess("Load was successful.")
 				form.modelAccept.fromJson(response.getJsonString())
+				
+				form.actions.setAuxiliaryVariables()
 			else
 				apiobjects.notificationsCtrl.addSuccess("Load was successful.")
 				form.modelNotAccept.fromJson(response.getJsonString())
@@ -1583,7 +1759,7 @@ endif ]]></Script>
       <Name value="handler_btn_notAccept_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var requestJsonString = form.modelAccept.toJson(true)
+        <Script><![CDATA[var requestJsonString = form.modelNotAccept.toJson(true)
 var response = apiobjects.CIC.postAsync("FBNotAccept", requestJsonString)
 
 if response.isError() then
@@ -1718,6 +1894,43 @@ endif
 	endif
 endif
 ]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setIsLimitDateRequired" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.modelAccept.Authorisation.isEmpty() then
+	form.auxiliaryVariables.isLimitDateRequired = false
+else
+	//if an authorisation with type C521 exists, limit date is required
+	form.auxiliaryVariables.isLimitDateRequired = form.modelAccept.Authorisation.exists(isTrue(current.type.Code = "C521"))
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setIsContainerIndicatorRequired" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(form.modelAccept.TransitOperation.additionalDeclarationType.Code = "D") then
+	form.auxiliaryVariables.isContainerIndicatorRequired = false
+else
+	form.auxiliaryVariables.isContainerIndicatorRequired = true
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setAuxiliaryVariables" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.actions.setIsLimitDateRequired()
+form.actions.setIsContainerIndicatorRequired()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

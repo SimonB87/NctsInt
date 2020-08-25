@@ -158,6 +158,38 @@
                       <Include reference="+DataEntities.UnLocodeExtended" />
                     </Include>
                   </Children>
+                  <Validators>
+                    <Validator Name="C0460">
+                      <MtsImportOptions.MTS.ID value="C0460" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
+THEN 
+/ * /Consignment/Incident/Location/GNSS = "R" AND 
+/ * /Consignment/Incident/Location/UNLocode = "N" AND 
+/ * /Consignment/Incident/Location/Address = "N"
+ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' 
+          THEN 
+	  / * /Consignment/Incident/Location/UNLocode = "R" AND 
+	  / * /Consignment/Incident/Location/GNSS = "N" AND 
+	  / * /Consignment/Incident/Location/Address = "N"
+          ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' 
+          THEN
+                / * /Consignment/Incident/Location/Address = "R" AND 
+		/ * /Consignment/Incident/Location/UNLocode = "N" AND
+		/ * /Consignment/Incident/Location/GNSS = "N" */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
                 </Reference>
                 <Reference>
                   <Name value="country" />
@@ -238,6 +270,38 @@
                       </Validators>
                     </Attribute>
                   </Children>
+                  <Validators>
+                    <Validator Name="C0460">
+                      <MtsImportOptions.MTS.ID value="C0460" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
+THEN 
+/ * /Consignment/Incident/Location/GNSS = "R" AND 
+/ * /Consignment/Incident/Location/UNLocode = "N" AND 
+/ * /Consignment/Incident/Location/Address = "N"
+ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' 
+          THEN 
+	  / * /Consignment/Incident/Location/UNLocode = "R" AND 
+	  / * /Consignment/Incident/Location/GNSS = "N" AND 
+	  / * /Consignment/Incident/Location/Address = "N"
+          ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' 
+          THEN
+                / * /Consignment/Incident/Location/Address = "R" AND 
+		/ * /Consignment/Incident/Location/UNLocode = "N" AND
+		/ * /Consignment/Incident/Location/GNSS = "N" */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
                 </Complex>
                 <Complex>
                   <Name value="Address" />
@@ -263,6 +327,70 @@
                           <StrMaxLength value="17" />
                         </AttributeType>
                       </DeclaredType>
+                      <Validators>
+                        <Validator Name="C0505">
+                          <MtsImportOptions.MTS.ID value="C0505" />
+                          <MtsImportOptions.MTS.Type value="condition-constraint" />
+                          <ErrorMessage IsValid="True">
+                            <ExpressionText><![CDATA["C0505"]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="String" />
+                            </ResultType>
+                          </ErrorMessage>
+                          <IsValid IsValid="True">
+                            <ExpressionText><![CDATA[true /* IMPORTED RULE C0505 IF / * /HolderOfTheTransitProcedure/Address/country is in SET CL505
+THEN / * /HolderOfTheTransitProcedure/Address/postcode = "O"
+ELSE / * /HolderOfTheTransitProcedure/Address/postcode = "R";
+
+IF / * /Consignment/Consignor/Address/country is in SET CL505 
+THEN / * /Consignment/Consignor/Address/postcode = "O"
+ELSE / * /Consignment/Consignor/Address/postcode = "R";
+
+IF / * /Consignment/Consignee/Address/country is in SET CL505
+THEN / * /Consignment/Consignee/Address/postcode = "O"
+ELSE / * /Consignment/Consignee/Address/postcode = "R";
+
+IF / * /Consignment/Incident/Location/Address/country is in SET CL505
+THEN / * /Consignment/Incident/Location/Address/postcode = "O"
+ELSE / * /Consignment/Incident/Location/Address/postcode = "R";
+
+IF / * /Consignment/LocationOfGoods/Address/country is in SET CL505
+THEN / * /Consignment/LocationOfGoods/Address/postcode = "O"
+ELSE / * /Consignment/LocationOfGoods/Address/postcode = "R";
+
+IF / * /Consignment/HouseConsignment/Consignor/Address/country is in SET CL505
+THEN / * /Consignment/HouseConsignment/Consignor/Address/postcode = "O"
+ELSE / * /Consignment/HouseConsignment/Consignor/Address/postcode = "R";
+
+IF / * /Consignment/HouseConsignment/Consignee/Address/country is in SET CL505
+THEN / * /Consignment/HouseConsignment/Consignee/Address/postcode = "O"
+ELSE / * /Consignment/HouseConsignment/Consignee/Address/postcode = "R";
+
+IF / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505 
+THEN / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"
+ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";
+
+IF / * /Guarantor/Address/country is in SET CL505
+THEN / * /Guarantor/Address/postcode = "O"
+ELSE / * /Guarantor/Address/postcode = "R";
+
+IF / * /GuaranteeReference/Guarantor/Address/country is in SET CL505
+THEN / * /GuaranteeReference/Guarantor/Address/postcode = "O"
+ELSE / * /GuaranteeReference/Guarantor/Address/postcode = "R";
+
+IF / * /GuaranteeReference/Owner/Address/country is in SET CL505
+THEN / * /GuaranteeReference/Owner/Address/postcode = "O"
+ELSE / * /GuaranteeReference/Owner/Address/postcode = "R";
+
+IF / * /Consignment/ConsigneeActual/Address/country is in SET CL505
+THEN / * /Consignment/ConsigneeActual/Address/postcode = "O"
+ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionText>
+                            <ResultType>
+                              <BaseType value="Bool" />
+                            </ResultType>
+                          </IsValid>
+                        </Validator>
+                      </Validators>
                     </Attribute>
                     <Attribute>
                       <Name value="city" />
@@ -277,6 +405,38 @@
                       </DeclaredType>
                     </Attribute>
                   </Children>
+                  <Validators>
+                    <Validator Name="C0460">
+                      <MtsImportOptions.MTS.ID value="C0460" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
+THEN 
+/ * /Consignment/Incident/Location/GNSS = "R" AND 
+/ * /Consignment/Incident/Location/UNLocode = "N" AND 
+/ * /Consignment/Incident/Location/Address = "N"
+ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' 
+          THEN 
+	  / * /Consignment/Incident/Location/UNLocode = "R" AND 
+	  / * /Consignment/Incident/Location/GNSS = "N" AND 
+	  / * /Consignment/Incident/Location/Address = "N"
+          ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' 
+          THEN
+                / * /Consignment/Incident/Location/Address = "R" AND 
+		/ * /Consignment/Incident/Location/UNLocode = "N" AND
+		/ * /Consignment/Incident/Location/GNSS = "N" */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
                 </Complex>
               </Children>
             </Complex>
@@ -442,6 +602,34 @@ true]]></ExpressionText>
                       </IsValid>
                     </Validator>
                   </CollectionValidators>
+                  <ItemValidators>
+                    <Validator Name="C0569">
+                      <MtsImportOptions.MTS.ID value="C0569" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA["C0569"]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0569 IF / * /Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'
+THEN
+/ * /Consignment/Incident/TransportEquipment/Seal = "R"
+ELSE
+/ * /Consignment//Incident/TransportEquipment/Seal = "N";
+
+IF / * /Consignment/TransportEquipment/numberOfSeals is GREATER than '0'
+THEN
+/ * /Consignment/TransportEquipment/Seal = "R"
+ELSE
+/ * /Consignment/TransportEquipment/Seal = "N" */]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </ItemValidators>
                 </Collection>
                 <Collection>
                   <Name value="GoodsReference" />
@@ -515,6 +703,32 @@ All the non-containerised goods items related to this seals information (if pres
                   </IsValid>
                 </Validator>
               </CollectionValidators>
+              <ItemValidators>
+                <Validator Name="C0240">
+                  <MtsImportOptions.MTS.ID value="C0240" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0240 IF / * /Incident/code is EQUAL to ‘2’
+THEN / * /Consignment/Incident/TransportEquipment = "R" AND
+/ * /Consignment/Incident/Transhipment = "O"
+ELSE IF / * /Incident/code is in SET { 3, 6}
+THEN / * /Consignment/Incident/TransportEquipment = "O" AND
+/ * /Consignment/Incident/Transhipment = "R"
+ELSE
+/ * /Consignment/Incident/TransportEquipment = "O" AND
+/ * / Consignment/Incident/Transhipment = "O" */]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </ItemValidators>
             </Collection>
             <Complex>
               <Name value="Transhipment" />

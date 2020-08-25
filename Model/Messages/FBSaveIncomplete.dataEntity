@@ -157,7 +157,6 @@ THEN
     <Complex>
       <Name value="CustomsOfficeOfDeparture" />
       <Caption value="CUSTOMS OFFICE OF DEPARTURE" />
-      <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/CustomsOfficeOfDeparture" />
       <MtsImportOptions.MTS.Type value="group" />
       <Children>
@@ -214,7 +213,6 @@ THEN the country code (first two digits) in the / * /CustomsOfficeOfDestinationD
     <Complex>
       <Name value="HolderOfTheTransitProcedure" />
       <Caption value="HOLDER OF THE TRANSIT PROCEDURE" />
-      <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBSaveIncomplete/HolderOfTheTransitProcedure" />
       <MtsImportOptions.MTS.Type value="group" />
       <Children>

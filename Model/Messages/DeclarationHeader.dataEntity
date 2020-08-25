@@ -772,6 +772,35 @@
             </AttributeType>
           </DeclaredType>
         </Attribute>
+        <Reference>
+          <Name value="rejectionCode" />
+          <Caption value="Rejection code" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/TransitOperation/rejectionCode" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.RejectionCodeDepartureExport" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="rejectionReason" />
+          <Caption value="Rejection reason" />
+          <MetaType reference="+MetaTypes.RejectionReasonContentType" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/TransitOperation/rejectionReason" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+        <Attribute>
+          <Name value="requestRejectionDateAndTime" />
+          <Caption value="Date and time of request rejection from Office of Departure" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/TransitOperation/requestRejectionDateAndTime" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </Complex>
     <Collection>
@@ -4975,5 +5004,118 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
         </Attribute>
       </Children>
     </Complex>
+    <Collection>
+      <Name value="Decision" />
+      <Caption value="Decision" />
+      <MaxCount value="999" />
+      <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="type" />
+          <Caption value="Decision type" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/type" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.enclDecisions" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="decisionTimestamp" />
+          <Caption value="Date and time of decision" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/decisionTimestamp" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="DateTime" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="user" />
+          <Caption value="ID of user associated with decision" />
+          <MetaType reference="+MetaTypes.UserID_type" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/user" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+        <Attribute>
+          <Name value="customsOffice" />
+          <Caption value="Reference number of customs office making decision" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/customsOffice" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="8" />
+              <StrMinLength value="8" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[A-Z]{2}[A-Z0-9]{6}" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[A-Z]{2}[A-Z0-9]{6}$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="description" />
+          <Caption value="Description of decision" />
+          <MetaType reference="+MetaTypes.String_512" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/description" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+        <Attribute>
+          <Name value="administrativeNumber" />
+          <Caption value="Administrative number" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/administrativeNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[ -~]*" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[ -~]*$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="active" />
+          <Caption value="Is decision active?" />
+          <MtsImportOptions.MTS.ID value="/DeclarationHeader/Decision/active" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </Collection>
   </Children>
 </DataEntity>

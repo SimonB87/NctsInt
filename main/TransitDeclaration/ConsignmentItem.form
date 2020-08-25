@@ -3119,7 +3119,7 @@ ValidateAgainstRegularExpression(toUpper(toString(this.grossMass)), "^[A-Z0-9]{0
                 <ExpressionText><![CDATA[this.name.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(this.name), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(this.name), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -3144,7 +3144,7 @@ ValidateAgainstRegularExpression(toUpper(this.name), "^[A-Z0-9]{0,35}$")
                 <ExpressionText><![CDATA[this.streetAndNumber.hasValue() ? 
 isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(this.streetAndNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(this.streetAndNumber), "^[A-Z0-9 ]{0,35}$")
 ) : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -3168,7 +3168,7 @@ ValidateAgainstRegularExpression(toUpper(this.streetAndNumber), "^[A-Z0-9]{0,35}
               <IsValid IsValid="True">
                 <ExpressionText><![CDATA[isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9 ]{0,35}$")
 )]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -3192,7 +3192,7 @@ ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9]{0,35}
               <IsValid IsValid="True">
                 <ExpressionText><![CDATA[isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9 ]{0,35}$")
 )]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -3216,7 +3216,7 @@ ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9]{0,35}
               <IsValid IsValid="True">
                 <ExpressionText><![CDATA[isTrue(
 (form.Model._decisiveDate <= globals.serverConfig.TPendDate) AND
-ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9]{0,35}$")
+ValidateAgainstRegularExpression(toUpper(this.referenceNumber), "^[A-Z0-9 ]{0,35}$")
 )]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
@@ -4551,37 +4551,42 @@ globals.busyIndicatorIsRunning = false]]></Script>
 	form.incompleteModel.GUID = form.GUID
 endif
 
-form.incompleteModel.fromJson(apiobjects.transitDeclaration.toJson())
-form.incompleteModel.IncompleteData.data = toString(apiobjects.transitDeclaration.toJson())
+//check if incompleteModel is valid (required holder of the transit procedure and COoDep)
+var checkIncompleteDataValidity = form.actions.checkIncompleteModelValidity()
+if checkIncompleteDataValidity then
 
-var response = apiobjects.CIC.postAsync("FBSaveIncomplete", form.incompleteModel.toJson())
+	form.incompleteModel.fromJson(apiobjects.transitDeclaration.toJson())
+	form.incompleteModel.IncompleteData.data = toString(apiobjects.transitDeclaration.toJson())
 
-globals.Errors.serverValidationErrors.fromJson(response.getJsonString())
+	var response = apiobjects.CIC.postAsync("FBSaveIncomplete", form.incompleteModel.toJson())
 
-if response.isError() then
+	globals.Errors.serverValidationErrors.fromJson(response.getJsonString())
 
-	globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
-	globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
-	globals.globalUiState.isValidationsVisible = true
+	if response.isError() then
 
-	// Inform user about errors
-	var errorMessage = defaultString()
+		globals.Errors.serverValidationComplex.fromJson(response.extractJson("Error"))
+		globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
+		globals.globalUiState.isValidationsVisible = true
 
-	if (globals.Errors.serverValidationErrors.count() > 1) then 
-		errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
+		// Inform user about errors
+		var errorMessage = defaultString()
+
+		if (globals.Errors.serverValidationErrors.count() > 1) then 
+			errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
+		else
+			errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
+		endif	
+
+		apiobjects.notificationsCtrl.addError(errorMessage)
 	else
-		errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
-	endif	
-
-	apiobjects.notificationsCtrl.addError(errorMessage)
-else
-	apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
+		apiobjects.notificationsCtrl.addSuccess("Your request was successful.")
 	
-	//go to DecList
-	apiobjects.urlRouter.clearUrl()
-	apiobjects.transitDeclaration.clear()
-	navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
-endIf]]></Script>
+		//go to DecList
+		apiobjects.urlRouter.clearUrl()
+		apiobjects.transitDeclaration.clear()
+		navigation.main.DecList.withInputNavTree("isClearanceInteruptedActive").go()
+	endIf
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -4642,6 +4647,47 @@ if form.GUID.hasValue() then
 else
 	result = true
 endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="checkIncompleteModelValidity" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = false
+
+if form.Header.CustomsOfficeOfDeparture.referenceNumber.hasValue() then
+
+	if form.Header.HolderOfTheTransitProcedure.identificationNumber.hasValue() then
+		//required elements are present, we can continue		
+		result = true
+
+	else
+		//HolderOfTheTransitProcedure isn't set
+		notificationsCtrl.addError("Holder of the transit procedure must have an identification number.")
+
+	endif
+		
+else
+
+	//COoDep isn't set
+	notificationsCtrl.addError("Customs Office of Departure must have a value.")
+
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>

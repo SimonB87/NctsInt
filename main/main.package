@@ -35,6 +35,8 @@
         <PackageItem Src="TransitDeclaration\accept.metaType" />
         <PackageItem Src="TransitDeclaration\IncidentCheck.form" />
         <PackageItem Src="TransitDeclaration\IncidentRegistration.form" />
+        <PackageItem Src="TransitDeclaration\UnloadingInterruption.form" />
+        <PackageItem Src="TransitDeclaration\SimplifiedProcedureBreak.form" />
       </Items>
     </PackageFolder>
     <PackageItem Src="globalActions.globalActions" />

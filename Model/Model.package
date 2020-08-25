@@ -18,8 +18,8 @@
         <PackageItem Src="Messages\FBCancel.dataEntity" />
         <PackageItem Src="Messages\FBDocumentsRegistration.dataEntity" />
         <PackageItem Src="Messages\FBSimplifiedProcedureBreak.dataEntity" />
-        <PackageItem Src="Messages\FBSimplifiedProcedureContinue.dataEntity" />
-        <PackageItem Src="Messages\FBUnloadingInterruptionResolution.dataEntity" />
+        <PackageItem Src="Messages\FBResolutionToContinue.dataEntity" />
+        <PackageItem Src="Messages\FBResolutionToControl.dataEntity" />
       </Items>
     </PackageFolder>
     <PackageFolder Name="CodeLists">
@@ -87,6 +87,7 @@
         <PackageItem Src="CodeLists\UnDangerousGoodsCode.dataEntity" />
         <PackageItem Src="CodeLists\Unit.dataEntity" />
         <PackageItem Src="CodeLists\UnLocodeExtended.dataEntity" />
+        <PackageItem Src="CodeLists\RejectionCodeDepartureExport.dataEntity" />
       </Items>
     </PackageFolder>
     <PackageFolder Name="MetaTypes">
@@ -144,6 +145,9 @@
         <PackageItem Src="MetaTypes\Pracovnik.metaType" />
         <PackageItem Src="MetaTypes\String100_type.metaType" />
         <PackageItem Src="MetaTypes\NonWhiteSpacedString.metaType" />
+        <PackageItem Src="MetaTypes\RejectionReasonContentType.metaType" />
+        <PackageItem Src="MetaTypes\UserID_type.metaType" />
+        <PackageItem Src="MetaTypes\String_512.metaType" />
       </Items>
     </PackageFolder>
     <ResourceItem ResourceName="mtsimport.ini" Action="None" OutputFileName="mtsimport.ini" Src="mtsimport.ini" />
@@ -151,6 +155,11 @@
       <Items>
         <PackageItem Src="Datasets\Dataset_DEP.dataEntity" />
         <PackageItem Src="Datasets\Dataset_DES.dataEntity" />
+      </Items>
+    </PackageFolder>
+    <PackageFolder Name="Enumerations">
+      <Items>
+        <PackageItem Src="Enumerations\enclDecisions.dataEntity" />
       </Items>
     </PackageFolder>
   </Items>

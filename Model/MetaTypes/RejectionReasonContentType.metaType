@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="RejectionReasonContentType" />
+  <Caption value="RejectionReasonContentType" />
+  <Description value="Used by 2/85 messages: CC056C, CC057C" />
+  <MtsImportOptions.MTS.ID value="RejectionReasonContentType" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="512" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>
