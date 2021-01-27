@@ -5,125 +5,63 @@
   <Caption value="FBResolutionToControl" />
   <MtsImportOptions.MTS.ID value="/FBResolutionToControl" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBResolutionToControl" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Complex>
       <Name value="TransitOperation" />
-      <Caption value="TRANSIT OPERATION" />
+      <Caption value="Transit Operation" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBResolutionToControl/TransitOperation" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="MRN" />
           <Caption value="MRN" />
           <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
           <MtsImportOptions.MTS.ID value="/FBResolutionToControl/TransitOperation/MRN" />
           <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <StrMaxLength value="18" />
-              <StrMinLength value="18" />
-            </AttributeType>
-          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Validators>
-            <Validator Name="G0002">
-              <MtsImportOptions.MTS.ID value="G0002" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="R0028">
-              <MtsImportOptions.MTS.ID value="R0028" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0028"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0028 The structure of this Data Item is validated as specified in DDCOM. The check digit must follow the ISO 6346 standard. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="R0410">
-              <MtsImportOptions.MTS.ID value="R0410" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0410"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0410 IF /CC015C/TransitOperation/security (the transit declaration includes ENS data for safety and security purposes [only]) is EQUAL to ‘1’
-THEN the 17th character of MRN is EQUAL to 'L'
-ELSE IF / * /TransitOperation/security (the transit declaration includes EXS data for safety and security purposes [only]) is EQUAL to EQUAL to ‘2’
-            THEN the 17th character of MRN is EQUAL to 'K'
-            ELSE IF * /TransitOperation/security (the transit declaration includes ENS and EXS data for safety and security purposes [only]) is EQUAL to ‘3’
-                         THEN the 17th character of MRN is EQUAL to 'M'
-                         ELSE the 17th character of MRN is EQUAL to 'J' */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="MRN">
-              <MtsImportOptions.MTS.ID value="MRN" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["MRN"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE MRN MRN must comply with the structure of fallback MRN. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="NR239">
-              <MtsImportOptions.MTS.ID value="NR239" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["NR239"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE NR239 If in envelope of message is specified the element MRN, then the value of this element must be the same like value in the element MRN in group Header of message.
- */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
             <Validator Name="regex">
-              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
               <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
               <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                 <ResultType>
                   <BaseType value="String" />
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -135,10 +73,20 @@ ELSE IF / * /TransitOperation/security (the transit declaration includes EXS dat
     </Complex>
     <Complex>
       <Name value="Decision" />
-      <Caption value="Decision" />
+      <Caption value="DECISION" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBResolutionToControl/Decision" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Decision" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="description" />
@@ -147,6 +95,16 @@ ELSE IF / * /TransitOperation/security (the transit declaration includes EXS dat
           <MetaType reference="+MetaTypes.String_512" />
           <MtsImportOptions.MTS.ID value="/FBResolutionToControl/Decision/description" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DescriptionOfDecision" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
     </Complex>

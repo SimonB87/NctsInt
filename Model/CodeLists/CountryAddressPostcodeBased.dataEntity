@@ -57,5 +57,17 @@
         </ResultType>
       </Expression>
     </Computed>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="CountryAddressPostcodeBased/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
   </Children>
 </DataEntity>

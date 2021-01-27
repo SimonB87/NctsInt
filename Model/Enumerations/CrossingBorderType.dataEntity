@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="CrossingBorderType" />
+  <Caption value="Crossing border types" />
+  <MtsImportOptions.MTS.ID value="CrossingBorderType" />
+  <MtsImportOptions.MTS.Type value="enumeration" />
+  <Children>
+    <Attribute>
+      <Name value="Key" />
+      <Caption value="Key" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Decimal" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

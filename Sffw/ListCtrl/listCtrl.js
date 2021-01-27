@@ -580,7 +580,7 @@ var sffw;
                     this.subscriptions.push(this.oDataFilter.subscribe(function () {
                         _this.loadData();
                     }));
-                    this.subscriptions.push(this.activePage.subscribe(function () {
+                    this.subscriptions.push(this.activePage.subscribe(function (pageNumber) {
                         _this.loadData();
                     }));
                     this.subscriptions.push(this.pageSize.subscribe(function () {
@@ -687,6 +687,14 @@ var sffw;
                                 });
                             });
                         }
+                        var pageOffset = (_this.activePage() - 1) * _this.pageSize();
+                        var rowCount = _this.rowCount();
+                        var rowFrom = pageOffset + 1;
+                        var rowTo = pageOffset + _this.pageSize();
+                        rowTo = rowTo > rowCount ? rowCount : rowTo;
+                        var msg = _this.dataContext.$localize("ListCtrl$$showingDataAnnouncement");
+                        msg = msg.replace("{rowFrom}", rowFrom.toString()).replace("{rowTo}", rowTo.toString()).replace("{rowCount}", rowCount.toString());
+                        sffw.safeWriteToAriaLiveRegion(msg);
                         _this.isLoading(false);
                     })
                         .catch(function (req) {
@@ -703,6 +711,7 @@ var sffw;
                             errorText += ': ' + oDataError.message.value;
                         }
                         _this.error(errorText);
+                        sffw.safeWriteToAriaLiveRegion(errorText);
                         _this.isLoading(false);
                     });
                 };
@@ -1257,4 +1266,13 @@ var sffw;
         return undefined;
     }
     sffw.extractEventHandlerFromApiArgs = extractEventHandlerFromApiArgs;
+})(sffw || (sffw = {}));
+var sffw;
+(function (sffw) {
+    function safeWriteToAriaLiveRegion(message) {
+        if (message && window.sf.accessibility && window.sf.accessibility.ariaLiveRegion) {
+            window.sf.accessibility.ariaLiveRegion.append(message);
+        }
+    }
+    sffw.safeWriteToAriaLiveRegion = safeWriteToAriaLiveRegion;
 })(sffw || (sffw = {}));

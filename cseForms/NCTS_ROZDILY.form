@@ -259,9 +259,6 @@
                             <CssClassConditional>
                               <ClassName value="fullWidth" />
                             </CssClassConditional>
-                            <CssClassConditional>
-                              <ClassName value="displayFlex" />
-                            </CssClassConditional>
                           </CssClass>
                         </Panel>
                         <Panel>
@@ -385,9 +382,6 @@
                                                 </CssClassConditional>
                                                 <CssClassConditional>
                                                   <ClassName value="fullWidth" />
-                                                </CssClassConditional>
-                                                <CssClassConditional>
-                                                  <ClassName value="displayFlex" />
                                                 </CssClassConditional>
                                               </CssClass>
                                             </Panel>
@@ -624,9 +618,6 @@
                                                 <CssClassConditional>
                                                   <ClassName value="fullWidth" />
                                                 </CssClassConditional>
-                                                <CssClassConditional>
-                                                  <ClassName value="displayFlex" />
-                                                </CssClassConditional>
                                               </CssClass>
                                             </Panel>
                                           </Content>
@@ -844,9 +835,6 @@
                                                 </CssClassConditional>
                                                 <CssClassConditional>
                                                   <ClassName value="fullWidth" />
-                                                </CssClassConditional>
-                                                <CssClassConditional>
-                                                  <ClassName value="displayFlex" />
                                                 </CssClassConditional>
                                               </CssClass>
                                             </Panel>

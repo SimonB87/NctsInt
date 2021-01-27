@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBTransitTermination_SF" />
+  <Caption value="FBTransitTermination_SF" />
+  <MtsImportOptions.MTS.ID value="/FBTransitTermination_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+</DataEntity>

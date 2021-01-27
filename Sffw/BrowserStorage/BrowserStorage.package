@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="BrowserStorage.83565645179f49c7aca5e53363dc7176" />
+  <Version value="1.0.0" />
+  <Items>
+    <PackageItem Src="BrowserStorage.apiObjectManifest" />
+    <ResourceItem ResourceName="browserStorage.js" Action="None" OutputFileName="browserStorage.js" Src="browserStorage.js" />
+  </Items>
+</Package>

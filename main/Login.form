@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="Login" />
+  <Content>
+    <Panel>
+      <Name value="LoginPnl_parent" />
+      <Orientation value="Horizontal" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="LoginPnl" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="50%" />
+          <Children>
+            <Panel>
+              <Name value="panel1" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="500px" />
+              <Children>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Panel>
+                      <Name value="panel4" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="panel8" />
+                          <Orientation value="Vertical" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="100%" />
+                          <Children>
+                            <Label>
+                              <Name value="label12" />
+                              <Heading value="h2" />
+                              <Panel.Height value="#" />
+                              <Panel.HorizontalAlignment value="Center" />
+                              <Panel.VerticalAlignment value="Bottom" />
+                              <Panel.Width value="100%" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="localized.NCTSMontenegro" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-label" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Label>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <GroupBox>
+                          <Name value="grp_Authentication" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="100%" />
+                          <Content>
+                            <Panel>
+                              <Name value="panel7" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <Panel>
+                                  <Name value="panel6" />
+                                  <Orientation value="Horizontal" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <Panel>
+                                      <Name value="panel5" />
+                                      <Orientation value="Vertical" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Children>
+                                        <Panel>
+                                          <Name value="panel3" />
+                                          <Orientation value="Horizontal" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="*" />
+                                          <Children>
+                                            <ReferenceCombo>
+                                              <Name value="cmb_Organisation" />
+                                              <CaptionPosition value="Top" />
+                                              <DisplayMember value="co" />
+                                              <IsRequiredMarkVisible value="True" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="250px" />
+                                              <ReferenceList reference="~offices" />
+                                              <Bindings>
+                                                <Binding SourceProperty="Data" Expression="organisation" />
+                                                <Binding SourceProperty="Caption" Expression="organisation.caption()" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-referencecombo" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-selectCOList" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </ReferenceCombo>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                        <Panel>
+                                          <Name value="panel12" />
+                                          <Orientation value="Vertical" />
+                                          <Panel.Height value="#" />
+                                          <Panel.Width value="*" />
+                                          <Children>
+                                            <Button>
+                                              <Name value="changeCO_btn" />
+                                              <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
+                                              <Panel.Width value="250px" />
+                                              <OnClick>
+                                                <ActionEvent ReferencedAction="~handler_button111_OnClick" />
+                                              </OnClick>
+                                              <Bindings>
+                                                <Binding SourceProperty="Caption" Expression="localized.ChangeCO" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-button" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-selectCO" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Button>
+                                            <Button>
+                                              <Name value="logout_btn" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="250px" />
+                                              <OnClick>
+                                                <ActionEvent ReferencedAction="+GlobalActions.keyCloakLogout" />
+                                              </OnClick>
+                                              <Bindings>
+                                                <Binding SourceProperty="Caption" Expression="localized.Logout" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-button" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                                <CssClassConditional>
+                                                  <ClassName value="btn-secondary" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Button>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Children>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-panel" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </Panel>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="disable-autologin" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Condition" Expression="globals.needRelogin" />
+                                  </Bindings>
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.ChangeCO" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-groupbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </GroupBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="absoluteCenter" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="box" />
+                  <Condition value="False" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="gms" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Reference>
+          <Name value="organisation" />
+          <Caption value="Organisation" />
+          <IsRequired value="True" />
+          <Children>
+            <Attribute>
+              <Name value="co" />
+              <Caption value="Co" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="selectedCO" />
+          <Caption value="Selected CO" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isChange" />
+          <Caption value="Is change" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="fromDeeplink" />
+          <Caption value="From deeplink" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isFalseOrDefault(form.fromDeeplink) then
+	form.selectedCO = actions.browserStorageCheck()
+endif
+
+//isChange - after click on the button changeCO in UI
+if (isTrue(form.isChange)) then
+	form.actions.fillOffices()
+//not isChange - client	init
+else
+	if (form.selectedCO = defaultString()) then
+		//if user has just 1 office - set this 1 office as the selected one
+		if (globals.userData.offices.count() = 1) then
+			form.actions.setCOtoOnlyAvailableOne()
+		//if user has more than 1 office - fill codelist offices
+		else
+			if (globals.userData.offices.count() = 0) then
+				navigation.main.ErrorForm.go("Permissions")
+			else
+				form.actions.fillOffices()
+			endif
+		endif
+	//if so, set stored CO as selected one
+	else
+		globals.selectedCO.fromJson(form.selectedCO)
+		apiobjects.CIC.setHeader("X-CustomsOffice", globals.selectedCO.Code)
+		navigation.main.DecList.go()
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="fillOffices" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+form.apiobjects.offices.fillFromJson(globals.userData.offices.toJson())
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button111_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.organisation.hasValue() then
+
+	globals.busyIndicatorIsRunning = true
+	var CO = apiobjects.CustomsOffices.getItemByStringColumnAsync("Code", form.organisation.co, getDate(), true)
+	globals.busyIndicatorIsRunning = false
+	
+	if CO.isFound() then
+		globals.selectedCO.fromJson(CO.getJsonString())
+		apiobjects.browserStorage1.setItem("selectedCO", CO.getJsonString())
+		apiobjects.CIC.setHeader("X-CustomsOffice", globals.selectedCO.Code)
+		navigation.main.DecList.go()
+	else
+		//Todo - nenajdu CO v customs offices, co s tim?
+		notificationsCtrl.addError("Invalid CO")
+	endif
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setCOtoOnlyAvailableOne" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+var CO = apiobjects.CustomsOffices.getItemByStringColumnAsync("Code", globals.userData.offices.selectFirst().co, getDate(), true)
+globals.busyIndicatorIsRunning = false
+
+if CO.isFound() then
+	form.actions.setSelectedCO(CO.getJsonString())
+	apiobjects.CIC.setHeader("X-CustomsOffice", globals.selectedCO.Code)
+	navigation.main.DecList.go()
+else
+	//Todo - co kdyz vyberu nejakej CO, ktery neni v customs offices?
+	notificationsCtrl.addError("Invalid CO")
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setSelectedCO" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.selectedCO.fromJson(COjson)
+apiobjects.browserStorage1.setItem("selectedCO", COjson)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="COjson" />
+              <Caption value="C ojson" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="offices" />
+      <autoLoad value="False" />
+      <clientDescriptionColumnName value="co" />
+      <createDescriptionOnClient value="No" />
+      <name value="offices" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="co" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.Login" />
+  </Bindings>
+</Form>

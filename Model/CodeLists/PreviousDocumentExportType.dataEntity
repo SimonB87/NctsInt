@@ -47,6 +47,18 @@
         </AttributeType>
       </DeclaredType>
     </Attribute>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="PreviousDocumentExportType/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
     <Computed>
       <Name value="_description" />
       <Caption value="_ description" />

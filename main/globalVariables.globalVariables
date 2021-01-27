@@ -6,15 +6,45 @@
     <Complex>
       <Name value="Errors" />
       <Caption value="Errors" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Errors" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Collection>
           <Name value="serverValidationErrors" />
           <Caption value="Server validation errors" />
           <DataContextParameter.IsInput value="True" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="Reason" />
               <Caption value="Reason" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Reason" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="ErrorDescription" />
+              <Caption value="Error description" />
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
@@ -25,6 +55,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ErrorType" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Pointer" />
@@ -32,6 +72,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Pointer" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Computed>
               <Name value="FocusTo" />
@@ -42,20 +92,53 @@
                   <BaseType value="String" />
                 </ResultType>
               </Expression>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Computed>
           </Children>
         </Collection>
         <Complex>
           <Name value="serverValidationComplex" />
           <Caption value="Server validation complex" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Collection>
               <Name value="MessageCheckError" />
               <Caption value="Message check error" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.MessageCheckError" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="ErrorType" />
                   <Caption value="Error type" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.ErrorType" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Attribute>
+                  <Name value="ErrorDescription" />
+                  <Caption value="Error description" />
                   <DeclaredType>
                     <AttributeType />
                   </DeclaredType>
@@ -66,6 +149,16 @@
                   <DeclaredType>
                     <AttributeType />
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Pointer" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Attribute>
                   <Name value="Reason" />
@@ -73,6 +166,16 @@
                   <DeclaredType>
                     <AttributeType />
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Reason" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
               </Children>
             </Collection>
@@ -81,6 +184,9 @@
         <Collection>
           <Name value="clientValidationErrors" />
           <Caption value="Client validation errors" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="Message" />
@@ -88,6 +194,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Message" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Pointer" />
@@ -95,6 +211,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Pointer" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Type" />
@@ -102,6 +228,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Type" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Computed>
               <Name value="FocusTo" />
@@ -112,23 +248,27 @@
                   <BaseType value="String" />
                 </ResultType>
               </Expression>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Computed>
           </Children>
         </Collection>
       </Children>
     </Complex>
-    <Attribute>
-      <Name value="isExpandedCollapsibleStickyPnl" />
-      <Caption value="Is expanded collapsible sticky pnl" />
-      <DeclaredType>
-        <AttributeType>
-          <BaseType value="Bool" />
-        </AttributeType>
-      </DeclaredType>
-    </Attribute>
     <Complex>
       <Name value="serverConfig" />
       <Caption value="Server config" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ServerConfig" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="TPendDate" />
@@ -138,10 +278,30 @@
               <BaseType value="Date" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="communicationLanguageAtDeparture" />
           <Caption value="Communication language at departure" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.CommunicationLanguageAtDeparture" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="language" />
+          <Caption value="Language" />
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
@@ -156,14 +316,37 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Complex>
       <Name value="loginResponse" />
       <Caption value="Login response" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.LoginResponse" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Complex>
           <Name value="Environment" />
           <Caption value="Environment" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Environment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="ProjectDisplayName" />
@@ -171,6 +354,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ProjectDisplayName" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="ProjectName" />
@@ -178,12 +371,32 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ProjectName" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
         <Complex>
           <Name value="UserIdentity" />
           <Caption value="User identity" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.UserIdentity" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="UserName" />
@@ -191,10 +404,30 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.UserName" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Collection>
               <Name value="UserRole" />
               <Caption value="User role" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.UserRole" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="Name" />
@@ -202,10 +435,30 @@
                   <DeclaredType>
                     <AttributeType />
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Name" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Collection>
                   <Name value="Organization" />
                   <Caption value="Organization" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Organization" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="Value" />
@@ -213,6 +466,16 @@
                       <DeclaredType>
                         <AttributeType />
                       </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Value" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                   </Children>
                 </Collection>
@@ -221,6 +484,16 @@
             <Collection>
               <Name value="Organization" />
               <Caption value="Organization" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Organization" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="Value" />
@@ -228,6 +501,16 @@
                   <DeclaredType>
                     <AttributeType />
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Value" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
               </Children>
             </Collection>
@@ -238,6 +521,9 @@
     <Complex>
       <Name value="globalUiState" />
       <Caption value="Global ui state" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="userModeLabel" />
@@ -245,6 +531,9 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="lastSelectedOffices" />
@@ -252,6 +541,9 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="isCustomsOfficeOfDepartureActive" />
@@ -261,6 +553,9 @@
               <BaseType value="Bool" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="isCustomsOfficeOfDestinationActive" />
@@ -270,6 +565,9 @@
               <BaseType value="Bool" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="isCustomsOfficeOfTransitActive" />
@@ -279,10 +577,25 @@
               <BaseType value="Bool" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
-          <Name value="isRequestedCustomsOfficeActive" />
-          <Caption value="Is requested customs office active" />
+          <Name value="isCustomsOfficeOfIncidentRegistrationActive" />
+          <Caption value="Is customs office of incident registration active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="isCustomsOfficeOfExitActive" />
+          <Caption value="Is customs office of exit active" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -290,8 +603,608 @@
           </DeclaredType>
         </Attribute>
         <Attribute>
-          <Name value="isQueryMovementInformationActive" />
-          <Caption value="Is query movement information active" />
+          <Name value="listState" />
+          <Caption value="List state" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="visibleColumns" />
+          <Caption value="Visible columns" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[globals.globalUiState.hasValue() ?
+isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfDeparture") ? localized.COOfDeparture :
+isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfDestination") ? localized.COOfDestination :
+isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfIncidentRegistration") ? localized.COOfIncidentRegistration :
+isTrue(globals.globalUiState.lastSelectedOffices = "customsOfficeOfTransit") ? localized.COOfTransit :
+localized.COOfExit
+: ""]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="navTree" />
+      <Caption value="Nav tree" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Complex>
+          <Name value="COoDep" />
+          <Caption value="CO o DEP" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="isCustomsOfficeOfDepartureAllActive" />
+              <Caption value="Is customs office of departure all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isSubmittedActive" />
+              <Caption value="Is submitted active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isPrelodgedActive" />
+              <Caption value="Is prelodged active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isClearanceInteruptedActive" />
+              <Caption value="Is clearance interupted active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isAcceptedActive" />
+              <Caption value="Is accepted active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isFallbackActive" />
+              <Caption value="Is fallback active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderControlActive" />
+              <Caption value="Is under control active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isCancelledActive" />
+              <Caption value="Is cancelled active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderReleaseActive" />
+              <Caption value="Is under release active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isGuaranteeUnderRegistrationActive" />
+              <Caption value="Is guarantee under registration active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isGuaranteeUnderAmendmentActive" />
+              <Caption value="Is guarantee under amendment active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isReleasedActive" />
+              <Caption value="Is released active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isArrivedActive" />
+              <Caption value="Is arrived active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isWrittenOffActive" />
+              <Caption value="Is written off active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="COoDes" />
+          <Caption value="CO of Des" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="isCustomsOfficeOfDestinationAllActive" />
+              <Caption value="Is customs office of destination all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isAARCreatedActive" />
+              <Caption value="Is AAR created active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsPresentedActive" />
+              <Caption value="Is goods presented active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isRequestedActive" />
+              <Caption value="Is requested active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnloadingActive" />
+              <Caption value="Is unloading active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderControlActive" />
+              <Caption value="Is under control active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isWaitingForDiscrepanciesActive" />
+              <Caption value="Is waiting for discrepancies active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderRecoveryActive" />
+              <Caption value="Is under recovery active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isGoodsReleasedActive" />
+              <Caption value="Is goods released active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderEnquiryVisible" />
+              <Caption value="Is under enquiry visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isDocumentsRegistrationActive" />
+              <Caption value="Is documents registration active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isArrivedActive" />
+              <Caption value="Is arrived active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isInvalidatedActive" />
+              <Caption value="Is invalidated active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isDiversionRejectedActive" />
+              <Caption value="Is diversion rejected active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="COoInc" />
+          <Caption value="CO of Inc" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="isCustomsOfficeOfIncidentRegistrationAllActive" />
+              <Caption value="Is customs office of incident registration all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="COoTra" />
+          <Caption value="C oo tra" />
+          <Children>
+            <Attribute>
+              <Name value="isCustomsOfficeOfTransitAllActive" />
+              <Caption value="Is customs office of transit all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isWaitingForPresentationTRAactive" />
+              <Caption value="Is waiting for presentation TR aactive" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isATRrequestedActive" />
+              <Caption value="Is AT rrequested active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isATRrejectedActive" />
+              <Caption value="Is AT rrejected active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isArrivedActive" />
+              <Caption value="Is arrived active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isInvalidatedActive" />
+              <Caption value="Is invalidated active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isPresentedAtCOoTraActive" />
+              <Caption value="Is presented at C oo tra active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderControlActive" />
+              <Caption value="Is under control active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isMovementStoppedActive" />
+              <Caption value="Is movement stopped active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isMovementDivertedActive" />
+              <Caption value="Is movement diverted active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isCrossingBorderActive" />
+              <Caption value="Is crossing border active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isRecoveryVisible" />
+              <Caption value="Is recovery visible" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="COoExit" />
+          <Caption value="C oo exit" />
+          <Children>
+            <Attribute>
+              <Name value="isCustomsOfficeOfExitAllActive" />
+              <Caption value="Is customs office of exit all active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isAXRcreatedActive" />
+              <Caption value="Is AX rcreated active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isArrivedActive" />
+              <Caption value="Is arrived active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isInvalidatedActive" />
+              <Caption value="Is invalidated active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isPresentedActive" />
+              <Caption value="Is presented active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isUnderControlActive" />
+              <Caption value="Is under control active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isMovementStoppedActive" />
+              <Caption value="Is movement stopped active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="isMovementLeftActive" />
+              <Caption value="Is movement left active" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="isRequestedCustomsOfficeAllActive" />
+          <Caption value="Is requested customs office all active" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="isCustomsOfficeOfDepartureAllActive" />
+          <Caption value="Is customs office of departure all active" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -299,8 +1212,17 @@
           </DeclaredType>
         </Attribute>
         <Attribute>
-          <Name value="isValidationsVisible" />
-          <Caption value="Is validations visible" />
+          <Name value="isCustomsOfficeOfDestinatoinAll" />
+          <Caption value="Is customs office of destinatoin all" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="isQueryMovementInformationAllActive" />
+          <Caption value="Is query movement information all active" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -315,6 +1237,9 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="DataChanged" />
@@ -324,14 +1249,309 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
-      <Name value="isLimitedWidth" />
-      <Caption value="Is limited width" />
+      <Name value="notificationsStatus" />
+      <Caption value="Notifications status" />
       <DeclaredType>
         <AttributeType>
           <BaseType value="Bool" />
         </AttributeType>
+      </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData />
+      </PropertyLocalizationData.PropertyLocalizations>
+    </Attribute>
+    <Attribute>
+      <Name value="isNotColorizeMode" />
+      <Caption value="Is not colorize mode" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+      <OnChange>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_isNotColorizeMode_OnChange" />
+      </OnChange>
+    </Attribute>
+    <Attribute>
+      <Name value="isWideScreen" />
+      <Caption value="Is not wide screen" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+      <OnChange>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_isWideScreen_OnChange" />
+      </OnChange>
+    </Attribute>
+    <Attribute>
+      <Name value="isTest" />
+      <Caption value="Is test" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="isUserInfoVisible" />
+      <Caption value="Is user info visible" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="isSettingsVisible" />
+      <Caption value="Is settings visible" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="needRelogin" />
+      <Caption value="Need relogin" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="isMeLang" />
+      <Caption value="Is me lang" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="isEnLang" />
+      <Caption value="Is en lang" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="Bool" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Complex>
+      <Name value="userData" />
+      <Caption value="User data" />
+      <Children>
+        <Attribute>
+          <Name value="userName" />
+          <Caption value="User name" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="organisation" />
+          <Caption value="Organisation" />
+          <Children>
+            <Reference>
+              <Name value="_code" />
+              <Caption value="_ code" />
+              <Children>
+                <Attribute>
+                  <Name value="code" />
+                  <Caption value="Code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Attribute>
+                  <Name value="description" />
+                  <Caption value="Description" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+                <Computed>
+                  <Name value="_description" />
+                  <Caption value="_ description" />
+                  <Expression IsValid="True">
+                    <ExpressionText><![CDATA[(code.hasValue() and description.hasValue()) 
+	? code + " - " + description 
+	: code.hasValue()
+		?	code
+		:	description.hasValue() 
+			?	description
+			:	defaultString()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </Expression>
+                </Computed>
+              </Children>
+            </Reference>
+            <Attribute>
+              <Name value="CODescription" />
+              <Caption value="CO description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Collection>
+              <Name value="applRole" />
+              <Caption value="Appl role" />
+              <Children>
+                <Attribute>
+                  <Name value="applRoleCode" />
+                  <Caption value="Appl role code" />
+                  <DeclaredType>
+                    <AttributeType />
+                  </DeclaredType>
+                </Attribute>
+              </Children>
+            </Collection>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="LanguageCode" />
+          <Caption value="Language code" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Collection>
+          <Name value="roles" />
+          <Caption value="Roles" />
+          <Children>
+            <Attribute>
+              <Name value="role" />
+              <Caption value="Role" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="offices" />
+          <Caption value="Offices" />
+          <Children>
+            <Attribute>
+              <Name value="co" />
+              <Caption value="Co" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="Description" />
+              <Caption value="Description" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Collection>
+        <Complex>
+          <Name value="jwt" />
+          <Caption value="Jwt" />
+          <Children>
+            <Attribute>
+              <Name value="name" />
+              <Caption value="Name" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="hasRole" />
+          <Caption value="Has role" />
+          <Children>
+            <Attribute>
+              <Name value="BOR" />
+              <Caption value="BOR" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="EXP" />
+              <Caption value="EXP" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="INT" />
+              <Caption value="INT" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="READ" />
+              <Caption value="READ" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="SDEP" />
+              <Caption value="SDEP" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="SDES" />
+              <Caption value="SDES" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+      </Children>
+    </Complex>
+    <Attribute>
+      <Name value="appVersion" />
+      <Caption value="App version" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Reference>
+      <Name value="selectedCO" />
+      <Caption value="Selected CO" />
+      <Children>
+        <Include>
+          <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.CustomsOffices" />
+        </Include>
+      </Children>
+    </Reference>
+    <Attribute>
+      <Name value="_serviceUrl" />
+      <Caption value="_ service url" />
+      <DeclaredType>
+        <AttributeType />
       </DeclaredType>
     </Attribute>
   </Children>

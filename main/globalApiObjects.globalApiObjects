@@ -25,68 +25,52 @@
       <routes>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignment" />
-          <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,GUID?" />
+          <params value="mode,sequenceNumber,GUID?,VersionGUID?" />
           <url value="HouseConsignment" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.ConsignmentList" />
-          <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,GUID?" />
+          <params value="mode,sequenceNumber,GUID?,VersionGUID?" />
           <url value="ConsignmentList" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.ConsignmentItem" />
-          <masterPage reference="+UiParts.Master" />
-          <params value="mode,sequenceNumber,goodsItemNumber,GUID?" />
+          <params value="mode,sequenceNumber,goodsItemNumber,GUID?,VersionGUID?" />
           <url value="ConsignmentItem" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.HouseConsignmentList" />
-          <masterPage reference="+UiParts.Master" />
-          <params value="mode,errors?,GUID?" />
+          <params value="mode,errors?,GUID?,VersionGUID?" />
           <url value="HouseConsignmentList" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.Header" />
-          <masterPage reference="+UiParts.Master" />
-          <params value="mode,GUID?" />
+          <params value="mode,GUID?,VersionGUID?" />
           <url value="Header" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
-          <form reference="+UiParts.Home" />
-          <masterPage reference="+UiParts.Master" />
-          <url value="Home" />
-        </UrlRouteCfg>
-        <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.Accept" />
-          <masterPage reference="+UiParts.Master" />
           <params value="mode,GUID" />
           <url value="Accept" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.Arrival" />
-          <masterPage reference="+UiParts.Master" />
           <url value="Arrival" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.FallbackRegistration" />
-          <masterPage reference="+UiParts.Master" />
           <url value="FallbackRegistration" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.CheckFallback" />
-          <masterPage reference="+UiParts.Master" />
           <url value="CheckFallback" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.IncidentCheck" />
-          <masterPage reference="+UiParts.Master" />
           <url value="IncidentCheck" />
         </UrlRouteCfg>
         <UrlRouteCfg identity="UrlRouter.69a71809c45249cbb2999d13bb9100c0">
           <form reference="+UiParts.IncidentRegistration" />
-          <masterPage reference="+UiParts.Master" />
           <url value="IncidentRegistration" />
         </UrlRouteCfg>
       </routes>
@@ -103,7 +87,7 @@
     </ServerConnection>
     <ConfigValue>
       <Name value="appVersion" />
-      <Value value="0.4.0" />
+      <Value value="1.0.6" />
     </ConfigValue>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="DeclarationTypeAdditional" />
@@ -238,9 +222,9 @@
       </columns>
     </Codelist>
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
-      <Name value="CountryCodesWithAddress" />
+      <Name value="CountryCodesForAddress" />
       <autoLoad value="False" />
-      <name value="CountryCodesWithAddress" />
+      <name value="CountryCodesForAddress" />
       <server reference="~CIC" />
       <columns>
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
@@ -335,6 +319,10 @@
     </Codelist>
     <NotificationsCtrl identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
       <Name value="notificationsCtrl" />
+      <ordering value="FirstTop" />
+      <OnNotificationsChanged>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_notificationsCtrl_OnNotificationsChanged" />
+      </OnNotificationsChanged>
     </NotificationsCtrl>
     <ValidatorsFilter identity="ValidatorsFilter.8deb114ae09941fba01dc42d318a6c2f">
       <Name value="validatorsFilter1" />
@@ -566,6 +554,8 @@
     <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
       <Name value="CountryWithoutZip_CL505" />
       <autoLoad value="False" />
+      <clientDescriptionColumnName value="Code" />
+      <createDescriptionOnClient value="No" />
       <name value="CountryWithoutZip" />
       <server reference="~CIC" />
       <columns>
@@ -574,8 +564,9 @@
           <columnRole value="Key" />
         </CodelistColumn>
         <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
-          <columnName value="Description" />
+          <columnName value="ValidFrom" />
           <columnRole value="Description" />
+          <dataType value="datetime" />
         </CodelistColumn>
       </columns>
     </Codelist>
@@ -888,5 +879,396 @@
         </CodelistColumn>
       </columns>
     </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="GuaranteeTypeWithReference" />
+      <autoLoad value="False" />
+      <name value="GuaranteeTypeWithReference" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CustomsOffices" />
+      <name value="CustomsOffices" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidFrom" />
+          <columnRole value="ValidityStart" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="ValidTo" />
+          <columnRole value="ValidityEnd" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="NCTS_GeneratedConstrainsDescription" />
+      <autoLoad value="False" />
+      <name value="NCTS_GeneratedConstrainsDescription" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Type" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="InvalidGuaranteeReason" />
+      <autoLoad value="False" />
+      <name value="InvalidGuaranteeReason" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Nationality" />
+      <autoLoad value="False" />
+      <name value="Nationality" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <BrowserStorage identity="BrowserStorage.83565645179f49c7aca5e53363dc7176">
+      <Name value="browserStorage1" />
+    </BrowserStorage>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CrossingBorderType" />
+      <autoLoad value="False" />
+      <name value="CrossingBorderType" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+          <dataType value="integer" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="CountryCodesCustomsOfficeLists" />
+      <autoLoad value="False" />
+      <name value="CountryCodesCustomsOfficeLists" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AllocationResult" />
+      <autoLoad value="False" />
+      <name value="AllocationResult" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RARequestRole_enum" />
+      <autoLoad value="False" />
+      <name value="RARequestRole_enum" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="MessageTypes" />
+      <autoLoad value="False" />
+      <name value="MessageTypes" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RiskAnalysisType" />
+      <autoLoad value="False" />
+      <name value="RiskAnalysisType" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RiskLevel" />
+      <autoLoad value="False" />
+      <name value="RiskLevel" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RiskAnalysisResult" />
+      <autoLoad value="False" />
+      <name value="RiskAnalysisResult" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RiskAnIndicator" />
+      <autoLoad value="False" />
+      <name value="RiskAnIndicator" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="RiskAreaCode" />
+      <autoLoad value="False" />
+      <name value="RiskAreaCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ControlRecomendCode" />
+      <autoLoad value="False" />
+      <name value="ControlRecomendCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ControlResultCodeDestination" />
+      <autoLoad value="False" />
+      <name value="ControlResultCodeDestination" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="NotificationType" />
+      <name value="NotificationType" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="IncidentCode" />
+      <autoLoad value="False" />
+      <name value="IncidentCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="QualifierOfIdentificationIncident" />
+      <autoLoad value="False" />
+      <name value="QualifierOfIdentificationIncident" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="MovementQueryRejectionReasonCode" />
+      <autoLoad value="False" />
+      <name value="MovementQueryRejectionReasonCode" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="StateAtOfficeOfDeparture" />
+      <autoLoad value="False" />
+      <name value="StateAtOfficeOfDeparture" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AarRejectionReason" />
+      <autoLoad value="False" />
+      <name value="AarRejectionReason" />
+      <server reference="~CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <KeycloakAdapter identity="KeycloakAdapter.d4ad46533a0241948e42767440c362cc">
+      <Name value="Keycloak" />
+      <authServerUrl value="http://172.20.10.122:8090/auth" />
+      <client value="NCTS Internal Client" />
+      <realm value="IAMS" />
+      <onSessionExpired>
+        <ActionEvent ReferencedAction="+GlobalActions.handler_Keycloak_onSessionExpired" />
+      </onSessionExpired>
+    </KeycloakAdapter>
   </ApiObjects>
 </GlobalApiObjects>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="ListColumnSelector" />
+  <Generator value="listColumnSelector.js" />
+  <UiIcon value="listColumnSelector.png" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IListColumnSelector" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Properties>
+    <PropertyManifest>
+      <Name value="controller" />
+      <IsRequired value="True" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IListCtrl" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

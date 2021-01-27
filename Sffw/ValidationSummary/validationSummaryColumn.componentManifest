@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="validationSummaryColumn" />
+  <Generator value="&lt;validationSummaryColumn&gt;" />
+  <Type value="Component" />
+  <UiCategory value="(hidden)" />
+  <Properties>
+    <PropertyManifest>
+      <Name value="propertyName" />
+      <IsRequired value="True" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columnCaption" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columnWidth" />
+      <Type value="Length" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columnRole" />
+      <Type value="string" />
+      <UiEditor value="list/pointer" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

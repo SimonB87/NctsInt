@@ -17,10 +17,6 @@
       <UiCaption value="Form url alias" />
     </PropertyManifest>
     <PropertyManifest>
-      <Name value="masterPage" />
-      <Type value="ScreenFactory.Data.Model.Ui.Form" />
-    </PropertyManifest>
-    <PropertyManifest>
       <Name value="params" />
       <Type value="string" />
     </PropertyManifest>

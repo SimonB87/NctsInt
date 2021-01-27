@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBNotRelease_SF" />
+  <Caption value="FBNotRelease_SF" />
+  <MtsImportOptions.MTS.ID value="/FBNotRelease_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBNotRelease_SF" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Reference>
+          <Name value="noReleaseMotivationCode" />
+          <Caption value="No release motivation code" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/TransitOperation/noReleaseMotivationCode" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.NoReleaseMotivationCode" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.NoReleaseMotivation" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="noReleaseMotivationText" />
+          <Caption value="No release motivation text" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.NoReleaseMotivationTextContentType" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/TransitOperation/noReleaseMotivationText" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.NoReleaseMotivationText" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="ControlResult" />
+      <Caption value="Control Result" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/ControlResult" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ControlResult" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="date" />
+          <Caption value="Date" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/ControlResult/date" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Date" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Reference>
+          <Name value="code" />
+          <Caption value="Code" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/ControlResult/code" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Code" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.ControlResultCodeReleaseNotRelease" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="RN209">
+              <MtsImportOptions.MTS.ID value="RN209" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RN209"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(this.code.Code = "B1")]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="Decision" />
+      <Caption value="Decision" />
+      <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/Decision" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="administrativeNumber" />
+          <Caption value="Administrative number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBNotRelease_SF/Decision/administrativeNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[ -~]*" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[ -~]*$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

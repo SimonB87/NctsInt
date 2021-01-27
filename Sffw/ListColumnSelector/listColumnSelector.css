@@ -1,0 +1,149 @@
+.sffw-listcolumn-selector-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10050;
+}
+
+.sffw-listcolumn-selector {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    padding: 0;
+    display: table;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: white;
+    opacity: 1;
+    height: 380px;
+}
+
+.sffw-listcolumn-selector-button {
+    outline: medium none;
+    background-color: #5f7599;
+    color: white;
+    border: 0px solid transparent;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    padding: 6px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.sffw-listcolumn-selector-button:focus {
+    background-color: #134271;
+}
+
+.sffw-listcolumn-selector-button:active {
+    background-color: #1d1d1d;
+}
+
+.sffw-listcolumn-selector > div {
+    vertical-align: top;
+    border: 1px black solid;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-columns {
+    margin-top: 5px;
+    padding-top: 0.5rem;
+    display: table-cell;
+    width: 33%;
+    height: 100%;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-columns > span {
+    font-weight: bold;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-buttons {
+    margin-top: 5px;
+    padding: 2rem;
+    display: table-cell;
+    width: 33%;
+    height: 100%;
+}
+
+.sffw-listcolumn-selector ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 6px;
+    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    max-height: 380px;
+    overflow: auto;
+}
+
+.sffw-listcolumn-selector ul > li {
+    border: 1px solid lightgray;
+    background-color: #e6e6e6;
+    margin: 2px;
+    padding: 5px;
+    line-height: 1.5rem;
+    text-align: left;
+    display: table-row;
+    width: 100%;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-columns.columns-excluded ul > li {
+    display: inline-block;
+    margin: 0;
+}
+
+.sffw-listcolumn-selector > div.sffw-listcolumn-selector-buttons > button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    line-height: 150%;
+}
+
+.sffw-listcolumn-selector ul > li > label {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.sffw-listcolumn-selector ul > li > label > span {
+    padding-left: 1em;
+    vertical-align: bottom;
+}
+
+.sffw-listcolumn-selector ul > li > div > button {
+    display: block;
+    padding: 1px;
+}
+
+.sffw-listcolumn-selector-modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10040;
+    background-color: #000;
+}
+
+.sffw-listcolumn-selector-modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.sffw-listcolumn-selector-modal-backdrop.in {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+@media (min-width: 768px) {
+    .sffw-listcolumn-selector {
+        width: 768px;
+        height: 380px;
+        margin: 30px auto;
+    }
+}

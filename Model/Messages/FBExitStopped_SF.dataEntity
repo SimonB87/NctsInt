@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBExitStopped_SF" />
+  <Caption value="FBExitStopped_SF" />
+  <MtsImportOptions.MTS.ID value="/FBExitStopped_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="Decision" />
+      <Caption value="DECISION" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/Decision" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="customsOffice" />
+          <Caption value="Reference number of customs office making decision" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/Decision/customsOffice" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="8" />
+              <StrMinLength value="8" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[A-Z]{2}[A-Z0-9]{6}" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[A-Z]{2}[A-Z0-9]{6}$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="description" />
+          <Caption value="Description of decision" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.String_512" />
+          <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/Decision/description" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="CustomsOfficeOfExitTransit" />
+      <Caption value="Customs Office Of Exit Transit" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/CustomsOfficeOfExitTransit" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="referenceNumber" />
+          <Caption value="Reference number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBExitStopped_SF/CustomsOfficeOfExitTransit/referenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CustomsOfficeTransit" />
+            </Include>
+          </Children>
+        </Reference>
+      </Children>
+      <Validators>
+        <Validator Name="B2103">
+          <MtsImportOptions.MTS.ID value="B2103" />
+          <MtsImportOptions.MTS.Type value="rule-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["B2103"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[true /* IMPORTED RULE B2103 IF <Decisive Date> is GREATER than <TPendDate> 
+THEN 
+/ * /CustomsOfficeOfDestination = "R" OR
+/ * /CustomsOfficeOfTransit = "R" OR
+/ * /CustomsOfficeOfExitForTransit= "R" */]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Complex>
+  </Children>
+</DataEntity>

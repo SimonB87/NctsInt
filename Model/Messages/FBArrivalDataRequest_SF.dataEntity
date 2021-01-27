@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBArrivalDataRequest_SF" />
+  <Caption value="FBArrivalDataRequest_SF" />
+  <MtsImportOptions.MTS.ID value="/FBArrivalDataRequest_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBArrivalDataRequest_SF" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBArrivalDataRequest_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation2" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="TIRCarnetNumber" />
+          <Caption value="TIR Carnet number" />
+          <MtsImportOptions.MTS.ID value="/FBArrivalDataRequest_SF/TransitOperation/TIRCarnetNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <StrMaxLength value="12" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TIRCarnetNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="([1-9][0-9]{0,6}|(1[0-9]|2[0-4])[0-9]{0,6}|25000000|(X[A-Z]|[A-Z]X)(2[5-9]|[3-9][0-9]|[1-9][0-9][0-9])[0-9]{6})" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^([1-9][0-9]{0,6}|(1[0-9]|2[0-4])[0-9]{0,6}|25000000|(X[A-Z]|[A-Z]X)(2[5-9]|[3-9][0-9]|[1-9][0-9][0-9])[0-9]{6})$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBArrivalDataRequest_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="RNC01">
+              <MtsImportOptions.MTS.ID value="RNC01" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RNC01"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[((this.TIRCarnetNumber.isEmpty() AND this.MRN.isEmpty()) OR (this.TIRCarnetNumber.hasValue() AND this.MRN.hasValue())) ? false : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

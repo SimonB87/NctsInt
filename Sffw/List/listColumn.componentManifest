@@ -29,10 +29,29 @@
       <UiEditor value="list/string|integer|decimal|bool|date" />
     </PropertyManifest>
     <PropertyManifest>
+      <Name value="IsHtml" />
+      <Default value="false" />
+      <Type value="bool" />
+      <UiDescription value="If displayed data contain html" />
+    </PropertyManifest>
+    <PropertyManifest>
       <Name value="IsVisible" />
       <Default value="true" />
       <Type value="bool" />
       <UiCategory value="Appearance" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="UnderlyingColumnName" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Name of underlying data attribute if different than column name" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="UnderlyingDataType" />
+      <Type value="string" />
+      <UiCategory value="Common" />
+      <UiDescription value="Data type of underlying attribute if different than DataType" />
+      <UiEditor value="list/string|integer|decimal|bool|date" />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="ColumnWidth" />
@@ -71,6 +90,16 @@
       <Type value="ApiObject" />
       <UiCategory value="Filtering" />
       <UiEditor value="contract/IReferenceList" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="AlwaysInvisible" />
+      <Type value="bool" />
+      <UiDescription value="If set to true, column with IsVisible=false set at design time, will not be available to make visible by view settings component (in run time)" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="filterOptionSourceDisplayMember" />
+      <Type value="string" />
+      <UiCategory value="Filtering" />
     </PropertyManifest>
   </Properties>
 </ComponentManifest>

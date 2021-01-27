@@ -2,7 +2,7 @@
 <?data-format version="0.400"?>
 <Package IsComponentLib="True">
   <Identity value="ListGridViewSettings.13c6ca769c344553aaa727b591042920" />
-  <Version value="1.3.4" />
+  <Version value="1.3.5" />
   <Items>
     <PackageItem Src="viewSettings.componentManifest" />
     <PackageItem Src="localizations.packageLocalizations" />

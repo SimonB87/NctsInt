@@ -5,6 +5,16 @@
   <Caption value="FBDataRequest" />
   <MtsImportOptions.MTS.ID value="/FBDataRequest" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBDataRequest" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Attribute>
       <Name value="GUID" />
@@ -15,6 +25,16 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GUIDOfDeclaration" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="GUIDVersion" />
@@ -24,6 +44,16 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GUIDOfRequestedVersion" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="CompareWithPreviousVersion" />
@@ -35,6 +65,16 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CompareWithPreviousVersi13C5320F" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="ComparedVersionGUID" />
@@ -44,6 +84,16 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GUIDOfVersionBeingCompared" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
   </Children>
 </DataEntity>

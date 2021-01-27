@@ -2,7 +2,7 @@
 <?data-format version="0.400"?>
 <Package IsComponentLib="True">
   <Identity value="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc" />
-  <Version value="1.2.1" />
+  <Version value="1.5.0" />
   <Items>
     <PackageItem Src="NotificationsCtrl.apiObjectManifest" />
     <PackageItem Src="GrowlNotification.componentManifest" />

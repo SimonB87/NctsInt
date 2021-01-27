@@ -3,6 +3,16 @@
 <MetaType>
   <Name value="accept" />
   <Caption value="Accept" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.Accept" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <TypeSpec>
     <AttributeType>
       <BaseType value="Enum" />
@@ -11,11 +21,31 @@
           <Name value="accept" />
           <Caption value="Accept" />
           <Value value="accept" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Accept" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </AttributeEnumValue>
         <AttributeEnumValue>
           <Name value="notAccept" />
           <Caption value="Not accept" />
           <Value value="notAccept" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.NotAccept" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </AttributeEnumValue>
       </EnumValues>
     </AttributeType>

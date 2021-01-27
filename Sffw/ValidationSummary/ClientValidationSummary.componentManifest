@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ClientValidationSummary" />
+  <Generator value="clientValidationSummaryGenerator.js" />
+  <Type value="Control" />
+  <UiCaption value="Validation summary (client)" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="clientValidationSummary.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="errorSourceForm" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="errorSourceComponent" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="pointer" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="navigationTreeNode" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="validationRoot" />
+      <Bindable value="True" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.NamedDataChildWithChildren" />
+      <UiDescription value="Root of structure containing client validation errors" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="validationErrors" />
+      <Bindable value="OneWay" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+      <UiDescription value="Collection to which client validation errors from validationRoot are written." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorPointerMap" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IErrorPointerMap" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columns" />
+      <IsRequired value="True" />
+      <Type value="collection-validationSummaryColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorMessageAttName" />
+      <Default value="Message" />
+      <Type value="string" />
+      <UiCategory value="Attribute names" />
+      <UiDescription value="Name of string attribute in validationErrors, to which the error message will be propagated." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="pointerAttName" />
+      <Default value="Pointer" />
+      <Type value="string" />
+      <UiCategory value="Attribute names" />
+      <UiDescription value="Name of string attribute in validationErrors, to which the error pointer will be propagated." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="validatorTypeAttName" />
+      <Default value="Type" />
+      <Type value="string" />
+      <UiCategory value="Attribute names" />
+      <UiDescription value="Name of string attribute in validationErrors, to which the validator type will be propagated." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="conditionalCssClass" />
+      <Type value="collection-CssClassConditional" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

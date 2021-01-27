@@ -414,9 +414,6 @@
                                                               <ClassName value="{theme}-panel" />
                                                               <IsThemedStyle value="True" />
                                                             </CssClassConditional>
-                                                            <CssClassConditional>
-                                                              <ClassName value="displayFlex" />
-                                                            </CssClassConditional>
                                                           </CssClass>
                                                         </Panel>
                                                       </Children>
@@ -498,9 +495,6 @@
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>

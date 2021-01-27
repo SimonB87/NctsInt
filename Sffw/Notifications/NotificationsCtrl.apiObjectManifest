@@ -8,6 +8,40 @@
       <Name value="INotificationsCtrl" />
     </ImplementsContractManifest>
   </Contracts>
+  <Events>
+    <EventManifest>
+      <Name value="OnGrowlNotificationsToggle" />
+      <UiDescription value="Event is triggered, when growl notifications are set on/off" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="isOn" />
+          <BaseType value="Bool" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnPanelVisibilityChanged" />
+      <UiDescription value="Event is triggered, when NotificationPanel visibility has changed" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="isVisible" />
+          <BaseType value="Bool" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+    <EventManifest>
+      <Name value="OnNotificationsChanged" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="notificationCount" />
+          <BaseType value="Integer" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
   <Methods>
     <MethodManifest>
       <Name value="addInfo" />
@@ -67,6 +101,17 @@
           <Name value="isOn" />
           <BaseType value="Bool" />
           <UiDescription value="By default, growl notifications are turned on until setGrowlNotificationsOn(false) is called." />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setPanelVisibility" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="isVisible" />
+          <BaseType value="Bool" />
+          <UiDescription value="Set visibility of NotificationPanel, that is  bound to the same NotificationCtrl." />
         </ParameterManifest>
       </Parameters>
     </MethodManifest>

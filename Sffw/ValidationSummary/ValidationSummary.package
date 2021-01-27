@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445" />
+  <Version value="1.1.0" />
+  <Items>
+    <PackageItem Src="ServerValidationSummary.componentManifest" />
+    <PackageItem Src="ClientValidationSummary.componentManifest" />
+    <ResourceItem ResourceName="validationSummary.js" LinkerAction="Script" OutputFileName="validationSummary.js" Src="validationSummary.js" />
+    <ResourceItem ResourceName="validationSummary.css" LinkerAction="Css" OutputFileName="validationSummary.css" Src="validationSummary.css" />
+    <PackageItem Src="validationSummaryColumn.componentManifest" />
+    <ResourceItem ResourceName="serverValidationSummaryGenerator.js" Action="None" OutputFileName="serverValidationSummaryGenerator.js" Src="serverValidationSummaryGenerator.js" />
+    <ResourceItem ResourceName="clientValidationSummaryGenerator.js" Action="None" OutputFileName="clientValidationSummaryGenerator.js" Src="clientValidationSummaryGenerator.js" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <ResourceItem ResourceName="clientValidationSummary.png" Action="None" OutputFileName="clientValidationSummary.png" Src="clientValidationSummary.png" />
+    <ResourceItem ResourceName="serverValidationSummary.png" Action="None" OutputFileName="serverValidationSummary.png" Src="serverValidationSummary.png" />
+  </Items>
+</Package>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBLoadTCDBin_SF" />
+  <Caption value="FBLoadTCDBin_SF" />
+  <MtsImportOptions.MTS.ID value="/FBLoadTCDBin_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBLoadTCDBin_SF" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Attribute>
+      <Name value="content" />
+      <Caption value="content" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBLoadTCDBin_SF/content" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Content" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+    </Attribute>
+  </Children>
+</DataEntity>

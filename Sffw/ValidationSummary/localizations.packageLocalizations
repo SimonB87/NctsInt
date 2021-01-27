@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="showFormElement">
+      <Values>
+        <LocaleValue Lang="en" Value="Show element on the form" />
+        <LocaleValue Lang="cs" Value="Ukázat prvek na formuláři" />
+        <LocaleValue Lang="fi" Value="Näytä elementti lomakkeen" />
+        <LocaleValue Lang="sv" Value="Visa element i formuläret" />
+        <LocaleValue Lang="sr" Value="Prikaži element u obrascu" />
+        <LocaleValue Lang="me" Value="Prikaži element u obrascu" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

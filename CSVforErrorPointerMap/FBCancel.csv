@@ -1,0 +1,5 @@
+"TransitOperation","${L_Model$$TransitOperation}"
+"TransitOperation/MRN","${L_Model$$TransitOperation} > ${MRN}"
+"Decision","${L_Model$$Decision}"
+"Decision/description","${L_Model$$Decision} > ${L_Model$$DescriptionOfDecision}"
+"Decision/administrativeNumber","${L_Model$$Decision} > ${L_Model$$AdministrativeNumber}"

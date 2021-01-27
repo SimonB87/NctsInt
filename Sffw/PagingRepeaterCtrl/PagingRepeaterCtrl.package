@@ -2,7 +2,7 @@
 <?data-format version="0.400"?>
 <Package IsComponentLib="True">
   <Identity value="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4" />
-  <Version value="1.1.6" />
+  <Version value="2.3.1" />
   <Items>
     <PackageItem Src="PagingRepeaterCtrl.componentManifest" />
     <ResourceItem ResourceName="pagingRepeaterCtrl.js" LinkerAction="Script" OutputFileName="pagingRepeaterCtrl.js" Src="pagingRepeaterCtrl.js" />

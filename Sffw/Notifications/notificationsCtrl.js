@@ -6,11 +6,35 @@ var sffw;
         (function (notifications) {
             var NotificationsCtrl = /** @class */ (function () {
                 function NotificationsCtrl(datacontext, args) {
+                    var _this = this;
                     this.datacontext = datacontext;
                     this.notifications = ko.observableArray();
                     this.panelVisibility = ko.observable(false);
                     this.growlNotificationsOn = ko.observable(true);
+                    this.subscriptions = [];
                     this.ordering = args.ordering;
+                    var gntcHandler = sffw.extractEventHandlerFromApiArgs(datacontext, args, 'OnGrowlNotificationsToggle');
+                    if (gntcHandler) {
+                        this.onGrowlNotificationsToggleHandler = gntcHandler;
+                    }
+                    var pvcHandler = sffw.extractEventHandlerFromApiArgs(datacontext, args, 'OnPanelVisibilityChanged');
+                    if (pvcHandler) {
+                        this.onPanelVisibilityChangedHandler = pvcHandler;
+                    }
+                    var ncHandler = sffw.extractEventHandlerFromApiArgs(datacontext, args, 'OnNotificationsChanged');
+                    if (ncHandler) {
+                        this.onNotificationsChangedHandler = ncHandler;
+                    }
+                    this.subscriptions.push(this.panelVisibility.subscribe(function (newValue) {
+                        if (_this.onPanelVisibilityChangedHandler) {
+                            _this.onPanelVisibilityChangedHandler(_this, null, { isVisible: newValue });
+                        }
+                    }));
+                    this.subscriptions.push(this.notifications.subscribe(function () {
+                        if (_this.onNotificationsChangedHandler) {
+                            _this.onNotificationsChangedHandler(_this, null, { notificationCount: _this.notifications().length });
+                        }
+                    }, this, 'arrayChange'));
                 }
                 NotificationsCtrl.prototype.addItem = function (type, message) {
                     var newItem = { type: type, message: message };
@@ -20,6 +44,7 @@ var sffw;
                     else {
                         this.notifications.unshift(newItem);
                     }
+                    sffw.safeWriteToAriaLiveRegion(message);
                 };
                 NotificationsCtrl.prototype.addInfo = function (args) {
                     this.addItem('info', args.message);
@@ -42,10 +67,21 @@ var sffw;
                 NotificationsCtrl.prototype.setGrowlNotificationsOn = function (args) {
                     if (typeof args.isOn !== 'undefined' && args.isOn !== null) {
                         this.growlNotificationsOn(args.isOn);
+                        if (this.onGrowlNotificationsToggleHandler) {
+                            this.onGrowlNotificationsToggleHandler(this, null, { isOn: args.isOn });
+                        }
+                    }
+                };
+                NotificationsCtrl.prototype.setPanelVisibility = function (args) {
+                    if (typeof args.isVisible !== 'undefined' && args.isVisible !== null) {
+                        this.panelVisibility(args.isVisible);
                     }
                 };
                 NotificationsCtrl.prototype.dispose = function () {
                     this.notifications = null;
+                    _.each(this.subscriptions, function (sub) {
+                        sub.dispose();
+                    });
                 };
                 return NotificationsCtrl;
             }());
@@ -71,4 +107,28 @@ var sffw;
         }
     }
     sffw.assert = assert;
+})(sffw || (sffw = {}));
+var sffw;
+(function (sffw) {
+    function safeWriteToAriaLiveRegion(message) {
+        if (message && window.sf.accessibility && window.sf.accessibility.ariaLiveRegion) {
+            window.sf.accessibility.ariaLiveRegion.append(message);
+        }
+    }
+    sffw.safeWriteToAriaLiveRegion = safeWriteToAriaLiveRegion;
+})(sffw || (sffw = {}));
+var sffw;
+(function (sffw) {
+    function extractEventHandlerFromApiArgs(datacontext, args, eventName) {
+        if (args.$events && args.$events[eventName] && args.$events[eventName].Reference) {
+            if (args.$events[eventName].ReferenceType === 'Global') {
+                return datacontext.$globals.$actions[args.$events[eventName].Reference];
+            }
+            else {
+                return datacontext.$actions[args.$events[eventName].Reference];
+            }
+        }
+        return undefined;
+    }
+    sffw.extractEventHandlerFromApiArgs = extractEventHandlerFromApiArgs;
 })(sffw || (sffw = {}));

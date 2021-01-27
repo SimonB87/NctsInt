@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="DeclarationType_National" />
+  <Caption value="Declaration type with national codes" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="DeclarationTypeCode" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="5" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="512" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidFrom" />
+      <Caption value="Valid from" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidTo" />
+      <Caption value="Valid to" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Computed>
+      <Name value="_description" />
+      <Caption value="_ description" />
+      <Expression IsValid="True">
+        <ExpressionText><![CDATA[functions.codeListDescription(Code,Description)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </Expression>
+    </Computed>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+  </Children>
+</DataEntity>

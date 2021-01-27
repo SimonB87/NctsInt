@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="acceptConfirm" />
+  <Caption value="Accept confirm" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="100%" />
+      <Children>
+        <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="inContentBusyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label1" />
+                      <Heading value="h5" />
+                      <Margin value="6, 6, 12, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.TCDAccepted" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="center-all" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-header" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel4" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label2" />
+                      <Heading value="h5" />
+                      <Margin value="23, 6, 23, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.displayedText" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel5" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="btn_close" />
+                      <Caption value="OK" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="150px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                      </OnClick>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="flright" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-buttons" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="flright" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-wrapper" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+        </InContentBusyIndicator>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="displayedText" />
+          <Caption value="Displayed text" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.TCDWasAcceptedUnderNumber + " " + form.MRN]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.close()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

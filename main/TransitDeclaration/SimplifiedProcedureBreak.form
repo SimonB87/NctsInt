@@ -2,7 +2,6 @@
 <?data-format version="0.400"?>
 <Form>
   <Name value="SimplifiedProcedureBreak" />
-  <Caption value="Simplified procedure break" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -23,58 +22,76 @@
               <Panel.Width value="*" />
               <Children>
                 <Panel>
-                  <Name value="panel83" />
-                  <Orientation value="Horizontal" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="10%" />
-                  <Children>
-                    <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
-                      <Name value="validate_btn" />
-                      <Caption value="{fa-exclamation-circle}" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="80px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~handler_validate_btn_OnClick" />
-                      </OnClick>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-imagebutton" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-button" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="flleft" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="toTop" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </ImageButton>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-                <Panel>
                   <Name value="panel89" />
                   <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="90%" />
+                  <Panel.Width value="100%" />
                   <Children>
+                    <Panel>
+                      <Name value="panel83" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="40px" />
+                      <Children>
+                        <NotificationPanelStatusIcon identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                          <Name value="notification_icn" />
+                          <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="40px" />
+                        </NotificationPanelStatusIcon>
+                        <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                          <Name value="validate_btn" />
+                          <Caption value="{fa-exclamation-circle}" />
+                          <Margin value="0, 0, 0, 0 px" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="40px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_validate_btn_OnClick" />
+                          </OnClick>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-imagebutton" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="flleft" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="toTop" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="active" />
+                              <Bindings>
+                                <Binding SourceProperty="Condition" Expression="form._isValidationSummaryVisible" />
+                              </Bindings>
+                            </CssClassConditional>
+                          </CssClass>
+                        </ImageButton>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="nodeclist-icon" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
                     <Button>
-                      <Name value="goBack_btn" />
-                      <Caption value="Go back" />
+                      <Name value="btn_Close" />
                       <Panel.Height value="#" />
                       <Panel.Width value="150px" />
                       <OnClick>
                         <ActionEvent ReferencedAction="~handler_button1_OnClick" />
                       </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.Close" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-button" />
@@ -108,22 +125,6 @@
                 </CssClassConditional>
               </CssClass>
             </Panel>
-            <Panel>
-              <Name value="ControlPnlSpace" />
-              <Orientation value="Horizontal" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-panel" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="{theme}-nav-bar-space" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Panel>
           </Children>
           <CssClass>
             <CssClassConditional>
@@ -132,6 +133,10 @@
             </CssClassConditional>
             <CssClassConditional>
               <ClassName value="{theme}-nav-bar" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-header" />
               <IsThemedStyle value="True" />
             </CssClassConditional>
           </CssClass>
@@ -144,7 +149,6 @@
           <Children>
             <GroupBox>
               <Name value="validationsGrp" />
-              <Caption value="Validations summary" />
               <Panel.Height value="#" />
               <Panel.Width value="100%" />
               <Content>
@@ -164,7 +168,7 @@
                           <Panel.Width value="*" />
                           <Bindings>
                             <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
-                            <Binding SourceProperty="validationRoot" Expression="form.SimplifiedProcedureBreak" />
+                            <Binding SourceProperty="validationRoot" Expression="form.model" />
                           </Bindings>
                           <columns>
                             <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
@@ -192,16 +196,28 @@
                           <columns>
                             <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
                               <Name value="srvPointerCol" />
-                              <columnCaption value="Pointer" />
                               <columnRole value="pointer" />
-                              <columnWidth value="30%" />
+                              <columnWidth value="45%" />
                               <propertyName value="Pointer" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                              </Bindings>
                             </validationSummaryColumn>
                             <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
-                              <Name value="srvMessageCol" />
-                              <columnCaption value="Message" />
-                              <columnWidth value="70%" />
+                              <Name value="srvErrorTypeCol" />
+                              <columnWidth value="45%" />
+                              <propertyName value="ErrorDescription" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.ErrorType" />
+                              </Bindings>
+                            </validationSummaryColumn>
+                            <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="srvReasonCol" />
+                              <columnWidth value="10%" />
                               <propertyName value="Reason" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.Reason" />
+                              </Bindings>
                             </validationSummaryColumn>
                           </columns>
                         </ServerValidationSummary>
@@ -223,7 +239,8 @@
                 </Panel>
               </Content>
               <Bindings>
-                <Binding SourceProperty="IsVisible" Expression="globals.globalUiState.isValidationsVisible" />
+                <Binding SourceProperty="IsVisible" Expression="form._isValidationSummaryVisible" />
+                <Binding SourceProperty="Caption" Expression="localized.ValidationsSummary" />
               </Bindings>
               <CssClass>
                 <CssClassConditional>
@@ -273,57 +290,9 @@
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Bindings>
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.SimplifiedProcedureBreak.TransitOperation.MRN.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="form.SimplifiedProcedureBreak.TransitOperation.MRN.caption()" />
-                        <Binding SourceProperty="Data" Expression="form.SimplifiedProcedureBreak.TransitOperation.MRN" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-textbox" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </TextBox>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-                <Panel>
-                  <Name value="tirCarnetField_pnl" />
-                  <Orientation value="Horizontal" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="*" />
-                  <Children>
-                    <DatePicker>
-                      <Name value="datePicker1" />
-                      <CaptionPosition value="Top" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.date" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.date.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.date.caption()" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-datepicker" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </DatePicker>
-                    <TextBox>
-                      <Name value="textBox1" />
-                      <CaptionPosition value="Top" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="50%" />
-                      <Bindings>
-                        <Binding SourceProperty="Data" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.description" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.description.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="SimplifiedProcedureBreak.SimplifiedProcedureBreak.description.caption()" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.model.TransitOperation.MRN.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="form.model.TransitOperation.MRN.caption()" />
+                        <Binding SourceProperty="Data" Expression="form.model.TransitOperation.MRN" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -350,12 +319,13 @@
                       <Name value="textBox2" />
                       <CaptionPosition value="Top" />
                       <CaptionVAlign value="Middle" />
+                      <InputType value="Multiline" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="SimplifiedProcedureBreak.Decision.description" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="SimplifiedProcedureBreak.Decision.description.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="SimplifiedProcedureBreak.Decision.description.caption()" />
+                        <Binding SourceProperty="Data" Expression="model.Decision.description" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="model.Decision.description.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="model.Decision.description.caption()" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -380,12 +350,14 @@
                   <Children>
                     <Button>
                       <Name value="btn_confirm" />
-                      <Caption value="Confirm" />
                       <Panel.Height value="#" />
                       <Panel.Width value="150px" />
                       <OnClick>
                         <ActionEvent ReferencedAction="~handler_btn_continue_OnClick" />
                       </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.Confirm" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-button" />
@@ -429,6 +401,10 @@
           <ClassName value="{theme}-panel" />
           <IsThemedStyle value="True" />
         </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="{theme}-header-smaller" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
       </CssClass>
     </Panel>
   </Content>
@@ -436,8 +412,18 @@
     <DataContext>
       <Children>
         <Complex>
-          <Name value="SimplifiedProcedureBreak" />
-          <Caption value="Simplified procedure break" />
+          <Name value="model" />
+          <Caption value="Model" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Model" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBSimplifiedProcedureBreak" />
@@ -447,6 +433,9 @@
         <Complex>
           <Name value="guidParent" />
           <Caption value="Guid parent" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="GUID" />
@@ -454,6 +443,9 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
@@ -464,6 +456,18 @@
           <DataContextParameter.IsInputRequired value="True" />
           <DeclaredType>
             <AttributeType />
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="_isValidationSummaryVisible" />
+          <Caption value="_ is validation summary visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
           </DeclaredType>
         </Attribute>
       </Children>
@@ -478,15 +482,13 @@
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[/* Validators panels display toggler */
-var isValidatorVisible = globals.globalUiState.isValidationsVisible
+var isValidatorVisible = form._isValidationSummaryVisible
 
-if(isValidatorVisible = true) then
-	globals.globalUiState.isValidationsVisible = false
+if isTrue(isValidatorVisible) then
+	form._isValidationSummaryVisible = false
 else
-	globals.globalUiState.isValidationsVisible = true	
-endif
-
-]]></Script>
+	form._isValidationSummaryVisible = true	
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -506,25 +508,18 @@ endif
       <Name value="handler_btn_continue_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[//if form.messageToBeSent.Decision.hasValue() then
-if form.SimplifiedProcedureBreak.validationErrorsCount() = 0 then
+        <Script><![CDATA[var clientValidationErrorsCount = form.model.validationErrorsCount()
+
+if clientValidationErrorsCount = 0 then
+
+	var messageType = "FBSimplifiedProcedureBreak"
+	var requestJsonString = form.model.toJson(true)
 	
-	var request = form.SimplifiedProcedureBreak.toJson()
-	var response = apiobjects.CIC.postAsync("FBSimplifiedProcedureBreak", request)
-	
-	if response.isError() then
-		
-		var inputError = response.extractJson("Error")
-		form.actions.processError(inputError)
-		
-	else
-		//TODO: kam mam jit?
-		navigation.main.DecList.go()
-	endif
-	
+	form._isValidationSummaryVisible = actions.sendMessage(messageType, requestJsonString)
+
 else
-	
-	globals.globalUiState.isValidationsVisible = true
+
+	form._isValidationSummaryVisible = true
 	
 endif]]></Script>
       </ActionLangBody>
@@ -543,11 +538,11 @@ var response = apiobjects.CIC.postAsync("FBDataRequest", requestJSON)
 if response.isError() then
 	
 	var inputError = response.extractJson("Error")
-	form.actions.processError(inputError)
+	actions.processServerErrors(inputError)
 	
 else
 
-	form.SimplifiedProcedureBreak.fromJson(response.getJsonString())
+	form.model.fromJson(response.getJsonString())
 	
 endif]]></Script>
       </ActionLangBody>
@@ -562,49 +557,16 @@ endif]]></Script>
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
-            </Attribute>
-          </Children>
-        </ActionDataContext>
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="processError" />
-      <ActionLangBody>
-        <Script><![CDATA[//clear global error structures
-globals.Errors.serverValidationComplex.clear()
-globals.Errors.serverValidationErrors.clear()
-//fill global error structures
-globals.Errors.serverValidationComplex.fromJson(inputError)
-globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())
-
-globals.globalUiState.isValidationsVisible = true
-	
-// Inform user about errors
-var errorMessage = defaultString()
-
-if (globals.Errors.serverValidationErrors.count() > 1) then 
-	errorMessage = "There are " + toString(globals.Errors.serverValidationErrors.count()) + " errors in the message, please fix them to continue."
-else
-	errorMessage = "There is " + toString(globals.Errors.serverValidationErrors.count()) + " error in the message, please fix it to continue."
-endif	
-	
-apiobjects.notificationsCtrl.addError(errorMessage)]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext>
-          <Children>
-            <Attribute>
-              <Name value="inputError" />
-              <Caption value="Input error" />
-              <DataContextParameter.IsInput value="True" />
-              <DataContextParameter.IsInputRequired value="True" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </ActionDataContext>
       </DataContext>
     </ActionBlock>
   </Actions>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.SimplifiedProcedureBreak" />
+  </Bindings>
 </Form>

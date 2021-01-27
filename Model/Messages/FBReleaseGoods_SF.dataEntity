@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBReleaseGoods_SF" />
+  <Caption value="FBReleaseGoods_SF" />
+  <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="Decision" />
+      <Caption value="Decision" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/Decision" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="description" />
+          <Caption value="Description of decision" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.String_512" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/Decision/description" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="ControlResult" />
+      <Caption value="Control Result" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/ControlResult" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="code" />
+          <Caption value="Code" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/ControlResult/code" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.ControlResultCodeDeparture" />
+            </Include>
+          </Children>
+        </Reference>
+        <Attribute>
+          <Name value="date" />
+          <Caption value="Date" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/ControlResult/date" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="stateOfSeals" />
+          <Caption value="State of seals" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/ControlResult/stateOfSeals" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <Validators>
+            <Validator Name="C0810">
+              <MtsImportOptions.MTS.ID value="C0810" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0810"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0810 IF /CD001C/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'
+OR /CD003C/Consignment/TransportEquipment/numberOfSeals is GREATER than '0'
+OR /CD003C/Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'
+THEN /CD018C/ControlResult/stateOfSeals = "R"
+ELSE /CD018C/ControlResult/stateOfSeals = "O" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="text" />
+          <Caption value="Text" />
+          <MetaType reference="+MetaTypes.TextContentType" />
+          <MtsImportOptions.MTS.ID value="/FBReleaseGoods_SF/ControlResult/text" />
+          <MtsImportOptions.MTS.Type value="element" />
+        </Attribute>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

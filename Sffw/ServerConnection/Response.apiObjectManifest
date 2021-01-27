@@ -61,5 +61,17 @@
         </ParameterManifest>
       </Parameters>
     </MethodManifest>
+    <MethodManifest>
+      <Name value="saveToFile" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="fileName" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
   </Methods>
 </ApiObjectManifest>

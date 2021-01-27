@@ -2,7 +2,6 @@
 <?data-format version="0.400"?>
 <Form>
   <Name value="Master" />
-  <Caption value="Master" />
   <Content>
     <Panel>
       <Name value="MasterPnl" />
@@ -12,6 +11,7 @@
       <Children>
         <Panel>
           <Name value="HeaderPnl" />
+          <IsVisible value="False" />
           <Orientation value="Horizontal" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
@@ -33,6 +33,74 @@
               <Orientation value="Horizontal" />
               <Panel.Height value="#" />
               <Panel.Width value="20%" />
+              <Children>
+                <Panel>
+                  <Name value="appLanguages" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="btn_lngEN" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btn_lngEN_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.EN" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-languageActive" />
+                          <IsThemedStyle value="True" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.appLanguageEn" />
+                          </Bindings>
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="btn_lngME" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50px" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btn_lngME_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.ME" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-languageActive" />
+                          <IsThemedStyle value="True" />
+                          <Bindings>
+                            <Binding SourceProperty="Condition" Expression="form.appLanguageMe" />
+                          </Bindings>
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-languages" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-panel" />
@@ -48,7 +116,6 @@
               <Children>
                 <Label>
                   <Name value="label1" />
-                  <Data value="NCTS Internal klient - Montenegro" />
                   <Heading value="h2" />
                   <Panel.Height value="#" />
                   <Panel.HorizontalAlignment value="Center" />
@@ -56,6 +123,9 @@
                   <OnClick>
                     <ActionEvent ReferencedAction="~handler_label1_OnClick" />
                   </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.NCTSMontenegro" />
+                  </Bindings>
                   <CssClass>
                     <CssClassConditional>
                       <ClassName value="{theme}-label" />
@@ -99,6 +169,26 @@
               <Panel.Width value="30%" />
               <Children>
                 <Panel>
+                  <Name value="icon_notifications" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <NotificationPanelStatusIcon identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                      <Name value="notificationPanelStatusIcon1" />
+                      <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                    </NotificationPanelStatusIcon>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
                   <Name value="label2_parent" />
                   <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
@@ -118,21 +208,6 @@
                         </CssClassConditional>
                       </CssClass>
                     </Label>
-                    <Label>
-                      <Name value="label_authentificatedText" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
-                      <Bindings>
-                        <Binding SourceProperty="IsVisible" Expression="globals.loginResponse.hasValue()" />
-                        <Binding SourceProperty="Data" Expression="form.uiState.authentificatedLabel" />
-                      </Bindings>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-label" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Label>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -141,6 +216,21 @@
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
+                <Label>
+                  <Name value="label_authentificatedText" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="globals.loginResponse.hasValue()" />
+                    <Binding SourceProperty="Data" Expression="form.uiState.authentificatedLabel" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
                 <Panel>
                   <Name value="panel2" />
                   <Orientation value="Horizontal" />
@@ -149,11 +239,13 @@
                   <Children>
                     <Label>
                       <Name value="label32" />
-                      <Data value="Role: Read, Files, Write, Reactivation" />
                       <Heading value="h5" />
                       <Margin value="2, 6, 2, 6 px" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.RoleReadFilesWriteReactivation" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-label" />
@@ -198,14 +290,6 @@
           <Panel.Height value="#" />
           <Panel.Width value="*" />
           <Children>
-            <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
-              <Name value="busyIndicatorPage" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Bindings>
-                <Binding SourceProperty="IsVisible" Expression="globals.busyIndicatorIsRunning" />
-              </Bindings>
-            </BusyIndicator>
             <Panel>
               <Name value="FormPlaceHolderPnl" />
               <Orientation value="Horizontal" />
@@ -214,7 +298,7 @@
               <Children>
                 <FormPlaceholder>
                   <Name value="formPlaceholder" />
-                  <InitialForm reference="+UiParts.DecList" />
+                  <InitialForm reference="+UiParts.Login" />
                   <Panel.Height value="#" />
                   <Panel.Width value="*" />
                 </FormPlaceholder>
@@ -222,6 +306,36 @@
               <CssClass>
                 <CssClassConditional>
                   <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-NCTS" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="busyIndicatorPage_parent" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <BusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+                  <Name value="busyIndicatorPage" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="globals.busyIndicatorIsRunning" />
+                  </Bindings>
+                </BusyIndicator>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-busy" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
               </CssClass>
@@ -283,6 +397,13 @@
           <Condition value="False" />
           <IsThemedStyle value="True" />
         </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="{theme}-notColorize" />
+          <IsThemedStyle value="True" />
+          <Bindings>
+            <Binding SourceProperty="Condition" Expression="NOT globals.isNotColorizeMode" />
+          </Bindings>
+        </CssClassConditional>
       </CssClass>
     </Panel>
   </Content>
@@ -295,10 +416,23 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.AppVersion" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Complex>
           <Name value="uiState" />
           <Caption value="Ui state" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Computed>
               <Name value="authentificatedLabel" />
@@ -309,9 +443,37 @@
                   <BaseType value="String" />
                 </ResultType>
               </Expression>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.AuthentificatedLabel" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Computed>
           </Children>
         </Complex>
+        <Attribute>
+          <Name value="appLanguageEn" />
+          <Caption value="App language en" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="appLanguageMe" />
+          <Caption value="App language me" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
       </Children>
     </DataContext>
   </DataContext>
@@ -322,42 +484,67 @@
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[apiobjects.urlRouter.setDataHasChanged(false)
-globals.DataChanged = false
+        <Script><![CDATA[actions.keyCloakLogin()
 
-globals.isLimitedWidth = true
+if globals.userData.roles.isEmpty() or globals.userData.offices.isEmpty() then
 
-globals.isExpandedCollapsibleStickyPnl = false
+	navigation.main.ErrorForm.go("Permissions")
 
-// TODO: Replace with data from server once we have it
-//globals.serverConfig.TPendDate = toDate("2019-12-31", defaultDate())
-globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())
-globals.serverConfig.communicationLanguageAtDeparture = "Montenegro"
-
-form.appVersion = apiobjects.appVersion.get()
-
-//TODO - nahradit za naši správnou verzi, jakmile to CIC podporovat!
-//apiobjects.CIC.setVersion("1.00.00" ) 
-//apiobjects.CIC.setVersion("1.00.05" )//Verze 1.00.05 je podle DušanaM.
-apiobjects.CIC.setVersion("0.0.0") // Diddy v centru očekává
-
-//TODO - dosadit vybraný CO
-var selectedCo = "ME123456"
-apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
-
-//Customs office of ME in db :
-//ME123456    Carinarnica Podgorica		Capital Town
-//ME123450    Aerodromi Podgorica		Capital Town - Airport
-//ME123457    Carinarnica Kotor			Sea Port]]></Script>
+else
+	
+	apiobjects.urlRouter.setDataHasChanged(false)
+	globals.DataChanged = false
+	
+	// TODO: Replace with data from server once we have it
+	globals.serverConfig.TPendDate = toDate("2024-12-31", defaultDate())
+	globals.serverConfig.communicationLanguageAtDeparture = "Montenegro"
+	
+	globals.appVersion = apiobjects.appVersion.get()
+	
+	apiobjects.CIC.setVersion("1.00.06")
+	
+	if isTrue(apiobjects.browserStorage1.getItem("Lang") = "en") then
+		globals.isEnLang = true
+		globals.serverConfig.language = "en"
+	else
+		globals.isMeLang = true
+		globals.serverConfig.language = "me"
+	endif
+	
+	apiobjects.CIC.setHeader("X-Language", toUpper(globals.serverConfig.language))
+	
+	if (apiobjects.browserStorage1.getItem("WideMode") = "true") then
+		globals.isWideScreen = true
+	else
+		globals.isWideScreen = false
+	endif
+	
+	if (apiobjects.browserStorage1.getItem("ColorMode") = "true") then
+		globals.isNotColorizeMode = true
+	else
+		if (apiobjects.browserStorage1.getItem("ColorMode") = "false") then
+			globals.isNotColorizeMode = false
+		else
+			globals.isNotColorizeMode = true
+		endif
+	endif
+	
+	globals._serviceUrl = apiobjects.CIC.getRootUrl()
+	
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="hideCollapsibleMenuOnMaster" />
+      <Name value="handler_btn_lngME_OnClick" />
+      <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.isExpandedCollapsibleStickyPnl = false]]></Script>
+        <Script><![CDATA[form.appLanguageMe = true
+form.appLanguageEn = false
+form.actions.goToDeclist("me")
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -367,17 +554,67 @@ apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
       <Name value="handler_label1_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.actions.goToDeclist(globals.serverConfig.language)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="goToDeclist" />
+      <ActionLangBody IsValid="True">
         <Script><![CDATA[if globals.DataChanged then
-	if system.confirm("Data has been changed. You might lose it when you go away") then
+	if system.confirm(localized.DataHasBeenChangedAndItWillBeLost) then		
+		
+		//set language
+		globals.serverConfig.language = inputLang
+		apiobjects.CIC.setLanguage(inputLang)
+		apiobjects.CIC.setHeader("X-Language", toUpper(inputLang))
+		pageApi.setLang(inputLang)
+		
 		navigation.main.Declist.go()
 	endif
 else
+	
+	//set language
+	globals.serverConfig.language = inputLang
+	apiobjects.CIC.setLanguage(inputLang)
+	apiobjects.CIC.setHeader("X-Language", toUpper(inputLang))
+	pageApi.setLang(inputLang)
+	
 	navigation.main.DecList.go()
 endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="inputLang" />
+              <Caption value="Input lang" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_lngEN_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.appLanguageEn = true
+form.appLanguageMe = false
+form.actions.goToDeclist("en")
+]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
       </DataContext>
     </ActionBlock>
   </Actions>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.Master" />
+  </Bindings>
 </Form>

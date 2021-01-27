@@ -53,10 +53,9 @@ var sffw;
     var ServerResponse = /** @class */ (function () {
         function ServerResponse(req) {
             this.req = req;
-            this.responseText = req.responseText;
         }
         ServerResponse.prototype.getJsonString = function () {
-            return this.responseText;
+            return this.req.responseText;
         };
         ServerResponse.prototype.extractJson = function (args) {
             var obj = JSON.parse(this.req.responseText);
@@ -87,6 +86,24 @@ var sffw;
             // if CORS are used Access-Control-Expose-Headers should be set or it may fail
             return this.req.getResponseHeader(args.name);
         };
+        ServerResponse.prototype.saveToFile = function (args) {
+            try {
+                var a = document.createElement("a");
+                var content = this.req.responseType === 'blob' ? this.req.response : new Blob([this.req.responseText]);
+                var blobUrl = URL.createObjectURL(content);
+                a.href = blobUrl;
+                a.download = args.fileName || 'file';
+                setTimeout(function () {
+                    a.click();
+                    window.URL.revokeObjectURL(blobUrl);
+                });
+                return true;
+            }
+            catch (err) {
+                console.error(err);
+                return false;
+            }
+        };
         return ServerResponse;
     }());
     sffw.ServerResponse = ServerResponse;
@@ -95,6 +112,7 @@ var sffw;
 (function (sffw) {
     var ServerConnection = /** @class */ (function () {
         function ServerConnection(datacontext, args) {
+            this.datacontext = datacontext;
             this.isAliveTimeoutMs = null;
             this.defaultHeaders = {
                 Accept: 'application/json'
@@ -137,7 +155,6 @@ var sffw;
                     this.enablePendingRequestFlag = false;
                 }
             }
-            this.detectHermesLogout = !!args.detectHermesLogout;
             this.csrfProtection = new sffw.api.serverConnection.CsrfProtection(this, !!args.useCsrfToken, args.csrfTokenHeader || 'X-CSRFToken', args.csrfTokenUrl || '/GetCSRFToken');
             this.csrfProtection.init();
         }
@@ -166,11 +183,21 @@ var sffw;
             var headerValue = (args.value && args.value !== '' ? args.value : null);
             this.defaultHeaders[args.name] = headerValue;
         };
-        ServerConnection.prototype.generalRequest = function (absoluteUrl, method, headers, data) {
+        ServerConnection.prototype.preprocessHeaders = function (headers) {
+            var chain = Promise.resolve();
+            if (this.reqHeadersPreProcessors === undefined) {
+                this.reqHeadersPreProcessors = this.datacontext.$globals.$api.$findByContract('IRequestHeadersPreProcessor');
+            }
+            _.each(this.reqHeadersPreProcessors, function (p) {
+                chain = chain.then(function () { return p.processHeaders(headers); });
+            });
+            return chain;
+        };
+        ServerConnection.prototype.startGeneralRequest = function (absoluteUrl, method, headers, data, progress) {
             var _this = this;
             if (method === void 0) { method = 'GET'; }
             if (headers === void 0) { headers = {}; }
-            return new Promise(function (resolve) {
+            return this.preprocessHeaders(headers).then(function () {
                 var httpRequest;
                 var model = _this;
                 if (XMLHttpRequest) {
@@ -182,32 +209,33 @@ var sffw;
                 else {
                     throw new Error('Cannot create XMLHttpRequest or Microsoft.XMLHTTP');
                 }
-                httpRequest.onreadystatechange = function () {
-                    if (httpRequest.readyState === httpRequest.DONE) {
-                        // IE does not support httpRequest.responseURL (and also does not know URL interface)
-                        if (model.detectHermesLogout && typeof httpRequest.responseURL !== 'undefined') {
-                            var reqUrl = new URL(absoluteUrl, window && window.location.origin);
-                            var resUrl = new URL(httpRequest.responseURL);
-                            if (reqUrl.origin !== resUrl.origin || reqUrl.pathname !== resUrl.pathname) {
-                                window.location.reload();
-                            }
-                        }
-                        if (model.isAliveTimeoutMs !== null && model.onIsAliveTimeout && model.timeoutId !== undefined) {
-                            clearTimeout(model.timeoutId);
-                            model.timeoutId = setTimeout(model.onIsAliveTimeout, model.isAliveTimeoutMs);
-                        }
-                        if (model.codelistsLastChangeHeader && model.onCodelistsChanged) {
-                            var headerValue = this.getResponseHeader(model.codelistsLastChangeHeader);
-                            if (headerValue) {
-                                var m = moment(headerValue, 'YYYY-MM-DDTHH:mm:ss.SSS');
-                                if (m.isValid()) {
-                                    model.setLastCodelistChange(m.toDate());
-                                }
-                            }
-                        }
-                        model.decrementPendingRequest();
-                        resolve(httpRequest);
+                httpRequest.upload.onprogress = function (event) {
+                    if (progress && progress.onUploadProgressChanged) {
+                        progress.onUploadProgressChanged(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
                     }
+                };
+                httpRequest.upload.onload = function (event) {
+                    if (progress && progress.onUploadCompleted) {
+                        progress.onUploadCompleted(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                    }
+                };
+                httpRequest.onprogress = function (event) {
+                    if (progress && progress.onResponseProgressChanged) {
+                        progress.onResponseProgressChanged(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                    }
+                };
+                httpRequest.onload = function (event) {
+                    if (progress && progress.onResponseCompleted) {
+                        progress.onResponseCompleted(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                    }
+                };
+                httpRequest.onloadend = function () {
+                    // cannot be handled in onreadystatechange as in generalRequest() method
+                    if (model.isAliveTimeoutMs !== null && model.onIsAliveTimeout && model.timeoutId !== undefined) {
+                        clearTimeout(model.timeoutId);
+                        model.timeoutId = setTimeout(model.onIsAliveTimeout, model.isAliveTimeoutMs);
+                    }
+                    model.decrementPendingRequest();
                 };
                 httpRequest.open(method, absoluteUrl, true);
                 if (_this.withCredentials) {
@@ -225,26 +253,124 @@ var sffw;
                     httpRequest.send(data);
                 }
                 _this.incrementPendingRequest();
+                return httpRequest;
             });
         };
-        ServerConnection.prototype.requestWithoutHeadersAndCsrf = function (relativeUrl, method, finalHeaders, data) {
+        ServerConnection.prototype.generalRequest = function (absoluteUrl, method, headers, data, progress, responseType) {
+            var _this = this;
+            if (method === void 0) { method = 'GET'; }
+            if (headers === void 0) { headers = {}; }
+            return this.preprocessHeaders(headers).then(function () {
+                return new Promise(function (resolve) {
+                    var httpRequest;
+                    var model = _this;
+                    if (XMLHttpRequest) {
+                        httpRequest = new XMLHttpRequest();
+                    }
+                    else if (ActiveXObject) { // IE 8 and older
+                        httpRequest = new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    else {
+                        throw new Error('Cannot create XMLHttpRequest or Microsoft.XMLHTTP');
+                    }
+                    httpRequest.onreadystatechange = function () {
+                        if (httpRequest.readyState === httpRequest.DONE) {
+                            if (model.isAliveTimeoutMs !== null && model.onIsAliveTimeout && model.timeoutId !== undefined) {
+                                clearTimeout(model.timeoutId);
+                                model.timeoutId = setTimeout(model.onIsAliveTimeout, model.isAliveTimeoutMs);
+                            }
+                            if (model.codelistsLastChangeHeader && model.onCodelistsChanged) {
+                                var headerValue = this.getResponseHeader(model.codelistsLastChangeHeader);
+                                if (headerValue) {
+                                    var m = moment(headerValue, 'YYYY-MM-DDTHH:mm:ss.SSS');
+                                    if (m.isValid()) {
+                                        model.setLastCodelistChange(m.toDate());
+                                    }
+                                }
+                            }
+                            model.decrementPendingRequest();
+                            resolve(httpRequest);
+                        }
+                    };
+                    httpRequest.upload.onprogress = function (event) {
+                        if (progress && progress.onUploadProgressChanged) {
+                            progress.onUploadProgressChanged(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                        }
+                    };
+                    httpRequest.upload.onload = function (event) {
+                        if (progress && progress.onUploadCompleted) {
+                            progress.onUploadCompleted(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                        }
+                    };
+                    httpRequest.onprogress = function (event) {
+                        if (progress && progress.onResponseProgressChanged) {
+                            progress.onResponseProgressChanged(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                        }
+                    };
+                    httpRequest.onload = function (event) {
+                        if (progress && progress.onResponseCompleted) {
+                            progress.onResponseCompleted(undefined, event, { name: progress.objName, loaded: event.loaded, lengthComputable: event.lengthComputable, total: event.total });
+                        }
+                    };
+                    httpRequest.open(method, absoluteUrl, true);
+                    if (_this.withCredentials) {
+                        httpRequest.withCredentials = true;
+                    }
+                    _.each(_.keys(headers), function (key) {
+                        if (headers[key]) { // values may be null if developer wanted to remove them
+                            httpRequest.setRequestHeader(key, headers[key]);
+                        }
+                    });
+                    if (responseType) {
+                        httpRequest.responseType = responseType;
+                    }
+                    if (_.isUndefined(data) || data === null) {
+                        httpRequest.send();
+                    }
+                    else {
+                        httpRequest.send(data);
+                    }
+                    _this.incrementPendingRequest();
+                });
+            });
+        };
+        ServerConnection.prototype.startRequestWithoutHeadersAndCsrf = function (relativeUrl, method, finalHeaders, data, progress) {
             var absoluteUrl = this.createAbsoluteUrl({ url: relativeUrl });
-            return this.generalRequest(absoluteUrl, method, finalHeaders, data)
+            return this.startGeneralRequest(absoluteUrl, method, finalHeaders, data, progress);
+        };
+        ServerConnection.prototype.requestWithoutHeadersAndCsrf = function (relativeUrl, method, finalHeaders, data, progress, responseType) {
+            var absoluteUrl = this.createAbsoluteUrl({ url: relativeUrl });
+            return this.generalRequest(absoluteUrl, method, finalHeaders, data, progress, responseType)
                 .then(function (req) { return new sffw.ServerResponse(req); });
         };
         ServerConnection.prototype.getAsync = function (args) {
-            return this.sendRequest(args.url);
+            return this.sendRequest(args.url, 'GET', undefined, undefined, args.progress);
+        };
+        ServerConnection.prototype.getFileAsync = function (args) {
+            return this.sendRequest(args.url, 'GET', undefined, undefined, args.progress, 'blob');
+        };
+        ServerConnection.prototype.startPostAsync = function (args) {
+            return this.startSendRequest(args.url, 'POST', undefined, args.data, args.progress);
         };
         ServerConnection.prototype.postAsync = function (args) {
-            return this.sendRequest(args.url, 'POST', undefined, args.data);
+            return this.sendRequest(args.url, 'POST', undefined, args.data, args.progress);
         };
-        ServerConnection.prototype.sendRequest = function (relativeUrl, method, additionalHeaders, data) {
+        ServerConnection.prototype.startSendRequest = function (relativeUrl, method, additionalHeaders, data, progress) {
             var _this = this;
             return this.csrfProtection.getRequestDependency()
                 .then(function () {
                 var standardHeaders = _this.createHeaders({ url: relativeUrl, data: data });
                 var combinedHeaders = additionalHeaders ? _.assign(standardHeaders, additionalHeaders) : standardHeaders;
-                return _this.requestWithoutHeadersAndCsrf(relativeUrl, method, combinedHeaders, data);
+                return _this.startRequestWithoutHeadersAndCsrf(relativeUrl, method, combinedHeaders, data, progress);
+            });
+        };
+        ServerConnection.prototype.sendRequest = function (relativeUrl, method, additionalHeaders, data, progress, responseType) {
+            var _this = this;
+            return this.csrfProtection.getRequestDependency()
+                .then(function () {
+                var standardHeaders = _this.createHeaders({ url: relativeUrl, data: data });
+                var combinedHeaders = additionalHeaders ? _.assign(standardHeaders, additionalHeaders) : standardHeaders;
+                return _this.requestWithoutHeadersAndCsrf(relativeUrl, method, combinedHeaders, data, progress, responseType);
             });
         };
         ServerConnection.prototype.getCodelist = function (name) {

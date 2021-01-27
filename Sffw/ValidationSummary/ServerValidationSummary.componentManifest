@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ComponentManifest>
+  <Name value="ServerValidationSummary" />
+  <Generator value="serverValidationSummaryGenerator.js" />
+  <Type value="Control" />
+  <UiCaption value="Validation summary (server)" />
+  <UiCategory value="SFFW" />
+  <UiIcon value="serverValidationSummary.png" />
+  <Events>
+    <EventManifest>
+      <Name value="OnItemClick" />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="errorSourceForm" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="errorSourceComponent" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="pointer" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+        <EventParameterManifest>
+          <Name value="navigationTreeNode" />
+          <BaseType value="String" />
+          <ParamType value="BaseType" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Properties>
+    <PropertyManifest>
+      <Name value="isVisible" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="validationErrors" />
+      <Bindable value="OneWay" />
+      <IsRequired value="True" />
+      <Type value="ScreenFactory.Data.Model.DataStructures.DataCollection" />
+      <UiDescription value="Collection containing validation errors." />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="errorPointerMap" />
+      <Type value="ApiObject" />
+      <UiEditor value="contract/IErrorPointerMap" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="columns" />
+      <IsRequired value="True" />
+      <Type value="collection-validationSummaryColumn" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="conditionalCssClass" />
+      <Type value="collection-CssClassConditional" />
+      <UiCategory value="Appearance" />
+    </PropertyManifest>
+  </Properties>
+</ComponentManifest>

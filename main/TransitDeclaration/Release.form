@@ -1,0 +1,2883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="Release" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Horizontal" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="pnNavigation" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="263px" />
+          <Children>
+            <Panel>
+              <Name value="headingsPnl" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Label>
+                  <Name value="productLabel" />
+                  <Heading value="h3" />
+                  <Margin value="0, 0, 0, 0 px" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="100%" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_productName_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.NCTSMontenegro" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="label_mode1" />
+                  <Heading value="h5" />
+                  <Margin value="0, 0, 0, 0 px" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.Release" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="label_mrn" />
+                  <Heading value="h5" />
+                  <Margin value="0, 0, 0, 0 px" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="form.model.TransitOperation.MRN" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="label_co" />
+                  <Heading value="h5" />
+                  <Margin value="0, 0, 0, 0 px" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="form.customsOffice" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-headings" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-nav" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-larger" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+        <Panel>
+          <Name value="Body_pnl" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="ControlPnl" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Panel>
+                  <Name value="ControlPnlHolder" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Panel>
+                      <Name value="panel89" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="100%" />
+                      <Children>
+                        <Panel>
+                          <Name value="panel83" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="40px" />
+                          <Children>
+                            <NotificationPanelStatusIcon identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                              <Name value="notification_icn" />
+                              <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="40px" />
+                            </NotificationPanelStatusIcon>
+                            <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                              <Name value="validate_btn" />
+                              <Caption value="{fa-exclamation-circle}" />
+                              <Margin value="0, 0, 0, 0 px" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="40px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_validate_btn_OnClick" />
+                              </OnClick>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-imagebutton" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="flleft" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="toTop" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="active" />
+                                  <Bindings>
+                                    <Binding SourceProperty="Condition" Expression="form._isValidationSummaryVisible" />
+                                  </Bindings>
+                                </CssClassConditional>
+                              </CssClass>
+                            </ImageButton>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="nodeclist-icon" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Button>
+                          <Name value="close_btn" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~action1" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Close" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-secondary" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="disabled" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="releaseTCD_btn" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~action2" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Release" />
+                            <Binding SourceProperty="IsVisible" Expression="form.isReleaseVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-success" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="disabled" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="amendGuarantee_btn" />
+                          <Panel.Height value="42px" />
+                          <Panel.Width value="120px" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~action3" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.AmendGuarantee" />
+                            <Binding SourceProperty="IsVisible" Expression="form.isAmendGuaranteeVisible" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="newStyle" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-success" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="disabled" />
+                              <Condition value="False" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="flright" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-nav-bar-controls" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-nav-bar" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-header" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="main_pnl" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Panel>
+                  <Name value="validationSummary_pnl" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <GroupBox>
+                      <Name value="validationsGrp" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="100%" />
+                      <Content>
+                        <Panel>
+                          <Name value="panel102" />
+                          <Orientation value="Horizontal" />
+                          <Children>
+                            <Panel>
+                              <Name value="panel3" />
+                              <Orientation value="Vertical" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Children>
+                                <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="clientValidationSummary1" />
+                                  <errorPointerMap reference="~errorPointerMap" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                    <Binding SourceProperty="validationRoot" Expression="form.Model" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="cliPointerCol" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="30%" />
+                                      <propertyName value="Pointer" />
+                                      <Bindings>
+                                        <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                                      </Bindings>
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="cliMessageCol" />
+                                      <columnWidth value="70%" />
+                                      <propertyName value="Message" />
+                                      <Bindings>
+                                        <Binding SourceProperty="columnCaption" Expression="localized.Message" />
+                                      </Bindings>
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ClientValidationSummary>
+                                <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                  <Name value="serverValidationSummary1" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Bindings>
+                                    <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
+                                  </Bindings>
+                                  <columns>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvPointerCol" />
+                                      <columnRole value="pointer" />
+                                      <columnWidth value="45%" />
+                                      <propertyName value="Pointer" />
+                                      <Bindings>
+                                        <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                                      </Bindings>
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvErrorTypeCol" />
+                                      <columnWidth value="45%" />
+                                      <propertyName value="ErrorDescription" />
+                                      <Bindings>
+                                        <Binding SourceProperty="columnCaption" Expression="localized.ErrorType" />
+                                      </Bindings>
+                                    </validationSummaryColumn>
+                                    <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="srvReasonCol" />
+                                      <columnWidth value="10%" />
+                                      <propertyName value="Reason" />
+                                      <Bindings>
+                                        <Binding SourceProperty="columnCaption" Expression="localized.Reason" />
+                                      </Bindings>
+                                    </validationSummaryColumn>
+                                  </columns>
+                                </ServerValidationSummary>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="form._isValidationSummaryVisible" />
+                        <Binding SourceProperty="Caption" Expression="localized.ValidationsSummary" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datatable" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel-main" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="pnlBody" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="100%" />
+                  <Children>
+                    <Panel>
+                      <Name value="panel2" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="transitOperation_grp_parent" />
+                          <Orientation value="Vertical" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="50%" />
+                          <Children>
+                            <GroupBox>
+                              <Name value="transitOperation_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.HorizontalAlignment value="Center" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="transitOp_pnl_parent" />
+                                  <Orientation value="Horizontal" />
+                                  <Children>
+                                    <DatePicker>
+                                      <Name value="datePicker1" />
+                                      <CaptionPosition value="Top" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="33%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="Model.TransitOperation.limitDate" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.TransitOperation.limitDate.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="Model.TransitOperation.limitDate.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-datepicker" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </DatePicker>
+                                    <CheckBox>
+                                      <Name value="checkBox1" />
+                                      <CaptionPosition value="Top" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="33%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="Model.TransitOperation.bindingItinerary" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.TransitOperation.bindingItinerary.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="Model.TransitOperation.bindingItinerary.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-checkbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </CheckBox>
+                                    <ReferenceCombo>
+                                      <Name value="referenceCombo6" />
+                                      <CaptionPosition value="Top" />
+                                      <DisplayMember value="_description" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="33%" />
+                                      <ReferenceList reference="+GlobalApiObjects.TransportModeUCC" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="Model.Consignment.inlandModeOfTransport" />
+                                        <Binding SourceProperty="Caption" Expression="Model.Consignment.inlandModeOfTransport.caption()" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.Consignment.inlandModeOfTransport.isRequired()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-referencecombo" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </ReferenceCombo>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-disabledAll" />
+                                      <IsThemedStyle value="True" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.isAmendGuaranteeVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.TransitOperation" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="guarantee_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="guarantee_pnl" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="guaranteeCtrl" />
+                                      <KeepArrowsTogether value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <ShowAdd value="False" />
+                                      <ShowRemove value="False" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Guarantee" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_guarantee" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="guaranteeRpt" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <Panel>
+                                          <Name value="panel52" />
+                                          <Orientation value="Vertical" />
+                                          <Children>
+                                            <Panel>
+                                              <Name value="GURightPnl" />
+                                              <Orientation value="Horizontal" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Children>
+                                                <ReferenceCombo>
+                                                  <Name value="referenceCombo13" />
+                                                  <CaptionPosition value="Top" />
+                                                  <DisplayMember value="_description" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
+                                                  <Panel.Width value="50%" />
+                                                  <ReferenceList reference="+GlobalApiObjects.GuaranteeType" />
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Data" Expression="guaranteeType" />
+                                                    <Binding SourceProperty="Caption" Expression="guaranteeType.caption()" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="guaranteeType.isRequired()" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-referencecombo" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </ReferenceCombo>
+                                                <TextBox>
+                                                  <Name value="textBox5" />
+                                                  <CaptionPosition value="Top" />
+                                                  <CaptionVAlign value="Middle" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
+                                                  <Panel.Width value="50%" />
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Data" Expression="otherGuaranteeReference" />
+                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="otherGuaranteeReference.isRequired()" />
+                                                    <Binding SourceProperty="Caption" Expression="otherGuaranteeReference.caption()" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-textbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </TextBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                            <Panel>
+                                              <Name value="GULeftPnl" />
+                                              <Orientation value="Horizontal" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Children>
+                                                <GroupBox>
+                                                  <Name value="guaranteeReferenceGrp" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.Width value="*" />
+                                                  <Content>
+                                                    <Panel>
+                                                      <Name value="panel84" />
+                                                      <Orientation value="Vertical" />
+                                                      <Children>
+                                                        <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                                          <Name value="guaranteeReferenceCtrl" />
+                                                          <KeepArrowsTogether value="True" />
+                                                          <Panel.Height value="#" />
+                                                          <Panel.Width value="*" />
+                                                          <ShowAdd value="False" />
+                                                          <ShowRemove value="False" />
+                                                          <Bindings>
+                                                            <Binding SourceProperty="Data" Expression="GuaranteeReference" />
+                                                            <Binding SourceProperty="Index" Expression="form.modelState._index_guaranteeReference" />
+                                                          </Bindings>
+                                                        </PagingRepeaterCtrl>
+                                                        <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                                          <Name value="guaranteeReferenceRpt" />
+                                                          <Panel.Height value="#" />
+                                                          <Panel.Width value="*" />
+                                                          <Content>
+                                                            <Panel>
+                                                              <Name value="panel87_parent" />
+                                                              <Orientation value="Vertical" />
+                                                              <Children>
+                                                                <Panel>
+                                                                  <Name value="panel87" />
+                                                                  <Orientation value="Horizontal" />
+                                                                  <Panel.Height value="#" />
+                                                                  <Panel.Width value="*" />
+                                                                  <Children>
+                                                                    <TextBox>
+                                                                      <Name value="textBox23" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <CaptionVAlign value="Middle" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
+                                                                      <Panel.Width value="40%" />
+                                                                      <Bindings>
+                                                                        <Binding SourceProperty="Data" Expression="GRN" />
+                                                                        <Binding SourceProperty="Caption" Expression="GRN.caption()" />
+                                                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="GRN.isRequired()" />
+                                                                      </Bindings>
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <TextBox>
+                                                                      <Name value="textBox25" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <CaptionVAlign value="Middle" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
+                                                                      <Panel.Width value="20%" />
+                                                                      <Bindings>
+                                                                        <Binding SourceProperty="Data" Expression="amountToBeCovered" />
+                                                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="amountToBeCovered.isRequired()" />
+                                                                        <Binding SourceProperty="Caption" Expression="amountToBeCovered.caption()" />
+                                                                      </Bindings>
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-textbox" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </TextBox>
+                                                                    <ReferenceCombo>
+                                                                      <Name value="referenceCombo11" />
+                                                                      <CaptionPosition value="Top" />
+                                                                      <DisplayMember value="_description" />
+                                                                      <Panel.Height value="#" />
+                                                                      <Panel.VerticalAlignment value="Bottom" />
+                                                                      <Panel.Width value="20%" />
+                                                                      <ReferenceList reference="+GlobalApiObjects.CurrencyCodes" />
+                                                                      <Bindings>
+                                                                        <Binding SourceProperty="Data" Expression="currency" />
+                                                                        <Binding SourceProperty="Caption" Expression="currency.caption()" />
+                                                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="currency.isRequired()" />
+                                                                      </Bindings>
+                                                                      <CssClass>
+                                                                        <CssClassConditional>
+                                                                          <ClassName value="{theme}-referencecombo" />
+                                                                          <IsThemedStyle value="True" />
+                                                                        </CssClassConditional>
+                                                                      </CssClass>
+                                                                    </ReferenceCombo>
+                                                                  </Children>
+                                                                  <CssClass>
+                                                                    <CssClassConditional>
+                                                                      <ClassName value="{theme}-panel" />
+                                                                      <IsThemedStyle value="True" />
+                                                                    </CssClassConditional>
+                                                                  </CssClass>
+                                                                </Panel>
+                                                                <Panel>
+                                                                  <Name value="panel5" />
+                                                                  <Orientation value="Horizontal" />
+                                                                  <Panel.Height value="#" />
+                                                                  <Panel.Width value="*" />
+                                                                  <CssClass>
+                                                                    <CssClassConditional>
+                                                                      <ClassName value="{theme}-panel" />
+                                                                      <IsThemedStyle value="True" />
+                                                                    </CssClassConditional>
+                                                                  </CssClass>
+                                                                </Panel>
+                                                              </Children>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-panel" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </Panel>
+                                                          </Content>
+                                                          <Bindings>
+                                                            <Binding SourceProperty="Data" Expression="GuaranteeReference" />
+                                                            <Binding SourceProperty="Index" Expression="form.modelState._index_guaranteeReference" />
+                                                          </Bindings>
+                                                        </PagingRepeater>
+                                                      </Children>
+                                                      <CssClass>
+                                                        <CssClassConditional>
+                                                          <ClassName value="{theme}-panel" />
+                                                          <IsThemedStyle value="True" />
+                                                        </CssClassConditional>
+                                                      </CssClass>
+                                                    </Panel>
+                                                  </Content>
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Caption" Expression="localized.GuaranteeReference" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-groupbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </GroupBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel-main" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Guarantee" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_guarantee" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.Guarantee" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="transportEquipmentGrp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel43" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="transportEquipmentCtrl" />
+                                      <KeepArrowsTogether value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <ShowAdd value="False" />
+                                      <ShowRemove value="False" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.TransportEquipment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_transportEquipment" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="transportEquipmentRpt" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <Panel>
+                                          <Name value="panel59" />
+                                          <Orientation value="Horizontal" />
+                                          <Children>
+                                            <Panel>
+                                              <Name value="panel22" />
+                                              <Orientation value="Horizontal" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="50%" />
+                                              <Children>
+                                                <TextBox>
+                                                  <Name value="textBox31" />
+                                                  <CaptionPosition value="Top" />
+                                                  <CaptionVAlign value="Middle" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.VerticalAlignment value="Bottom" />
+                                                  <Panel.Width value="50%" />
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Data" Expression="numberOfSeals" />
+                                                    <Binding SourceProperty="Caption" Expression="localized.NumberOfSeals" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-textbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </TextBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                            <Panel>
+                                              <Name value="panel60" />
+                                              <Orientation value="Horizontal" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="50%" />
+                                              <Children>
+                                                <GroupBox>
+                                                  <Name value="sealGrp" />
+                                                  <Panel.Height value="#" />
+                                                  <Panel.Width value="*" />
+                                                  <Content>
+                                                    <Panel>
+                                                      <Name value="panel86" />
+                                                      <Orientation value="Vertical" />
+                                                      <Children>
+                                                        <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                                          <Name value="sealCtrl" />
+                                                          <AllowAdd value="True" />
+                                                          <AllowRemove value="True" />
+                                                          <KeepArrowsTogether value="True" />
+                                                          <Panel.Height value="#" />
+                                                          <Panel.Width value="*" />
+                                                          <Bindings>
+                                                            <Binding SourceProperty="Data" Expression="Seal" />
+                                                            <Binding SourceProperty="Index" Expression="form.modelState._index_seal" />
+                                                          </Bindings>
+                                                        </PagingRepeaterCtrl>
+                                                        <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                                          <Name value="sealRpt" />
+                                                          <Panel.Height value="#" />
+                                                          <Panel.Width value="*" />
+                                                          <Content>
+                                                            <Panel>
+                                                              <Name value="panel23" />
+                                                              <Orientation value="Horizontal" />
+                                                              <Children>
+                                                                <TextBox>
+                                                                  <Name value="textBox33" />
+                                                                  <CaptionPosition value="Top" />
+                                                                  <CaptionVAlign value="Middle" />
+                                                                  <Panel.Height value="#" />
+                                                                  <Panel.VerticalAlignment value="Bottom" />
+                                                                  <Panel.Width value="100%" />
+                                                                  <Bindings>
+                                                                    <Binding SourceProperty="Data" Expression="identifier" />
+                                                                    <Binding SourceProperty="IsRequiredMarkVisible" Expression="identifier.isRequired()" />
+                                                                    <Binding SourceProperty="Caption" Expression="identifier.caption()" />
+                                                                  </Bindings>
+                                                                  <CssClass>
+                                                                    <CssClassConditional>
+                                                                      <ClassName value="{theme}-textbox" />
+                                                                      <IsThemedStyle value="True" />
+                                                                    </CssClassConditional>
+                                                                  </CssClass>
+                                                                </TextBox>
+                                                              </Children>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-panel" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </Panel>
+                                                          </Content>
+                                                          <Bindings>
+                                                            <Binding SourceProperty="Data" Expression="Seal" />
+                                                            <Binding SourceProperty="Index" Expression="form.modelState._index_seal" />
+                                                          </Bindings>
+                                                        </PagingRepeater>
+                                                      </Children>
+                                                      <CssClass>
+                                                        <CssClassConditional>
+                                                          <ClassName value="{theme}-panel" />
+                                                          <IsThemedStyle value="True" />
+                                                        </CssClassConditional>
+                                                      </CssClass>
+                                                    </Panel>
+                                                  </Content>
+                                                  <Bindings>
+                                                    <Binding SourceProperty="Caption" Expression="localized.Seal" />
+                                                  </Bindings>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-groupbox" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </GroupBox>
+                                              </Children>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-panel" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </Panel>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.TransportEquipment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_transportEquipment" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-disabledAll" />
+                                      <IsThemedStyle value="True" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.isAmendGuaranteeVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.TransportEquipment" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="countryOfRoutingOfConsignment_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel4" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="countryOfRoutingCtrl" />
+                                      <AllowAdd value="True" />
+                                      <AllowRemove value="True" />
+                                      <KeepArrowsTogether value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.CountryOfRoutingOfConsignment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_countryOfRouting" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="countryOfRoutingRpt" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <ReferenceCombo>
+                                          <Name value="referenceCombo5" />
+                                          <DisplayMember value="_description" />
+                                          <ReferenceList reference="+GlobalApiObjects.CountryCodesFullList" />
+                                          <Bindings>
+                                            <Binding SourceProperty="Caption" Expression="country.caption()" />
+                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="country.isRequired()" />
+                                            <Binding SourceProperty="Data" Expression="country" />
+                                          </Bindings>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-referencecombo" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </ReferenceCombo>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.CountryOfRoutingOfConsignment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_countryOfRouting" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-disabledAll" />
+                                      <IsThemedStyle value="True" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.isAmendGuaranteeVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.CountryOfRoutingConsignment" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <Panel>
+                          <Name value="controlResult_grp_parent" />
+                          <Orientation value="Vertical" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="50%" />
+                          <Children>
+                            <GroupBox>
+                              <Name value="controlResult_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="controlResult_pnl" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <ReferenceCombo>
+                                      <Name value="referenceCombo12" />
+                                      <CaptionPosition value="Top" />
+                                      <DisplayMember value="_description" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="50%" />
+                                      <ReferenceList reference="~ControlResultCodeReleaseNotRelease" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="Model.ControlResult.code" />
+                                        <Binding SourceProperty="Caption" Expression="Model.ControlResult.code.caption()" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.ControlResult.code.isRequired()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-referencecombo" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </ReferenceCombo>
+                                    <TextBox>
+                                      <Name value="textBox2" />
+                                      <CaptionPosition value="Top" />
+                                      <InputType value="Multiline" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="Model.ControlResult.text" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="Model.ControlResult.text.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="Model.ControlResult.text.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.ControlResult" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="departureTransportMeans_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="panel7" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="departureTransportMeansCtrl" />
+                                      <AllowAdd value="True" />
+                                      <AllowRemove value="True" />
+                                      <KeepArrowsTogether value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.DepartureTransportMeans" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_departureTransportMeans" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="departureTransportMeansRpt" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <Panel>
+                                          <Name value="panel9" />
+                                          <Orientation value="Horizontal" />
+                                          <Children>
+                                            <ReferenceCombo>
+                                              <Name value="referenceCombo1" />
+                                              <CaptionPosition value="Top" />
+                                              <DisplayMember value="_description" />
+                                              <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
+                                              <Panel.Width value="40%" />
+                                              <ReferenceList reference="+GlobalApiObjects.TypeOfIdentificationOfMeansOfTransport" />
+                                              <Bindings>
+                                                <Binding SourceProperty="Data" Expression="typeOfIdentification" />
+                                                <Binding SourceProperty="Caption" Expression="typeOfIdentification.caption()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="typeOfIdentification.isRequired()" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-referencecombo" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </ReferenceCombo>
+                                            <TextBox>
+                                              <Name value="textBox1" />
+                                              <CaptionPosition value="Top" />
+                                              <CaptionVAlign value="Middle" />
+                                              <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
+                                              <Panel.Width value="40%" />
+                                              <Bindings>
+                                                <Binding SourceProperty="Data" Expression="identificationNumber" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="identificationNumber.isRequired()" />
+                                                <Binding SourceProperty="Caption" Expression="identificationNumber.caption()" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-textbox" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </TextBox>
+                                            <ReferenceCombo>
+                                              <Name value="referenceCombo3" />
+                                              <CaptionPosition value="Top" />
+                                              <DisplayMember value="Code" />
+                                              <Panel.Height value="#" />
+                                              <Panel.VerticalAlignment value="Bottom" />
+                                              <Panel.Width value="20%" />
+                                              <ReferenceList reference="~Nationality" />
+                                              <Bindings>
+                                                <Binding SourceProperty="Data" Expression="nationality" />
+                                                <Binding SourceProperty="Caption" Expression="nationality.caption()" />
+                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="nationality.isRequired()" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-referencecombo" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </ReferenceCombo>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.DepartureTransportMeans" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_departureTransportMeans" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-disabledAll" />
+                                      <IsThemedStyle value="True" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.isAmendGuaranteeVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.DepartureTransportMeans" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                            <GroupBox>
+                              <Name value="houseConsignments_grp" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="*" />
+                              <Content>
+                                <Panel>
+                                  <Name value="houseConsignments_pnl" />
+                                  <Orientation value="Vertical" />
+                                  <Children>
+                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                      <Name value="houseConsignmentsCtrl" />
+                                      <KeepArrowsTogether value="True" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.HouseConsignment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_houseConsignment" />
+                                      </Bindings>
+                                    </PagingRepeaterCtrl>
+                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                      <Name value="houseConsignmentsRpt" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Content>
+                                        <Panel>
+                                          <Name value="panel6" />
+                                          <Orientation value="Horizontal" />
+                                          <Children>
+                                            <GroupBox>
+                                              <Name value="groupBox2" />
+                                              <Panel.Height value="#" />
+                                              <Panel.Width value="*" />
+                                              <Content>
+                                                <Panel>
+                                                  <Name value="panel8" />
+                                                  <Orientation value="Vertical" />
+                                                  <Children>
+                                                    <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
+                                                      <Name value="departureTransportMeansHCCtrl" />
+                                                      <AllowAdd value="True" />
+                                                      <AllowRemove value="True" />
+                                                      <KeepArrowsTogether value="True" />
+                                                      <Panel.Height value="#" />
+                                                      <Panel.Width value="*" />
+                                                      <Bindings>
+                                                        <Binding SourceProperty="Data" Expression="this.DepartureTransportMeans" />
+                                                        <Binding SourceProperty="Index" Expression="form.modelState._index_departureTransportMeansHC" />
+                                                      </Bindings>
+                                                    </PagingRepeaterCtrl>
+                                                    <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
+                                                      <Name value="departureTransportMeansHCRpt" />
+                                                      <Panel.Height value="#" />
+                                                      <Panel.Width value="*" />
+                                                      <Content>
+                                                        <Panel>
+                                                          <Name value="panel10" />
+                                                          <Orientation value="Horizontal" />
+                                                          <Children>
+                                                            <ReferenceCombo>
+                                                              <Name value="referenceCombo2" />
+                                                              <CaptionPosition value="Top" />
+                                                              <DisplayMember value="_description" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
+                                                              <Panel.Width value="40%" />
+                                                              <ReferenceList reference="+GlobalApiObjects.TypeOfIdentificationOfMeansOfTransport" />
+                                                              <Bindings>
+                                                                <Binding SourceProperty="Data" Expression="typeOfIdentification" />
+                                                                <Binding SourceProperty="Caption" Expression="typeOfIdentification.caption()" />
+                                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="typeOfIdentification.isRequired()" />
+                                                              </Bindings>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-referencecombo" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </ReferenceCombo>
+                                                            <TextBox>
+                                                              <Name value="textBox3" />
+                                                              <CaptionPosition value="Top" />
+                                                              <CaptionVAlign value="Middle" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
+                                                              <Panel.Width value="40%" />
+                                                              <Bindings>
+                                                                <Binding SourceProperty="Data" Expression="identificationNumber" />
+                                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="identificationNumber.isRequired()" />
+                                                                <Binding SourceProperty="Caption" Expression="identificationNumber.caption()" />
+                                                              </Bindings>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-textbox" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </TextBox>
+                                                            <ReferenceCombo>
+                                                              <Name value="referenceCombo4" />
+                                                              <CaptionPosition value="Top" />
+                                                              <DisplayMember value="Code" />
+                                                              <Panel.Height value="#" />
+                                                              <Panel.VerticalAlignment value="Bottom" />
+                                                              <Panel.Width value="20%" />
+                                                              <ReferenceList reference="~Nationality" />
+                                                              <Bindings>
+                                                                <Binding SourceProperty="Data" Expression="nationality" />
+                                                                <Binding SourceProperty="Caption" Expression="nationality.caption()" />
+                                                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="nationality.isRequired()" />
+                                                              </Bindings>
+                                                              <CssClass>
+                                                                <CssClassConditional>
+                                                                  <ClassName value="{theme}-referencecombo" />
+                                                                  <IsThemedStyle value="True" />
+                                                                </CssClassConditional>
+                                                              </CssClass>
+                                                            </ReferenceCombo>
+                                                          </Children>
+                                                          <CssClass>
+                                                            <CssClassConditional>
+                                                              <ClassName value="{theme}-panel" />
+                                                              <IsThemedStyle value="True" />
+                                                            </CssClassConditional>
+                                                          </CssClass>
+                                                        </Panel>
+                                                      </Content>
+                                                      <Bindings>
+                                                        <Binding SourceProperty="Data" Expression="this.DepartureTransportMeans" />
+                                                        <Binding SourceProperty="Index" Expression="form.modelState._index_departureTransportMeansHC" />
+                                                      </Bindings>
+                                                    </PagingRepeater>
+                                                  </Children>
+                                                  <CssClass>
+                                                    <CssClassConditional>
+                                                      <ClassName value="{theme}-panel" />
+                                                      <IsThemedStyle value="True" />
+                                                    </CssClassConditional>
+                                                  </CssClass>
+                                                </Panel>
+                                              </Content>
+                                              <Bindings>
+                                                <Binding SourceProperty="Caption" Expression="localized.DepartureTransportMeans" />
+                                              </Bindings>
+                                              <CssClass>
+                                                <CssClassConditional>
+                                                  <ClassName value="{theme}-groupbox" />
+                                                  <IsThemedStyle value="True" />
+                                                </CssClassConditional>
+                                              </CssClass>
+                                            </GroupBox>
+                                          </Children>
+                                          <CssClass>
+                                            <CssClassConditional>
+                                              <ClassName value="{theme}-panel" />
+                                              <IsThemedStyle value="True" />
+                                            </CssClassConditional>
+                                          </CssClass>
+                                        </Panel>
+                                      </Content>
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="form.Model.Consignment.HouseConsignment" />
+                                        <Binding SourceProperty="Index" Expression="form.modelState._index_houseConsignment" />
+                                      </Bindings>
+                                    </PagingRepeater>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-disabledAll" />
+                                      <IsThemedStyle value="True" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.isAmendGuaranteeVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Content>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.HouseConsignments" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-groupbox" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </GroupBox>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel-main" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel-half" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="{theme}-header-smaller" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="GUID" />
+          <Caption value="GUID" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Complex>
+          <Name value="Model" />
+          <Caption value="Model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBRelease_SF" />
+            </Include>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="modelState" />
+          <Caption value="Model state" />
+          <Children>
+            <Attribute>
+              <Name value="_index_departureTransportMeans" />
+              <Caption value="_ index _ departure transport means" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_seal" />
+              <Caption value="_ index _ seal" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_transportEquipment" />
+              <Caption value="_ index _ transport equipment" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_guaranteeReference" />
+              <Caption value="_ index _ guarantee reference" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_guarantee" />
+              <Caption value="_ index _ guarantee" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_houseConsignment" />
+              <Caption value="_ index _ house consignment" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_departureTransportMeansHC" />
+              <Caption value="_ index _ departure transport means HC" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_countryOfRouting" />
+              <Caption value="_ index _ country of routing" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_index_excludedCountry" />
+              <Caption value="_ index _ excluded country" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="_isValidationSummaryVisible" />
+          <Caption value="_ is validation summary visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="_sysdate" />
+          <Caption value="_ sysdate" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="mode" />
+          <Caption value="Mode" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="isReleaseVisible" />
+          <Caption value="Is release visible" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[isTrue(form.mode = "release")]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="isAmendGuaranteeVisible" />
+          <Caption value="Is amend guarantee visible" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[isTrue(form.mode = "amend")]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Complex>
+          <Name value="guaranteeAmend" />
+          <Caption value="Guarantee amend" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBGuaranteeAmend_SF" />
+            </Include>
+          </Children>
+        </Complex>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.COOfDeparture]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+      <Modifiers>
+        <Modifier>
+          <Name value="modifier_4B0806B7_Guarantee" />
+          <SourcePath value="Model.Guarantee" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="_isGuaranteeReferenceRequired" />
+              <Caption value="_ is guarantee reference required" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="_guaranteeTypeInCL286" />
+              <Caption value="_ guarantee type in CL 286" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_3A6C21B0_GuaranteeReference" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Guarantee.GuaranteeReference" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="C0085">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0085"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[this._isGuaranteeReferenceRequired = this.GuaranteeReference.hasValue()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_0B7CC915_TransportEquipment" />
+          <SourcePath value="Model.Consignment.TransportEquipment" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_9D50BD6C_Seal" />
+          <SourcePath value="Model.Consignment.TransportEquipment.Seal" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+            <Attribute>
+              <Name value="_sealIdentifierNotUnique" />
+              <Caption value="_ seal identifier not unique" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_D50CEA9B_DepartureTransportMeans" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.DepartureTransportMeans" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="R0855">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0855"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(isTrue(this.inlandModeOfTransport.Code = 3) ?
+this.DepartureTransportMeans.count() <= 3 :
+(form._sysdate > globals.serverConfig.TPendDate) AND isTrue(this.inlandModeOfTransport.Code = 2) ? true : this.DepartureTransportMeans.count() <= 1)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_BC07878B_HouseConsignment" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.HouseConsignment" />
+          <Children>
+            <Attribute>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Integer" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="E1406">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1406"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(form._sysdate <= globals.serverConfig.TPendDate) ? (this.HouseConsignment.count() <= 1) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_72D839C4_DepartureTransportMeans" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.HouseConsignment.DepartureTransportMeans" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="E1301">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1301"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form._sysdate <= globals.serverConfig.TPendDate ?
+NOT form.Model.Consignment.HouseConsignment.exists(Current.DepartureTransportMeans.count() > 0) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_68519282_limitDate" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.TransitOperation.limitDate" />
+          <Validators>
+            <Validator Name="NR123">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["NR123"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[this.limitDate >= form._sysdate]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_93A79E11_GRN" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Guarantee.GuaranteeReference.GRN" />
+          <Validators>
+            <Validator Name="C0086">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0086"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(this.owner()._guaranteeTypeInCL286) = this.GRN.hasValue()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_25442729_numberOfSeals" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.TransportEquipment.numberOfSeals" />
+          <Validators>
+            <Validator Name="R0106">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0106"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[this.numberOfSeals > 0 ? this.Seal.hasValue() ? this.numberOfSeals = this.Seal.max(Current.sequenceNumber) : false : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_25B9828D_identifier" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.TransportEquipment.Seal.identifier" />
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.Release.handler_modifier_25B9828D_identifier_OnUserChange" />
+          </OnUserChange>
+          <Validators>
+            <Validator Name="R0107">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["R0107"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isFalseOrDefault(this._sealIdentifierNotUnique)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_1FEC0D93_guaranteeType" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Guarantee.guaranteeType" />
+          <OnUserChange>
+            <ActionEvent ReferencedAction="+UiParts.Release.handler_modifier_1FEC0D93_guaranteeType_OnUserChange" />
+          </OnUserChange>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_6AD7BAE0_identificationNumber" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.DepartureTransportMeans.identificationNumber" />
+          <Validators>
+            <Validator Name="E1103">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1103"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(form._sysdate <= globals.serverConfig.TPendDate) ? length(this.identificationNumber) <= 27 : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_DA10B473_CountryOfRoutingOfConsignment" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="Model.Consignment.CountryOfRoutingOfConsignment" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="C0586">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0586"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.Model.TransitOperation.bindingItinerary ? form.Model.Consignment.CountryOfRoutingOfConsignment.hasValue() : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_8E56F2AD_Guarantee" />
+          <SourcePath value="guaranteeAmend.Guarantee" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_F58C36E8_GuaranteeReference" />
+          <SourcePath value="guaranteeAmend.Guarantee.GuaranteeReference" />
+          <Children>
+            <Computed>
+              <Name value="sequenceNumber" />
+              <Caption value="Sequence number" />
+              <Expression IsValid="True">
+                <ExpressionText><![CDATA[this.index()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Integer" />
+                </ResultType>
+              </Expression>
+            </Computed>
+          </Children>
+        </Modifier>
+      </Modifiers>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+if form.GUID.hasValue() then
+
+	var sysdate = getDateTime()
+	form.actions.loadCodelist(sysdate)
+	
+	form.actions.loadData()
+	
+	foreach g in form.Model.Guarantee do
+		var code = g.guaranteeType.Code
+		g._guaranteeTypeInCL286 = form.actions.setGuaranteeTypeInCL286(code)
+		g._isGuaranteeReferenceRequired = form.actions.setGuaranteeTypeInCL076(code)
+	endfor
+	
+	//TODO: control result defvalue is just temporary! We wait for work to be done in MTS
+	var codeResult = form.apiobjects.ControlResultCodeReleaseNotRelease.getItemByStringColumnAsync("Code", "A2", form._sysdate, true)
+	form.Model.ControlResult.code.fromJson(codeResult.getJsonString())
+	
+	globals.busyIndicatorIsRunning = false
+	
+	form.Model.setTouched(false)
+else
+	
+	globals.busyIndicatorIsRunning = false
+	
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_validate_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
+
+/* Validators panels display toggler */
+var isValidatorVisible = form._isValidationSummaryVisible
+
+if isTrue(isValidatorVisible) then
+	form._isValidationSummaryVisible = false
+else
+	form._isValidationSummaryVisible = true	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action2" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+
+form._sysdate = getDate()
+
+var clientValidationErrorsCount = form.model.validationErrorsCount()
+
+if clientValidationErrorsCount = 0 then
+
+	var messageType = "FBRelease"
+	var requestJsonString = form.model.toJson(true)
+	
+	form._isValidationSummaryVisible = actions.sendMessage(messageType, requestJsonString)
+
+	//Todo navigace na Dep_Released
+	if isFalse(form._isValidationSummaryVisible) then
+	
+		navigation.main.DecList.withInputNavTree("isReleasedActive").go()
+	
+	endif
+	
+else
+
+	form._isValidationSummaryVisible = true
+	
+endif
+
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action1" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadData" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[IF form.mode.isEmpty() THEN
+
+	notificationsCtrl.addError(localized.ModeForReleaseIsNotKnown)
+
+ELSE
+
+	var requestJsonString = "{\"GUID\":\""+ form.GUID +"\"}"
+	var response = apiobjects.CIC.postAsync("FBDataRequest", requestJsonString)
+		
+	if response.isError() then
+		
+		var inputError = response.extractJson("Error")
+		actions.processServerErrors(inputError)
+		globals.busyIndicatorIsRunning = true
+		navigation.main.DecList.go()	
+		
+	else
+		
+		form._sysdate = getDate()
+		
+		form.Model.fromJson(response.getJsonString())
+		globals.busyIndicatorIsRunning = true
+	endif
+
+ENDIF]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="loadCodelist" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.apiobjects.ControlResultCodeReleaseNotRelease.loadDataAsync(sysdate)
+apiobjects.GuaranteeType.loadDataAsync(sysdate)
+apiobjects.CurrencyCodes.loadDataAsync(sysdate)
+apiobjects.TypeOfIdentificationOfMeansOfTransport.loadDataAsync(sysdate)
+form.apiobjects.Nationality.loadDataAsync(sysdate)
+apiobjects.GuaranteeTypeWithReference.loadDataAsync(sysdate)
+apiobjects.GuaranteeTypeWithGRN_CL286.loadDataAsync(sysdate)
+apiobjects.CountryCodesFullList.loadDataAsync(sysdate)
+apiobjects.TransportModeUCC.loadDataAsync(sysdate)
+if isTrue(form.mode = "amend") then
+	form.apiobjects.AllocationResult.loadDataAsync(sysdate)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="sysdate" />
+              <Caption value="Sysdate" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_modifier_25B9828D_identifier_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[foreach TE in form.Model.Consignment.TransportEquipment do
+
+	foreach S in TE.Seal do
+	
+		IF isTrue(S.identifier = params.data.identifier) THEN
+			IF NOT (S.index() = params.data.sequenceNumber) THEN
+				IF NOT (TE.index() = params.data.owner().index()) THEN
+					params.data._sealIdentifierNotUnique = true
+				ELSE
+					PARAMS.data._sealIdentifierNotUnique = false
+				ENDIF
+			ELSE
+				PARAMS.data._sealIdentifierNotUnique = false
+			ENDIF
+		ELSE
+			PARAMS.data._sealIdentifierNotUnique = false
+		ENDIF
+
+	endfor
+
+endfor]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_modifier_1FEC0D93_guaranteeType_OnUserChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var guaranteeTypeCode = params.data.guaranteeType.Code
+
+params.data._isGuaranteeReferenceRequired = form.actions.setGuaranteeTypeInCL076(guaranteeTypeCode)
+params.data._guaranteeTypeInCL286 = form.actions.setGuaranteeTypeInCL286(guaranteeTypeCode)
+params.data.GuaranteeReference.setTouched(true)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_productName_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="action3" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.guaranteeAmend.fromJson(form.Model.toJson(true))
+
+form._sysdate = getDate()
+
+var clientValidationErrorsCount = form.guaranteeAmend.validationErrorsCount()
+
+if clientValidationErrorsCount = 0 then
+
+	var messageType = "FBGuaranteeAmend"
+	var requestJsonString = form.guaranteeAmend.toJson(true)
+	
+	form._isValidationSummaryVisible = actions.sendMessage(messageType, requestJsonString)
+
+	//Todo navigace na Dep_Released
+	if isFalse(form._isValidationSummaryVisible) then
+	
+		navigation.main.DecList.withInputNavTree("isReleasedActive").go()
+	
+	endif
+	
+else
+
+	form._isValidationSummaryVisible = true
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setGuaranteeTypeInCL286" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var guaranteeTypeInCL286 = apiobjects.GuaranteeTypeWithReference.getItemByStringColumnAsync("Code", guaranteeTypeCode, getDateTime(), true)
+
+IF guaranteeTypeInCL286.isFound() THEN
+	result = true
+ELSE
+	result = false
+ENDIF]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="guaranteeTypeCode" />
+              <Caption value="Guarantee type code" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="setGuaranteeTypeInCL076" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var guaranteeTypeInCL076 = apiobjects.GuaranteeTypeWithReference.getItemByStringColumnAsync("Code", guaranteeTypeCode, getDateTime(), true)
+
+IF guaranteeTypeInCL076.isFound() THEN
+	result = true
+ELSE
+	result = false
+ENDIF]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="guaranteeTypeCode" />
+              <Caption value="Guarantee type code" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <ApiObjects>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="ControlResultCodeReleaseNotRelease" />
+      <autoLoad value="False" />
+      <name value="ControlResultCodeReleaseNotRelease" />
+      <server reference="+GlobalApiObjects.CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="Nationality" />
+      <autoLoad value="False" />
+      <name value="Nationality" />
+      <server reference="+GlobalApiObjects.CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Code" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+    <ErrorPointerMap identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+      <Name value="errorPointerMap" />
+      <items>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation}" />
+          <pointerPath value="TransitOperation" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation} &gt; ${MRN}" />
+          <pointerPath value="TransitOperation/MRN" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation} &gt; ${L_Model$$BindingItinerary}" />
+          <pointerPath value="TransitOperation/bindingItinerary" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation} &gt; ${L_Model$$LimitDate}" />
+          <pointerPath value="TransitOperation/limitDate" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult}" />
+          <pointerPath value="ControlResult" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code}" />
+          <pointerPath value="ControlResult/code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${ControlResultCode}" />
+          <pointerPath value="ControlResult/code/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${Description}" />
+          <pointerPath value="ControlResult/code/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${Valid from}" />
+          <pointerPath value="ControlResult/code/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${Valid to}" />
+          <pointerPath value="ControlResult/code/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${_ description}" />
+          <pointerPath value="ControlResult/code/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Code} &gt; ${Description language}" />
+          <pointerPath value="ControlResult/code/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$ControlResult} &gt; ${L_Model$$Text}" />
+          <pointerPath value="ControlResult/text" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee}" />
+          <pointerPath value="Guarantee" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee}" />
+          <pointerPath value="Guarantee[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType}" />
+          <pointerPath value="Guarantee/guaranteeType" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${GuaranteeTypeCode}" />
+          <pointerPath value="Guarantee/guaranteeType/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${Description}" />
+          <pointerPath value="Guarantee/guaranteeType/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${Valid from}" />
+          <pointerPath value="Guarantee/guaranteeType/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${Valid to}" />
+          <pointerPath value="Guarantee/guaranteeType/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${Description language}" />
+          <pointerPath value="Guarantee/guaranteeType/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeType} &gt; ${_ description}" />
+          <pointerPath value="Guarantee/guaranteeType/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$OtherGuaranteeReference}" />
+          <pointerPath value="Guarantee/otherGuaranteeReference" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference}" />
+          <pointerPath value="Guarantee/GuaranteeReference" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference}" />
+          <pointerPath value="Guarantee/GuaranteeReference[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$GRN}" />
+          <pointerPath value="Guarantee/GuaranteeReference/GRN" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$AccessCode}" />
+          <pointerPath value="Guarantee/GuaranteeReference/accessCode" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$AmountToBeCovered}" />
+          <pointerPath value="Guarantee/GuaranteeReference/amountToBeCovered" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${Currency}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${RateValue}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/RateValue" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${Description}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${Valid from}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${Valid to}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${_ description}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Guarantee} ${IX_Guarantee} &gt; ${L_Model$$GuaranteeReference} ${IX_GuaranteeReference} &gt; ${L_Model$$Currency} &gt; ${Description language}" />
+          <pointerPath value="Guarantee/GuaranteeReference/currency/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment}" />
+          <pointerPath value="Consignment" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport}" />
+          <pointerPath value="Consignment/inlandModeOfTransport" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${TransportModeUCCCode}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${Description}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${_ description}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$InlandModeOfTransport} &gt; ${Description language}" />
+          <pointerPath value="Consignment/inlandModeOfTransport/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment}" />
+          <pointerPath value="Consignment/TransportEquipment" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment} ${IX_TransportEquipment}" />
+          <pointerPath value="Consignment/TransportEquipment[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment} ${IX_TransportEquipment} &gt; ${L_Model$$NumberOfSeals}" />
+          <pointerPath value="Consignment/TransportEquipment/numberOfSeals" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment} ${IX_TransportEquipment} &gt; ${L_Model$$Seal}" />
+          <pointerPath value="Consignment/TransportEquipment/Seal" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment} ${IX_TransportEquipment} &gt; ${L_Model$$Seal} ${IX_Seal}" />
+          <pointerPath value="Consignment/TransportEquipment/Seal[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$TransportEquipment} ${IX_TransportEquipment} &gt; ${L_Model$$Seal} ${IX_Seal} &gt; ${L_Model$$Identifier}" />
+          <pointerPath value="Consignment/TransportEquipment/Seal/identifier" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans}" />
+          <pointerPath value="Consignment/DepartureTransportMeans" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans}" />
+          <pointerPath value="Consignment/DepartureTransportMeans[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${TypeOfIdentification}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Description}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Description language}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${_ description}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/typeOfIdentification/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$IdentificationNumber}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/identificationNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Nationality}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Description}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Description language}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${_ description}" />
+          <pointerPath value="Consignment/DepartureTransportMeans/nationality/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment}" />
+          <pointerPath value="Consignment/HouseConsignment" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment}" />
+          <pointerPath value="Consignment/HouseConsignment[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans[]" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${TypeOfIdentification}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Description}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${Description language}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$TypeOfIdentification} &gt; ${_ description}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$IdentificationNumber}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/identificationNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Nationality}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Description}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${Description language}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$HouseConsignment} ${IX_HouseConsignment} &gt; ${L_Model$$DepartureTransportMeans} ${IX_DepartureTransportMeans} &gt; ${L_Model$$Nationality} &gt; ${_ description}" />
+          <pointerPath value="Consignment/HouseConsignment/DepartureTransportMeans/nationality/_description" />
+        </ErrorPointerMapItem>
+      </items>
+    </ErrorPointerMap>
+    <Codelist identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+      <Name value="AllocationResult" />
+      <autoLoad value="False" />
+      <name value="AllocationResult" />
+      <server reference="+GlobalApiObjects.CIC" />
+      <columns>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Key" />
+          <columnRole value="Key" />
+        </CodelistColumn>
+        <CodelistColumn identity="Codelist.2fd2d7af4a6d445bad8a58610632f8e0">
+          <columnName value="Description" />
+          <columnRole value="Description" />
+        </CodelistColumn>
+      </columns>
+    </Codelist>
+  </ApiObjects>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.Release" />
+  </Bindings>
+</Form>

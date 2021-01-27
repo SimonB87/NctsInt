@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="CountryCode_type" />
+  <Caption value="Country code" />
+  <MtsImportOptions.MTS.ID value="CountryCode_type" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="2" />
+      <StrMinLength value="2" />
+    </AttributeType>
+  </TypeSpec>
+  <Validators>
+    <Validator Name="regex">
+      <MtsImportOptions.MTS.Regex value="[A-Z]{2}" />
+      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+      <ErrorMessage IsValid="True">
+        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </ErrorMessage>
+      <IsValid IsValid="True">
+        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[A-Z]{2}$") : true)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="Bool" />
+        </ResultType>
+      </IsValid>
+    </Validator>
+  </Validators>
+</MetaType>

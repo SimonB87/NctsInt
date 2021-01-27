@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="KeycloakAdapter" />
+  <CanBeFormLocal value="False" />
+  <Generator value="keycloakAdapter.js" />
+  <UiCaption value="Keycloak adapter" />
+  <Contracts>
+    <ImplementsContractManifest>
+      <Name value="IRequestHeadersPreProcessor" />
+    </ImplementsContractManifest>
+  </Contracts>
+  <Events>
+    <EventManifest>
+      <Name value="onSessionExpired" />
+      <UiDescription value="This can happen anytime token is used (ie. to call server). App should probably redirect elsewhere, ie. to itself to make user login again." />
+      <Parameters>
+        <EventParameterManifest>
+          <Name value="data" />
+        </EventParameterManifest>
+      </Parameters>
+    </EventManifest>
+  </Events>
+  <Methods>
+    <MethodManifest>
+      <Name value="isAuthenticated" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getKeycloakToken" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="logout" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="redirectUrl" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getRoles" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="getCustomsOffices" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="finishAuthenticationAsync" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="hasRole" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="role" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="isEnabled" />
+      <ReturnType>
+        <BaseType value="Bool" />
+      </ReturnType>
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="authServerUrl" />
+      <Configurable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="realm" />
+      <Configurable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="client" />
+      <Configurable value="True" />
+      <IsRequired value="True" />
+      <Type value="string" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="customsOfficeJWTKey" />
+      <Default value="customsOffice" />
+      <Type value="string" />
+      <UiCaption value="Customs office attribute name" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="enabled" />
+      <Configurable value="True" />
+      <Default value="true" />
+      <Type value="bool" />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

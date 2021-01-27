@@ -47,64 +47,84 @@
       <Bindable value="True" />
       <Default value="False" />
       <Type value="bool" />
+      <UiCategory value="Buttons" />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="AllowRemove" />
       <Bindable value="True" />
       <Default value="False" />
       <Type value="bool" />
+      <UiCategory value="Buttons" />
     </PropertyManifest>
     <PropertyManifest>
-      <Name value="UseFontAwesome" />
+      <Name value="ShowAdd" />
+      <Bindable value="OneWay" />
       <Default value="true" />
       <Type value="bool" />
+      <UiCategory value="Buttons" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="ShowRemove" />
+      <Bindable value="OneWay" />
+      <Default value="true" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="IconLeftClass" />
-      <Default value="fa-caret-left" />
+      <Default value="fa fa-caret-left" />
       <Type value="string" />
-      <UiCaption value="Icon :Left: class (Font Awesome)" />
-      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+      <UiCaption value="Css class of &quot;Left&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Left&quot; icon from some icon font file." />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="IconRightClass" />
-      <Default value="fa-caret-right" />
+      <Default value="fa fa-caret-right" />
       <Type value="string" />
-      <UiCaption value="Icon :Right: class (Font Awesome)" />
-      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+      <UiCaption value="Css class of &quot;Right&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Right&quot; icon from some icon font file." />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="IconAddClass" />
-      <Default value="fa-plus" />
+      <Default value="fa fa-plus" />
       <Type value="string" />
-      <UiCaption value="Icon :Add: class (Font Awesome)" />
-      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+      <UiCaption value="Css class of &quot;Add&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Add&quot; icon from some icon font file." />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="IconRemoveClass" />
-      <Default value="fa-minus" />
+      <Default value="fa fa-minus" />
       <Type value="string" />
-      <UiCaption value="Icon :Remove: class (Font Awesome)" />
-      <UiDescription value="Font Awesome icon class name, see http://fontawesome.io/icons" />
+      <UiCaption value="Css class of &quot;Remove&quot; button icon" />
+      <UiCategory value="Icons" />
+      <UiDescription value="Css class of &quot;Remove&quot; icon from some icon font file." />
     </PropertyManifest>
     <PropertyManifest>
-      <Name value="IconSizeClass" />
-      <Default value="fa-lg" />
+      <Name value="IconsAdditionalClass" />
+      <Default value="fa-lg fa-fw" />
       <Type value="string" />
-      <UiCaption value="Icon size class (Font Awesome)" />
-      <UiDescription value="Possible values: fa-lg, fa-2x, fa-3x, fa-4x, fa-5x. See http://fontawesome.io/examples" />
-    </PropertyManifest>
-    <PropertyManifest>
-      <Name value="IconsFixedWidth" />
-      <Default value="True" />
-      <Type value="bool" />
-      <UiCaption value="Icons with fixed width (Font Awesome)" />
-      <UiDescription value="Use Font Awesome icons at a fixed width." />
+      <UiCategory value="Icons" />
+      <UiDescription value="Additional class for icons size, setting fixed width etc. Applies to all &quot;Left, Right, Add, Remove&quot; icons." />
     </PropertyManifest>
     <PropertyManifest>
       <Name value="CheckItemIsValidBeforeIndexChange" />
       <Bindable value="OneWay" />
       <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="IndicateDataErrors" />
+      <Bindable value="OneWay" />
+      <Default value="True" />
+      <Type value="bool" />
+    </PropertyManifest>
+    <PropertyManifest>
+      <Name value="KeepArrowsTogether" />
+      <Type value="bool" />
+      <UiCategory value="Buttons" />
+      <UiDescription value="Should right arrow be rendered next to the left arrow" />
     </PropertyManifest>
   </Properties>
 </ComponentManifest>

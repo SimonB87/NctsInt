@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<ApiObjectManifest>
+  <Name value="BrowserStorage" />
+  <Generator value="browserStorage.js" />
+  <Methods>
+    <MethodManifest>
+      <Name value="getItem" />
+      <ReturnType>
+        <BaseType value="String" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="key" />
+          <BaseType value="String" />
+          <UiDescription value="Returns value associated with given key" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="setItem" />
+      <Description value="Attempts to write value for given key" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="key" />
+          <BaseType value="String" />
+        </ParameterManifest>
+        <ParameterManifest>
+          <Name value="value" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="removeItem" />
+      <Description value="Attempts to remove item with given key" />
+      <ReturnType />
+      <Parameters>
+        <ParameterManifest>
+          <Name value="key" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
+    <MethodManifest>
+      <Name value="clear" />
+      <Description value="Clears everything in storage (for our http origin)" />
+      <ReturnType />
+    </MethodManifest>
+  </Methods>
+  <Properties>
+    <PropertyManifest>
+      <Name value="sessionOnly" />
+      <Type value="bool" />
+      <UiCaption value="Is session only" />
+      <UiDescription value="If true, sessionStorage will be used. Otherwise localStorage." />
+    </PropertyManifest>
+  </Properties>
+</ApiObjectManifest>

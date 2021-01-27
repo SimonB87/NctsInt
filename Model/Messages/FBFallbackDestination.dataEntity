@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBFallbackDestination" />
+  <Caption value="FBFallbackDestination" />
+  <MtsImportOptions.MTS.ID value="/FBFallbackDestination" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBFallbackDestination" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Complex>
+      <Name value="FallbackDestination" />
+      <Caption value="Fallback procedure at Destination" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBFallbackDestination/FallbackDestination" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.FallbackProcedureAtDestination" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="originalDocument" />
+          <Caption value="Original document number" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.NonWhiteSpacedString" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/FallbackDestination/originalDocument" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.OriginalDocumentNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="\S((([\n\r\t])|(.))*\S)?" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^\\S((([\\n\\r\\t])|(.))*\\S)?$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBFallbackDestination/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="CustomsOfficeOfDeparture" />
+      <Caption value="Customs Office Of Departure" />
+      <MtsImportOptions.MTS.ID value="/FBFallbackDestination/CustomsOfficeOfDeparture" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CustomsOfficeOfDeparture" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Reference>
+          <Name value="referenceNumber" />
+          <Caption value="Reference number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/CustomsOfficeOfDeparture/referenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReferenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CustomsOfficeDeparture" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="RN104">
+              <MtsImportOptions.MTS.ID value="RN104" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RN104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(substring(this.referenceNumber.Code,1,2) = "ME")]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="HolderOfTheTransitProcedure" />
+      <Caption value="Holder Of The Transit Procedure" />
+      <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.HolderOfTheTransitProcedure" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="identificationNumber" />
+          <Caption value="Identification number" />
+          <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/identificationNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.IdentificationNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="TIRHolderIdentificationNumber" />
+          <Caption value="TIR holder identification number" />
+          <MetaType reference="+MetaTypes.TIRHolderIdentificationNumberContentType" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/TIRHolderIdentificationNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TIRHolderIdentificationNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="C0904">
+              <MtsImportOptions.MTS.ID value="C0904" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.C0904]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0904 IF / * /TransitOperation/declarationType is PRESENT
+THEN IF / * /TransitOperation/declarationType is EQUAL to 'TIR'
+           THEN / * /HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"
+           ELSE / * /HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N"
+ELSE IF /CC015C/TransitOperation/declarationType is EQUAL to 'TIR' OR 
+/CC013C/TransitOperation/declarationType is EQUAL to 'TIR'
+         THEN / * /HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "R"
+         ELSE / * /HolderOfTheTransitProcedure/TIRHolderIdentificationNumber = "N" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="name" />
+          <Caption value="Name" />
+          <MetaType reference="+MetaTypes.NameContentType" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/name" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Name" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Complex>
+          <Name value="Address" />
+          <Caption value="Address" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/Address" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Address" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="streetAndNumber" />
+              <Caption value="Street and number" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/Address/streetAndNumber" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.StreetAndNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="postcode" />
+              <Caption value="Postcode" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/Address/postcode" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="17" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Postcode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="city" />
+              <Caption value="City" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/Address/city" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType>
+                  <StrMaxLength value="35" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.City" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Reference>
+              <Name value="country" />
+              <Caption value="Country" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/HolderOfTheTransitProcedure/Address/country" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Country" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.CountryCodesForAddress" />
+                </Include>
+              </Children>
+            </Reference>
+          </Children>
+        </Complex>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="Consignment" />
+      <Caption value="Consignment" />
+      <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Consignment" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="grossMass" />
+          <Caption value="Gross mass" />
+          <MetaType reference="+MetaTypes.GrossMassContentType" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/grossMass" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GrossMass" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="E1109">
+              <MtsImportOptions.MTS.ID value="E1109" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.E1109]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE E1109 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
+THEN 
+/ * /Consignment/grossMass AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/GoodsMeasure/grossMass AND
+/ * /Consignment/HouseConsignment/ConsignmentItem/GoodsMeasure/netMass
+
+format shall be set to n..11,3 */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Complex>
+          <Name value="Consignor" />
+          <Caption value="Consignor" />
+          <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Consignor" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="identificationNumber" />
+              <Caption value="Identification number" />
+              <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/identificationNumber" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.IdentificationNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="name" />
+              <Caption value="Name" />
+              <MetaType reference="+MetaTypes.NameContentType" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/name" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Name" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Complex>
+              <Name value="Address" />
+              <Caption value="Address" />
+              <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/Address" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Address" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Attribute>
+                  <Name value="streetAndNumber" />
+                  <Caption value="Street and number" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/Address/streetAndNumber" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.StreetAndNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Attribute>
+                  <Name value="postcode" />
+                  <Caption value="Postcode" />
+                  <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/Address/postcode" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <StrMaxLength value="17" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Postcode" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Attribute>
+                  <Name value="city" />
+                  <Caption value="City" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/Address/city" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <StrMaxLength value="35" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.City" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Reference>
+                  <Name value="country" />
+                  <Caption value="Country" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBFallbackDestination/Consignment/Consignor/Address/country" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Country" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.CountryCodesForAddress" />
+                    </Include>
+                  </Children>
+                </Reference>
+              </Children>
+            </Complex>
+          </Children>
+        </Complex>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

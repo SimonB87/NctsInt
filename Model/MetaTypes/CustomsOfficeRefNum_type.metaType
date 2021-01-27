@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="CustomsOfficeRefNum_type" />
+  <Caption value="Customs office reference number" />
+  <MtsImportOptions.MTS.ID value="CustomsOfficeRefNum_type" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="8" />
+      <StrMinLength value="8" />
+    </AttributeType>
+  </TypeSpec>
+  <Validators>
+    <Validator Name="regex">
+      <MtsImportOptions.MTS.Regex value="[A-Z]{2}[A-Z0-9]{6}" />
+      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+      <ErrorMessage IsValid="True">
+        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </ErrorMessage>
+      <IsValid IsValid="True">
+        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[A-Z]{2}[A-Z0-9]{6}$") : true)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="Bool" />
+        </ResultType>
+      </IsValid>
+    </Validator>
+  </Validators>
+</MetaType>

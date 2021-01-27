@@ -125,9 +125,6 @@
                           <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="displayFlex" />
-                        </CssClassConditional>
                       </CssClass>
                     </Panel>
                     <Panel>
@@ -252,9 +249,6 @@
                                             </CssClassConditional>
                                             <CssClassConditional>
                                               <ClassName value="fullWidth" />
-                                            </CssClassConditional>
-                                            <CssClassConditional>
-                                              <ClassName value="displayFlex" />
                                             </CssClassConditional>
                                           </CssClass>
                                         </Panel>
@@ -418,9 +412,6 @@
                             <CssClassConditional>
                               <ClassName value="{theme}-panel" />
                               <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                            <CssClassConditional>
-                              <ClassName value="displayFlex" />
                             </CssClassConditional>
                             <CssClassConditional>
                               <ClassName value="fullWidth" />
@@ -605,9 +596,6 @@
                             <CssClassConditional>
                               <ClassName value="{theme}-panel" />
                               <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                            <CssClassConditional>
-                              <ClassName value="displayFlex" />
                             </CssClassConditional>
                           </CssClass>
                         </Panel>

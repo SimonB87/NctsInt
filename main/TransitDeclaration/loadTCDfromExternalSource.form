@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="loadTCDfromExternalSource" />
+  <Caption value="Load TC dfrom external source" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="panel21" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Children>
+            <Panel>
+              <Name value="panel22" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Label>
+                  <Name value="label_mode" />
+                  <Heading value="h5" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="100%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.Load" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-header" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <FileReader identity="FileReader.f457f0445b7e44b7a3a1134647eff385">
+              <Name value="fileReader1" />
+              <CaptionPosition value="Hide" />
+              <Filter value=".xml" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Bindings>
+                <Binding SourceProperty="FileContent" Expression="form.Model.content" />
+                <Binding SourceProperty="FileName" Expression="" />
+                <Binding SourceProperty="FileType" Expression="" />
+              </Bindings>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="filereader" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-filereader" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </FileReader>
+            <Panel>
+              <Name value="pnl_buttons" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.HorizontalAlignment value="Center" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btn_send" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_button1_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="localized.Send" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="btn-success" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+                <Button>
+                  <Name value="btn_close" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="50%" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="localized.Close" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="btn-secondary" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-buttons" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="modal-wrapper" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="modal" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="Model" />
+          <Caption value="Model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBLoadTCDBin_SF" />
+            </Include>
+          </Children>
+        </Complex>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_button1_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var response = apiobjects.CIC.postAsync("FBLoadTCDBin", form.Model.toJson())
+var responseMessageType = response.getMessageType()
+
+if (response.isError() OR isTrue(responseMessageType="ErrorReport")) then
+	navigation.close("Error")
+else
+	if isTrue(responseMessageType = "BFDataResponse") then
+		var res = response.getJsonString()
+		apiobjects.transitDeclaration.clear()
+		navigation.close(res)
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.close("Close")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

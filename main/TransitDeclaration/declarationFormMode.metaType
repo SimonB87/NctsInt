@@ -3,6 +3,9 @@
 <MetaType>
   <Name value="declarationFormMode" />
   <Caption value="Declaration form mode" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData />
+  </PropertyLocalizationData.PropertyLocalizations>
   <TypeSpec>
     <AttributeType>
       <BaseType value="Enum" />
@@ -11,21 +14,192 @@
           <Name value="create" />
           <Caption value="Create" />
           <Value value="create" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Create" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </AttributeEnumValue>
         <AttributeEnumValue>
           <Name value="edit" />
           <Caption value="Edit" />
           <Value value="edit" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Edit" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </AttributeEnumValue>
         <AttributeEnumValue>
           <Name value="arrival" />
           <Caption value="Arrival" />
           <Value value="arrival" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Arrival" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </AttributeEnumValue>
         <AttributeEnumValue>
           <Name value="continueFilling" />
           <Caption value="Continue filling" />
           <Value value="continueFilling" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ContinueFilling" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="copy" />
+          <Caption value="Copy" />
+          <Value value="copy" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Copy" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="historicVersion" />
+          <Caption value="Historic version" />
+          <Description value="User is viewing older historic version of a declaration" />
+          <Value value="historicVersion" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.HistoricVersion" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="detail" />
+          <Caption value="Detail" />
+          <Value value="detail" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Detail" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="incident" />
+          <Caption value="Incident" />
+          <Value value="incident" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Incident" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="arrivalAtTransit" />
+          <Caption value="Arrival at transit" />
+          <Value value="arrivalAtTransit" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ArrivalAtTransit" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="routing" />
+          <Caption value="Routing" />
+          <Value value="routing" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Routing" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="validateFallback" />
+          <Caption value="Validate fallback" />
+          <Value value="validateFallback" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ValidateFallback" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="incompleteDetail" />
+          <Caption value="Incomplete detail" />
+          <Value value="incompleteDetail" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.IncompleteDetail" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="discharge" />
+          <Caption value="Discharge" />
+          <Value value="discharge" />
+        </AttributeEnumValue>
+        <AttributeEnumValue>
+          <Name value="leaving" />
+          <Caption value="Leaving" />
+          <Value value="leaving" />
         </AttributeEnumValue>
       </EnumValues>
     </AttributeType>

@@ -182,7 +182,7 @@ var sffw;
                     this.notifications.removeAll();
                 };
                 NotificationPanelModel.prototype.toggleGrowlNotifications = function () {
-                    this.growlNotificationsOn(!this.growlNotificationsOn());
+                    this.controller.setGrowlNotificationsOn({ isOn: !this.growlNotificationsOn() });
                 };
                 return NotificationPanelModel;
             }());
@@ -250,7 +250,7 @@ var sffw;
                     viewModel: {
                         createViewModel: function (params, componentInfo) { return new sffw.components.notifications.NotificationPanelStatusIconModel(params, componentInfo); }
                     },
-                    template: "\n<div class=\"notifications-status-icon\">\n    <button class=\"notification-trigger\" data-bind=\"click: togglePanel\n        , attr: {'aria-label': $root.$localize('Notifications$$togglePanel') + '. ' + $root.$localize('Notifications$$numberOfNotifications') + ': ' + count() , 'aria-expanded': isExpanded() ? 'true' : 'false'}\">\n        <i data-bind=\"css: iconClass\" aria-hidden=\"true\"></i>\n        <span class=\"notification-num\" data-bind=\"text: count\" aria-hidden=\"true\"></span>\n    </a>\n</div>\n"
+                    template: "\n<div class=\"notifications-status-icon\">\n    <button class=\"notification-trigger\" data-bind=\"click: togglePanel\n        , attr: {'aria-label': $root.$localize('Notifications$$togglePanel') + '. ' + $root.$localize('Notifications$$numberOfNotifications') + ': ' + count() , 'aria-expanded': isExpanded() ? 'true' : 'false'}\">\n        <i data-bind=\"css: iconClass\" aria-hidden=\"true\"></i>\n        <span class=\"notification-num\" data-bind=\"text: count, attr: { 'data-notifications-count': count }\" aria-hidden=\"true\"></span>\n    </a>\n</div>\n"
                 });
             }
         })(notifications = components.notifications || (components.notifications = {}));

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBExit_SF" />
+  <Caption value="FBExit_SF" />
+  <MtsImportOptions.MTS.ID value="/FBExit_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBExit_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBExit_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="CustomsOfficeOfExitTransitActual" />
+      <Caption value="Customs Office Of Exit Transit Actual" />
+      <Description value="Aktuální office" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBExit_SF/CustomsOfficeOfExitTransitActual" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <Children>
+        <Reference>
+          <Name value="referenceNumber" />
+          <Caption value="Reference number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBExit_SF/CustomsOfficeOfExitTransitActual/referenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CustomsOfficeTransit" />
+            </Include>
+          </Children>
+        </Reference>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

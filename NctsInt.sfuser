@@ -1,3 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?data-format version="0.400"?>
-<UserOptions />
+<UserOptions>
+  <DeploymentPathCleanup value="True" />
+  <LocalServerPort value="8080" />
+  <ProjectStartUrl value="&lt;localserver&gt;" />
+</UserOptions>

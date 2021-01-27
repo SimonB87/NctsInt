@@ -5,6 +5,16 @@
   <Caption value="ErrorReport" />
   <MtsImportOptions.MTS.ID value="/ErrorReport" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.ErrorReport" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Complex>
       <Name value="Error" />
@@ -12,6 +22,16 @@
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/ErrorReport/Error" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Error" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="TimeStamp" />
@@ -24,6 +44,16 @@
               <BaseType value="DateTime" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DateAndTimeOfErrorOcurrence" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="AppName" />
@@ -37,6 +67,16 @@
               <StrMaxLength value="999" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ApplicationName" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="MessageGUID" />
@@ -46,6 +86,16 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GUIDOfRejectedMessage" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="ObjectGUID" />
@@ -55,6 +105,16 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GUIDOfProcessedObject" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Collection>
           <Name value="MessageCheckError" />
@@ -63,6 +123,16 @@
           <MaxCount value="99999" />
           <MtsImportOptions.MTS.ID value="/ErrorReport/Error/MessageCheckError" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ErrorInMessageCheck" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="ErrorType" />
@@ -76,6 +146,16 @@
                   <StrMaxLength value="999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ErrorType" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="ErrorDescription" />
@@ -85,6 +165,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.DescriptionOfError" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Pointer" />
@@ -97,6 +187,16 @@
                   <StrMaxLength value="9999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.PointerToErrorElementXPATH" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Reason" />
@@ -109,6 +209,16 @@
                   <StrMaxLength value="9999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ReasonOfError" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="RejectedValue" />
@@ -118,6 +228,16 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ValueThatWasRejected" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="Help" />
@@ -129,6 +249,16 @@
                   <StrMaxLength value="99999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.HelpForEndUser" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Collection>
@@ -139,6 +269,16 @@
           <MaxCount value="99999" />
           <MtsImportOptions.MTS.ID value="/ErrorReport/Error/InternalError" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ErrorFromRuntimeApplication" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="Description" />
@@ -151,6 +291,16 @@
                   <StrMaxLength value="99999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Description" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="DebugInfo" />
@@ -163,6 +313,16 @@
                   <StrMaxLength value="99999" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.DebugInfo" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Collection>

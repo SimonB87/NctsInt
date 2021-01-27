@@ -3,6 +3,7 @@
 <DataEntity>
   <Name value="ControlResultCodeDeparture" />
   <Caption value="ControlResultCodeDeparture" />
+  <Description value="CL196" />
   <MtsImportOptions.MTS.ID value="ControlResultCodeDeparture" />
   <MtsImportOptions.MTS.Type value="codelist" />
   <Children>
@@ -56,5 +57,17 @@
         </ResultType>
       </Expression>
     </Computed>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="ControlResultCodeDeparture/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
   </Children>
 </DataEntity>

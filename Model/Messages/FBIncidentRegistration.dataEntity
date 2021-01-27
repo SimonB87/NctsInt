@@ -5,38 +5,63 @@
   <Caption value="FB Incident Registration" />
   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBIncidentRegistration" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Complex>
       <Name value="TransitOperation" />
-      <Caption value="TRANSIT OPERATION" />
+      <Caption value="Transit Operation" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/TransitOperation" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="MRN" />
           <Caption value="MRN" />
           <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
           <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/TransitOperation/MRN" />
           <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <StrMaxLength value="18" />
-              <StrMinLength value="18" />
-            </AttributeType>
-          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Validators>
             <Validator Name="regex">
-              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
               <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
               <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                 <ResultType>
                   <BaseType value="String" />
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -48,25 +73,74 @@
     </Complex>
     <Complex>
       <Name value="Consignment" />
-      <Caption value="CONSIGNMENT" />
+      <Caption value="Consignment" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Consignment" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
-        <Collection>
+        <Complex>
           <Name value="Incident" />
-          <Caption value="INCIDENT" />
-          <MaxCount value="9" />
-          <MinCount value="1" />
+          <Caption value="Incident" />
+          <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Incident" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID of incident" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/GUID" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.GUIDOfIncident" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
             <Reference>
               <Name value="code" />
               <Caption value="Code" />
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/code" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Code" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
                   <Include reference="+DataEntities.IncidentCode" />
@@ -80,12 +154,32 @@
               <MetaType reference="+MetaTypes.TextContentType" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/text" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Text" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Complex>
               <Name value="Endorsement" />
-              <Caption value="ENDORSEMENT" />
+              <Caption value="Endorsement" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Endorsement" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="date" />
@@ -98,6 +192,16 @@
                       <BaseType value="Date" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Date" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Attribute>
                   <Name value="authority" />
@@ -106,6 +210,16 @@
                   <MetaType reference="+MetaTypes.AuthorityContentType" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/authority" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Authority" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Attribute>
                   <Name value="place" />
@@ -114,6 +228,16 @@
                   <MetaType reference="+MetaTypes.PlaceContentType" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/place" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Place" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Reference>
                   <Name value="country" />
@@ -121,6 +245,16 @@
                   <IsRequired value="True" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Endorsement/country" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Country" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.CountryCodesCommonTransit" />
@@ -131,10 +265,20 @@
             </Complex>
             <Complex>
               <Name value="Location" />
-              <Caption value="LOCATION" />
+              <Caption value="Location" />
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Location" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Reference>
                   <Name value="qualifierOfIdentification" />
@@ -142,6 +286,16 @@
                   <IsRequired value="True" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/qualifierOfIdentification" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.QualifierOfIdentification" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.QualifierOfIdentificationIncident" />
@@ -150,9 +304,19 @@
                 </Reference>
                 <Reference>
                   <Name value="UNLocode" />
-                  <Caption value="UN LOCODE" />
+                  <Caption value="UNLocode" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/UNLocode" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.UNLocode" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.UnLocodeExtended" />
@@ -163,27 +327,13 @@
                       <MtsImportOptions.MTS.ID value="C0460" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0460]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
-THEN 
-/ * /Consignment/Incident/Location/GNSS = "R" AND 
-/ * /Consignment/Incident/Location/UNLocode = "N" AND 
-/ * /Consignment/Incident/Location/Address = "N"
-ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' 
-          THEN 
-	  / * /Consignment/Incident/Location/UNLocode = "R" AND 
-	  / * /Consignment/Incident/Location/GNSS = "N" AND 
-	  / * /Consignment/Incident/Location/Address = "N"
-          ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' 
-          THEN
-                / * /Consignment/Incident/Location/Address = "R" AND 
-		/ * /Consignment/Incident/Location/UNLocode = "N" AND
-		/ * /Consignment/Incident/Location/GNSS = "N" */]]></ExpressionText>
+                        <ExpressionText><![CDATA[(isTrue(this.qualifierOfIdentification.Code = "W") OR isTrue(this.qualifierOfIdentification.Code = "Z")) ? this.UNLocode.isEmpty() : isTrue(this.qualifierOfIdentification.Code = "U") ? this.UNLocode.hasValue() : true]]></ExpressionText>
                         <ResultType>
                           <BaseType value="Bool" />
                         </ResultType>
@@ -197,6 +347,16 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                   <IsRequired value="True" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/country" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Country" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.CountryCodesCommonTransit" />
@@ -208,6 +368,16 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                   <Caption value="GNSS" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/GNSS" />
                   <MtsImportOptions.MTS.Type value="group" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.GNSS" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="latitude" />
@@ -220,12 +390,22 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                           <StrMaxLength value="17" />
                         </AttributeType>
                       </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Latitude" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                       <Validators>
                         <Validator Name="regex">
                           <MtsImportOptions.MTS.Regex value="[+-]?([0-8]?[0-9]\.[0-9]{5,7}|90.000000?0?)" />
                           <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                           <ErrorMessage IsValid="True">
-                            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                            <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                             <ResultType>
                               <BaseType value="String" />
                             </ResultType>
@@ -250,12 +430,22 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                           <StrMaxLength value="17" />
                         </AttributeType>
                       </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Longitude" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                       <Validators>
                         <Validator Name="regex">
                           <MtsImportOptions.MTS.Regex value="[+-]?((0?[0-9]?|1[0-7])[0-9]\.[0-9]{5,7}|180.000000?0?)" />
                           <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                           <ErrorMessage IsValid="True">
-                            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                            <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                             <ResultType>
                               <BaseType value="String" />
                             </ResultType>
@@ -275,27 +465,13 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                       <MtsImportOptions.MTS.ID value="C0460" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0460]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
-THEN 
-/ * /Consignment/Incident/Location/GNSS = "R" AND 
-/ * /Consignment/Incident/Location/UNLocode = "N" AND 
-/ * /Consignment/Incident/Location/Address = "N"
-ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'U' 
-          THEN 
-	  / * /Consignment/Incident/Location/UNLocode = "R" AND 
-	  / * /Consignment/Incident/Location/GNSS = "N" AND 
-	  / * /Consignment/Incident/Location/Address = "N"
-          ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'Z' 
-          THEN
-                / * /Consignment/Incident/Location/Address = "R" AND 
-		/ * /Consignment/Incident/Location/UNLocode = "N" AND
-		/ * /Consignment/Incident/Location/GNSS = "N" */]]></ExpressionText>
+                        <ExpressionText><![CDATA[(isTrue(this.qualifierOfIdentification.Code = "U") OR isTrue(this.qualifierOfIdentification.Code = "Z")) ? this.GNSS.isEmpty() : isTrue(this.qualifierOfIdentification.Code = "W") ? this.GNSS.hasValue() : true]]></ExpressionText>
                         <ResultType>
                           <BaseType value="Bool" />
                         </ResultType>
@@ -305,9 +481,19 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                 </Complex>
                 <Complex>
                   <Name value="Address" />
-                  <Caption value="ADDRESS" />
+                  <Caption value="Address" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address" />
                   <MtsImportOptions.MTS.Type value="group" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Address" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="streetAndNumber" />
@@ -316,6 +502,16 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                       <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Location/Address/streetAndNumber" />
                       <MtsImportOptions.MTS.Type value="element" />
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.StreetAndNumber" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                     <Attribute>
                       <Name value="postcode" />
@@ -327,70 +523,16 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                           <StrMaxLength value="17" />
                         </AttributeType>
                       </DeclaredType>
-                      <Validators>
-                        <Validator Name="C0505">
-                          <MtsImportOptions.MTS.ID value="C0505" />
-                          <MtsImportOptions.MTS.Type value="condition-constraint" />
-                          <ErrorMessage IsValid="True">
-                            <ExpressionText><![CDATA["C0505"]]></ExpressionText>
-                            <ResultType>
-                              <BaseType value="String" />
-                            </ResultType>
-                          </ErrorMessage>
-                          <IsValid IsValid="True">
-                            <ExpressionText><![CDATA[true /* IMPORTED RULE C0505 IF / * /HolderOfTheTransitProcedure/Address/country is in SET CL505
-THEN / * /HolderOfTheTransitProcedure/Address/postcode = "O"
-ELSE / * /HolderOfTheTransitProcedure/Address/postcode = "R";
-
-IF / * /Consignment/Consignor/Address/country is in SET CL505 
-THEN / * /Consignment/Consignor/Address/postcode = "O"
-ELSE / * /Consignment/Consignor/Address/postcode = "R";
-
-IF / * /Consignment/Consignee/Address/country is in SET CL505
-THEN / * /Consignment/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/Consignee/Address/postcode = "R";
-
-IF / * /Consignment/Incident/Location/Address/country is in SET CL505
-THEN / * /Consignment/Incident/Location/Address/postcode = "O"
-ELSE / * /Consignment/Incident/Location/Address/postcode = "R";
-
-IF / * /Consignment/LocationOfGoods/Address/country is in SET CL505
-THEN / * /Consignment/LocationOfGoods/Address/postcode = "O"
-ELSE / * /Consignment/LocationOfGoods/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/Consignor/Address/country is in SET CL505
-THEN / * /Consignment/HouseConsignment/Consignor/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/Consignor/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/Consignee/Address/country is in SET CL505
-THEN / * /Consignment/HouseConsignment/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/Consignee/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505 
-THEN / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";
-
-IF / * /Guarantor/Address/country is in SET CL505
-THEN / * /Guarantor/Address/postcode = "O"
-ELSE / * /Guarantor/Address/postcode = "R";
-
-IF / * /GuaranteeReference/Guarantor/Address/country is in SET CL505
-THEN / * /GuaranteeReference/Guarantor/Address/postcode = "O"
-ELSE / * /GuaranteeReference/Guarantor/Address/postcode = "R";
-
-IF / * /GuaranteeReference/Owner/Address/country is in SET CL505
-THEN / * /GuaranteeReference/Owner/Address/postcode = "O"
-ELSE / * /GuaranteeReference/Owner/Address/postcode = "R";
-
-IF / * /Consignment/ConsigneeActual/Address/country is in SET CL505
-THEN / * /Consignment/ConsigneeActual/Address/postcode = "O"
-ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionText>
-                            <ResultType>
-                              <BaseType value="Bool" />
-                            </ResultType>
-                          </IsValid>
-                        </Validator>
-                      </Validators>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Postcode" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                     <Attribute>
                       <Name value="city" />
@@ -403,6 +545,16 @@ ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionTe
                           <StrMaxLength value="35" />
                         </AttributeType>
                       </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.City" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                   </Children>
                   <Validators>
@@ -410,13 +562,15 @@ ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionTe
                       <MtsImportOptions.MTS.ID value="C0460" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0460"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0460]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
+                        <ExpressionText><![CDATA[(isTrue(this.qualifierOfIdentification.Code = "W") OR isTrue(this.qualifierOfIdentification.Code = "U")) ? this.Address.isEmpty() : isTrue(this.qualifierOfIdentification.Code = "Z") ? this.Address.hasValue() : true
+
+/* IMPORTED RULE C0460 IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to 'W'
 THEN 
 / * /Consignment/Incident/Location/GNSS = "R" AND 
 / * /Consignment/Incident/Location/UNLocode = "N" AND 
@@ -442,10 +596,20 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
             </Complex>
             <Collection>
               <Name value="TransportEquipment" />
-              <Caption value="TRANSPORT EQUIPMENT" />
+              <Caption value="Transport Equipment" />
               <MaxCount value="9999" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.TransportEquipment" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="containerIdentificationNumber" />
@@ -457,12 +621,22 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                       <StrMaxLength value="17" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.ContainerIdentificationNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Validators>
                     <Validator Name="C0820">
                       <MtsImportOptions.MTS.ID value="C0820" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0820"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0820]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -478,7 +652,7 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                       <MtsImportOptions.MTS.Regex value="[ -~]{1,17}" />
                       <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -498,37 +672,28 @@ ELSE IF / * /Consignment/Incident/Location/qualifierOfIdentification is EQUAL to
                   <MetaType reference="+MetaTypes.NumberOfSealsContentType" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/numberOfSeals" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.NumberOfSeals" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Validators>
-                    <Validator Name="R0106">
-                      <MtsImportOptions.MTS.ID value="R0106" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["R0106"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[this.numberOfSeals.hasValue() ? this.numberOfSeals = this.Seal.count() : this.Seal.isEmpty()]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
                     <Validator Name="R0448">
                       <MtsImportOptions.MTS.ID value="R0448" />
                       <MtsImportOptions.MTS.Type value="rule-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["R0448"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.R0448]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[this.containerIdentificationNumber.isEmpty() ?
-(this.numberOfSeals > 0)
-:
-true]]></ExpressionText>
+                        <ExpressionText><![CDATA[this.containerIdentificationNumber.isEmpty() ? this.numberOfSeals > 0 : true]]></ExpressionText>
                         <ResultType>
                           <BaseType value="Bool" />
                         </ResultType>
@@ -538,7 +703,7 @@ true]]></ExpressionText>
                       <MtsImportOptions.MTS.ID value="C0396" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0396"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0396]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -554,10 +719,20 @@ true]]></ExpressionText>
                 </Attribute>
                 <Collection>
                   <Name value="Seal" />
-                  <Caption value="SEAL" />
+                  <Caption value="Seal" />
                   <MaxCount value="99" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/Seal" />
                   <MtsImportOptions.MTS.Type value="group" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.LocalizedString1" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="identifier" />
@@ -566,18 +741,28 @@ true]]></ExpressionText>
                       <MetaType reference="+MetaTypes.IdentifierContentType" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/Seal/identifier" />
                       <MtsImportOptions.MTS.Type value="element" />
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Identifier" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                       <Validators>
                         <Validator Name="R0107">
                           <MtsImportOptions.MTS.ID value="R0107" />
                           <MtsImportOptions.MTS.Type value="rule-constraint" />
                           <ErrorMessage IsValid="True">
-                            <ExpressionText><![CDATA["R0107"]]></ExpressionText>
+                            <ExpressionText><![CDATA[localized.R0107]]></ExpressionText>
                             <ResultType>
                               <BaseType value="String" />
                             </ResultType>
                           </ErrorMessage>
                           <IsValid IsValid="True">
-                            <ExpressionText><![CDATA[this.collection().where(current.identifier=this.identifier).count() < 2]]></ExpressionText>
+                            <ExpressionText><![CDATA[NOT (this.collection().count(Current.identifier=this.identifier)>1)]]></ExpressionText>
                             <ResultType>
                               <BaseType value="Bool" />
                             </ResultType>
@@ -588,55 +773,39 @@ true]]></ExpressionText>
                   </Children>
                   <CollectionValidators>
                     <Validator Name="C0569">
+                      <MtsImportOptions.MTS.ID value="C0569" />
+                      <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0569"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0569]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[isTrue(this.numberOfSeals > 0) ? this.Seal.hasValue() : this.Seal.isEmpty()]]></ExpressionText>
+                        <ExpressionText><![CDATA[this.numberOfSeals > 0 ? this.Seal.count() > 0 : this.Seal.isEmpty()]]></ExpressionText>
                         <ResultType>
                           <BaseType value="Bool" />
                         </ResultType>
                       </IsValid>
                     </Validator>
                   </CollectionValidators>
-                  <ItemValidators>
-                    <Validator Name="C0569">
-                      <MtsImportOptions.MTS.ID value="C0569" />
-                      <MtsImportOptions.MTS.Type value="condition-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0569"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0569 IF / * /Consignment/Incident/TransportEquipment/numberOfSeals is GREATER than '0'
-THEN
-/ * /Consignment/Incident/TransportEquipment/Seal = "R"
-ELSE
-/ * /Consignment//Incident/TransportEquipment/Seal = "N";
-
-IF / * /Consignment/TransportEquipment/numberOfSeals is GREATER than '0'
-THEN
-/ * /Consignment/TransportEquipment/Seal = "R"
-ELSE
-/ * /Consignment/TransportEquipment/Seal = "N" */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </ItemValidators>
                 </Collection>
                 <Collection>
                   <Name value="GoodsReference" />
-                  <Caption value="GOODS REFERENCE" />
+                  <Caption value="Goods Reference" />
                   <MaxCount value="9999" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/GoodsReference" />
                   <MtsImportOptions.MTS.Type value="group" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.GoodsReference" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="declarationGoodsItemNumber" />
@@ -645,96 +814,54 @@ ELSE
                       <MetaType reference="+MetaTypes.DeclarationGoodsItemNumberContentType" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/TransportEquipment/GoodsReference/declarationGoodsItemNumber" />
                       <MtsImportOptions.MTS.Type value="element" />
-                      <Validators>
-                        <Validator Name="G0006">
-                          <MtsImportOptions.MTS.ID value="G0006" />
-                          <MtsImportOptions.MTS.Type value="rule-constraint" />
-                          <ErrorMessage IsValid="True">
-                            <ExpressionText><![CDATA["G0006"]]></ExpressionText>
-                            <ResultType>
-                              <BaseType value="String" />
-                            </ResultType>
-                          </ErrorMessage>
-                          <IsValid IsValid="True">
-                            <ExpressionText><![CDATA[true /* IMPORTED RULE G0006 <TRANSPORT EQUIPMENT-GOODS REFERENCE.Declaration goods item number> is filled in with the item number of the goods concerned as provided in Declaration goods item number. */]]></ExpressionText>
-                            <ResultType>
-                              <BaseType value="Bool" />
-                            </ResultType>
-                          </IsValid>
-                        </Validator>
-                      </Validators>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.DeclarationGoodsItemNumber" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                   </Children>
-                  <ItemValidators>
-                    <Validator Name="G0670">
-                      <MtsImportOptions.MTS.ID value="G0670" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0670"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0670 If all goods items are related a single container, the data group can be omitted.
-Otherwise all the goods items related to this container (if present) must be declared.
-All the non-containerised goods items related to this seals information (if present) must be declared as well. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </ItemValidators>
                 </Collection>
               </Children>
               <CollectionValidators>
                 <Validator Name="C0240">
+                  <MtsImportOptions.MTS.ID value="C0240" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
                   <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
+                    <ExpressionText><![CDATA[localized.C0240]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[isTrue(this.code.Code = 2) ? this.TransportEquipment.hasValue() : true]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.code.Code = 2) ? this.TransportEquipment.count(true) > 0 : true]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
                   </IsValid>
                 </Validator>
               </CollectionValidators>
-              <ItemValidators>
-                <Validator Name="C0240">
-                  <MtsImportOptions.MTS.ID value="C0240" />
-                  <MtsImportOptions.MTS.Type value="condition-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0240 IF / * /Incident/code is EQUAL to ‘2’
-THEN / * /Consignment/Incident/TransportEquipment = "R" AND
-/ * /Consignment/Incident/Transhipment = "O"
-ELSE IF / * /Incident/code is in SET { 3, 6}
-THEN / * /Consignment/Incident/TransportEquipment = "O" AND
-/ * /Consignment/Incident/Transhipment = "R"
-ELSE
-/ * /Consignment/Incident/TransportEquipment = "O" AND
-/ * / Consignment/Incident/Transhipment = "O" */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </ItemValidators>
             </Collection>
             <Complex>
               <Name value="Transhipment" />
-              <Caption value="TRANSHIPMENT" />
+              <Caption value="Transhipment" />
               <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Transhipment" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="containerIndicator" />
@@ -747,30 +874,32 @@ ELSE
                       <BaseType value="Bool" />
                     </AttributeType>
                   </DeclaredType>
-                  <Validators>
-                    <Validator Name="G0029">
-                      <MtsImportOptions.MTS.ID value="G0029" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0029"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0029 The D.I. will be filled in with new value amending initial declaration in case of incident. In case the initial container is replaced by another container then <CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator> is equal to '1' else <CONSIGNMENT-INCIDENT-TRANSHIPMENT.Container indicator> is equal to '0'. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </Validators>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.ContainerIndicator" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Complex>
                   <Name value="TransportMeans" />
-                  <Caption value="TRANSPORT MEANS" />
+                  <Caption value="Transport Means" />
                   <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans" />
                   <MtsImportOptions.MTS.Type value="group" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.TransportMeans" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Reference>
                       <Name value="typeOfIdentification" />
@@ -778,6 +907,16 @@ ELSE
                       <IsRequired value="True" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/typeOfIdentification" />
                       <MtsImportOptions.MTS.Type value="element" />
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.TypeOfIdentification" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                       <Children>
                         <Include>
                           <Include reference="+DataEntities.TypeOfIdentificationOfMeansOfTransport" />
@@ -791,6 +930,16 @@ ELSE
                       <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/identificationNumber" />
                       <MtsImportOptions.MTS.Type value="element" />
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.IdentificationNumber" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                     <Reference>
                       <Name value="nationality" />
@@ -798,6 +947,16 @@ ELSE
                       <IsRequired value="True" />
                       <MtsImportOptions.MTS.ID value="/FBIncidentRegistration/Consignment/Incident/Transhipment/TransportMeans/nationality" />
                       <MtsImportOptions.MTS.Type value="element" />
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData>
+                          <LocalizedProperties>
+                            <LocalizedProperty>
+                              <Localization reference="+Localizations.Nationality" />
+                              <PropertyName value="Caption" />
+                            </LocalizedProperty>
+                          </LocalizedProperties>
+                        </PropertyLocalizationData>
+                      </PropertyLocalizationData.PropertyLocalizations>
                       <Children>
                         <Include>
                           <Include reference="+DataEntities.CountryCodesFullList" />
@@ -810,7 +969,7 @@ ELSE
                       <MtsImportOptions.MTS.ID value="C0397" />
                       <MtsImportOptions.MTS.Type value="condition-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0397"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.C0397]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -830,15 +989,13 @@ ELSE
                   <MtsImportOptions.MTS.ID value="C0240" />
                   <MtsImportOptions.MTS.Type value="condition-constraint" />
                   <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0240"]]></ExpressionText>
+                    <ExpressionText><![CDATA[localized.C0240]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[isTrue(this.code.Code in [3,6]) ?
-	this.Transhipment.hasValue()
-: true]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.code.Code in [3,6]) ? this.Transhipment.hasValue() : true]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -847,7 +1004,7 @@ ELSE
               </Validators>
             </Complex>
           </Children>
-        </Collection>
+        </Complex>
       </Children>
     </Complex>
   </Children>

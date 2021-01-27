@@ -5,6 +5,16 @@
   <Caption value="ConsignmentItem" />
   <MtsImportOptions.MTS.ID value="/ConsignmentItem" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.ConsignmentItem" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Attribute>
       <Name value="goodsItemNumber" />
@@ -13,6 +23,16 @@
       <MetaType reference="+MetaTypes.GoodsItemNumberContentType" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/goodsItemNumber" />
       <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GoodsItemNumber1" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="declarationGoodsItemNumber" />
@@ -21,23 +41,87 @@
       <MetaType reference="+MetaTypes.DeclarationGoodsItemNumberContentType" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/declarationGoodsItemNumber" />
       <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.DeclarationGoodsItemNumber" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Reference>
       <Name value="declarationType" />
       <Caption value="Declaration type" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/declarationType" />
       <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.DeclarationType" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Include>
           <Include reference="+DataEntities.DeclarationTypeItemLevel" />
         </Include>
       </Children>
+      <Validators>
+        <Validator Name="R0909_Dec_CI">
+          <MtsImportOptions.MTS.ID value="R0909_Dec_CI" />
+          <MtsImportOptions.MTS.Type value="rule-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["R0909_Dec_CI"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[true /* IMPORTED RULE R0909_Dec_CI IF the 2 first digits of / * /CustomsOfficeOfDestinationDeclared/referenceNumber is EQUAL to 'SM'
+    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
+                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
+             ELSE IF the 2 first digits of <CUSTOMS OFFICE OF DEPARTURE.Reference number> is in
+set CL010 AND NOT EQUAL to 'IT'
+                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F};
+
+IF the 2 first digits of / * /CustomsOfficeOfDestinationActual/referenceNumber is EQUAL to 'SM'
+    THEN IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is EQUAL to 'IT',
+                  THEN / * /TransitOperation/declarationType is EQUAL to 'T2SM' AND
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType = "N"
+             ELSE IF the 2 first digits of / * /CustomsOfficeOfDeparture/referenceNumber is in
+set CL010 AND NOT EQUAL to "IT'
+                            THEN / * /TransitOperation/declarationType is in SET {T2, T2F} OR
+                              / * /Consignment/HouseConsignment/ConsignmentItem/declarationType is in SET {T2, T2F} */]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
     </Reference>
     <Reference>
       <Name value="countryOfDispatch" />
       <Caption value="Country of dispatch" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/countryOfDispatch" />
       <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CountryOfDispatch" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Include>
           <Include reference="+DataEntities.CountryCodesFullList" />
@@ -49,6 +133,16 @@
       <Caption value="Country of destination" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/countryOfDestination" />
       <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CountryOfDestination" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Include>
           <Include reference="+DataEntities.CountryCodesFullList" />
@@ -65,12 +159,22 @@
           <StrMaxLength value="35" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ReferenceNumberUCR" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Validators>
         <Validator Name="regex">
           <MtsImportOptions.MTS.Regex value="[ -~]{1,35}" />
           <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
           <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
             <ResultType>
               <BaseType value="String" />
             </ResultType>
@@ -97,40 +201,70 @@
           <DecimalPrecision value="2" />
         </AttributeType>
       </DeclaredType>
-      <Validators>
-        <Validator Name="NC005">
-          <MtsImportOptions.MTS.ID value="NC005" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["NC005"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[this.declarationType.Code = "TIR" ?
-this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ItemPriceEUR" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
+    <Reference>
+      <Name value="releaseType" />
+      <Caption value="Release type" />
+      <MtsImportOptions.MTS.ID value="/ConsignmentItem/releaseType" />
+      <MtsImportOptions.MTS.Type value="element" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ReleaseType" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Include>
+          <Include reference="+DataEntities.ReleaseType" />
+        </Include>
+      </Children>
+    </Reference>
     <Complex>
       <Name value="Consignee" />
-      <Caption value="CONSIGNEE" />
+      <Caption value="Consignee" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Consignee" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="identificationNumber" />
           <Caption value="Identification number" />
-          <Description value="včetně TIRHolderIdentificationNumber" />
-          <IsRequired value="True" />
           <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/identificationNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.IdentificationNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="name" />
@@ -138,12 +272,32 @@ this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
           <MetaType reference="+MetaTypes.NameContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/name" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Name" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Complex>
           <Name value="Address" />
-          <Caption value="ADDRESS" />
+          <Caption value="Address" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/Address" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Address" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="streetAndNumber" />
@@ -152,6 +306,16 @@ this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
               <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/Address/streetAndNumber" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.StreetAndNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="postcode" />
@@ -163,6 +327,16 @@ this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
                   <StrMaxLength value="17" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Postcode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="city" />
@@ -175,115 +349,59 @@ this.itemPriceEUR.isEmpty() : true]]></ExpressionText>
                   <StrMaxLength value="35" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.City" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Reference>
               <Name value="country" />
               <Caption value="Country" />
-              <Description value="ve skupinách: Address, Country, SendingCountry, PlaceOfLoading, PlaceOfUnloading, CountryOfRoutingOfConsignment&#xA;včetně elementů countryOfDispatch, countryOfDestination, otherCountry" />
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Consignee/Address/country" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Country" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
-                  <Include reference="+DataEntities.CountryCodesWithAddress" />
+                  <Include reference="+DataEntities.CountryCodesForAddress" />
                 </Include>
               </Children>
             </Reference>
           </Children>
-          <Validators>
-            <Validator Name="C0250">
-              <MtsImportOptions.MTS.ID value="C0250" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0250"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0250 IF / * /HolderOfTheTransitProcedure/identificationNumber is PRESENT 
-AND / * /HolderOfTheTransitProcedure/identificationNumber is EOS OR in the DB of the CTC country receiving this message 
-THEN / * /HolderOfTheTransitProcedure/name="N" AND / * /HolderOfTheTransitProcedure/Address="N"
-ELSE / * /HolderOfTheTransitProcedure/name="R" AND / * /HolderOfTheTransitProcedure/Address="R";
-
-IF / * /Consignment/Consignor/identificationNumber is PRESENT 
-AND / * /Consignment/Consignor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Consignment/Consignor/name="N" AND / * /Consignment/Consignor/Address="N"
-ELSE / * /Consignment/Consignor/name="R" AND / * /Consignment/Consignor/Address="R";
-
-IF / * /Consignment/Consignee/identificationNumber is PRESENT
-AND / * /Consignment/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Consignment/Consignee/name="N" AND / * /Consignment/Consignee/Address="N"
-ELSE / * /Consignment/Consignee/name="R" AND / * /Consignment/Consignee/Address="R";
-
-IF / * /Consignment/HouseConsignment/Consignor/identificationNumber is PRESENT 
-AND / * /Consignment/HouseConsignment/Consignor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Consignment/HouseConsignment/Consignor/name="N" AND / * /Consignment/HouseConsignment/Consignor/Address="N"
-ELSE / * /Consignment/HouseConsignment/Consignee/name="R" AND / * /Consignment/HouseConsignment/Consignee/Address="R";
-
-IF / * /Consignment/HouseConsignment/Consignee/identificationNumber is PRESENT 
-AND / * /Consignment/HouseConsignment/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Consignment/HouseConsignment/Consignee/name="N" AND / * /Consignment/HouseConsignment/Consignee/Address="N"
-ELSE / * /Consignment/HouseConsignment/Consignee/name="R" AND / * /Consignment/HouseConsignment/Consignee/Address="R";
-
-IF / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is PRESENT 
-AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name="N" AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="N" 
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name="R" AND / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address="R";
-
-IF / * /Guarantor/identificationNumber is PRESENT
-AND / * /Guarantor/identificationNumber is EOS OR in the DB of the CTC country receiving this message
-THEN / * /Guarantor/name="N" AND / * /Guarantor/Address="N"
-ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Complex>
       </Children>
-      <Validators>
-        <Validator Name="C0488">
-          <MtsImportOptions.MTS.ID value="C0488" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["C0488"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE C0488 IF / * /TransitOperation/security is IN SET THEN 
-       IF / * /Consignment/AdditionalInformation is EQUAL TO '30600' THEN
-              IF / * /Consignment/Consignee is present THEN
-                     / * /Consignment/HouseConsignment/Consignee = "N" AND                                                                                                                                                                                    
-                     / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N"
-              ELSE IF / * /Consignment/HouseConsignment/Consignee is present THEN
-                     / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "N" AND
-                     / * /Consignment/HouseConsignment/Consignee cannot have the same value for 
-                     all/ * /Consignment/HouseConsignment/Consignee
-              ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "O" AND
-                     / * /Consignment/HouseConsignment/ConsignmentItem/Consignee cannot have the same                                          
-                     value for all / * /Consignment/HouseConsignment/ConsignmentItem/Consignee
-       IF / * /Consignment/HouseConsignment/ConsignmentItem/AdditionalInformation/code IS EQUAL        
-       TO '30600' THEN 
-              THIS / * /Consignment/HouseConsignment/ConsignmentItem/Consignee = "O" AND
-              / * /Consignment/HouseConsignment/ConsignmentItem/Consignee cannot have the same                             
-              value for all / * /Consignment/HouseConsignment/ConsignmentItem/Consignee */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Complex>
     <Collection>
       <Name value="AdditionalSupplyChainActor" />
-      <Caption value="ADDITIONAL SUPPLY CHAIN ACTOR" />
+      <Caption value="Additional Supply Chain Actor" />
       <MaxCount value="99" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalSupplyChainActor" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.AdditionalSupplyChainActor" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="role" />
@@ -291,6 +409,16 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalSupplyChainActor/role" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Role" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.AdditionalSupplyChainActorRoleCode" />
@@ -300,19 +428,39 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
         <Attribute>
           <Name value="identificationNumber" />
           <Caption value="Identification number" />
-          <Description value="včetně TIRHolderIdentificationNumber" />
           <IsRequired value="True" />
           <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalSupplyChainActor/identificationNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.IdentificationNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
     </Collection>
     <Complex>
       <Name value="Commodity" />
-      <Caption value="COMMODITY" />
+      <Caption value="Commodity" />
+      <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Commodity" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="descriptionOfGoods" />
@@ -321,12 +469,32 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
           <MetaType reference="+MetaTypes.DescriptionOfGoodsContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/descriptionOfGoods" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DescriptionOfGoods" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Reference>
           <Name value="cusCode" />
           <Caption value="CUS code" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/cusCode" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.CUSCode" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.CUSCode" />
@@ -335,22 +503,20 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
         </Reference>
         <Complex>
           <Name value="CommodityCode" />
-          <Caption value="COMMODITY CODE" />
+          <Caption value="Commodity Code" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/CommodityCode" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.CommodityCode" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
-            <Reference>
-              <Name value="harmonisedSystemSubHeadingCode" />
-              <Caption value="Harmonised system sub-heading code" />
-              <IsRequired value="True" />
-              <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/CommodityCode/harmonisedSystemSubHeadingCode" />
-              <MtsImportOptions.MTS.Type value="element" />
-              <Children>
-                <Include>
-                  <Include reference="+DataEntities.HScode" />
-                </Include>
-              </Children>
-            </Reference>
             <Attribute>
               <Name value="combinedNomenclatureCode" />
               <Caption value="Combined nomenclature code" />
@@ -362,12 +528,22 @@ ELSE / * /Guarantor/name="R" AND / * /Guarantor/Address="R"; */]]></ExpressionTe
                   <StrMinLength value="2" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.CombinedNomenclatureCode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Validators>
                 <Validator Name="R0060">
                   <MtsImportOptions.MTS.ID value="R0060" />
                   <MtsImportOptions.MTS.Type value="rule-constraint" />
                   <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["R0060"]]></ExpressionText>
+                    <ExpressionText><![CDATA[localized.R0060]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
@@ -393,6 +569,16 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
                   <StrMinLength value="2" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.NacionalCode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="exciseGoodsQuantity" />
@@ -407,50 +593,161 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
                   <DecimalPrecision value="0" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ExciseGoodsQuantity" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
+            <Reference>
+              <Name value="harmonizedSystemSubHeadingCode" />
+              <Caption value="Harmonized system sub-heading code" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/CommodityCode/harmonizedSystemSubHeadingCode" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.HarmonizedSystemSubHeadingCode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.HScode" />
+                </Include>
+              </Children>
+            </Reference>
+            <Reference>
+              <Name value="measurementUnitAndQualifier" />
+              <Caption value="Measurement unit and qualifier" />
+              <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/CommodityCode/measurementUnitAndQualifier" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.MeasurementUnitAndQualifier" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Unit" />
+                </Include>
+              </Children>
+              <Validators>
+                <Validator Name="CN006">
+                  <MtsImportOptions.MTS.ID value="CN006" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["CN006"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[true /* IMPORTED RULE CN006 D.I. (Data Item) must be used when is declared Excise goods (CLEXCISE)  */]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Reference>
           </Children>
         </Complex>
         <Collection>
           <Name value="DangerousGoods" />
-          <Caption value="DANGEROUS GOODS" />
+          <Caption value="Dangerous Goods" />
           <MaxCount value="99" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/DangerousGoods" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DangerousGoods" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
-            <Attribute>
-              <Name value="sequenceNumber" />
-              <Caption value="Sequence number" />
-              <IsRequired value="True" />
-              <MetaType reference="+MetaTypes.SequenceNumberContentType" />
-              <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/DangerousGoods/sequenceNumber" />
-              <MtsImportOptions.MTS.Type value="element" />
-            </Attribute>
             <Reference>
               <Name value="UNNumber" />
               <Caption value="UN Number" />
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/DangerousGoods/UNNumber" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.UNNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
                   <Include reference="+DataEntities.UnDangerousGoodsCode" />
                 </Include>
               </Children>
             </Reference>
+            <Attribute>
+              <Name value="originalSequenceNumber" />
+              <Caption value="Original sequence number" />
+              <MetaType reference="+MetaTypes.SequenceNumberContentType" />
+              <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/DangerousGoods/originalSequenceNumber" />
+              <MtsImportOptions.MTS.Type value="element" />
+            </Attribute>
           </Children>
         </Collection>
         <Complex>
           <Name value="GoodsMeasure" />
-          <Caption value="GOODS MEASURE" />
+          <Caption value="Goods Measure" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/GoodsMeasure" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GoodsMeasure" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="grossMass" />
               <Caption value="Gross mass" />
+              <IsRequired value="True" />
               <MetaType reference="+MetaTypes.GrossMassContentType" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/GoodsMeasure/grossMass" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.GrossMass" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="netMass" />
@@ -458,6 +755,35 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
               <MetaType reference="+MetaTypes.NetMassContentType" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/GoodsMeasure/netMass" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.NetMass" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Validators>
+                <Validator Name="R0223">
+                  <MtsImportOptions.MTS.ID value="R0223" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0223]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.grossMass > 0) ? this.netMass <= this.grossMass : true
+]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
             </Attribute>
             <Attribute>
               <Name value="supplementaryUnits" />
@@ -465,6 +791,16 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
               <MetaType reference="+MetaTypes.SupplementaryUnitsContentType" />
               <MtsImportOptions.MTS.ID value="/ConsignmentItem/Commodity/GoodsMeasure/supplementaryUnits" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.SupplementaryUnits" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
@@ -472,10 +808,21 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
     </Complex>
     <Collection>
       <Name value="Packaging" />
-      <Caption value="PACKAGING" />
+      <Caption value="Packaging" />
       <MaxCount value="99" />
+      <MinCount value="1" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/Packaging" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Packaging" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="typeOfPackages" />
@@ -483,6 +830,16 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Packaging/typeOfPackages" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TypeOfPackages" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.KindOfPackages" />
@@ -495,6 +852,47 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
           <MetaType reference="+MetaTypes.NumberOfPackagesContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Packaging/numberOfPackages" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.NumberOfPackages" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="C0060">
+              <MtsImportOptions.MTS.ID value="C0060" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0060"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0060 IF / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL181
+       THEN
+         / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"
+         AND 
+          / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "N"
+ ELSE IF / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/typeOfPackages is in SET CL182
+       THEN
+            / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks = "O"
+             AND 
+              / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R"
+  ELSE
+            / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/shippingMarks ="R"
+          AND 
+         / * /Consignment/HouseConsignment/ConsignmentItem/Packaging/numberOfPackages = "R" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
         </Attribute>
         <Attribute>
           <Name value="shippingMarks" />
@@ -502,15 +900,42 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
           <MetaType reference="+MetaTypes.ShippingMarksContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/Packaging/shippingMarks" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ShippingMarks" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="originalSequenceNumber" />
+          <Caption value="Original sequence number" />
+          <MetaType reference="+MetaTypes.SequenceNumberContentType" />
+          <MtsImportOptions.MTS.ID value="/ConsignmentItem/Packaging/originalSequenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
     </Collection>
     <Collection>
       <Name value="PreviousDocument" />
-      <Caption value="PREVIOUS DOCUMENT" />
+      <Caption value="Previous Document" />
       <MaxCount value="99" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.PreviousDocument" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="type" />
@@ -518,31 +943,21 @@ the concatenation of the Data Items / * /Consignment/HouseConsignment/Consignmen
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/type" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Type" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.PreviousDocumentType" />
             </Include>
           </Children>
-          <Validators>
-            <Validator Name="R0020">
-              <MtsImportOptions.MTS.ID value="R0020" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["R0020"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE R0020 IF <TRANSIT OPERATION.Declaration type> is EQUAL to 'T2'
-AND the Office of Departure is located in a CTC country
-THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Document having the <PREVIOUS DOCUMENT.Type> listed in CL178. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Reference>
         <Attribute>
           <Name value="referenceNumber" />
@@ -551,6 +966,16 @@ THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Docume
           <MetaType reference="+MetaTypes.ReferenceNumberContentType03" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/referenceNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReferenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="goodsItemNumber" />
@@ -558,12 +983,32 @@ THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Docume
           <MetaType reference="+MetaTypes.GoodsItemNumberContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/goodsItemNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GoodsItemNumber1" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Reference>
           <Name value="typeOfPackages" />
           <Caption value="Type of packages" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/typeOfPackages" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TypeOfPackages" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.KindOfPackages" />
@@ -576,12 +1021,32 @@ THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Docume
           <MetaType reference="+MetaTypes.NumberOfPackagesContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/numberOfPackages" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.NumberOfPackages" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Reference>
           <Name value="measurementUnitAndQualifier" />
           <Caption value="Measurement unit and qualifier" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MeasurementUnitAndQualifier" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.Unit" />
@@ -592,15 +1057,13 @@ THEN <HOLDER OF THE TRANSIT PROCEDURE> must declare at least one Previous Docume
               <MtsImportOptions.MTS.ID value="C0298" />
               <MtsImportOptions.MTS.Type value="condition-constraint" />
               <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0298"]]></ExpressionText>
+                <ExpressionText><![CDATA[localized.C0298]]></ExpressionText>
                 <ResultType>
                   <BaseType value="String" />
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0298 IF / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/quantity> is PRESENT
-THEN  / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "R"
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurementUnitAndQualifier = "N" */]]></ExpressionText>
+                <ExpressionText><![CDATA[this.quantity.hasValue() = this.measurementUnitAndQualifier.hasValue()]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -614,6 +1077,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.QuantityContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/quantity" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Quantity" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="complementOfInformation" />
@@ -621,30 +1094,74 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.ComplementOfInformationContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/PreviousDocument/complementOfInformation" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ComplementOfInformation" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
+      <ItemValidators>
+        <Validator Name="B1000">
+          <MtsImportOptions.MTS.ID value="B1000" />
+          <MtsImportOptions.MTS.Type value="rule-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA[localized.B1000]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[true /* IMPORTED RULE B1000 IF <Decisive Date> is LESS than or EQUAL to <TPendDate> THEN
+This D.G. can be also used 
+         - in case of Export followed by transit (maximum one MRN included per one Consignment item)
+     AND
+         - if the <TRANSIT OPERATION.Additional Declaration Type> is EQUAL to 'A'. */]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </ItemValidators>
     </Collection>
     <Collection>
       <Name value="SupportingDocument" />
-      <Caption value="SUPPORTING DOCUMENT" />
+      <Caption value="Supporting Document" />
       <MaxCount value="99" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.SupportingDocument" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
-        <Attribute>
-          <Name value="sequenceNumber" />
-          <Caption value="Sequence number" />
-          <IsRequired value="True" />
-          <MetaType reference="+MetaTypes.SequenceNumberContentType" />
-          <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/sequenceNumber" />
-          <MtsImportOptions.MTS.Type value="element" />
-        </Attribute>
         <Reference>
           <Name value="type" />
           <Caption value="Type" />
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/type" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Type" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.SupportingDocumentType" />
@@ -658,6 +1175,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.ReferenceNumberContentType03" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/referenceNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReferenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="documentLineItemNumber" />
@@ -665,6 +1192,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.DocumentLineItemNumberContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/documentLineItemNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DocumentLineItemNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="complementOfInformation" />
@@ -672,15 +1209,42 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.ComplementOfInformationContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/complementOfInformation" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ComplementOfInformation" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="originalSequenceNumber" />
+          <Caption value="Original sequence number" />
+          <MetaType reference="+MetaTypes.SequenceNumberContentType" />
+          <MtsImportOptions.MTS.ID value="/ConsignmentItem/SupportingDocument/originalSequenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
     </Collection>
     <Collection>
       <Name value="AdditionalReference" />
-      <Caption value="ADDITIONAL REFERENCE" />
+      <Caption value="Additional Reference" />
       <MaxCount value="99" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalReference" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.AdditionalReference" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="type" />
@@ -688,6 +1252,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalReference/type" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Type" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.AdditionalReference" />
@@ -700,15 +1274,42 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.ReferenceNumberContentType03" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalReference/referenceNumber" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReferenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="originalSequenceNumber" />
+          <Caption value="Original sequence number" />
+          <MetaType reference="+MetaTypes.SequenceNumberContentType" />
+          <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalReference/originalSequenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
         </Attribute>
       </Children>
     </Collection>
     <Collection>
       <Name value="AdditionalInformation" />
-      <Caption value="ADDITIONAL INFORMATION" />
+      <Caption value="Additional Information" />
       <MaxCount value="99" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalInformation" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.AdditionalInformation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="code" />
@@ -716,6 +1317,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalInformation/code" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Code" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.AdditionalInformation" />
@@ -728,14 +1339,34 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <MetaType reference="+MetaTypes.TextContentType" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/AdditionalInformation/text" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Text" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
     </Collection>
     <Complex>
       <Name value="TransportCharges" />
-      <Caption value="TRANSPORT CHARGES" />
+      <Caption value="Transport Charges" />
       <MtsImportOptions.MTS.ID value="/ConsignmentItem/TransportCharges" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransportCharges" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Reference>
           <Name value="methodOfPayment" />
@@ -743,6 +1374,16 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
           <IsRequired value="True" />
           <MtsImportOptions.MTS.ID value="/ConsignmentItem/TransportCharges/methodOfPayment" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MethodOfPayment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.TransportChargesMethodOfPayment" />
@@ -751,16 +1392,5 @@ ELSE / * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/measurem
         </Reference>
       </Children>
     </Complex>
-    <Reference>
-      <Name value="releaseType" />
-      <Caption value="Release type" />
-      <MtsImportOptions.MTS.ID value="/ConsignmentItem/releaseType" />
-      <MtsImportOptions.MTS.Type value="element" />
-      <Children>
-        <Include>
-          <Include reference="+DataEntities.ReleaseType" />
-        </Include>
-      </Children>
-    </Reference>
   </Children>
 </DataEntity>

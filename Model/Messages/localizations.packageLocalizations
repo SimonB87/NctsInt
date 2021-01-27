@@ -1,0 +1,4409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="DeclarationHeader">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationHeader" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfDeclaration">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of declaration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransitOperation">
+      <Values>
+        <LocaleValue Lang="en" Value="Transit Operation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FallbackProcedure">
+      <Values>
+        <LocaleValue Lang="en" Value="Fallback Procedure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Release date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationType">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR190">
+      <Values>
+        <LocaleValue Lang="en" Value="NR190" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalDeclarationType">
+      <Values>
+        <LocaleValue Lang="en" Value="Additional declaration type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RnotD">
+      <Values>
+        <LocaleValue Lang="en" Value="RnotD" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRCarnetNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR Carnet number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0411">
+      <Values>
+        <LocaleValue Lang="en" Value="C0411" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ValueIsNotValid">
+      <Values>
+        <LocaleValue Lang="en" Value="Value is not valid" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NC003">
+      <Values>
+        <LocaleValue Lang="en" Value="NC003" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRValidityDate">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR validity Date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Security">
+      <Values>
+        <LocaleValue Lang="en" Value="Security" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReducedDatasetIndicator">
+      <Values>
+        <LocaleValue Lang="en" Value="Reduced dataset indicator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0849">
+      <Values>
+        <LocaleValue Lang="en" Value="R0849" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR002">
+      <Values>
+        <LocaleValue Lang="en" Value="NR002" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SpecificCircumstanceIndicator">
+      <Values>
+        <LocaleValue Lang="en" Value="Specific circumstance indicator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TotalValueOfGoods">
+      <Values>
+        <LocaleValue Lang="en" Value="Total Value Of Goods" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NC005">
+      <Values>
+        <LocaleValue Lang="en" Value="NC005" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CommunicationLanguageAtDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="Communication language at departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationAcceptanceDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration acceptance date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmendmentSubmissionDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Amendment submission date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmendmentAcceptanceDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Amendment acceptance date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalNotificationDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival notification date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SimplifiedProcedure">
+      <Values>
+        <LocaleValue Lang="en" Value="Simplified procedure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentFlag">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident flag" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseRequested">
+      <Values>
+        <LocaleValue Lang="en" Value="Release requested" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseRequestDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Release request date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OtherThingsToReport">
+      <Values>
+        <LocaleValue Lang="en" Value="Other things to report" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepanciesNotificationDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Discrepancies notification date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepanciesNotificationText">
+      <Values>
+        <LocaleValue Lang="en" Value="Discrepancies notification text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepanciesResolved">
+      <Values>
+        <LocaleValue Lang="en" Value="Discrepancies resolved" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseIndicator">
+      <Values>
+        <LocaleValue Lang="en" Value="Release indicator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="WriteOffDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Write-off date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationSubmissionDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration submission date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NoReleaseMotivationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="No release motivation code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NoReleaseMotivationText">
+      <Values>
+        <LocaleValue Lang="en" Value="No release motivation text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlNotificationDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Control notification date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NotificationType">
+      <Values>
+        <LocaleValue Lang="en" Value="Notification type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestOnNonArrivedMovementDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Request on non-arrived movement date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LimitForResponseDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Limit for response date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestRejectionReasonCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Request rejection reason code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalDateAndTimeActual">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival date and time (actual)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Status">
+      <Values>
+        <LocaleValue Lang="en" Value="Status" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CancelEnquiryNotificatio3709CE6E">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel enquiry notification date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CancelEnquiryNotificationText">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancel enquiry notification text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryCommunicationDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery communication date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PassageDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Passage date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationAcceptanceDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration acceptance date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IsEDIAtDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="Is EDI at departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Release date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SubmitTimeStamp">
+      <Values>
+        <LocaleValue Lang="en" Value="Submit Time Stamp" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RejectionCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Rejection code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RejectionReason">
+      <Values>
+        <LocaleValue Lang="en" Value="Rejection reason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DateAndTimeOfRequestReje1DE972C6">
+      <Values>
+        <LocaleValue Lang="en" Value="Date and time of request rejection from Office of Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LRN">
+      <Values>
+        <LocaleValue Lang="en" Value="LRN" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LimitDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Limit date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmendmentTypeFlag">
+      <Values>
+        <LocaleValue Lang="en" Value="Amendment type flag" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MRN">
+      <Values>
+        <LocaleValue Lang="en" Value="MRN" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="BindingItinerary">
+      <Values>
+        <LocaleValue Lang="en" Value="Binding itinerary" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Authorisation">
+      <Values>
+        <LocaleValue Lang="en" Value="Authorisation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0101">
+      <Values>
+        <LocaleValue Lang="en" Value="C0101" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Type">
+      <Values>
+        <LocaleValue Lang="en" Value="Type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0350">
+      <Values>
+        <LocaleValue Lang="en" Value="R0350" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Reference number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0352">
+      <Values>
+        <LocaleValue Lang="en" Value="R0352" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeRole">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office role" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDestinatiBB8B2A99">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Destination Declared" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfTransitDeclared">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Transit Declared" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR001">
+      <Values>
+        <LocaleValue Lang="en" Value="NR001" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR159">
+      <Values>
+        <LocaleValue Lang="en" Value="NR159" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0030">
+      <Values>
+        <LocaleValue Lang="en" Value="C0030" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0105">
+      <Values>
+        <LocaleValue Lang="en" Value="C0105" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NC001">
+      <Values>
+        <LocaleValue Lang="en" Value="NC001" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0906">
+      <Values>
+        <LocaleValue Lang="en" Value="R0906" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalDateAndTimeEstimated">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival date and time (estimated)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B1831">
+      <Values>
+        <LocaleValue Lang="en" Value="B1831" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfExitForTr4E590375">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Exit For Transit Declared" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0587">
+      <Values>
+        <LocaleValue Lang="en" Value="C0587" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NC002">
+      <Values>
+        <LocaleValue Lang="en" Value="NC002" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0103">
+      <Values>
+        <LocaleValue Lang="en" Value="R0103" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HolderOfTheTransitProcedure">
+      <Values>
+        <LocaleValue Lang="en" Value="Holder Of The Transit Procedure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentificationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRHolderIdentificationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR holder identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0904">
+      <Values>
+        <LocaleValue Lang="en" Value="C0904" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Name">
+      <Values>
+        <LocaleValue Lang="en" Value="Name" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0250">
+      <Values>
+        <LocaleValue Lang="en" Value="C0250" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Address">
+      <Values>
+        <LocaleValue Lang="en" Value="Address" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StreetAndNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Street and number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Postcode">
+      <Values>
+        <LocaleValue Lang="en" Value="Postcode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="City">
+      <Values>
+        <LocaleValue Lang="en" Value="City" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Country">
+      <Values>
+        <LocaleValue Lang="en" Value="Country" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ContactPerson">
+      <Values>
+        <LocaleValue Lang="en" Value="Contact Person" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PhoneNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Phone number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EMailAddress">
+      <Values>
+        <LocaleValue Lang="en" Value="E-mail address" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Representative">
+      <Values>
+        <LocaleValue Lang="en" Value="Representative" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR177">
+      <Values>
+        <LocaleValue Lang="en" Value="NR177" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Guarantee">
+      <Values>
+        <LocaleValue Lang="en" Value="Guarantee" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR161">
+      <Values>
+        <LocaleValue Lang="en" Value="NR161" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OtherGuaranteeReference">
+      <Values>
+        <LocaleValue Lang="en" Value="Other guarantee reference" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0130">
+      <Values>
+        <LocaleValue Lang="en" Value="C0130" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GuaranteeReference">
+      <Values>
+        <LocaleValue Lang="en" Value="Guarantee Reference" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GRN">
+      <Values>
+        <LocaleValue Lang="en" Value="GRN" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0318">
+      <Values>
+        <LocaleValue Lang="en" Value="R0318" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AccessCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Access code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmountToBeCovered">
+      <Values>
+        <LocaleValue Lang="en" Value="Amount to be covered" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Currency">
+      <Values>
+        <LocaleValue Lang="en" Value="Currency" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR005">
+      <Values>
+        <LocaleValue Lang="en" Value="NR005" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Guarantor">
+      <Values>
+        <LocaleValue Lang="en" Value="Guarantor" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GuaranteeType">
+      <Values>
+        <LocaleValue Lang="en" Value="Guarantee type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR117">
+      <Values>
+        <LocaleValue Lang="en" Value="NR117" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR160">
+      <Values>
+        <LocaleValue Lang="en" Value="NR160" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR221">
+      <Values>
+        <LocaleValue Lang="en" Value="NR221" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Consignment">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryOfDispatch">
+      <Values>
+        <LocaleValue Lang="en" Value="Country of dispatch" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryOfDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Country of destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ContainerIndicator">
+      <Values>
+        <LocaleValue Lang="en" Value="Container indicator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0822">
+      <Values>
+        <LocaleValue Lang="en" Value="C0822" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InlandModeOfTransport">
+      <Values>
+        <LocaleValue Lang="en" Value="Inland mode of transport" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0399">
+      <Values>
+        <LocaleValue Lang="en" Value="C0399" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ModeOfTransportAtTheBorder">
+      <Values>
+        <LocaleValue Lang="en" Value="Mode of transport at the border" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0599">
+      <Values>
+        <LocaleValue Lang="en" Value="C0599" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GrossMass">
+      <Values>
+        <LocaleValue Lang="en" Value="Gross mass" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberUCR">
+      <Values>
+        <LocaleValue Lang="en" Value="Reference number UCR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B1895">
+      <Values>
+        <LocaleValue Lang="en" Value="B1895" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Carrier">
+      <Values>
+        <LocaleValue Lang="en" Value="Carrier" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Consignor">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignor" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Consignee">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignee" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalSupplyChainActor">
+      <Values>
+        <LocaleValue Lang="en" Value="Additional Supply Chain Actor" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Role">
+      <Values>
+        <LocaleValue Lang="en" Value="Role" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportEquipment">
+      <Values>
+        <LocaleValue Lang="en" Value="Transport Equipment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0823">
+      <Values>
+        <LocaleValue Lang="en" Value="C0823" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ContainerIdentificationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Container identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0055">
+      <Values>
+        <LocaleValue Lang="en" Value="C0055" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NumberOfSeals">
+      <Values>
+        <LocaleValue Lang="en" Value="Number of seals" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Seal">
+      <Values>
+        <LocaleValue Lang="en" Value="Seal" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0569">
+      <Values>
+        <LocaleValue Lang="en" Value="C0569" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Identifier">
+      <Values>
+        <LocaleValue Lang="en" Value="Identifier" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsReference">
+      <Values>
+        <LocaleValue Lang="en" Value="Goods Reference" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0670">
+      <Values>
+        <LocaleValue Lang="en" Value="C0670" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationGoodsItemNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration goods item number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LocationOfGoods">
+      <Values>
+        <LocaleValue Lang="en" Value="LocationOfGoods" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfLocation">
+      <Values>
+        <LocaleValue Lang="en" Value="Type of location" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="QualifierOfIdentification">
+      <Values>
+        <LocaleValue Lang="en" Value="Qualifier of identification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AuthorisationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Authorisation number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_authorisationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_authorisationNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalIdentifier">
+      <Values>
+        <LocaleValue Lang="en" Value="Additional identifier" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0671">
+      <Values>
+        <LocaleValue Lang="en" Value="C0671" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNLocode">
+      <Values>
+        <LocaleValue Lang="en" Value="UNLocode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_UNLocode">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_UNLocode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_CustomsOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_CustomsOffice" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GNSS">
+      <Values>
+        <LocaleValue Lang="en" Value="GNSS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_GNSS">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_GNSS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Latitude">
+      <Values>
+        <LocaleValue Lang="en" Value="Latitude" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Longitude">
+      <Values>
+        <LocaleValue Lang="en" Value="Longitude" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EconomicOperator">
+      <Values>
+        <LocaleValue Lang="en" Value="Economic Operator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_EconomicOperator">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_EconomicOperator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_Address">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_Address" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_ContactPerson">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_ContactPerson" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PostcodeAddress">
+      <Values>
+        <LocaleValue Lang="en" Value="Postcode Address" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0394_AddressT">
+      <Values>
+        <LocaleValue Lang="en" Value="C0394_AddressT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HouseNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="House number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DepartureTransportMeans">
+      <Values>
+        <LocaleValue Lang="en" Value="Departure Transport Means" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B1890">
+      <Values>
+        <LocaleValue Lang="en" Value="B1890" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfIdentification">
+      <Values>
+        <LocaleValue Lang="en" Value="Type of identification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0474">
+      <Values>
+        <LocaleValue Lang="en" Value="R0474" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0476">
+      <Values>
+        <LocaleValue Lang="en" Value="R0476" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Nationality">
+      <Values>
+        <LocaleValue Lang="en" Value="Nationality" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryOfRoutingOfConsignment">
+      <Values>
+        <LocaleValue Lang="en" Value="Country Of Routing Of Consignment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PlaceOfLoading">
+      <Values>
+        <LocaleValue Lang="en" Value="Place Of Loading" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0403">
+      <Values>
+        <LocaleValue Lang="en" Value="C0403" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0387">
+      <Values>
+        <LocaleValue Lang="en" Value="C0387" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Location">
+      <Values>
+        <LocaleValue Lang="en" Value="Location" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PlaceOfUnloading">
+      <Values>
+        <LocaleValue Lang="en" Value="Place Of Unloading" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PreviousDocument">
+      <Values>
+        <LocaleValue Lang="en" Value="Previous Document" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ComplementOfInformation">
+      <Values>
+        <LocaleValue Lang="en" Value="Complement of information" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsItemNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Goods Item Number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SupportingDocument">
+      <Values>
+        <LocaleValue Lang="en" Value="Supporting Document" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DocumentLineItemNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Document line item number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportDocument">
+      <Values>
+        <LocaleValue Lang="en" Value="Transport Document" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B1896">
+      <Values>
+        <LocaleValue Lang="en" Value="B1896" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalReference">
+      <Values>
+        <LocaleValue Lang="en" Value="Additional Reference" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalInformation">
+      <Values>
+        <LocaleValue Lang="en" Value="Additional Information" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Code">
+      <Values>
+        <LocaleValue Lang="en" Value="Code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R3060">
+      <Values>
+        <LocaleValue Lang="en" Value="R3060" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Text">
+      <Values>
+        <LocaleValue Lang="en" Value="Text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Incident">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Endorsement">
+      <Values>
+        <LocaleValue Lang="en" Value="Endorsement" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Date">
+      <Values>
+        <LocaleValue Lang="en" Value="Date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Authority">
+      <Values>
+        <LocaleValue Lang="en" Value="Authority" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Place">
+      <Values>
+        <LocaleValue Lang="en" Value="Place" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Transhipment">
+      <Values>
+        <LocaleValue Lang="en" Value="Transhipment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportMeans">
+      <Values>
+        <LocaleValue Lang="en" Value="Transport Means" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Notification">
+      <Values>
+        <LocaleValue Lang="en" Value="Notification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfIncidentRCB07FF5C">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeOfIncidentRegistration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumber1">
+      <Values>
+        <LocaleValue Lang="en" Value="referenceNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentNotificationDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident notification date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReasonOfIncidentRegistra19BD22ED">
+      <Values>
+        <LocaleValue Lang="en" Value="Reason of incident registration rejection" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfIncident">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ActiveBorderTransportMeans">
+      <Values>
+        <LocaleValue Lang="en" Value="Active Border Transport Means" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0789">
+      <Values>
+        <LocaleValue Lang="en" Value="R0789" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0806">
+      <Values>
+        <LocaleValue Lang="en" Value="C0806" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0076">
+      <Values>
+        <LocaleValue Lang="en" Value="R0076" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConveyanceReferenceNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Conveyance reference number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0531">
+      <Values>
+        <LocaleValue Lang="en" Value="C0531" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0315">
+      <Values>
+        <LocaleValue Lang="en" Value="R0315" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeAtBorderRef50B5BEE9">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office at border reference number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0789">
+      <Values>
+        <LocaleValue Lang="en" Value="G0789" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0116">
+      <Values>
+        <LocaleValue Lang="en" Value="G0116" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryNotification">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery Notification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryNotificationDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery notification date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryNotificationText">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery notification text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmountClaimed">
+      <Values>
+        <LocaleValue Lang="en" Value="Amount claimed" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Invalidation">
+      <Values>
+        <LocaleValue Lang="en" Value="Invalidation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Request date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DecisionDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Decision date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Decision">
+      <Values>
+        <LocaleValue Lang="en" Value="DECISION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InitiatedByCustoms">
+      <Values>
+        <LocaleValue Lang="en" Value="Initiated by customs" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Justification">
+      <Values>
+        <LocaleValue Lang="en" Value="Justification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfExit">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Exit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AppropriateOfficeOfDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Appropriate Office of Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDestinationActual">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Destination Actual" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfTransit">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfTransitActual">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Transit Actual" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfExitForTransit">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Exit For Transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfExitForTr5F69E7F7">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Exit For Transit Actual" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfRequest">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Request" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfRecoveryA8DA981CB">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Recovery At Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfRecovery">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Recovery" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfRecoveryR2812FB77">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Recovery Requesting" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfRecoveryRequested">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Recovery Requested" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfEnquiryAt5A50A331">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Enquiry At Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfEnquiryAt92312EAD">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Enquiry At Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TraderAtDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Trader At Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CommunicationLanguageAtD85BAC4DB">
+      <Values>
+        <LocaleValue Lang="en" Value="Communication language at destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Recovery">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryAcceptance">
+      <Values>
+        <LocaleValue Lang="en" Value="Recovery acceptance" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CollectionDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Collection date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResult">
+      <Values>
+        <LocaleValue Lang="en" Value="Control Result" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlledBy">
+      <Values>
+        <LocaleValue Lang="en" Value="Controlled by" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StateOfSeals">
+      <Values>
+        <LocaleValue Lang="en" Value="State of seals" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CTLControl">
+      <Values>
+        <LocaleValue Lang="en" Value="CTL Control" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ContinueUnloading">
+      <Values>
+        <LocaleValue Lang="en" Value="Continue unloading" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnloadingRemark">
+      <Values>
+        <LocaleValue Lang="en" Value="Unloading Remark" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Conform">
+      <Values>
+        <LocaleValue Lang="en" Value="Conform" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnloadingCompletion">
+      <Values>
+        <LocaleValue Lang="en" Value="Unloading completion" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnloadingDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Unloading date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnloadingRemark1">
+      <Values>
+        <LocaleValue Lang="en" Value="Unloading remark" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Action">
+      <Values>
+        <LocaleValue Lang="en" Value="Action" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Operation">
+      <Values>
+        <LocaleValue Lang="en" Value="Operation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Unavailability">
+      <Values>
+        <LocaleValue Lang="en" Value="Unavailability" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Functionality">
+      <Values>
+        <LocaleValue Lang="en" Value="Functionality" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StartDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Start date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EndDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="End date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Explanation">
+      <Values>
+        <LocaleValue Lang="en" Value="Explanation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Fallback">
+      <Values>
+        <LocaleValue Lang="en" Value="Fallback" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Flag">
+      <Values>
+        <LocaleValue Lang="en" Value="Flag" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SendingCountry">
+      <Values>
+        <LocaleValue Lang="en" Value="Sending Country" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Year">
+      <Values>
+        <LocaleValue Lang="en" Value="Year" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Month">
+      <Values>
+        <LocaleValue Lang="en" Value="Month" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SystemApplicability">
+      <Values>
+        <LocaleValue Lang="en" Value="System Applicability" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SystemCode">
+      <Values>
+        <LocaleValue Lang="en" Value="System code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StatisticalCharacteristics">
+      <Values>
+        <LocaleValue Lang="en" Value="Statistical Characteristics" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StatisticsType">
+      <Values>
+        <LocaleValue Lang="en" Value="Statistics type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SeriesElements">
+      <Values>
+        <LocaleValue Lang="en" Value="Series Elements" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OtherCountry">
+      <Values>
+        <LocaleValue Lang="en" Value="Other country" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Counter">
+      <Values>
+        <LocaleValue Lang="en" Value="Counter" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Enquiry">
+      <Values>
+        <LocaleValue Lang="en" Value="Enquiry" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TC11DeliveryDate">
+      <Values>
+        <LocaleValue Lang="en" Value="TC11 delivery date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EnquiryRequestDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Enquiry request date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EnquiryResponseDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Enquiry response date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResponseCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Response code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReturnCopyReturnedDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Return copy returned date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InformationAvailableFromTrader">
+      <Values>
+        <LocaleValue Lang="en" Value="Information available from trader" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestedInformation">
+      <Values>
+        <LocaleValue Lang="en" Value="Requested Information" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResponseInformation">
+      <Values>
+        <LocaleValue Lang="en" Value="Response Information" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InformationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Information code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysis">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisResult">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis Result" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAreaCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk area code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncompleteData">
+      <Values>
+        <LocaleValue Lang="en" Value="Incomplete Data" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Data">
+      <Values>
+        <LocaleValue Lang="en" Value="Data" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Version">
+      <Values>
+        <LocaleValue Lang="en" Value="Version" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="VersionGUID">
+      <Values>
+        <LocaleValue Lang="en" Value="Version GUID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DecisionType">
+      <Values>
+        <LocaleValue Lang="en" Value="Decision type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DateAndTimeOfDecision">
+      <Values>
+        <LocaleValue Lang="en" Value="Date and time of decision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IDOfUserAssociatedWithDecision">
+      <Values>
+        <LocaleValue Lang="en" Value="ID of user associated with decision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberOfCustoms55EB9E26">
+      <Values>
+        <LocaleValue Lang="en" Value="Reference number of customs office making decision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DescriptionOfDecision">
+      <Values>
+        <LocaleValue Lang="en" Value="Description of decision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdministrativeNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Administrative number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IsDecisionActive">
+      <Values>
+        <LocaleValue Lang="en" Value="Is decision active?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HouseConsignment">
+      <Values>
+        <LocaleValue Lang="en" Value="HouseConsignment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SequenceNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Sequence number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0506">
+      <Values>
+        <LocaleValue Lang="en" Value="R0506" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportCharges">
+      <Values>
+        <LocaleValue Lang="en" Value="Transport Charges" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MethodOfPayment">
+      <Values>
+        <LocaleValue Lang="en" Value="Method of payment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SecurityIndicatorFromExpB35BB4B1">
+      <Values>
+        <LocaleValue Lang="en" Value="Security indicator from export declaration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseType">
+      <Values>
+        <LocaleValue Lang="en" Value="Release type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConsignmentItem">
+      <Values>
+        <LocaleValue Lang="en" Value="ConsignmentItem" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsItemNumber1">
+      <Values>
+        <LocaleValue Lang="en" Value="Goods item number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ItemPriceEUR">
+      <Values>
+        <LocaleValue Lang="en" Value="Item Price EUR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Commodity">
+      <Values>
+        <LocaleValue Lang="en" Value="Commodity" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DescriptionOfGoods">
+      <Values>
+        <LocaleValue Lang="en" Value="Description of goods" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSCode">
+      <Values>
+        <LocaleValue Lang="en" Value="CUS code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CommodityCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Commodity Code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CombinedNomenclatureCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Combined nomenclature code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0060">
+      <Values>
+        <LocaleValue Lang="en" Value="R0060" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NacionalCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Nacional Code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ExciseGoodsQuantity">
+      <Values>
+        <LocaleValue Lang="en" Value="Excise Goods Quantity" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HarmonizedSystemSubHeadingCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Harmonized system sub-heading code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MeasurementUnitAndQualifier">
+      <Values>
+        <LocaleValue Lang="en" Value="Measurement unit and qualifier" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NC006">
+      <Values>
+        <LocaleValue Lang="en" Value="NC006" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DangerousGoods">
+      <Values>
+        <LocaleValue Lang="en" Value="Dangerous Goods" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="UN Number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsMeasure">
+      <Values>
+        <LocaleValue Lang="en" Value="Goods Measure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NetMass">
+      <Values>
+        <LocaleValue Lang="en" Value="Net mass" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0223">
+      <Values>
+        <LocaleValue Lang="en" Value="R0223" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SupplementaryUnits">
+      <Values>
+        <LocaleValue Lang="en" Value="Supplementary units" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Packaging">
+      <Values>
+        <LocaleValue Lang="en" Value="Packaging" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfPackages">
+      <Values>
+        <LocaleValue Lang="en" Value="Type of packages" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NumberOfPackages">
+      <Values>
+        <LocaleValue Lang="en" Value="Number of packages" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ShippingMarks">
+      <Values>
+        <LocaleValue Lang="en" Value="Shipping marks" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B1000">
+      <Values>
+        <LocaleValue Lang="en" Value="B1000" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0020">
+      <Values>
+        <LocaleValue Lang="en" Value="R0020" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0298">
+      <Values>
+        <LocaleValue Lang="en" Value="C0298" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Quantity">
+      <Values>
+        <LocaleValue Lang="en" Value="Quantity" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ErrorReport">
+      <Values>
+        <LocaleValue Lang="en" Value="ErrorReport" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Error">
+      <Values>
+        <LocaleValue Lang="en" Value="Error" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DateAndTimeOfErrorOcurrence">
+      <Values>
+        <LocaleValue Lang="en" Value="Date and time of error ocurrence" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ApplicationName">
+      <Values>
+        <LocaleValue Lang="en" Value="Application name" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfRejectedMessage">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of rejected message" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfProcessedObject">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of processed object" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ErrorInMessageCheck">
+      <Values>
+        <LocaleValue Lang="en" Value="Error in message check" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ErrorType">
+      <Values>
+        <LocaleValue Lang="en" Value="Error type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DescriptionOfError">
+      <Values>
+        <LocaleValue Lang="en" Value="Description of error" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PointerToErrorElementXPATH">
+      <Values>
+        <LocaleValue Lang="en" Value="Pointer to error element (XPATH)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReasonOfError">
+      <Values>
+        <LocaleValue Lang="en" Value="Reason of error" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ValueThatWasRejected">
+      <Values>
+        <LocaleValue Lang="en" Value="Value that was rejected" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HelpForEndUser">
+      <Values>
+        <LocaleValue Lang="en" Value="Help (for end user)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ErrorFromRuntimeApplication">
+      <Values>
+        <LocaleValue Lang="en" Value="Error from runtime application" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Description">
+      <Values>
+        <LocaleValue Lang="en" Value="Description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DebugInfo">
+      <Values>
+        <LocaleValue Lang="en" Value="Debug info" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBDataRequest">
+      <Values>
+        <LocaleValue Lang="en" Value="FBDataRequest" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfRequestedVersion">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of requested version" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CompareWithPreviousVersi13C5320F">
+      <Values>
+        <LocaleValue Lang="en" Value="Compare with previous version and return differences?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfVersionBeingCompared">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of version being compared" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SaveIncompleteDataBeforeSubmit">
+      <Values>
+        <LocaleValue Lang="en" Value="Save incomplete data before submit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0601">
+      <Values>
+        <LocaleValue Lang="en" Value="R0601" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0909">
+      <Values>
+        <LocaleValue Lang="en" Value="R0909" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0911">
+      <Values>
+        <LocaleValue Lang="en" Value="R0911" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Data1">
+      <Values>
+        <LocaleValue Lang="en" Value="data" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0901">
+      <Values>
+        <LocaleValue Lang="en" Value="R0901" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR104">
+      <Values>
+        <LocaleValue Lang="en" Value="NR104" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBAccept">
+      <Values>
+        <LocaleValue Lang="en" Value="FB Accept" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR175">
+      <Values>
+        <LocaleValue Lang="en" Value="NR175" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LocationOfGoods1">
+      <Values>
+        <LocaleValue Lang="en" Value="Location Of Goods" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0850">
+      <Values>
+        <LocaleValue Lang="en" Value="R0850" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0382">
+      <Values>
+        <LocaleValue Lang="en" Value="C0382" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ApprovalClearanceOutsideE047154D">
+      <Values>
+        <LocaleValue Lang="en" Value="Approval clearance outside the premises" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCC01">
+      <Values>
+        <LocaleValue Lang="en" Value="NCC01" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Acceptance">
+      <Values>
+        <LocaleValue Lang="en" Value="Acceptance decision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBNotAccept">
+      <Values>
+        <LocaleValue Lang="en" Value="FB Not Accept" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0129">
+      <Values>
+        <LocaleValue Lang="en" Value="C0129" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0128">
+      <Values>
+        <LocaleValue Lang="en" Value="C0128" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0137">
+      <Values>
+        <LocaleValue Lang="en" Value="C0137" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficer">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs officer" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBIncidentRegistration">
+      <Values>
+        <LocaleValue Lang="en" Value="FB Incident Registration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR239">
+      <Values>
+        <LocaleValue Lang="en" Value="NR239" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0460">
+      <Values>
+        <LocaleValue Lang="en" Value="C0460" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0505">
+      <Values>
+        <LocaleValue Lang="en" Value="C0505" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0240">
+      <Values>
+        <LocaleValue Lang="en" Value="C0240" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0820">
+      <Values>
+        <LocaleValue Lang="en" Value="C0820" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0106">
+      <Values>
+        <LocaleValue Lang="en" Value="R0106" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0448">
+      <Values>
+        <LocaleValue Lang="en" Value="R0448" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0396">
+      <Values>
+        <LocaleValue Lang="en" Value="C0396" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SEAL1">
+      <Values>
+        <LocaleValue Lang="en" Value="SEAL" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0107">
+      <Values>
+        <LocaleValue Lang="en" Value="R0107" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0397">
+      <Values>
+        <LocaleValue Lang="en" Value="C0397" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0896">
+      <Values>
+        <LocaleValue Lang="en" Value="R0896" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBCancel">
+      <Values>
+        <LocaleValue Lang="en" Value="FBCancel" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBDocumentsRegistration">
+      <Values>
+        <LocaleValue Lang="en" Value="FBDocumentsRegistration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0002">
+      <Values>
+        <LocaleValue Lang="en" Value="G0002" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0028">
+      <Values>
+        <LocaleValue Lang="en" Value="R0028" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0410">
+      <Values>
+        <LocaleValue Lang="en" Value="R0410" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBSimplifiedProcedureBreak">
+      <Values>
+        <LocaleValue Lang="en" Value="FBSimplifiedProcedureBreak" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBResolutionToContinue">
+      <Values>
+        <LocaleValue Lang="en" Value="FBResolutionToContinue" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBResolutionToControl">
+      <Values>
+        <LocaleValue Lang="en" Value="FBResolutionToControl" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBFallbackDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="FBFallbackDestination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FallbackProcedureAtDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Fallback procedure at Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OriginalDocumentNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Original document number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1109">
+      <Values>
+        <LocaleValue Lang="en" Value="E1109" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCTSDeclarationForCODeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="NCTS declaration for CO Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUID">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RoleOfCO">
+      <Values>
+        <LocaleValue Lang="en" Value="Role of CO" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SubmitTimestamp1">
+      <Values>
+        <LocaleValue Lang="en" Value="Submit Timestamp" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AcceptanceDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Acceptance date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PrincipalName">
+      <Values>
+        <LocaleValue Lang="en" Value="Principal name" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PrincipalTIN">
+      <Values>
+        <LocaleValue Lang="en" Value="Principal TIN" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TotalGrossMass">
+      <Values>
+        <LocaleValue Lang="en" Value="Total Gross Mass" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentityOfMeansOfTranspoF4067224">
+      <Values>
+        <LocaleValue Lang="en" Value="Identity of means of transport at departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="State">
+      <Values>
+        <LocaleValue Lang="en" Value="State" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StateDescription">
+      <Values>
+        <LocaleValue Lang="en" Value="State description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="WriteOfDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Write of date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival Date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IsEDIAtDeparture1">
+      <Values>
+        <LocaleValue Lang="en" Value="Is EDI at departure?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationType2">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration Type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="Control result code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SimplifiedProcedureAtDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="Simplified procedure at departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncompleteDataTimestamp">
+      <Values>
+        <LocaleValue Lang="en" Value="Incomplete Data Timestamp" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncompleteDataUser">
+      <Values>
+        <LocaleValue Lang="en" Value="Incomplete Data User" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCTSDeclarationForCODestination">
+      <Values>
+        <LocaleValue Lang="en" Value="NCTS declaration for CO Destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOffice1">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConsigneeIdentificationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignee identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDeparture1">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office of departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConsginorIdentificationNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Consginor identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ClientState">
+      <Values>
+        <LocaleValue Lang="en" Value="Client state" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TraderAtDestinationIdentE6B9457A">
+      <Values>
+        <LocaleValue Lang="en" Value="Trader at destination identification number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SimplifiedProcedureAtDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Simplified procedure at destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRCarnetNumber1">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR carnet number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FallbackProcedureAtDestination1">
+      <Values>
+        <LocaleValue Lang="en" Value="Fallback procedure at destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OriginalDocumetAtFallbacE82D1262">
+      <Values>
+        <LocaleValue Lang="en" Value="Original documet at fallback procedure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentForCOIncidentReg39592E26">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident for CO Incident Registration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentNotficationDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident notfication date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RegistrationRejectionReason">
+      <Values>
+        <LocaleValue Lang="en" Value="Registration rejection reason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EnclDecisions">
+      <Values>
+        <LocaleValue Lang="en" Value="enclDecisions" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Key">
+      <Values>
+        <LocaleValue Lang="en" Value="Key" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConsignmentItemListItemCount">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignment Item List (item count: " />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HistoricMode_userModeLabel">
+      <Values>
+        <LocaleValue Lang="en" Value="Historic Mode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Release">
+      <Values>
+        <LocaleValue Lang="en" Value="Release" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InvalidGuaranteeReason">
+      <Values>
+        <LocaleValue Lang="en" Value="Invalid Guarantee Reason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LocalizedString1">
+      <Values>
+        <LocaleValue Lang="en" Value="Seal" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ExcludedCountry">
+      <Values>
+        <LocaleValue Lang="en" Value="Excluded Country" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR006">
+      <Values>
+        <LocaleValue Lang="en" Value="NR006" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRValidityDate1">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR validity date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ADDRESS1">
+      <Values>
+        <LocaleValue Lang="en" Value="ADDRESS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AllocationResult">
+      <Values>
+        <LocaleValue Lang="en" Value="Allocation result" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfGuarantee">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office of guarantee" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0909">
+      <Values>
+        <LocaleValue Lang="en" Value="C0909" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0542">
+      <Values>
+        <LocaleValue Lang="en" Value="C0542" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0001_consignment">
+      <Values>
+        <LocaleValue Lang="en" Value="C0001_consignment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0826">
+      <Values>
+        <LocaleValue Lang="en" Value="C0826" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0367">
+      <Values>
+        <LocaleValue Lang="en" Value="G0367" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ClientState1">
+      <Values>
+        <LocaleValue Lang="en" Value="Client State" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="BorderCrossing">
+      <Values>
+        <LocaleValue Lang="en" Value="Border Crossing" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DatabaseIDOfBorderCrossing">
+      <Values>
+        <LocaleValue Lang="en" Value="Database ID of border crossing" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DateAndTimeOfBorderCrossing">
+      <Values>
+        <LocaleValue Lang="en" Value="Date and time of border crossing" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfTransit1">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office of transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CrossingBorderType">
+      <Values>
+        <LocaleValue Lang="en" Value="CrossingBorderType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalAtBorderDateTime">
+      <Values>
+        <LocaleValue Lang="en" Value="ArrivalAtBorderDateTime" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InternalID">
+      <Values>
+        <LocaleValue Lang="en" Value="Internal ID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisDeclaration">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis Declaration" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RoleSpecification">
+      <Values>
+        <LocaleValue Lang="en" Value="Role specification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResponsibleCustomsOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="Responsible customs office" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisRequest">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis Request" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisRequestID">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk analysis request ID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisRequestDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk analysis request date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficerID">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Officer ID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsPresented">
+      <Values>
+        <LocaleValue Lang="en" Value="Goods presented" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TimeLimitForSimplifiedProcedure">
+      <Values>
+        <LocaleValue Lang="en" Value="Time limit for simplified procedure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NumberOfDeclarationDataVersion">
+      <Values>
+        <LocaleValue Lang="en" Value="Number of declaration data version" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MessageType">
+      <Values>
+        <LocaleValue Lang="en" Value="Message type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FeedbackDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Feedback date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RISKANALYSIS1">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0987">
+      <Values>
+        <LocaleValue Lang="en" Value="R0987" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HouseSequenceNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="House sequence number" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RISKANALYSISRESULT1">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis Result" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisType">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk analysis type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskLevel">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk level" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResultCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Result code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResultText">
+      <Values>
+        <LocaleValue Lang="en" Value="Result text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisAssessment">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk Analysis Assessment" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnalysisIdentificationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk analysis identification code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AssessmentResultVersion">
+      <Values>
+        <LocaleValue Lang="en" Value="Assessment result version" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AssessmentDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Assessment date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IsRecordValid">
+      <Values>
+        <LocaleValue Lang="en" Value="Is record valid?" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RACompletionDateTime">
+      <Values>
+        <LocaleValue Lang="en" Value="RA completion date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONTROLRECOMMENDATIONS">
+      <Values>
+        <LocaleValue Lang="en" Value="Control Recommendations" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlRecomendCode">
+      <Values>
+        <LocaleValue Lang="en" Value="Control recomendation code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlRecomendText">
+      <Values>
+        <LocaleValue Lang="en" Value="Control recomendation text" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InspectionOrder">
+      <Values>
+        <LocaleValue Lang="en" Value="Inspection Order" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InspectionRequestID">
+      <Values>
+        <LocaleValue Lang="en" Value="Inspection request ID" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InspectionOrderDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Inspection order date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InspectionResult">
+      <Values>
+        <LocaleValue Lang="en" Value="Inspection Result" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InspectionResultDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Inspection result date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONTROLRESULT1">
+      <Values>
+        <LocaleValue Lang="en" Value="Control Result" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlNotification">
+      <Values>
+        <LocaleValue Lang="en" Value="Control Notification" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONTACTPERSON1">
+      <Values>
+        <LocaleValue Lang="en" Value="Contact Person" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestInformation">
+      <Values>
+        <LocaleValue Lang="en" Value="Request Information" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestInformationDateAndTime">
+      <Values>
+        <LocaleValue Lang="en" Value="Request information date and time" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0909_Dec_CI">
+      <Values>
+        <LocaleValue Lang="en" Value="R0909_Dec_CI" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NG002">
+      <Values>
+        <LocaleValue Lang="en" Value="NG002" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="BFArrivalNoData_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="BFArrivalNoData_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSITOPERATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="Transit Operation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NRC01">
+      <Values>
+        <LocaleValue Lang="en" Value="NRC01" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBArrivalDataRequest_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBArrivalDataRequest_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransitOperation2">
+      <Values>
+        <LocaleValue Lang="en" Value="Transit operation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR207">
+      <Values>
+        <LocaleValue Lang="en" Value="NR207" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR134">
+      <Values>
+        <LocaleValue Lang="en" Value="NR134" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0085">
+      <Values>
+        <LocaleValue Lang="en" Value="C0085" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0472">
+      <Values>
+        <LocaleValue Lang="en" Value="R0472" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0473">
+      <Values>
+        <LocaleValue Lang="en" Value="R0473" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0855">
+      <Values>
+        <LocaleValue Lang="en" Value="R0855" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBLoadTCDBin_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBLoadTCDBin_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Content">
+      <Values>
+        <LocaleValue Lang="en" Value="content" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="BFIncidentDataResponse_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="BFIncidentDataResponse_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUIDOfIncident1">
+      <Values>
+        <LocaleValue Lang="en" Value="GUID of Incident" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestRejectionReason">
+      <Values>
+        <LocaleValue Lang="en" Value="requestRejectionReason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AUTHORISATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="AUTHORISATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RECOVERYNOTIFICATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="RECOVERY NOTIFICATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="INVALIDATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="INVALIDATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFEXIT1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF EXIT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFDEPARTURE2">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF DEPARTURE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFDESTINATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF DESTINATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFDESTINATI89B24C79">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF DESTINATION (DECLARED)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFDESTINATIONACTUAL1">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Destination Actual" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFTRANSIT2">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF TRANSIT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFTRANSITDECLARED1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF TRANSIT (DECLARED)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFTRANSITACTUAL1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF TRANSIT (ACTUAL)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFEXITFORTRANSIT1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF EXIT FOR TRANSIT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFEXITFORTR52B681B5">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF EXIT FOR TRANSIT (DECLARED)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFEXITFORTR23E4A3F7">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF EXIT FOR TRANSIT (ACTUAL)" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFREQUEST1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF REQUEST" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFRECOVERYA9B1D07CB">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF RECOVERY AT DEPARTURE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFRECOVERY1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF RECOVERY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFRECOVERYRD26DD8B7">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF RECOVERY REQUESTING" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFRECOVERYREQUESTED1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF RECOVERY REQUESTED" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFENQUIRYAT69B5B391">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF ENQUIRY AT DEPARTURE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICEOFENQUIRYATD988440D">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE OF ENQUIRY AT DESTINATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HOLDEROFTHETRANSITPROCEDURE1">
+      <Values>
+        <LocaleValue Lang="en" Value="HOLDER OF THE TRANSIT PROCEDURE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRADERATDESTINATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRADER AT DESTINATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="REPRESENTATIVE1">
+      <Values>
+        <LocaleValue Lang="en" Value="REPRESENTATIVE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RECOVERY1">
+      <Values>
+        <LocaleValue Lang="en" Value="RECOVERY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CTL_CONTROL">
+      <Values>
+        <LocaleValue Lang="en" Value="CTL_CONTROL" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNLOADINGREMARK2">
+      <Values>
+        <LocaleValue Lang="en" Value="UNLOADING REMARK" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUARANTEE1">
+      <Values>
+        <LocaleValue Lang="en" Value="GUARANTEE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUARANTEEREFERENCE1">
+      <Values>
+        <LocaleValue Lang="en" Value="GUARANTEE REFERENCE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GUARANTOR1">
+      <Values>
+        <LocaleValue Lang="en" Value="GUARANTOR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EXCLUDEDCOUNTRY1">
+      <Values>
+        <LocaleValue Lang="en" Value="EXCLUDED COUNTRY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="INVALIDGUARANTEEREASON1">
+      <Values>
+        <LocaleValue Lang="en" Value="INVALID GUARANTEE REASON" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="COUNTRY1">
+      <Values>
+        <LocaleValue Lang="en" Value="COUNTRY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ACTION1">
+      <Values>
+        <LocaleValue Lang="en" Value="ACTION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNAVAILABILITY1">
+      <Values>
+        <LocaleValue Lang="en" Value="UNAVAILABILITY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FALLBACK1">
+      <Values>
+        <LocaleValue Lang="en" Value="FALLBACK" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SENDINGCOUNTRY1">
+      <Values>
+        <LocaleValue Lang="en" Value="SENDING COUNTRY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SYSTEMAPPLICABILITY1">
+      <Values>
+        <LocaleValue Lang="en" Value="SYSTEM APPLICABILITY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="STATISTICALCHARACTERISTICS1">
+      <Values>
+        <LocaleValue Lang="en" Value="STATISTICAL CHARACTERISTICS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SERIESELEMENTS1">
+      <Values>
+        <LocaleValue Lang="en" Value="SERIES ELEMENTS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ENQUIRY1">
+      <Values>
+        <LocaleValue Lang="en" Value="ENQUIRY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="REQUESTEDINFORMATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="REQUESTED INFORMATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RESPONSEINFORMATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="RESPONSE INFORMATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RISKANALYSISIDENTIFICATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="RISK ANALYSIS IDENTIFICATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONSIGNMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="CONSIGNMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CARRIER1">
+      <Values>
+        <LocaleValue Lang="en" Value="CARRIER" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONSIGNOR1">
+      <Values>
+        <LocaleValue Lang="en" Value="CONSIGNOR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONSIGNEE1">
+      <Values>
+        <LocaleValue Lang="en" Value="CONSIGNEE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ADDITIONALSUPPLYCHAINACTOR1">
+      <Values>
+        <LocaleValue Lang="en" Value="ADDITIONAL SUPPLY CHAIN ACTOR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSPORTEQUIPMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRANSPORT EQUIPMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GOODSREFERENCE1">
+      <Values>
+        <LocaleValue Lang="en" Value="GOODS REFERENCE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LOCATIONOFGOODS2">
+      <Values>
+        <LocaleValue Lang="en" Value="LOCATION OF GOODS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNLOCODE1">
+      <Values>
+        <LocaleValue Lang="en" Value="UN LOCODE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSTOMSOFFICE2">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSTOMS OFFICE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ECONOMICOPERATOR1">
+      <Values>
+        <LocaleValue Lang="en" Value="ECONOMIC OPERATOR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="POSTCODEADDRESS1">
+      <Values>
+        <LocaleValue Lang="en" Value="POSTCODE ADDRESS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DEPARTURETRANSPORTMEANS1">
+      <Values>
+        <LocaleValue Lang="en" Value="DEPARTURE TRANSPORT MEANS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="COUNTRYOFROUTINGOFCONSIGNMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="COUNTRY OF ROUTING OF CONSIGNMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ACTIVEBORDERTRANSPORTMEANS1">
+      <Values>
+        <LocaleValue Lang="en" Value="ACTIVE BORDER TRANSPORT MEANS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PLACEOFLOADING1">
+      <Values>
+        <LocaleValue Lang="en" Value="PLACE OF LOADING" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PLACEOFUNLOADING1">
+      <Values>
+        <LocaleValue Lang="en" Value="PLACE OF UNLOADING" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PREVIOUSDOCUMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="PREVIOUS DOCUMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SUPPORTINGDOCUMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="SUPPORTING DOCUMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSPORTDOCUMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRANSPORT DOCUMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ADDITIONALREFERENCE1">
+      <Values>
+        <LocaleValue Lang="en" Value="ADDITIONAL REFERENCE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ADDITIONALINFORMATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="ADDITIONAL INFORMATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HOUSECONSIGNMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="HOUSE CONSIGNMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSPORTCHARGES1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRANSPORT CHARGES" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CONSIGNMENTITEM1">
+      <Values>
+        <LocaleValue Lang="en" Value="CONSIGNMENT ITEM" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="COMMODITY1">
+      <Values>
+        <LocaleValue Lang="en" Value="COMMODITY" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="COMMODITYCODE1">
+      <Values>
+        <LocaleValue Lang="en" Value="COMMODITY CODE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DANGEROUSGOODS1">
+      <Values>
+        <LocaleValue Lang="en" Value="DANGEROUS GOODS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GOODSMEASURE1">
+      <Values>
+        <LocaleValue Lang="en" Value="GOODS MEASURE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PACKAGING1">
+      <Values>
+        <LocaleValue Lang="en" Value="PACKAGING" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="INCIDENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="INCIDENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ENDORSEMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="ENDORSEMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LOCATION1">
+      <Values>
+        <LocaleValue Lang="en" Value="LOCATION" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSHIPMENT1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRANSHIPMENT" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TRANSPORTMEANS1">
+      <Values>
+        <LocaleValue Lang="en" Value="TRANSPORT MEANS" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="INCOMPLETEDATA1">
+      <Values>
+        <LocaleValue Lang="en" Value="INCOMPLETE DATA" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CLIENTSTATE2">
+      <Values>
+        <LocaleValue Lang="en" Value="CLIENT STATE" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBNotRelease_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBNotRelease_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR209">
+      <Values>
+        <LocaleValue Lang="en" Value="NR209" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBCrossingBorder_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBCrossingBorder_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfTransit3">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office of Transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="B2103">
+      <Values>
+        <LocaleValue Lang="en" Value="B2103" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CrossingBorderType1">
+      <Values>
+        <LocaleValue Lang="en" Value="Crossing Border Type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBMovementPresented_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBMovementPresented_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBMovementStopped_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBMovementStopped_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBMovementTurnedBack_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBMovementTurnedBack_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBTransitDataRequest_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBTransitDataRequest_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBGuaranteeAmend_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBGuaranteeAmend_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0467_MRN">
+      <Values>
+        <LocaleValue Lang="en" Value="C0467_MRN" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0467">
+      <Values>
+        <LocaleValue Lang="en" Value="C0467" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NR154">
+      <Values>
+        <LocaleValue Lang="en" Value="NR154" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBTransitTermination_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBTransitTermination_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FBDischarge_SF">
+      <Values>
+        <LocaleValue Lang="en" Value="FBDischarge_SF" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0810">
+      <Values>
+        <LocaleValue Lang="en" Value="C0810" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="VoucherNumberOfTIRCarnet">
+      <Values>
+        <LocaleValue Lang="en" Value="Voucher number of TIR carnet" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRUnloadingCode">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR unloading code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0988">
+      <Values>
+        <LocaleValue Lang="en" Value="G0988" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0332">
+      <Values>
+        <LocaleValue Lang="en" Value="G0332" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0994">
+      <Values>
+        <LocaleValue Lang="en" Value="R0994" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0502">
+      <Values>
+        <LocaleValue Lang="en" Value="C0502" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0021">
+      <Values>
+        <LocaleValue Lang="en" Value="R0021" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0165">
+      <Values>
+        <LocaleValue Lang="en" Value="R0165" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0006">
+      <Values>
+        <LocaleValue Lang="en" Value="G0006" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0500">
+      <Values>
+        <LocaleValue Lang="en" Value="G0500" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UNLocode2">
+      <Values>
+        <LocaleValue Lang="en" Value="UN Locode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0014">
+      <Values>
+        <LocaleValue Lang="en" Value="G0014" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1104">
+      <Values>
+        <LocaleValue Lang="en" Value="E1104" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1102">
+      <Values>
+        <LocaleValue Lang="en" Value="E1102" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1301">
+      <Values>
+        <LocaleValue Lang="en" Value="E1301" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0057">
+      <Values>
+        <LocaleValue Lang="en" Value="G0057" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0825">
+      <Values>
+        <LocaleValue Lang="en" Value="G0825" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HouseConsignment2">
+      <Values>
+        <LocaleValue Lang="en" Value="House Consignment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1406">
+      <Values>
+        <LocaleValue Lang="en" Value="E1406" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0506_countryOfDispatch">
+      <Values>
+        <LocaleValue Lang="en" Value="R0506_countryOfDispatch" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0983">
+      <Values>
+        <LocaleValue Lang="en" Value="R0983" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0506_referenceNumberUCR">
+      <Values>
+        <LocaleValue Lang="en" Value="R0506_referenceNumberUCR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0502_house">
+      <Values>
+        <LocaleValue Lang="en" Value="C0502_house" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0416">
+      <Values>
+        <LocaleValue Lang="en" Value="R0416" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0186">
+      <Values>
+        <LocaleValue Lang="en" Value="C0186" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ConsignmentItem2">
+      <Values>
+        <LocaleValue Lang="en" Value="Consignment Item" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1402">
+      <Values>
+        <LocaleValue Lang="en" Value="E1402" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0988">
+      <Values>
+        <LocaleValue Lang="en" Value="R0988" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0007">
+      <Values>
+        <LocaleValue Lang="en" Value="R0007" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0601_CI">
+      <Values>
+        <LocaleValue Lang="en" Value="R0601_CI" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0507">
+      <Values>
+        <LocaleValue Lang="en" Value="R0507" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0507_countryOfDispatch">
+      <Values>
+        <LocaleValue Lang="en" Value="R0507_countryOfDispatch" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0507_countryOfDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="R0507_countryOfDestination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0343">
+      <Values>
+        <LocaleValue Lang="en" Value="C0343" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0507_referenceNumberUCR">
+      <Values>
+        <LocaleValue Lang="en" Value="R0507_referenceNumberUCR" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0502_consignmentItem">
+      <Values>
+        <LocaleValue Lang="en" Value="C0502_consignmentItem" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NG001">
+      <Values>
+        <LocaleValue Lang="en" Value="NG001" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1107">
+      <Values>
+        <LocaleValue Lang="en" Value="E1107" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0301">
+      <Values>
+        <LocaleValue Lang="en" Value="G0301" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsMeasure2">
+      <Values>
+        <LocaleValue Lang="en" Value="GoodsMeasure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0837">
+      <Values>
+        <LocaleValue Lang="en" Value="C0837" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0221">
+      <Values>
+        <LocaleValue Lang="en" Value="R0221" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1111">
+      <Values>
+        <LocaleValue Lang="en" Value="E1111" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0364">
+      <Values>
+        <LocaleValue Lang="en" Value="R0364" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0060_numberOfPackages">
+      <Values>
+        <LocaleValue Lang="en" Value="C0060_numberOfPackages" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1105">
+      <Values>
+        <LocaleValue Lang="en" Value="E1105" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0024">
+      <Values>
+        <LocaleValue Lang="en" Value="G0024" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0060">
+      <Values>
+        <LocaleValue Lang="en" Value="C0060" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0060_shippingMarks">
+      <Values>
+        <LocaleValue Lang="en" Value="C0060_shippingMarks" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1401">
+      <Values>
+        <LocaleValue Lang="en" Value="E1401" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="G0058">
+      <Values>
+        <LocaleValue Lang="en" Value="G0058" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0817">
+      <Values>
+        <LocaleValue Lang="en" Value="R0817" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="E1117">
+      <Values>
+        <LocaleValue Lang="en" Value="E1117" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R3061">
+      <Values>
+        <LocaleValue Lang="en" Value="R3061" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="R0507_transportCharges">
+      <Values>
+        <LocaleValue Lang="en" Value="R0507_transportCharges" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0337">
+      <Values>
+        <LocaleValue Lang="en" Value="C0337" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="C0337_NoSequence">
+      <Values>
+        <LocaleValue Lang="en" Value="C0337_NoSequence" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfIncidentRCB07FF5C1">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office Of Incident Registration" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AarRejectionReason">
+      <Values>
+        <LocaleValue Lang="en" Value="AarRejectionReason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AarRejectionCode">
+      <Values>
+        <LocaleValue Lang="en" Value="AarRejectionCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ValidFrom">
+      <Values>
+        <LocaleValue Lang="en" Value="Valid from" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ValidTo">
+      <Values>
+        <LocaleValue Lang="en" Value="Valid to" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="_Description">
+      <Values>
+        <LocaleValue Lang="en" Value="_ description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DescriptionLanguage">
+      <Values>
+        <LocaleValue Lang="en" Value="Description language" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalInformation2">
+      <Values>
+        <LocaleValue Lang="en" Value="AdditionalInformation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalInformationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="AdditionalInformationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalReference2">
+      <Values>
+        <LocaleValue Lang="en" Value="AdditionalReference" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DocumentType">
+      <Values>
+        <LocaleValue Lang="en" Value="DocumentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalSupplyChainAct2187A449">
+      <Values>
+        <LocaleValue Lang="en" Value="AdditionalSupplyChainActorRoleCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AuthorisationTypeDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="AuthorisationTypeDeparture" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AuthorisationType">
+      <Values>
+        <LocaleValue Lang="en" Value="AuthorisationType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCodesForDat85898204">
+      <Values>
+        <LocaleValue Lang="en" Value="Control result codes for data response" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Kod">
+      <Values>
+        <LocaleValue Lang="en" Value="Kód" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCodeDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="ControlResultCodeDeparture" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCode">
+      <Values>
+        <LocaleValue Lang="en" Value="ControlResultCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCodesForRel29092011">
+      <Values>
+        <LocaleValue Lang="en" Value="Control result codes for Release and NotRelease" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryAddressPostcodeBased">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryAddressPostcodeBased" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCode">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCodesCommonTransit">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryCodesCommonTransit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TccEntryDate">
+      <Values>
+        <LocaleValue Lang="en" Value="TccEntryDate" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NctsEntryDate">
+      <Values>
+        <LocaleValue Lang="en" Value="NctsEntryDate" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GeoNomenclatureCode">
+      <Values>
+        <LocaleValue Lang="en" Value="GeoNomenclatureCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryRegimeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryRegimeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCodesCustomsOfficeLists">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryCodesCustomsOfficeLists" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCodesForAddress">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryCodesForAddress" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCodesFullList">
+      <Values>
+        <LocaleValue Lang="en" Value="CountryCodesFullList" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CurrencyCodes">
+      <Values>
+        <LocaleValue Lang="en" Value="CurrencyCodes" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RateValue">
+      <Values>
+        <LocaleValue Lang="en" Value="RateValue" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CUSCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="CUSCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeDeparture" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumber2">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeDestination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeEnquiry">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeEnquiry" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeExit">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeExit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeRecovery">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeRecovery" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOffices">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOffices" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberMainOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberMainOffice" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberHigherAuthority">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberHigherAuthority" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberTakeOver">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberTakeOver" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberCompetentADFECF38">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberCompetentAuthorityOfEnquiry" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberCompetent21D6A0A8">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberCompetentAuthorityOfRecovery" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnLocodeId">
+      <Values>
+        <LocaleValue Lang="en" Value="UnLocodeId" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RegionCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RegionCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NearestOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="NearestOffice" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PostalCode">
+      <Values>
+        <LocaleValue Lang="en" Value="PostalCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PhoneNumber1">
+      <Values>
+        <LocaleValue Lang="en" Value="PhoneNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FaxNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="FaxNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="EMailAddress1">
+      <Values>
+        <LocaleValue Lang="en" Value="EMailAddress" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GeoInfoCode">
+      <Values>
+        <LocaleValue Lang="en" Value="GeoInfoCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TraderDedicated">
+      <Values>
+        <LocaleValue Lang="en" Value="TraderDedicated" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StreetAndNumber1">
+      <Values>
+        <LocaleValue Lang="en" Value="StreetAndNumber" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeTransit">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeTransit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeTransitExit">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsOfficeTransitExit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsSystems">
+      <Values>
+        <LocaleValue Lang="en" Value="CustomsSystems" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationType1">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeAdditional">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationTypeAdditional" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeItemLevel">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationTypeItemLevel" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeSecurity">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationTypeSecurity" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeSecurityCode">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationTypeSecurityCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationTypeWithNationalCodes">
+      <Values>
+        <LocaleValue Lang="en" Value="Declaration type with national codes" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepancyResolution">
+      <Values>
+        <LocaleValue Lang="en" Value="DiscrepancyResolution" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepancyResolutionCode">
+      <Values>
+        <LocaleValue Lang="en" Value="DiscrepancyResolutionCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="FunctionalityBusiness">
+      <Values>
+        <LocaleValue Lang="en" Value="FunctionalityBusiness" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="BusinessFunctionalityCode">
+      <Values>
+        <LocaleValue Lang="en" Value="BusinessFunctionalityCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GuaranteeType1">
+      <Values>
+        <LocaleValue Lang="en" Value="GuaranteeType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GuaranteeTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="GuaranteeTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GuaranteeTypesAndRegimes64F37F7B">
+      <Values>
+        <LocaleValue Lang="en" Value="Guarantee types and regimes - can be declared" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RegimeForWhichIsTheTypeAllowed">
+      <Values>
+        <LocaleValue Lang="en" Value="Regime, for which is the type allowed" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HScode">
+      <Values>
+        <LocaleValue Lang="en" Value="HScode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentCode">
+      <Values>
+        <LocaleValue Lang="en" Value="IncidentCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InformationCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="InformationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InvalidGuaranteeReason2">
+      <Values>
+        <LocaleValue Lang="en" Value="InvalidGuaranteeReason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="InvalidGuaranteeReasonCode">
+      <Values>
+        <LocaleValue Lang="en" Value="InvalidGuaranteeReasonCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="KindOfPackages">
+      <Values>
+        <LocaleValue Lang="en" Value="KindOfPackages" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LanguageByCustoms">
+      <Values>
+        <LocaleValue Lang="en" Value="LanguageByCustoms" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LanguageCode">
+      <Values>
+        <LocaleValue Lang="en" Value="LanguageCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ModificationType">
+      <Values>
+        <LocaleValue Lang="en" Value="ModificationType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ModificationTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="ModificationTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MonthOfYear">
+      <Values>
+        <LocaleValue Lang="en" Value="MonthOfYear" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MonthOfYearCode">
+      <Values>
+        <LocaleValue Lang="en" Value="MonthOfYearCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MovementQueryRejectionReasonCode">
+      <Values>
+        <LocaleValue Lang="en" Value="MovementQueryRejectionReasonCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AarAerRejectionReasonCode">
+      <Values>
+        <LocaleValue Lang="en" Value="AarAerRejectionReasonCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCTS_GeneratedConstrains37476B76">
+      <Values>
+        <LocaleValue Lang="en" Value="NCTS_GeneratedConstrainsDescription" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NoReleaseMotivation">
+      <Values>
+        <LocaleValue Lang="en" Value="NoReleaseMotivation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NoReleaseMotivationCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="NoReleaseMotivationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NotificationType1">
+      <Values>
+        <LocaleValue Lang="en" Value="NotificationType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SloupecCiselniku">
+      <Values>
+        <LocaleValue Lang="en" Value="SloupecCiselniku" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PreviousDocumentExportType">
+      <Values>
+        <LocaleValue Lang="en" Value="PreviousDocumentExportType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PreviousDocumentTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="PreviousDocumentTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PreviousDocumentType">
+      <Values>
+        <LocaleValue Lang="en" Value="PreviousDocumentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="QualifierOfIdentificatioABC6EBA9">
+      <Values>
+        <LocaleValue Lang="en" Value="QualifierOfIdentificationIncident" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="QualifierOfTheIdentification">
+      <Values>
+        <LocaleValue Lang="en" Value="QualifierOfTheIdentification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RejectionCodeDepartureExport">
+      <Values>
+        <LocaleValue Lang="en" Value="RejectionCodeDepartureExport" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RejectionDepartureExportCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RejectionDepartureExportCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseNotification">
+      <Values>
+        <LocaleValue Lang="en" Value="ReleaseNotification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseNotificationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="ReleaseNotificationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseType1">
+      <Values>
+        <LocaleValue Lang="en" Value="ReleaseType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReleaseTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="ReleaseTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RepresentativeStatusCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RepresentativeStatusCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RequestedInformationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RequestedInformationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ResponseCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="ResponseCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAreaCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="RiskAreaCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SpecificCircumstanceIndiBD57F59D">
+      <Values>
+        <LocaleValue Lang="en" Value="SpecificCircumstanceIndicatorCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StateAtOfficeOfDeparture">
+      <Values>
+        <LocaleValue Lang="en" Value="StateAtOfficeOfDeparture" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StatisticsType1">
+      <Values>
+        <LocaleValue Lang="en" Value="StatisticsType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SupportingDocumentType">
+      <Values>
+        <LocaleValue Lang="en" Value="SupportingDocumentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SupportingDocumentCode">
+      <Values>
+        <LocaleValue Lang="en" Value="SupportingDocumentCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SystemUnavailabilityType">
+      <Values>
+        <LocaleValue Lang="en" Value="SystemUnavailabilityType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SystemUnavailabilityTypeCode">
+      <Values>
+        <LocaleValue Lang="en" Value="SystemUnavailabilityTypeCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportDocumentType">
+      <Values>
+        <LocaleValue Lang="en" Value="TransportDocumentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportChargesMethodOfPayment">
+      <Values>
+        <LocaleValue Lang="en" Value="TransportChargesMethodOfPayment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportModeUCC">
+      <Values>
+        <LocaleValue Lang="en" Value="TransportModeUCC" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TransportModeUCCCode">
+      <Values>
+        <LocaleValue Lang="en" Value="TransportModeUCCCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfIdentificationOfMe63474A1C">
+      <Values>
+        <LocaleValue Lang="en" Value="TypeOfIdentificationOfMeansOfTransport" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfIdentification1">
+      <Values>
+        <LocaleValue Lang="en" Value="TypeOfIdentification" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfIdentificationofMe11976632">
+      <Values>
+        <LocaleValue Lang="en" Value="TypeOfIdentificationofMeansOfTransportActive" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TypeOfLocation1">
+      <Values>
+        <LocaleValue Lang="en" Value="TypeOfLocation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnavailabilityExplanation">
+      <Values>
+        <LocaleValue Lang="en" Value="UnavailabilityExplanation" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnavailabilityExplanationCode">
+      <Values>
+        <LocaleValue Lang="en" Value="UnavailabilityExplanationCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnDangerousGoodsCode">
+      <Values>
+        <LocaleValue Lang="en" Value="UnDangerousGoodsCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Unit">
+      <Values>
+        <LocaleValue Lang="en" Value="Unit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnLocodeExtended">
+      <Values>
+        <LocaleValue Lang="en" Value="UnLocodeExtended" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnLocodeExtendedCode">
+      <Values>
+        <LocaleValue Lang="en" Value="UnLocodeExtendedCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Change">
+      <Values>
+        <LocaleValue Lang="en" Value="Change" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Subdivision">
+      <Values>
+        <LocaleValue Lang="en" Value="Subdivision" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Function">
+      <Values>
+        <LocaleValue Lang="en" Value="Function" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Coordinates">
+      <Values>
+        <LocaleValue Lang="en" Value="Coordinates" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Comment">
+      <Values>
+        <LocaleValue Lang="en" Value="Comment" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MessageTypes">
+      <Values>
+        <LocaleValue Lang="en" Value="MessageTypes" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MessageTypesCode">
+      <Values>
+        <LocaleValue Lang="en" Value="MessageTypesCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskLevel1">
+      <Values>
+        <LocaleValue Lang="en" Value="RiskLevel" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskLevelCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RiskLevel code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnIndicator">
+      <Values>
+        <LocaleValue Lang="en" Value="RiskAnIndicator" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RiskAnIndicatorCode">
+      <Values>
+        <LocaleValue Lang="en" Value="RiskAnIndicator code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlRecomendCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="ControlRecomendCode" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlResultCodeDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="ControlResultCodeDestination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CancellationDate">
+      <Values>
+        <LocaleValue Lang="en" Value="Cancellation date" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="Risk">
+      <Values>
+        <LocaleValue Lang="en" Value="Risk" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StateAtOfficeOfDeparture1">
+      <Values>
+        <LocaleValue Lang="en" Value="State at office of Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCTSDeclarationForCOTransit">
+      <Values>
+        <LocaleValue Lang="en" Value="NCTS declaration for CO Transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ArrivalDateAtDestination">
+      <Values>
+        <LocaleValue Lang="en" Value="Arrival Date at destination" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeOfDeparture3">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs Office of Departure" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ClientStateTransition">
+      <Values>
+        <LocaleValue Lang="en" Value="Client state transition" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ClientStateTransitionDescription">
+      <Values>
+        <LocaleValue Lang="en" Value="Client state transition description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentityOfMeansOfTranspo182D0CE0">
+      <Values>
+        <LocaleValue Lang="en" Value="Identity of means of transport at active border" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NCTSDeclarationForCOExit7F6E7AD9">
+      <Values>
+        <LocaleValue Lang="en" Value="NCTS declaration for CO Exit for Transit" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IncidentRequestRejectionReason">
+      <Values>
+        <LocaleValue Lang="en" Value="Incident request rejection reason" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CrossingBorderTypes">
+      <Values>
+        <LocaleValue Lang="en" Value="Crossing border types" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AdditionalIdentifierContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="AdditionalIdentifierContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmountClaimedContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="AmountClaimedContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AmountToBeCoveredContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="AmountToBeCoveredContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AuthorisationNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="AuthorisationNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="AuthorityContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="AuthorityContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CancelEnquiryNotificatio2390A6D2">
+      <Values>
+        <LocaleValue Lang="en" Value="CancelEnquiryNotificationTextContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CodeContentType01">
+      <Values>
+        <LocaleValue Lang="en" Value="CodeContentType01" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ComplementOfInformationCB83DD37C">
+      <Values>
+        <LocaleValue Lang="en" Value="ComplementOfInformationContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ContinueUnloadingContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="ContinueUnloadingContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ControlledByContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="ControlledByContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CSRD2CodelistDescription">
+      <Values>
+        <LocaleValue Lang="en" Value="CS/RD2 Codelist description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DeclarationGoodsItemNumb847C9C23">
+      <Values>
+        <LocaleValue Lang="en" Value="DeclarationGoodsItemNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DescriptionOfGoodsContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="DescriptionOfGoodsContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DiscrepanciesNotificatio216049C6">
+      <Values>
+        <LocaleValue Lang="en" Value="DiscrepanciesNotificationTextContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="DocumentLineItemNumberCo05899A34">
+      <Values>
+        <LocaleValue Lang="en" Value="DocumentLineItemNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GoodsItemNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="GoodsItemNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GRNContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="GRNContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="GrossMassContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="GrossMassContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="HouseNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="HouseNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentificationNumberCont9C7E23F5">
+      <Values>
+        <LocaleValue Lang="en" Value="IdentificationNumberContentType01" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentificationNumberCont9C7E23F8">
+      <Values>
+        <LocaleValue Lang="en" Value="IdentificationNumberContentType02" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="IdentifierContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="IdentifierContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="JustificationContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="JustificationContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LocationContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="LocationContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="LRNContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="LRNContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NameContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="NameContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NationalCodelistDescription">
+      <Values>
+        <LocaleValue Lang="en" Value="National codelist description" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NetMassContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="NetMassContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NoReleaseMotivationTextCBA47E3F6">
+      <Values>
+        <LocaleValue Lang="en" Value="NoReleaseMotivationTextContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StringWithoutWhiteCharac46048BD2">
+      <Values>
+        <LocaleValue Lang="en" Value="String without &quot;white&quot; characters on the beginning/end" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NumberOfPackagesContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="NumberOfPackagesContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="NumberOfSealsContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="NumberOfSealsContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OtherGuaranteeReferenceCB0101DD4">
+      <Values>
+        <LocaleValue Lang="en" Value="OtherGuaranteeReferenceContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="OtherThingsToReportContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="OtherThingsToReportContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PhoneNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="PhoneNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="PlaceContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="PlaceContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CisloPracovnika">
+      <Values>
+        <LocaleValue Lang="en" Value="Číslo pracovníka" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="QuantityContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="QuantityContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RecoveryNotificationText75B98E1A">
+      <Values>
+        <LocaleValue Lang="en" Value="RecoveryNotificationTextContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberContentType02">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberContentType02" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ReferenceNumberContentType03">
+      <Values>
+        <LocaleValue Lang="en" Value="ReferenceNumberContentType03" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RejectionReasonContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="RejectionReasonContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="RoleOfCustomsOffice">
+      <Values>
+        <LocaleValue Lang="en" Value="Role of customs office" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SequenceNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="SequenceNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="ShippingMarksContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="ShippingMarksContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StreetAndNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="StreetAndNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="String100">
+      <Values>
+        <LocaleValue Lang="en" Value="String 100" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="StringOfLength1512">
+      <Values>
+        <LocaleValue Lang="en" Value="String of length 1-512" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="SupplementaryUnitsContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="SupplementaryUnitsContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TextContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="TextContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRCarnetNumberContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="TIR carnet number content type" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="TIRHolderIdentificationNE95E0CA3">
+      <Values>
+        <LocaleValue Lang="en" Value="TIRHolderIdentificationNumberContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UnloadingRemarkContentType">
+      <Values>
+        <LocaleValue Lang="en" Value="UnloadingRemarkContentType" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="UserIDForNCTS_RSProject">
+      <Values>
+        <LocaleValue Lang="en" Value="User ID for NCTS_RS project" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="MRNTypeWithFallback">
+      <Values>
+        <LocaleValue Lang="en" Value="MRNTypeWithFallback" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CountryCode1">
+      <Values>
+        <LocaleValue Lang="en" Value="Country code" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="CustomsOfficeReferenceNumber">
+      <Values>
+        <LocaleValue Lang="en" Value="Customs office reference number" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

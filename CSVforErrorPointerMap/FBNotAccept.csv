@@ -1,0 +1,8 @@
+"GUID","${L_Model$$GUIDOfDeclaration}"
+"Invalidation","${L_Model$$Invalidation}"
+"Invalidation/requestDateAndTime","${L_Model$$Invalidation} > ${L_Model$$RequestDateAndTime}"
+"Invalidation/decisionDateAndTime","${L_Model$$Invalidation} > ${L_Model$$DecisionDateAndTime}"
+"Invalidation/decision","${L_Model$$Invalidation} > ${L_Model$$Decision}"
+"Invalidation/initiatedByCustoms","${L_Model$$Invalidation} > ${L_Model$$InitiatedByCustoms}"
+"Invalidation/justification","${L_Model$$Invalidation} > ${L_Model$$Justification}"
+"Invalidation/customsOfficer","${L_Model$$Invalidation} > ${L_Model$$CustomsOfficer}"

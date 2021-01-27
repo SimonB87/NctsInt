@@ -5,6 +5,16 @@
   <Caption value="NCTS declaration for CO Departure" />
   <MtsImportOptions.MTS.ID value="Dataset_DEP" />
   <MtsImportOptions.MTS.Type value="client-dataset" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.NCTSDeclarationForCODeparture" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Attribute>
       <Name value="GUID" />
@@ -15,6 +25,16 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GUID" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="RoleCO" />
@@ -27,6 +47,16 @@
           <StrMaxLength value="16" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.RoleOfCO" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="CO" />
@@ -40,36 +70,16 @@
           <StrMinLength value="8" />
         </AttributeType>
       </DeclaredType>
-    </Attribute>
-    <Attribute>
-      <Name value="MRN" />
-      <Caption value="MRN" />
-      <MtsImportOptions.MTS.ID value="Dataset_DEP/MRN" />
-      <MtsImportOptions.MTS.Type value="client-dataset-item" />
-      <DeclaredType>
-        <AttributeType>
-          <StrMaxLength value="18" />
-          <StrMinLength value="18" />
-        </AttributeType>
-      </DeclaredType>
-      <Validators>
-        <Validator Name="regex">
-          <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]" />
-          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9]$") : true)]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CustomsOffice" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="LRN" />
@@ -77,6 +87,16 @@
       <MetaType reference="+MetaTypes.LRNContentType" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/LRN" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.LRN" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="submitTimestamp" />
@@ -88,6 +108,16 @@
           <BaseType value="DateTime" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.SubmitTimestamp1" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="acceptanceDateTime" />
@@ -99,6 +129,16 @@
           <BaseType value="DateTime" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.AcceptanceDateAndTime" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="principalName" />
@@ -106,6 +146,16 @@
       <MetaType reference="+MetaTypes.NameContentType" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/principalName" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.PrincipalName" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="principalTIN" />
@@ -113,6 +163,16 @@
       <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/principalTIN" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.PrincipalTIN" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="totalGrossMass" />
@@ -120,6 +180,16 @@
       <MetaType reference="+MetaTypes.GrossMassContentType" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/totalGrossMass" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TotalGrossMass" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="identificationDepartureTransportMeans" />
@@ -127,6 +197,16 @@
       <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/identificationDepartureTransportMeans" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.IdentityOfMeansOfTranspoF4067224" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="State" />
@@ -139,18 +219,16 @@
           <StrMaxLength value="50" />
         </AttributeType>
       </DeclaredType>
-    </Attribute>
-    <Attribute>
-      <Name value="stateDescription" />
-      <Caption value="State description" />
-      <IsRequired value="True" />
-      <MtsImportOptions.MTS.ID value="Dataset_DEP/stateDescription" />
-      <MtsImportOptions.MTS.Type value="client-dataset-item" />
-      <DeclaredType>
-        <AttributeType>
-          <StrMaxLength value="50" />
-        </AttributeType>
-      </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.State" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="releaseDateTime" />
@@ -162,6 +240,16 @@
           <BaseType value="DateTime" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ReleaseDateAndTime" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="WriteOfDate" />
@@ -173,6 +261,16 @@
           <BaseType value="Date" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.WriteOfDate" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="arrivalDate" />
@@ -184,6 +282,16 @@
           <BaseType value="Date" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ArrivalDate" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="IsEDIDeparture" />
@@ -195,6 +303,16 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.IsEDIAtDeparture1" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="declarationType" />
@@ -206,6 +324,16 @@
           <StrMaxLength value="5" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.DeclarationType2" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="controlResultCode" />
@@ -218,6 +346,16 @@
           <StrMinLength value="2" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ControlResultCode1" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="simplifiedProcedureDeparture" />
@@ -229,6 +367,16 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.SimplifiedProcedureAtDeparture" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="CommunicationDate" />
@@ -240,6 +388,16 @@
           <BaseType value="Date" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.RecoveryCommunicationDate" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="fallbackProcedure" />
@@ -251,6 +409,16 @@
           <BaseType value="Bool" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.FallbackProcedure" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="incompleteDataTimestamp" />
@@ -262,6 +430,16 @@
           <BaseType value="DateTime" />
         </AttributeType>
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.IncompleteDataTimestamp" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Attribute>
       <Name value="incompleteDataUser" />
@@ -269,6 +447,114 @@
       <MetaType reference="+MetaTypes.Pracovnik" />
       <MtsImportOptions.MTS.ID value="Dataset_DEP/incompleteDataUser" />
       <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.IncompleteDataUser" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+    </Attribute>
+    <Attribute>
+      <Name value="stateDescription" />
+      <Caption value="State description" />
+      <MetaType reference="+MetaTypes.String100_type" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/stateDescription" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+    </Attribute>
+    <Attribute>
+      <Name value="MRN" />
+      <Caption value="MRN" />
+      <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/MRN" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <Validators>
+        <Validator Name="regex">
+          <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+          <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Attribute>
+    <Attribute>
+      <Name value="cancellationDate" />
+      <Caption value="Cancellation date" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/cancellationDate" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="riskLevel" />
+      <Caption value="Risk" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/riskLevel" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="3" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="inspectionRequestID" />
+      <Caption value="inspectionRequestID" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/inspectionRequestID" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType />
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="InspectionOrderDateTime" />
+      <Caption value="InspectionOrderDateTime" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/InspectionOrderDateTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="InspectionResultDateTime" />
+      <Caption value="InspectionResultDateTime" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/InspectionResultDateTime" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="Code" />
+      <MtsImportOptions.MTS.ID value="Dataset_DEP/Code" />
+      <MtsImportOptions.MTS.Type value="client-dataset-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
     </Attribute>
   </Children>
 </DataEntity>

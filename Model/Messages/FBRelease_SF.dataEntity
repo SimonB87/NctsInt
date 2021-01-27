@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBRelease_SF" />
+  <Caption value="Release" />
+  <MtsImportOptions.MTS.ID value="/FBRelease_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.Release" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBRelease_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Attribute>
+          <Name value="bindingItinerary" />
+          <Caption value="Binding itinerary" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/TransitOperation/bindingItinerary" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.BindingItinerary" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Attribute>
+          <Name value="limitDate" />
+          <Caption value="Limit date" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/TransitOperation/limitDate" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Date" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.LimitDate" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="ControlResult" />
+      <Caption value="Control Result" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBRelease_SF/ControlResult" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ControlResult" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="text" />
+          <Caption value="Text" />
+          <MetaType reference="+MetaTypes.TextContentType" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/ControlResult/text" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Text" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Reference>
+          <Name value="code" />
+          <Caption value="Code" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/ControlResult/code" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Code" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.ControlResultCodeReleaseNotRelease" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="RN207">
+              <MtsImportOptions.MTS.ID value="RN207" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RN207"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE RN207 Code B1 is not allowed. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+      </Children>
+    </Complex>
+    <Collection>
+      <Name value="Guarantee" />
+      <Caption value="Guarantee" />
+      <MaxCount value="9" />
+      <MinCount value="1" />
+      <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Guarantee" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Reference>
+          <Name value="guaranteeType" />
+          <Caption value="Guarantee type" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/guaranteeType" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GuaranteeType" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.GuaranteeType" />
+            </Include>
+          </Children>
+          <Validators>
+            <Validator Name="RN134">
+              <MtsImportOptions.MTS.ID value="RN134" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RN134"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE RN134 Combination of guarantee type and regime of transit operation must be allowed in the code list GuaranteeType_Transit. */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="RN160">
+              <MtsImportOptions.MTS.ID value="RN160" />
+              <MtsImportOptions.MTS.Type value="rule-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["RN160"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(this.guaranteeType.Code = "4") ? true : this.GuaranteeReference.count() <= 1]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Reference>
+        <Attribute>
+          <Name value="otherGuaranteeReference" />
+          <Caption value="Other guarantee reference" />
+          <MetaType reference="+MetaTypes.OtherGuaranteeReferenceContentType" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/otherGuaranteeReference" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.OtherGuaranteeReference" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="C0130">
+              <MtsImportOptions.MTS.ID value="C0130" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.C0130]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(this.guaranteeType.Code = "8") ? this.otherGuaranteeReference.hasValue() :
+isTrue(this.guaranteeType.Code = "3") ? true : this.otherGuaranteeReference.isEmpty()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+        <Collection>
+          <Name value="GuaranteeReference" />
+          <Caption value="Guarantee Reference" />
+          <MaxCount value="99" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/GuaranteeReference" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.GuaranteeReference" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="GRN" />
+              <Caption value="GRN" />
+              <MetaType reference="+MetaTypes.GRNContentType" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/GuaranteeReference/GRN" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.GRN" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Validators>
+                <Validator Name="R0318">
+                  <MtsImportOptions.MTS.ID value="R0318" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0318]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().guaranteeType.Code = "4") ? length(this.GRN) = 24 : length(this.GRN) = 17]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+                <Validator Name="regex">
+                  <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[0-9]([A-Z][0-9]{6})?" />
+                  <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[0-9]([A-Z][0-9]{6})?$") : true)]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Attribute>
+            <Attribute>
+              <Name value="amountToBeCovered" />
+              <Caption value="Amount to be covered" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.AmountToBeCoveredContentType" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/GuaranteeReference/amountToBeCovered" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.AmountToBeCovered" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Reference>
+              <Name value="currency" />
+              <Caption value="Currency" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Guarantee/GuaranteeReference/currency" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Currency" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.CurrencyCodes" />
+                </Include>
+              </Children>
+              <Validators>
+                <Validator Name="RN005">
+                  <MtsImportOptions.MTS.ID value="RN005" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["RN005"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.currency.Code = "EUR")]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Reference>
+          </Children>
+          <ItemValidators>
+            <Validator Name="C0085">
+              <MtsImportOptions.MTS.ID value="C0085" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.C0085]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[true /* IMPORTED RULE C0085 IF / * /Guarantee/guaranteeType is in SET CL076
+THEN / * /Guarantee/GuaranteeReference = "R"
+ELSE / * /Guarantee/GuaranteeReference = "N" */]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </ItemValidators>
+        </Collection>
+      </Children>
+      <ItemValidators>
+        <Validator Name="RN161">
+          <MtsImportOptions.MTS.ID value="RN161" />
+          <MtsImportOptions.MTS.Type value="rule-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["RN161"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[true /* IMPORTED RULE RN161 One guarantee cannot be used more than once in on transit declaration. */]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </ItemValidators>
+    </Collection>
+    <Complex>
+      <Name value="Consignment" />
+      <Caption value="Consignment" />
+      <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Consignment" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Reference>
+          <Name value="inlandModeOfTransport" />
+          <Caption value="Inland mode of transport" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/inlandModeOfTransport" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.InlandModeOfTransport" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.TransportModeUCC" />
+            </Include>
+          </Children>
+        </Reference>
+        <Collection>
+          <Name value="TransportEquipment" />
+          <Caption value="Transport Equipment" />
+          <MaxCount value="9999" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/TransportEquipment" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TransportEquipment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Attribute>
+              <Name value="numberOfSeals" />
+              <Caption value="Number of seals" />
+              <MetaType reference="+MetaTypes.NumberOfSealsContentType" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/TransportEquipment/numberOfSeals" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.NumberOfSeals" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Collection>
+              <Name value="Seal" />
+              <Caption value="Seal" />
+              <MaxCount value="99" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/TransportEquipment/Seal" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Seal" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Attribute>
+                  <Name value="identifier" />
+                  <Caption value="Identifier" />
+                  <MetaType reference="+MetaTypes.IdentifierContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/TransportEquipment/Seal/identifier" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Identifier" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+              </Children>
+              <CollectionValidators>
+                <Validator Name="C0569">
+                  <MtsImportOptions.MTS.ID value="C0569" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.C0569]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[this.numberOfSeals > 0 ? this.Seal.hasValue() : this.Seal.isEmpty()]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </CollectionValidators>
+            </Collection>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="DepartureTransportMeans" />
+          <Caption value="Departure Transport Means" />
+          <MaxCount value="999" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/DepartureTransportMeans" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DepartureTransportMeans" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Reference>
+              <Name value="typeOfIdentification" />
+              <Caption value="Type of identification" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/DepartureTransportMeans/typeOfIdentification" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.TypeOfIdentification" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.TypeOfIdentificationOfMeansOfTransport" />
+                </Include>
+              </Children>
+              <Validators>
+                <Validator Name="R0472">
+                  <MtsImportOptions.MTS.ID value="R0472" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0472]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().inlandModeOfTransport.Code in [1,2,3,4,8]) ?
+substring(toString(this.typeOfIdentification.Code),1,1)=toString(this.owner().inlandModeOfTransport.Code) : true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+                <Validator Name="R0474">
+                  <MtsImportOptions.MTS.ID value="R0474" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0474]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().inlandModeOfTransport.Code = 3) ?
+this.index() = 1 ?
+isTrue(this.typeOfIdentification.Code = 30) : true : true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+                <Validator Name="R0476">
+                  <MtsImportOptions.MTS.ID value="R0476" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0476]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().inlandModeOfTransport.Code = 3) ?
+this.collection().count() > 1 ? 
+this.collection().exists(Current.index()=3) ?
+this.collection().where(Current.index()=3).exists(isTrue(Current.typeOfIdentification.Code = 31)) AND this.collection().where(Current.index()=2).exists(isTrue(Current.typeOfIdentification.Code = 31))
+: this.collection().where(Current.index()=2).exists(isTrue(Current.typeOfIdentification.Code = 31))
+: true
+: true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Reference>
+            <Attribute>
+              <Name value="identificationNumber" />
+              <Caption value="Identification number" />
+              <IsRequired value="True" />
+              <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/DepartureTransportMeans/identificationNumber" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.IdentificationNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Validators>
+                <Validator Name="R0473">
+                  <MtsImportOptions.MTS.ID value="R0473" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0473]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.typeOfIdentification.Code in [10,20,21,30,31,40,41,80])
+? validateAgainstRegularExpression(this.identificationNumber,"^[^a-z]*$") : true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Attribute>
+            <Reference>
+              <Name value="nationality" />
+              <Caption value="Nationality" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/DepartureTransportMeans/nationality" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Nationality" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.Nationality" />
+                </Include>
+              </Children>
+            </Reference>
+          </Children>
+          <CollectionValidators>
+            <Validator Name="C0826">
+              <MtsImportOptions.MTS.ID value="C0826" />
+              <MtsImportOptions.MTS.Type value="condition-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.C0826]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[isTrue(this.inlandModeOfTransport.Code = 5) ? NOT this.DepartureTransportMeans.exists(true) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </CollectionValidators>
+        </Collection>
+        <Collection>
+          <Name value="HouseConsignment" />
+          <Caption value="House Consignment" />
+          <MaxCount value="999" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/HouseConsignment" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.HouseConsignment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Collection>
+              <Name value="DepartureTransportMeans" />
+              <Caption value="Departure Transport Means" />
+              <MaxCount value="999" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/HouseConsignment/DepartureTransportMeans" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.DepartureTransportMeans" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Reference>
+                  <Name value="typeOfIdentification" />
+                  <Caption value="Type of identification" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/HouseConsignment/DepartureTransportMeans/typeOfIdentification" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.TypeOfIdentification" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.TypeOfIdentificationOfMeansOfTransport" />
+                    </Include>
+                  </Children>
+                  <Validators>
+                    <Validator Name="R0472">
+                      <MtsImportOptions.MTS.ID value="R0472" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA[localized.R0472]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().owner().inlandModeOfTransport.Code in [1,2,3,4,8]) 
+?
+(this.owner().owner().DepartureTransportMeans.exists(true) ? true :
+isTrue(substring(toString(this.typeOfIdentification.Code),1,1) = toString(this.owner().owner().inlandModeOfTransport.Code)))
+: true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                    <Validator Name="R0474">
+                      <MtsImportOptions.MTS.ID value="R0474" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA[localized.R0474]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().owner().inlandModeOfTransport.Code = 3) ?
+this.index() = 1 ?
+isTrue(this.typeOfIdentification.Code = 30) : true : true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                    <Validator Name="R0476">
+                      <MtsImportOptions.MTS.ID value="R0476" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA[localized.R0476]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[isTrue(this.owner().owner().inlandModeOfTransport.Code = 3) ?
+this.collection().owner().owner().DepartureTransportMeans.count() <= 1 ?
+this.collection().count() > 1 ? 
+this.collection().exists(Current.index()=3) ?
+this.collection().where(Current.index()=3).exists(isTrue(Current.typeOfIdentification.Code = 31)) AND this.collection().where(Current.index()=2).exists(isTrue(Current.typeOfIdentification.Code = 31))
+: this.collection().where(Current.index()=2).exists(isTrue(Current.typeOfIdentification.Code = 31))
+: true
+: true
+: true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Reference>
+                <Attribute>
+                  <Name value="identificationNumber" />
+                  <Caption value="Identification number" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.IdentificationNumberContentType02" />
+                  <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/HouseConsignment/DepartureTransportMeans/identificationNumber" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.IdentificationNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                  <Validators>
+                    <Validator Name="R0473">
+                      <MtsImportOptions.MTS.ID value="R0473" />
+                      <MtsImportOptions.MTS.Type value="rule-constraint" />
+                      <ErrorMessage IsValid="True">
+                        <ExpressionText><![CDATA[localized.R0473]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="String" />
+                        </ResultType>
+                      </ErrorMessage>
+                      <IsValid IsValid="True">
+                        <ExpressionText><![CDATA[this.owner().owner().DepartureTransportMeans.isEmpty() OR (NOT this.owner().owner().DepartureTransportMeans.exists(Current.typeOfIdentification.Code in [10,20,21,30,31,40,41,80])) ?
+isTrue(this.typeOfIdentification.Code in [10,20,21,30,31,40,41,80]) ?
+validateAgainstRegularExpression(this.identificationNumber,"^[^a-z]*$") : true : true]]></ExpressionText>
+                        <ResultType>
+                          <BaseType value="Bool" />
+                        </ResultType>
+                      </IsValid>
+                    </Validator>
+                  </Validators>
+                </Attribute>
+                <Reference>
+                  <Name value="nationality" />
+                  <Caption value="Nationality" />
+                  <IsRequired value="True" />
+                  <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/HouseConsignment/DepartureTransportMeans/nationality" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Nationality" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                  <Children>
+                    <Include>
+                      <Include reference="+DataEntities.Nationality" />
+                    </Include>
+                  </Children>
+                </Reference>
+              </Children>
+              <CollectionValidators>
+                <Validator Name="C0826">
+                  <MtsImportOptions.MTS.ID value="C0826" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.C0826]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().inlandModeOfTransport.Code = 5) ?
+NOT this.DepartureTransportMeans.exists(true) :
+this.owner().DepartureTransportMeans.exists(true) ?
+NOT this.DepartureTransportMeans.exists(true) :
+true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+                <Validator Name="R0855">
+                  <MtsImportOptions.MTS.ID value="R0855" />
+                  <MtsImportOptions.MTS.Type value="rule-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA[localized.R0855]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.owner().inlandModeOfTransport.Code = 3) ?
+this.DepartureTransportMeans.count() <= 3 :
+isTrue(this.owner().inlandModeOfTransport.Code = 2) ? true : this.DepartureTransportMeans.count() <= 1]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </CollectionValidators>
+            </Collection>
+          </Children>
+        </Collection>
+        <Collection>
+          <Name value="CountryOfRoutingOfConsignment" />
+          <Caption value="Country Of Routing Of Consignment" />
+          <MaxCount value="99" />
+          <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/CountryOfRoutingOfConsignment" />
+          <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.CountryOfRoutingOfConsignment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Reference>
+              <Name value="country" />
+              <Caption value="Country" />
+              <IsRequired value="True" />
+              <MtsImportOptions.MTS.ID value="/FBRelease_SF/Consignment/CountryOfRoutingOfConsignment/country" />
+              <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Country" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Include>
+                  <Include reference="+DataEntities.CountryCodesFullList" />
+                </Include>
+              </Children>
+            </Reference>
+          </Children>
+        </Collection>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

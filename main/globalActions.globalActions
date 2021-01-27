@@ -15,7 +15,7 @@ apiobjects.HScode.startLoadingData(getDateTime())
 apiobjects.KindOfPackages.startLoadingData(getDateTime())
 apiobjects.CustomsOfficeDeparture.startLoadingData(getDateTime())
 apiobjects.CustomsOfficeDestination.startLoadingData(getDateTime())
-apiobjects.CountryCodesWithAddress.startLoadingData(getDateTime())
+apiobjects.CountryCodesForAddress.startLoadingData(getDateTime())
 apiobjects.GuaranteeType.startLoadingData(getDateTime())
 apiobjects.CurrencyCodes.startLoadingData(getDateTime())
 apiobjects.CustomsOfficeTransit.startLoadingData(getDateTime())
@@ -25,10 +25,8 @@ apiobjects.TransportDocumentType.startLoadingData(getDateTime())
 apiobjects.SpecificCircumstanceIndicatorCode.startLoadingData(getDateTime())
 apiobjects.TransportModeUCC.startLoadingData(getDateTime())
 apiobjects.TypeOfIdentificationOfMeansOfTransport.startLoadingData(getDateTime())
-apiobjects.AuthorisationTypeDeparture.startLoadingData(getDateTime())
 apiobjects.RepresentativeStatusCode.startLoadingData(getDateTime())
 apiobjects.TypeOfLocation.startLoadingData(getDateTime())
-apiobjects.AdditionalSupplyChainActorRoleCode.startLoadingData(getDateTime())
 apiobjects.CountryCodesCommonTransit.startLoadingData(getDateTime())
 apiobjects.CountryAddressPostcodeBased.startLoadingData(getDateTime())
 apiobjects.QualifierOfTheIdentification.startLoadingData(getDateTime())
@@ -39,13 +37,31 @@ apiobjects.DeclarationTypeItemLevel.startLoadingData(getDateTime())
 apiobjects.CUSCode.startLoadingData(getDateTime())
 apiobjects.Unit.startLoadingData(getDateTime())
 apiobjects.AdditionalInformation.startLoadingData(getDateTime())
-
+apiobjects.InvalidGuaranteeReason.startLoadingData(getDateTime())
+apiobjects.Nationality.startLoadingData(getDateTime())
+apiobjects.CrossingBorderType.startLoadingData(getDateTime())
 apiobjects.AdditionalReference.setDateTime(getDateTime())
 apiobjects.AdditionalInformation.setDateTime(getDateTime())
 apiobjects.UnLocodeExtended.setDateTime(getDateTime())
 apiobjects.UnDangerousGoodsCode.setDateTime(getDateTime())
-
-
+apiobjects.CustomsOffices.setDateTime(getDateTime())
+apiobjects.CountryCodesCustomsOfficeLists.setDateTime(getDateTime())
+apiobjects.AllocationResult.loadDataAsync(getDateTime())
+apiobjects.AuthorisationTypeDeparture.loadDataAsync(getdateTime())
+apiobjects.MessageTypes.loadDataAsync(getDateTime())
+apiobjects.RARequestRole_enum.loadDataAsync(getDateTime())
+apiobjects.RiskAnalysisType.loadDataAsync(getDateTime())
+apiobjects.RiskLevel.loadDataAsync(getDateTime())
+apiobjects.RiskAnalysisResult.loadDataAsync(getDateTime())
+apiobjects.RiskAnIndicator.loadDataAsync(getDateTime())
+apiobjects.RiskAreaCode.loadDataAsync(getDateTime())
+apiobjects.ControlRecomendCode.loadDataAsync(getDateTime())
+apiobjects.ControlResultCodeDestination.loadDataAsync(getDateTime())
+apiobjects.NotificationType.loadDataAsync(getDateTime())
+apiobjects.IncidentCode.loadDataAsync(getDateTime())
+apiobjects.QualifierOfIdentificationIncident.loadDataAsync(getDateTime())
+apiobjects.MovementQueryRejectionReasonCode.loadDataAsync(getDateTime())
+apiobjects.StateAtOfficeOfDeparture.loadDataAsync(getDateTime())
 //CodeLists for validations:
 apiobjects.MSCountry_CL553.setDateTime(getDateTime())
 apiobjects.CountryCodesCTC_CL112.setDateTime(getDateTime())
@@ -54,83 +70,15 @@ apiobjects.CountryWithoutZip_CL505.setDateTime(getDateTime())
 apiobjects.GuaranteeTypeEUNonTIR_CL230.setDateTime(getDateTime())
 apiobjects.GuaranteeTypeCTC_CL229.setDateTime(getDateTime())
 apiobjects.GuaranteeTypeWithGRN_CL286.setDateTime(getDateTime())
+apiobjects.GuaranteeTypeWithReference.setDateTime(getDateTime())
 apiobjects.CountryAddressPostcodeOnly_CL198.setDateTime(getDateTime())
 apiobjects.PreviousDocumentUnionGoods_CL178.setDateTime(getDateTime())
 apiobjects.CountryCodesCommunity_CL010.setDateTime(getDateTime())
 apiobjects.KindOfPackagesBulk_CL181.setDateTime(getDateTime())
 apiobjects.KindOfPackagesUnpacked_CL182.setDateTime(getDateTime())
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="goToForm" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[if errorSourceForm.hasValue() then
-	system.console("goToForm::navigationTreeNode=" + navigationTreeNode)
-	if errorSourceForm = "Header" then
-	//	navigation.main.Header.withErrorSourceComponent
-	//	(errorSourceComponent).withErrorPointer(pointer).go()
-	endif
-else
-	navigation.main.home.go()
-endif
-]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext>
-          <Children>
-            <Attribute>
-              <Name value="errorSourceForm" />
-              <Caption value="Error source form" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="errorSourceComponent" />
-              <Caption value="Error source component" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="pointer" />
-              <Caption value="Pointer" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="navigationTreeNode" />
-              <Caption value="Navigation tree node" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-          </Children>
-        </ActionDataContext>
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
-      <Name value="authentication" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[//AUTENTIFIKACE
-var selectedCo = "ME123456"
-apiobjects.CIC.setHeader("X-CustomsOffice", selectedCo)
 
-var response = apiobjects.CIC.postAsync("login", defaultString())
-
-if response.isError() then
-	apiobjects.notificationsCtrl.addError("Your authentication request has failed.")
-	system.console(response.getJsonString())	
-else
-		
-	globals.loginResponse.fromJson(response.getJsonString())
-	system.console(globals.loginResponse.toJson())
-endif]]></Script>
+//codelist for validation description
+apiobjects.NCTS_GeneratedConstrainsDescription.startLoadingData(getDateTime())]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -139,14 +87,38 @@ endif]]></Script>
     <ActionBlock>
       <Name value="setUserModeInGui" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if inputMode = enums.declarationFormMode.create.enumValue() then
-	globals.globalUiState.userModeLabel = "New Declaration"
+        <Script><![CDATA[if ((inputMode = enums.declarationFormMode.create.enumValue()) OR (inputMode = enums.declarationFormMode.continueFilling.enumValue())) then
+	if isTrue(fallback) then
+		globals.globalUiState.userModeLabel = localized.NewFallback
+	else
+		globals.globalUiState.userModeLabel = localized.NewDeclaration
+	endif
 else 
 	if inputMode = enums.declarationFormMode.edit.enumValue() then
-		globals.globalUiState.userModeLabel = "Amend Declaration"
+		globals.globalUiState.userModeLabel = localized.Amend
 	else
-		if inputMode = enums.declarationFormMode.arrival.enumValue() then
-			globals.globalUIState.userModeLabel = "Arrived Declaration"
+		if inputMode = enums.declarationFormMode.copy.enumValue() then
+			globals.globalUiState.userModeLabel = localized.CopyDeclaration
+		else
+			if inputMode = enums.declarationFormMode.arrival.enumValue() then
+				globals.globalUIState.userModeLabel = localized.ArrivalAtCOofDestination 
+			else
+				if ((inputMode = enums.declarationFormMode.incompleteDetail.enumValue()) OR (inputMode = enums.declarationFormMode.detail.enumValue())) then
+					globals.globalUiState.userModeLabel = localized.DeclarationDetail
+				else
+					if inputMode = enums.declarationFormMode.incident.enumValue() then
+						globals.globalUiState.userModeLabel = localized.IncidentRegistration
+					else
+						if inputMode = enums.declarationFormMode.arrivalAtTransit.enumValue() then
+							globals.globalUiState.userModeLabel = localized.ArrivalAtCOOfTransit
+						else
+							if inputMode = enums.declarationFormMode.discharge.enumValue() then
+								globals.globalUiState.userModeLabel = localized.ManuallyDischarge
+							endif
+						endif
+					endif
+				endif
+			endif
 		endif
 	endIf 
 endIf]]></Script>
@@ -162,6 +134,29 @@ endIf]]></Script>
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="fallback" />
+              <Caption value="Fallback" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Fallback" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </ActionDataContext>
@@ -185,8 +180,20 @@ else
 				if isTrue(navigationID = "Consignment") then
 					globals.activePanel = "consignment"
 				else
-					if isTrue(navigationID = "EventHistory") then
-						globals.activePanel = "history"
+					if isTrue(navigationID = "RiskAnalysisDeclaration") then
+						globals.activePanel = "riskAnalysis"
+					else
+						if isTrue(navigationID = "Incident") then
+							globals.activePanel = "incident"
+						else
+							if isTrue(navigationID = "Decision") then
+								globals.activePanel = "decision"
+							else
+								if isTrue(navigationID = "EventHistory") then
+									globals.activePanel = "history"
+								endif
+							endif
+						endif
 					endif
 				endif
 			endif
@@ -194,11 +201,14 @@ else
 	endif
 endif
 
-if GUID.hasValue() then
-	navigation.main.Header.withGuid(GUID).go(mode)
+if GUID.hasValue() and VersionGUID.hasValue() then
+	navigation.main.Header.withGuid(GUID).withVersionGUID(VersionGUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
+	globals.globalUiState.userModeLabel = localized.HistoricVersion
+else if GUID.hasValue() then
+	navigation.main.Header.withGuid(GUID).withGUIDIncident(GUIDIncident).withIsTouchedForm(isTouchedForm).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
 else
-	navigation.main.Header.go(mode)
-endif]]></Script>
+	navigation.main.Header.withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
+endIf endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -211,6 +221,9 @@ endif]]></Script>
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="mode" />
@@ -218,10 +231,65 @@ endif]]></Script>
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
               <MetaType reference="+MetaTypes.declarationFormMode" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Mode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="GUID" />
               <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isTouchedForm" />
+              <Caption value="Is touched form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isValidationSummaryVisible" />
+              <Caption value="Is validation summary visible" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUIDIncident" />
+              <Caption value="GUID incident" />
               <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
@@ -234,11 +302,14 @@ endif]]></Script>
     <ActionBlock>
       <Name value="navigationToConsignmentItem" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if GUID.hasValue() then
-	navigation.main.ConsignmentItem.withGUID(GUID).go(mode, sequenceNumber, itemNumber)
+        <Script><![CDATA[if GUID.hasValue() and VersionGUID.hasValue() then
+	navigation.main.ConsignmentItem.withGUID(GUID).withVersionGUID(VersionGUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber, itemNumber)
+	globals.globalUiState.userModeLabel = localized.HistoricVersion
+else if GUID.hasValue() then
+	navigation.main.ConsignmentItem.withGUID(GUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber, itemNumber)
 else
-	navigation.main.ConsignmentItem.go(mode, sequenceNumber, itemNumber)
-endif]]></Script>
+	navigation.main.ConsignmentItem.withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber, itemNumber)
+endif endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -249,6 +320,16 @@ endif]]></Script>
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
               <MetaType reference="+MetaTypes.declarationFormMode" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Mode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="sequenceNumber" />
@@ -260,6 +341,16 @@ endif]]></Script>
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.SequenceNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="itemNumber" />
@@ -271,10 +362,65 @@ endif]]></Script>
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ItemNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="GUID" />
               <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isTouchedForm" />
+              <Caption value="Is touched form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isValidationSummaryVisible" />
+              <Caption value="Is validation summary visible" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUIDIncident" />
+              <Caption value="GUID incident" />
               <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
@@ -287,11 +433,14 @@ endif]]></Script>
     <ActionBlock>
       <Name value="navigationToConsignmentItemList" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if GUID.hasValue() then
-	navigation.main.ConsignmentList.withGUID(GUID).go(mode, sequenceNumber)
+        <Script><![CDATA[if GUID.hasValue() and VersionGUID.hasValue() then
+	navigation.main.ConsignmentList.withGUID(GUID).withVersionGUID(VersionGUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
+	globals.globalUiState.userModeLabel = localized.HistoricVersion
+else if GUID.hasValue() then
+	navigation.main.ConsignmentList.withGUID(GUID).withGUIDIncident(GUIDIncident).withIsTouchedForm(isTouchedForm).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
 else
-	navigation.main.ConsignmentList.go(mode, sequenceNumber)
-endif]]></Script>
+	navigation.main.ConsignmentList.withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
+endif endIf]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -302,6 +451,16 @@ endif]]></Script>
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
               <MetaType reference="+MetaTypes.declarationFormMode" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Mode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="sequenceNumber" />
@@ -313,10 +472,65 @@ endif]]></Script>
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.SequenceNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="GUID" />
               <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isTouchedForm" />
+              <Caption value="Is touched form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isValidationSummaryVisible" />
+              <Caption value="Is validation summary visible" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUIDIncident" />
+              <Caption value="GUID incident" />
               <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
@@ -329,11 +543,14 @@ endif]]></Script>
     <ActionBlock>
       <Name value="navigationToHouseConsignment" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if GUID.hasValue() then
-	navigation.main.HouseConsignment.withGuid(GUID).go(mode, sequenceNumber)
+        <Script><![CDATA[if GUID.hasValue() and VersionGUID.hasValue() then
+	navigation.main.HouseConsignment.withGuid(GUID).withVersionGUID(VersionGUID).withGUIDIncident(GUIDIncident).withIsTouchedForm(isTouchedForm).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
+	globals.globalUiState.userModeLabel = localized.HistoricVersion
+else if GUID.hasValue() then
+	navigation.main.HouseConsignment.withGuid(GUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
 else
-	navigation.main.HouseConsignment.go(mode, sequenceNumber)
-endif]]></Script>
+	navigation.main.HouseConsignment.withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode, sequenceNumber)
+endIf endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -344,6 +561,16 @@ endif]]></Script>
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
               <MetaType reference="+MetaTypes.declarationFormMode" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Mode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="sequenceNumber" />
@@ -355,12 +582,67 @@ endif]]></Script>
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.SequenceNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="GUID" />
               <Caption value="GUID" />
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isTouchedForm" />
+              <Caption value="Is touched form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isValidationSummaryVisible" />
+              <Caption value="Is validation summary visible" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUIDIncident" />
+              <Caption value="GUID incident" />
+              <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
@@ -372,11 +654,14 @@ endif]]></Script>
     <ActionBlock>
       <Name value="navigationToHouseConsignmentList" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[if GUID.hasValue() then
-	navigation.main.HouseConsignmentList.withGuid(GUID).go(mode)
-else
-	navigation.main.HouseConsignmentList.go(mode)
-endif]]></Script>
+        <Script><![CDATA[if (GUID.hasValue() and VersionGUID.hasValue()) then
+	navigation.main.HouseConsignmentList.withGuid(GUID).withVersionGUID(VersionGUID).withGUIDIncident(GUIDIncident).withIsTouchedForm(isTouchedForm).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
+	globals.globalUiState.userModeLabel = localized.HistoricVersion
+else if GUID.hasValue() then
+	navigation.main.HouseConsignmentList.withGuid(GUID).withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
+else 
+	navigation.main.HouseConsignmentList.withIsTouchedForm(isTouchedForm).withGUIDIncident(GUIDIncident).with_isValidationSummaryVisible(isValidationSummaryVisible).go(mode)
+endIf endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext>
@@ -387,18 +672,85 @@ endif]]></Script>
               <DataContextParameter.IsInput value="True" />
               <DataContextParameter.IsInputRequired value="True" />
               <MetaType reference="+MetaTypes.declarationFormMode" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Mode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="GUID" />
               <Caption value="GUID" />
+              <Comment value="GUID of the declaration" />
               <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="errors" />
               <Caption value="Errors" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Errors" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <Comment value="Version GUID relates to a historic version of the declaration as its status was changed." />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isTouchedForm" />
+              <Caption value="Is touched form" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="isValidationSummaryVisible" />
+              <Caption value="Is validation summary visible" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUIDIncident" />
+              <Caption value="GUID incident" />
               <DataContextParameter.IsInput value="True" />
               <DeclaredType>
                 <AttributeType />
@@ -413,6 +765,592 @@ endif]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[globals.DataChanged = false
 apiobjects.urlRouter.setDataHasChanged(false)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="processServerErrors" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//clear global error structures
+globals.Errors.serverValidationComplex.clear()
+globals.Errors.serverValidationErrors.clear()
+//fill global error structures
+globals.Errors.serverValidationComplex.fromJson(inputError)
+globals.Errors.serverValidationErrors.fromJson(globals.Errors.serverValidationComplex.MessageCheckError.toJson())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="inputError" />
+              <Caption value="Input error" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="sendMessage" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[result = false
+
+var response = apiobjects.CIC.postAsync(messageType, requestJson)
+var messageType = response.getMessageType()
+
+if (response.isError() OR isTrue(messageType = "ErrorReport")) then
+	
+	result = true
+	
+	var inputError = response.extractJson("Error")
+	actions.processServerErrors(inputError)
+		
+else
+
+	actions.clearGlobalServerErrors()
+		
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="messageType" />
+              <Caption value="Message type" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="requestJson" />
+              <Caption value="Request json" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearGlobalServerErrors" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.Errors.serverValidationComplex.clear()
+globals.Errors.serverValidationErrors.clear()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_isWideScreen_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if (globals.isWideScreen = false) then
+	apiobjects.browserStorage1.setItem("WideMode", "false")
+else
+	apiobjects.browserStorage1.setItem("WideMode", "true")
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_isNotColorizeMode_OnChange" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(globals.isNotColorizeMode) then
+	apiobjects.browserStorage1.setItem("ColorMode", "true")
+else
+	apiobjects.browserStorage1.setItem("ColorMode", "false")
+endif
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="crossBorders" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var CrossBorderJSON = navigation.main.CrossingBorder.showDialog(MRN)
+
+if isFalse(CrossBorderJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isCrossingBorderActive").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="stopMovement" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var MovementStoppedJSON = navigation.main.MovementStopped.showDialog(MRN)
+
+if isFalse(MovementStoppedJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isMovementStoppedActive").go()
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="turnBackMovement" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var MovementTurnedJSON = navigation.main.MovementTurnedBack.showDialog(MRN)
+
+if isFalse(MovementTurnedJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isMovementTurnedBackActive").go()
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="movementPresented" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var MovementPresentedJSON = navigation.main.MovementPresentedInformation.showDialog(MRN)
+
+if isFalse(MovementPresentedJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isPresentedAtCOoTraActive").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_notificationsCtrl_OnNotificationsChanged" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if notificationsCtrl.getCount() = 0 then
+	notificationsCtrl.setPanelVisibility(false)
+else
+	notificationsCtrl.setPanelVisibility(true)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="manuallyDischarge" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var manuallyDischarged = navigation.main.ManuallyDischarge.showDialog(MRN)
+
+if isFalse(manuallyDischarged = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isWrittenOffActive").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getBFDataResponse" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var requestJsonString = defaultString()
+
+if VersionGUID.hasValue() then
+	requestJsonString = "{\"GUID\":\""+ GUID +"\",\"GUIDVersion\": \"" + VersionGUID +"\"}"
+else
+	requestJsonString = "{\"GUID\":\""+ GUID +"\"}"
+endIf
+
+var response = apiobjects.CIC.postAsync("FBDataRequest", requestJsonString)
+var messageType = response.getMessageType()
+
+if (response.isError() OR isTrue(messageType="ErrorReport")) then
+	result = true
+else
+	result = false
+	var dataReceived = response.getJsonString()
+	apiobjects.transitDeclaration.fromJson(dataReceived)
+endIf]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+            <Attribute>
+              <Name value="VersionGUID" />
+              <Caption value="Version GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="getLatestVersion" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+apiobjects.urlRouter.clearUrl()
+apiobjects.transitDeclaration.clear()
+
+var res = actions.getBFDataResponse(GUID)
+globals.busyIndicatorIsRunning = false
+
+if res then
+	apiobjects.notificationsCtrl.addError(localized.FailedToLoadData)
+	navigation.main.DecList.go()
+else
+	navigation.main.Header.withGUID(GUID).go(enums.declarationFormMode.detail)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="GUID" />
+              <Caption value="GUID" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="clearGoToDeclist" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[notificationsCtrl.addError(localized.FailedToLoadData)
+apiobjects.transitDeclaration.clear()
+apiobjects.urlRouter.clearUrl()
+navigation.main.DecList.go()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="exitPresented" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var ExitPresentedJSON = navigation.main.exitPresented.showDialog(MRN)
+
+if isFalse(ExitPresentedJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isPresentedAtCOoExitActive").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="leaveSecurityArea" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var ExitJSON = navigation.main.Exit.showDialog(MRN)
+
+if isFalse(ExitJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isLeftAreaActive").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="exitStopped" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var ExitJSON = navigation.main.ExitStopped.showDialog(MRN)
+
+if isFalse(ExitJSON = ("cancelAction")) then
+
+	navigation.main.DecList.withInputNavTree("isExitStopped").go()
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="MRN" />
+              <Caption value="MRN" />
+              <DataContextParameter.IsInput value="True" />
+              <DataContextParameter.IsInputRequired value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="keyCloakLogout" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[apiobjects.Keycloak.logout(defaultString())]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="keyCloakLogin" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(apiobjects.Keycloak.isEnabled()) then
+	
+	var authenticated = apiobjects.Keycloak.finishAuthenticationAsync()
+	
+	if isTrue(authenticated) then
+	
+		globals.userData.jwt.fromJson(apiobjects.Keycloak.getKeycloakToken())
+		globals.userData.roles.fromJson(apiobjects.Keycloak.getRoles())
+		globals.userData.offices.fromJson(apiobjects.Keycloak.getCustomsOffices())
+	
+		if (globals.userData.roles.isEmpty() OR globals.userData.offices.isEmpty()) then
+		
+			navigation.main.ErrorForm.go("Permissions")
+		
+		else
+	
+			globals.userData.hasRole.BOR = apiobjects.Keycloak.hasRole("BOR")
+			globals.userData.hasRole.EXP = apiobjects.Keycloak.hasRole("EXP")
+			globals.userData.hasRole.INT = apiobjects.Keycloak.hasRole("INT")
+			globals.userData.hasRole.READ = apiobjects.Keycloak.hasRole("READ")
+			globals.userData.hasRole.SDEP = apiobjects.Keycloak.hasRole("SDEP")
+			globals.userData.hasRole.SDES = apiobjects.Keycloak.hasRole("SDES")
+		
+		endif
+		
+	else
+	
+		apiobjects.notificationsCtrl.addWarning(localized.userLogInfailed) //Message String : Login to KeyCloak service failed.
+	
+	endif
+
+else
+
+	//fakelogin for testing
+	globals.userData.jwt.name = "James Bond"
+	apiobjects.browserStorage1.setItem("username", globals.userData.jwt.name)
+	var fakeOffice = "[{\"co\":\"ME123457\"},{\"co\":\"ME123456\"},{\"co\":\"ME123450\"}]"
+	globals.userData.offices.fromJson(fakeOffice)
+	globals.userData.hasRole.BOR = true
+	globals.userData.hasRole.EXP = true
+	globals.userData.hasRole.INT = true
+	globals.userData.hasRole.READ = true
+	globals.userData.hasRole.SDEP = true
+	globals.userData.hasRole.SDES = true
+
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="browserStorageCheck" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+result = defaultString()
+//is there an username in storage?
+var username = apiobjects.browserStorage1.getItem("username")
+
+if isTrue(username = globals.userData.jwt.name) then
+	result = apiobjects.browserStorage1.getItem("selectedCO")
+else
+	apiobjects.browserStorage1.removeItem("selectedCO")
+	apiobjects.browserStorage1.setItem("username",globals.userData.jwt.name)
+endif
+globals.busyIndicatorIsRunning = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext>
+          <Children>
+            <Attribute>
+              <Name value="result" />
+              <Caption value="Result" />
+              <DataContextParameter.IsResult value="True" />
+              <DeclaredType>
+                <AttributeType />
+              </DeclaredType>
+            </Attribute>
+          </Children>
+        </ActionDataContext>
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="userAccessViaDeeplink" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if globals.selectedCO.isEmpty() then	//user came via deeplink
+	var browserStorageSelectedCO = actions.browserStorageCheck()
+	
+	if isTrue(browserStorageSelectedCO = defaultString()) then
+		apiobjects.transitDeclaration.clear()
+		apiobjects.urlRouter.clearUrl()
+		navigation.main.Login.withFromDeeplink(true).go()
+	else
+		globals.selectedCO.fromJson(browserStorageSelectedCO)
+		apiobjects.CIC.setHeader("X-CustomsOffice", globals.selectedCO.Code)
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_Keycloak_onSessionExpired" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.ErrorForm.go("Session")]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />

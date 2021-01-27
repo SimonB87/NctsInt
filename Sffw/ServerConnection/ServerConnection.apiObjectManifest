@@ -125,6 +125,18 @@
         <BaseType value="String" />
       </ReturnType>
     </MethodManifest>
+    <MethodManifest>
+      <Name value="getFileAsync" />
+      <ReturnType>
+        <ObjectType reference="+Components.Response" />
+      </ReturnType>
+      <Parameters>
+        <ParameterManifest>
+          <Name value="url" />
+          <BaseType value="String" />
+        </ParameterManifest>
+      </Parameters>
+    </MethodManifest>
   </Methods>
   <Properties>
     <PropertyManifest>
@@ -189,10 +201,10 @@
       <UiDescription value="Name of boolean variable in window.sf.support." />
     </PropertyManifest>
     <PropertyManifest>
-      <Name value="detectHermesLogout" />
-      <Type value="bool" />
-      <UiCategory value="Hermes" />
-      <UiDescription value="Tries to detect when app running in Hermes container got login redirect as response to background request and forces reload to get on the login form. Does not work in IE." />
+      <Name value="rootUrl_comment" />
+      <Type value="string" />
+      <UiCaption value="Root url comment" />
+      <UiDescription value="Root url comment for config.js" />
     </PropertyManifest>
   </Properties>
 </ApiObjectManifest>

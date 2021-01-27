@@ -9,9 +9,9 @@
   <TypeSpec>
     <AttributeType>
       <BaseType value="Decimal" />
-      <DecimalMax value="9999999999999.999" />
+      <DecimalMax value="9999999999999.999999" />
       <DecimalMin value="0.000" />
-      <DecimalPrecision value="3" />
+      <DecimalPrecision value="6" />
     </AttributeType>
   </TypeSpec>
 </MetaType>

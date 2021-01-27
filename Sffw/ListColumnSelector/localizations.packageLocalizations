@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<PackageLocalizations>
+  <Name value="localizations" />
+  <Strings>
+    <LocalizedString LocID="btnApply">
+      <Values>
+        <LocaleValue Lang="en" Value="Apply" />
+        <LocaleValue Lang="fi" Value="Soveltaa" />
+        <LocaleValue Lang="sr" Value="Primenite" />
+        <LocaleValue Lang="sv" Value="Tillämpa" />
+        <LocaleValue Lang="cs" Value="Použít" />
+        <LocaleValue Lang="me" Value="Primenite" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="btnReset">
+      <Values>
+        <LocaleValue Lang="en" Value="Default" />
+        <LocaleValue Lang="cs" Value="Výchozí" />
+        <LocaleValue Lang="sr" Value="Podrazumevani" />
+        <LocaleValue Lang="fi" Value="Oletus" />
+        <LocaleValue Lang="sv" Value="Standard" />
+        <LocaleValue Lang="me" Value="Podrazumevani" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="btnClose">
+      <Values>
+        <LocaleValue Lang="en" Value="Close" />
+        <LocaleValue Lang="cs" Value="Zavřít" />
+        <LocaleValue Lang="fi" Value="Sulje" />
+        <LocaleValue Lang="sv" Value="Stäng" />
+        <LocaleValue Lang="sr" Value="Zatvori" />
+        <LocaleValue Lang="me" Value="Zatvori" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveUp">
+      <Values>
+        <LocaleValue Lang="en" Value="Move up" />
+        <LocaleValue Lang="cs" Value="Přesunout nahoru" />
+        <LocaleValue Lang="sv" Value="Flytta upp" />
+        <LocaleValue Lang="fi" Value="Siirrä ylös" />
+        <LocaleValue Lang="sr" Value="Premeštanje nagore" />
+        <LocaleValue Lang="me" Value="Premeštanje nagore" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveDown">
+      <Values>
+        <LocaleValue Lang="en" Value="Move down" />
+        <LocaleValue Lang="cs" Value="Přesunout dolů" />
+        <LocaleValue Lang="sv" Value="Flytta ned" />
+        <LocaleValue Lang="fi" Value="Siirrä alas" />
+        <LocaleValue Lang="sr" Value="Spusti se" />
+        <LocaleValue Lang="me" Value="Spusti se" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveLeft">
+      <Values>
+        <LocaleValue Lang="en" Value="Move selected left" />
+        <LocaleValue Lang="fi" Value="Siirrä valitut vasemmalle" />
+        <LocaleValue Lang="sr" Value="Idi izabrali levo" />
+        <LocaleValue Lang="cs" Value="Přesunout vybrané vlevo" />
+        <LocaleValue Lang="sv" Value="Flytta markerad vänster" />
+        <LocaleValue Lang="me" Value="Idi izabrali levo" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="moveRight">
+      <Values>
+        <LocaleValue Lang="en" Value="Move selected right" />
+        <LocaleValue Lang="fi" Value="Siirtää valitun oikealle" />
+        <LocaleValue Lang="sr" Value="Premesti izabrane desno" />
+        <LocaleValue Lang="cs" Value="Přesunout vybrané vpravo" />
+        <LocaleValue Lang="sv" Value="Flytta valda höger" />
+        <LocaleValue Lang="me" Value="Premesti izabrane desno" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="excludedColumns">
+      <Values>
+        <LocaleValue Lang="cs" Value="Vyjmuté sloupce" />
+        <LocaleValue Lang="en" Value="Excluded columns" />
+        <LocaleValue Lang="fi" Value="Ohitetut sarakkeet" />
+        <LocaleValue Lang="sv" Value="Uteslutna kolumner" />
+        <LocaleValue Lang="sr" Value="Isključene kolone" />
+        <LocaleValue Lang="me" />
+      </Values>
+    </LocalizedString>
+    <LocalizedString LocID="selectedColumns">
+      <Values>
+        <LocaleValue Lang="en" Value="Selected columns" />
+        <LocaleValue Lang="cs" Value="Vybrané sloupce" />
+        <LocaleValue Lang="fi" Value="Valitut sarakkeet" />
+        <LocaleValue Lang="sv" Value="Markerade kolumner" />
+        <LocaleValue Lang="sr" Value="Izabrane kolone" />
+        <LocaleValue Lang="me" Value="Izabrane kolone" />
+      </Values>
+    </LocalizedString>
+  </Strings>
+</PackageLocalizations>

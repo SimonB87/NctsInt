@@ -136,9 +136,6 @@
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
                 <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
@@ -372,9 +369,6 @@
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
@@ -611,9 +605,6 @@
                   <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="displayFlex" />
-                </CssClassConditional>
               </CssClass>
             </Panel>
             <Panel>
@@ -798,9 +789,6 @@
                                     <CssClassConditional>
                                       <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                    <CssClassConditional>
-                                      <ClassName value="displayFlex" />
                                     </CssClassConditional>
                                   </CssClass>
                                 </Panel>

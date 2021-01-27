@@ -6,12 +6,10 @@ var sffw;
         (function (urlRouter) {
             var Route = /** @class */ (function () {
                 // routeParams looks like a&b&c?&d?, where '&' splits the params and '?' after param name indicates that param is optional
-                function Route(formAlias, formName, routeParamsDef, masterPage) {
+                function Route(formAlias, formName, routeParamsDef) {
                     var _this = this;
-                    if (masterPage === void 0) { masterPage = null; }
                     this.formAlias = formAlias;
                     this.formName = formName;
-                    this.masterPage = masterPage;
                     var parts = (routeParamsDef || '').split(',');
                     var optionalParamDefRegex = /^(\w+)\?$/;
                     var mandatoryParamDefRegex = /^(\w+)$/;
@@ -189,7 +187,7 @@ var sffw;
         var urlRouter;
         (function (urlRouter) {
             var UrlRouter = /** @class */ (function () {
-                function UrlRouter(datacontext, args) {
+                function UrlRouter(_datacontext, args) {
                     var _this = this;
                     this.internalUrlUpdate = false;
                     this.internalHashChange = false;
@@ -197,7 +195,7 @@ var sffw;
                     sffw.assert(_.isArray(args.routes));
                     this.routes = [];
                     _(args.routes).each(function (routeDef) {
-                        _this.routes.push(new urlRouter.Route(routeDef.url, routeDef.form.Reference, routeDef.params, routeDef.masterPage && routeDef.masterPage.Reference));
+                        _this.routes.push(new urlRouter.Route(routeDef.url, routeDef.form.Reference, routeDef.params));
                     });
                     this.registerBeforeUnloadConfirm = !!args.registerBeforeUnloadConfirm;
                     this.ieOrEdgeVersion = this.getIEOrEdgeVersion();
@@ -251,27 +249,14 @@ var sffw;
                     if (typeof window !== 'undefined') {
                         var urlParse_1 = new urlRouter.UrlParse(window.location.hash);
                         if (urlParse_1.isValid && urlParse_1.form) {
-                            var route_1 = _(this.routes).find(function (r) {
+                            var route = _(this.routes).find(function (r) {
                                 return r.matchUrlParse(urlParse_1);
                             });
-                            if (route_1) {
-                                if (route_1.masterPage) {
-                                    return navigation.navigate({ type: 'Replace', isRoot: true, form: route_1.masterPage })
-                                        .then(function () {
-                                        return navigation.navigate({
-                                            type: 'Replace',
-                                            form: route_1.formName,
-                                            inputDataCallback: function (dc) {
-                                                _this.setInputData(dc, urlParse_1);
-                                                return Promise.resolve();
-                                            }
-                                        });
-                                    });
-                                }
+                            if (route) {
                                 return navigation.navigate({
                                     type: 'Replace',
                                     isRoot: true,
-                                    form: route_1.formName,
+                                    form: route.formName,
                                     inputDataCallback: function (dc) {
                                         _this.setInputData(dc, urlParse_1);
                                         return Promise.resolve();
@@ -281,15 +266,7 @@ var sffw;
                         }
                     }
                     // default navigation
-                    if (defaultMasterPage) {
-                        return navigation.navigate({ type: 'Replace', isRoot: true, form: defaultMasterPage })
-                            .then(function () {
-                            return navigation.navigate({ type: 'Replace', form: defaultForm });
-                        });
-                    }
-                    else {
-                        return navigation.navigate({ type: 'Replace', isRoot: true, form: defaultForm });
-                    }
+                    return navigation.navigate({ type: 'Replace', isRoot: true, form: defaultForm });
                 };
                 UrlRouter.prototype.clearUrl = function () {
                     this.internalUrlUpdate = true;

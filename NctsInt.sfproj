@@ -11,9 +11,9 @@
   <MTS.ImportOptions>
     <MtsImportOptions>
       <DomainCode value="ScreenFactory" />
-      <LastFileName value="C:\Users\vit.nikl\Desktop\NCTSMEInt_SF.xml" />
+      <LastFileName value="C:\Users\simon.buryan\Documents\Screen factory\metasystem_messages\NCTsInt_25-01-2020c.xml" />
       <ProjectCode value="NCTSMEInt_SF" />
-      <Revision value="2631" />
+      <Revision value="2816" />
     </MtsImportOptions>
   </MTS.ImportOptions>
   <Options>
@@ -32,6 +32,7 @@
   </Options>
   <Languages>
     <ProjectLanguageItem Language="en" />
+    <ProjectLanguageItem Language="me" />
   </Languages>
   <PackageReferences>
     <PackageReference Alias="CorePackage" IsComponentLib="True" IsReadOnly="True" IsSystem="True" Origin="system://CorePackage/CorePackage.package">
@@ -60,7 +61,7 @@
     </PackageReference>
     <PackageReference Alias="List" IsComponentLib="True" Origin="Sffw\List\List.package">
       <ReferencedIdentity value="List.a6f439c3b8e944f383863f66ff1261c8" />
-      <ReferencedVersion value="4.2.10" />
+      <ReferencedVersion value="5.1.0" />
     </PackageReference>
     <PackageReference Alias="Page" IsComponentLib="True" Origin="Sffw\Page\Page.package">
       <ReferencedIdentity value="Page.f7aa0c151c64407daef13910dcf7b72a" />
@@ -68,7 +69,7 @@
     </PackageReference>
     <PackageReference Alias="ListCtrl" IsComponentLib="True" Origin="Sffw\ListCtrl\ListCtrl.package">
       <ReferencedIdentity value="ListCtrl.459ff3780ab145df985191cfc1336ce1" />
-      <ReferencedVersion value="2.17.0" />
+      <ReferencedVersion value="2.18.0" />
     </PackageReference>
     <PackageReference Alias="referenceLookup" IsComponentLib="True" Origin="Sffw\ReferenceLookup\ReferenceLookup.package">
       <ReferencedIdentity value="referenceLookup.10b2d4db46e641b5bba23b33e3568c2e" />
@@ -76,7 +77,7 @@
     </PackageReference>
     <PackageReference Alias="ServerConnection" IsComponentLib="True" Origin="Sffw\ServerConnection\ServerConnection.package">
       <ReferencedIdentity value="ServerConnection.db7b3eef075548988df768923691922c" />
-      <ReferencedVersion value="4.1.0" />
+      <ReferencedVersion value="4.6.0" />
     </PackageReference>
     <PackageReference Alias="Codelist" IsComponentLib="True" Origin="Sffw\Codelist\Codelist.package">
       <ReferencedIdentity value="Codelist.2fd2d7af4a6d445bad8a58610632f8e0" />
@@ -84,7 +85,7 @@
     </PackageReference>
     <PackageReference Alias="UrlRouter" IsComponentLib="True" Origin="Sffw\UrlRouter\UrlRouter.package">
       <ReferencedIdentity value="UrlRouter.69a71809c45249cbb2999d13bb9100c0" />
-      <ReferencedVersion value="3.0.3" />
+      <ReferencedVersion value="4.0.0" />
     </PackageReference>
     <PackageReference Alias="collapsibleGroupBox" IsComponentLib="True" Origin="Sffw\CollapsibleGroupbox\CollapsibleGroupBox.package">
       <ReferencedIdentity value="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7" />
@@ -100,7 +101,7 @@
     </PackageReference>
     <PackageReference Alias="PagingRepeaterCtrl" IsComponentLib="True" Origin="Sffw\PagingRepeaterCtrl\PagingRepeaterCtrl.package">
       <ReferencedIdentity value="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4" />
-      <ReferencedVersion value="1.1.6" />
+      <ReferencedVersion value="2.3.1" />
     </PackageReference>
     <PackageReference Alias="CollapsibleStickyPanel" IsComponentLib="True" Origin="Sffw\CollapsibleStickyPanel\CollapsibleStickyPanel.package">
       <ReferencedIdentity value="CollapsibleStickyPanel.4b45f89dd6ca43ecb980574e5dacae09" />
@@ -116,11 +117,7 @@
     </PackageReference>
     <PackageReference Alias="Notifications" IsComponentLib="True" Origin="Sffw\Notifications\Notifications.package">
       <ReferencedIdentity value="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc" />
-      <ReferencedVersion value="1.2.1" />
-    </PackageReference>
-    <PackageReference Alias="ValidationSummary" IsComponentLib="True" Origin="..\NctsExt\Sffw\ValidationSummary\ValidationSummary.package">
-      <ReferencedIdentity value="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445" />
-      <ReferencedVersion value="1.0.2" />
+      <ReferencedVersion value="1.5.0" />
     </PackageReference>
     <PackageReference Alias="ErrorPointerMap" IsComponentLib="True" Origin="Sffw\ErrorPointerMap\ErrorPointerMap.package">
       <ReferencedIdentity value="ErrorPointerMap.69320151074d4125908af3869d7556e1" />
@@ -134,13 +131,9 @@
       <ReferencedIdentity value="ImageButton.d5705fac3ef94ff185b0260525af877a" />
       <ReferencedVersion value="2.0.2" />
     </PackageReference>
-    <PackageReference Alias="ListGrid2" IsComponentLib="True" Origin="Sffw\ListGrid2\ListGrid2.package">
-      <ReferencedIdentity value="ListGrid2.9fb164761a48454e9ed5f1f2734b6bbb" />
-      <ReferencedVersion value="1.31.11" />
-    </PackageReference>
     <PackageReference Alias="ListGridViewSettings" IsComponentLib="True" Origin="Sffw\ListGridViewSettings\ListGridViewSettings.package">
       <ReferencedIdentity value="ListGridViewSettings.13c6ca769c344553aaa727b591042920" />
-      <ReferencedVersion value="1.3.4" />
+      <ReferencedVersion value="1.3.5" />
     </PackageReference>
     <PackageReference Alias="NavigationTree" IsComponentLib="True" Origin="Sffw\NavigationTree\NavigationTree.package">
       <ReferencedIdentity value="NavigationTree.b87dd9f990504f86a481d689d499f644" />
@@ -149,6 +142,26 @@
     <PackageReference Alias="CollectionDataProvider2" IsComponentLib="True" Origin="Sffw\CollectionDataProvider2\CollectionDataProvider2.package">
       <ReferencedIdentity value="CollectionDataProvider2.796ba28ddaf44db78bd2cdf0b9f3628c" />
       <ReferencedVersion value="1.4.0" />
+    </PackageReference>
+    <PackageReference Alias="FileReader" IsComponentLib="True" Origin="Sffw\FileReader\FileReader.package">
+      <ReferencedIdentity value="FileReader.f457f0445b7e44b7a3a1134647eff385" />
+      <ReferencedVersion value="1.1.1" />
+    </PackageReference>
+    <PackageReference Alias="BrowserStorage" IsComponentLib="True" Origin="Sffw\BrowserStorage\BrowserStorage.package">
+      <ReferencedIdentity value="BrowserStorage.83565645179f49c7aca5e53363dc7176" />
+      <ReferencedVersion value="1.0.0" />
+    </PackageReference>
+    <PackageReference Alias="ListColumnSelector" IsComponentLib="True" Origin="Sffw\ListColumnSelector\ListColumnSelector.package">
+      <ReferencedIdentity value="ListColumnSelector.2cbd6bf4e5dc483c88201c7083328f69" />
+      <ReferencedVersion value="2.0.2" />
+    </PackageReference>
+    <PackageReference Alias="ValidationSummary" IsComponentLib="True" Origin="Sffw\ValidationSummary\ValidationSummary.package">
+      <ReferencedIdentity value="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445" />
+      <ReferencedVersion value="1.1.0" />
+    </PackageReference>
+    <PackageReference Alias="KeycloakAdapter" IsComponentLib="True" Origin="Sffw\KeycloakAdapter\KeycloakAdapter.package">
+      <ReferencedIdentity value="KeycloakAdapter.d4ad46533a0241948e42767440c362cc" />
+      <ReferencedVersion value="1.3.0" />
     </PackageReference>
   </PackageReferences>
 </ProjectRoot>

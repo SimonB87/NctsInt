@@ -25,3 +25,36 @@
 .sffw-paging-repeater-ctrl-error {
     color: red;
 }
+
+.sffw-paging-repeater-ctrl-container.has-errors .sffw-paging-repeater-ctrl-error-icon {
+    right: 0px;
+    position: absolute;
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+}
+
+.sffw-paging-repeater-ctrl-container.has-errors .sffw-paging-repeater-ctrl-error-icon:before {
+    content: "\26A0";
+}
+
+.sffw-paging-repeater-ctrl-left[disabled], .sffw-paging-repeater-ctrl-right[disabled], .sffw-paging-repeater-ctrl-add[disabled], .sffw-paging-repeater-ctrl-remove[disabled],
+.sffw-paging-repeater-ctrl-left[aria-disabled=true], .sffw-paging-repeater-ctrl-right[aria-disabled=true], .sffw-paging-repeater-ctrl-add[aria-disabled=true], .sffw-paging-repeater-ctrl-remove[aria-disabled=true] {
+    cursor: not-allowed;
+}
+
+.sffw-paging-repeater-ctrl-left[aria-disabled=true], .sffw-paging-repeater-ctrl-right[aria-disabled=true], .sffw-paging-repeater-ctrl-add[aria-disabled=true], .sffw-paging-repeater-ctrl-remove[aria-disabled=true] {
+    background-color: #efefef;
+    color: #aaaaaa;
+    border: 1px solid #c3c3c3;
+    padding: 3px;
+}
+
+.sffw-paging-repeater-ctrl-left[aria-disabled=true]:active, .sffw-paging-repeater-ctrl-right[aria-disabled=true]:active, .sffw-paging-repeater-ctrl-add[aria-disabled=true]:active, .sffw-paging-repeater-ctrl-remove[aria-disabled=true]:active {
+    background-color: #efefef;
+}
+
+.sffw-paging-repeater-ctrl-left[aria-disabled=true]:focus, .sffw-paging-repeater-ctrl-right[aria-disabled=true]:focus, .sffw-paging-repeater-ctrl-add[aria-disabled=true]:focus, .sffw-paging-repeater-ctrl-remove[aria-disabled=true]:focus {
+    color: white;
+    background-color: #a9a9a9;
+}

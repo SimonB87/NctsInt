@@ -1,6 +1,7 @@
 $(document).ready(function(){
-	// accordition must be in window, so its callable from form init in sf
+	// global js functions must be in window, so its callable from form init in sf
 	window.accordition = {}; 
+	window.notifications = {}; 
 	
 	// preparation of accordition items
 	accordition.prepare = function(){
@@ -24,6 +25,21 @@ $(document).ready(function(){
 		// show last opened submenu
 		accordition.showAccorditionContent($('.rolled .dt a'));
 	}
+
+	// preparation of notifications center
+	notifications.show = function(){
+		var $notifications = $('.notification-panel');
+		var $notificationTrigger = $('.notification-trigger');
+		var $notificationStatus = true;
+	}
+
+	// hdie of notifications center
+	notifications.hide= function(){
+		var $notifications = $('.notification-panel');
+		var $notificationTrigger = $('.notification-trigger');
+		var $notificationStatus = false;
+	}
+
 
 
 	// submenu toggler
@@ -50,5 +66,12 @@ $(document).ready(function(){
 	$('body').on('click', '.smx-accordition .dt a', function() {
 	  accordition.showAccorditionContent($(this));
 	});
+
+	$('body').on('click', '.smx-accordition .dt a', function() {
+	  accordition.showAccorditionContent($(this));
+	});
+
+
+
+
 });
-	

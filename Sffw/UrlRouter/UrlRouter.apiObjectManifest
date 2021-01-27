@@ -5,7 +5,7 @@
   <Generator value="urlRouter.js" />
   <Contracts>
     <ImplementsContractManifest>
-      <Name value="IUrlRouter" />
+      <Name value="IUrlRouter-2" />
     </ImplementsContractManifest>
   </Contracts>
   <Methods>

@@ -19,9 +19,9 @@
       </DeclaredType>
     </Attribute>
     <Attribute>
-      <Name value="Language" />
-      <Caption value="Language" />
-      <MtsImportOptions.MTS.ID value="LanguageByCustoms/Language" />
+      <Name value="LanguageCode" />
+      <Caption value="LanguageCode" />
+      <MtsImportOptions.MTS.ID value="LanguageByCustoms/LanguageCode" />
       <MtsImportOptions.MTS.Type value="codelist-item" />
       <DeclaredType>
         <AttributeType>
@@ -59,11 +59,23 @@
         </AttributeType>
       </DeclaredType>
     </Attribute>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="LanguageByCustoms/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
     <Computed>
       <Name value="_description" />
       <Caption value="_ description" />
       <Expression IsValid="True">
-        <ExpressionText><![CDATA[functions.codeListDescription(Language,Description)]]></ExpressionText>
+        <ExpressionText><![CDATA[functions.codeListDescription(LanguageCode,Description)]]></ExpressionText>
         <ResultType>
           <BaseType value="String" />
         </ResultType>

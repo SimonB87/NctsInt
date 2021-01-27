@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="ControlRecomendCode" />
+  <Caption value="ControlRecomendCode" />
+  <Description value="ME30" />
+  <MtsImportOptions.MTS.ID value="ControlRecomendCode" />
+  <MtsImportOptions.MTS.Type value="codelist" />
+  <Children>
+    <Attribute>
+      <Name value="Code" />
+      <Caption value="RiskAnIndicator code" />
+      <MtsImportOptions.MTS.ID value="ControlRecomendCode/Code" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="3" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Description" />
+      <Caption value="Description" />
+      <MtsImportOptions.MTS.ID value="ControlRecomendCode/Description" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2000" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidFrom" />
+      <Caption value="Valid from" />
+      <MtsImportOptions.MTS.ID value="ControlRecomendCode/ValidFrom" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="ValidTo" />
+      <Caption value="Valid to" />
+      <MtsImportOptions.MTS.ID value="ControlRecomendCode/ValidTo" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <BaseType value="DateTime" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="ControlRecomendCode/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
+    <Computed>
+      <Name value="_description" />
+      <Caption value="_ description" />
+      <Expression IsValid="True">
+        <ExpressionText><![CDATA[functions.codeListDescription(Code,Description)]]></ExpressionText>
+        <ResultType>
+          <BaseType value="String" />
+        </ResultType>
+      </Expression>
+    </Computed>
+  </Children>
+</DataEntity>

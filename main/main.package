@@ -4,19 +4,12 @@
   <Identity value="main.77cebdf47cc044589efeab8ab5a8ac2b" />
   <Items>
     <PackageItem Src="Master.form" />
-    <PackageItem Src="Home.form" />
     <PackageItem Src="DecList.form" />
     <PackageItem Src="globalApiObjects.globalApiObjects" />
     <PackageItem Src="globalVariables.globalVariables" />
     <PackageFolder Name="CSS">
       <Items>
         <ResourceItem ResourceName="main.css" LinkerAction="Css" OutputFileName="main.css" Src="CSS\main.css" />
-      </Items>
-    </PackageFolder>
-    <PackageFolder Name="JS">
-      <Items>
-        <ResourceItem ResourceName="ScrollFromTop.js" LinkerAction="Script" OutputFileName="ScrollFromTop.js" Src="JS\ScrollFromTop.js" />
-        <ResourceItem ResourceName="AccorditionNav.js" LinkerAction="Script" OutputFileName="AccorditionNav.js" Src="JS\AccorditionNav.js" />
       </Items>
     </PackageFolder>
     <PackageFolder Name="TransitDeclaration">
@@ -33,12 +26,32 @@
         <PackageItem Src="TransitDeclaration\FallbackRegistration.form" />
         <PackageItem Src="TransitDeclaration\Accept.form" />
         <PackageItem Src="TransitDeclaration\accept.metaType" />
+        <PackageItem Src="TransitDeclaration\acceptConfirm.form" />
         <PackageItem Src="TransitDeclaration\IncidentCheck.form" />
         <PackageItem Src="TransitDeclaration\IncidentRegistration.form" />
         <PackageItem Src="TransitDeclaration\UnloadingInterruption.form" />
         <PackageItem Src="TransitDeclaration\SimplifiedProcedureBreak.form" />
+        <PackageItem Src="TransitDeclaration\CancelTCD.form" />
+        <PackageItem Src="TransitDeclaration\Release.form" />
+        <PackageItem Src="TransitDeclaration\loadTCDfromExternalSource.form" />
+        <PackageItem Src="TransitDeclaration\NotRelease.form" />
+        <PackageItem Src="TransitDeclaration\ArrivalAtTransit.form" />
+        <PackageItem Src="TransitDeclaration\MovementPresentedInformation.form" />
+        <PackageItem Src="TransitDeclaration\MovementStopped.form" />
+        <PackageItem Src="TransitDeclaration\CrossingBorder.form" />
+        <PackageItem Src="TransitDeclaration\MovementTurnedBack.form" />
+        <PackageItem Src="TransitDeclaration\Inspection.form" />
+        <PackageItem Src="TransitDeclaration\ReleaseGoodsDes.form" />
+        <PackageItem Src="TransitDeclaration\ManuallyDischarge.form" />
+        <PackageItem Src="TransitDeclaration\ArrivalAtExit.form" />
+        <PackageItem Src="TransitDeclaration\exitPresented.form" />
+        <PackageItem Src="TransitDeclaration\Exit.form" />
+        <PackageItem Src="TransitDeclaration\ExitStopped.form" />
       </Items>
     </PackageFolder>
     <PackageItem Src="globalActions.globalActions" />
+    <PackageItem Src="localizations.packageLocalizations" />
+    <PackageItem Src="Login.form" />
+    <PackageItem Src="ErrorForm.form" />
   </Items>
 </Package>

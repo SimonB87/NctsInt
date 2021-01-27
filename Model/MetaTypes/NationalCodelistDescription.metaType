@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<MetaType>
+  <Name value="NationalCodelistDescription" />
+  <Caption value="National codelist description" />
+  <MtsImportOptions.MTS.ID value="NationalCodelistDescription" />
+  <MtsImportOptions.MTS.Type value="metatype" />
+  <TypeSpec>
+    <AttributeType>
+      <StrMaxLength value="512" />
+    </AttributeType>
+  </TypeSpec>
+</MetaType>

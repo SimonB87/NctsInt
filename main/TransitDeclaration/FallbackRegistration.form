@@ -2,7 +2,6 @@
 <?data-format version="0.400"?>
 <Form>
   <Name value="FallbackRegistration" />
-  <Caption value="Fallback registration" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -29,11 +28,50 @@
                   <Panel.Width value="*" />
                   <Children>
                     <Label>
-                      <Name value="label_mode1" />
-                      <Data value="Fallback Registration" />
+                      <Name value="productLabel" />
                       <Heading value="h3" />
+                      <Margin value="0, 0, 0, 0 px" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="100%" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_productName_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.NCTSMontenegro" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label_mode1" />
+                      <Heading value="h5" />
+                      <Margin value="0, 0, 0, 0 px" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.FallbackRegistration" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <Label>
+                      <Name value="label_co" />
+                      <Heading value="h5" />
+                      <Margin value="0, 0, 0, 0 px" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.customsOffice" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-label" />
@@ -72,6 +110,10 @@
                   <ClassName value="{theme}-nav" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-larger" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
               </CssClass>
             </Panel>
             <Panel>
@@ -93,56 +135,76 @@
                       <Panel.Width value="*" />
                       <Children>
                         <Panel>
-                          <Name value="panel83" />
-                          <Orientation value="Horizontal" />
-                          <Panel.Height value="#" />
-                          <Panel.Width value="10%" />
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-panel" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </Panel>
-                        <Panel>
                           <Name value="panel89" />
                           <Orientation value="Horizontal" />
                           <Panel.Height value="#" />
-                          <Panel.Width value="90%" />
+                          <Panel.Width value="100%" />
                           <Children>
-                            <Button>
-                              <Name value="save_btn1" />
-                              <Caption value="Save" />
-                              <Panel.Height value="42px" />
-                              <Panel.Width value="120px" />
-                              <OnClick>
-                                <ActionEvent ReferencedAction="~handler_save_btn_OnClick" />
-                              </OnClick>
+                            <Panel>
+                              <Name value="panel83" />
+                              <Orientation value="Horizontal" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="40px" />
+                              <Children>
+                                <NotificationPanelStatusIcon identity="Notifications.7ff832fd4a2b4377bafd2e81a99bbcfc">
+                                  <Name value="notification_icn" />
+                                  <controller reference="+GlobalApiObjects.notificationsCtrl" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="40px" />
+                                </NotificationPanelStatusIcon>
+                                <ImageButton identity="ImageButton.d5705fac3ef94ff185b0260525af877a">
+                                  <Name value="validate_btn" />
+                                  <Caption value="{fa-exclamation-circle}" />
+                                  <Margin value="0, 0, 0, 0 px" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="40px" />
+                                  <OnClick>
+                                    <ActionEvent ReferencedAction="~handler_validate_btn_OnClick" />
+                                  </OnClick>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-imagebutton" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-button" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="flleft" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="toTop" />
+                                    </CssClassConditional>
+                                    <CssClassConditional>
+                                      <ClassName value="active" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Condition" Expression="form.auxiliaryVariables._isValidationSummaryVisible" />
+                                      </Bindings>
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </ImageButton>
+                              </Children>
                               <CssClass>
                                 <CssClassConditional>
-                                  <ClassName value="{theme}-button" />
+                                  <ClassName value="{theme}-panel" />
                                   <IsThemedStyle value="True" />
                                 </CssClassConditional>
                                 <CssClassConditional>
-                                  <ClassName value="newStyle" />
-                                </CssClassConditional>
-                                <CssClassConditional>
-                                  <ClassName value="btn-success" />
-                                </CssClassConditional>
-                                <CssClassConditional>
-                                  <ClassName value="disabled" />
-                                  <Condition value="False" />
+                                  <ClassName value="nodeclist-icon" />
                                 </CssClassConditional>
                               </CssClass>
-                            </Button>
+                            </Panel>
                             <Button>
-                              <Name value="cancel_btn1" />
-                              <Caption value="Cancel" />
+                              <Name value="close_btn" />
                               <Panel.Height value="42px" />
                               <Panel.Width value="120px" />
                               <OnClick>
                                 <ActionEvent ReferencedAction="~action1" />
                               </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.Close" />
+                              </Bindings>
                               <CssClass>
                                 <CssClassConditional>
                                   <ClassName value="{theme}-button" />
@@ -153,6 +215,33 @@
                                 </CssClassConditional>
                                 <CssClassConditional>
                                   <ClassName value="btn-secondary" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="disabled" />
+                                  <Condition value="False" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Button>
+                            <Button>
+                              <Name value="fallbackRegistration_btn" />
+                              <Panel.Height value="42px" />
+                              <Panel.Width value="120px" />
+                              <OnClick>
+                                <ActionEvent ReferencedAction="~handler_save_btn_OnClick" />
+                              </OnClick>
+                              <Bindings>
+                                <Binding SourceProperty="Caption" Expression="localized.FallbackRegister" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-button" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="newStyle" />
+                                </CssClassConditional>
+                                <CssClassConditional>
+                                  <ClassName value="btn-success" />
                                 </CssClassConditional>
                                 <CssClassConditional>
                                   <ClassName value="disabled" />
@@ -183,22 +272,6 @@
                         </CssClassConditional>
                       </CssClass>
                     </Panel>
-                    <Panel>
-                      <Name value="ControlPnlSpace" />
-                      <Orientation value="Horizontal" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-panel" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-nav-bar-space" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Panel>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -207,6 +280,10 @@
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="{theme}-nav-bar" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-header" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                   </CssClass>
@@ -218,58 +295,98 @@
                   <Panel.Width value="*" />
                   <Children>
                     <Panel>
-                      <Name value="transitOperation_pnl" />
-                      <Orientation value="Vertical" />
+                      <Name value="validationSummary_pnl" />
+                      <Orientation value="Horizontal" />
                       <Panel.Height value="#" />
                       <Panel.Width value="*" />
                       <Children>
                         <GroupBox>
-                          <Name value="transitOperation_grp" />
-                          <Caption value="Transit operation" />
+                          <Name value="validationsGrp" />
                           <Panel.Height value="#" />
-                          <Panel.HorizontalAlignment value="Center" />
                           <Panel.Width value="100%" />
                           <Content>
                             <Panel>
-                              <Name value="transitOp_pnl" />
+                              <Name value="panel102" />
                               <Orientation value="Horizontal" />
                               <Children>
-                                <TextBox>
-                                  <Name value="textBox1" />
-                                  <CaptionPosition value="Top" />
-                                  <CaptionVAlign value="Middle" />
-                                  <IsEnabled value="False" />
+                                <Panel>
+                                  <Name value="panel3" />
+                                  <Orientation value="Vertical" />
                                   <Panel.Height value="#" />
-                                  <Panel.Width value="50%" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="model.TransitOperation.MRN" />
-                                    <Binding SourceProperty="Caption" Expression="model.TransitOperation.MRN.caption()" />
-                                  </Bindings>
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <ClientValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="clientValidationSummary1" />
+                                      <errorPointerMap reference="~errorPointerMap1" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="validationErrors" Expression="globals.Errors.clientValidationErrors" />
+                                        <Binding SourceProperty="validationRoot" Expression="form.Model" />
+                                      </Bindings>
+                                      <columns>
+                                        <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                          <Name value="cliPointerCol" />
+                                          <columnRole value="pointer" />
+                                          <columnWidth value="30%" />
+                                          <propertyName value="Pointer" />
+                                          <Bindings>
+                                            <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                                          </Bindings>
+                                        </validationSummaryColumn>
+                                        <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                          <Name value="cliMessageCol" />
+                                          <columnWidth value="70%" />
+                                          <propertyName value="Message" />
+                                          <Bindings>
+                                            <Binding SourceProperty="columnCaption" Expression="localized.Message" />
+                                          </Bindings>
+                                        </validationSummaryColumn>
+                                      </columns>
+                                    </ClientValidationSummary>
+                                    <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                      <Name value="serverValidationSummary1" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="*" />
+                                      <Bindings>
+                                        <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
+                                      </Bindings>
+                                      <columns>
+                                        <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                          <Name value="srvPointerCol" />
+                                          <columnRole value="pointer" />
+                                          <columnWidth value="45%" />
+                                          <propertyName value="Pointer" />
+                                          <Bindings>
+                                            <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                                          </Bindings>
+                                        </validationSummaryColumn>
+                                        <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                          <Name value="srvErrorTypeCol" />
+                                          <columnWidth value="45%" />
+                                          <propertyName value="ErrorDescription" />
+                                          <Bindings>
+                                            <Binding SourceProperty="columnCaption" Expression="localized.ErrorType" />
+                                          </Bindings>
+                                        </validationSummaryColumn>
+                                        <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                                          <Name value="srvReasonCol" />
+                                          <columnWidth value="10%" />
+                                          <propertyName value="Reason" />
+                                          <Bindings>
+                                            <Binding SourceProperty="columnCaption" Expression="localized.Reason" />
+                                          </Bindings>
+                                        </validationSummaryColumn>
+                                      </columns>
+                                    </ServerValidationSummary>
+                                  </Children>
                                   <CssClass>
                                     <CssClassConditional>
-                                      <ClassName value="{theme}-textbox" />
+                                      <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                   </CssClass>
-                                </TextBox>
-                                <TextBox>
-                                  <Name value="originalDocument_txt" />
-                                  <CaptionPosition value="Top" />
-                                  <CaptionVAlign value="Middle" />
-                                  <IsEnabled value="False" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="50%" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="inputOriginalDocument" />
-                                    <Binding SourceProperty="Caption" Expression="inputOriginalDocument.caption()" />
-                                  </Bindings>
-                                  <CssClass>
-                                    <CssClassConditional>
-                                      <ClassName value="{theme}-textbox" />
-                                      <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                  </CssClass>
-                                </TextBox>
+                                </Panel>
                               </Children>
                               <CssClass>
                                 <CssClassConditional>
@@ -279,6 +396,143 @@
                               </CssClass>
                             </Panel>
                           </Content>
+                          <Bindings>
+                            <Binding SourceProperty="IsVisible" Expression="form.auxiliaryVariables._isValidationSummaryVisible" />
+                            <Binding SourceProperty="Caption" Expression="localized.ValidationsSummary" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-groupbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-datatable" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </GroupBox>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel-main" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                    <Panel>
+                      <Name value="transitOperation_pnl" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <GroupBox>
+                          <Name value="transitOperation_grp" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="100%" />
+                          <Content>
+                            <Panel>
+                              <Name value="transitOp_pnl_parent" />
+                              <Orientation value="Vertical" />
+                              <Children>
+                                <Panel>
+                                  <Name value="transitOp_pnl" />
+                                  <Orientation value="Horizontal" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <TextBox>
+                                      <Name value="textBox1" />
+                                      <CaptionPosition value="Top" />
+                                      <CaptionVAlign value="Middle" />
+                                      <IsEnabled value="False" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="50%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="model.TransitOperation.MRN" />
+                                        <Binding SourceProperty="Caption" Expression="model.TransitOperation.MRN.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                    <TextBox>
+                                      <Name value="originalDocument_txt" />
+                                      <CaptionPosition value="Top" />
+                                      <CaptionVAlign value="Middle" />
+                                      <IsEnabled value="False" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="50%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="inputOriginalDocument" />
+                                        <Binding SourceProperty="Caption" Expression="inputOriginalDocument.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                                <Panel>
+                                  <Name value="panel2" />
+                                  <Orientation value="Horizontal" />
+                                  <Panel.Height value="#" />
+                                  <Panel.Width value="*" />
+                                  <Children>
+                                    <TextBox>
+                                      <Name value="inputOriginalDocumentState" />
+                                      <CaptionPosition value="Top" />
+                                      <IsEnabled value="False" />
+                                      <Panel.Height value="#" />
+                                      <Panel.Width value="100%" />
+                                      <Bindings>
+                                        <Binding SourceProperty="Data" Expression="inputOriginalDocumentState" />
+                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="inputOriginalDocumentState.isRequired()" />
+                                        <Binding SourceProperty="Caption" Expression="inputOriginalDocumentState.caption()" />
+                                      </Bindings>
+                                      <CssClass>
+                                        <CssClassConditional>
+                                          <ClassName value="{theme}-textbox" />
+                                          <IsThemedStyle value="True" />
+                                        </CssClassConditional>
+                                      </CssClass>
+                                    </TextBox>
+                                  </Children>
+                                  <CssClass>
+                                    <CssClassConditional>
+                                      <ClassName value="{theme}-panel" />
+                                      <IsThemedStyle value="True" />
+                                    </CssClassConditional>
+                                  </CssClass>
+                                </Panel>
+                              </Children>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-panel" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </Panel>
+                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.TransitOperation" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
                               <ClassName value="{theme}-groupbox" />
@@ -302,7 +556,6 @@
                       <Children>
                         <GroupBox>
                           <Name value="COoDep_grp" />
-                          <Caption value="Customs office of departure" />
                           <Panel.Height value="#" />
                           <Panel.HorizontalAlignment value="Center" />
                           <Panel.Width value="100%" />
@@ -340,177 +593,9 @@
                               </CssClass>
                             </Panel>
                           </Content>
-                          <CssClass>
-                            <CssClassConditional>
-                              <ClassName value="{theme}-groupbox" />
-                              <IsThemedStyle value="True" />
-                            </CssClassConditional>
-                          </CssClass>
-                        </GroupBox>
-                      </Children>
-                      <CssClass>
-                        <CssClassConditional>
-                          <ClassName value="{theme}-panel" />
-                          <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                      </CssClass>
-                    </Panel>
-                    <Panel>
-                      <Name value="guarantee_grp_parent" />
-                      <Orientation value="Vertical" />
-                      <Panel.Height value="#" />
-                      <Panel.Width value="*" />
-                      <Children>
-                        <GroupBox>
-                          <Name value="guarantee_grp" />
-                          <Caption value="Guarantee" />
-                          <Panel.Height value="#" />
-                          <Panel.HorizontalAlignment value="Center" />
-                          <Panel.Width value="100%" />
-                          <Content>
-                            <Panel>
-                              <Name value="repeater1_parent" />
-                              <Orientation value="Vertical" />
-                              <Children>
-                                <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
-                                  <Name value="guaranteeCtrl" />
-                                  <AllowAdd value="True" />
-                                  <AllowRemove value="True" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="100%" />
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="model.Guarantee" />
-                                    <Binding SourceProperty="Index" Expression="modelState._index_guarantee" />
-                                  </Bindings>
-                                </PagingRepeaterCtrl>
-                                <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
-                                  <Name value="guaranteeRpt" />
-                                  <Panel.Height value="#" />
-                                  <Panel.Width value="100%" />
-                                  <Content>
-                                    <Panel>
-                                      <Name value="panel5" />
-                                      <Orientation value="Vertical" />
-                                      <Children>
-                                        <TextBox>
-                                          <Name value="otherGuaranteeReference_txt" />
-                                          <CaptionPosition value="Top" />
-                                          <CaptionVAlign value="Middle" />
-                                          <Panel.Height value="#" />
-                                          <Panel.Width value="100%" />
-                                          <Bindings>
-                                            <Binding SourceProperty="Data" Expression="otherGuaranteeReference" />
-                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="otherGuaranteeReference.isRequired()" />
-                                            <Binding SourceProperty="Caption" Expression="otherGuaranteeReference.caption()" />
-                                          </Bindings>
-                                          <CssClass>
-                                            <CssClassConditional>
-                                              <ClassName value="{theme}-textbox" />
-                                              <IsThemedStyle value="True" />
-                                            </CssClassConditional>
-                                          </CssClass>
-                                        </TextBox>
-                                        <GroupBox>
-                                          <Name value="guaranteeReference_grp" />
-                                          <Caption value="Guarantee reference" />
-                                          <Panel.Height value="#" />
-                                          <Panel.Width value="100%" />
-                                          <Content>
-                                            <Panel>
-                                              <Name value="guaranteeReferenceRpt_pnl" />
-                                              <Orientation value="Vertical" />
-                                              <Children>
-                                                <PagingRepeaterCtrl identity="PagingRepeaterCtrl.280e5bd891d54eda9e7c2bfaaf9e4af4">
-                                                  <Name value="guaranteeReferenceCtrl" />
-                                                  <AllowAdd value="True" />
-                                                  <AllowRemove value="True" />
-                                                  <Panel.Height value="#" />
-                                                  <Panel.Width value="*" />
-                                                  <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="GuaranteeReference" />
-                                                    <Binding SourceProperty="Index" Expression="form.modelState._index_guaranteeReference" />
-                                                  </Bindings>
-                                                </PagingRepeaterCtrl>
-                                                <PagingRepeater identity="pagingRepeater.36d02d015fb0460b9372e4a46959c4bf">
-                                                  <Name value="guaranteeReferenceRpt" />
-                                                  <Panel.Height value="#" />
-                                                  <Panel.Width value="*" />
-                                                  <Content>
-                                                    <Panel>
-                                                      <Name value="panel6" />
-                                                      <Orientation value="Vertical" />
-                                                      <Children>
-                                                        <TextBox>
-                                                          <Name value="GRN_txt" />
-                                                          <CaptionPosition value="Top" />
-                                                          <CaptionVAlign value="Middle" />
-                                                          <Panel.Height value="#" />
-                                                          <Panel.Width value="50%" />
-                                                          <Bindings>
-                                                            <Binding SourceProperty="Data" Expression="GRN" />
-                                                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="GRN.isRequired()" />
-                                                            <Binding SourceProperty="Caption" Expression="GRN.caption()" />
-                                                          </Bindings>
-                                                          <CssClass>
-                                                            <CssClassConditional>
-                                                              <ClassName value="{theme}-textbox" />
-                                                              <IsThemedStyle value="True" />
-                                                            </CssClassConditional>
-                                                          </CssClass>
-                                                        </TextBox>
-                                                      </Children>
-                                                      <CssClass>
-                                                        <CssClassConditional>
-                                                          <ClassName value="{theme}-panel" />
-                                                          <IsThemedStyle value="True" />
-                                                        </CssClassConditional>
-                                                      </CssClass>
-                                                    </Panel>
-                                                  </Content>
-                                                  <Bindings>
-                                                    <Binding SourceProperty="Data" Expression="GuaranteeReference" />
-                                                    <Binding SourceProperty="Index" Expression="form.modelState._index_guaranteeReference" />
-                                                  </Bindings>
-                                                </PagingRepeater>
-                                              </Children>
-                                              <CssClass>
-                                                <CssClassConditional>
-                                                  <ClassName value="{theme}-panel" />
-                                                  <IsThemedStyle value="True" />
-                                                </CssClassConditional>
-                                              </CssClass>
-                                            </Panel>
-                                          </Content>
-                                          <CssClass>
-                                            <CssClassConditional>
-                                              <ClassName value="{theme}-groupbox" />
-                                              <IsThemedStyle value="True" />
-                                            </CssClassConditional>
-                                          </CssClass>
-                                        </GroupBox>
-                                      </Children>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-panel" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </Panel>
-                                  </Content>
-                                  <Bindings>
-                                    <Binding SourceProperty="Data" Expression="model.Guarantee" />
-                                    <Binding SourceProperty="Index" Expression="modelState._index_guarantee" />
-                                  </Bindings>
-                                </PagingRepeater>
-                              </Children>
-                              <CssClass>
-                                <CssClassConditional>
-                                  <ClassName value="{theme}-panel" />
-                                  <IsThemedStyle value="True" />
-                                </CssClassConditional>
-                              </CssClass>
-                            </Panel>
-                          </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.CustomsOfficeOfDeparture" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
                               <ClassName value="{theme}-groupbox" />
@@ -534,7 +619,6 @@
                       <Children>
                         <GroupBox>
                           <Name value="holderOfTheTransitProcedure_grp" />
-                          <Caption value="Holder of the transit procedure" />
                           <Panel.Height value="#" />
                           <Panel.HorizontalAlignment value="Center" />
                           <Panel.Width value="100%" />
@@ -677,7 +761,7 @@
                                       <DisplayMember value="Code" />
                                       <Panel.Height value="#" />
                                       <Panel.Width value="15%" />
-                                      <ReferenceList reference="+GlobalApiObjects.CountryCodesWithAddress" />
+                                      <ReferenceList reference="+GlobalApiObjects.CountryCodesForAddress" />
                                       <Bindings>
                                         <Binding SourceProperty="Data" Expression="model.HolderOfTheTransitProcedure.Address.country" />
                                         <Binding SourceProperty="Caption" Expression="model.HolderOfTheTransitProcedure.Address.country.caption()" />
@@ -707,6 +791,9 @@
                               </CssClass>
                             </Panel>
                           </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.HolderOfTheTransitProcedure" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
                               <ClassName value="{theme}-groupbox" />
@@ -730,7 +817,6 @@
                       <Children>
                         <GroupBox>
                           <Name value="consignment_grp" />
-                          <Caption value="Consignment" />
                           <Panel.Height value="#" />
                           <Panel.HorizontalAlignment value="Center" />
                           <Panel.Width value="100%" />
@@ -745,24 +831,6 @@
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Children>
-                                    <TextBox>
-                                      <Name value="textBox10" />
-                                      <CaptionPosition value="Top" />
-                                      <CaptionVAlign value="Middle" />
-                                      <Panel.Height value="#" />
-                                      <Panel.Width value="50%" />
-                                      <Bindings>
-                                        <Binding SourceProperty="Data" Expression="model.Consignment.goodsItemNumber" />
-                                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="model.Consignment.goodsItemNumber.isRequired()" />
-                                        <Binding SourceProperty="Caption" Expression="model.Consignment.goodsItemNumber.caption()" />
-                                      </Bindings>
-                                      <CssClass>
-                                        <CssClassConditional>
-                                          <ClassName value="{theme}-textbox" />
-                                          <IsThemedStyle value="True" />
-                                        </CssClassConditional>
-                                      </CssClass>
-                                    </TextBox>
                                     <TextBox>
                                       <Name value="textBox11" />
                                       <CaptionPosition value="Top" />
@@ -791,12 +859,11 @@
                                 </Panel>
                                 <GroupBox>
                                   <Name value="consignor_grp" />
-                                  <Caption value="Consignor" />
                                   <Panel.Height value="#" />
                                   <Panel.Width value="*" />
                                   <Content>
                                     <Panel>
-                                      <Name value="panel10" />
+                                      <Name value="panel101" />
                                       <Orientation value="Vertical" />
                                       <Children>
                                         <Panel>
@@ -915,7 +982,7 @@
                                               <DisplayMember value="Code" />
                                               <Panel.Height value="#" />
                                               <Panel.Width value="15%" />
-                                              <ReferenceList reference="+GlobalApiObjects.CountryCodesWithAddress" />
+                                              <ReferenceList reference="+GlobalApiObjects.CountryCodesForAddress" />
                                               <Bindings>
                                                 <Binding SourceProperty="Data" Expression="model.Consignment.Consignor.Address.country" />
                                                 <Binding SourceProperty="Caption" Expression="model.Consignment.Consignor.Address.country.caption()" />
@@ -945,6 +1012,9 @@
                                       </CssClass>
                                     </Panel>
                                   </Content>
+                                  <Bindings>
+                                    <Binding SourceProperty="Caption" Expression="localized.Consignor" />
+                                  </Bindings>
                                   <CssClass>
                                     <CssClassConditional>
                                       <ClassName value="{theme}-groupbox" />
@@ -961,6 +1031,9 @@
                               </CssClass>
                             </Panel>
                           </Content>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Consignment" />
+                          </Bindings>
                           <CssClass>
                             <CssClassConditional>
                               <ClassName value="{theme}-groupbox" />
@@ -993,6 +1066,10 @@
                   <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="{theme}-header-smaller" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
               </CssClass>
             </Panel>
           </Children>
@@ -1018,15 +1095,29 @@
         <Complex>
           <Name value="model" />
           <Caption value="Model" />
+          <IsRequired value="True" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.Model" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
-              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBFallbackRegistration" />
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBFallbackDestination" />
             </Include>
           </Children>
         </Complex>
         <Complex>
           <Name value="modelState" />
           <Caption value="Model state" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="_index_guarantee" />
@@ -1036,6 +1127,9 @@
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="_index_guaranteeReference" />
@@ -1045,6 +1139,9 @@
                   <BaseType value="Integer" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
@@ -1056,6 +1153,9 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="inputOriginalDocument" />
@@ -1064,10 +1164,23 @@
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.OriginalDocument" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Complex>
           <Name value="auxiliaryVariables" />
           <Caption value="Auxiliary variables" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="_isHolderOfTheTransitAddressPostcodeBased" />
@@ -1077,10 +1190,37 @@
                   <BaseType value="Bool" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
             <Attribute>
               <Name value="_isConsignorAddressPostcodeBased" />
               <Caption value="_ is consignor address postcode based" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="Bool" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="_decisiveDate" />
+              <Caption value="_ decisive date" />
+              <DeclaredType>
+                <AttributeType>
+                  <BaseType value="DateTime" />
+                </AttributeType>
+              </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
+            </Attribute>
+            <Attribute>
+              <Name value="_isValidationSummaryVisible" />
+              <Caption value="_ is validation summary visible" />
               <DeclaredType>
                 <AttributeType>
                   <BaseType value="Bool" />
@@ -1092,10 +1232,23 @@
         <Complex>
           <Name value="navTree" />
           <Caption value="Nav tree" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Collection>
               <Name value="HouseConsignment" />
               <Caption value="House consignment" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.HouseConsignment" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="hcIndex" />
@@ -1105,10 +1258,23 @@
                       <BaseType value="Integer" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData />
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Collection>
                   <Name value="ConsignmentItem" />
                   <Caption value="Consignment item" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.ConsignmentItem" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Attribute>
                       <Name value="ciIndex" />
@@ -1118,16 +1284,22 @@
                           <BaseType value="Integer" />
                         </AttributeType>
                       </DeclaredType>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData />
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Attribute>
                     <Computed>
                       <Name value="_caption" />
                       <Caption value="_ caption" />
                       <Expression IsValid="True">
-                        <ExpressionText><![CDATA["Item " + tostring(ciIndex)]]></ExpressionText>
+                        <ExpressionText><![CDATA[StringFormat("Item {0}", tostring(ciIndex))]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </Expression>
+                      <PropertyLocalizationData.PropertyLocalizations>
+                        <PropertyLocalizationData />
+                      </PropertyLocalizationData.PropertyLocalizations>
                     </Computed>
                   </Children>
                 </Collection>
@@ -1135,11 +1307,14 @@
                   <Name value="_caption" />
                   <Caption value="_ caption" />
                   <Expression IsValid="True">
-                    <ExpressionText><![CDATA["House consignment " + tostring(hcIndex)]]></ExpressionText>
+                    <ExpressionText><![CDATA[StringFormat("House consignment {0}", tostring(hcIndex))]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
                   </Expression>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData />
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Computed>
               </Children>
             </Collection>
@@ -1151,6 +1326,9 @@
                   <BaseType value="Bool" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
@@ -1162,7 +1340,45 @@
               <BaseType value="Integer" />
             </AttributeType>
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.SequenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
+        <Attribute>
+          <Name value="inputOriginalDocumentState" />
+          <Caption value="Input original document state" />
+          <DataContextParameter.IsInput value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.InputOriginalDocumentState" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.COOfDestination]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
       </Children>
       <Modifiers>
         <Modifier>
@@ -1178,6 +1394,9 @@
                   <BaseType value="Bool" />
                 </ResultType>
               </Expression>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Computed>
           </Children>
         </Modifier>
@@ -1197,28 +1416,195 @@
             <ActionEvent ReferencedAction="+UiParts.FallbackRegistration.handler_modifier_254DA394_country_OnUserChange" />
           </OnUserChange>
         </Modifier>
+        <Modifier>
+          <Name value="modifier_7D9B0A90_name" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.HolderOfTheTransitProcedure.name" />
+          <Validators>
+            <Validator Name="E1104">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.Model.HolderOfTheTransitProcedure.name.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(form.Model.HolderOfTheTransitProcedure.name) < 36)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_5941B12E_streetAndNumber" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.HolderOfTheTransitProcedure.Address.streetAndNumber" />
+          <Validators>
+            <Validator Name="E1104">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.Model.HolderOfTheTransitProcedure.Address.streetAndNumber.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(this.streetAndNumber) < 36)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_C92E21ED_name" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.Consignment.Consignor.name" />
+          <Validators>
+            <Validator Name="E1104">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.Model.Consignment.Consignor.name.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(this.name) < 36)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_A476A34B_streetAndNumber" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.Consignment.Consignor.Address.streetAndNumber" />
+          <Validators>
+            <Validator Name="E1104">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1104"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.Model.HolderOfTheTransitProcedure.Address.streetAndNumber.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(this.streetAndNumber) < 36)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_F4426D2A_postcode" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.HolderOfTheTransitProcedure.Address.postcode" />
+          <Validators>
+            <Validator Name="E1102">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1102"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.model.HolderOfTheTransitProcedure.Address.postcode.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(this.postcode) < 9)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0505">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0505"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.auxiliaryVariables._isHolderOfTheTransitAddressPostcodeBased ? form.model.HolderOfTheTransitProcedure.Address.postcode.hasValue() : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
+        <Modifier>
+          <Name value="modifier_414D6947_postcode" />
+          <ShowAsChanges value="True" />
+          <SourcePath value="model.Consignment.Consignor.Address.postcode" />
+          <Validators>
+            <Validator Name="E1102">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["E1102"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.model.Consignment.Consignor.Address.postcode.hasValue() ? 
+isTrue(
+(form.auxiliaryVariables._decisiveDate <= globals.serverConfig.TPendDate) AND
+(length(this.postcode) < 9)
+) : true]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+            <Validator Name="C0505">
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA["C0505"]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[form.auxiliaryVariables._isConsignorAddressPostcodeBased = form.model.Consignment.Consignor.Address.postcode.hasValue()]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Modifier>
       </Modifiers>
     </DataContext>
   </DataContext>
   <OnCreate>
-    <ActionEvent ReferencedAction="~handler_FallbackRegistration_OnCreate" />
+    <ActionEvent ReferencedAction="~init" />
   </OnCreate>
   <Actions>
     <ActionBlock>
-      <Name value="handler_FallbackRegistration_OnCreate" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.actions.init()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.actions.setUrlDeepLink()
-form.actions.initNavigationTree()
+        <Script><![CDATA[form.actions.initNavigationTree()
 form.actions.loadCodelists()
 form.actions.loadVariables()]]></Script>
       </ActionLangBody>
@@ -1229,7 +1615,7 @@ form.actions.loadVariables()]]></Script>
     <ActionBlock>
       <Name value="loadCodelists" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[apiobjects.CountryCodesWithAddress.startLoadingData(getDateTime())
+        <Script><![CDATA[apiobjects.CountryCodesForAddress.startLoadingData(getDateTime())
 apiobjects.CountryAddressPostcodeBased.startLoadingData(getDateTime())]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1243,8 +1629,15 @@ apiobjects.CountryAddressPostcodeBased.startLoadingData(getDateTime())]]></Scrip
 	form.model.TransitOperation.MRN = form.inputMRN
 endif
 
+if form.inputOriginalDocument.hasValue() then
+	form.model.FallbackDestination.originalDocument = form.inputOriginalDocument
+endif
+
+form.auxiliaryVariables._decisiveDate = getDateTime()
+form.auxiliaryVariables._isValidationSummaryVisible = false
 form.actions.initHolderAddressPostcodeBased()
-form.actions.initConsignorAddressPostcodeBased()]]></Script>
+form.actions.initConsignorAddressPostcodeBased()
+form.model.setTouched(false)]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1256,9 +1649,9 @@ form.actions.initConsignorAddressPostcodeBased()]]></Script>
         <Script><![CDATA[if form.model.HolderOfTheTransitProcedure.Address.country.hasValue() then
 	var postcodeBasedCountry = CountryAddressPostcodeBased.getItemByStringColumnAsync("Code", form.model.HolderOfTheTransitProcedure.Address.country.Code, defaultDate(), true)
 	if postcodeBasedCountry.isFound() then
-		form.auxiliaryVariables._isHolderOfTheTransitAddressPostcodeBased = false
-	else
 		form.auxiliaryVariables._isHolderOfTheTransitAddressPostcodeBased = true
+	else
+		form.auxiliaryVariables._isHolderOfTheTransitAddressPostcodeBased = false
 	endif
 else
 	form.auxiliaryVariables._isHolderOfTheTransitAddressPostcodeBased = false
@@ -1274,7 +1667,6 @@ endif]]></Script>
       <ActionLangBody IsValid="True">
         <Script><![CDATA[if params.data.isTouched() then
 	form.actions.initHolderAddressPostcodeBased()
-	system.console(form.model.HolderOfTheTransitProcedure.Address.country.Code)
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1315,8 +1707,7 @@ endif]]></Script>
       <Name value="action1" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.model.clear()
-navigation.main.DecList.go()]]></Script>
+        <Script><![CDATA[navigation.main.DecList.withInputNavTree("isWaitingForPresentationActive").go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1326,14 +1717,22 @@ navigation.main.DecList.go()]]></Script>
       <Name value="handler_save_btn_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var request = form.model.toJson(true)
-var response = apiobjects.CIC.postAsync("FBFallbackDestination", request)
+        <Script><![CDATA[var clientValidationErrorsCount = form.model.validationErrorsCount()
 
-if response.isError() then
-	system.console("Error received")
+if clientValidationErrorsCount = 0 then
+
+	var messageType = "FBFallbackDestination"
+	var requestJsonString = form.model.toJson(true)
+	
+	form.auxiliaryVariables._isValidationSummaryVisible = actions.sendMessage(messageType, requestJsonString)
+
+	if isFalse(form.auxiliaryVariables._isValidationSummaryVisible) then
+		navigation.main.DecList.withInputNavTree("isGoodsReleased").go()
+	endif
 else
-	system.console("No error received")
-	navigation.main.DecList.go()
+	//Show validation summary
+	form.auxiliaryVariables._isValidationSummaryVisible = true
+	
 endif]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -1356,9 +1755,6 @@ endif]]></Script>
       <Name value="initNavigationTree" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[form.apiobjects.navigationTreeController.beginSetup("navTree", defaultString())
-form.navTree.isDecListActive = false
-form.apiobjects.navigationTreeController.addNode("DecList", "Back")
-form.navTree.isDecListActive = false
 form.apiobjects.navigationTreeController.finishSetup()
 form.navTree.isDecListActive = false
 form.actions.initNavTreeFocus()]]></Script>
@@ -1377,11 +1773,31 @@ form.actions.initNavTreeFocus()]]></Script>
       </DataContext>
     </ActionBlock>
     <ActionBlock>
-      <Name value="setUrlDeepLink" />
+      <Name value="handler_validate_btn_OnClick" />
+      <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[var url = apiobjects.urlRouter.findFormUrl(navigation.main.FallbackRegistration.fullName)
+        <Script><![CDATA[apiobjects.pageApi.scrollTo("HeaderPnl", defaultString())
 
-url.updatePageUrl()]]></Script>
+/* Validators panels display toggler */
+var isValidatorVisible = form.auxiliaryVariables._isValidationSummaryVisible
+
+if isTrue(isValidatorVisible) then
+	form.auxiliaryVariables._isValidationSummaryVisible = false
+else
+	form.auxiliaryVariables._isValidationSummaryVisible = true	
+endif
+
+]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_productName_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -1392,5 +1808,189 @@ url.updatePageUrl()]]></Script>
     <NavigationTreeController identity="NavigationTree.b87dd9f990504f86a481d689d499f644">
       <Name value="navigationTreeController" />
     </NavigationTreeController>
+    <ErrorPointerMap identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+      <Name value="errorPointerMap1" />
+      <items>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$FallbackProcedureAtDestination}" />
+          <pointerPath value="FallbackDestination" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$FallbackProcedureAtDestination} &gt; ${L_Model$$OriginalDocumentNumber}" />
+          <pointerPath value="FallbackDestination/originalDocument" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation}" />
+          <pointerPath value="TransitOperation" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$TransitOperation} &gt; ${MRN}" />
+          <pointerPath value="TransitOperation/MRN" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture}" />
+          <pointerPath value="CustomsOfficeOfDeparture" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${ReferenceNumber}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${Description}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${Valid from}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${Valid to}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${_ description}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$CustomsOfficeOfDeparture} &gt; ${L_Model$$ReferenceNumber} &gt; ${Description language}" />
+          <pointerPath value="CustomsOfficeOfDeparture/referenceNumber/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure}" />
+          <pointerPath value="HolderOfTheTransitProcedure" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$IdentificationNumber}" />
+          <pointerPath value="HolderOfTheTransitProcedure/identificationNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$TIRHolderIdentificationNumber}" />
+          <pointerPath value="HolderOfTheTransitProcedure/TIRHolderIdentificationNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Name}" />
+          <pointerPath value="HolderOfTheTransitProcedure/name" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$StreetAndNumber}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/streetAndNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Postcode}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/postcode" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$City}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/city" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${CountryCode}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Description}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Valid from}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Valid to}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Description language}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$HolderOfTheTransitProcedure} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${_ description}" />
+          <pointerPath value="HolderOfTheTransitProcedure/Address/country/_description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment}" />
+          <pointerPath value="Consignment" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$GoodsItemNumber}" />
+          <pointerPath value="Consignment/goodsItemNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$GrossMass}" />
+          <pointerPath value="Consignment/grossMass" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor}" />
+          <pointerPath value="Consignment/Consignor" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$IdentificationNumber}" />
+          <pointerPath value="Consignment/Consignor/identificationNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Name}" />
+          <pointerPath value="Consignment/Consignor/name" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address}" />
+          <pointerPath value="Consignment/Consignor/Address" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$StreetAndNumber}" />
+          <pointerPath value="Consignment/Consignor/Address/streetAndNumber" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Postcode}" />
+          <pointerPath value="Consignment/Consignor/Address/postcode" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$City}" />
+          <pointerPath value="Consignment/Consignor/Address/city" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country}" />
+          <pointerPath value="Consignment/Consignor/Address/country" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${CountryCode}" />
+          <pointerPath value="Consignment/Consignor/Address/country/Code" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Description}" />
+          <pointerPath value="Consignment/Consignor/Address/country/Description" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Valid from}" />
+          <pointerPath value="Consignment/Consignor/Address/country/ValidFrom" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Valid to}" />
+          <pointerPath value="Consignment/Consignor/Address/country/ValidTo" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${Description language}" />
+          <pointerPath value="Consignment/Consignor/Address/country/Lng" />
+        </ErrorPointerMapItem>
+        <ErrorPointerMapItem identity="ErrorPointerMap.69320151074d4125908af3869d7556e1">
+          <captionMask value="${L_Model$$Consignment} &gt; ${L_Model$$Consignor} &gt; ${L_Model$$Address} &gt; ${L_Model$$Country} &gt; ${_ description}" />
+          <pointerPath value="Consignment/Consignor/Address/country/_description" />
+        </ErrorPointerMapItem>
+      </items>
+    </ErrorPointerMap>
   </ApiObjects>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.FallbackRegistration" />
+  </Bindings>
 </Form>

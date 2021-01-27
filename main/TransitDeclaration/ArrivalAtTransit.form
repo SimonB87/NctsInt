@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="ArrivalAtTransit" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="inContentBusyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="BodyPnl" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label_mode" />
+                      <Heading value="h5" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="100%" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.Arrival" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-header" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panelSend_parent" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label_co" />
+                      <Heading value="h5" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="100%" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.customsOffice" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="mrnField_pnl" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <TextBox>
+                      <Name value="textBox2" />
+                      <Caption value="MRN" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.model.TransitOperation.MRN" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.model.TransitOperation.MRN.isRequired()" />
+                        <Binding SourceProperty="IsEnabled" Expression="NOT form._rejectionFieldsVisible" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-textbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </TextBox>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="form._rejectionFieldsVisible" />
+                  </Bindings>
+                  <Children>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="labeledText1" />
+                      <CaptionPosition value="Top" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.ArrivalIsNotAllowed" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                    <Panel>
+                      <Name value="panel4" />
+                      <Orientation value="Vertical" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Panel>
+                          <Name value="panel5" />
+                          <Orientation value="Horizontal" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Children>
+                            <ReferenceCombo>
+                              <Name value="referenceCombo1" />
+                              <CaptionPosition value="Top" />
+                              <DisplayMember value="_description" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="50%" />
+                              <ReferenceList reference="+GlobalApiObjects.AarRejectionReason" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="ArrivalNoData.TransitOperation.requestRejectionReasonCode" />
+                                <Binding SourceProperty="Caption" Expression="ArrivalNoData.TransitOperation.requestRejectionReasonCode.caption()" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="ArrivalNoData.TransitOperation.requestRejectionReasonCode.isRequired()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-referencecombo" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </ReferenceCombo>
+                            <DatePicker>
+                              <Name value="datePicker1" />
+                              <CaptionPosition value="Top" />
+                              <IsEnabled value="False" />
+                              <Panel.Height value="#" />
+                              <Panel.Width value="50%" />
+                              <Bindings>
+                                <Binding SourceProperty="Data" Expression="ArrivalNoData.TransitOperation.requestRejectionDateAndTime" />
+                                <Binding SourceProperty="IsRequiredMarkVisible" Expression="ArrivalNoData.TransitOperation.requestRejectionDateAndTime.isRequired()" />
+                                <Binding SourceProperty="Caption" Expression="ArrivalNoData.TransitOperation.requestRejectionDateAndTime.caption()" />
+                              </Bindings>
+                              <CssClass>
+                                <CssClassConditional>
+                                  <ClassName value="{theme}-datepicker" />
+                                  <IsThemedStyle value="True" />
+                                </CssClassConditional>
+                              </CssClass>
+                            </DatePicker>
+                          </Children>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-panel" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Panel>
+                        <TextBox>
+                          <Name value="textBox1" />
+                          <CaptionPosition value="Top" />
+                          <InputType value="Multiline" />
+                          <IsEnabled value="False" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="*" />
+                          <Bindings>
+                            <Binding SourceProperty="Data" Expression="ArrivalNoData.TransitOperation.rejectionReason" />
+                            <Binding SourceProperty="IsRequiredMarkVisible" Expression="ArrivalNoData.TransitOperation.rejectionReason.isRequired()" />
+                            <Binding SourceProperty="Caption" Expression="ArrivalNoData.TransitOperation.rejectionReason.caption()" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-textbox" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </TextBox>
+                        <Button>
+                          <Name value="btn_Clear" />
+                          <Panel.Height value="#" />
+                          <Panel.HorizontalAlignment value="Center" />
+                          <Panel.Width value="20%" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_btn_Clear_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Clear" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-alternate" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="buttons_pnl" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Button>
+                      <Name value="btn_Send" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btn_Send_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.Send" />
+                        <Binding SourceProperty="IsEnabled" Expression="NOT form._rejectionFieldsVisible" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="btn_Close" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btn_Close_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.Close" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-secondary" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-buttons" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-wrapper" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="translate" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="isLoading" Expression="form.isLoading" />
+          </Bindings>
+        </InContentBusyIndicator>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="modal" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="model" />
+          <Caption value="Model" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBTransitDataRequest_SF" />
+            </Include>
+          </Children>
+        </Complex>
+        <Complex>
+          <Name value="ArrivalNoData" />
+          <Caption value="Arrival no data" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.BFArrivalNoData_SF" />
+            </Include>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="_rejectionFieldsVisible" />
+          <Caption value="_ rejection fields visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.COOfTransit]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="isLoading" />
+          <Caption value="Is loading" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~init" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="init" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isLoading = true
+apiobjects.AarRejectionReason.loadDataAsync(getDateTime())
+form._rejectionFieldsVisible = false
+form.isLoading = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="sendFBTransitDataRequest" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[//Todo - docasne plneni CO Transit
+form.model.CustomsOfficeOfTransit.fromJson("{\"referenceNumber\":{\"Code\":\"ME123456\",\"Description\":\"Carinarnica Podgorica\",\"ValidFrom\":\"2019-01-01T00:00:00.000\",\"ValidTo\":\"2099-12-31T00:00:00.000\"}}")
+
+var response = apiobjects.CIC.postAsync("FBTransitDataRequest", form.model.toJson(true))
+
+if response.isError() then
+	apiobjects.notificationsCtrl.addError(localized.FailedToLoadData)
+	//Data load failed -> go to Declist
+	form.isLoading = false
+	navigation.close()
+else
+	var responseMessageType = response.getMessageType()
+	if isTrue(responseMessageType = "BFDataResponse") then
+		var res = response.getJsonString()
+		form.isLoading = false	
+		navigation.close(res)
+	else
+		if isTrue(responseMessageType = "BFArrivalNoData") then
+			var rejection = response.getJsonString()
+			form.ArrivalNoData.fromJson(rejection)
+			form._rejectionFieldsVisible = true
+			form.isLoading = false
+		endif
+	endif
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_Send_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isLoading = true
+
+if form.model.TransitOperation.MRN.hasValue() then
+	form.actions.sendFBTransitDataRequest()
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_Close_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.close("Close")]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_Clear_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if isTrue(form._rejectionFieldsVisible) then
+	form.Model.clear()
+	form.ArrivalNoData.clear()
+	form._rejectionFieldsVisible = false
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.ArrivalAtCOOfTransit" />
+  </Bindings>
+</Form>

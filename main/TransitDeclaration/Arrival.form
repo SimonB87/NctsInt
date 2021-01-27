@@ -2,7 +2,6 @@
 <?data-format version="0.400"?>
 <Form>
   <Name value="Arrival" />
-  <Caption value="Arrival" />
   <Content>
     <Panel>
       <Name value="panel1" />
@@ -10,54 +9,37 @@
       <Panel.Height value="#" />
       <Panel.Width value="*" />
       <Children>
-        <Panel>
-          <Name value="ControlPnl" />
-          <Orientation value="Horizontal" />
+        <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="inContentBusyIndicator1" />
           <Panel.Height value="#" />
           <Panel.Width value="*" />
-          <Children>
+          <Content>
             <Panel>
-              <Name value="ControlPnlHolder" />
-              <Orientation value="Horizontal" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
+              <Name value="BodyPnl" />
+              <Orientation value="Vertical" />
               <Children>
                 <Panel>
-                  <Name value="panel83" />
+                  <Name value="panel4" />
                   <Orientation value="Horizontal" />
                   <Panel.Height value="#" />
-                  <Panel.Width value="10%" />
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-                <Panel>
-                  <Name value="panel89" />
-                  <Orientation value="Horizontal" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="90%" />
+                  <Panel.Width value="*" />
                   <Children>
-                    <Button>
-                      <Name value="goBack_btn" />
-                      <Caption value="Go back" />
+                    <Label>
+                      <Name value="label_mode" />
+                      <Heading value="h5" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
-                      <OnClick>
-                        <ActionEvent ReferencedAction="~handler_button1_OnClick" />
-                      </OnClick>
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="100%" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.Arrival" />
+                      </Bindings>
                       <CssClass>
                         <CssClassConditional>
-                          <ClassName value="{theme}-button" />
+                          <ClassName value="{theme}-label" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="btn-secondary" />
-                        </CssClassConditional>
                       </CssClass>
-                    </Button>
+                    </Label>
                   </Children>
                   <CssClass>
                     <CssClassConditional>
@@ -65,62 +47,43 @@
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
                     <CssClassConditional>
-                      <ClassName value="flright" />
+                      <ClassName value="modal-header" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
-              </Children>
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-panel" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="{theme}-nav-bar-controls" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Panel>
-            <Panel>
-              <Name value="ControlPnlSpace" />
-              <Orientation value="Horizontal" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <CssClass>
-                <CssClassConditional>
-                  <ClassName value="{theme}-panel" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-                <CssClassConditional>
-                  <ClassName value="{theme}-nav-bar-space" />
-                  <IsThemedStyle value="True" />
-                </CssClassConditional>
-              </CssClass>
-            </Panel>
-          </Children>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-panel" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-            <CssClassConditional>
-              <ClassName value="{theme}-nav-bar" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-          </CssClass>
-        </Panel>
-        <Panel>
-          <Name value="panel2" />
-          <Orientation value="Horizontal" />
-          <Panel.Height value="#" />
-          <Panel.Width value="*" />
-          <Children>
-            <Panel>
-              <Name value="panelSend_parent" />
-              <Orientation value="Vertical" />
-              <Panel.Height value="#" />
-              <Panel.Width value="*" />
-              <Children>
+                <Panel>
+                  <Name value="panel3" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label_co" />
+                      <Heading value="h5" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="100%" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.customsOffice" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
                 <Panel>
                   <Name value="mrnField_pnl" />
                   <Orientation value="Horizontal" />
@@ -129,14 +92,14 @@
                   <Children>
                     <TextBox>
                       <Name value="textBox2" />
-                      <Caption value="MRN" />
-                      <CaptionVAlign value="Middle" />
+                      <CaptionPosition value="Top" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+                      <Panel.Width value="50%" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="form.model.TransitOperation.MRN" />
                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.model.TransitOperation.MRN.isRequired()" />
                         <Binding SourceProperty="IsEnabled" Expression="not form._rejectionFieldsVisible" />
+                        <Binding SourceProperty="Caption" Expression="form.model.TransitOperation.MRN.caption()" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -145,30 +108,16 @@
                         </CssClassConditional>
                       </CssClass>
                     </TextBox>
-                  </Children>
-                  <CssClass>
-                    <CssClassConditional>
-                      <ClassName value="{theme}-panel" />
-                      <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                  </CssClass>
-                </Panel>
-                <Panel>
-                  <Name value="tirCarnetField_pnl" />
-                  <Orientation value="Horizontal" />
-                  <Panel.Height value="#" />
-                  <Panel.Width value="*" />
-                  <Children>
                     <TextBox>
                       <Name value="textBox3" />
-                      <Caption value="TIR Carnet" />
-                      <CaptionVAlign value="Middle" />
+                      <CaptionPosition value="Top" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+                      <Panel.Width value="50%" />
                       <Bindings>
                         <Binding SourceProperty="Data" Expression="form.model.TransitOperation.TIRCarnetNumber" />
                         <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.model.TransitOperation.TIRCarnetNumber.isRequired()" />
                         <Binding SourceProperty="IsEnabled" Expression="not form._rejectionFieldsVisible" />
+                        <Binding SourceProperty="Caption" Expression="localized.TIRCarnet" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -196,13 +145,14 @@
                   <Children>
                     <TextBox>
                       <Name value="rejectionReasonCode_txt" />
-                      <Caption value="Rejection code" />
+                      <CaptionPosition value="Top" />
                       <IsEnabled value="False" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+                      <Panel.Width value="*" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="form.responseNoData.requestRejectionReasonCode.Code" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.responseNoData.requestRejectionReasonCode.Code.isRequired()" />
+                        <Binding SourceProperty="Data" Expression="form.ArrivalNoData.TransitOperation.requestRejectionReasonCode.Code" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.ArrivalNoData.TransitOperation.requestRejectionReasonCode.Code.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="localized.RejectionCode" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -217,11 +167,11 @@
                       <InputType value="Multiline" />
                       <IsEnabled value="False" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="300px" />
+                      <Panel.Width value="*" />
                       <Bindings>
-                        <Binding SourceProperty="Data" Expression="form.responseNoData.rejectionReason" />
-                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.responseNoData.rejectionReason.isRequired()" />
-                        <Binding SourceProperty="Caption" Expression="form.responseNoData.rejectionReason.caption()" />
+                        <Binding SourceProperty="Data" Expression="form.ArrivalNoData.TransitOperation.rejectionReason" />
+                        <Binding SourceProperty="IsRequiredMarkVisible" Expression="form.ArrivalNoData.TransitOperation.rejectionReason.isRequired()" />
+                        <Binding SourceProperty="Caption" Expression="form.ArrivalNoData.TransitOperation.rejectionReason.caption()" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
@@ -245,38 +195,43 @@
                   <Panel.Width value="*" />
                   <Children>
                     <Button>
-                      <Name value="btn_Send" />
-                      <Caption value="Send" />
+                      <Name value="btn_FindTCD" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
+                      <Panel.Width value="50%" />
                       <OnClick>
                         <ActionEvent ReferencedAction="~handler_btn_Send_OnClick" />
                       </OnClick>
                       <Bindings>
                         <Binding SourceProperty="IsEnabled" Expression="not form._rejectionFieldsVisible" />
+                        <Binding SourceProperty="Caption" Expression="localized.Find" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-button" />
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
                       </CssClass>
                     </Button>
                     <Button>
-                      <Name value="btn_Clear" />
-                      <Caption value="Clear" />
+                      <Name value="btn_Close" />
                       <Panel.Height value="#" />
-                      <Panel.Width value="150px" />
+                      <Panel.Width value="50%" />
                       <OnClick>
-                        <ActionEvent ReferencedAction="~handler_btn_Clear_OnClick" />
+                        <ActionEvent ReferencedAction="~handler_btn_Close_OnClick" />
                       </OnClick>
                       <Bindings>
-                        <Binding SourceProperty="IsVisible" Expression="form._rejectionFieldsVisible" />
+                        <Binding SourceProperty="Caption" Expression="localized.Close" />
                       </Bindings>
                       <CssClass>
                         <CssClassConditional>
                           <ClassName value="{theme}-button" />
                           <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-secondary" />
                         </CssClassConditional>
                       </CssClass>
                     </Button>
@@ -286,6 +241,69 @@
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-buttons" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="panel2" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Bindings>
+                    <Binding SourceProperty="IsVisible" Expression="form._rejectionFieldsVisible" />
+                  </Bindings>
+                  <Children>
+                    <Button>
+                      <Name value="btn_Clear" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50%" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_btn_Clear_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.Clear" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-secondary" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                    <Button>
+                      <Name value="btn_sendCheckFallback" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="50%" />
+                      <OnClick>
+                        <ActionEvent ReferencedAction="~handler_sendCheckFallback_btn_OnClick" />
+                      </OnClick>
+                      <Bindings>
+                        <Binding SourceProperty="Caption" Expression="localized.TerminateInFallbackProcedure" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-button" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="btn-success" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Button>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-buttons" />
+                    </CssClassConditional>
                   </CssClass>
                 </Panel>
               </Children>
@@ -294,22 +312,19 @@
                   <ClassName value="{theme}-panel" />
                   <IsThemedStyle value="True" />
                 </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-wrapper" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="translate" />
+                </CssClassConditional>
               </CssClass>
             </Panel>
-          </Children>
-          <CssClass>
-            <CssClassConditional>
-              <ClassName value="{theme}-panel" />
-              <IsThemedStyle value="True" />
-            </CssClassConditional>
-            <CssClassConditional>
-              <ClassName value="absoluteCenter" />
-            </CssClassConditional>
-            <CssClassConditional>
-              <ClassName value="box" />
-            </CssClassConditional>
-          </CssClass>
-        </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="isLoading" Expression="form.isLoading" />
+          </Bindings>
+        </InContentBusyIndicator>
       </Children>
       <CssClass>
         <CssClassConditional>
@@ -317,8 +332,7 @@
           <IsThemedStyle value="True" />
         </CssClassConditional>
         <CssClassConditional>
-          <ClassName value="absoluteCenter" />
-          <Condition value="False" />
+          <ClassName value="modal" />
         </CssClassConditional>
       </CssClass>
     </Panel>
@@ -329,57 +343,28 @@
         <Complex>
           <Name value="model" />
           <Caption value="Model" />
+          <IsRequired value="True" />
           <Children>
-            <Complex>
-              <Name value="TransitOperation" />
-              <Caption value="Transit operation" />
-              <Children>
-                <Attribute>
-                  <Name value="MRN" />
-                  <Caption value="MRN" />
-                  <MetaType reference="/(Model.1119011d69cd45d181eaad70856a363f)+MetaTypes.MRN" />
-                </Attribute>
-                <Attribute>
-                  <Name value="TIRCarnetNumber" />
-                  <Caption value="TIR carnet number" />
-                  <MetaType reference="/(Model.1119011d69cd45d181eaad70856a363f)+MetaTypes.TIRCarnetNumberContentType" />
-                </Attribute>
-              </Children>
-            </Complex>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBArrivalDataRequest_SF" />
+            </Include>
           </Children>
         </Complex>
         <Complex>
-          <Name value="responseNoData" />
-          <Caption value="Response no data" />
+          <Name value="ArrivalNoData" />
+          <Caption value="Arrival no data" />
           <Children>
-            <Attribute>
-              <Name value="requestRejectionReasonCode1" />
-              <Caption value="Request rejection reason code 1" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Attribute>
-              <Name value="rejectionReason" />
-              <Caption value="Rejection reason" />
-              <DeclaredType>
-                <AttributeType />
-              </DeclaredType>
-            </Attribute>
-            <Reference>
-              <Name value="requestRejectionReasonCode" />
-              <Caption value="Request rejection reason code" />
-              <Children>
-                <Include>
-                  <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.AarRejectionReason" />
-                </Include>
-              </Children>
-            </Reference>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.BFArrivalNoData_SF" />
+            </Include>
           </Children>
         </Complex>
         <Complex>
           <Name value="responseData" />
           <Caption value="Response data" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="GUID" />
@@ -387,12 +372,37 @@
               <DeclaredType>
                 <AttributeType />
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData />
+              </PropertyLocalizationData.PropertyLocalizations>
             </Attribute>
           </Children>
         </Complex>
         <Attribute>
           <Name value="_rejectionFieldsVisible" />
           <Caption value="_ rejection fields visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData />
+          </PropertyLocalizationData.PropertyLocalizations>
+        </Attribute>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.COOfDestination]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="isLoading" />
+          <Caption value="Is loading" />
           <DeclaredType>
             <AttributeType>
               <BaseType value="Bool" />
@@ -407,33 +417,27 @@
   </OnCreate>
   <Actions>
     <ActionBlock>
-      <Name value="handler_button1_OnClick" />
-      <IsPrivate value="True" />
-      <ActionLangBody IsValid="True">
-        <Script><![CDATA[navigation.main.DecList.go()]]></Script>
-      </ActionLangBody>
-      <DataContext>
-        <ActionDataContext />
-      </DataContext>
-    </ActionBlock>
-    <ActionBlock>
       <Name value="sendBFArrivalDataRequest" />
       <ActionLangBody IsValid="True">
         <Script><![CDATA[var response = apiobjects.CIC.postAsync("FBArrivalDataRequest", form.model.toJson(true))
 
 if response.isError() then
-	system.console("There is an error in the response on FBArrivalDataRequest message!")
+	apiobjects.notificationsCtrl.addError(localized.FailedToLoadData)
+	//Data load failed -> go to Declist
+	form.isLoading = false
+	navigation.close()
 else
 	var responseMessageType = response.getMessageType()
 	if isTrue(responseMessageType = "BFDataResponse") then
-		var inputDataJSON = response.getJsonString()
-		var GUID = response.extractJson("GUID")		
-		navigation.main.Header.withInputDataJSON(inputDataJSON).withGUID(GUID).go(enums.declarationFormMode.arrival)
+		var res = response.getJsonString()
+		form.isLoading = false
+		navigation.close(res)
 	else
 		if isTrue(responseMessageType = "BFArrivalNoData") then
-			var rejection = response.extractJson("TransitOperation")
-			form.responseNoData.fromJson(rejection)
+			var rejection = response.getJsonString()
+			form.ArrivalNoData.fromJson(rejection)
 			form._rejectionFieldsVisible = true
+			form.isLoading = false
 		endif
 	endif
 endif]]></Script>
@@ -446,17 +450,13 @@ endif]]></Script>
       <Name value="handler_btn_Send_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+        <Script><![CDATA[form.isLoading = true
 
-if ((form.model.TransitOperation.TIRCarnetNumber.hasValue()) AND (form.model.TransitOperation.MRN.hasValue())) OR
-   ((form.model.TransitOperation.TIRCarnetNumber.isEmpty()) AND (form.model.TransitOperation.MRN.isEmpty())) then
-	// chyba NR006
-	system.console("NR006")
-else
+form.model.TransitOperation.setTouched(true)
+
+if form.model.isValid() then
 	form.actions.sendBFArrivalDataRequest()
-endif
-
-globals.busyIndicatorIsRunning = false]]></Script>
+endif]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -465,11 +465,13 @@ globals.busyIndicatorIsRunning = false]]></Script>
     <ActionBlock>
       <Name value="init" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[globals.busyIndicatorIsRunning = true
+        <Script><![CDATA[actions.userAccessViaDeeplink()
+
+form.isLoading = true
 form.apiobjects.AarRejectionReason.startLoadingData(getDateTime())
 form.actions.setUrlDeepLink()
 form._rejectionFieldsVisible = false
-globals.busyIndicatorIsRunning = false]]></Script>
+form.isLoading = false]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -479,9 +481,7 @@ globals.busyIndicatorIsRunning = false]]></Script>
       <Name value="handler_btn_Clear_OnClick" />
       <IsPrivate value="True" />
       <ActionLangBody IsValid="True">
-        <Script><![CDATA[form.model.clear()
-form.responseNoData.clear()
-
+        <Script><![CDATA[form.ArrivalNoData.clear()
 form._rejectionFieldsVisible = false]]></Script>
       </ActionLangBody>
       <DataContext>
@@ -494,6 +494,31 @@ form._rejectionFieldsVisible = false]]></Script>
         <Script><![CDATA[var url = apiobjects.urlRouter.findFormUrl(navigation.main.Arrival.fullName)
 
 url.updatePageUrl()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_sendCheckFallback_btn_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[if form.ArrivalNoData.TransitOperation.MRN.hasValue() then
+	navigation.main.CheckFallback.withInputOriginalDocument(form.ArrivalNoData.TransitOperation.MRN).go()
+	
+else
+	apiobjects.notificationsCtrl.addError(localized.MRNHasToBeSpecified)
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_btn_Close_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[navigation.close("Close")]]></Script>
       </ActionLangBody>
       <DataContext>
         <ActionDataContext />
@@ -518,4 +543,7 @@ url.updatePageUrl()]]></Script>
       </columns>
     </Codelist>
   </ApiObjects>
+  <Bindings>
+    <Binding SourceProperty="Caption" Expression="localized.Arrival" />
+  </Bindings>
 </Form>

@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="ExitStopped" />
+  <Caption value="ExitStopped" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <InContentBusyIndicator identity="busyIndicator.4a8ce8836eb04d7bbc155c7119f0193e">
+          <Name value="inContentBusyIndicator1" />
+          <Panel.Height value="#" />
+          <Panel.Width value="*" />
+          <Content>
+            <Panel>
+              <Name value="panel3" />
+              <Orientation value="Vertical" />
+              <Children>
+                <Panel>
+                  <Name value="panel11" />
+                  <Orientation value="Horizontal" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label1" />
+                      <Heading value="h5" />
+                      <Margin value="6, 6, 12, 6 px" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="localized.Exit" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="center-all" />
+                          <Condition value="False" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="modal-header" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+                <Panel>
+                  <Name value="busyIndicatorContent_pnl" />
+                  <Orientation value="Vertical" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="*" />
+                  <Children>
+                    <Label>
+                      <Name value="label_co" />
+                      <Heading value="h5" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.customsOffice" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-label" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Label>
+                    <GroupBox>
+                      <Name value="serverValidationSummary_parent" />
+                      <Caption value="Server validation summary _ parent" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Content>
+                        <ServerValidationSummary identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                          <Name value="serverValidationSummary" />
+                          <errorPointerMap reference="+UiParts.Header.errorPointerMapHeader" />
+                          <OnItemClick>
+                            <ActionEvent ReferencedAction="~handler_serverValidationSummary1_OnItemClick" />
+                          </OnItemClick>
+                          <Bindings>
+                            <Binding SourceProperty="validationErrors" Expression="globals.Errors.serverValidationErrors" />
+                          </Bindings>
+                          <columns>
+                            <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="srvPointerCol" />
+                              <columnRole value="pointer" />
+                              <columnWidth value="45%" />
+                              <propertyName value="Pointer" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.Pointer" />
+                              </Bindings>
+                            </validationSummaryColumn>
+                            <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="srvErrorTypeCol" />
+                              <columnWidth value="45%" />
+                              <propertyName value="ErrorDescription" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.ErrorType" />
+                              </Bindings>
+                            </validationSummaryColumn>
+                            <validationSummaryColumn identity="ValidationSummary.0f608ab4a81a4349b35a8398ddd72445">
+                              <Name value="srvReasonCol" />
+                              <columnWidth value="10%" />
+                              <propertyName value="Reason" />
+                              <Bindings>
+                                <Binding SourceProperty="columnCaption" Expression="localized.Reason" />
+                              </Bindings>
+                            </validationSummaryColumn>
+                          </columns>
+                        </ServerValidationSummary>
+                      </Content>
+                      <Bindings>
+                        <Binding SourceProperty="IsVisible" Expression="form.isValidationSummaryVisible" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-groupbox" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-datatable" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </GroupBox>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="lbl_MRN" />
+                      <Caption value="MRN: " />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.ExitStopped.TransitOperation.MRN" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                    <LabeledText identity="labeledText.a92a691d6915448ebf9f0b804ce6a733">
+                      <Name value="lbl_COexit" />
+                      <Panel.Height value="#" />
+                      <Panel.Width value="*" />
+                      <Bindings>
+                        <Binding SourceProperty="Data" Expression="form.ExitStopped.CustomsOfficeOfExitTransit.referenceNumber._description" />
+                        <Binding SourceProperty="Caption" Expression="form.lbl_COexit" />
+                      </Bindings>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-labeledtext" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </LabeledText>
+                    <Panel>
+                      <Name value="save_btn_parent" />
+                      <Orientation value="Horizontal" />
+                      <Panel.Height value="#" />
+                      <Panel.HorizontalAlignment value="Center" />
+                      <Panel.Width value="*" />
+                      <Children>
+                        <Button>
+                          <Name value="save_btn" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="50%" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button2_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Save" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-success" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                        <Button>
+                          <Name value="close_btn" />
+                          <Panel.Height value="#" />
+                          <Panel.Width value="50%" />
+                          <OnClick>
+                            <ActionEvent ReferencedAction="~handler_button3_OnClick" />
+                          </OnClick>
+                          <Bindings>
+                            <Binding SourceProperty="Caption" Expression="localized.Close" />
+                          </Bindings>
+                          <CssClass>
+                            <CssClassConditional>
+                              <ClassName value="{theme}-button" />
+                              <IsThemedStyle value="True" />
+                            </CssClassConditional>
+                            <CssClassConditional>
+                              <ClassName value="btn-secondary" />
+                            </CssClassConditional>
+                          </CssClass>
+                        </Button>
+                      </Children>
+                      <CssClass>
+                        <CssClassConditional>
+                          <ClassName value="{theme}-panel" />
+                          <IsThemedStyle value="True" />
+                        </CssClassConditional>
+                        <CssClassConditional>
+                          <ClassName value="modal-buttons" />
+                        </CssClassConditional>
+                      </CssClass>
+                    </Panel>
+                  </Children>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-panel" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Panel>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="modal-wrapper" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Content>
+          <Bindings>
+            <Binding SourceProperty="isLoading" Expression="form.isLoading" />
+          </Bindings>
+        </InContentBusyIndicator>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+        <CssClassConditional>
+          <ClassName value="modal" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Complex>
+          <Name value="ExitStopped" />
+          <Caption value="Exit stopped" />
+          <Children>
+            <Include>
+              <Include reference="/(Model.1119011d69cd45d181eaad70856a363f)+DataEntities.FBExitStopped_SF" />
+            </Include>
+          </Children>
+        </Complex>
+        <Attribute>
+          <Name value="isLoading" />
+          <Caption value="Is loading" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="lbl_COexit" />
+          <Caption value="Lbl _ C oexit" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.CustomsOfficeOfExitTransit + ": "]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="customsOffice" />
+          <Caption value="Customs office" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[localized.COOfExit]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Attribute>
+          <Name value="isValidationSummaryVisible" />
+          <Caption value="Is validation summary visible" />
+          <DeclaredType>
+            <AttributeType>
+              <BaseType value="Bool" />
+            </AttributeType>
+          </DeclaredType>
+        </Attribute>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <OnCreate>
+    <ActionEvent ReferencedAction="~handler_ExitStopped_OnCreate" />
+  </OnCreate>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_serverValidationSummary1_OnItemClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[/*if length(params.errorSourceForm) > 0 then
+	else if length(params.errorSourceComponent) > 0 then
+		//page.focusControl(params.errorSourceComponent, params.pointer)
+		// or only scroll to component
+		// page.scrollTo(params.errorSourceComponent, params.pointer)
+	endif
+endif
+*/]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button2_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[var clientValidationErrorsCount = form.ExitStopped.validationErrorsCount()
+
+if clientValidationErrorsCount = 0 then
+	form.isLoading = true
+	var messageType = "FBExitStopped"
+	var requestJsonString = form.ExitStopped.toJson(true)
+	
+	var Errors = actions.sendMessage(messageType, requestJsonString)
+
+	form.isLoading = false
+	
+	if isFalse(Errors) then	
+		
+		navigation.close("OK")
+	
+	else
+	
+		form.isValidationSummaryVisible = true
+		
+	endif
+else
+
+	form.ExitStopped.setTouched(TRUE)
+	
+endif]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_button3_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.ExitStopped.clear()
+var res = "cancelAction"
+navigation.close(res)]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+    <ActionBlock>
+      <Name value="handler_ExitStopped_OnCreate" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[form.isLoading = true
+form.ExitStopped.TransitOperation.MRN = form.MRN
+form.ExitStopped.CustomsOfficeOfExitTransit.referenceNumber.fromJson(globals.selectedCO.toJson())
+apiobjects.CustomsOfficeTransit.loadDataAsync(getDateTime())
+form.ExitStopped.Decision.customsOffice = form.ExitStopped.CustomsOfficeOfExitTransit.referenceNumber.Code
+form.isLoading = false]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>

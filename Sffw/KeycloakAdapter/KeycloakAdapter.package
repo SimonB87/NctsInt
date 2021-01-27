@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Package IsComponentLib="True">
+  <Identity value="KeycloakAdapter.d4ad46533a0241948e42767440c362cc" />
+  <Version value="1.3.0" />
+  <Items>
+    <ResourceItem ResourceName="keycloak.js" LinkerAction="Script" OutputFileName="keycloak.js" Src="keycloak.js" />
+    <ResourceItem ResourceName="keycloakAdapter.js" Action="None" OutputFileName="keycloakAdapter.js" Src="keycloakAdapter.js" />
+    <PackageItem Src="KeycloakAdapter.apiObjectManifest" />
+  </Items>
+</Package>

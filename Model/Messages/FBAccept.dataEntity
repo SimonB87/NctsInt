@@ -5,6 +5,16 @@
   <Caption value="FB Accept" />
   <MtsImportOptions.MTS.ID value="/FBAccept" />
   <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBAccept" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
   <Children>
     <Attribute>
       <Name value="GUID" />
@@ -14,13 +24,33 @@
       <DeclaredType>
         <AttributeType />
       </DeclaredType>
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.GUIDOfDeclaration" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
     </Attribute>
     <Complex>
       <Name value="TransitOperation" />
-      <Caption value="TRANSIT OPERATION" />
+      <Caption value="Transit Operation" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBAccept/TransitOperation" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="reducedDatasetIndicator" />
@@ -33,81 +63,30 @@
               <BaseType value="Bool" />
             </AttributeType>
           </DeclaredType>
-          <Validators>
-            <Validator Name="G0045">
-              <MtsImportOptions.MTS.ID value="G0045" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0045"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0045 The information in this Data Group/Data Item will override the information included in the CC015C (or in the latest CC013C, if any). */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
-        </Attribute>
-        <Attribute>
-          <Name value="limitDate" />
-          <Caption value="Limit date" />
-          <MtsImportOptions.MTS.ID value="/FBAccept/TransitOperation/limitDate" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <BaseType value="Date" />
-            </AttributeType>
-          </DeclaredType>
-          <Validators>
-            <Validator Name="C0840">
-              <MtsImportOptions.MTS.ID value="C0840" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0840"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0840 IF /CC015C/Authorisation/type is EQUAL to 'C521' OR /CC013C/Authorisation/type is EQUAL to 'C521'
-THEN / * /TransitOperation/limitDate = "O"
-ELSE / * /TransitOperation/limitDate = "R" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
-        </Attribute>
-        <Attribute>
-          <Name value="AcceptanceDecision" />
-          <Caption value="AcceptanceDecision" />
-          <MtsImportOptions.MTS.ID value="/FBAccept/TransitOperation/AcceptanceDecision" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <StrMaxLength value="350" />
-              <StrMinLength value="1" />
-            </AttributeType>
-          </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReducedDatasetIndicator" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
       <Validators>
-        <Validator Name="NR175">
-          <MtsImportOptions.MTS.ID value="NR175" />
+        <Validator Name="RN175">
+          <MtsImportOptions.MTS.ID value="RN175" />
           <MtsImportOptions.MTS.Type value="rule-constraint" />
           <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["NR175"]]></ExpressionText>
+            <ExpressionText><![CDATA["RN175"]]></ExpressionText>
             <ResultType>
               <BaseType value="String" />
             </ResultType>
           </ErrorMessage>
           <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE NR175 Authorisation for communication with Customs office of departure, which was filled into Envelope, 
+            <ExpressionText><![CDATA[true /* IMPORTED RULE RN175 Authorisation for communication with Customs office of departure, which was filled into Envelope, 
 must correspond with Holder of the procedure/Representative (in case of direct representation) 
 and Customs office of departure. */]]></ExpressionText>
             <ResultType>
@@ -119,10 +98,20 @@ and Customs office of departure. */]]></ExpressionText>
     </Complex>
     <Complex>
       <Name value="Consignment" />
-      <Caption value="CONSIGNMENT" />
+      <Caption value="Consignment" />
       <IsRequired value="True" />
       <MtsImportOptions.MTS.ID value="/FBAccept/Consignment" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Consignment" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="containerIndicator" />
@@ -134,66 +123,32 @@ and Customs office of departure. */]]></ExpressionText>
               <BaseType value="Bool" />
             </AttributeType>
           </DeclaredType>
-          <Validators>
-            <Validator Name="C0824">
-              <MtsImportOptions.MTS.ID value="C0824" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0824"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0824 IF /CC015C/Consignment/containerIndicator AND /CC013C/Consignment/containerIndicator is PRESENT 
-THEN /CC170C/Consignment/containerIndicator = "O"
-ELSE /CC170C/Consignment/containerIndicator = "R" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="G0332">
-              <MtsImportOptions.MTS.ID value="G0332" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0332"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0332 IF <Container indicator> is NOT PRESENT then data group <TRANSPORT EQUIPMENT> shall NOT be PRESENT, too. <Container indicator> functions as the governing data item for data group <TRANSPORT EQUIPMENT>. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="C0822">
-              <MtsImportOptions.MTS.ID value="C0822" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0822"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0822 IF / * /TransitOperation/additionalDeclarationType is EQUAL to 'D'
-THEN / * /Consignment/containerIndicator = "O"
-ELSE / * /Consignment/containerIndicator = "R" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ContainerIndicator" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Reference>
           <Name value="inlandModeOfTransport" />
           <Caption value="Inland mode of transport" />
           <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/inlandModeOfTransport" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.InlandModeOfTransport" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Include>
               <Include reference="+DataEntities.TransportModeUCC" />
@@ -204,22 +159,13 @@ ELSE / * /Consignment/containerIndicator = "R" */]]></ExpressionText>
               <MtsImportOptions.MTS.ID value="C0399" />
               <MtsImportOptions.MTS.Type value="condition-constraint" />
               <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0399"]]></ExpressionText>
+                <ExpressionText><![CDATA[localized.C0399]]></ExpressionText>
                 <ResultType>
                   <BaseType value="String" />
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0399 IF / * /TransitOperation/reducedDatasetIndicator IS EQUAL TO '1'
-THEN 
-/ * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/complementOfInformation = "N" AND
- / * /Consignment/HouseConsignment/PreviousDocument/complementOfInformation = "N" AND
-/ * /Consignment/inlandModeOfTransport = "N" AND
-NO validation of other conditions is performed
-ELSE 
-/ * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/complementOfInformation = "O" AND
- / * /Consignment/HouseConsignment/PreviousDocument/complementOfInformation = "O" AND
-/ * /Consignment/inlandModeOfTransport = "O" */]]></ExpressionText>
+                <ExpressionText><![CDATA[this.owner().TransitOperation.reducedDatasetIndicator ? this.inlandModeOfTransport.isEmpty() : true]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
@@ -229,10 +175,20 @@ ELSE
         </Reference>
         <Collection>
           <Name value="TransportEquipment" />
-          <Caption value="TRANSPORT EQUIPMENT" />
+          <Caption value="Transport Equipment" />
           <MaxCount value="9999" />
           <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/TransportEquipment" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.TransportEquipment" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Attribute>
               <Name value="containerIdentificationNumber" />
@@ -244,12 +200,22 @@ ELSE
                   <StrMaxLength value="17" />
                 </AttributeType>
               </DeclaredType>
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ContainerIdentificationNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Validators>
                 <Validator Name="regex">
                   <MtsImportOptions.MTS.Regex value="[ -~]{1,17}" />
                   <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                   <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                    <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
@@ -261,97 +227,10 @@ ELSE
                     </ResultType>
                   </IsValid>
                 </Validator>
-                <Validator Name="G0002">
-                  <MtsImportOptions.MTS.ID value="G0002" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-                <Validator Name="C0055">
-                  <MtsImportOptions.MTS.ID value="C0055" />
-                  <MtsImportOptions.MTS.Type value="condition-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0055"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0055 IF / * /Consignment/containerIndicator is EQUAL to '0' 
-THEN / * /Consignment/TransportEquipment/containerIdentificationNumber = "N" 
-ELSE at least one iteration of / * /Consignment/TransportEquipment/containerIdentificationNumber = "R" (for the rest of iterations is optional) */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
               </Validators>
             </Attribute>
           </Children>
-          <ItemValidators>
-            <Validator Name="G0103">
-              <MtsImportOptions.MTS.ID value="G0103" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0103"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0103 Each iteration of this data group shall include:
--Either the transport equipment information for the containerised goods with seals OR without seals with reference to those goods; 
--OR the transport equipment information for the non containerised but sealed goods (e.g. goods carried by truck with seals) with reference to those goods; 
-Note: the non containerised and unsealed goods shall not be recorded under this data group. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="G0196">
-              <MtsImportOptions.MTS.ID value="G0196" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["G0196"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE G0196 This data group must contain the full transport equipment details and not only what is different compared to the data declared in the customs declaration. */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-            <Validator Name="C0872">
-              <MtsImportOptions.MTS.ID value="C0872" />
-              <MtsImportOptions.MTS.Type value="condition-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["C0872"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0872 IF / * /Consignment/containerIndicator is EQUAL to '1'
-THEN at least one iteration of / * /Consignment/TransportEquipment = "R" 
-ELSE / * /Consignment/TransportEquipment = "O" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
+          <CollectionValidators>
             <Validator Name="C0823">
               <MtsImportOptions.MTS.ID value="C0823" />
               <MtsImportOptions.MTS.Type value="condition-constraint" />
@@ -362,24 +241,29 @@ ELSE / * /Consignment/TransportEquipment = "O" */]]></ExpressionText>
                 </ResultType>
               </ErrorMessage>
               <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE C0823 IF / * /Consignment/containerIndicator is PRESENT
-THEN
-     IF / * /Consignment/containerIndicator is EQUAL to ‘1’
-     THEN one iteration of / * /Consignment/TransportEquipment = "R"
-     ELSE / * /Consignment/TransportEquipment = "O"
-ELSE / * /Consignment/TransportEquipment = "N" */]]></ExpressionText>
+                <ExpressionText><![CDATA[this.containerIndicator.hasValue() ? (isTrue(this.containerIndicator) ? (this.TransportEquipment.count(TRUE) > 0) : true) : (this.TransportEquipment.count(TRUE) = 0)]]></ExpressionText>
                 <ResultType>
                   <BaseType value="Bool" />
                 </ResultType>
               </IsValid>
             </Validator>
-          </ItemValidators>
+          </CollectionValidators>
         </Collection>
         <Complex>
           <Name value="LocationOfGoods" />
-          <Caption value="LOCATION OF GOODS" />
+          <Caption value="Location Of Goods" />
           <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods" />
           <MtsImportOptions.MTS.Type value="group" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.LocationOfGoods1" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Children>
             <Reference>
               <Name value="typeOfLocation" />
@@ -387,6 +271,16 @@ ELSE / * /Consignment/TransportEquipment = "N" */]]></ExpressionText>
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/typeOfLocation" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.TypeOfLocation" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
                   <Include reference="+DataEntities.TypeOfLocation" />
@@ -399,29 +293,21 @@ ELSE / * /Consignment/TransportEquipment = "N" */]]></ExpressionText>
               <IsRequired value="True" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/qualifierOfIdentification" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.QualifierOfIdentification" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
                   <Include reference="+DataEntities.QualifierOfTheIdentification" />
                 </Include>
               </Children>
-              <Validators>
-                <Validator Name="G0500">
-                  <MtsImportOptions.MTS.ID value="G0500" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["G0500"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE G0500 Value 'T' must only be used in case “House number” and “Postcode” or only “Postcode” define an exact and unique location */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </Validators>
             </Reference>
             <Attribute>
               <Name value="authorisationNumber" />
@@ -429,23 +315,17 @@ ELSE / * /Consignment/TransportEquipment = "N" */]]></ExpressionText>
               <MetaType reference="+MetaTypes.AuthorisationNumberContentType" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/authorisationNumber" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.AuthorisationNumber" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Validators>
-                <Validator Name="G0002">
-                  <MtsImportOptions.MTS.ID value="G0002" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
                 <Validator Name="C0394">
                   <MtsImportOptions.MTS.ID value="C0394" />
                   <MtsImportOptions.MTS.Type value="condition-constraint" />
@@ -456,76 +336,7 @@ ELSE / * /Consignment/TransportEquipment = "N" */]]></ExpressionText>
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "Y") ? this.authorisationNumber.hasValue() : this.authorisationNumber.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -539,21 +350,28 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
               <MetaType reference="+MetaTypes.AdditionalIdentifierContentType" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/additionalIdentifier" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.AdditionalIdentifier" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Validators>
                 <Validator Name="C0671">
                   <MtsImportOptions.MTS.ID value="C0671" />
                   <MtsImportOptions.MTS.Type value="condition-constraint" />
                   <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0671"]]></ExpressionText>
+                    <ExpressionText><![CDATA[localized.C0671]]></ExpressionText>
                     <ResultType>
                       <BaseType value="String" />
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0671 IF / * /Consignment/LocationOfGoods/EconomicOperator/identificationNumber is PRESENT
-OR / * /Consignment/LocationOfGoods/authorisationNumber is PRESENT
-THEN / * /Consignment/LocationOfGoods/additionalIdentifier = "O"
-ELSE / * /Consignment/LocationOfGoods/additionalIdentifier = "N" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[(this.EconomicOperator.identificationNumber.hasValue() OR this.authorisationNumber.hasValue()) ? this.additionalIdentifier.isEmpty() : true]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -563,9 +381,19 @@ ELSE / * /Consignment/LocationOfGoods/additionalIdentifier = "N" */]]></Expressi
             </Attribute>
             <Reference>
               <Name value="UNLocode" />
-              <Caption value="UN LOCODE" />
+              <Caption value="UNLocode" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/UNLocode" />
               <MtsImportOptions.MTS.Type value="element" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.UNLocode" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Include>
                   <Include reference="+DataEntities.UnLocodeExtended" />
@@ -582,76 +410,7 @@ ELSE / * /Consignment/LocationOfGoods/additionalIdentifier = "N" */]]></Expressi
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "U") ? this.UNLocode.hasValue() : this.UNLocode.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -661,9 +420,19 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
             </Reference>
             <Complex>
               <Name value="CustomsOffice" />
-              <Caption value="CUSTOMS OFFICE" />
+              <Caption value="Customs Office" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/CustomsOffice" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.CustomsOffice" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Reference>
                   <Name value="referenceNumber" />
@@ -671,6 +440,16 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
                   <IsRequired value="True" />
                   <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/CustomsOffice/referenceNumber" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.ReferenceNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.CustomsOfficeDeparture" />
@@ -689,76 +468,7 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "V") ? this.CustomsOffice.hasValue() : this.CustomsOffice.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -771,6 +481,16 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
               <Caption value="GNSS" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/GNSS" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.GNSS" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="latitude" />
@@ -783,45 +503,22 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
                       <StrMaxLength value="17" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Latitude" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Validators>
-                    <Validator Name="G0002">
-                      <MtsImportOptions.MTS.ID value="G0002" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                    <Validator Name="G0014">
-                      <MtsImportOptions.MTS.ID value="G0014" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0014"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0014 Eastern longitude and Northern latitude will use the optional '+' sign.
-Western longitude and Southern latitude will use the '-' sign. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
                     <Validator Name="regex">
                       <MtsImportOptions.MTS.Regex value="[+-]?([0-8]?[0-9]\.[0-9]{5,7}|90.000000?0?)" />
                       <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -846,45 +543,22 @@ Western longitude and Southern latitude will use the '-' sign. */]]></Expression
                       <StrMaxLength value="17" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Longitude" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Validators>
-                    <Validator Name="G0002">
-                      <MtsImportOptions.MTS.ID value="G0002" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                    <Validator Name="G0014">
-                      <MtsImportOptions.MTS.ID value="G0014" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0014"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0014 Eastern longitude and Northern latitude will use the optional '+' sign.
-Western longitude and Southern latitude will use the '-' sign. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
                     <Validator Name="regex">
                       <MtsImportOptions.MTS.Regex value="[+-]?((0?[0-9]?|1[0-7])[0-9]\.[0-9]{5,7}|180.000000?0?)" />
                       <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
@@ -910,76 +584,7 @@ Western longitude and Southern latitude will use the '-' sign. */]]></Expression
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "W") ? this.GNSS.hasValue() : this.GNSS.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -989,56 +594,37 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
             </Complex>
             <Complex>
               <Name value="EconomicOperator" />
-              <Caption value="ECONOMIC OPERATOR" />
-              <Description value="pro elementy Guarantor, HolderOfTheTransitProcedure, Representative, &#xA;TraderAtDestination, Carrier, Consignor, Consignee, AdditionalSupplyChainActor, EconomicOperator" />
+              <Caption value="Economic Operator" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/EconomicOperator" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.EconomicOperator" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="identificationNumber" />
                   <Caption value="Identification number" />
-                  <Description value="včetně TIRHolderIdentificationNumber" />
                   <IsRequired value="True" />
                   <MetaType reference="+MetaTypes.IdentificationNumberContentType01" />
                   <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/EconomicOperator/identificationNumber" />
                   <MtsImportOptions.MTS.Type value="element" />
-                  <Validators>
-                    <Validator Name="G0002">
-                      <MtsImportOptions.MTS.ID value="G0002" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                    <Validator Name="R0850">
-                      <MtsImportOptions.MTS.ID value="R0850" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["R0850"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE R0850 IF sender is in EU (CL010)
-THEN the value must be a valid EORI or TCUIN (validated by receiver, if located in EU),
-ELSE (sender is not in EU) the value must be a TIN number (validated by the message sender only).
-The EORI/TCUIN values should comply with the following pattern: <xs:pattern value=" [A-Z]{2}[\x21-\x7E]{1,15}"/> */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </Validators>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.IdentificationNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
               </Children>
               <Validators>
@@ -1052,76 +638,7 @@ The EORI/TCUIN values should comply with the following pattern: <xs:pattern valu
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "X") ? this.EconomicOperator.hasValue() : this.EconomicOperator.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -1131,9 +648,19 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
             </Complex>
             <Complex>
               <Name value="Address" />
-              <Caption value="ADDRESS" />
+              <Caption value="Address" />
               <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/Address" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.Address" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
                   <Name value="streetAndNumber" />
@@ -1142,43 +669,16 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
                   <MetaType reference="+MetaTypes.StreetAndNumberContentType" />
                   <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/Address/streetAndNumber" />
                   <MtsImportOptions.MTS.Type value="element" />
-                  <Validators>
-                    <Validator Name="E1104">
-                      <MtsImportOptions.MTS.ID value="E1104" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["E1104"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE E1104 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
-THEN
-/ * /HolderOfTheTransitProcedure/name AND
-/ * / HolderOfTheTransitProcedure/Address/streetAndNumber AND
-/ * /Consignment/Consignor/name AND
-/ * /Consignment/Consignor/Address/streetAndNumber AND
-/ * /Consignment/Consignee/name AND
-/ * /Consignment/Consignee/Address/streetAndNumber AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/Consignee/name AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/streetAndNumber AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/SupportingDocument/referenceNumber AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/PreviousDocument/referenceNumber AND
-/ * /Consignment/ActiveBorderTransportmeans/conveyanceReferenceNumber AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/AdditionalReference/referenceNumber AND
-/ * /Consignment/LocationOfGoods/Address/streetAndNumber AND
-/ * /Consignment/GuaranteeReference/Guarantor/Address/streetAndNumber AND
-/ * /Consignment/GuaranteeReference/Guarantor/name AND
-/ * / Consignment/TransportDocument/referenceNumber
-
-format shall be set to an..35 */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </Validators>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.StreetAndNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Attribute>
                   <Name value="postcode" />
@@ -1190,95 +690,16 @@ format shall be set to an..35 */]]></ExpressionText>
                       <StrMaxLength value="17" />
                     </AttributeType>
                   </DeclaredType>
-                  <Validators>
-                    <Validator Name="E1102">
-                      <MtsImportOptions.MTS.ID value="E1102" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["E1102"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE E1102 IF <Decisive Date> is LESS than or EQUAL to <TPendDate> THEN
-/ * /HolderOfTheTransitProcedure/Address/postcode AND
-/ * /Consignment/Consignor/Address/postcode AND
-/ * /Consignment/Consignee/Address/postcode AND
-/ * /Consignment/LocationOfGoods/Address/postcode AND
-/ * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode AND
-/ * /Consignment/ConsigneeActual/Address/postcode AND
-/ * /GuaranteeReference/Guarantor/Address/postcode
-
-format shall be set to an..9 */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                    <Validator Name="C0505">
-                      <MtsImportOptions.MTS.ID value="C0505" />
-                      <MtsImportOptions.MTS.Type value="condition-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0505"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0505 IF / * /HolderOfTheTransitProcedure/Address/country is in SET CL505
-THEN / * /HolderOfTheTransitProcedure/Address/postcode = "O"
-ELSE / * /HolderOfTheTransitProcedure/Address/postcode = "R";
-
-IF / * /Consignment/Consignor/Address/country is in SET CL505 
-THEN / * /Consignment/Consignor/Address/postcode = "O"
-ELSE / * /Consignment/Consignor/Address/postcode = "R";
-
-IF / * /Consignment/Consignee/Address/country is in SET CL505
-THEN / * /Consignment/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/Consignee/Address/postcode = "R";
-
-IF / * /Consignment/Incident/Location/Address/country is in SET CL505
-THEN / * /Consignment/Incident/Location/Address/postcode = "O"
-ELSE / * /Consignment/Incident/Location/Address/postcode = "R";
-
-IF / * /Consignment/LocationOfGoods/Address/country is in SET CL505
-THEN / * /Consignment/LocationOfGoods/Address/postcode = "O"
-ELSE / * /Consignment/LocationOfGoods/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/Consignor/Address/country is in SET CL505
-THEN / * /Consignment/HouseConsignment/Consignor/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/Consignor/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/Consignee/Address/country is in SET CL505
-THEN / * /Consignment/HouseConsignment/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/Consignee/Address/postcode = "R";
-
-IF / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/country is in SET CL505 
-THEN / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "O"
-ELSE / * /Consignment/HouseConsignment/ConsignmentItem/Consignee/Address/postcode = "R";
-
-IF / * /Guarantor/Address/country is in SET CL505
-THEN / * /Guarantor/Address/postcode = "O"
-ELSE / * /Guarantor/Address/postcode = "R";
-
-IF / * /GuaranteeReference/Guarantor/Address/country is in SET CL505
-THEN / * /GuaranteeReference/Guarantor/Address/postcode = "O"
-ELSE / * /GuaranteeReference/Guarantor/Address/postcode = "R";
-
-IF / * /GuaranteeReference/Owner/Address/country is in SET CL505
-THEN / * /GuaranteeReference/Owner/Address/postcode = "O"
-ELSE / * /GuaranteeReference/Owner/Address/postcode = "R";
-
-IF / * /Consignment/ConsigneeActual/Address/country is in SET CL505
-THEN / * /Consignment/ConsigneeActual/Address/postcode = "O"
-ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </Validators>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Postcode" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Attribute>
                   <Name value="city" />
@@ -1291,14 +712,33 @@ ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionTe
                       <StrMaxLength value="35" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.City" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Reference>
                   <Name value="country" />
                   <Caption value="Country" />
-                  <Description value="ve skupinách: Address, Country, SendingCountry, PlaceOfLoading, PlaceOfUnloading, CountryOfRoutingOfConsignment&#xA;včetně elementů countryOfDispatch, countryOfDestination, otherCountry" />
                   <IsRequired value="True" />
                   <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/Address/country" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Country" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.CountryCodesCommonTransit" />
@@ -1317,76 +757,7 @@ ELSE / * /Consignment/ConsigneeActual/Address/postcode = "R" */]]></ExpressionTe
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "Z") ? this.Address.hasValue() : this.Address.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -1395,31 +766,89 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
               </Validators>
             </Complex>
             <Complex>
-              <Name value="AddressT" />
-              <Caption value="ADDRESS (T)" />
-              <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/AddressT" />
+              <Name value="ContactPerson" />
+              <Caption value="Contact Person" />
+              <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson" />
               <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.ContactPerson" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
               <Children>
                 <Attribute>
-                  <Name value="houseNumber" />
-                  <Caption value="House number" />
-                  <MetaType reference="+MetaTypes.HouseNumberContentType" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/AddressT/houseNumber" />
+                  <Name value="name" />
+                  <Caption value="Name" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.NameContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/name" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Name" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Attribute>
+                  <Name value="phoneNumber" />
+                  <Caption value="Phone number" />
+                  <IsRequired value="True" />
+                  <MetaType reference="+MetaTypes.PhoneNumberContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/phoneNumber" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.PhoneNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
+                <Attribute>
+                  <Name value="eMailAddress" />
+                  <Caption value="E-mail address" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/eMailAddress" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <DeclaredType>
+                    <AttributeType>
+                      <StrMaxLength value="256" />
+                    </AttributeType>
+                  </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.EMailAddress" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Validators>
-                    <Validator Name="C0382">
-                      <MtsImportOptions.MTS.ID value="C0382" />
-                      <MtsImportOptions.MTS.Type value="condition-constraint" />
+                    <Validator Name="regex">
+                      <MtsImportOptions.MTS.Regex value="[^@]+@[^\.]+\..+" />
+                      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
                       <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["C0382"]]></ExpressionText>
+                        <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                         <ResultType>
                           <BaseType value="String" />
                         </ResultType>
                       </ErrorMessage>
                       <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE C0382 IF / * /Consignment/LocationOfGoods/AddressT/country is in SET CL198
-THEN / * /Consignment/LocationOfGoods/AddressT/houseNumber = ''O'' 
-ELSE / * /Consignment/LocationOfGoods/AddressT/houseNumber = ''R'' */]]></ExpressionText>
+                        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[^@]+@[^\\.]+\\..+$") : true)]]></ExpressionText>
                         <ResultType>
                           <BaseType value="Bool" />
                         </ResultType>
@@ -1427,24 +856,97 @@ ELSE / * /Consignment/LocationOfGoods/AddressT/houseNumber = ''R'' */]]></Expres
                     </Validator>
                   </Validators>
                 </Attribute>
+              </Children>
+              <Validators>
+                <Validator Name="C0394">
+                  <MtsImportOptions.MTS.ID value="C0394" />
+                  <MtsImportOptions.MTS.Type value="condition-constraint" />
+                  <ErrorMessage IsValid="True">
+                    <ExpressionText><![CDATA["C0394"]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="String" />
+                    </ResultType>
+                  </ErrorMessage>
+                  <IsValid IsValid="True">
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "V") ? this.ContactPerson.isEmpty() : true]]></ExpressionText>
+                    <ResultType>
+                      <BaseType value="Bool" />
+                    </ResultType>
+                  </IsValid>
+                </Validator>
+              </Validators>
+            </Complex>
+            <Complex>
+              <Name value="PostcodeAddress" />
+              <Caption value="Postcode Address" />
+              <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/PostcodeAddress" />
+              <MtsImportOptions.MTS.Type value="group" />
+              <PropertyLocalizationData.PropertyLocalizations>
+                <PropertyLocalizationData>
+                  <LocalizedProperties>
+                    <LocalizedProperty>
+                      <Localization reference="+Localizations.PostcodeAddress" />
+                      <PropertyName value="Caption" />
+                    </LocalizedProperty>
+                  </LocalizedProperties>
+                </PropertyLocalizationData>
+              </PropertyLocalizationData.PropertyLocalizations>
+              <Children>
+                <Attribute>
+                  <Name value="houseNumber" />
+                  <Caption value="House number" />
+                  <MetaType reference="+MetaTypes.HouseNumberContentType" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/PostcodeAddress/houseNumber" />
+                  <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.HouseNumber" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
+                </Attribute>
                 <Attribute>
                   <Name value="postcode" />
                   <Caption value="Postcode" />
                   <IsRequired value="True" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/AddressT/postcode" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/PostcodeAddress/postcode" />
                   <MtsImportOptions.MTS.Type value="element" />
                   <DeclaredType>
                     <AttributeType>
                       <StrMaxLength value="17" />
                     </AttributeType>
                   </DeclaredType>
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Postcode" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                 </Attribute>
                 <Reference>
                   <Name value="country" />
                   <Caption value="Country" />
                   <IsRequired value="True" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/AddressT/country" />
+                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/PostcodeAddress/country" />
                   <MtsImportOptions.MTS.Type value="element" />
+                  <PropertyLocalizationData.PropertyLocalizations>
+                    <PropertyLocalizationData>
+                      <LocalizedProperties>
+                        <LocalizedProperty>
+                          <Localization reference="+Localizations.Country" />
+                          <PropertyName value="Caption" />
+                        </LocalizedProperty>
+                      </LocalizedProperties>
+                    </PropertyLocalizationData>
+                  </PropertyLocalizationData.PropertyLocalizations>
                   <Children>
                     <Include>
                       <Include reference="+DataEntities.CountryAddressPostcodeBased" />
@@ -1463,248 +965,7 @@ ELSE / * /Consignment/LocationOfGoods/AddressT/houseNumber = ''R'' */]]></Expres
                     </ResultType>
                   </ErrorMessage>
                   <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-              </Validators>
-            </Complex>
-            <Complex>
-              <Name value="ContactPerson" />
-              <Caption value="CONTACT PERSON" />
-              <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson" />
-              <MtsImportOptions.MTS.Type value="group" />
-              <Children>
-                <Attribute>
-                  <Name value="name" />
-                  <Caption value="Name" />
-                  <IsRequired value="True" />
-                  <MetaType reference="+MetaTypes.NameContentType" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/name" />
-                  <MtsImportOptions.MTS.Type value="element" />
-                </Attribute>
-                <Attribute>
-                  <Name value="phoneNumber" />
-                  <Caption value="Phone number" />
-                  <IsRequired value="True" />
-                  <MetaType reference="+MetaTypes.PhoneNumberContentType" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/phoneNumber" />
-                  <MtsImportOptions.MTS.Type value="element" />
-                </Attribute>
-                <Attribute>
-                  <Name value="eMailAddress" />
-                  <Caption value="E-mail address" />
-                  <MtsImportOptions.MTS.ID value="/FBAccept/Consignment/LocationOfGoods/ContactPerson/eMailAddress" />
-                  <MtsImportOptions.MTS.Type value="element" />
-                  <DeclaredType>
-                    <AttributeType>
-                      <StrMaxLength value="256" />
-                    </AttributeType>
-                  </DeclaredType>
-                  <Validators>
-                    <Validator Name="G0002">
-                      <MtsImportOptions.MTS.ID value="G0002" />
-                      <MtsImportOptions.MTS.Type value="rule-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["G0002"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[true /* IMPORTED RULE G0002 XSD contains a non-standard regular expression for this data item. */]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                    <Validator Name="regex">
-                      <MtsImportOptions.MTS.Regex value="[^@]+@[^\.]+\..+" />
-                      <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
-                      <ErrorMessage IsValid="True">
-                        <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="String" />
-                        </ResultType>
-                      </ErrorMessage>
-                      <IsValid IsValid="True">
-                        <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[^@]+@[^\\.]+\\..+$") : true)]]></ExpressionText>
-                        <ResultType>
-                          <BaseType value="Bool" />
-                        </ResultType>
-                      </IsValid>
-                    </Validator>
-                  </Validators>
-                </Attribute>
-              </Children>
-              <Validators>
-                <Validator Name="G0105">
-                  <MtsImportOptions.MTS.ID value="G0105" />
-                  <MtsImportOptions.MTS.Type value="rule-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["G0105"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE G0105 Information recorded under this data group is solely for communication purposes. No legal liabilities exist upon the specific contact person. */]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="Bool" />
-                    </ResultType>
-                  </IsValid>
-                </Validator>
-                <Validator Name="C0394">
-                  <MtsImportOptions.MTS.ID value="C0394" />
-                  <MtsImportOptions.MTS.Type value="condition-constraint" />
-                  <ErrorMessage IsValid="True">
-                    <ExpressionText><![CDATA["C0394"]]></ExpressionText>
-                    <ResultType>
-                      <BaseType value="String" />
-                    </ResultType>
-                  </ErrorMessage>
-                  <IsValid IsValid="True">
-                    <ExpressionText><![CDATA[true /* IMPORTED RULE C0394 IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Z'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "R"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'X'
-THEN
-/ * /Consignment/LocationOfGoods/EconomicOperator = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'Y'
-THEN
-/ * /Consignment/LocationOfGoods/authorisationNumber = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N"
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'W'
-THEN
-/ * /Consignment/LocationOfGoods/GNSS = "R" 
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N" 
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'V'
-THEN	
-/ * /Consignment/LocationOfGoods/CustomsOffice = "R"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"  
-AND / * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "N"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-ELSE IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'U'	
-THEN
-/ * /Consignment/LocationOfGoods/UΝLocode = "R"
-AND/ * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND/ * /Consignment/LocationOfGoods/GNSS = "N"
-AND/ * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND/ * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O"
-AND / * /Consignment/LocationOfGoods/AddressT = "N" 
-IF / * /Consignment/LocationOfGoods/qualifierOfIdentification is EQUAL to 'T'
-THEN
-/ * /Consignment/LocationOfGoods/Address = "N"
-AND / * /Consignment/LocationOfGoods/authorisationNumber = "N"
-AND / * /Consignment/LocationOfGoods/UΝLocode = "N"
-AND / * /Consignment/LocationOfGoods/CustomsOffice = "N"
-AND / * /Consignment/LocationOfGoods/GNSS = "N"
-AND / * /Consignment/LocationOfGoods/EconomicOperator = "N"
-AND / * /Consignment/LocationOfGoods/ContactPerson = "O" 
-AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
+                    <ExpressionText><![CDATA[isTrue(this.qualifierOfIdentification.Code = "T") ? this.PostcodeAddress.hasValue() : this.PostcodeAddress.isEmpty()]]></ExpressionText>
                     <ResultType>
                       <BaseType value="Bool" />
                     </ResultType>
@@ -1713,160 +974,24 @@ AND / * /Consignment/LocationOfGoods/AddressT = "R" */]]></ExpressionText>
               </Validators>
             </Complex>
           </Children>
-          <Validators>
-            <Validator Name="B1302">
-              <MtsImportOptions.MTS.ID value="B1302" />
-              <MtsImportOptions.MTS.Type value="rule-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["B1302"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[true /* IMPORTED RULE B1302 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
-THEN C0710 attached to / * /Consignment/LocationOfGoods
-shall be disabled AND
-/ * /Consignment/LocationOfGoods = "O" */]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
         </Complex>
       </Children>
-      <Validators>
-        <Validator Name="B1852">
-          <MtsImportOptions.MTS.ID value="B1852" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["B1852"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE B1852 IF <Decisive Date> is LESS than or EQUAL to <TPendDate>
-THEN C0815 attached to
-/CD200C/Consignment
-/CD203C/Consignment
-shall be disabled AND
-/CD200C/Consignment AND
-/CD203C/Consignment
- will become optional. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-        <Validator Name="G0045">
-          <MtsImportOptions.MTS.ID value="G0045" />
-          <MtsImportOptions.MTS.Type value="rule-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["G0045"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE G0045 The information in this Data Group/Data Item will override the information included in the CC015C (or in the latest CC013C, if any). */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
-    </Complex>
-    <Complex>
-      <Name value="ClearanceOutsidePremises" />
-      <Caption value="Approval clearance outside the premises" />
-      <MtsImportOptions.MTS.ID value="/FBAccept/ClearanceOutsidePremises" />
-      <MtsImportOptions.MTS.Type value="group" />
-      <Children>
-        <Attribute>
-          <Name value="Description" />
-          <Caption value="Description of decision" />
-          <MtsImportOptions.MTS.ID value="/FBAccept/ClearanceOutsidePremises/Description" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <StrMaxLength value="350" />
-            </AttributeType>
-          </DeclaredType>
-          <Validators>
-            <Validator Name="regex">
-              <MtsImportOptions.MTS.Regex value="\S((([\n\r\t])|(.))*\S)?" />
-              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^\\S((([\\n\\r\\t])|(.))*\\S)?$") : true)]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
-        </Attribute>
-        <Attribute>
-          <Name value="DecisionAdministrativeNumber" />
-          <Caption value="Administrative number of decision" />
-          <MtsImportOptions.MTS.ID value="/FBAccept/ClearanceOutsidePremises/DecisionAdministrativeNumber" />
-          <MtsImportOptions.MTS.Type value="element" />
-          <DeclaredType>
-            <AttributeType>
-              <StrMaxLength value="30" />
-            </AttributeType>
-          </DeclaredType>
-          <Validators>
-            <Validator Name="regex">
-              <MtsImportOptions.MTS.Regex value="\S((([\n\r\t])|(.))*\S)?" />
-              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
-              <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="String" />
-                </ResultType>
-              </ErrorMessage>
-              <IsValid IsValid="True">
-                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^\\S((([\\n\\r\\t])|(.))*\\S)?$") : true)]]></ExpressionText>
-                <ResultType>
-                  <BaseType value="Bool" />
-                </ResultType>
-              </IsValid>
-            </Validator>
-          </Validators>
-        </Attribute>
-      </Children>
-      <Validators>
-        <Validator Name="NCC01">
-          <MtsImportOptions.MTS.ID value="NCC01" />
-          <MtsImportOptions.MTS.Type value="condition-constraint" />
-          <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["NCC01"]]></ExpressionText>
-            <ResultType>
-              <BaseType value="String" />
-            </ResultType>
-          </ErrorMessage>
-          <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE NCC01 Carry out the customs clearance outside the premises of Office of Departure (“Clearance outside the premises”), if there is a request submitted by a Holder of the procedure (Type of location = B) in oral or written form. */]]></ExpressionText>
-            <ResultType>
-              <BaseType value="Bool" />
-            </ResultType>
-          </IsValid>
-        </Validator>
-      </Validators>
     </Complex>
     <Complex>
       <Name value="Decision_Clearance" />
-      <Caption value="Approval clearance outside the premises" />
+      <Caption value="APPROVAL CLEARANCE OUTSIDE THE PREMISES" />
       <MtsImportOptions.MTS.ID value="/FBAccept/Decision_Clearance" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.ApprovalClearanceOutsideE047154D" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="description" />
@@ -1875,6 +1000,16 @@ shall be disabled AND
           <MetaType reference="+MetaTypes.String_512" />
           <MtsImportOptions.MTS.ID value="/FBAccept/Decision_Clearance/description" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DescriptionOfDecision" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
         <Attribute>
           <Name value="administrativeNumber" />
@@ -1884,12 +1019,22 @@ shall be disabled AND
           <DeclaredType>
             <AttributeType />
           </DeclaredType>
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.AdministrativeNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
           <Validators>
             <Validator Name="regex">
               <MtsImportOptions.MTS.Regex value="[ -~]*" />
               <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
               <ErrorMessage IsValid="True">
-                <ExpressionText><![CDATA["Value is not valid"]]></ExpressionText>
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
                 <ResultType>
                   <BaseType value="String" />
                 </ResultType>
@@ -1905,17 +1050,17 @@ shall be disabled AND
         </Attribute>
       </Children>
       <Validators>
-        <Validator Name="NCC01">
-          <MtsImportOptions.MTS.ID value="NCC01" />
+        <Validator Name="CNC01">
+          <MtsImportOptions.MTS.ID value="CNC01" />
           <MtsImportOptions.MTS.Type value="condition-constraint" />
           <ErrorMessage IsValid="True">
-            <ExpressionText><![CDATA["NCC01"]]></ExpressionText>
+            <ExpressionText><![CDATA["CNC01"]]></ExpressionText>
             <ResultType>
               <BaseType value="String" />
             </ResultType>
           </ErrorMessage>
           <IsValid IsValid="True">
-            <ExpressionText><![CDATA[true /* IMPORTED RULE NCC01 Carry out the customs clearance outside the premises of Office of Departure (“Clearance outside the premises”), if there is a request submitted by a Holder of the procedure (Type of location = B) in oral or written form. */]]></ExpressionText>
+            <ExpressionText><![CDATA[(isTrue(Consignment.LocationOfGoods.typeOfLocation.Code = "B") OR isTrue(Consignment.LocationOfGoods.typeOfLocation.Code = "D")) ? Decision_Clearance.hasValue() : Decision_Clearance.isEmpty()]]></ExpressionText>
             <ResultType>
               <BaseType value="Bool" />
             </ResultType>
@@ -1925,9 +1070,19 @@ shall be disabled AND
     </Complex>
     <Complex>
       <Name value="Decision" />
-      <Caption value="Acceptance" />
+      <Caption value="ACCEPTANCE DECISION" />
       <MtsImportOptions.MTS.ID value="/FBAccept/Decision" />
       <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.Acceptance" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
       <Children>
         <Attribute>
           <Name value="description" />
@@ -1936,6 +1091,16 @@ shall be disabled AND
           <MetaType reference="+MetaTypes.String_512" />
           <MtsImportOptions.MTS.ID value="/FBAccept/Decision/description" />
           <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.DescriptionOfDecision" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
         </Attribute>
       </Children>
     </Complex>

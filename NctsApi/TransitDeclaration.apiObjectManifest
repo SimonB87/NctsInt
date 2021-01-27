@@ -42,11 +42,6 @@
       </ReturnType>
     </MethodManifest>
     <MethodManifest>
-      <Name value="fromMock" />
-      <Description value="Fills the content with mock data" />
-      <ReturnType />
-    </MethodManifest>
-    <MethodManifest>
       <Name value="getHeader" />
       <Description value="Returns the header part without HouseConsignment collection as json" />
       <ReturnType>

@@ -3,6 +3,7 @@
 <DataEntity>
   <Name value="RiskAreaCode" />
   <Caption value="RiskAreaCode" />
+  <Description value="CL740" />
   <MtsImportOptions.MTS.ID value="RiskAreaCode" />
   <MtsImportOptions.MTS.Type value="codelist" />
   <Children>
@@ -56,5 +57,17 @@
         </ResultType>
       </Expression>
     </Computed>
+    <Attribute>
+      <Name value="Lng" />
+      <Caption value="Description language" />
+      <MtsImportOptions.MTS.ID value="RiskAreaCode/Lng" />
+      <MtsImportOptions.MTS.Type value="codelist-item" />
+      <DeclaredType>
+        <AttributeType>
+          <StrMaxLength value="2" />
+          <StrMinLength value="2" />
+        </AttributeType>
+      </DeclaredType>
+    </Attribute>
   </Children>
 </DataEntity>

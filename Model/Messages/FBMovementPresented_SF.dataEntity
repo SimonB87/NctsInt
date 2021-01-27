@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<DataEntity>
+  <Name value="FBMovementPresented_SF" />
+  <Caption value="FBMovementPresented_SF" />
+  <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF" />
+  <MtsImportOptions.MTS.Type value="message" />
+  <PropertyLocalizationData.PropertyLocalizations>
+    <PropertyLocalizationData>
+      <LocalizedProperties>
+        <LocalizedProperty>
+          <Localization reference="+Localizations.FBMovementPresented_SF" />
+          <PropertyName value="Caption" />
+        </LocalizedProperty>
+      </LocalizedProperties>
+    </PropertyLocalizationData>
+  </PropertyLocalizationData.PropertyLocalizations>
+  <Children>
+    <Complex>
+      <Name value="TransitOperation" />
+      <Caption value="Transit Operation" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/TransitOperation" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.TransitOperation" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Attribute>
+          <Name value="MRN" />
+          <Caption value="MRN" />
+          <IsRequired value="True" />
+          <MetaType reference="+MetaTypes.MRNTypeWithFallback" />
+          <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/TransitOperation/MRN" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.MRN" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Validators>
+            <Validator Name="regex">
+              <MtsImportOptions.MTS.Regex value="[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]" />
+              <MtsImportOptions.MTS.Type value="regular-expression-constraint" />
+              <ErrorMessage IsValid="True">
+                <ExpressionText><![CDATA[localized.ValueIsNotValid]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="String" />
+                </ResultType>
+              </ErrorMessage>
+              <IsValid IsValid="True">
+                <ExpressionText><![CDATA[(attr.hasValue() ? ValidateAgainstRegularExpression(attr, "^[0-9]{2}[A-Z]{2}[A-Z0-9]{12}[J-M][0-9F]$") : true)]]></ExpressionText>
+                <ResultType>
+                  <BaseType value="Bool" />
+                </ResultType>
+              </IsValid>
+            </Validator>
+          </Validators>
+        </Attribute>
+      </Children>
+    </Complex>
+    <Complex>
+      <Name value="CustomsOfficeOfTransit" />
+      <Caption value="Customs Office Of Transit" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/CustomsOfficeOfTransit" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.CustomsOfficeOfTransit" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Reference>
+          <Name value="referenceNumber" />
+          <Caption value="Reference number" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/CustomsOfficeOfTransit/referenceNumber" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.ReferenceNumber" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CustomsOfficeTransit" />
+            </Include>
+          </Children>
+        </Reference>
+      </Children>
+      <Validators>
+        <Validator Name="B2103">
+          <MtsImportOptions.MTS.ID value="B2103" />
+          <MtsImportOptions.MTS.Type value="rule-constraint" />
+          <ErrorMessage IsValid="True">
+            <ExpressionText><![CDATA["B2103"]]></ExpressionText>
+            <ResultType>
+              <BaseType value="String" />
+            </ResultType>
+          </ErrorMessage>
+          <IsValid IsValid="True">
+            <ExpressionText><![CDATA[true /* IMPORTED RULE B2103 IF <Decisive Date> is GREATER than <TPendDate> 
+THEN 
+/ * /CustomsOfficeOfDestination = "R" OR
+/ * /CustomsOfficeOfTransit = "R" OR
+/ * /CustomsOfficeOfExitForTransit= "R" */]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </IsValid>
+        </Validator>
+      </Validators>
+    </Complex>
+    <Complex>
+      <Name value="BorderCrossing" />
+      <Caption value="Border Crossing" />
+      <IsRequired value="True" />
+      <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/BorderCrossing" />
+      <MtsImportOptions.MTS.Type value="group" />
+      <PropertyLocalizationData.PropertyLocalizations>
+        <PropertyLocalizationData>
+          <LocalizedProperties>
+            <LocalizedProperty>
+              <Localization reference="+Localizations.BorderCrossing" />
+              <PropertyName value="Caption" />
+            </LocalizedProperty>
+          </LocalizedProperties>
+        </PropertyLocalizationData>
+      </PropertyLocalizationData.PropertyLocalizations>
+      <Children>
+        <Reference>
+          <Name value="CrossingBorderType" />
+          <Caption value="Crossing Border Type" />
+          <IsRequired value="True" />
+          <MtsImportOptions.MTS.ID value="/FBMovementPresented_SF/BorderCrossing/CrossingBorderType" />
+          <MtsImportOptions.MTS.Type value="element" />
+          <PropertyLocalizationData.PropertyLocalizations>
+            <PropertyLocalizationData>
+              <LocalizedProperties>
+                <LocalizedProperty>
+                  <Localization reference="+Localizations.CrossingBorderType1" />
+                  <PropertyName value="Caption" />
+                </LocalizedProperty>
+              </LocalizedProperties>
+            </PropertyLocalizationData>
+          </PropertyLocalizationData.PropertyLocalizations>
+          <Children>
+            <Include>
+              <Include reference="+DataEntities.CrossingBorderType" />
+            </Include>
+          </Children>
+        </Reference>
+      </Children>
+    </Complex>
+  </Children>
+</DataEntity>

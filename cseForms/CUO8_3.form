@@ -275,9 +275,6 @@
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
               </Content>

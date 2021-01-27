@@ -296,9 +296,6 @@
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
                 <CollapsibleGroupBox identity="collapsibleGroupBox.cfca4faa9e574885bad67cbe322167a7">
@@ -1118,9 +1115,6 @@
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
               </Content>
@@ -1251,9 +1245,6 @@
                     <CssClassConditional>
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
@@ -1423,9 +1414,6 @@
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
@@ -1627,9 +1615,6 @@
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>
@@ -1871,9 +1856,6 @@
                               <ClassName value="{theme}-panel" />
                               <IsThemedStyle value="True" />
                             </CssClassConditional>
-                            <CssClassConditional>
-                              <ClassName value="displayFlex" />
-                            </CssClassConditional>
                           </CssClass>
                         </Panel>
                         <Panel>
@@ -1997,9 +1979,6 @@
                                                 </CssClassConditional>
                                                 <CssClassConditional>
                                                   <ClassName value="fullWidth" />
-                                                </CssClassConditional>
-                                                <CssClassConditional>
-                                                  <ClassName value="displayFlex" />
                                                 </CssClassConditional>
                                               </CssClass>
                                             </Panel>
@@ -2532,9 +2511,6 @@
                                               <ClassName value="{theme}-panel" />
                                               <IsThemedStyle value="True" />
                                             </CssClassConditional>
-                                            <CssClassConditional>
-                                              <ClassName value="displayFlex" />
-                                            </CssClassConditional>
                                           </CssClass>
                                         </Panel>
                                       </Content>
@@ -2796,9 +2772,6 @@
                                       <IsThemedStyle value="True" />
                                     </CssClassConditional>
                                     <CssClassConditional>
-                                      <ClassName value="displayFlex" />
-                                    </CssClassConditional>
-                                    <CssClassConditional>
                                       <ClassName value="fullWidth" />
                                     </CssClassConditional>
                                   </CssClass>
@@ -2931,9 +2904,6 @@
                                     <CssClassConditional>
                                       <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                    <CssClassConditional>
-                                      <ClassName value="displayFlex" />
                                     </CssClassConditional>
                                     <CssClassConditional>
                                       <ClassName value="fullWidth" />
@@ -3158,9 +3128,6 @@
                                     <CssClassConditional>
                                       <ClassName value="fullWidth" />
                                     </CssClassConditional>
-                                    <CssClassConditional>
-                                      <ClassName value="displayFlex" />
-                                    </CssClassConditional>
                                   </CssClass>
                                 </Panel>
                               </Content>
@@ -3295,9 +3262,6 @@
                                     </CssClassConditional>
                                     <CssClassConditional>
                                       <ClassName value="fullWidth" />
-                                    </CssClassConditional>
-                                    <CssClassConditional>
-                                      <ClassName value="displayFlex" />
                                     </CssClassConditional>
                                   </CssClass>
                                 </Panel>
@@ -4502,9 +4466,6 @@
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
               </Content>
@@ -4639,9 +4600,6 @@
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
                     </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
-                    </CssClassConditional>
                   </CssClass>
                 </Panel>
               </Content>
@@ -4772,9 +4730,6 @@
                     <CssClassConditional>
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                     <CssClassConditional>
                       <ClassName value="fullWidth" />
@@ -5123,9 +5078,6 @@
                           <IsThemedStyle value="True" />
                         </CssClassConditional>
                         <CssClassConditional>
-                          <ClassName value="displayFlex" />
-                        </CssClassConditional>
-                        <CssClassConditional>
                           <ClassName value="fullWidth" />
                         </CssClassConditional>
                       </CssClass>
@@ -5203,9 +5155,6 @@
                         <CssClassConditional>
                           <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="displayFlex" />
                         </CssClassConditional>
                         <CssClassConditional>
                           <ClassName value="fullWidth" />
@@ -5624,9 +5573,6 @@
                         <CssClassConditional>
                           <ClassName value="{theme}-panel" />
                           <IsThemedStyle value="True" />
-                        </CssClassConditional>
-                        <CssClassConditional>
-                          <ClassName value="displayFlex" />
                         </CssClassConditional>
                       </CssClass>
                     </Panel>
@@ -6584,9 +6530,6 @@
                             <CssClassConditional>
                               <ClassName value="fullWidth" />
                             </CssClassConditional>
-                            <CssClassConditional>
-                              <ClassName value="displayFlex" />
-                            </CssClassConditional>
                           </CssClass>
                         </Panel>
                       </Content>
@@ -6748,9 +6691,6 @@
                                     <CssClassConditional>
                                       <ClassName value="{theme}-panel" />
                                       <IsThemedStyle value="True" />
-                                    </CssClassConditional>
-                                    <CssClassConditional>
-                                      <ClassName value="displayFlex" />
                                     </CssClassConditional>
                                   </CssClass>
                                 </Panel>
@@ -7140,9 +7080,6 @@
                                         </CssClassConditional>
                                         <CssClassConditional>
                                           <ClassName value="fullWidth" />
-                                        </CssClassConditional>
-                                        <CssClassConditional>
-                                          <ClassName value="displayFlex" />
                                         </CssClassConditional>
                                       </CssClass>
                                     </Panel>
@@ -13697,9 +13634,6 @@
                     <CssClassConditional>
                       <ClassName value="{theme}-panel" />
                       <IsThemedStyle value="True" />
-                    </CssClassConditional>
-                    <CssClassConditional>
-                      <ClassName value="displayFlex" />
                     </CssClassConditional>
                   </CssClass>
                 </Panel>

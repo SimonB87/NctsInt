@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?data-format version="0.400"?>
+<Form>
+  <Name value="ErrorForm" />
+  <Caption value="Error form" />
+  <Content>
+    <Panel>
+      <Name value="panel1" />
+      <Orientation value="Vertical" />
+      <Panel.Height value="#" />
+      <Panel.Width value="*" />
+      <Children>
+        <Panel>
+          <Name value="signing_pnl" />
+          <Orientation value="Vertical" />
+          <Panel.Height value="#" />
+          <Panel.HorizontalAlignment value="Center" />
+          <Panel.Width value="300px" />
+          <Children>
+            <Panel>
+              <Name value="panel11" />
+              <Orientation value="Vertical" />
+              <Panel.Height value="#" />
+              <Panel.HorizontalAlignment value="Center" />
+              <Panel.Width value="100%" />
+              <Children>
+                <Label>
+                  <Name value="signingMessage_lbl1" />
+                  <Heading value="h3" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="100%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.YouDoNotHaveSufficientPermissions" />
+                    <Binding SourceProperty="IsVisible" Expression="_isPermissions" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+                <Label>
+                  <Name value="signingMessage_lbl2" />
+                  <Heading value="h3" />
+                  <Panel.Height value="#" />
+                  <Panel.HorizontalAlignment value="Center" />
+                  <Panel.Width value="100%" />
+                  <Bindings>
+                    <Binding SourceProperty="Data" Expression="localized.YourSessionHasExpired" />
+                    <Binding SourceProperty="IsVisible" Expression="_isSession" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-label" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                    <CssClassConditional>
+                      <ClassName value="center-all" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Label>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+            <Panel>
+              <Name value="panel2" />
+              <Orientation value="Horizontal" />
+              <Panel.Height value="#" />
+              <Panel.Width value="*" />
+              <Children>
+                <Button>
+                  <Name value="btn_link" />
+                  <Panel.Height value="#" />
+                  <Panel.Width value="150px" />
+                  <OnClick>
+                    <ActionEvent ReferencedAction="~handler_btn_link_OnClick" />
+                  </OnClick>
+                  <Bindings>
+                    <Binding SourceProperty="Caption" Expression="localized.ClickHereToLogin" />
+                  </Bindings>
+                  <CssClass>
+                    <CssClassConditional>
+                      <ClassName value="{theme}-button" />
+                      <IsThemedStyle value="True" />
+                    </CssClassConditional>
+                  </CssClass>
+                </Button>
+              </Children>
+              <CssClass>
+                <CssClassConditional>
+                  <ClassName value="{theme}-panel" />
+                  <IsThemedStyle value="True" />
+                </CssClassConditional>
+                <CssClassConditional>
+                  <ClassName value="center-all" />
+                </CssClassConditional>
+              </CssClass>
+            </Panel>
+          </Children>
+          <CssClass>
+            <CssClassConditional>
+              <ClassName value="{theme}-panel" />
+              <IsThemedStyle value="True" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="absoluteCenter" />
+            </CssClassConditional>
+            <CssClassConditional>
+              <ClassName value="box" />
+            </CssClassConditional>
+          </CssClass>
+        </Panel>
+      </Children>
+      <CssClass>
+        <CssClassConditional>
+          <ClassName value="{theme}-panel" />
+          <IsThemedStyle value="True" />
+        </CssClassConditional>
+      </CssClass>
+    </Panel>
+  </Content>
+  <DataContext>
+    <DataContext>
+      <Children>
+        <Attribute>
+          <Name value="reason" />
+          <Caption value="Reason" />
+          <DataContextParameter.IsInput value="True" />
+          <DataContextParameter.IsInputRequired value="True" />
+          <DeclaredType>
+            <AttributeType />
+          </DeclaredType>
+        </Attribute>
+        <Computed>
+          <Name value="_isPermissions" />
+          <Caption value="_ is permissions" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[isTrue(reason = "Permissions")]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+        <Computed>
+          <Name value="_isSession" />
+          <Caption value="_ is session" />
+          <Expression IsValid="True">
+            <ExpressionText><![CDATA[isTrue(reason = "Session")]]></ExpressionText>
+            <ResultType>
+              <BaseType value="Bool" />
+            </ResultType>
+          </Expression>
+        </Computed>
+      </Children>
+    </DataContext>
+  </DataContext>
+  <Actions>
+    <ActionBlock>
+      <Name value="handler_btn_link_OnClick" />
+      <IsPrivate value="True" />
+      <ActionLangBody IsValid="True">
+        <Script><![CDATA[actions.keyCloakLogout()]]></Script>
+      </ActionLangBody>
+      <DataContext>
+        <ActionDataContext />
+      </DataContext>
+    </ActionBlock>
+  </Actions>
+</Form>
